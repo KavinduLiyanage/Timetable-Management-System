@@ -16,5 +16,30 @@ namespace TimetableManagementSystem
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Homepage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wdhBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lecBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
