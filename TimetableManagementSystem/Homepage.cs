@@ -41,5 +41,12 @@ namespace TimetableManagementSystem
         {
 
         }
+
+        private void stuBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Students.Students stu = new Students.Students();
+            stu.ShowDialog();
+        }
     }
 }

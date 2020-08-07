@@ -90,6 +90,7 @@
             this.stuBtn.TabIndex = 4;
             this.stuBtn.Text = "Students";
             this.stuBtn.UseVisualStyleBackColor = true;
+            this.stuBtn.Click += new System.EventHandler(this.stuBtn_Click);
             // 
             // tagBtn
             // 
