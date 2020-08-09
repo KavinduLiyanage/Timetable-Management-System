@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FED2CD81-9182-4DC5-81C7-1E52606718FE}</ProjectGuid>
+    <ProjectGuid>{D5B71DE3-1B7F-4071-A9B8-61F739D9AFDE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TimetableManagementSystem</RootNamespace>
-    <AssemblyName>TimetableManagementSystem</AssemblyName>
+    <RootNamespace>HomePageText</RootNamespace>
+    <AssemblyName>HomePageText</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,25 +52,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Homepage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Homepage.Designer.cs">
-      <DependentUpon>Homepage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Students\Students.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Students\Students.Designer.cs">
-      <DependentUpon>Students.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Homepage.resx">
-      <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,9 +66,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Students\Students.resx">
-      <DependentUpon>Students.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
