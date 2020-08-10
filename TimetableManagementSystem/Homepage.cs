@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TimetableManagementSystem
 {
-    public partial class Homepage : Form
+    public partial class Homepage : MetroFramework.Forms.MetroForm
     {
         public Homepage()
         {

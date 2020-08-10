@@ -44,7 +44,7 @@
             // 
             // getStartedBtn
             // 
-            this.getStartedBtn.Location = new System.Drawing.Point(236, 58);
+            this.getStartedBtn.Location = new System.Drawing.Point(240, 212);
             this.getStartedBtn.Name = "getStartedBtn";
             this.getStartedBtn.Size = new System.Drawing.Size(146, 97);
             this.getStartedBtn.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             // wdhBtn
             // 
-            this.wdhBtn.Location = new System.Drawing.Point(515, 58);
+            this.wdhBtn.Location = new System.Drawing.Point(519, 212);
             this.wdhBtn.Name = "wdhBtn";
             this.wdhBtn.Size = new System.Drawing.Size(146, 97);
             this.wdhBtn.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             // lecBtn
             // 
-            this.lecBtn.Location = new System.Drawing.Point(763, 58);
+            this.lecBtn.Location = new System.Drawing.Point(767, 212);
             this.lecBtn.Name = "lecBtn";
             this.lecBtn.Size = new System.Drawing.Size(146, 97);
             this.lecBtn.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             // subBtn
             // 
-            this.subBtn.Location = new System.Drawing.Point(1020, 58);
+            this.subBtn.Location = new System.Drawing.Point(1024, 212);
             this.subBtn.Name = "subBtn";
             this.subBtn.Size = new System.Drawing.Size(146, 97);
             this.subBtn.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             // stuBtn
             // 
-            this.stuBtn.Location = new System.Drawing.Point(236, 217);
+            this.stuBtn.Location = new System.Drawing.Point(240, 371);
             this.stuBtn.Name = "stuBtn";
             this.stuBtn.Size = new System.Drawing.Size(146, 97);
             this.stuBtn.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             // tagBtn
             // 
-            this.tagBtn.Location = new System.Drawing.Point(515, 217);
+            this.tagBtn.Location = new System.Drawing.Point(519, 371);
             this.tagBtn.Name = "tagBtn";
             this.tagBtn.Size = new System.Drawing.Size(146, 97);
             this.tagBtn.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             // locBtn
             // 
-            this.locBtn.Location = new System.Drawing.Point(763, 217);
+            this.locBtn.Location = new System.Drawing.Point(767, 371);
             this.locBtn.Name = "locBtn";
             this.locBtn.Size = new System.Drawing.Size(146, 97);
             this.locBtn.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // statBtn
             // 
-            this.statBtn.Location = new System.Drawing.Point(1020, 217);
+            this.statBtn.Location = new System.Drawing.Point(1024, 371);
             this.statBtn.Name = "statBtn";
             this.statBtn.Size = new System.Drawing.Size(146, 97);
             this.statBtn.TabIndex = 7;
@@ -121,7 +121,7 @@
             // 
             // sessionBtn
             // 
-            this.sessionBtn.Location = new System.Drawing.Point(236, 376);
+            this.sessionBtn.Location = new System.Drawing.Point(240, 530);
             this.sessionBtn.Name = "sessionBtn";
             this.sessionBtn.Size = new System.Drawing.Size(146, 97);
             this.sessionBtn.TabIndex = 8;
@@ -130,7 +130,7 @@
             // 
             // advOpBtn
             // 
-            this.advOpBtn.Location = new System.Drawing.Point(515, 376);
+            this.advOpBtn.Location = new System.Drawing.Point(519, 530);
             this.advOpBtn.Name = "advOpBtn";
             this.advOpBtn.Size = new System.Drawing.Size(146, 97);
             this.advOpBtn.TabIndex = 9;
@@ -139,7 +139,7 @@
             // 
             // roomBtn
             // 
-            this.roomBtn.Location = new System.Drawing.Point(763, 376);
+            this.roomBtn.Location = new System.Drawing.Point(767, 530);
             this.roomBtn.Name = "roomBtn";
             this.roomBtn.Size = new System.Drawing.Size(146, 97);
             this.roomBtn.TabIndex = 10;
@@ -148,7 +148,7 @@
             // 
             // genTimetBtn
             // 
-            this.genTimetBtn.Location = new System.Drawing.Point(1020, 376);
+            this.genTimetBtn.Location = new System.Drawing.Point(1024, 530);
             this.genTimetBtn.Name = "genTimetBtn";
             this.genTimetBtn.Size = new System.Drawing.Size(146, 97);
             this.genTimetBtn.TabIndex = 11;
@@ -157,10 +157,12 @@
             // 
             // Homepage
             // 
+            this.ApplyImageInvert = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(231)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
+            this.BackMaxSize = 960;
+            this.ClientSize = new System.Drawing.Size(1280, 738);
             this.Controls.Add(this.genTimetBtn);
             this.Controls.Add(this.roomBtn);
             this.Controls.Add(this.advOpBtn);
@@ -173,8 +175,9 @@
             this.Controls.Add(this.lecBtn);
             this.Controls.Add(this.wdhBtn);
             this.Controls.Add(this.getStartedBtn);
+            this.MaximizeBox = false;
             this.Name = "Homepage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Resizable = false;
             this.Text = "Homepage";
             this.Load += new System.EventHandler(this.Homepage_Load);
             this.ResumeLayout(false);
