@@ -117,9 +117,29 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Sub1-WorkingDaysAndHours.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub2-Lecturers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub3-Subjects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub4-Students.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub5-Tags.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub6-Locations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub7-Statistics.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
