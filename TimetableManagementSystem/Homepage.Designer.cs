@@ -44,9 +44,10 @@
             // 
             // getStartedBtn
             // 
-            this.getStartedBtn.Location = new System.Drawing.Point(240, 212);
+            this.getStartedBtn.Location = new System.Drawing.Point(180, 172);
+            this.getStartedBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.getStartedBtn.Name = "getStartedBtn";
-            this.getStartedBtn.Size = new System.Drawing.Size(146, 97);
+            this.getStartedBtn.Size = new System.Drawing.Size(110, 79);
             this.getStartedBtn.TabIndex = 0;
             this.getStartedBtn.Text = "Get Started";
             this.getStartedBtn.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@
             // 
             // wdhBtn
             // 
-            this.wdhBtn.Location = new System.Drawing.Point(519, 212);
+            this.wdhBtn.Location = new System.Drawing.Point(389, 172);
+            this.wdhBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.wdhBtn.Name = "wdhBtn";
-            this.wdhBtn.Size = new System.Drawing.Size(146, 97);
+            this.wdhBtn.Size = new System.Drawing.Size(110, 79);
             this.wdhBtn.TabIndex = 1;
             this.wdhBtn.Text = "Working Days & Hours";
             this.wdhBtn.UseVisualStyleBackColor = true;
@@ -64,9 +66,10 @@
             // 
             // lecBtn
             // 
-            this.lecBtn.Location = new System.Drawing.Point(767, 212);
+            this.lecBtn.Location = new System.Drawing.Point(575, 172);
+            this.lecBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lecBtn.Name = "lecBtn";
-            this.lecBtn.Size = new System.Drawing.Size(146, 97);
+            this.lecBtn.Size = new System.Drawing.Size(110, 79);
             this.lecBtn.TabIndex = 2;
             this.lecBtn.Text = "Lecturers";
             this.lecBtn.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@
             // 
             // subBtn
             // 
-            this.subBtn.Location = new System.Drawing.Point(1024, 212);
+            this.subBtn.Location = new System.Drawing.Point(768, 172);
+            this.subBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.subBtn.Name = "subBtn";
-            this.subBtn.Size = new System.Drawing.Size(146, 97);
+            this.subBtn.Size = new System.Drawing.Size(110, 79);
             this.subBtn.TabIndex = 3;
             this.subBtn.Text = "Subjects";
             this.subBtn.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
             // 
             // stuBtn
             // 
-            this.stuBtn.Location = new System.Drawing.Point(240, 371);
+            this.stuBtn.Location = new System.Drawing.Point(180, 301);
+            this.stuBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.stuBtn.Name = "stuBtn";
-            this.stuBtn.Size = new System.Drawing.Size(146, 97);
+            this.stuBtn.Size = new System.Drawing.Size(110, 79);
             this.stuBtn.TabIndex = 4;
             this.stuBtn.Text = "Students";
             this.stuBtn.UseVisualStyleBackColor = true;
@@ -94,63 +99,71 @@
             // 
             // tagBtn
             // 
-            this.tagBtn.Location = new System.Drawing.Point(519, 371);
+            this.tagBtn.Location = new System.Drawing.Point(389, 301);
+            this.tagBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tagBtn.Name = "tagBtn";
-            this.tagBtn.Size = new System.Drawing.Size(146, 97);
+            this.tagBtn.Size = new System.Drawing.Size(110, 79);
             this.tagBtn.TabIndex = 5;
             this.tagBtn.Text = "Tags";
             this.tagBtn.UseVisualStyleBackColor = true;
             // 
             // locBtn
             // 
-            this.locBtn.Location = new System.Drawing.Point(767, 371);
+            this.locBtn.Location = new System.Drawing.Point(575, 301);
+            this.locBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.locBtn.Name = "locBtn";
-            this.locBtn.Size = new System.Drawing.Size(146, 97);
+            this.locBtn.Size = new System.Drawing.Size(110, 79);
             this.locBtn.TabIndex = 6;
             this.locBtn.Text = "Location";
             this.locBtn.UseVisualStyleBackColor = true;
+            this.locBtn.Click += new System.EventHandler(this.locBtn_Click);
             // 
             // statBtn
             // 
-            this.statBtn.Location = new System.Drawing.Point(1024, 371);
+            this.statBtn.Location = new System.Drawing.Point(768, 301);
+            this.statBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.statBtn.Name = "statBtn";
-            this.statBtn.Size = new System.Drawing.Size(146, 97);
+            this.statBtn.Size = new System.Drawing.Size(110, 79);
             this.statBtn.TabIndex = 7;
             this.statBtn.Text = "Statistics";
             this.statBtn.UseVisualStyleBackColor = true;
             // 
             // sessionBtn
             // 
-            this.sessionBtn.Location = new System.Drawing.Point(240, 530);
+            this.sessionBtn.Location = new System.Drawing.Point(180, 431);
+            this.sessionBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sessionBtn.Name = "sessionBtn";
-            this.sessionBtn.Size = new System.Drawing.Size(146, 97);
+            this.sessionBtn.Size = new System.Drawing.Size(110, 79);
             this.sessionBtn.TabIndex = 8;
             this.sessionBtn.Text = "Sessions";
             this.sessionBtn.UseVisualStyleBackColor = true;
             // 
             // advOpBtn
             // 
-            this.advOpBtn.Location = new System.Drawing.Point(519, 530);
+            this.advOpBtn.Location = new System.Drawing.Point(389, 431);
+            this.advOpBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.advOpBtn.Name = "advOpBtn";
-            this.advOpBtn.Size = new System.Drawing.Size(146, 97);
+            this.advOpBtn.Size = new System.Drawing.Size(110, 79);
             this.advOpBtn.TabIndex = 9;
             this.advOpBtn.Text = "Advanced Options";
             this.advOpBtn.UseVisualStyleBackColor = true;
             // 
             // roomBtn
             // 
-            this.roomBtn.Location = new System.Drawing.Point(767, 530);
+            this.roomBtn.Location = new System.Drawing.Point(575, 431);
+            this.roomBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roomBtn.Name = "roomBtn";
-            this.roomBtn.Size = new System.Drawing.Size(146, 97);
+            this.roomBtn.Size = new System.Drawing.Size(110, 79);
             this.roomBtn.TabIndex = 10;
             this.roomBtn.Text = "Rooms";
             this.roomBtn.UseVisualStyleBackColor = true;
             // 
             // genTimetBtn
             // 
-            this.genTimetBtn.Location = new System.Drawing.Point(1024, 530);
+            this.genTimetBtn.Location = new System.Drawing.Point(768, 431);
+            this.genTimetBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.genTimetBtn.Name = "genTimetBtn";
-            this.genTimetBtn.Size = new System.Drawing.Size(146, 97);
+            this.genTimetBtn.Size = new System.Drawing.Size(110, 79);
             this.genTimetBtn.TabIndex = 11;
             this.genTimetBtn.Text = "Generate Timetables";
             this.genTimetBtn.UseVisualStyleBackColor = true;
@@ -158,11 +171,11 @@
             // Homepage
             // 
             this.ApplyImageInvert = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
-            this.ClientSize = new System.Drawing.Size(1280, 738);
+            this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.genTimetBtn);
             this.Controls.Add(this.roomBtn);
             this.Controls.Add(this.advOpBtn);
@@ -175,8 +188,10 @@
             this.Controls.Add(this.lecBtn);
             this.Controls.Add(this.wdhBtn);
             this.Controls.Add(this.getStartedBtn);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Homepage";
+            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
             this.Resizable = false;
             this.Text = "Homepage";
             this.Load += new System.EventHandler(this.Homepage_Load);

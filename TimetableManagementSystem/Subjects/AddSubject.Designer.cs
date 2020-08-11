@@ -142,9 +142,9 @@
             // 
             // 
             this.txtSubCode.CustomButton.Image = null;
-            this.txtSubCode.CustomButton.Location = new System.Drawing.Point(172, 2);
+            this.txtSubCode.CustomButton.Location = new System.Drawing.Point(129, 2);
             this.txtSubCode.CustomButton.Name = "";
-            this.txtSubCode.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtSubCode.CustomButton.Size = new System.Drawing.Size(19, 20);
             this.txtSubCode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSubCode.CustomButton.TabIndex = 1;
             this.txtSubCode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -175,9 +175,9 @@
             // 
             // 
             this.txtSubName.CustomButton.Image = null;
-            this.txtSubName.CustomButton.Location = new System.Drawing.Point(172, 2);
+            this.txtSubName.CustomButton.Location = new System.Drawing.Point(129, 2);
             this.txtSubName.CustomButton.Name = "";
-            this.txtSubName.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtSubName.CustomButton.Size = new System.Drawing.Size(19, 20);
             this.txtSubName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSubName.CustomButton.TabIndex = 1;
             this.txtSubName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -263,7 +263,7 @@
             this.btnSaveSub.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnSaveSub.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSaveSub.Location = new System.Drawing.Point(434, 529);
-            this.btnSaveSub.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveSub.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSaveSub.Name = "btnSaveSub";
             this.btnSaveSub.Size = new System.Drawing.Size(150, 40);
             this.btnSaveSub.TabIndex = 14;

@@ -54,5 +54,12 @@ namespace TimetableManagementSystem
             Students.Students stu = new Students.Students();
             stu.ShowDialog();
         }
+
+        private void locBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }
     }
 }
