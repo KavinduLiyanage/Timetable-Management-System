@@ -58,7 +58,6 @@
             this.btnSaveLec.UseCustomBackColor = true;
             this.btnSaveLec.UseCustomForeColor = true;
             this.btnSaveLec.UseSelectable = true;
-            this.btnSaveLec.Click += new System.EventHandler(this.btnSaveLec_Click);
             // 
             // metroLabel1
             // 
@@ -217,10 +216,12 @@
             this.cmbLecCenter.FormattingEnabled = true;
             this.cmbLecCenter.ItemHeight = 23;
             this.cmbLecCenter.Items.AddRange(new object[] {
-            "Computing",
-            "Engineering",
-            "Business",
-            "Humanities and Science"});
+            "Malabe",
+            "Metro",
+            "Matara",
+            "Kandy",
+            "Kurunagala",
+            "Jaffna"});
             this.cmbLecCenter.Location = new System.Drawing.Point(544, 327);
             this.cmbLecCenter.Name = "cmbLecCenter";
             this.cmbLecCenter.PromptText = "Select Center";
@@ -235,10 +236,9 @@
             this.cmbLecBuilding.FormattingEnabled = true;
             this.cmbLecBuilding.ItemHeight = 23;
             this.cmbLecBuilding.Items.AddRange(new object[] {
-            "Computing",
-            "Engineering",
-            "Business",
-            "Humanities and Science"});
+            "Main Building",
+            "New Building",
+            "D-Block"});
             this.cmbLecBuilding.Location = new System.Drawing.Point(544, 387);
             this.cmbLecBuilding.Name = "cmbLecBuilding";
             this.cmbLecBuilding.PromptText = "Select Building";
@@ -253,10 +253,13 @@
             this.cmbLecLevel.FormattingEnabled = true;
             this.cmbLecLevel.ItemHeight = 23;
             this.cmbLecLevel.Items.AddRange(new object[] {
-            "Computing",
-            "Engineering",
-            "Business",
-            "Humanities and Science"});
+            "Professor",
+            "Assistant Professor",
+            "Senior Lecturer(HG)",
+            "Senior Lecturer",
+            "Lecturer",
+            "Assistant Lecturer",
+            "Instructors"});
             this.cmbLecLevel.Location = new System.Drawing.Point(544, 447);
             this.cmbLecLevel.Name = "cmbLecLevel";
             this.cmbLecLevel.PromptText = "Select Level";

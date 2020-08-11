@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimetableManagementSystem.Lecturers;
+using TimetableManagementSystem.Subjects;
 
 namespace TimetableManagementSystem
 {
@@ -42,7 +43,9 @@ namespace TimetableManagementSystem
 
         private void subBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AddSubject addSubject = new AddSubject();
+            addSubject.ShowDialog();
         }
 
         private void stuBtn_Click(object sender, EventArgs e)

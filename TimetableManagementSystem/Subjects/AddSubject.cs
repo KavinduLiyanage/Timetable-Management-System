@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TimetableManagementSystem.Lecturers
+namespace TimetableManagementSystem.Subjects
 {
-    public partial class AddLecturer : MetroFramework.Forms.MetroForm
+    public partial class AddSubject : MetroFramework.Forms.MetroForm
     {
-        public AddLecturer()
+        public AddSubject()
         {
             InitializeComponent();
         }
