@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TimetableManagementSystem
 {
-    public partial class Homepage : Form
+    public partial class Homepage : MetroFramework.Forms.MetroForm
     {
         public Homepage()
         {
@@ -47,6 +47,21 @@ namespace TimetableManagementSystem
             this.Hide();
             Students.Students stu = new Students.Students();
             stu.ShowDialog();
+        }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
