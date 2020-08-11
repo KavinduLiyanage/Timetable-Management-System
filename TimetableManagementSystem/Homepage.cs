@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimetableManagementSystem.Lecturers;
 
 namespace TimetableManagementSystem
 {
@@ -34,7 +35,9 @@ namespace TimetableManagementSystem
 
         private void lecBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AddLecturer addLecturer = new AddLecturer();
+            addLecturer.ShowDialog();
         }
 
         private void subBtn_Click(object sender, EventArgs e)
