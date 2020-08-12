@@ -16,5 +16,10 @@ namespace TimetableManagementSystem.Lecturers
         {
             InitializeComponent();
         }
+
+        private void AddLecturer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -307,6 +307,7 @@
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Resizable = false;
             this.Text = "AddLecturer";
+            this.Load += new System.EventHandler(this.AddLecturer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

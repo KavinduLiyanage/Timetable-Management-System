@@ -81,6 +81,12 @@
     <Compile Include="Subjects\AddSubject.Designer.cs">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Working Days\Add Number of Working Days.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Working Days\Add Number of Working Days.Designer.cs">
+      <DependentUpon>Add Number of Working Days.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subjects\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Working Days\Add Number of Working Days.resx">
+      <DependentUpon>Add Number of Working Days.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
