@@ -55,11 +55,18 @@ namespace TimetableManagementSystem
             stu.ShowDialog();
         }
 
-        private void locBtn_Click(object sender, EventArgs e)
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Locations.Location loc = new Locations.Location();
-            loc.ShowDialog();
+            AddLecturer addLecturer = new AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddSubject addSubject = new AddSubject();
+            addSubject.ShowDialog();
         }
     }
 }
