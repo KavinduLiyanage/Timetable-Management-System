@@ -51,8 +51,36 @@ namespace TimetableManagementSystem
         private void stuBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Students.Students stu = new Students.Students();
+            Students.YearSem stu = new Students.YearSem();
             stu.ShowDialog();
+        }
+
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddLecturer addLecturer = new AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddSubject addSubject = new AddSubject();
+            addSubject.ShowDialog();
+        }
+
+        private void locBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+           Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
         }
     }
 }

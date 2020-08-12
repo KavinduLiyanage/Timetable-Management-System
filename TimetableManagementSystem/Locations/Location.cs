@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TimetableManagementSystem.Students
+namespace TimetableManagementSystem.Locations
 {
-    public partial class Students : Form
+    public partial class Location : MetroFramework.Forms.MetroForm
     {
-        public Students()
+        public Location()
         {
             InitializeComponent();
         }

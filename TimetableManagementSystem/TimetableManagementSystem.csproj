@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -44,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +59,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Button_WOC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Config.cs" />
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,13 +75,25 @@
     <Compile Include="Lecturers\AddLecturer.Designer.cs">
       <DependentUpon>AddLecturer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Students\Students.cs">
+    <Compile Include="Locations\Location.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Students\Students.Designer.cs">
-      <DependentUpon>Students.cs</DependentUpon>
+    <Compile Include="Locations\Location.Designer.cs">
+      <DependentUpon>Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\YearSem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\YearSem.Designer.cs">
+      <DependentUpon>YearSem.cs</DependentUpon>
     </Compile>
     <Compile Include="Subjects\AddSubject.cs">
       <SubType>Form</SubType>
@@ -93,6 +113,9 @@
     <EmbeddedResource Include="Lecturers\AddLecturer.resx">
       <DependentUpon>AddLecturer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Locations\Location.resx">
+      <DependentUpon>Location.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -103,8 +126,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Students\Students.resx">
-      <DependentUpon>Students.cs</DependentUpon>
+    <EmbeddedResource Include="Statistics\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\YearSem.resx">
+      <DependentUpon>YearSem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Subjects\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
@@ -126,9 +152,29 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Sub1-WorkingDaysAndHours.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub2-Lecturers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub3-Subjects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub4-Students.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub5-Tags.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub6-Locations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sub7-Statistics.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
