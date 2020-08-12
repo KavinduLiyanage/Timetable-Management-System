@@ -42,6 +42,20 @@
             this.cmbLecBuilding = new MetroFramework.Controls.MetroComboBox();
             this.cmbLecLevel = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
+            this.btnSideNavTags = new System.Windows.Forms.PictureBox();
+            this.btnSideNavStudents = new System.Windows.Forms.PictureBox();
+            this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
+            this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSaveLec
@@ -279,6 +293,83 @@
             this.metroLabel7.TabIndex = 13;
             this.metroLabel7.Text = "Add New Lecturer";
             // 
+            // btnSideNavStatistics
+            // 
+            this.btnSideNavStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavStatistics.Image = global::TimetableManagementSystem.Properties.Resources.Sub7_Statistics;
+            this.btnSideNavStatistics.Location = new System.Drawing.Point(13, 488);
+            this.btnSideNavStatistics.Name = "btnSideNavStatistics";
+            this.btnSideNavStatistics.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStatistics.TabIndex = 25;
+            this.btnSideNavStatistics.TabStop = false;
+            // 
+            // btnSideNavLocations
+            // 
+            this.btnSideNavLocations.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavLocations.Image = global::TimetableManagementSystem.Properties.Resources.Sub6_Locations;
+            this.btnSideNavLocations.Location = new System.Drawing.Point(13, 427);
+            this.btnSideNavLocations.Name = "btnSideNavLocations";
+            this.btnSideNavLocations.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLocations.TabIndex = 24;
+            this.btnSideNavLocations.TabStop = false;
+            // 
+            // btnSideNavTags
+            // 
+            this.btnSideNavTags.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavTags.Image = global::TimetableManagementSystem.Properties.Resources.Sub5_Tags;
+            this.btnSideNavTags.Location = new System.Drawing.Point(13, 366);
+            this.btnSideNavTags.Name = "btnSideNavTags";
+            this.btnSideNavTags.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavTags.TabIndex = 23;
+            this.btnSideNavTags.TabStop = false;
+            // 
+            // btnSideNavStudents
+            // 
+            this.btnSideNavStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavStudents.Image = global::TimetableManagementSystem.Properties.Resources.Sub4_Students;
+            this.btnSideNavStudents.Location = new System.Drawing.Point(13, 305);
+            this.btnSideNavStudents.Name = "btnSideNavStudents";
+            this.btnSideNavStudents.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStudents.TabIndex = 22;
+            this.btnSideNavStudents.TabStop = false;
+            // 
+            // btnSideNavSubjects
+            // 
+            this.btnSideNavSubjects.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavSubjects.Image = global::TimetableManagementSystem.Properties.Resources.Sub3_Subjects;
+            this.btnSideNavSubjects.Location = new System.Drawing.Point(13, 244);
+            this.btnSideNavSubjects.Name = "btnSideNavSubjects";
+            this.btnSideNavSubjects.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavSubjects.TabIndex = 21;
+            this.btnSideNavSubjects.TabStop = false;
+            // 
+            // btnSideNavLecturers
+            // 
+            this.btnSideNavLecturers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavLecturers.Image = global::TimetableManagementSystem.Properties.Resources.Sub2_Lecturers;
+            this.btnSideNavLecturers.Location = new System.Drawing.Point(13, 188);
+            this.btnSideNavLecturers.Name = "btnSideNavLecturers";
+            this.btnSideNavLecturers.Size = new System.Drawing.Size(70, 50);
+            this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLecturers.TabIndex = 20;
+            this.btnSideNavLecturers.TabStop = false;
+            // 
+            // btnSideNavWorking
+            // 
+            this.btnSideNavWorking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavWorking.Image = global::TimetableManagementSystem.Properties.Resources.Sub1_WorkingDaysAndHours;
+            this.btnSideNavWorking.Location = new System.Drawing.Point(8, 112);
+            this.btnSideNavWorking.Name = "btnSideNavWorking";
+            this.btnSideNavWorking.Size = new System.Drawing.Size(80, 70);
+            this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavWorking.TabIndex = 19;
+            this.btnSideNavWorking.TabStop = false;
+            // 
             // AddLecturer
             // 
             this.ApplyImageInvert = true;
@@ -287,6 +378,13 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.btnSideNavStatistics);
+            this.Controls.Add(this.btnSideNavLocations);
+            this.Controls.Add(this.btnSideNavTags);
+            this.Controls.Add(this.btnSideNavStudents);
+            this.Controls.Add(this.btnSideNavSubjects);
+            this.Controls.Add(this.btnSideNavLecturers);
+            this.Controls.Add(this.btnSideNavWorking);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.cmbLecLevel);
             this.Controls.Add(this.cmbLecBuilding);
@@ -308,6 +406,13 @@
             this.Resizable = false;
             this.Text = "AddLecturer";
             this.Load += new System.EventHandler(this.AddLecturer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,5 +434,12 @@
         private MetroFramework.Controls.MetroComboBox cmbLecBuilding;
         private MetroFramework.Controls.MetroComboBox cmbLecLevel;
         private MetroFramework.Controls.MetroLabel metroLabel7;
+        private System.Windows.Forms.PictureBox btnSideNavStatistics;
+        private System.Windows.Forms.PictureBox btnSideNavLocations;
+        private System.Windows.Forms.PictureBox btnSideNavTags;
+        private System.Windows.Forms.PictureBox btnSideNavStudents;
+        private System.Windows.Forms.PictureBox btnSideNavSubjects;
+        private System.Windows.Forms.PictureBox btnSideNavLecturers;
+        private System.Windows.Forms.PictureBox btnSideNavWorking;
     }
 }
