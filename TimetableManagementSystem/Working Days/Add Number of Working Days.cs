@@ -107,5 +107,20 @@ namespace TimetableManagementSystem.Working_Days
         {
 
         }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
