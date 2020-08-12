@@ -130,6 +130,7 @@
             this.locBtn.TabIndex = 6;
             this.locBtn.Text = "Location";
             this.locBtn.UseVisualStyleBackColor = true;
+            this.locBtn.Click += new System.EventHandler(this.locBtn_Click_1);
             // 
             // statBtn
             // 

@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.editloc_tab = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.delete_btn = new MetroFramework.Controls.MetroButton();
             this.edit_tbl_btn = new MetroFramework.Controls.MetroButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.loc_dgridv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,10 +71,11 @@
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
-            this.metroTabControl1.SuspendLayout();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.editloc_tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loc_dgridv)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.capacity_cmb)).BeginInit();
@@ -83,25 +84,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroTabControl1
+            // editloc_tab
             // 
-            this.metroTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.metroTabControl1.Controls.Add(this.tabPage1);
-            this.metroTabControl1.Controls.Add(this.tabPage2);
-            this.metroTabControl1.Controls.Add(this.tabPage3);
-            this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Small;
-            this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
-            this.metroTabControl1.Location = new System.Drawing.Point(138, 120);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(788, 461);
-            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTabControl1.TabIndex = 0;
-            this.metroTabControl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTabControl1.UseCustomBackColor = true;
-            this.metroTabControl1.UseCustomForeColor = true;
-            this.metroTabControl1.UseSelectable = true;
-            this.metroTabControl1.UseStyleColors = true;
+            this.editloc_tab.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.editloc_tab.Controls.Add(this.tabPage1);
+            this.editloc_tab.Controls.Add(this.tabPage2);
+            this.editloc_tab.Controls.Add(this.tabPage3);
+            this.editloc_tab.FontSize = MetroFramework.MetroTabControlSize.Small;
+            this.editloc_tab.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
+            this.editloc_tab.Location = new System.Drawing.Point(138, 120);
+            this.editloc_tab.Name = "editloc_tab";
+            this.editloc_tab.SelectedIndex = 0;
+            this.editloc_tab.Size = new System.Drawing.Size(788, 461);
+            this.editloc_tab.Style = MetroFramework.MetroColorStyle.Blue;
+            this.editloc_tab.TabIndex = 0;
+            this.editloc_tab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.editloc_tab.UseCustomBackColor = true;
+            this.editloc_tab.UseCustomForeColor = true;
+            this.editloc_tab.UseSelectable = true;
+            this.editloc_tab.UseStyleColors = true;
             // 
             // tabPage1
             // 
@@ -121,9 +122,10 @@
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.Controls.Add(this.delete_btn);
             this.metroPanel1.Controls.Add(this.edit_tbl_btn);
-            this.metroPanel1.Controls.Add(this.dataGridView1);
+            this.metroPanel1.Controls.Add(this.loc_dgridv);
             this.metroPanel1.Controls.Add(this.sort_btn);
             this.metroPanel1.Controls.Add(this.metroComboBox1);
             this.metroPanel1.Controls.Add(this.search_btn);
@@ -171,42 +173,42 @@
             this.edit_tbl_btn.UseCustomForeColor = true;
             this.edit_tbl_btn.UseSelectable = true;
             // 
-            // dataGridView1
+            // loc_dgridv
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.loc_dgridv.AllowUserToOrderColumns = true;
+            this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.loc_dgridv.BackgroundColor = System.Drawing.Color.White;
+            this.loc_dgridv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.loc_dgridv.ColumnHeadersHeight = 29;
+            this.loc_dgridv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(38, 62);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(687, 278);
-            this.dataGridView1.TabIndex = 18;
+            this.loc_dgridv.Location = new System.Drawing.Point(38, 62);
+            this.loc_dgridv.MultiSelect = false;
+            this.loc_dgridv.Name = "loc_dgridv";
+            this.loc_dgridv.ReadOnly = true;
+            this.loc_dgridv.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.loc_dgridv.RowHeadersWidth = 51;
+            this.loc_dgridv.RowTemplate.Height = 24;
+            this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.loc_dgridv.Size = new System.Drawing.Size(687, 278);
+            this.loc_dgridv.TabIndex = 18;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Blue;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column1.HeaderText = "Building";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -703,6 +705,22 @@
             this.locations_lbl.Text = "Locations";
             this.locations_lbl.UseCustomBackColor = true;
             // 
+            // metroButton1
+            // 
+            this.metroButton1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
+            this.metroButton1.Location = new System.Drawing.Point(232, 361);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(150, 40);
+            this.metroButton1.TabIndex = 40;
+            this.metroButton1.Text = "Load Data";
+            this.metroButton1.UseCustomBackColor = true;
+            this.metroButton1.UseCustomForeColor = true;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // Location
             // 
             this.ApplyImageInvert = true;
@@ -712,17 +730,17 @@
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.locations_lbl);
-            this.Controls.Add(this.metroTabControl1);
+            this.Controls.Add(this.editloc_tab);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Location";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Resizable = false;
             this.Text = "Location";
-            this.metroTabControl1.ResumeLayout(false);
+            this.editloc_tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loc_dgridv)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
@@ -738,7 +756,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabControl editloc_tab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -748,7 +766,7 @@
         private MetroFramework.Controls.MetroButton search_btn;
         private MetroFramework.Controls.MetroButton sort_btn;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView loc_dgridv;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
@@ -779,5 +797,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

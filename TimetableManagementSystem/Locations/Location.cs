@@ -130,6 +130,16 @@ namespace TimetableManagementSystem.Locations
 
 
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM locations", con);
+            DataTable dtbl = new DataTable();
+            sqlDataAdapter.Fill(dtbl);
+
+            loc_dgridv.DataSource = dtbl;
+        }
     }
 
     

@@ -82,5 +82,13 @@ namespace TimetableManagementSystem
            Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
         }
+
+        //executing
+        private void locBtn_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }
     }
 }
