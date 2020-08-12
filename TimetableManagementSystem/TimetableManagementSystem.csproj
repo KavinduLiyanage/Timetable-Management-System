@@ -89,17 +89,23 @@
     <Compile Include="Statistics\Statistics.Designer.cs">
       <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="Students\YearSem.cs">
+    <Compile Include="Students\Students.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Students\YearSem.Designer.cs">
-      <DependentUpon>YearSem.cs</DependentUpon>
+    <Compile Include="Students\Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
     </Compile>
     <Compile Include="Subjects\AddSubject.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Subjects\AddSubject.Designer.cs">
       <DependentUpon>AddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Working Days\Add Number of Working Days.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Working Days\Add Number of Working Days.Designer.cs">
+      <DependentUpon>Add Number of Working Days.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
@@ -123,11 +129,14 @@
     <EmbeddedResource Include="Statistics\Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Students\YearSem.resx">
-      <DependentUpon>YearSem.cs</DependentUpon>
+    <EmbeddedResource Include="Students\Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Subjects\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Working Days\Add Number of Working Days.resx">
+      <DependentUpon>Add Number of Working Days.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

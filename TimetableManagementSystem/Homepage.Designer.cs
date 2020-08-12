@@ -130,7 +130,6 @@
             this.locBtn.TabIndex = 6;
             this.locBtn.Text = "Location";
             this.locBtn.UseVisualStyleBackColor = true;
-            this.locBtn.Click += new System.EventHandler(this.locBtn_Click);
             // 
             // statBtn
             // 
@@ -186,7 +185,7 @@
             // 
             this.btnSideNavWorking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavWorking.Image = global::TimetableManagementSystem.Properties.Resources.Sub1_WorkingDaysAndHours;
-            this.btnSideNavWorking.Location = new System.Drawing.Point(7, 112);
+            this.btnSideNavWorking.Location = new System.Drawing.Point(8, 112);
             this.btnSideNavWorking.Name = "btnSideNavWorking";
             this.btnSideNavWorking.Size = new System.Drawing.Size(80, 70);
             this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -197,7 +196,7 @@
             // 
             this.btnSideNavLecturers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavLecturers.Image = global::TimetableManagementSystem.Properties.Resources.Sub2_Lecturers;
-            this.btnSideNavLecturers.Location = new System.Drawing.Point(12, 188);
+            this.btnSideNavLecturers.Location = new System.Drawing.Point(13, 188);
             this.btnSideNavLecturers.Name = "btnSideNavLecturers";
             this.btnSideNavLecturers.Size = new System.Drawing.Size(70, 50);
             this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -209,7 +208,7 @@
             // 
             this.btnSideNavSubjects.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavSubjects.Image = global::TimetableManagementSystem.Properties.Resources.Sub3_Subjects;
-            this.btnSideNavSubjects.Location = new System.Drawing.Point(12, 244);
+            this.btnSideNavSubjects.Location = new System.Drawing.Point(13, 244);
             this.btnSideNavSubjects.Name = "btnSideNavSubjects";
             this.btnSideNavSubjects.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -221,7 +220,7 @@
             // 
             this.btnSideNavStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavStudents.Image = global::TimetableManagementSystem.Properties.Resources.Sub4_Students;
-            this.btnSideNavStudents.Location = new System.Drawing.Point(12, 305);
+            this.btnSideNavStudents.Location = new System.Drawing.Point(13, 305);
             this.btnSideNavStudents.Name = "btnSideNavStudents";
             this.btnSideNavStudents.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -232,7 +231,7 @@
             // 
             this.btnSideNavTags.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavTags.Image = global::TimetableManagementSystem.Properties.Resources.Sub5_Tags;
-            this.btnSideNavTags.Location = new System.Drawing.Point(12, 366);
+            this.btnSideNavTags.Location = new System.Drawing.Point(13, 366);
             this.btnSideNavTags.Name = "btnSideNavTags";
             this.btnSideNavTags.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -243,7 +242,7 @@
             // 
             this.btnSideNavLocations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavLocations.Image = global::TimetableManagementSystem.Properties.Resources.Sub6_Locations;
-            this.btnSideNavLocations.Location = new System.Drawing.Point(12, 427);
+            this.btnSideNavLocations.Location = new System.Drawing.Point(13, 427);
             this.btnSideNavLocations.Name = "btnSideNavLocations";
             this.btnSideNavLocations.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -254,13 +253,12 @@
             // 
             this.btnSideNavStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavStatistics.Image = global::TimetableManagementSystem.Properties.Resources.Sub7_Statistics;
-            this.btnSideNavStatistics.Location = new System.Drawing.Point(12, 488);
+            this.btnSideNavStatistics.Location = new System.Drawing.Point(13, 488);
             this.btnSideNavStatistics.Name = "btnSideNavStatistics";
             this.btnSideNavStatistics.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavStatistics.TabIndex = 18;
             this.btnSideNavStatistics.TabStop = false;
-            this.btnSideNavStatistics.Click += new System.EventHandler(this.btnSideNavStatistics_Click);
             // 
             // Homepage
             // 
@@ -331,4 +329,3 @@
         private System.Windows.Forms.PictureBox btnSideNavStatistics;
     }
 }
-

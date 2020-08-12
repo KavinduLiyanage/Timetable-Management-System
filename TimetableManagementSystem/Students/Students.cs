@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TimetableManagementSystem.Students
 {
-    public partial class YearSem : MetroFramework.Forms.MetroForm
+    public partial class Students : MetroFramework.Forms.MetroForm
     {
-        public YearSem()
+        public Students()
         {
             InitializeComponent();
         }
