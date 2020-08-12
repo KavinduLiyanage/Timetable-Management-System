@@ -130,6 +130,7 @@
             this.locBtn.TabIndex = 6;
             this.locBtn.Text = "Location";
             this.locBtn.UseVisualStyleBackColor = true;
+            this.locBtn.Click += new System.EventHandler(this.locBtn_Click);
             // 
             // statBtn
             // 
@@ -259,6 +260,7 @@
             this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavStatistics.TabIndex = 18;
             this.btnSideNavStatistics.TabStop = false;
+            this.btnSideNavStatistics.Click += new System.EventHandler(this.btnSideNavStatistics_Click);
             // 
             // Homepage
             // 

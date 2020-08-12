@@ -68,5 +68,19 @@ namespace TimetableManagementSystem
             AddSubject addSubject = new AddSubject();
             addSubject.ShowDialog();
         }
+
+        private void locBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+           Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
+        }
     }
 }

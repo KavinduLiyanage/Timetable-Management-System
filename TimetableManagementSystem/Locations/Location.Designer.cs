@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
@@ -93,7 +93,7 @@
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.metroTabControl1.Location = new System.Drawing.Point(138, 120);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(788, 461);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabControl1.TabIndex = 0;
@@ -109,9 +109,9 @@
             this.tabPage1.Controls.Add(this.metroPanel1);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 37);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(7);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabPage1.Size = new System.Drawing.Size(780, 420);
             this.tabPage1.TabIndex = 0;
@@ -120,7 +120,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Lavender;
+            this.metroPanel1.BackColor = System.Drawing.Color.Transparent;
             this.metroPanel1.Controls.Add(this.delete_btn);
             this.metroPanel1.Controls.Add(this.edit_tbl_btn);
             this.metroPanel1.Controls.Add(this.dataGridView1);
@@ -128,6 +128,7 @@
             this.metroPanel1.Controls.Add(this.metroComboBox1);
             this.metroPanel1.Controls.Add(this.search_btn);
             this.metroPanel1.Controls.Add(this.metroTextBox1);
+            this.metroPanel1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
@@ -146,7 +147,7 @@
             this.delete_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.delete_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.delete_btn.Location = new System.Drawing.Point(564, 361);
-            this.delete_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.delete_btn.Margin = new System.Windows.Forms.Padding(2);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(150, 40);
             this.delete_btn.TabIndex = 39;
@@ -161,7 +162,7 @@
             this.edit_tbl_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.edit_tbl_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.edit_tbl_btn.Location = new System.Drawing.Point(398, 361);
-            this.edit_tbl_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.edit_tbl_btn.Margin = new System.Windows.Forms.Padding(2);
             this.edit_tbl_btn.Name = "edit_tbl_btn";
             this.edit_tbl_btn.Size = new System.Drawing.Size(150, 40);
             this.edit_tbl_btn.TabIndex = 38;
@@ -176,14 +177,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
@@ -228,8 +229,8 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Blue;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Blue;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column1.HeaderText = "Building";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -241,7 +242,7 @@
             this.sort_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.sort_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.sort_btn.Location = new System.Drawing.Point(620, 18);
-            this.sort_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sort_btn.Margin = new System.Windows.Forms.Padding(2);
             this.sort_btn.Name = "sort_btn";
             this.sort_btn.Size = new System.Drawing.Size(105, 30);
             this.sort_btn.TabIndex = 17;
@@ -270,7 +271,7 @@
             this.search_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.search_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.search_btn.Location = new System.Drawing.Point(241, 17);
-            this.search_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.search_btn.Margin = new System.Windows.Forms.Padding(2);
             this.search_btn.Name = "search_btn";
             this.search_btn.Size = new System.Drawing.Size(105, 30);
             this.search_btn.TabIndex = 15;
@@ -285,9 +286,9 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(114, 2);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(152, 2);
             this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox1.CustomButton.TabIndex = 1;
             this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -323,7 +324,7 @@
             // 
             // metroPanel2
             // 
-            this.metroPanel2.BackColor = System.Drawing.Color.Lavender;
+            this.metroPanel2.BackColor = System.Drawing.Color.Transparent;
             this.metroPanel2.Controls.Add(this.clr_btn);
             this.metroPanel2.Controls.Add(this.addloc_btn);
             this.metroPanel2.Controls.Add(this.capacity_cmb);
@@ -353,7 +354,7 @@
             this.clr_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.clr_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.clr_btn.Location = new System.Drawing.Point(404, 328);
-            this.clr_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clr_btn.Margin = new System.Windows.Forms.Padding(2);
             this.clr_btn.Name = "clr_btn";
             this.clr_btn.Size = new System.Drawing.Size(150, 40);
             this.clr_btn.TabIndex = 38;
@@ -368,7 +369,7 @@
             this.addloc_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.addloc_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.addloc_btn.Location = new System.Drawing.Point(237, 328);
-            this.addloc_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addloc_btn.Margin = new System.Windows.Forms.Padding(2);
             this.addloc_btn.Name = "addloc_btn";
             this.addloc_btn.Size = new System.Drawing.Size(150, 40);
             this.addloc_btn.TabIndex = 37;
@@ -515,7 +516,7 @@
             // 
             // metroPanel3
             // 
-            this.metroPanel3.BackColor = System.Drawing.Color.Lavender;
+            this.metroPanel3.BackColor = System.Drawing.Color.Transparent;
             this.metroPanel3.Controls.Add(this.reset_btn);
             this.metroPanel3.Controls.Add(this.editloc_btn);
             this.metroPanel3.Controls.Add(this.numericUpDown1);
@@ -545,7 +546,7 @@
             this.reset_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.reset_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.reset_btn.Location = new System.Drawing.Point(404, 328);
-            this.reset_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reset_btn.Margin = new System.Windows.Forms.Padding(2);
             this.reset_btn.Name = "reset_btn";
             this.reset_btn.Size = new System.Drawing.Size(150, 40);
             this.reset_btn.TabIndex = 38;
@@ -560,7 +561,7 @@
             this.editloc_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.editloc_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.editloc_btn.Location = new System.Drawing.Point(237, 328);
-            this.editloc_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editloc_btn.Margin = new System.Windows.Forms.Padding(2);
             this.editloc_btn.Name = "editloc_btn";
             this.editloc_btn.Size = new System.Drawing.Size(150, 40);
             this.editloc_btn.TabIndex = 37;
@@ -717,7 +718,7 @@
             this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.locations_lbl);
             this.Controls.Add(this.metroTabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Location";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
