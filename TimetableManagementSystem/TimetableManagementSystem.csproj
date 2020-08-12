@@ -59,6 +59,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Button_WOC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Config.cs" />
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +89,11 @@
     <Compile Include="Statistics\Statistics.Designer.cs">
       <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="Students\Students.cs">
+    <Compile Include="Students\YearSem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Students\Students.Designer.cs">
-      <DependentUpon>Students.cs</DependentUpon>
+    <Compile Include="Students\YearSem.Designer.cs">
+      <DependentUpon>YearSem.cs</DependentUpon>
     </Compile>
     <Compile Include="Subjects\AddSubject.cs">
       <SubType>Form</SubType>
@@ -119,8 +123,8 @@
     <EmbeddedResource Include="Statistics\Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Students\Students.resx">
-      <DependentUpon>Students.cs</DependentUpon>
+    <EmbeddedResource Include="Students\YearSem.resx">
+      <DependentUpon>YearSem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Subjects\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
