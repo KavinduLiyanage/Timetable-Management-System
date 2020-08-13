@@ -40,6 +40,7 @@ namespace TimetableManagementSystem.Lecturers
             dt.Load(sdr);
             con.Close();
 
+            dgvLectures.AutoGenerateColumns = false;
             dgvLectures.DataSource = dt;
         }
 
@@ -101,8 +102,13 @@ namespace TimetableManagementSystem.Lecturers
         private void ClearFields()
         {
             txtLecName.Clear();
+            txtLecDep.Clear();
+            cmbLecFac.SelectedIndex = -1;
+            cmbLecBuilding.SelectedIndex = -1;
+            cmbLecCenter.SelectedIndex = -1;
+            cmbLecLevel.SelectedIndex = -1;
             LecturerID = 0;
-            txtLecName.Focus();
+
         }
 
         private bool IsValid()
@@ -116,6 +122,22 @@ namespace TimetableManagementSystem.Lecturers
 
 
             return true;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void dgvLectures_CellClick(object sender, DataGridViewCellEventArgs e)
+        {           
+            LecturerID = Convert.ToInt32(dgvLectures.SelectedRows[0].Cells[0].Value);
+            txtLecNameEdit.Text = dgvLectures.SelectedRows[0].Cells[1].Value.ToString();
+            cmbLecFacEdit.SelectedValue = dgvLectures.SelectedRows[0].Cells[2].Value;
+            txtLecDepEdit.Text = dgvLectures.SelectedRows[0].Cells[3].Value.ToString();
+            MessageBox.Show("Fill the all fields"+ dgvLectures.SelectedRows[0].Cells[2].Value, "Failed", MessageBoxButtons.OK);
+            tabControlLecturers.SelectedTab = tabPageLecEdit;
+
         }
 
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
