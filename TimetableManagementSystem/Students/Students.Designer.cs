@@ -28,52 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.year = new MetroFramework.Controls.MetroTabPage();
+            this.yearTxt = new MetroFramework.Controls.MetroTextBox();
+            this.yrSemData = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yrSemSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
+            this.yrSemDltBtn = new MetroFramework.Controls.MetroButton();
+            this.yrSemEditBtn = new MetroFramework.Controls.MetroButton();
+            this.yrSemClrBtn = new MetroFramework.Controls.MetroButton();
+            this.yrSemAddBtn = new MetroFramework.Controls.MetroButton();
+            this.semTxt = new MetroFramework.Controls.MetroTextBox();
+            this.yrSemSrtBtn = new MetroFramework.Controls.MetroButton();
+            this.yrSemSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.programme = new MetroFramework.Controls.MetroTabPage();
-            this.grpNum = new MetroFramework.Controls.MetroTabPage();
-            this.genGrpID = new MetroFramework.Controls.MetroTabPage();
-            this.subGrpNum = new MetroFramework.Controls.MetroTabPage();
-            this.genSubGrpId = new MetroFramework.Controls.MetroTabPage();
-            this.viewDe = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.prgClrBtn = new MetroFramework.Controls.MetroButton();
+            this.addPrgBtn = new MetroFramework.Controls.MetroButton();
+            this.prgBtn = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.metroButton8 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
+            this.grpNum = new MetroFramework.Controls.MetroTabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
             this.metroButton10 = new MetroFramework.Controls.MetroButton();
             this.metroButton11 = new MetroFramework.Controls.MetroButton();
             this.metroButton12 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroButton13 = new MetroFramework.Controls.MetroButton();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton14 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
+            this.genGrpID = new MetroFramework.Controls.MetroTabPage();
             this.metroButton15 = new MetroFramework.Controls.MetroButton();
             this.metroButton16 = new MetroFramework.Controls.MetroButton();
             this.metroButton17 = new MetroFramework.Controls.MetroButton();
@@ -86,6 +95,7 @@
             this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton20 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox9 = new MetroFramework.Controls.MetroTextBox();
+            this.subGrpNum = new MetroFramework.Controls.MetroTabPage();
             this.metroButton21 = new MetroFramework.Controls.MetroButton();
             this.metroButton22 = new MetroFramework.Controls.MetroButton();
             this.metroButton23 = new MetroFramework.Controls.MetroButton();
@@ -98,6 +108,7 @@
             this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton26 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox11 = new MetroFramework.Controls.MetroTextBox();
+            this.genSubGrpId = new MetroFramework.Controls.MetroTabPage();
             this.metroButton27 = new MetroFramework.Controls.MetroButton();
             this.metroButton28 = new MetroFramework.Controls.MetroButton();
             this.metroButton29 = new MetroFramework.Controls.MetroButton();
@@ -110,6 +121,7 @@
             this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton32 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox13 = new MetroFramework.Controls.MetroTextBox();
+            this.viewDe = new MetroFramework.Controls.MetroTabPage();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,33 +131,21 @@
             this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton34 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox14 = new MetroFramework.Controls.MetroTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton35 = new MetroFramework.Controls.MetroButton();
-            this.metroButton36 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton37 = new MetroFramework.Controls.MetroButton();
-            this.metroButton38 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroTabControl1.SuspendLayout();
             this.year.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yrSemData)).BeginInit();
             this.programme.SuspendLayout();
-            this.grpNum.SuspendLayout();
-            this.genGrpID.SuspendLayout();
-            this.subGrpNum.SuspendLayout();
-            this.genSubGrpId.SuspendLayout();
-            this.viewDe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.grpNum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.genGrpID.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.subGrpNum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.genSubGrpId.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.viewDe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -159,23 +159,23 @@
             this.metroTabControl1.Controls.Add(this.viewDe);
             this.metroTabControl1.Location = new System.Drawing.Point(131, 95);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(811, 486);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
             // 
             // year
             // 
-            this.year.Controls.Add(this.dataGridView1);
-            this.year.Controls.Add(this.metroComboBox1);
-            this.year.Controls.Add(this.metroButton1);
-            this.year.Controls.Add(this.metroButton2);
-            this.year.Controls.Add(this.metroButton35);
-            this.year.Controls.Add(this.metroButton36);
-            this.year.Controls.Add(this.metroTextBox1);
-            this.year.Controls.Add(this.metroButton37);
-            this.year.Controls.Add(this.metroButton38);
-            this.year.Controls.Add(this.metroTextBox2);
+            this.year.Controls.Add(this.yearTxt);
+            this.year.Controls.Add(this.yrSemData);
+            this.year.Controls.Add(this.yrSemSrtDrpDwn);
+            this.year.Controls.Add(this.yrSemDltBtn);
+            this.year.Controls.Add(this.yrSemEditBtn);
+            this.year.Controls.Add(this.yrSemClrBtn);
+            this.year.Controls.Add(this.yrSemAddBtn);
+            this.year.Controls.Add(this.semTxt);
+            this.year.Controls.Add(this.yrSemSrtBtn);
+            this.year.Controls.Add(this.yrSemSearchBox);
             this.year.HorizontalScrollbarBarColor = true;
             this.year.HorizontalScrollbarHighlightOnWheel = false;
             this.year.HorizontalScrollbarSize = 10;
@@ -188,15 +188,261 @@
             this.year.VerticalScrollbarHighlightOnWheel = false;
             this.year.VerticalScrollbarSize = 10;
             // 
+            // yearTxt
+            // 
+            // 
+            // 
+            // 
+            this.yearTxt.CustomButton.Image = null;
+            this.yearTxt.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.yearTxt.CustomButton.Name = "";
+            this.yearTxt.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.yearTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.yearTxt.CustomButton.TabIndex = 1;
+            this.yearTxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.yearTxt.CustomButton.UseSelectable = true;
+            this.yearTxt.CustomButton.Visible = false;
+            this.yearTxt.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.yearTxt.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.yearTxt.Lines = new string[] {
+        "Year"};
+            this.yearTxt.Location = new System.Drawing.Point(45, 156);
+            this.yearTxt.MaxLength = 32767;
+            this.yearTxt.Name = "yearTxt";
+            this.yearTxt.PasswordChar = '\0';
+            this.yearTxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.yearTxt.SelectedText = "";
+            this.yearTxt.SelectionLength = 0;
+            this.yearTxt.SelectionStart = 0;
+            this.yearTxt.ShortcutsEnabled = true;
+            this.yearTxt.ShowClearButton = true;
+            this.yearTxt.Size = new System.Drawing.Size(205, 30);
+            this.yearTxt.TabIndex = 64;
+            this.yearTxt.Text = "Year";
+            this.yearTxt.UseSelectable = true;
+            this.yearTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.yearTxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // yrSemData
+            // 
+            this.yrSemData.AllowUserToAddRows = false;
+            this.yrSemData.AllowUserToDeleteRows = false;
+            this.yrSemData.AllowUserToOrderColumns = true;
+            this.yrSemData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.yrSemData.BackgroundColor = System.Drawing.Color.White;
+            this.yrSemData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.yrSemData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.yrSemData.ColumnHeadersHeight = 29;
+            this.yrSemData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14});
+            this.yrSemData.Location = new System.Drawing.Point(367, 110);
+            this.yrSemData.MultiSelect = false;
+            this.yrSemData.Name = "yrSemData";
+            this.yrSemData.ReadOnly = true;
+            this.yrSemData.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.yrSemData.RowHeadersWidth = 51;
+            this.yrSemData.RowTemplate.Height = 24;
+            this.yrSemData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.yrSemData.Size = new System.Drawing.Size(390, 215);
+            this.yrSemData.TabIndex = 58;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn13.HeaderText = "Year";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Blue;
+            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridViewTextBoxColumn14.HeaderText = "Semester";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // yrSemSrtDrpDwn
+            // 
+            this.yrSemSrtDrpDwn.FormattingEnabled = true;
+            this.yrSemSrtDrpDwn.ItemHeight = 23;
+            this.yrSemSrtDrpDwn.Items.AddRange(new object[] {
+            "Building",
+            "Capacity",
+            "Room Type"});
+            this.yrSemSrtDrpDwn.Location = new System.Drawing.Point(594, 76);
+            this.yrSemSrtDrpDwn.Name = "yrSemSrtDrpDwn";
+            this.yrSemSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
+            this.yrSemSrtDrpDwn.TabIndex = 56;
+            this.yrSemSrtDrpDwn.UseSelectable = true;
+            // 
+            // yrSemDltBtn
+            // 
+            this.yrSemDltBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.yrSemDltBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.yrSemDltBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.yrSemDltBtn.Location = new System.Drawing.Point(594, 330);
+            this.yrSemDltBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.yrSemDltBtn.Name = "yrSemDltBtn";
+            this.yrSemDltBtn.Size = new System.Drawing.Size(161, 40);
+            this.yrSemDltBtn.TabIndex = 63;
+            this.yrSemDltBtn.Text = "Delete";
+            this.yrSemDltBtn.UseCustomBackColor = true;
+            this.yrSemDltBtn.UseCustomForeColor = true;
+            this.yrSemDltBtn.UseSelectable = true;
+            // 
+            // yrSemEditBtn
+            // 
+            this.yrSemEditBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.yrSemEditBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.yrSemEditBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.yrSemEditBtn.Location = new System.Drawing.Point(367, 330);
+            this.yrSemEditBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.yrSemEditBtn.Name = "yrSemEditBtn";
+            this.yrSemEditBtn.Size = new System.Drawing.Size(161, 40);
+            this.yrSemEditBtn.TabIndex = 62;
+            this.yrSemEditBtn.Text = "Edit Details";
+            this.yrSemEditBtn.UseCustomBackColor = true;
+            this.yrSemEditBtn.UseCustomForeColor = true;
+            this.yrSemEditBtn.UseSelectable = true;
+            // 
+            // yrSemClrBtn
+            // 
+            this.yrSemClrBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.yrSemClrBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.yrSemClrBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.yrSemClrBtn.Location = new System.Drawing.Point(45, 307);
+            this.yrSemClrBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.yrSemClrBtn.Name = "yrSemClrBtn";
+            this.yrSemClrBtn.Size = new System.Drawing.Size(205, 40);
+            this.yrSemClrBtn.TabIndex = 61;
+            this.yrSemClrBtn.Text = "Clear";
+            this.yrSemClrBtn.UseCustomBackColor = true;
+            this.yrSemClrBtn.UseCustomForeColor = true;
+            this.yrSemClrBtn.UseSelectable = true;
+            // 
+            // yrSemAddBtn
+            // 
+            this.yrSemAddBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.yrSemAddBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.yrSemAddBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.yrSemAddBtn.Location = new System.Drawing.Point(45, 263);
+            this.yrSemAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.yrSemAddBtn.Name = "yrSemAddBtn";
+            this.yrSemAddBtn.Size = new System.Drawing.Size(205, 40);
+            this.yrSemAddBtn.TabIndex = 60;
+            this.yrSemAddBtn.Text = "Add Year Semester";
+            this.yrSemAddBtn.UseCustomBackColor = true;
+            this.yrSemAddBtn.UseCustomForeColor = true;
+            this.yrSemAddBtn.UseSelectable = true;
+            // 
+            // semTxt
+            // 
+            // 
+            // 
+            // 
+            this.semTxt.CustomButton.Image = null;
+            this.semTxt.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.semTxt.CustomButton.Name = "";
+            this.semTxt.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.semTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.semTxt.CustomButton.TabIndex = 1;
+            this.semTxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.semTxt.CustomButton.UseSelectable = true;
+            this.semTxt.CustomButton.Visible = false;
+            this.semTxt.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.semTxt.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.semTxt.Lines = new string[] {
+        "Semester"};
+            this.semTxt.Location = new System.Drawing.Point(45, 192);
+            this.semTxt.MaxLength = 32767;
+            this.semTxt.Name = "semTxt";
+            this.semTxt.PasswordChar = '\0';
+            this.semTxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.semTxt.SelectedText = "";
+            this.semTxt.SelectionLength = 0;
+            this.semTxt.SelectionStart = 0;
+            this.semTxt.ShortcutsEnabled = true;
+            this.semTxt.ShowClearButton = true;
+            this.semTxt.Size = new System.Drawing.Size(205, 30);
+            this.semTxt.TabIndex = 59;
+            this.semTxt.Text = "Semester";
+            this.semTxt.UseSelectable = true;
+            this.semTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.semTxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // yrSemSrtBtn
+            // 
+            this.yrSemSrtBtn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.yrSemSrtBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.yrSemSrtBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.yrSemSrtBtn.Location = new System.Drawing.Point(693, 76);
+            this.yrSemSrtBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.yrSemSrtBtn.Name = "yrSemSrtBtn";
+            this.yrSemSrtBtn.Size = new System.Drawing.Size(62, 29);
+            this.yrSemSrtBtn.TabIndex = 57;
+            this.yrSemSrtBtn.Text = "Sort";
+            this.yrSemSrtBtn.UseCustomBackColor = true;
+            this.yrSemSrtBtn.UseCustomForeColor = true;
+            this.yrSemSrtBtn.UseSelectable = true;
+            // 
+            // yrSemSearchBox
+            // 
+            // 
+            // 
+            // 
+            this.yrSemSearchBox.CustomButton.Image = null;
+            this.yrSemSearchBox.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.yrSemSearchBox.CustomButton.Name = "";
+            this.yrSemSearchBox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.yrSemSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.yrSemSearchBox.CustomButton.TabIndex = 1;
+            this.yrSemSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.yrSemSearchBox.CustomButton.UseSelectable = true;
+            this.yrSemSearchBox.CustomButton.Visible = false;
+            this.yrSemSearchBox.DisplayIcon = true;
+            this.yrSemSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.yrSemSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.yrSemSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
+            this.yrSemSearchBox.IconRight = true;
+            this.yrSemSearchBox.Lines = new string[] {
+        "Search"};
+            this.yrSemSearchBox.Location = new System.Drawing.Point(365, 75);
+            this.yrSemSearchBox.MaxLength = 32767;
+            this.yrSemSearchBox.Name = "yrSemSearchBox";
+            this.yrSemSearchBox.PasswordChar = '\0';
+            this.yrSemSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.yrSemSearchBox.SelectedText = "";
+            this.yrSemSearchBox.SelectionLength = 0;
+            this.yrSemSearchBox.SelectionStart = 0;
+            this.yrSemSearchBox.ShortcutsEnabled = true;
+            this.yrSemSearchBox.Size = new System.Drawing.Size(163, 30);
+            this.yrSemSearchBox.TabIndex = 54;
+            this.yrSemSearchBox.Text = "Search";
+            this.yrSemSearchBox.UseSelectable = true;
+            this.yrSemSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.yrSemSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.yrSemSearchBox.Click += new System.EventHandler(this.metroTextBox2_Click);
+            // 
             // programme
             // 
             this.programme.Controls.Add(this.dataGridView2);
             this.programme.Controls.Add(this.metroComboBox2);
             this.programme.Controls.Add(this.metroButton3);
             this.programme.Controls.Add(this.metroButton4);
-            this.programme.Controls.Add(this.metroButton5);
-            this.programme.Controls.Add(this.metroButton6);
-            this.programme.Controls.Add(this.metroTextBox5);
+            this.programme.Controls.Add(this.prgClrBtn);
+            this.programme.Controls.Add(this.addPrgBtn);
+            this.programme.Controls.Add(this.prgBtn);
             this.programme.Controls.Add(this.metroButton7);
             this.programme.Controls.Add(this.metroButton8);
             this.programme.Controls.Add(this.metroTextBox6);
@@ -212,120 +458,68 @@
             this.programme.VerticalScrollbarHighlightOnWheel = false;
             this.programme.VerticalScrollbarSize = 10;
             // 
-            // grpNum
+            // dataGridView2
             // 
-            this.grpNum.Controls.Add(this.dataGridView3);
-            this.grpNum.Controls.Add(this.metroComboBox3);
-            this.grpNum.Controls.Add(this.metroButton9);
-            this.grpNum.Controls.Add(this.metroButton10);
-            this.grpNum.Controls.Add(this.metroButton11);
-            this.grpNum.Controls.Add(this.metroButton12);
-            this.grpNum.Controls.Add(this.metroTextBox4);
-            this.grpNum.Controls.Add(this.metroButton13);
-            this.grpNum.Controls.Add(this.metroButton14);
-            this.grpNum.Controls.Add(this.metroTextBox7);
-            this.grpNum.HorizontalScrollbarBarColor = true;
-            this.grpNum.HorizontalScrollbarHighlightOnWheel = false;
-            this.grpNum.HorizontalScrollbarSize = 10;
-            this.grpNum.Location = new System.Drawing.Point(4, 38);
-            this.grpNum.Name = "grpNum";
-            this.grpNum.Size = new System.Drawing.Size(803, 444);
-            this.grpNum.TabIndex = 2;
-            this.grpNum.Text = "Group Numbers";
-            this.grpNum.VerticalScrollbarBarColor = true;
-            this.grpNum.VerticalScrollbarHighlightOnWheel = false;
-            this.grpNum.VerticalScrollbarSize = 10;
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridView2.ColumnHeadersHeight = 29;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.dataGridView2.Location = new System.Drawing.Point(367, 110);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(390, 215);
+            this.dataGridView2.TabIndex = 47;
             // 
-            // genGrpID
+            // dataGridViewTextBoxColumn1
             // 
-            this.genGrpID.Controls.Add(this.metroButton15);
-            this.genGrpID.Controls.Add(this.metroButton16);
-            this.genGrpID.Controls.Add(this.metroButton17);
-            this.genGrpID.Controls.Add(this.metroButton18);
-            this.genGrpID.Controls.Add(this.metroTextBox8);
-            this.genGrpID.Controls.Add(this.dataGridView4);
-            this.genGrpID.Controls.Add(this.metroButton19);
-            this.genGrpID.Controls.Add(this.metroComboBox4);
-            this.genGrpID.Controls.Add(this.metroButton20);
-            this.genGrpID.Controls.Add(this.metroTextBox9);
-            this.genGrpID.HorizontalScrollbarBarColor = true;
-            this.genGrpID.HorizontalScrollbarHighlightOnWheel = false;
-            this.genGrpID.HorizontalScrollbarSize = 10;
-            this.genGrpID.Location = new System.Drawing.Point(4, 38);
-            this.genGrpID.Name = "genGrpID";
-            this.genGrpID.Size = new System.Drawing.Size(803, 444);
-            this.genGrpID.TabIndex = 3;
-            this.genGrpID.Text = "Generate Group IDs";
-            this.genGrpID.VerticalScrollbarBarColor = true;
-            this.genGrpID.VerticalScrollbarHighlightOnWheel = false;
-            this.genGrpID.VerticalScrollbarSize = 10;
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Year";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // subGrpNum
+            // dataGridViewTextBoxColumn2
             // 
-            this.subGrpNum.Controls.Add(this.metroButton21);
-            this.subGrpNum.Controls.Add(this.metroButton22);
-            this.subGrpNum.Controls.Add(this.metroButton23);
-            this.subGrpNum.Controls.Add(this.metroButton24);
-            this.subGrpNum.Controls.Add(this.metroTextBox10);
-            this.subGrpNum.Controls.Add(this.dataGridView5);
-            this.subGrpNum.Controls.Add(this.metroButton25);
-            this.subGrpNum.Controls.Add(this.metroComboBox5);
-            this.subGrpNum.Controls.Add(this.metroButton26);
-            this.subGrpNum.Controls.Add(this.metroTextBox11);
-            this.subGrpNum.HorizontalScrollbarBarColor = true;
-            this.subGrpNum.HorizontalScrollbarHighlightOnWheel = false;
-            this.subGrpNum.HorizontalScrollbarSize = 10;
-            this.subGrpNum.Location = new System.Drawing.Point(4, 38);
-            this.subGrpNum.Name = "subGrpNum";
-            this.subGrpNum.Size = new System.Drawing.Size(803, 444);
-            this.subGrpNum.TabIndex = 4;
-            this.subGrpNum.Text = "Sub-Group Numbers";
-            this.subGrpNum.VerticalScrollbarBarColor = true;
-            this.subGrpNum.VerticalScrollbarHighlightOnWheel = false;
-            this.subGrpNum.VerticalScrollbarSize = 10;
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Blue;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Semester";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // genSubGrpId
+            // metroComboBox2
             // 
-            this.genSubGrpId.Controls.Add(this.metroButton27);
-            this.genSubGrpId.Controls.Add(this.metroButton28);
-            this.genSubGrpId.Controls.Add(this.metroButton29);
-            this.genSubGrpId.Controls.Add(this.metroButton30);
-            this.genSubGrpId.Controls.Add(this.metroTextBox12);
-            this.genSubGrpId.Controls.Add(this.dataGridView6);
-            this.genSubGrpId.Controls.Add(this.metroButton31);
-            this.genSubGrpId.Controls.Add(this.metroComboBox6);
-            this.genSubGrpId.Controls.Add(this.metroButton32);
-            this.genSubGrpId.Controls.Add(this.metroTextBox13);
-            this.genSubGrpId.HorizontalScrollbarBarColor = true;
-            this.genSubGrpId.HorizontalScrollbarHighlightOnWheel = false;
-            this.genSubGrpId.HorizontalScrollbarSize = 10;
-            this.genSubGrpId.Location = new System.Drawing.Point(4, 38);
-            this.genSubGrpId.Name = "genSubGrpId";
-            this.genSubGrpId.Size = new System.Drawing.Size(803, 444);
-            this.genSubGrpId.TabIndex = 5;
-            this.genSubGrpId.Text = "Generate Sub-Group IDs";
-            this.genSubGrpId.VerticalScrollbarBarColor = true;
-            this.genSubGrpId.VerticalScrollbarHighlightOnWheel = false;
-            this.genSubGrpId.VerticalScrollbarSize = 10;
-            // 
-            // viewDe
-            // 
-            this.viewDe.Controls.Add(this.dataGridView7);
-            this.viewDe.Controls.Add(this.metroButton33);
-            this.viewDe.Controls.Add(this.metroComboBox7);
-            this.viewDe.Controls.Add(this.metroButton34);
-            this.viewDe.Controls.Add(this.metroTextBox14);
-            this.viewDe.HorizontalScrollbarBarColor = true;
-            this.viewDe.HorizontalScrollbarHighlightOnWheel = false;
-            this.viewDe.HorizontalScrollbarSize = 10;
-            this.viewDe.Location = new System.Drawing.Point(4, 38);
-            this.viewDe.Name = "viewDe";
-            this.viewDe.Size = new System.Drawing.Size(803, 444);
-            this.viewDe.TabIndex = 6;
-            this.viewDe.Text = "View Details";
-            this.viewDe.VerticalScrollbarBarColor = true;
-            this.viewDe.VerticalScrollbarHighlightOnWheel = false;
-            this.viewDe.VerticalScrollbarSize = 10;
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "Building",
+            "Capacity",
+            "Room Type"});
+            this.metroComboBox2.Location = new System.Drawing.Point(594, 76);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(94, 29);
+            this.metroComboBox2.TabIndex = 45;
+            this.metroComboBox2.UseSelectable = true;
             // 
             // metroButton3
             // 
@@ -357,119 +551,70 @@
             this.metroButton4.UseCustomForeColor = true;
             this.metroButton4.UseSelectable = true;
             // 
-            // metroButton5
+            // prgClrBtn
             // 
-            this.metroButton5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton5.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton5.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton5.Location = new System.Drawing.Point(45, 307);
-            this.metroButton5.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(205, 40);
-            this.metroButton5.TabIndex = 51;
-            this.metroButton5.Text = "Clear";
-            this.metroButton5.UseCustomBackColor = true;
-            this.metroButton5.UseCustomForeColor = true;
-            this.metroButton5.UseSelectable = true;
+            this.prgClrBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.prgClrBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.prgClrBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.prgClrBtn.Location = new System.Drawing.Point(45, 307);
+            this.prgClrBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.prgClrBtn.Name = "prgClrBtn";
+            this.prgClrBtn.Size = new System.Drawing.Size(205, 40);
+            this.prgClrBtn.TabIndex = 51;
+            this.prgClrBtn.Text = "Clear";
+            this.prgClrBtn.UseCustomBackColor = true;
+            this.prgClrBtn.UseCustomForeColor = true;
+            this.prgClrBtn.UseSelectable = true;
             // 
-            // metroButton6
+            // addPrgBtn
             // 
-            this.metroButton6.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton6.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton6.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton6.Location = new System.Drawing.Point(45, 263);
-            this.metroButton6.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(205, 40);
-            this.metroButton6.TabIndex = 50;
-            this.metroButton6.Text = "Add Year Semester";
-            this.metroButton6.UseCustomBackColor = true;
-            this.metroButton6.UseCustomForeColor = true;
-            this.metroButton6.UseSelectable = true;
+            this.addPrgBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addPrgBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.addPrgBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addPrgBtn.Location = new System.Drawing.Point(45, 263);
+            this.addPrgBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addPrgBtn.Name = "addPrgBtn";
+            this.addPrgBtn.Size = new System.Drawing.Size(205, 40);
+            this.addPrgBtn.TabIndex = 50;
+            this.addPrgBtn.Text = "Add Programme";
+            this.addPrgBtn.UseCustomBackColor = true;
+            this.addPrgBtn.UseCustomForeColor = true;
+            this.addPrgBtn.UseSelectable = true;
             // 
-            // metroTextBox5
-            // 
-            // 
+            // prgBtn
             // 
             // 
-            this.metroTextBox5.CustomButton.Image = null;
-            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(177, 2);
-            this.metroTextBox5.CustomButton.Name = "";
-            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox5.CustomButton.TabIndex = 1;
-            this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox5.CustomButton.UseSelectable = true;
-            this.metroTextBox5.CustomButton.Visible = false;
-            this.metroTextBox5.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox5.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.metroTextBox5.Lines = new string[] {
+            // 
+            // 
+            this.prgBtn.CustomButton.Image = null;
+            this.prgBtn.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.prgBtn.CustomButton.Name = "";
+            this.prgBtn.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.prgBtn.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.prgBtn.CustomButton.TabIndex = 1;
+            this.prgBtn.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.prgBtn.CustomButton.UseSelectable = true;
+            this.prgBtn.CustomButton.Visible = false;
+            this.prgBtn.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.prgBtn.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.prgBtn.Lines = new string[] {
         "Programme"};
-            this.metroTextBox5.Location = new System.Drawing.Point(45, 192);
-            this.metroTextBox5.MaxLength = 32767;
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.PasswordChar = '\0';
-            this.metroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox5.SelectedText = "";
-            this.metroTextBox5.SelectionLength = 0;
-            this.metroTextBox5.SelectionStart = 0;
-            this.metroTextBox5.ShortcutsEnabled = true;
-            this.metroTextBox5.ShowClearButton = true;
-            this.metroTextBox5.Size = new System.Drawing.Size(205, 30);
-            this.metroTextBox5.TabIndex = 48;
-            this.metroTextBox5.Text = "Programme";
-            this.metroTextBox5.UseSelectable = true;
-            this.metroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.ColumnHeadersHeight = 29;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.dataGridView2.Location = new System.Drawing.Point(367, 110);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(390, 215);
-            this.dataGridView2.TabIndex = 47;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Year";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Blue;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Semester";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.prgBtn.Location = new System.Drawing.Point(45, 192);
+            this.prgBtn.MaxLength = 32767;
+            this.prgBtn.Name = "prgBtn";
+            this.prgBtn.PasswordChar = '\0';
+            this.prgBtn.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.prgBtn.SelectedText = "";
+            this.prgBtn.SelectionLength = 0;
+            this.prgBtn.SelectionStart = 0;
+            this.prgBtn.ShortcutsEnabled = true;
+            this.prgBtn.ShowClearButton = true;
+            this.prgBtn.Size = new System.Drawing.Size(205, 30);
+            this.prgBtn.TabIndex = 48;
+            this.prgBtn.Text = "Programme";
+            this.prgBtn.UseSelectable = true;
+            this.prgBtn.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.prgBtn.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroButton7
             // 
@@ -485,20 +630,6 @@
             this.metroButton7.UseCustomBackColor = true;
             this.metroButton7.UseCustomForeColor = true;
             this.metroButton7.UseSelectable = true;
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Items.AddRange(new object[] {
-            "Building",
-            "Capacity",
-            "Room Type"});
-            this.metroComboBox2.Location = new System.Drawing.Point(594, 76);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(94, 29);
-            this.metroComboBox2.TabIndex = 45;
-            this.metroComboBox2.UseSelectable = true;
             // 
             // metroButton8
             // 
@@ -544,6 +675,93 @@
             this.metroTextBox6.UseSelectable = true;
             this.metroTextBox6.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox6.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // grpNum
+            // 
+            this.grpNum.Controls.Add(this.dataGridView3);
+            this.grpNum.Controls.Add(this.metroComboBox3);
+            this.grpNum.Controls.Add(this.metroButton9);
+            this.grpNum.Controls.Add(this.metroButton10);
+            this.grpNum.Controls.Add(this.metroButton11);
+            this.grpNum.Controls.Add(this.metroButton12);
+            this.grpNum.Controls.Add(this.metroTextBox4);
+            this.grpNum.Controls.Add(this.metroButton13);
+            this.grpNum.Controls.Add(this.metroButton14);
+            this.grpNum.Controls.Add(this.metroTextBox7);
+            this.grpNum.HorizontalScrollbarBarColor = true;
+            this.grpNum.HorizontalScrollbarHighlightOnWheel = false;
+            this.grpNum.HorizontalScrollbarSize = 10;
+            this.grpNum.Location = new System.Drawing.Point(4, 38);
+            this.grpNum.Name = "grpNum";
+            this.grpNum.Size = new System.Drawing.Size(803, 444);
+            this.grpNum.TabIndex = 2;
+            this.grpNum.Text = "Group Numbers";
+            this.grpNum.VerticalScrollbarBarColor = true;
+            this.grpNum.VerticalScrollbarHighlightOnWheel = false;
+            this.grpNum.VerticalScrollbarSize = 10;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AllowUserToOrderColumns = true;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridView3.ColumnHeadersHeight = 29;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView3.Location = new System.Drawing.Point(367, 110);
+            this.dataGridView3.MultiSelect = false;
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(390, 215);
+            this.dataGridView3.TabIndex = 58;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Year";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Blue;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Semester";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // metroComboBox3
+            // 
+            this.metroComboBox3.FormattingEnabled = true;
+            this.metroComboBox3.ItemHeight = 23;
+            this.metroComboBox3.Items.AddRange(new object[] {
+            "Building",
+            "Capacity",
+            "Room Type"});
+            this.metroComboBox3.Location = new System.Drawing.Point(594, 76);
+            this.metroComboBox3.Name = "metroComboBox3";
+            this.metroComboBox3.Size = new System.Drawing.Size(94, 29);
+            this.metroComboBox3.TabIndex = 56;
+            this.metroComboBox3.UseSelectable = true;
             // 
             // metroButton9
             // 
@@ -640,55 +858,6 @@
             this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToOrderColumns = true;
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView3.ColumnHeadersHeight = 29;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dataGridView3.Location = new System.Drawing.Point(367, 110);
-            this.dataGridView3.MultiSelect = false;
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(390, 215);
-            this.dataGridView3.TabIndex = 58;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Year";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Blue;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Semester";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // metroButton13
             // 
             this.metroButton13.BackColor = System.Drawing.SystemColors.GrayText;
@@ -703,20 +872,6 @@
             this.metroButton13.UseCustomBackColor = true;
             this.metroButton13.UseCustomForeColor = true;
             this.metroButton13.UseSelectable = true;
-            // 
-            // metroComboBox3
-            // 
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 23;
-            this.metroComboBox3.Items.AddRange(new object[] {
-            "Building",
-            "Capacity",
-            "Room Type"});
-            this.metroComboBox3.Location = new System.Drawing.Point(594, 76);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(94, 29);
-            this.metroComboBox3.TabIndex = 56;
-            this.metroComboBox3.UseSelectable = true;
             // 
             // metroButton14
             // 
@@ -762,6 +917,30 @@
             this.metroTextBox7.UseSelectable = true;
             this.metroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // genGrpID
+            // 
+            this.genGrpID.Controls.Add(this.metroButton15);
+            this.genGrpID.Controls.Add(this.metroButton16);
+            this.genGrpID.Controls.Add(this.metroButton17);
+            this.genGrpID.Controls.Add(this.metroButton18);
+            this.genGrpID.Controls.Add(this.metroTextBox8);
+            this.genGrpID.Controls.Add(this.dataGridView4);
+            this.genGrpID.Controls.Add(this.metroButton19);
+            this.genGrpID.Controls.Add(this.metroComboBox4);
+            this.genGrpID.Controls.Add(this.metroButton20);
+            this.genGrpID.Controls.Add(this.metroTextBox9);
+            this.genGrpID.HorizontalScrollbarBarColor = true;
+            this.genGrpID.HorizontalScrollbarHighlightOnWheel = false;
+            this.genGrpID.HorizontalScrollbarSize = 10;
+            this.genGrpID.Location = new System.Drawing.Point(4, 38);
+            this.genGrpID.Name = "genGrpID";
+            this.genGrpID.Size = new System.Drawing.Size(803, 444);
+            this.genGrpID.TabIndex = 3;
+            this.genGrpID.Text = "Generate Group IDs";
+            this.genGrpID.VerticalScrollbarBarColor = true;
+            this.genGrpID.VerticalScrollbarHighlightOnWheel = false;
+            this.genGrpID.VerticalScrollbarSize = 10;
             // 
             // metroButton15
             // 
@@ -866,14 +1045,14 @@
             this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView4.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView4.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridView4.ColumnHeadersHeight = 29;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -900,8 +1079,8 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Blue;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Blue;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridViewTextBoxColumn6.HeaderText = "Semester";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
@@ -980,6 +1159,30 @@
             this.metroTextBox9.UseSelectable = true;
             this.metroTextBox9.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox9.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // subGrpNum
+            // 
+            this.subGrpNum.Controls.Add(this.metroButton21);
+            this.subGrpNum.Controls.Add(this.metroButton22);
+            this.subGrpNum.Controls.Add(this.metroButton23);
+            this.subGrpNum.Controls.Add(this.metroButton24);
+            this.subGrpNum.Controls.Add(this.metroTextBox10);
+            this.subGrpNum.Controls.Add(this.dataGridView5);
+            this.subGrpNum.Controls.Add(this.metroButton25);
+            this.subGrpNum.Controls.Add(this.metroComboBox5);
+            this.subGrpNum.Controls.Add(this.metroButton26);
+            this.subGrpNum.Controls.Add(this.metroTextBox11);
+            this.subGrpNum.HorizontalScrollbarBarColor = true;
+            this.subGrpNum.HorizontalScrollbarHighlightOnWheel = false;
+            this.subGrpNum.HorizontalScrollbarSize = 10;
+            this.subGrpNum.Location = new System.Drawing.Point(4, 38);
+            this.subGrpNum.Name = "subGrpNum";
+            this.subGrpNum.Size = new System.Drawing.Size(803, 444);
+            this.subGrpNum.TabIndex = 4;
+            this.subGrpNum.Text = "Sub-Group Numbers";
+            this.subGrpNum.VerticalScrollbarBarColor = true;
+            this.subGrpNum.VerticalScrollbarHighlightOnWheel = false;
+            this.subGrpNum.VerticalScrollbarSize = 10;
             // 
             // metroButton21
             // 
@@ -1084,14 +1287,14 @@
             this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView5.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView5.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridView5.ColumnHeadersHeight = 29;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
@@ -1118,8 +1321,8 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Blue;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Blue;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewTextBoxColumn8.HeaderText = "Semester";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -1198,6 +1401,30 @@
             this.metroTextBox11.UseSelectable = true;
             this.metroTextBox11.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox11.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // genSubGrpId
+            // 
+            this.genSubGrpId.Controls.Add(this.metroButton27);
+            this.genSubGrpId.Controls.Add(this.metroButton28);
+            this.genSubGrpId.Controls.Add(this.metroButton29);
+            this.genSubGrpId.Controls.Add(this.metroButton30);
+            this.genSubGrpId.Controls.Add(this.metroTextBox12);
+            this.genSubGrpId.Controls.Add(this.dataGridView6);
+            this.genSubGrpId.Controls.Add(this.metroButton31);
+            this.genSubGrpId.Controls.Add(this.metroComboBox6);
+            this.genSubGrpId.Controls.Add(this.metroButton32);
+            this.genSubGrpId.Controls.Add(this.metroTextBox13);
+            this.genSubGrpId.HorizontalScrollbarBarColor = true;
+            this.genSubGrpId.HorizontalScrollbarHighlightOnWheel = false;
+            this.genSubGrpId.HorizontalScrollbarSize = 10;
+            this.genSubGrpId.Location = new System.Drawing.Point(4, 38);
+            this.genSubGrpId.Name = "genSubGrpId";
+            this.genSubGrpId.Size = new System.Drawing.Size(803, 444);
+            this.genSubGrpId.TabIndex = 5;
+            this.genSubGrpId.Text = "Generate Sub-Group IDs";
+            this.genSubGrpId.VerticalScrollbarBarColor = true;
+            this.genSubGrpId.VerticalScrollbarHighlightOnWheel = false;
+            this.genSubGrpId.VerticalScrollbarSize = 10;
             // 
             // metroButton27
             // 
@@ -1302,14 +1529,14 @@
             this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView6.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView6.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView6.ColumnHeadersHeight = 29;
             this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9,
@@ -1336,8 +1563,8 @@
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Blue;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Blue;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridViewTextBoxColumn10.HeaderText = "Semester";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
@@ -1417,20 +1644,39 @@
             this.metroTextBox13.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox13.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // viewDe
+            // 
+            this.viewDe.Controls.Add(this.dataGridView7);
+            this.viewDe.Controls.Add(this.metroButton33);
+            this.viewDe.Controls.Add(this.metroComboBox7);
+            this.viewDe.Controls.Add(this.metroButton34);
+            this.viewDe.Controls.Add(this.metroTextBox14);
+            this.viewDe.HorizontalScrollbarBarColor = true;
+            this.viewDe.HorizontalScrollbarHighlightOnWheel = false;
+            this.viewDe.HorizontalScrollbarSize = 10;
+            this.viewDe.Location = new System.Drawing.Point(4, 38);
+            this.viewDe.Name = "viewDe";
+            this.viewDe.Size = new System.Drawing.Size(803, 444);
+            this.viewDe.TabIndex = 6;
+            this.viewDe.Text = "View Details";
+            this.viewDe.VerticalScrollbarBarColor = true;
+            this.viewDe.VerticalScrollbarHighlightOnWheel = false;
+            this.viewDe.VerticalScrollbarSize = 10;
+            // 
             // dataGridView7
             // 
             this.dataGridView7.AllowUserToOrderColumns = true;
             this.dataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView7.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView7.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridView7.ColumnHeadersHeight = 29;
             this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
@@ -1475,8 +1721,8 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Blue;
-            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Blue;
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewTextBoxColumn12.HeaderText = "Building";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
@@ -1556,225 +1802,7 @@
             this.metroTextBox14.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox14.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
-            this.dataGridView1.Location = new System.Drawing.Point(367, 110);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(390, 215);
-            this.dataGridView1.TabIndex = 58;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn13.HeaderText = "Year";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
-            this.dataGridViewTextBoxColumn14.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn14.HeaderText = "Semester";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "Building",
-            "Capacity",
-            "Room Type"});
-            this.metroComboBox1.Location = new System.Drawing.Point(594, 76);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(94, 29);
-            this.metroComboBox1.TabIndex = 56;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton1.Location = new System.Drawing.Point(594, 330);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(161, 40);
-            this.metroButton1.TabIndex = 63;
-            this.metroButton1.Text = "Delete";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseCustomForeColor = true;
-            this.metroButton1.UseSelectable = true;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton2.Location = new System.Drawing.Point(367, 330);
-            this.metroButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(161, 40);
-            this.metroButton2.TabIndex = 62;
-            this.metroButton2.Text = "Edit Details";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseCustomForeColor = true;
-            this.metroButton2.UseSelectable = true;
-            // 
-            // metroButton35
-            // 
-            this.metroButton35.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton35.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton35.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton35.Location = new System.Drawing.Point(45, 307);
-            this.metroButton35.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton35.Name = "metroButton35";
-            this.metroButton35.Size = new System.Drawing.Size(205, 40);
-            this.metroButton35.TabIndex = 61;
-            this.metroButton35.Text = "Clear";
-            this.metroButton35.UseCustomBackColor = true;
-            this.metroButton35.UseCustomForeColor = true;
-            this.metroButton35.UseSelectable = true;
-            // 
-            // metroButton36
-            // 
-            this.metroButton36.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton36.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton36.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton36.Location = new System.Drawing.Point(45, 263);
-            this.metroButton36.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton36.Name = "metroButton36";
-            this.metroButton36.Size = new System.Drawing.Size(205, 40);
-            this.metroButton36.TabIndex = 60;
-            this.metroButton36.Text = "Add Year Semester";
-            this.metroButton36.UseCustomBackColor = true;
-            this.metroButton36.UseCustomForeColor = true;
-            this.metroButton36.UseSelectable = true;
-            // 
-            // metroTextBox1
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(177, 2);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.metroTextBox1.Lines = new string[] {
-        "Programme"};
-            this.metroTextBox1.Location = new System.Drawing.Point(45, 192);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.ShowClearButton = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(205, 30);
-            this.metroTextBox1.TabIndex = 59;
-            this.metroTextBox1.Text = "Programme";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroButton37
-            // 
-            this.metroButton37.BackColor = System.Drawing.SystemColors.GrayText;
-            this.metroButton37.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton37.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton37.Location = new System.Drawing.Point(693, 76);
-            this.metroButton37.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton37.Name = "metroButton37";
-            this.metroButton37.Size = new System.Drawing.Size(62, 29);
-            this.metroButton37.TabIndex = 57;
-            this.metroButton37.Text = "Sort";
-            this.metroButton37.UseCustomBackColor = true;
-            this.metroButton37.UseCustomForeColor = true;
-            this.metroButton37.UseSelectable = true;
-            // 
-            // metroButton38
-            // 
-            this.metroButton38.BackColor = System.Drawing.SystemColors.GrayText;
-            this.metroButton38.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton38.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton38.Location = new System.Drawing.Point(469, 76);
-            this.metroButton38.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton38.Name = "metroButton38";
-            this.metroButton38.Size = new System.Drawing.Size(73, 29);
-            this.metroButton38.TabIndex = 55;
-            this.metroButton38.Text = "Search";
-            this.metroButton38.UseCustomBackColor = true;
-            this.metroButton38.UseCustomForeColor = true;
-            this.metroButton38.UseSelectable = true;
-            // 
-            // metroTextBox2
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(71, 2);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(365, 75);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(99, 30);
-            this.metroTextBox2.TabIndex = 54;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // YearSem
+            // Students
             // 
             this.ApplyImageInvert = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1784,24 +1812,24 @@
             this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.metroTabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "YearSem";
+            this.Name = "Students";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Text = "Students";
             this.metroTabControl1.ResumeLayout(false);
             this.year.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.yrSemData)).EndInit();
             this.programme.ResumeLayout(false);
-            this.grpNum.ResumeLayout(false);
-            this.genGrpID.ResumeLayout(false);
-            this.subGrpNum.ResumeLayout(false);
-            this.genSubGrpId.ResumeLayout(false);
-            this.viewDe.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.grpNum.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.genGrpID.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.subGrpNum.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.genSubGrpId.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.viewDe.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1822,9 +1850,9 @@
         private MetroFramework.Controls.MetroComboBox metroComboBox2;
         private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton6;
-        private MetroFramework.Controls.MetroTextBox metroTextBox5;
+        private MetroFramework.Controls.MetroButton prgClrBtn;
+        private MetroFramework.Controls.MetroButton addPrgBtn;
+        private MetroFramework.Controls.MetroTextBox prgBtn;
         private MetroFramework.Controls.MetroButton metroButton7;
         private MetroFramework.Controls.MetroButton metroButton8;
         private MetroFramework.Controls.MetroTextBox metroTextBox6;
@@ -1876,18 +1904,17 @@
         private MetroFramework.Controls.MetroComboBox metroComboBox6;
         private MetroFramework.Controls.MetroButton metroButton32;
         private MetroFramework.Controls.MetroTextBox metroTextBox13;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView yrSemData;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton35;
-        private MetroFramework.Controls.MetroButton metroButton36;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroButton metroButton37;
-        private MetroFramework.Controls.MetroButton metroButton38;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroComboBox yrSemSrtDrpDwn;
+        private MetroFramework.Controls.MetroButton yrSemDltBtn;
+        private MetroFramework.Controls.MetroButton yrSemEditBtn;
+        private MetroFramework.Controls.MetroButton yrSemClrBtn;
+        private MetroFramework.Controls.MetroButton yrSemAddBtn;
+        private MetroFramework.Controls.MetroTextBox semTxt;
+        private MetroFramework.Controls.MetroButton yrSemSrtBtn;
+        private MetroFramework.Controls.MetroTextBox yrSemSearchBox;
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -1897,5 +1924,6 @@
         private MetroFramework.Controls.MetroComboBox metroComboBox7;
         private MetroFramework.Controls.MetroButton metroButton34;
         private MetroFramework.Controls.MetroTextBox metroTextBox14;
+        private MetroFramework.Controls.MetroTextBox yearTxt;
     }
 }

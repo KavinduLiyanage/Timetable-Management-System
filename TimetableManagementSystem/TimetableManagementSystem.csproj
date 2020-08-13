@@ -101,6 +101,12 @@
     <Compile Include="Subjects\AddSubject.Designer.cs">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tags\Tags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tags\Tags.Designer.cs">
+      <DependentUpon>Tags.cs</DependentUpon>
+    </Compile>
     <Compile Include="Working Days\Add Number of Working Days.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subjects\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tags\Tags.resx">
+      <DependentUpon>Tags.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Working Days\Add Number of Working Days.resx">
       <DependentUpon>Add Number of Working Days.cs</DependentUpon>
@@ -175,6 +184,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sub7-Statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
