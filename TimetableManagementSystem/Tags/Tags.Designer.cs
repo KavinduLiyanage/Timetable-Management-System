@@ -38,7 +38,9 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.MaximizeBox = false;
             this.Name = "Tags";
+            this.Resizable = false;
             this.Text = "Tags";
             this.ResumeLayout(false);
 
