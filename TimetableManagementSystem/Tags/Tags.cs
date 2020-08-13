@@ -16,5 +16,20 @@ namespace TimetableManagementSystem.Tags
         {
             InitializeComponent();
         }
+
+        private void tagNameTxt_Click(object sender, EventArgs e)
+        {
+            tagNameTxt.Text = "";
+        }
+
+        private void tagNameClrBtn_Click(object sender, EventArgs e)
+        {
+            tagNameTxt.Text = "";
+        }
+
+        private void tagNameSearchBox_Click(object sender, EventArgs e)
+        {
+            tagNameSearchBox.Text = "";
+        }
     }
 }

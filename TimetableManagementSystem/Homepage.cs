@@ -90,5 +90,12 @@ namespace TimetableManagementSystem
             Locations.Location loc = new Locations.Location();
             loc.ShowDialog();
         }
+
+        private void tagBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags.Tags tag = new Tags.Tags();
+            tag.ShowDialog();
+        }
     }
 }
