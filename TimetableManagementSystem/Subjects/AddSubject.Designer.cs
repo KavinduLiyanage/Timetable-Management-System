@@ -35,14 +35,14 @@
             this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
             this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
             this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
-            this.editloc_tab = new MetroFramework.Controls.MetroTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnClear = new MetroFramework.Controls.MetroButton();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabControlSubjects = new MetroFramework.Controls.MetroTabControl();
+            this.tabPageSubView = new System.Windows.Forms.TabPage();
+            this.tabPageSubAdd = new System.Windows.Forms.TabPage();
+            this.btnSubClear = new MetroFramework.Controls.MetroButton();
+            this.tabPageSubEdit = new System.Windows.Forms.TabPage();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.btnLecDelete = new MetroFramework.Controls.MetroButton();
-            this.btnLecUpdate = new MetroFramework.Controls.MetroButton();
+            this.btnSubDelete = new MetroFramework.Controls.MetroButton();
+            this.btnSubUpdate = new MetroFramework.Controls.MetroButton();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.cmbSubLecHours = new MetroFramework.Controls.MetroComboBox();
             this.cmbSubSem = new MetroFramework.Controls.MetroComboBox();
@@ -60,7 +60,7 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.btnLecSave = new MetroFramework.Controls.MetroButton();
+            this.btnSubSave = new MetroFramework.Controls.MetroButton();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
@@ -85,10 +85,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
-            this.editloc_tab.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabControlSubjects.SuspendLayout();
+            this.tabPageSubView.SuspendLayout();
+            this.tabPageSubAdd.SuspendLayout();
+            this.tabPageSubEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSideNavStatistics
@@ -170,115 +170,115 @@
             this.btnSideNavWorking.TabIndex = 33;
             this.btnSideNavWorking.TabStop = false;
             // 
-            // editloc_tab
+            // tabControlSubjects
             // 
-            this.editloc_tab.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.editloc_tab.Controls.Add(this.tabPage1);
-            this.editloc_tab.Controls.Add(this.tabPage2);
-            this.editloc_tab.Controls.Add(this.tabPage3);
-            this.editloc_tab.FontSize = MetroFramework.MetroTabControlSize.Small;
-            this.editloc_tab.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
-            this.editloc_tab.Location = new System.Drawing.Point(131, 82);
-            this.editloc_tab.Name = "editloc_tab";
-            this.editloc_tab.SelectedIndex = 0;
-            this.editloc_tab.Size = new System.Drawing.Size(788, 495);
-            this.editloc_tab.Style = MetroFramework.MetroColorStyle.Blue;
-            this.editloc_tab.TabIndex = 47;
-            this.editloc_tab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.editloc_tab.UseCustomBackColor = true;
-            this.editloc_tab.UseCustomForeColor = true;
-            this.editloc_tab.UseSelectable = true;
-            this.editloc_tab.UseStyleColors = true;
+            this.tabControlSubjects.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControlSubjects.Controls.Add(this.tabPageSubView);
+            this.tabControlSubjects.Controls.Add(this.tabPageSubAdd);
+            this.tabControlSubjects.Controls.Add(this.tabPageSubEdit);
+            this.tabControlSubjects.FontSize = MetroFramework.MetroTabControlSize.Small;
+            this.tabControlSubjects.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
+            this.tabControlSubjects.Location = new System.Drawing.Point(131, 82);
+            this.tabControlSubjects.Name = "tabControlSubjects";
+            this.tabControlSubjects.SelectedIndex = 2;
+            this.tabControlSubjects.Size = new System.Drawing.Size(788, 495);
+            this.tabControlSubjects.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tabControlSubjects.TabIndex = 47;
+            this.tabControlSubjects.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tabControlSubjects.UseCustomBackColor = true;
+            this.tabControlSubjects.UseCustomForeColor = true;
+            this.tabControlSubjects.UseSelectable = true;
+            this.tabControlSubjects.UseStyleColors = true;
             // 
-            // tabPage1
+            // tabPageSubView
             // 
-            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage1.Controls.Add(this.metroLabel7);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 37);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(7);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage1.Size = new System.Drawing.Size(780, 454);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "View Subjects";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageSubView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageSubView.Controls.Add(this.metroLabel7);
+            this.tabPageSubView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSubView.Location = new System.Drawing.Point(4, 37);
+            this.tabPageSubView.Margin = new System.Windows.Forms.Padding(7);
+            this.tabPageSubView.Name = "tabPageSubView";
+            this.tabPageSubView.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSubView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tabPageSubView.Size = new System.Drawing.Size(780, 454);
+            this.tabPageSubView.TabIndex = 0;
+            this.tabPageSubView.Text = "View Subjects";
+            this.tabPageSubView.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPageSubAdd
             // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.metroLabel10);
-            this.tabPage2.Controls.Add(this.cmbSubLecHours);
-            this.tabPage2.Controls.Add(this.cmbSubSem);
-            this.tabPage2.Controls.Add(this.metroLabel9);
-            this.tabPage2.Controls.Add(this.metroLabel8);
-            this.tabPage2.Controls.Add(this.metroLabel5);
-            this.tabPage2.Controls.Add(this.cmbSubEvaHours);
-            this.tabPage2.Controls.Add(this.cmbSubLabHours);
-            this.tabPage2.Controls.Add(this.cmbSubTuteHours);
-            this.tabPage2.Controls.Add(this.cmbSubYear);
-            this.tabPage2.Controls.Add(this.txtSubCode);
-            this.tabPage2.Controls.Add(this.txtSubName);
-            this.tabPage2.Controls.Add(this.metroLabel6);
-            this.tabPage2.Controls.Add(this.metroLabel3);
-            this.tabPage2.Controls.Add(this.metroLabel4);
-            this.tabPage2.Controls.Add(this.metroLabel2);
-            this.tabPage2.Controls.Add(this.metroLabel1);
-            this.tabPage2.Controls.Add(this.btnClear);
-            this.tabPage2.Controls.Add(this.btnLecSave);
-            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 37);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(780, 454);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Add Subject";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageSubAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageSubAdd.Controls.Add(this.metroLabel10);
+            this.tabPageSubAdd.Controls.Add(this.cmbSubLecHours);
+            this.tabPageSubAdd.Controls.Add(this.cmbSubSem);
+            this.tabPageSubAdd.Controls.Add(this.metroLabel9);
+            this.tabPageSubAdd.Controls.Add(this.metroLabel8);
+            this.tabPageSubAdd.Controls.Add(this.metroLabel5);
+            this.tabPageSubAdd.Controls.Add(this.cmbSubEvaHours);
+            this.tabPageSubAdd.Controls.Add(this.cmbSubLabHours);
+            this.tabPageSubAdd.Controls.Add(this.cmbSubTuteHours);
+            this.tabPageSubAdd.Controls.Add(this.cmbSubYear);
+            this.tabPageSubAdd.Controls.Add(this.txtSubCode);
+            this.tabPageSubAdd.Controls.Add(this.txtSubName);
+            this.tabPageSubAdd.Controls.Add(this.metroLabel6);
+            this.tabPageSubAdd.Controls.Add(this.metroLabel3);
+            this.tabPageSubAdd.Controls.Add(this.metroLabel4);
+            this.tabPageSubAdd.Controls.Add(this.metroLabel2);
+            this.tabPageSubAdd.Controls.Add(this.metroLabel1);
+            this.tabPageSubAdd.Controls.Add(this.btnSubClear);
+            this.tabPageSubAdd.Controls.Add(this.btnSubSave);
+            this.tabPageSubAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSubAdd.Location = new System.Drawing.Point(4, 37);
+            this.tabPageSubAdd.Name = "tabPageSubAdd";
+            this.tabPageSubAdd.Size = new System.Drawing.Size(780, 454);
+            this.tabPageSubAdd.TabIndex = 1;
+            this.tabPageSubAdd.Text = "Add Subject";
+            this.tabPageSubAdd.UseVisualStyleBackColor = true;
             // 
-            // btnClear
+            // btnSubClear
             // 
-            this.btnClear.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClear.Location = new System.Drawing.Point(398, 390);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(150, 40);
-            this.btnClear.TabIndex = 44;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseCustomBackColor = true;
-            this.btnClear.UseCustomForeColor = true;
-            this.btnClear.UseSelectable = true;
+            this.btnSubClear.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSubClear.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnSubClear.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSubClear.Location = new System.Drawing.Point(398, 390);
+            this.btnSubClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubClear.Name = "btnSubClear";
+            this.btnSubClear.Size = new System.Drawing.Size(150, 40);
+            this.btnSubClear.TabIndex = 44;
+            this.btnSubClear.Text = "Clear";
+            this.btnSubClear.UseCustomBackColor = true;
+            this.btnSubClear.UseCustomForeColor = true;
+            this.btnSubClear.UseSelectable = true;
             // 
-            // tabPage3
+            // tabPageSubEdit
             // 
-            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage3.Controls.Add(this.metroComboBox1);
-            this.tabPage3.Controls.Add(this.metroComboBox2);
-            this.tabPage3.Controls.Add(this.metroLabel11);
-            this.tabPage3.Controls.Add(this.metroLabel12);
-            this.tabPage3.Controls.Add(this.metroLabel13);
-            this.tabPage3.Controls.Add(this.metroComboBox3);
-            this.tabPage3.Controls.Add(this.metroComboBox4);
-            this.tabPage3.Controls.Add(this.metroComboBox5);
-            this.tabPage3.Controls.Add(this.metroComboBox6);
-            this.tabPage3.Controls.Add(this.metroTextBox1);
-            this.tabPage3.Controls.Add(this.metroTextBox2);
-            this.tabPage3.Controls.Add(this.metroLabel14);
-            this.tabPage3.Controls.Add(this.metroLabel15);
-            this.tabPage3.Controls.Add(this.metroLabel16);
-            this.tabPage3.Controls.Add(this.metroLabel18);
-            this.tabPage3.Controls.Add(this.metroLabel19);
-            this.tabPage3.Controls.Add(this.metroLabel17);
-            this.tabPage3.Controls.Add(this.btnLecDelete);
-            this.tabPage3.Controls.Add(this.btnLecUpdate);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 37);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(780, 454);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Edit Subject";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPageSubEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageSubEdit.Controls.Add(this.metroComboBox1);
+            this.tabPageSubEdit.Controls.Add(this.metroComboBox2);
+            this.tabPageSubEdit.Controls.Add(this.metroLabel11);
+            this.tabPageSubEdit.Controls.Add(this.metroLabel12);
+            this.tabPageSubEdit.Controls.Add(this.metroLabel13);
+            this.tabPageSubEdit.Controls.Add(this.metroComboBox3);
+            this.tabPageSubEdit.Controls.Add(this.metroComboBox4);
+            this.tabPageSubEdit.Controls.Add(this.metroComboBox5);
+            this.tabPageSubEdit.Controls.Add(this.metroComboBox6);
+            this.tabPageSubEdit.Controls.Add(this.metroTextBox1);
+            this.tabPageSubEdit.Controls.Add(this.metroTextBox2);
+            this.tabPageSubEdit.Controls.Add(this.metroLabel14);
+            this.tabPageSubEdit.Controls.Add(this.metroLabel15);
+            this.tabPageSubEdit.Controls.Add(this.metroLabel16);
+            this.tabPageSubEdit.Controls.Add(this.metroLabel18);
+            this.tabPageSubEdit.Controls.Add(this.metroLabel19);
+            this.tabPageSubEdit.Controls.Add(this.metroLabel17);
+            this.tabPageSubEdit.Controls.Add(this.btnSubDelete);
+            this.tabPageSubEdit.Controls.Add(this.btnSubUpdate);
+            this.tabPageSubEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSubEdit.Location = new System.Drawing.Point(4, 37);
+            this.tabPageSubEdit.Name = "tabPageSubEdit";
+            this.tabPageSubEdit.Size = new System.Drawing.Size(780, 454);
+            this.tabPageSubEdit.TabIndex = 2;
+            this.tabPageSubEdit.Text = "Edit Subject";
+            this.tabPageSubEdit.UseVisualStyleBackColor = true;
             // 
             // metroLabel17
             // 
@@ -294,35 +294,35 @@
             this.metroLabel17.Text = "Edit Subject";
             this.metroLabel17.UseCustomBackColor = true;
             // 
-            // btnLecDelete
+            // btnSubDelete
             // 
-            this.btnLecDelete.BackColor = System.Drawing.Color.DimGray;
-            this.btnLecDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnLecDelete.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLecDelete.Location = new System.Drawing.Point(398, 391);
-            this.btnLecDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLecDelete.Name = "btnLecDelete";
-            this.btnLecDelete.Size = new System.Drawing.Size(150, 40);
-            this.btnLecDelete.TabIndex = 59;
-            this.btnLecDelete.Text = "Delete";
-            this.btnLecDelete.UseCustomBackColor = true;
-            this.btnLecDelete.UseCustomForeColor = true;
-            this.btnLecDelete.UseSelectable = true;
+            this.btnSubDelete.BackColor = System.Drawing.Color.DimGray;
+            this.btnSubDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnSubDelete.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSubDelete.Location = new System.Drawing.Point(398, 391);
+            this.btnSubDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubDelete.Name = "btnSubDelete";
+            this.btnSubDelete.Size = new System.Drawing.Size(150, 40);
+            this.btnSubDelete.TabIndex = 59;
+            this.btnSubDelete.Text = "Delete";
+            this.btnSubDelete.UseCustomBackColor = true;
+            this.btnSubDelete.UseCustomForeColor = true;
+            this.btnSubDelete.UseSelectable = true;
             // 
-            // btnLecUpdate
+            // btnSubUpdate
             // 
-            this.btnLecUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLecUpdate.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnLecUpdate.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLecUpdate.Location = new System.Drawing.Point(202, 390);
-            this.btnLecUpdate.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLecUpdate.Name = "btnLecUpdate";
-            this.btnLecUpdate.Size = new System.Drawing.Size(150, 40);
-            this.btnLecUpdate.TabIndex = 46;
-            this.btnLecUpdate.Text = "Update";
-            this.btnLecUpdate.UseCustomBackColor = true;
-            this.btnLecUpdate.UseCustomForeColor = true;
-            this.btnLecUpdate.UseSelectable = true;
+            this.btnSubUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSubUpdate.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnSubUpdate.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSubUpdate.Location = new System.Drawing.Point(202, 390);
+            this.btnSubUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubUpdate.Name = "btnSubUpdate";
+            this.btnSubUpdate.Size = new System.Drawing.Size(150, 40);
+            this.btnSubUpdate.TabIndex = 46;
+            this.btnSubUpdate.Text = "Update";
+            this.btnSubUpdate.UseCustomBackColor = true;
+            this.btnSubUpdate.UseCustomForeColor = true;
+            this.btnSubUpdate.UseSelectable = true;
             // 
             // metroLabel10
             // 
@@ -604,20 +604,20 @@
             this.metroLabel1.Text = "Offered Year";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnLecSave
+            // btnSubSave
             // 
-            this.btnLecSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLecSave.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnLecSave.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLecSave.Location = new System.Drawing.Point(202, 390);
-            this.btnLecSave.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLecSave.Name = "btnLecSave";
-            this.btnLecSave.Size = new System.Drawing.Size(150, 40);
-            this.btnLecSave.TabIndex = 31;
-            this.btnLecSave.Text = "Add";
-            this.btnLecSave.UseCustomBackColor = true;
-            this.btnLecSave.UseCustomForeColor = true;
-            this.btnLecSave.UseSelectable = true;
+            this.btnSubSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSubSave.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnSubSave.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSubSave.Location = new System.Drawing.Point(202, 390);
+            this.btnSubSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubSave.Name = "btnSubSave";
+            this.btnSubSave.Size = new System.Drawing.Size(150, 40);
+            this.btnSubSave.TabIndex = 31;
+            this.btnSubSave.Text = "Add";
+            this.btnSubSave.UseCustomBackColor = true;
+            this.btnSubSave.UseCustomForeColor = true;
+            this.btnSubSave.UseSelectable = true;
             // 
             // metroLabel7
             // 
@@ -914,7 +914,7 @@
             this.Controls.Add(this.btnSideNavSubjects);
             this.Controls.Add(this.btnSideNavLecturers);
             this.Controls.Add(this.btnSideNavWorking);
-            this.Controls.Add(this.editloc_tab);
+            this.Controls.Add(this.tabControlSubjects);
             this.MaximizeBox = false;
             this.Name = "AddSubject";
             this.Resizable = false;
@@ -926,13 +926,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).EndInit();
-            this.editloc_tab.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.tabControlSubjects.ResumeLayout(false);
+            this.tabPageSubView.ResumeLayout(false);
+            this.tabPageSubView.PerformLayout();
+            this.tabPageSubAdd.ResumeLayout(false);
+            this.tabPageSubAdd.PerformLayout();
+            this.tabPageSubEdit.ResumeLayout(false);
+            this.tabPageSubEdit.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -946,9 +946,9 @@
         private System.Windows.Forms.PictureBox btnSideNavSubjects;
         private System.Windows.Forms.PictureBox btnSideNavLecturers;
         private System.Windows.Forms.PictureBox btnSideNavWorking;
-        private MetroFramework.Controls.MetroTabControl editloc_tab;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private MetroFramework.Controls.MetroTabControl tabControlSubjects;
+        private System.Windows.Forms.TabPage tabPageSubView;
+        private System.Windows.Forms.TabPage tabPageSubAdd;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroComboBox cmbSubLecHours;
         private MetroFramework.Controls.MetroComboBox cmbSubSem;
@@ -966,12 +966,12 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroButton btnClear;
-        private MetroFramework.Controls.MetroButton btnLecSave;
-        private System.Windows.Forms.TabPage tabPage3;
+        private MetroFramework.Controls.MetroButton btnSubClear;
+        private MetroFramework.Controls.MetroButton btnSubSave;
+        private System.Windows.Forms.TabPage tabPageSubEdit;
         private MetroFramework.Controls.MetroLabel metroLabel17;
-        private MetroFramework.Controls.MetroButton btnLecDelete;
-        private MetroFramework.Controls.MetroButton btnLecUpdate;
+        private MetroFramework.Controls.MetroButton btnSubDelete;
+        private MetroFramework.Controls.MetroButton btnSubUpdate;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroComboBox metroComboBox2;

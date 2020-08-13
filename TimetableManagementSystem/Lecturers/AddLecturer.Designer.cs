@@ -35,10 +35,10 @@
             this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
             this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
             this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
-            this.editloc_tab = new MetroFramework.Controls.MetroTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabControlLecturers = new MetroFramework.Controls.MetroTabControl();
+            this.tabPageLecView = new System.Windows.Forms.TabPage();
+            this.tabPageLecAdd = new System.Windows.Forms.TabPage();
+            this.tabPageLecEdit = new System.Windows.Forms.TabPage();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.btnLecDelete = new MetroFramework.Controls.MetroButton();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
@@ -70,6 +70,7 @@
             this.txtLecDep = new MetroFramework.Controls.MetroTextBox();
             this.cmbLecFac = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.dgvLectures = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -77,10 +78,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
-            this.editloc_tab.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabControlLecturers.SuspendLayout();
+            this.tabPageLecView.SuspendLayout();
+            this.tabPageLecAdd.SuspendLayout();
+            this.tabPageLecEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLectures)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSideNavStatistics
@@ -162,92 +164,93 @@
             this.btnSideNavWorking.TabIndex = 19;
             this.btnSideNavWorking.TabStop = false;
             // 
-            // editloc_tab
+            // tabControlLecturers
             // 
-            this.editloc_tab.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.editloc_tab.Controls.Add(this.tabPage1);
-            this.editloc_tab.Controls.Add(this.tabPage2);
-            this.editloc_tab.Controls.Add(this.tabPage3);
-            this.editloc_tab.FontSize = MetroFramework.MetroTabControlSize.Small;
-            this.editloc_tab.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
-            this.editloc_tab.Location = new System.Drawing.Point(154, 93);
-            this.editloc_tab.Name = "editloc_tab";
-            this.editloc_tab.SelectedIndex = 1;
-            this.editloc_tab.Size = new System.Drawing.Size(788, 461);
-            this.editloc_tab.Style = MetroFramework.MetroColorStyle.Blue;
-            this.editloc_tab.TabIndex = 26;
-            this.editloc_tab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.editloc_tab.UseCustomBackColor = true;
-            this.editloc_tab.UseCustomForeColor = true;
-            this.editloc_tab.UseSelectable = true;
-            this.editloc_tab.UseStyleColors = true;
+            this.tabControlLecturers.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControlLecturers.Controls.Add(this.tabPageLecView);
+            this.tabControlLecturers.Controls.Add(this.tabPageLecAdd);
+            this.tabControlLecturers.Controls.Add(this.tabPageLecEdit);
+            this.tabControlLecturers.FontSize = MetroFramework.MetroTabControlSize.Small;
+            this.tabControlLecturers.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
+            this.tabControlLecturers.Location = new System.Drawing.Point(154, 93);
+            this.tabControlLecturers.Name = "tabControlLecturers";
+            this.tabControlLecturers.SelectedIndex = 1;
+            this.tabControlLecturers.Size = new System.Drawing.Size(788, 461);
+            this.tabControlLecturers.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tabControlLecturers.TabIndex = 26;
+            this.tabControlLecturers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tabControlLecturers.UseCustomBackColor = true;
+            this.tabControlLecturers.UseCustomForeColor = true;
+            this.tabControlLecturers.UseSelectable = true;
+            this.tabControlLecturers.UseStyleColors = true;
             // 
-            // tabPage1
+            // tabPageLecView
             // 
-            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage1.Controls.Add(this.metroLabel15);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 37);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(7);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage1.Size = new System.Drawing.Size(780, 420);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "View Lecturers";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageLecView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageLecView.Controls.Add(this.dgvLectures);
+            this.tabPageLecView.Controls.Add(this.metroLabel15);
+            this.tabPageLecView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageLecView.Location = new System.Drawing.Point(4, 37);
+            this.tabPageLecView.Margin = new System.Windows.Forms.Padding(7);
+            this.tabPageLecView.Name = "tabPageLecView";
+            this.tabPageLecView.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageLecView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tabPageLecView.Size = new System.Drawing.Size(780, 420);
+            this.tabPageLecView.TabIndex = 0;
+            this.tabPageLecView.Text = "View Lecturers";
+            this.tabPageLecView.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPageLecAdd
             // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.metroLabel8);
-            this.tabPage2.Controls.Add(this.btnClear);
-            this.tabPage2.Controls.Add(this.metroLabel1);
-            this.tabPage2.Controls.Add(this.btnLecSave);
-            this.tabPage2.Controls.Add(this.metroLabel2);
-            this.tabPage2.Controls.Add(this.metroLabel4);
-            this.tabPage2.Controls.Add(this.metroLabel3);
-            this.tabPage2.Controls.Add(this.metroLabel6);
-            this.tabPage2.Controls.Add(this.cmbLecLevel);
-            this.tabPage2.Controls.Add(this.metroLabel5);
-            this.tabPage2.Controls.Add(this.cmbLecBuilding);
-            this.tabPage2.Controls.Add(this.txtLecName);
-            this.tabPage2.Controls.Add(this.cmbLecCenter);
-            this.tabPage2.Controls.Add(this.txtLecDep);
-            this.tabPage2.Controls.Add(this.cmbLecFac);
-            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 37);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(780, 420);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Add Lecturer";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageLecAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageLecAdd.Controls.Add(this.metroLabel8);
+            this.tabPageLecAdd.Controls.Add(this.btnClear);
+            this.tabPageLecAdd.Controls.Add(this.metroLabel1);
+            this.tabPageLecAdd.Controls.Add(this.btnLecSave);
+            this.tabPageLecAdd.Controls.Add(this.metroLabel2);
+            this.tabPageLecAdd.Controls.Add(this.metroLabel4);
+            this.tabPageLecAdd.Controls.Add(this.metroLabel3);
+            this.tabPageLecAdd.Controls.Add(this.metroLabel6);
+            this.tabPageLecAdd.Controls.Add(this.cmbLecLevel);
+            this.tabPageLecAdd.Controls.Add(this.metroLabel5);
+            this.tabPageLecAdd.Controls.Add(this.cmbLecBuilding);
+            this.tabPageLecAdd.Controls.Add(this.txtLecName);
+            this.tabPageLecAdd.Controls.Add(this.cmbLecCenter);
+            this.tabPageLecAdd.Controls.Add(this.txtLecDep);
+            this.tabPageLecAdd.Controls.Add(this.cmbLecFac);
+            this.tabPageLecAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageLecAdd.Location = new System.Drawing.Point(4, 37);
+            this.tabPageLecAdd.Name = "tabPageLecAdd";
+            this.tabPageLecAdd.Size = new System.Drawing.Size(780, 420);
+            this.tabPageLecAdd.TabIndex = 1;
+            this.tabPageLecAdd.Text = "Add Lecturer";
+            this.tabPageLecAdd.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabPageLecEdit
             // 
-            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage3.Controls.Add(this.metroLabel7);
-            this.tabPage3.Controls.Add(this.btnLecDelete);
-            this.tabPage3.Controls.Add(this.metroLabel9);
-            this.tabPage3.Controls.Add(this.btnLecUpdate);
-            this.tabPage3.Controls.Add(this.metroLabel10);
-            this.tabPage3.Controls.Add(this.metroLabel11);
-            this.tabPage3.Controls.Add(this.metroLabel12);
-            this.tabPage3.Controls.Add(this.metroLabel13);
-            this.tabPage3.Controls.Add(this.cmbLecLevelEdit);
-            this.tabPage3.Controls.Add(this.metroLabel14);
-            this.tabPage3.Controls.Add(this.cmbLecBuildingEdit);
-            this.tabPage3.Controls.Add(this.txtLecNameEdit);
-            this.tabPage3.Controls.Add(this.cmbLecCenterEdit);
-            this.tabPage3.Controls.Add(this.txtLecDepEdit);
-            this.tabPage3.Controls.Add(this.cmbLecFacEdit);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 37);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(780, 420);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Edit Lecturer";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPageLecEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageLecEdit.Controls.Add(this.metroLabel7);
+            this.tabPageLecEdit.Controls.Add(this.btnLecDelete);
+            this.tabPageLecEdit.Controls.Add(this.metroLabel9);
+            this.tabPageLecEdit.Controls.Add(this.btnLecUpdate);
+            this.tabPageLecEdit.Controls.Add(this.metroLabel10);
+            this.tabPageLecEdit.Controls.Add(this.metroLabel11);
+            this.tabPageLecEdit.Controls.Add(this.metroLabel12);
+            this.tabPageLecEdit.Controls.Add(this.metroLabel13);
+            this.tabPageLecEdit.Controls.Add(this.cmbLecLevelEdit);
+            this.tabPageLecEdit.Controls.Add(this.metroLabel14);
+            this.tabPageLecEdit.Controls.Add(this.cmbLecBuildingEdit);
+            this.tabPageLecEdit.Controls.Add(this.txtLecNameEdit);
+            this.tabPageLecEdit.Controls.Add(this.cmbLecCenterEdit);
+            this.tabPageLecEdit.Controls.Add(this.txtLecDepEdit);
+            this.tabPageLecEdit.Controls.Add(this.cmbLecFacEdit);
+            this.tabPageLecEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageLecEdit.Location = new System.Drawing.Point(4, 37);
+            this.tabPageLecEdit.Name = "tabPageLecEdit";
+            this.tabPageLecEdit.Size = new System.Drawing.Size(780, 420);
+            this.tabPageLecEdit.TabIndex = 2;
+            this.tabPageLecEdit.Text = "Edit Lecturer";
+            this.tabPageLecEdit.UseVisualStyleBackColor = true;
             // 
             // metroLabel7
             // 
@@ -555,6 +558,7 @@
             this.btnLecSave.UseCustomBackColor = true;
             this.btnLecSave.UseCustomForeColor = true;
             this.btnLecSave.UseSelectable = true;
+            this.btnLecSave.Click += new System.EventHandler(this.btnLecSave_Click);
             // 
             // metroLabel2
             // 
@@ -767,6 +771,15 @@
             this.metroLabel15.Text = "Lecturers List";
             this.metroLabel15.UseCustomBackColor = true;
             // 
+            // dgvLectures
+            // 
+            this.dgvLectures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLectures.Location = new System.Drawing.Point(89, 134);
+            this.dgvLectures.Name = "dgvLectures";
+            this.dgvLectures.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLectures.Size = new System.Drawing.Size(639, 193);
+            this.dgvLectures.TabIndex = 66;
+            // 
             // AddLecturer
             // 
             this.ApplyImageInvert = true;
@@ -775,7 +788,7 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
-            this.Controls.Add(this.editloc_tab);
+            this.Controls.Add(this.tabControlLecturers);
             this.Controls.Add(this.btnSideNavStatistics);
             this.Controls.Add(this.btnSideNavLocations);
             this.Controls.Add(this.btnSideNavTags);
@@ -797,13 +810,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).EndInit();
-            this.editloc_tab.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.tabControlLecturers.ResumeLayout(false);
+            this.tabPageLecView.ResumeLayout(false);
+            this.tabPageLecView.PerformLayout();
+            this.tabPageLecAdd.ResumeLayout(false);
+            this.tabPageLecAdd.PerformLayout();
+            this.tabPageLecEdit.ResumeLayout(false);
+            this.tabPageLecEdit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLectures)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -817,10 +831,10 @@
         private System.Windows.Forms.PictureBox btnSideNavSubjects;
         private System.Windows.Forms.PictureBox btnSideNavLecturers;
         private System.Windows.Forms.PictureBox btnSideNavWorking;
-        private MetroFramework.Controls.MetroTabControl editloc_tab;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private MetroFramework.Controls.MetroTabControl tabControlLecturers;
+        private System.Windows.Forms.TabPage tabPageLecView;
+        private System.Windows.Forms.TabPage tabPageLecAdd;
+        private System.Windows.Forms.TabPage tabPageLecEdit;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroButton btnClear;
         private MetroFramework.Controls.MetroLabel metroLabel1;
@@ -852,5 +866,6 @@
         private MetroFramework.Controls.MetroTextBox txtLecDepEdit;
         private MetroFramework.Controls.MetroComboBox cmbLecFacEdit;
         private MetroFramework.Controls.MetroLabel metroLabel15;
+        private System.Windows.Forms.DataGridView dgvLectures;
     }
 }
