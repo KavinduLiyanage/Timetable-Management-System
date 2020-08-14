@@ -135,9 +135,63 @@ namespace TimetableManagementSystem.Lecturers
             txtLecNameEdit.Text = dgvLectures.SelectedRows[0].Cells[1].Value.ToString();
             cmbLecFacEdit.SelectedValue = dgvLectures.SelectedRows[0].Cells[2].Value;
             txtLecDepEdit.Text = dgvLectures.SelectedRows[0].Cells[3].Value.ToString();
-            MessageBox.Show("Fill the all fields"+ dgvLectures.SelectedRows[0].Cells[2].Value, "Failed", MessageBoxButtons.OK);
             tabControlLecturers.SelectedTab = tabPageLecEdit;
 
+        }
+
+        private void btnLecUpdate_Click(object sender, EventArgs e)
+        {
+            if (LecturerID > 0)
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE Lecturers SET LecName = @LecName, LecDepartment = @LecDepartment WHERE LecturerID = @LecturerID", con);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@LecName", txtLecNameEdit.Text);
+                cmd.Parameters.AddWithValue("@LecDepartment", txtLecDepEdit.Text);
+                cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Lecturer details Updated", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                GetLecturers();
+
+                ClearFields();
+
+                tabControlLecturers.SelectedTab = tabPageLecView;
+            }
+            else
+            {
+                MessageBox.Show("Please select a name to update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLecDelete_Click(object sender, EventArgs e)
+        {
+            if (LecturerID > 0)
+            {
+                SqlCommand cmd = new SqlCommand("DELETE FROM Lecturers WHERE LecturerID = @LecturerID", con);
+                cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Name is Deleted", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                GetLecturers();
+
+                ClearFields();
+
+                tabControlLecturers.SelectedTab = tabPageLecView;
+            }
+            else
+            {
+                MessageBox.Show("Please select a name to delete ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
