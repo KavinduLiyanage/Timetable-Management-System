@@ -13,7 +13,7 @@ namespace TimetableManagementSystem.Locations
 {
     public partial class UpdateLocationForm : MetroFramework.Forms.MetroForm
     {
-        SqlConnection con = new SqlConnection(@"Server=tcp:timetablemngsysdb.database.windows.net,1433;Initial Catalog=TimetableManageSystemDB;Persist Security Info=False;User ID=timetableadmin;Password=imb@manN0tbruce;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        SqlConnection con = Config.con;
 
         public UpdateLocationForm()
         {

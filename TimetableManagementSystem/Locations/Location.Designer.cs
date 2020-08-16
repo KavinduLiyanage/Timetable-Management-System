@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.editloc_tab = new MetroFramework.Controls.MetroTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.loaddata_btn = new MetroFramework.Controls.MetroButton();
-            this.loc_dgridv = new System.Windows.Forms.DataGridView();
-            this.sort_btn = new MetroFramework.Controls.MetroButton();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.search_btn = new MetroFramework.Controls.MetroButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
+            this.viewloc_tab = new System.Windows.Forms.TabPage();
+            this.locationview_panel = new System.Windows.Forms.Panel();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.sort_btn = new MetroFramework.Controls.MetroButton();
+            this.loc_dgridv = new System.Windows.Forms.DataGridView();
+            this.search_btn = new MetroFramework.Controls.MetroButton();
+            this.addloc_tab = new System.Windows.Forms.TabPage();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.clr_btn = new MetroFramework.Controls.MetroButton();
             this.addloc_btn = new MetroFramework.Controls.MetroButton();
@@ -52,181 +51,78 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.editloc_tab = new System.Windows.Forms.TabPage();
             this.editloc_panel = new MetroFramework.Controls.MetroPanel();
-            this.reset_btn = new MetroFramework.Controls.MetroButton();
+            this.delete_btn = new MetroFramework.Controls.MetroButton();
             this.editloc_btn = new MetroFramework.Controls.MetroButton();
             this.editcap_cmb = new System.Windows.Forms.NumericUpDown();
-            this.editroomtype_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.room_type_txt_box = new MetroFramework.Controls.MetroComboBox();
             this.editroom_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.editbuil_cmb = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
-            this.editloc_tab.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.metroPanel1.SuspendLayout();
+            this.edit_building_txt_box = new MetroFramework.Controls.MetroTextBox();
+            this.loc_tabcontrol.SuspendLayout();
+            this.viewloc_tab.SuspendLayout();
+            this.locationview_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loc_dgridv)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.addloc_tab.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.capacity_cmb)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.editloc_tab.SuspendLayout();
             this.editloc_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editcap_cmb)).BeginInit();
             this.SuspendLayout();
             // 
-            // editloc_tab
+            // loc_tabcontrol
             // 
-            this.editloc_tab.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.editloc_tab.Controls.Add(this.tabPage1);
-            this.editloc_tab.Controls.Add(this.tabPage2);
-            this.editloc_tab.Controls.Add(this.tabPage3);
-            this.editloc_tab.FontSize = MetroFramework.MetroTabControlSize.Small;
-            this.editloc_tab.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
-            this.editloc_tab.Location = new System.Drawing.Point(138, 120);
-            this.editloc_tab.Name = "editloc_tab";
-            this.editloc_tab.SelectedIndex = 0;
-            this.editloc_tab.Size = new System.Drawing.Size(788, 461);
-            this.editloc_tab.Style = MetroFramework.MetroColorStyle.Blue;
-            this.editloc_tab.TabIndex = 0;
-            this.editloc_tab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.editloc_tab.UseCustomBackColor = true;
-            this.editloc_tab.UseCustomForeColor = true;
-            this.editloc_tab.UseSelectable = true;
-            this.editloc_tab.UseStyleColors = true;
+            this.loc_tabcontrol.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.loc_tabcontrol.Controls.Add(this.viewloc_tab);
+            this.loc_tabcontrol.Controls.Add(this.addloc_tab);
+            this.loc_tabcontrol.Controls.Add(this.editloc_tab);
+            this.loc_tabcontrol.FontSize = MetroFramework.MetroTabControlSize.Small;
+            this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
+            this.loc_tabcontrol.Location = new System.Drawing.Point(138, 120);
+            this.loc_tabcontrol.Name = "loc_tabcontrol";
+            this.loc_tabcontrol.SelectedIndex = 1;
+            this.loc_tabcontrol.Size = new System.Drawing.Size(788, 461);
+            this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
+            this.loc_tabcontrol.TabIndex = 0;
+            this.loc_tabcontrol.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.loc_tabcontrol.UseCustomBackColor = true;
+            this.loc_tabcontrol.UseCustomForeColor = true;
+            this.loc_tabcontrol.UseSelectable = true;
+            this.loc_tabcontrol.UseStyleColors = true;
             // 
-            // tabPage1
+            // viewloc_tab
             // 
-            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage1.Controls.Add(this.metroPanel1);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 37);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(7);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage1.Size = new System.Drawing.Size(780, 420);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "View Locations";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.viewloc_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.viewloc_tab.Controls.Add(this.locationview_panel);
+            this.viewloc_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewloc_tab.Location = new System.Drawing.Point(4, 37);
+            this.viewloc_tab.Margin = new System.Windows.Forms.Padding(7);
+            this.viewloc_tab.Name = "viewloc_tab";
+            this.viewloc_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.viewloc_tab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.viewloc_tab.Size = new System.Drawing.Size(780, 420);
+            this.viewloc_tab.TabIndex = 0;
+            this.viewloc_tab.Text = "View Locations";
+            this.viewloc_tab.UseVisualStyleBackColor = true;
             // 
-            // metroPanel1
+            // locationview_panel
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroPanel1.Controls.Add(this.loaddata_btn);
-            this.metroPanel1.Controls.Add(this.loc_dgridv);
-            this.metroPanel1.Controls.Add(this.sort_btn);
-            this.metroPanel1.Controls.Add(this.metroComboBox1);
-            this.metroPanel1.Controls.Add(this.search_btn);
-            this.metroPanel1.Controls.Add(this.metroTextBox1);
-            this.metroPanel1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(1, 0);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(777, 421);
-            this.metroPanel1.TabIndex = 16;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // loaddata_btn
-            // 
-            this.loaddata_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.loaddata_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.loaddata_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.loaddata_btn.Location = new System.Drawing.Point(575, 355);
-            this.loaddata_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.loaddata_btn.Name = "loaddata_btn";
-            this.loaddata_btn.Size = new System.Drawing.Size(150, 40);
-            this.loaddata_btn.TabIndex = 40;
-            this.loaddata_btn.Text = "Load Data";
-            this.loaddata_btn.UseCustomBackColor = true;
-            this.loaddata_btn.UseCustomForeColor = true;
-            this.loaddata_btn.UseSelectable = true;
-            this.loaddata_btn.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // loc_dgridv
-            // 
-            this.loc_dgridv.AllowUserToAddRows = false;
-            this.loc_dgridv.AllowUserToResizeColumns = false;
-            this.loc_dgridv.AllowUserToResizeRows = false;
-            this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.loc_dgridv.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.loc_dgridv.ColumnHeadersHeight = 29;
-            this.loc_dgridv.Location = new System.Drawing.Point(38, 62);
-            this.loc_dgridv.MultiSelect = false;
-            this.loc_dgridv.Name = "loc_dgridv";
-            this.loc_dgridv.ReadOnly = true;
-            this.loc_dgridv.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.loc_dgridv.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.loc_dgridv.RowTemplate.Height = 24;
-            this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.loc_dgridv.Size = new System.Drawing.Size(687, 278);
-            this.loc_dgridv.TabIndex = 18;
-            this.loc_dgridv.Click += new System.EventHandler(this.loc_dgridv_Click);
-            // 
-            // sort_btn
-            // 
-            this.sort_btn.BackColor = System.Drawing.SystemColors.GrayText;
-            this.sort_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.sort_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.sort_btn.Location = new System.Drawing.Point(620, 18);
-            this.sort_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.sort_btn.Name = "sort_btn";
-            this.sort_btn.Size = new System.Drawing.Size(105, 30);
-            this.sort_btn.TabIndex = 17;
-            this.sort_btn.Text = "Sort";
-            this.sort_btn.UseCustomBackColor = true;
-            this.sort_btn.UseCustomForeColor = true;
-            this.sort_btn.UseSelectable = true;
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "Building",
-            "Capacity",
-            "Room Type"});
-            this.metroComboBox1.Location = new System.Drawing.Point(458, 18);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(138, 29);
-            this.metroComboBox1.TabIndex = 16;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // search_btn
-            // 
-            this.search_btn.BackColor = System.Drawing.SystemColors.GrayText;
-            this.search_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.search_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.search_btn.Location = new System.Drawing.Point(241, 17);
-            this.search_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.search_btn.Name = "search_btn";
-            this.search_btn.Size = new System.Drawing.Size(105, 30);
-            this.search_btn.TabIndex = 15;
-            this.search_btn.Text = "Search";
-            this.search_btn.UseCustomBackColor = true;
-            this.search_btn.UseCustomForeColor = true;
-            this.search_btn.UseSelectable = true;
+            this.locationview_panel.Controls.Add(this.metroTextBox1);
+            this.locationview_panel.Controls.Add(this.metroComboBox1);
+            this.locationview_panel.Controls.Add(this.sort_btn);
+            this.locationview_panel.Controls.Add(this.loc_dgridv);
+            this.locationview_panel.Controls.Add(this.search_btn);
+            this.locationview_panel.Location = new System.Drawing.Point(-1, -1);
+            this.locationview_panel.Name = "locationview_panel";
+            this.locationview_panel.Size = new System.Drawing.Size(779, 419);
+            this.locationview_panel.TabIndex = 0;
             // 
             // metroTextBox1
             // 
@@ -243,7 +139,7 @@
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(38, 17);
+            this.metroTextBox1.Location = new System.Drawing.Point(35, 22);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -258,17 +154,95 @@
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // tabPage2
+            // metroComboBox1
             // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.metroPanel2);
-            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 37);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(780, 420);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Add Locations";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "Building",
+            "Capacity",
+            "Room Type"});
+            this.metroComboBox1.Location = new System.Drawing.Point(490, 22);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(138, 29);
+            this.metroComboBox1.TabIndex = 16;
+            this.metroComboBox1.UseSelectable = true;
+            // 
+            // sort_btn
+            // 
+            this.sort_btn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.sort_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.sort_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.sort_btn.Location = new System.Drawing.Point(655, 21);
+            this.sort_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.sort_btn.Name = "sort_btn";
+            this.sort_btn.Size = new System.Drawing.Size(105, 30);
+            this.sort_btn.TabIndex = 17;
+            this.sort_btn.Text = "Sort";
+            this.sort_btn.UseCustomBackColor = true;
+            this.sort_btn.UseCustomForeColor = true;
+            this.sort_btn.UseSelectable = true;
+            // 
+            // loc_dgridv
+            // 
+            this.loc_dgridv.AllowUserToAddRows = false;
+            this.loc_dgridv.AllowUserToResizeColumns = false;
+            this.loc_dgridv.AllowUserToResizeRows = false;
+            this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.loc_dgridv.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.loc_dgridv.ColumnHeadersHeight = 29;
+            this.loc_dgridv.Location = new System.Drawing.Point(22, 80);
+            this.loc_dgridv.MultiSelect = false;
+            this.loc_dgridv.Name = "loc_dgridv";
+            this.loc_dgridv.ReadOnly = true;
+            this.loc_dgridv.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.loc_dgridv.RowHeadersWidth = 51;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.loc_dgridv.RowTemplate.Height = 24;
+            this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.loc_dgridv.Size = new System.Drawing.Size(738, 316);
+            this.loc_dgridv.TabIndex = 18;
+            this.loc_dgridv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loc_dgridv_CellClick);
+            this.loc_dgridv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loc_dgridv_CellDoubleClick);
+            // 
+            // search_btn
+            // 
+            this.search_btn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.search_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.search_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.search_btn.Location = new System.Drawing.Point(232, 22);
+            this.search_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.search_btn.Name = "search_btn";
+            this.search_btn.Size = new System.Drawing.Size(105, 30);
+            this.search_btn.TabIndex = 15;
+            this.search_btn.Text = "Search";
+            this.search_btn.UseCustomBackColor = true;
+            this.search_btn.UseCustomForeColor = true;
+            this.search_btn.UseSelectable = true;
+            // 
+            // addloc_tab
+            // 
+            this.addloc_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addloc_tab.Controls.Add(this.metroPanel2);
+            this.addloc_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addloc_tab.Location = new System.Drawing.Point(4, 37);
+            this.addloc_tab.Name = "addloc_tab";
+            this.addloc_tab.Size = new System.Drawing.Size(780, 420);
+            this.addloc_tab.TabIndex = 1;
+            this.addloc_tab.Text = "Add Locations";
+            this.addloc_tab.UseVisualStyleBackColor = true;
             // 
             // metroPanel2
             // 
@@ -331,6 +305,11 @@
             // capacity_cmb
             // 
             this.capacity_cmb.AutoSize = true;
+            this.capacity_cmb.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.capacity_cmb.Location = new System.Drawing.Point(389, 190);
             this.capacity_cmb.Maximum = new decimal(new int[] {
             1000,
@@ -445,27 +424,27 @@
             this.metroLabel1.Text = "Building";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tabPage3
+            // editloc_tab
             // 
-            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage3.Controls.Add(this.editloc_panel);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 37);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(780, 420);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Edit Locations";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.editloc_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.editloc_tab.Controls.Add(this.editloc_panel);
+            this.editloc_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editloc_tab.Location = new System.Drawing.Point(4, 37);
+            this.editloc_tab.Name = "editloc_tab";
+            this.editloc_tab.Size = new System.Drawing.Size(780, 420);
+            this.editloc_tab.TabIndex = 2;
+            this.editloc_tab.Text = "Edit/Delete Locations";
+            this.editloc_tab.UseVisualStyleBackColor = true;
             // 
             // editloc_panel
             // 
             this.editloc_panel.BackColor = System.Drawing.Color.Transparent;
-            this.editloc_panel.Controls.Add(this.reset_btn);
+            this.editloc_panel.Controls.Add(this.edit_building_txt_box);
+            this.editloc_panel.Controls.Add(this.delete_btn);
             this.editloc_panel.Controls.Add(this.editloc_btn);
             this.editloc_panel.Controls.Add(this.editcap_cmb);
-            this.editloc_panel.Controls.Add(this.editroomtype_cmb);
+            this.editloc_panel.Controls.Add(this.room_type_txt_box);
             this.editloc_panel.Controls.Add(this.editroom_cmb);
-            this.editloc_panel.Controls.Add(this.editbuil_cmb);
             this.editloc_panel.Controls.Add(this.metroLabel6);
             this.editloc_panel.Controls.Add(this.metroLabel7);
             this.editloc_panel.Controls.Add(this.metroLabel8);
@@ -483,20 +462,21 @@
             this.editloc_panel.VerticalScrollbarHighlightOnWheel = false;
             this.editloc_panel.VerticalScrollbarSize = 10;
             // 
-            // reset_btn
+            // delete_btn
             // 
-            this.reset_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.reset_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.reset_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.reset_btn.Location = new System.Drawing.Point(404, 328);
-            this.reset_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.reset_btn.Name = "reset_btn";
-            this.reset_btn.Size = new System.Drawing.Size(150, 40);
-            this.reset_btn.TabIndex = 38;
-            this.reset_btn.Text = "Reset";
-            this.reset_btn.UseCustomBackColor = true;
-            this.reset_btn.UseCustomForeColor = true;
-            this.reset_btn.UseSelectable = true;
+            this.delete_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.delete_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.delete_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.delete_btn.Location = new System.Drawing.Point(404, 328);
+            this.delete_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(150, 40);
+            this.delete_btn.TabIndex = 38;
+            this.delete_btn.Text = "Delete";
+            this.delete_btn.UseCustomBackColor = true;
+            this.delete_btn.UseCustomForeColor = true;
+            this.delete_btn.UseSelectable = true;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // editloc_btn
             // 
@@ -512,10 +492,16 @@
             this.editloc_btn.UseCustomBackColor = true;
             this.editloc_btn.UseCustomForeColor = true;
             this.editloc_btn.UseSelectable = true;
+            this.editloc_btn.Click += new System.EventHandler(this.editloc_btn_Click);
             // 
             // editcap_cmb
             // 
             this.editcap_cmb.AutoSize = true;
+            this.editcap_cmb.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.editcap_cmb.Location = new System.Drawing.Point(389, 190);
             this.editcap_cmb.Maximum = new decimal(new int[] {
             1000,
@@ -526,22 +512,22 @@
             this.editcap_cmb.Size = new System.Drawing.Size(100, 22);
             this.editcap_cmb.TabIndex = 36;
             // 
-            // editroomtype_cmb
+            // room_type_txt_box
             // 
-            this.editroomtype_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.room_type_txt_box.AllowDrop = true;
+            this.room_type_txt_box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.editroomtype_cmb.FormattingEnabled = true;
-            this.editroomtype_cmb.ItemHeight = 23;
-            this.editroomtype_cmb.Items.AddRange(new object[] {
+            this.room_type_txt_box.FormattingEnabled = true;
+            this.room_type_txt_box.ItemHeight = 23;
+            this.room_type_txt_box.Items.AddRange(new object[] {
             "Lecture Hall",
             "PC Lab",
             "Engineering Lab"});
-            this.editroomtype_cmb.Location = new System.Drawing.Point(389, 251);
-            this.editroomtype_cmb.Name = "editroomtype_cmb";
-            this.editroomtype_cmb.PromptText = "Select Room Type";
-            this.editroomtype_cmb.Size = new System.Drawing.Size(200, 29);
-            this.editroomtype_cmb.TabIndex = 35;
-            this.editroomtype_cmb.UseSelectable = true;
+            this.room_type_txt_box.Location = new System.Drawing.Point(389, 251);
+            this.room_type_txt_box.Name = "room_type_txt_box";
+            this.room_type_txt_box.Size = new System.Drawing.Size(234, 29);
+            this.room_type_txt_box.TabIndex = 35;
+            this.room_type_txt_box.UseSelectable = true;
             // 
             // editroom_cmb
             // 
@@ -549,35 +535,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.editroom_cmb.FormattingEnabled = true;
             this.editroom_cmb.ItemHeight = 23;
-            this.editroom_cmb.Items.AddRange(new object[] {
-            "Computing",
-            "Engineering",
-            "Business",
-            "Humanities and Science"});
-            this.editroom_cmb.Location = new System.Drawing.Point(389, 129);
+            this.editroom_cmb.Location = new System.Drawing.Point(389, 73);
             this.editroom_cmb.Name = "editroom_cmb";
             this.editroom_cmb.PromptText = "Select Room";
-            this.editroom_cmb.Size = new System.Drawing.Size(200, 29);
+            this.editroom_cmb.Size = new System.Drawing.Size(234, 29);
             this.editroom_cmb.TabIndex = 34;
             this.editroom_cmb.UseSelectable = true;
-            // 
-            // editbuil_cmb
-            // 
-            this.editbuil_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.editbuil_cmb.FormattingEnabled = true;
-            this.editbuil_cmb.ItemHeight = 23;
-            this.editbuil_cmb.Items.AddRange(new object[] {
-            "Main Building",
-            "Faculty of Business Building",
-            "Faculty of Engineering Building",
-            "New Building"});
-            this.editbuil_cmb.Location = new System.Drawing.Point(389, 72);
-            this.editbuil_cmb.Name = "editbuil_cmb";
-            this.editbuil_cmb.PromptText = "Select Building";
-            this.editbuil_cmb.Size = new System.Drawing.Size(200, 29);
-            this.editbuil_cmb.TabIndex = 33;
-            this.editbuil_cmb.UseSelectable = true;
+            this.editroom_cmb.DropDown += new System.EventHandler(this.editroom_cmb_DropDown);
+            this.editroom_cmb.SelectedIndexChanged += new System.EventHandler(this.editroom_cmb_SelectedIndexChanged);
             // 
             // metroLabel6
             // 
@@ -605,7 +570,7 @@
             // 
             this.metroLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel8.Location = new System.Drawing.Point(168, 128);
+            this.metroLabel8.Location = new System.Drawing.Point(168, 72);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(180, 30);
             this.metroLabel8.TabIndex = 30;
@@ -630,7 +595,7 @@
             // 
             this.metroLabel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel10.Location = new System.Drawing.Point(168, 71);
+            this.metroLabel10.Location = new System.Drawing.Point(168, 129);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(180, 30);
             this.metroLabel10.TabIndex = 16;
@@ -651,6 +616,37 @@
             this.locations_lbl.Text = "Locations";
             this.locations_lbl.UseCustomBackColor = true;
             // 
+            // edit_building_txt_box
+            // 
+            // 
+            // 
+            // 
+            this.edit_building_txt_box.CustomButton.Image = null;
+            this.edit_building_txt_box.CustomButton.Location = new System.Drawing.Point(210, 1);
+            this.edit_building_txt_box.CustomButton.Name = "";
+            this.edit_building_txt_box.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.edit_building_txt_box.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.edit_building_txt_box.CustomButton.TabIndex = 1;
+            this.edit_building_txt_box.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.edit_building_txt_box.CustomButton.UseSelectable = true;
+            this.edit_building_txt_box.CustomButton.Visible = false;
+            this.edit_building_txt_box.Lines = new string[0];
+            this.edit_building_txt_box.Location = new System.Drawing.Point(389, 129);
+            this.edit_building_txt_box.MaxLength = 32767;
+            this.edit_building_txt_box.Name = "edit_building_txt_box";
+            this.edit_building_txt_box.PasswordChar = '\0';
+            this.edit_building_txt_box.ReadOnly = true;
+            this.edit_building_txt_box.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.edit_building_txt_box.SelectedText = "";
+            this.edit_building_txt_box.SelectionLength = 0;
+            this.edit_building_txt_box.SelectionStart = 0;
+            this.edit_building_txt_box.ShortcutsEnabled = true;
+            this.edit_building_txt_box.Size = new System.Drawing.Size(234, 25);
+            this.edit_building_txt_box.TabIndex = 40;
+            this.edit_building_txt_box.UseSelectable = true;
+            this.edit_building_txt_box.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.edit_building_txt_box.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // Location
             // 
             this.ApplyImageInvert = true;
@@ -660,22 +656,23 @@
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.locations_lbl);
-            this.Controls.Add(this.editloc_tab);
+            this.Controls.Add(this.loc_tabcontrol);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Location";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Resizable = false;
             this.Text = "Location";
-            this.editloc_tab.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.metroPanel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Location_Load);
+            this.loc_tabcontrol.ResumeLayout(false);
+            this.viewloc_tab.ResumeLayout(false);
+            this.locationview_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.loc_dgridv)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.addloc_tab.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.capacity_cmb)).EndInit();
-            this.tabPage3.ResumeLayout(false);
+            this.editloc_tab.ResumeLayout(false);
             this.editloc_panel.ResumeLayout(false);
             this.editloc_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editcap_cmb)).EndInit();
@@ -686,17 +683,11 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTabControl editloc_tab;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private MetroFramework.Controls.MetroTabControl loc_tabcontrol;
+        private System.Windows.Forms.TabPage viewloc_tab;
+        private System.Windows.Forms.TabPage addloc_tab;
+        private System.Windows.Forms.TabPage editloc_tab;
         private MetroFramework.Controls.MetroLabel locations_lbl;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroButton search_btn;
-        private MetroFramework.Controls.MetroButton sort_btn;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private System.Windows.Forms.DataGridView loc_dgridv;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
@@ -706,12 +697,11 @@
         private MetroFramework.Controls.MetroButton clr_btn;
         private MetroFramework.Controls.MetroButton addloc_btn;
         private MetroFramework.Controls.MetroPanel editloc_panel;
-        private MetroFramework.Controls.MetroButton reset_btn;
+        private MetroFramework.Controls.MetroButton delete_btn;
         private MetroFramework.Controls.MetroButton editloc_btn;
         private System.Windows.Forms.NumericUpDown editcap_cmb;
-        private MetroFramework.Controls.MetroComboBox editroomtype_cmb;
+        private MetroFramework.Controls.MetroComboBox room_type_txt_box;
         private MetroFramework.Controls.MetroComboBox editroom_cmb;
-        private MetroFramework.Controls.MetroComboBox editbuil_cmb;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel8;
@@ -721,6 +711,12 @@
         public MetroFramework.Controls.MetroComboBox roomtype_cmb;
         public MetroFramework.Controls.MetroComboBox room_cmb;
         public MetroFramework.Controls.MetroComboBox building_cmb;
-        public MetroFramework.Controls.MetroButton loaddata_btn;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private System.Windows.Forms.DataGridView loc_dgridv;
+        private MetroFramework.Controls.MetroButton sort_btn;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroButton search_btn;
+        private System.Windows.Forms.Panel locationview_panel;
+        private MetroFramework.Controls.MetroTextBox edit_building_txt_box;
     }
 }
