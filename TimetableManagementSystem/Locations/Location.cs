@@ -18,6 +18,7 @@ namespace TimetableManagementSystem.Locations
         public Location()
         {
             InitializeComponent();
+            
         }
 
         SqlConnection con = new SqlConnection(@"Server=tcp:timetablemngsysdb.database.windows.net,1433;Initial Catalog=TimetableManageSystemDB;Persist Security Info=False;User ID=timetableadmin;Password=imb@manN0tbruce;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
@@ -131,14 +132,27 @@ namespace TimetableManagementSystem.Locations
 
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        public void metroButton1_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM locations", con);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT building,room,capacity,room_type FROM locations", con);
             DataTable dtbl = new DataTable();
             sqlDataAdapter.Fill(dtbl);
 
             loc_dgridv.DataSource = dtbl;
+            con.Close();
+        }
+
+        private void loc_dgridv_Click(object sender, EventArgs e)
+        {
+            Locations.UpdateLocationForm ulform = new Locations.UpdateLocationForm();
+
+            ulform.editbuil_cmb.Text = loc_dgridv.CurrentRow.Cells[0].Value.ToString();
+            ulform.editroom_cmb.Text = loc_dgridv.CurrentRow.Cells[1].Value.ToString();
+            ulform.editcap_txtbox.Text= loc_dgridv.CurrentRow.Cells[2].Value.ToString();
+            ulform.editroomtype_cmb.Text = loc_dgridv.CurrentRow.Cells[3].Value.ToString();
+            ulform.ShowDialog();
+
         }
     }
 

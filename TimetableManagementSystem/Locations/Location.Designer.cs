@@ -28,18 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.editloc_tab = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.delete_btn = new MetroFramework.Controls.MetroButton();
-            this.edit_tbl_btn = new MetroFramework.Controls.MetroButton();
+            this.loaddata_btn = new MetroFramework.Controls.MetroButton();
             this.loc_dgridv = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sort_btn = new MetroFramework.Controls.MetroButton();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.search_btn = new MetroFramework.Controls.MetroButton();
@@ -58,20 +53,19 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.editloc_panel = new MetroFramework.Controls.MetroPanel();
             this.reset_btn = new MetroFramework.Controls.MetroButton();
             this.editloc_btn = new MetroFramework.Controls.MetroButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
+            this.editcap_cmb = new System.Windows.Forms.NumericUpDown();
+            this.editroomtype_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.editroom_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.editbuil_cmb = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.editloc_tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
@@ -80,8 +74,8 @@
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.capacity_cmb)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.metroPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.editloc_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editcap_cmb)).BeginInit();
             this.SuspendLayout();
             // 
             // editloc_tab
@@ -122,9 +116,7 @@
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroPanel1.Controls.Add(this.metroButton1);
-            this.metroPanel1.Controls.Add(this.delete_btn);
-            this.metroPanel1.Controls.Add(this.edit_tbl_btn);
+            this.metroPanel1.Controls.Add(this.loaddata_btn);
             this.metroPanel1.Controls.Add(this.loc_dgridv);
             this.metroPanel1.Controls.Add(this.sort_btn);
             this.metroPanel1.Controls.Add(this.metroComboBox1);
@@ -143,100 +135,54 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // delete_btn
+            // loaddata_btn
             // 
-            this.delete_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.delete_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.delete_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.delete_btn.Location = new System.Drawing.Point(564, 361);
-            this.delete_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(150, 40);
-            this.delete_btn.TabIndex = 39;
-            this.delete_btn.Text = "Delete Location";
-            this.delete_btn.UseCustomBackColor = true;
-            this.delete_btn.UseCustomForeColor = true;
-            this.delete_btn.UseSelectable = true;
-            // 
-            // edit_tbl_btn
-            // 
-            this.edit_tbl_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.edit_tbl_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.edit_tbl_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.edit_tbl_btn.Location = new System.Drawing.Point(398, 361);
-            this.edit_tbl_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.edit_tbl_btn.Name = "edit_tbl_btn";
-            this.edit_tbl_btn.Size = new System.Drawing.Size(150, 40);
-            this.edit_tbl_btn.TabIndex = 38;
-            this.edit_tbl_btn.Text = "Edit Location";
-            this.edit_tbl_btn.UseCustomBackColor = true;
-            this.edit_tbl_btn.UseCustomForeColor = true;
-            this.edit_tbl_btn.UseSelectable = true;
+            this.loaddata_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.loaddata_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.loaddata_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.loaddata_btn.Location = new System.Drawing.Point(575, 355);
+            this.loaddata_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.loaddata_btn.Name = "loaddata_btn";
+            this.loaddata_btn.Size = new System.Drawing.Size(150, 40);
+            this.loaddata_btn.TabIndex = 40;
+            this.loaddata_btn.Text = "Load Data";
+            this.loaddata_btn.UseCustomBackColor = true;
+            this.loaddata_btn.UseCustomForeColor = true;
+            this.loaddata_btn.UseSelectable = true;
+            this.loaddata_btn.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // loc_dgridv
             // 
-            this.loc_dgridv.AllowUserToOrderColumns = true;
+            this.loc_dgridv.AllowUserToAddRows = false;
+            this.loc_dgridv.AllowUserToResizeColumns = false;
+            this.loc_dgridv.AllowUserToResizeRows = false;
             this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.loc_dgridv.BackgroundColor = System.Drawing.Color.White;
-            this.loc_dgridv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.loc_dgridv.ColumnHeadersHeight = 29;
-            this.loc_dgridv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
             this.loc_dgridv.Location = new System.Drawing.Point(38, 62);
             this.loc_dgridv.MultiSelect = false;
             this.loc_dgridv.Name = "loc_dgridv";
             this.loc_dgridv.ReadOnly = true;
             this.loc_dgridv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.loc_dgridv.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.loc_dgridv.RowTemplate.Height = 24;
             this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.loc_dgridv.Size = new System.Drawing.Size(687, 278);
             this.loc_dgridv.TabIndex = 18;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column1.HeaderText = "Building";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Room";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Capacity";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Room Type";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.loc_dgridv.Click += new System.EventHandler(this.loc_dgridv_Click);
             // 
             // sort_btn
             // 
@@ -502,7 +448,7 @@
             // tabPage3
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage3.Controls.Add(this.metroPanel3);
+            this.tabPage3.Controls.Add(this.editloc_panel);
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.Location = new System.Drawing.Point(4, 37);
             this.tabPage3.Name = "tabPage3";
@@ -511,31 +457,31 @@
             this.tabPage3.Text = "Edit Locations";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // metroPanel3
+            // editloc_panel
             // 
-            this.metroPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.metroPanel3.Controls.Add(this.reset_btn);
-            this.metroPanel3.Controls.Add(this.editloc_btn);
-            this.metroPanel3.Controls.Add(this.numericUpDown1);
-            this.metroPanel3.Controls.Add(this.metroComboBox2);
-            this.metroPanel3.Controls.Add(this.metroComboBox3);
-            this.metroPanel3.Controls.Add(this.metroComboBox4);
-            this.metroPanel3.Controls.Add(this.metroLabel6);
-            this.metroPanel3.Controls.Add(this.metroLabel7);
-            this.metroPanel3.Controls.Add(this.metroLabel8);
-            this.metroPanel3.Controls.Add(this.metroLabel9);
-            this.metroPanel3.Controls.Add(this.metroLabel10);
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(1, 0);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(776, 419);
-            this.metroPanel3.TabIndex = 1;
-            this.metroPanel3.UseCustomBackColor = true;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
+            this.editloc_panel.BackColor = System.Drawing.Color.Transparent;
+            this.editloc_panel.Controls.Add(this.reset_btn);
+            this.editloc_panel.Controls.Add(this.editloc_btn);
+            this.editloc_panel.Controls.Add(this.editcap_cmb);
+            this.editloc_panel.Controls.Add(this.editroomtype_cmb);
+            this.editloc_panel.Controls.Add(this.editroom_cmb);
+            this.editloc_panel.Controls.Add(this.editbuil_cmb);
+            this.editloc_panel.Controls.Add(this.metroLabel6);
+            this.editloc_panel.Controls.Add(this.metroLabel7);
+            this.editloc_panel.Controls.Add(this.metroLabel8);
+            this.editloc_panel.Controls.Add(this.metroLabel9);
+            this.editloc_panel.Controls.Add(this.metroLabel10);
+            this.editloc_panel.HorizontalScrollbarBarColor = true;
+            this.editloc_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.editloc_panel.HorizontalScrollbarSize = 10;
+            this.editloc_panel.Location = new System.Drawing.Point(1, 0);
+            this.editloc_panel.Name = "editloc_panel";
+            this.editloc_panel.Size = new System.Drawing.Size(776, 419);
+            this.editloc_panel.TabIndex = 1;
+            this.editloc_panel.UseCustomBackColor = true;
+            this.editloc_panel.VerticalScrollbarBarColor = true;
+            this.editloc_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.editloc_panel.VerticalScrollbarSize = 10;
             // 
             // reset_btn
             // 
@@ -567,71 +513,71 @@
             this.editloc_btn.UseCustomForeColor = true;
             this.editloc_btn.UseSelectable = true;
             // 
-            // numericUpDown1
+            // editcap_cmb
             // 
-            this.numericUpDown1.AutoSize = true;
-            this.numericUpDown1.Location = new System.Drawing.Point(389, 190);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.editcap_cmb.AutoSize = true;
+            this.editcap_cmb.Location = new System.Drawing.Point(389, 190);
+            this.editcap_cmb.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 22);
-            this.numericUpDown1.TabIndex = 36;
+            this.editcap_cmb.Name = "editcap_cmb";
+            this.editcap_cmb.Size = new System.Drawing.Size(100, 22);
+            this.editcap_cmb.TabIndex = 36;
             // 
-            // metroComboBox2
+            // editroomtype_cmb
             // 
-            this.metroComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.editroomtype_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Items.AddRange(new object[] {
+            this.editroomtype_cmb.FormattingEnabled = true;
+            this.editroomtype_cmb.ItemHeight = 23;
+            this.editroomtype_cmb.Items.AddRange(new object[] {
             "Lecture Hall",
             "PC Lab",
             "Engineering Lab"});
-            this.metroComboBox2.Location = new System.Drawing.Point(389, 251);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.PromptText = "Select Room Type";
-            this.metroComboBox2.Size = new System.Drawing.Size(200, 29);
-            this.metroComboBox2.TabIndex = 35;
-            this.metroComboBox2.UseSelectable = true;
+            this.editroomtype_cmb.Location = new System.Drawing.Point(389, 251);
+            this.editroomtype_cmb.Name = "editroomtype_cmb";
+            this.editroomtype_cmb.PromptText = "Select Room Type";
+            this.editroomtype_cmb.Size = new System.Drawing.Size(200, 29);
+            this.editroomtype_cmb.TabIndex = 35;
+            this.editroomtype_cmb.UseSelectable = true;
             // 
-            // metroComboBox3
+            // editroom_cmb
             // 
-            this.metroComboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.editroom_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 23;
-            this.metroComboBox3.Items.AddRange(new object[] {
+            this.editroom_cmb.FormattingEnabled = true;
+            this.editroom_cmb.ItemHeight = 23;
+            this.editroom_cmb.Items.AddRange(new object[] {
             "Computing",
             "Engineering",
             "Business",
             "Humanities and Science"});
-            this.metroComboBox3.Location = new System.Drawing.Point(389, 129);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.PromptText = "Select Room";
-            this.metroComboBox3.Size = new System.Drawing.Size(200, 29);
-            this.metroComboBox3.TabIndex = 34;
-            this.metroComboBox3.UseSelectable = true;
+            this.editroom_cmb.Location = new System.Drawing.Point(389, 129);
+            this.editroom_cmb.Name = "editroom_cmb";
+            this.editroom_cmb.PromptText = "Select Room";
+            this.editroom_cmb.Size = new System.Drawing.Size(200, 29);
+            this.editroom_cmb.TabIndex = 34;
+            this.editroom_cmb.UseSelectable = true;
             // 
-            // metroComboBox4
+            // editbuil_cmb
             // 
-            this.metroComboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.editbuil_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroComboBox4.FormattingEnabled = true;
-            this.metroComboBox4.ItemHeight = 23;
-            this.metroComboBox4.Items.AddRange(new object[] {
+            this.editbuil_cmb.FormattingEnabled = true;
+            this.editbuil_cmb.ItemHeight = 23;
+            this.editbuil_cmb.Items.AddRange(new object[] {
             "Main Building",
             "Faculty of Business Building",
             "Faculty of Engineering Building",
             "New Building"});
-            this.metroComboBox4.Location = new System.Drawing.Point(389, 72);
-            this.metroComboBox4.Name = "metroComboBox4";
-            this.metroComboBox4.PromptText = "Select Building";
-            this.metroComboBox4.Size = new System.Drawing.Size(200, 29);
-            this.metroComboBox4.TabIndex = 33;
-            this.metroComboBox4.UseSelectable = true;
+            this.editbuil_cmb.Location = new System.Drawing.Point(389, 72);
+            this.editbuil_cmb.Name = "editbuil_cmb";
+            this.editbuil_cmb.PromptText = "Select Building";
+            this.editbuil_cmb.Size = new System.Drawing.Size(200, 29);
+            this.editbuil_cmb.TabIndex = 33;
+            this.editbuil_cmb.UseSelectable = true;
             // 
             // metroLabel6
             // 
@@ -698,28 +644,12 @@
             this.locations_lbl.Cursor = System.Windows.Forms.Cursors.Default;
             this.locations_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.locations_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.locations_lbl.Location = new System.Drawing.Point(418, 75);
+            this.locations_lbl.Location = new System.Drawing.Point(468, 75);
             this.locations_lbl.Name = "locations_lbl";
             this.locations_lbl.Size = new System.Drawing.Size(93, 25);
             this.locations_lbl.TabIndex = 28;
             this.locations_lbl.Text = "Locations";
             this.locations_lbl.UseCustomBackColor = true;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton1.Location = new System.Drawing.Point(232, 361);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(150, 40);
-            this.metroButton1.TabIndex = 40;
-            this.metroButton1.Text = "Load Data";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseCustomForeColor = true;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // Location
             // 
@@ -746,9 +676,9 @@
             this.metroPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.capacity_cmb)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.metroPanel3.ResumeLayout(false);
-            this.metroPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.editloc_panel.ResumeLayout(false);
+            this.editloc_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editcap_cmb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -773,30 +703,24 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private System.Windows.Forms.NumericUpDown capacity_cmb;
-        private MetroFramework.Controls.MetroComboBox roomtype_cmb;
-        private MetroFramework.Controls.MetroComboBox room_cmb;
-        private MetroFramework.Controls.MetroComboBox building_cmb;
         private MetroFramework.Controls.MetroButton clr_btn;
         private MetroFramework.Controls.MetroButton addloc_btn;
-        private MetroFramework.Controls.MetroPanel metroPanel3;
+        private MetroFramework.Controls.MetroPanel editloc_panel;
         private MetroFramework.Controls.MetroButton reset_btn;
         private MetroFramework.Controls.MetroButton editloc_btn;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox3;
-        private MetroFramework.Controls.MetroComboBox metroComboBox4;
+        private System.Windows.Forms.NumericUpDown editcap_cmb;
+        private MetroFramework.Controls.MetroComboBox editroomtype_cmb;
+        private MetroFramework.Controls.MetroComboBox editroom_cmb;
+        private MetroFramework.Controls.MetroComboBox editbuil_cmb;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroButton delete_btn;
-        private MetroFramework.Controls.MetroButton edit_tbl_btn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        public System.Windows.Forms.NumericUpDown capacity_cmb;
+        public MetroFramework.Controls.MetroComboBox roomtype_cmb;
+        public MetroFramework.Controls.MetroComboBox room_cmb;
+        public MetroFramework.Controls.MetroComboBox building_cmb;
+        public MetroFramework.Controls.MetroButton loaddata_btn;
     }
 }
