@@ -120,6 +120,7 @@
             this.tagBtn.TabIndex = 5;
             this.tagBtn.Text = "Tags";
             this.tagBtn.UseVisualStyleBackColor = true;
+            this.tagBtn.Click += new System.EventHandler(this.tagBtn_Click);
             // 
             // locBtn
             // 
