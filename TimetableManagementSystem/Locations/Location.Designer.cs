@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
             this.viewloc_tab = new System.Windows.Forms.TabPage();
             this.locationview_panel = new System.Windows.Forms.Panel();
@@ -86,7 +86,7 @@
             this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.loc_tabcontrol.Location = new System.Drawing.Point(138, 120);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 0;
+            this.loc_tabcontrol.SelectedIndex = 1;
             this.loc_tabcontrol.Size = new System.Drawing.Size(788, 461);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.loc_tabcontrol.TabIndex = 0;
@@ -176,14 +176,14 @@
             this.loc_dgridv.AllowUserToResizeRows = false;
             this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.loc_dgridv.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.loc_dgridv.ColumnHeadersHeight = 29;
             this.loc_dgridv.Location = new System.Drawing.Point(22, 80);
             this.loc_dgridv.MultiSelect = false;
@@ -191,11 +191,11 @@
             this.loc_dgridv.ReadOnly = true;
             this.loc_dgridv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.loc_dgridv.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.loc_dgridv.RowTemplate.Height = 24;
             this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.loc_dgridv.Size = new System.Drawing.Size(738, 316);
@@ -316,6 +316,7 @@
             this.room_cmb.FormattingEnabled = true;
             this.room_cmb.ItemHeight = 23;
             this.room_cmb.Location = new System.Drawing.Point(389, 129);
+            this.room_cmb.MaxDropDownItems = 100;
             this.room_cmb.Name = "room_cmb";
             this.room_cmb.PromptText = "Select Room";
             this.room_cmb.Size = new System.Drawing.Size(200, 29);
@@ -330,6 +331,7 @@
             this.building_cmb.FormattingEnabled = true;
             this.building_cmb.ItemHeight = 23;
             this.building_cmb.Location = new System.Drawing.Point(389, 72);
+            this.building_cmb.MaxDropDownItems = 10;
             this.building_cmb.Name = "building_cmb";
             this.building_cmb.PromptText = "Select Building";
             this.building_cmb.Size = new System.Drawing.Size(200, 29);
@@ -635,6 +637,7 @@
             this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.locations_lbl);
             this.Controls.Add(this.loc_tabcontrol);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Location";

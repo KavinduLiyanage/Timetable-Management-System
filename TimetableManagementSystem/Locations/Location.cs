@@ -42,16 +42,27 @@ namespace TimetableManagementSystem.Locations
 
         private void addloc_btn_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO [dbo].[locations] ([building],[room],[capacity],[room_type]) VALUES ('" + building_cmb.Text + "','" + room_cmb.Text + "'," + capacity_cmb.Value + ",'" + roomtype_cmb.Text + "')";
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Data inserted !");
-            con.Close();
+            if ((building_cmb.Text != string.Empty) && (room_cmb.Text != string.Empty) && (capacity_cmb.Text != string.Empty)
+                && (roomtype_cmb.Text != string.Empty) )
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO [dbo].[locations] ([building],[room],[capacity],[room_type]) VALUES ('" + building_cmb.Text + "','" + room_cmb.Text + "'," + capacity_cmb.Value + ",'" + roomtype_cmb.Text + "')";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data inserted !");
+                con.Close();
 
-            LoadLocations();
-            loc_tabcontrol.SelectedTab = viewloc_tab;
+                LoadLocations();
+                loc_tabcontrol.SelectedTab = viewloc_tab;
+                
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
 
@@ -104,17 +115,23 @@ namespace TimetableManagementSystem.Locations
             }
         }
 
-        private void clr_btn_Click(object sender, EventArgs e)
+        private void ClearLocationData()
         {
-           
-
-            building_cmb.Text = String.Empty;
-            room_cmb.Text = String.Empty;
-            //capacity_cmb.Value = ValueType.Empty;
-            roomtype_cmb.Text = String.Empty;
-
+            building_cmb.SelectedIndex = -1;
+            room_cmb.SelectedIndex = -1;
+            capacity_cmb.Value = 0;
+            roomtype_cmb.SelectedIndex = -1;
 
         }
+
+        private void clr_btn_Click(object sender, EventArgs e)
+        {
+
+            ClearLocationData();
+
+        }
+
+        
 
         public void metroButton1_Click(object sender, EventArgs e)
         {
@@ -307,6 +324,8 @@ namespace TimetableManagementSystem.Locations
             loc_dgridv.Sort(loc_dgridv.Columns[2], ListSortDirection.Descending);
             loc_dgridv.Sort(loc_dgridv.Columns[3], ListSortDirection.Ascending);
         }
+
+        
     }
 }
 
