@@ -77,6 +77,11 @@
             this.cmbLecCenterEdit = new MetroFramework.Controls.MetroComboBox();
             this.txtLecDepEdit = new MetroFramework.Controls.MetroTextBox();
             this.cmbLecFacEdit = new MetroFramework.Controls.MetroComboBox();
+            this.btnHeaderHome = new System.Windows.Forms.Button();
+            this.btnHeaderGenerate = new System.Windows.Forms.Button();
+            this.btnHeaderSessions = new System.Windows.Forms.Button();
+            this.btnHeaderRooms = new System.Windows.Forms.Button();
+            this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -197,9 +202,9 @@
             this.tabPageLecView.Controls.Add(this.metroLabel15);
             this.tabPageLecView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageLecView.Location = new System.Drawing.Point(4, 37);
-            this.tabPageLecView.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabPageLecView.Margin = new System.Windows.Forms.Padding(7);
             this.tabPageLecView.Name = "tabPageLecView";
-            this.tabPageLecView.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageLecView.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageLecView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabPageLecView.Size = new System.Drawing.Size(780, 420);
             this.tabPageLecView.TabIndex = 0;
@@ -339,7 +344,7 @@
             this.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
             this.btnClear.Location = new System.Drawing.Point(397, 358);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(150, 40);
             this.btnClear.TabIndex = 44;
@@ -366,7 +371,7 @@
             this.btnLecSave.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLecSave.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLecSave.Location = new System.Drawing.Point(201, 358);
-            this.btnLecSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLecSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnLecSave.Name = "btnLecSave";
             this.btnLecSave.Size = new System.Drawing.Size(150, 40);
             this.btnLecSave.TabIndex = 31;
@@ -461,6 +466,8 @@
             this.cmbLecBuilding.Items.AddRange(new object[] {
             "Main Building",
             "New Building",
+            "Engineering Building",
+            "Business Building",
             "D-Block"});
             this.cmbLecBuilding.Location = new System.Drawing.Point(410, 252);
             this.cmbLecBuilding.Name = "cmbLecBuilding";
@@ -475,9 +482,9 @@
             // 
             // 
             this.txtLecName.CustomButton.Image = null;
-            this.txtLecName.CustomButton.Location = new System.Drawing.Point(129, 2);
+            this.txtLecName.CustomButton.Location = new System.Drawing.Point(172, 2);
             this.txtLecName.CustomButton.Name = "";
-            this.txtLecName.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.txtLecName.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtLecName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecName.CustomButton.TabIndex = 1;
             this.txtLecName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -528,9 +535,9 @@
             // 
             // 
             this.txtLecDep.CustomButton.Image = null;
-            this.txtLecDep.CustomButton.Location = new System.Drawing.Point(129, 2);
+            this.txtLecDep.CustomButton.Location = new System.Drawing.Point(172, 2);
             this.txtLecDep.CustomButton.Name = "";
-            this.txtLecDep.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.txtLecDep.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtLecDep.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecDep.CustomButton.TabIndex = 1;
             this.txtLecDep.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -619,7 +626,7 @@
             this.btnLecDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLecDelete.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLecDelete.Location = new System.Drawing.Point(397, 358);
-            this.btnLecDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLecDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnLecDelete.Name = "btnLecDelete";
             this.btnLecDelete.Size = new System.Drawing.Size(150, 40);
             this.btnLecDelete.TabIndex = 59;
@@ -646,7 +653,7 @@
             this.btnLecUpdate.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLecUpdate.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLecUpdate.Location = new System.Drawing.Point(201, 358);
-            this.btnLecUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLecUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnLecUpdate.Name = "btnLecUpdate";
             this.btnLecUpdate.Size = new System.Drawing.Size(150, 40);
             this.btnLecUpdate.TabIndex = 46;
@@ -741,6 +748,8 @@
             this.cmbLecBuildingEdit.Items.AddRange(new object[] {
             "Main Building",
             "New Building",
+            "Engineering Building",
+            "Business Building",
             "D-Block"});
             this.cmbLecBuildingEdit.Location = new System.Drawing.Point(410, 252);
             this.cmbLecBuildingEdit.Name = "cmbLecBuildingEdit";
@@ -755,9 +764,9 @@
             // 
             // 
             this.txtLecNameEdit.CustomButton.Image = null;
-            this.txtLecNameEdit.CustomButton.Location = new System.Drawing.Point(129, 2);
+            this.txtLecNameEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
             this.txtLecNameEdit.CustomButton.Name = "";
-            this.txtLecNameEdit.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.txtLecNameEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtLecNameEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecNameEdit.CustomButton.TabIndex = 1;
             this.txtLecNameEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -808,9 +817,9 @@
             // 
             // 
             this.txtLecDepEdit.CustomButton.Image = null;
-            this.txtLecDepEdit.CustomButton.Location = new System.Drawing.Point(129, 2);
+            this.txtLecDepEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
             this.txtLecDepEdit.CustomButton.Name = "";
-            this.txtLecDepEdit.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.txtLecDepEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtLecDepEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecDepEdit.CustomButton.TabIndex = 1;
             this.txtLecDepEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -853,6 +862,72 @@
             this.cmbLecFacEdit.TabIndex = 55;
             this.cmbLecFacEdit.UseSelectable = true;
             // 
+            // btnHeaderHome
+            // 
+            this.btnHeaderHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderHome.FlatAppearance.BorderSize = 0;
+            this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderHome.Location = new System.Drawing.Point(211, 10);
+            this.btnHeaderHome.Name = "btnHeaderHome";
+            this.btnHeaderHome.Size = new System.Drawing.Size(79, 40);
+            this.btnHeaderHome.TabIndex = 32;
+            this.btnHeaderHome.Text = "Home";
+            this.btnHeaderHome.UseVisualStyleBackColor = false;
+            this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
+            // 
+            // btnHeaderGenerate
+            // 
+            this.btnHeaderGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderGenerate.FlatAppearance.BorderSize = 0;
+            this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderGenerate.Location = new System.Drawing.Point(740, 10);
+            this.btnHeaderGenerate.Name = "btnHeaderGenerate";
+            this.btnHeaderGenerate.Size = new System.Drawing.Size(112, 40);
+            this.btnHeaderGenerate.TabIndex = 33;
+            this.btnHeaderGenerate.Text = "Generate";
+            this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderSessions
+            // 
+            this.btnHeaderSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderSessions.FlatAppearance.BorderSize = 0;
+            this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderSessions.Location = new System.Drawing.Point(327, 10);
+            this.btnHeaderSessions.Name = "btnHeaderSessions";
+            this.btnHeaderSessions.Size = new System.Drawing.Size(103, 40);
+            this.btnHeaderSessions.TabIndex = 34;
+            this.btnHeaderSessions.Text = "Sessions";
+            this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderRooms
+            // 
+            this.btnHeaderRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderRooms.FlatAppearance.BorderSize = 0;
+            this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHeaderRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderRooms.Location = new System.Drawing.Point(467, 10);
+            this.btnHeaderRooms.Name = "btnHeaderRooms";
+            this.btnHeaderRooms.Size = new System.Drawing.Size(84, 40);
+            this.btnHeaderRooms.TabIndex = 35;
+            this.btnHeaderRooms.Text = "Rooms";
+            this.btnHeaderRooms.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderAdvanced
+            // 
+            this.btnHeaderAdvanced.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderAdvanced.FlatAppearance.BorderSize = 0;
+            this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderAdvanced.Location = new System.Drawing.Point(588, 10);
+            this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
+            this.btnHeaderAdvanced.Size = new System.Drawing.Size(115, 40);
+            this.btnHeaderAdvanced.TabIndex = 36;
+            this.btnHeaderAdvanced.Text = "Advanced";
+            this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            // 
             // AddLecturer
             // 
             this.ApplyImageInvert = true;
@@ -861,6 +936,11 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.btnHeaderAdvanced);
+            this.Controls.Add(this.btnHeaderRooms);
+            this.Controls.Add(this.btnHeaderSessions);
+            this.Controls.Add(this.btnHeaderGenerate);
+            this.Controls.Add(this.btnHeaderHome);
             this.Controls.Add(this.tabControlLecturers);
             this.Controls.Add(this.btnSideNavStatistics);
             this.Controls.Add(this.btnSideNavLocations);
@@ -869,7 +949,7 @@
             this.Controls.Add(this.btnSideNavSubjects);
             this.Controls.Add(this.btnSideNavLecturers);
             this.Controls.Add(this.btnSideNavWorking);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "AddLecturer";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
@@ -946,5 +1026,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LecDepartment;
         private System.Windows.Forms.DataGridViewTextBoxColumn LecCenter;
         private System.Windows.Forms.DataGridViewTextBoxColumn LecLevel;
+        private System.Windows.Forms.Button btnHeaderHome;
+        private System.Windows.Forms.Button btnHeaderGenerate;
+        private System.Windows.Forms.Button btnHeaderSessions;
+        private System.Windows.Forms.Button btnHeaderRooms;
+        private System.Windows.Forms.Button btnHeaderAdvanced;
     }
 }

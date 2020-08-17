@@ -208,6 +208,11 @@ namespace TimetableManagementSystem.Lecturers
             addSubject.ShowDialog();
         }
 
-        
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
     }
 }

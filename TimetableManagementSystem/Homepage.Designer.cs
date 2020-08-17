@@ -47,6 +47,11 @@
             this.btnSideNavTags = new System.Windows.Forms.PictureBox();
             this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
             this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
+            this.btnHeaderAdvanced = new System.Windows.Forms.Button();
+            this.btnHeaderRooms = new System.Windows.Forms.Button();
+            this.btnHeaderSessions = new System.Windows.Forms.Button();
+            this.btnHeaderGenerate = new System.Windows.Forms.Button();
+            this.btnHeaderHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
@@ -262,6 +267,72 @@
             this.btnSideNavStatistics.TabIndex = 18;
             this.btnSideNavStatistics.TabStop = false;
             // 
+            // btnHeaderAdvanced
+            // 
+            this.btnHeaderAdvanced.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderAdvanced.FlatAppearance.BorderSize = 0;
+            this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderAdvanced.Location = new System.Drawing.Point(588, 10);
+            this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
+            this.btnHeaderAdvanced.Size = new System.Drawing.Size(115, 40);
+            this.btnHeaderAdvanced.TabIndex = 41;
+            this.btnHeaderAdvanced.Text = "Advanced";
+            this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderRooms
+            // 
+            this.btnHeaderRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderRooms.FlatAppearance.BorderSize = 0;
+            this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderRooms.Location = new System.Drawing.Point(467, 10);
+            this.btnHeaderRooms.Name = "btnHeaderRooms";
+            this.btnHeaderRooms.Size = new System.Drawing.Size(84, 40);
+            this.btnHeaderRooms.TabIndex = 40;
+            this.btnHeaderRooms.Text = "Rooms";
+            this.btnHeaderRooms.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderSessions
+            // 
+            this.btnHeaderSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderSessions.FlatAppearance.BorderSize = 0;
+            this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderSessions.Location = new System.Drawing.Point(327, 10);
+            this.btnHeaderSessions.Name = "btnHeaderSessions";
+            this.btnHeaderSessions.Size = new System.Drawing.Size(103, 40);
+            this.btnHeaderSessions.TabIndex = 39;
+            this.btnHeaderSessions.Text = "Sessions";
+            this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderGenerate
+            // 
+            this.btnHeaderGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderGenerate.FlatAppearance.BorderSize = 0;
+            this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderGenerate.Location = new System.Drawing.Point(740, 10);
+            this.btnHeaderGenerate.Name = "btnHeaderGenerate";
+            this.btnHeaderGenerate.Size = new System.Drawing.Size(112, 40);
+            this.btnHeaderGenerate.TabIndex = 38;
+            this.btnHeaderGenerate.Text = "Generate";
+            this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderHome
+            // 
+            this.btnHeaderHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderHome.FlatAppearance.BorderSize = 0;
+            this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderHome.Location = new System.Drawing.Point(211, 10);
+            this.btnHeaderHome.Name = "btnHeaderHome";
+            this.btnHeaderHome.Size = new System.Drawing.Size(79, 40);
+            this.btnHeaderHome.TabIndex = 37;
+            this.btnHeaderHome.Text = "Home";
+            this.btnHeaderHome.UseVisualStyleBackColor = false;
+            this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
+            // 
             // Homepage
             // 
             this.ApplyImageInvert = true;
@@ -270,6 +341,11 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.btnHeaderAdvanced);
+            this.Controls.Add(this.btnHeaderRooms);
+            this.Controls.Add(this.btnHeaderSessions);
+            this.Controls.Add(this.btnHeaderGenerate);
+            this.Controls.Add(this.btnHeaderHome);
             this.Controls.Add(this.btnSideNavStatistics);
             this.Controls.Add(this.btnSideNavLocations);
             this.Controls.Add(this.btnSideNavTags);
@@ -329,5 +405,10 @@
         private System.Windows.Forms.PictureBox btnSideNavTags;
         private System.Windows.Forms.PictureBox btnSideNavLocations;
         private System.Windows.Forms.PictureBox btnSideNavStatistics;
+        private System.Windows.Forms.Button btnHeaderAdvanced;
+        private System.Windows.Forms.Button btnHeaderRooms;
+        private System.Windows.Forms.Button btnHeaderSessions;
+        private System.Windows.Forms.Button btnHeaderGenerate;
+        private System.Windows.Forms.Button btnHeaderHome;
     }
 }
