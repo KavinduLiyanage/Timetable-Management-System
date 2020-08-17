@@ -299,8 +299,14 @@ namespace TimetableManagementSystem.Locations
 
 
         }
-        
 
+        private void loc_dgridv_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            loc_dgridv.Sort(loc_dgridv.Columns[0], ListSortDirection.Ascending);
+            loc_dgridv.Sort(loc_dgridv.Columns[1], ListSortDirection.Ascending);
+            loc_dgridv.Sort(loc_dgridv.Columns[2], ListSortDirection.Descending);
+            loc_dgridv.Sort(loc_dgridv.Columns[3], ListSortDirection.Ascending);
+        }
     }
 }
 

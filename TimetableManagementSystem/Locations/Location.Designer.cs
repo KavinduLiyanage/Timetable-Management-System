@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
             this.viewloc_tab = new System.Windows.Forms.TabPage();
             this.locationview_panel = new System.Windows.Forms.Panel();
+            this.search_by_cmb = new MetroFramework.Controls.MetroComboBox();
             this.search_txt_box = new MetroFramework.Controls.MetroTextBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.sort_btn = new MetroFramework.Controls.MetroButton();
             this.loc_dgridv = new System.Windows.Forms.DataGridView();
             this.addloc_tab = new System.Windows.Forms.TabPage();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
@@ -64,7 +63,7 @@
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
-            this.search_by_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.sort_tooltip = new MetroFramework.Components.MetroToolTip();
             this.loc_tabcontrol.SuspendLayout();
             this.viewloc_tab.SuspendLayout();
             this.locationview_panel.SuspendLayout();
@@ -116,13 +115,28 @@
             // 
             this.locationview_panel.Controls.Add(this.search_by_cmb);
             this.locationview_panel.Controls.Add(this.search_txt_box);
-            this.locationview_panel.Controls.Add(this.metroComboBox1);
-            this.locationview_panel.Controls.Add(this.sort_btn);
             this.locationview_panel.Controls.Add(this.loc_dgridv);
             this.locationview_panel.Location = new System.Drawing.Point(-1, -1);
             this.locationview_panel.Name = "locationview_panel";
             this.locationview_panel.Size = new System.Drawing.Size(779, 419);
             this.locationview_panel.TabIndex = 0;
+            this.sort_tooltip.SetToolTip(this.locationview_panel, "Click on any column header to sort data");
+            // 
+            // search_by_cmb
+            // 
+            this.search_by_cmb.FormattingEnabled = true;
+            this.search_by_cmb.ItemHeight = 23;
+            this.search_by_cmb.Items.AddRange(new object[] {
+            "Building",
+            "Room",
+            "Capacity",
+            "Room Type"});
+            this.search_by_cmb.Location = new System.Drawing.Point(250, 23);
+            this.search_by_cmb.Name = "search_by_cmb";
+            this.search_by_cmb.PromptText = "Search By...";
+            this.search_by_cmb.Size = new System.Drawing.Size(138, 29);
+            this.search_by_cmb.TabIndex = 19;
+            this.search_by_cmb.UseSelectable = true;
             // 
             // search_txt_box
             // 
@@ -139,7 +153,7 @@
             this.search_txt_box.CustomButton.UseSelectable = true;
             this.search_txt_box.CustomButton.Visible = false;
             this.search_txt_box.Lines = new string[0];
-            this.search_txt_box.Location = new System.Drawing.Point(197, 22);
+            this.search_txt_box.Location = new System.Drawing.Point(414, 22);
             this.search_txt_box.MaxLength = 32767;
             this.search_txt_box.Name = "search_txt_box";
             this.search_txt_box.PasswordChar = '\0';
@@ -155,35 +169,6 @@
             this.search_txt_box.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.search_txt_box.TextChanged += new System.EventHandler(this.search_txt_box_TextChanged);
             // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "Building",
-            "Capacity",
-            "Room Type"});
-            this.metroComboBox1.Location = new System.Drawing.Point(490, 22);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(138, 29);
-            this.metroComboBox1.TabIndex = 16;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // sort_btn
-            // 
-            this.sort_btn.BackColor = System.Drawing.SystemColors.GrayText;
-            this.sort_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.sort_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.sort_btn.Location = new System.Drawing.Point(655, 21);
-            this.sort_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.sort_btn.Name = "sort_btn";
-            this.sort_btn.Size = new System.Drawing.Size(105, 30);
-            this.sort_btn.TabIndex = 17;
-            this.sort_btn.Text = "Sort";
-            this.sort_btn.UseCustomBackColor = true;
-            this.sort_btn.UseCustomForeColor = true;
-            this.sort_btn.UseSelectable = true;
-            // 
             // loc_dgridv
             // 
             this.loc_dgridv.AllowUserToAddRows = false;
@@ -191,14 +176,14 @@
             this.loc_dgridv.AllowUserToResizeRows = false;
             this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.loc_dgridv.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.loc_dgridv.ColumnHeadersHeight = 29;
             this.loc_dgridv.Location = new System.Drawing.Point(22, 80);
             this.loc_dgridv.MultiSelect = false;
@@ -206,17 +191,18 @@
             this.loc_dgridv.ReadOnly = true;
             this.loc_dgridv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.loc_dgridv.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.loc_dgridv.RowTemplate.Height = 24;
             this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.loc_dgridv.Size = new System.Drawing.Size(738, 316);
             this.loc_dgridv.TabIndex = 18;
             this.loc_dgridv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loc_dgridv_CellClick);
             this.loc_dgridv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loc_dgridv_CellDoubleClick);
+            this.loc_dgridv.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.loc_dgridv_ColumnHeaderMouseDoubleClick);
             // 
             // addloc_tab
             // 
@@ -633,21 +619,11 @@
             this.locations_lbl.Text = "Locations";
             this.locations_lbl.UseCustomBackColor = true;
             // 
-            // search_by_cmb
+            // sort_tooltip
             // 
-            this.search_by_cmb.FormattingEnabled = true;
-            this.search_by_cmb.ItemHeight = 23;
-            this.search_by_cmb.Items.AddRange(new object[] {
-            "Building",
-            "Room",
-            "Capacity",
-            "Room Type"});
-            this.search_by_cmb.Location = new System.Drawing.Point(40, 23);
-            this.search_by_cmb.Name = "search_by_cmb";
-            this.search_by_cmb.PromptText = "Search By...";
-            this.search_by_cmb.Size = new System.Drawing.Size(138, 29);
-            this.search_by_cmb.TabIndex = 19;
-            this.search_by_cmb.UseSelectable = true;
+            this.sort_tooltip.Style = MetroFramework.MetroColorStyle.Blue;
+            this.sort_tooltip.StyleManager = null;
+            this.sort_tooltip.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // Location
             // 
@@ -715,10 +691,9 @@
         public MetroFramework.Controls.MetroComboBox building_cmb;
         private MetroFramework.Controls.MetroTextBox search_txt_box;
         private System.Windows.Forms.DataGridView loc_dgridv;
-        private MetroFramework.Controls.MetroButton sort_btn;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private System.Windows.Forms.Panel locationview_panel;
         private MetroFramework.Controls.MetroTextBox edit_building_txt_box;
         private MetroFramework.Controls.MetroComboBox search_by_cmb;
+        private MetroFramework.Components.MetroToolTip sort_tooltip;
     }
 }
