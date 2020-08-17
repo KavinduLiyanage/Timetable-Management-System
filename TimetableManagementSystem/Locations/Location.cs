@@ -29,11 +29,11 @@ namespace TimetableManagementSystem.Locations
             SqlCommand cmd = new SqlCommand("Select * from locations", con);
             DataTable dt = new DataTable();
 
-           
+
 
             SqlDataReader sdr = cmd.ExecuteReader();
             dt.Load(sdr);
-            
+
 
             loc_dgridv.AutoGenerateColumns = true;
             loc_dgridv.DataSource = dt;
@@ -106,14 +106,7 @@ namespace TimetableManagementSystem.Locations
 
         private void clr_btn_Click(object sender, EventArgs e)
         {
-            //foreach(var item in this.Controls)
-            //{
-            //    if(item.GetType().Equals(typeof(ComboBox)))
-            //    {
-            //        ComboBox cmb1 = item as ComboBox;
-            //        cmb1.Text = string.Empty;
-            //    }
-            //}
+           
 
             building_cmb.Text = String.Empty;
             room_cmb.Text = String.Empty;
@@ -125,58 +118,29 @@ namespace TimetableManagementSystem.Locations
 
         public void metroButton1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT building,room,capacity,room_type FROM locations", con);
-            DataTable dtbl = new DataTable();
-            sqlDataAdapter.Fill(dtbl);
+            //con.Open();
+            //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT building,room,capacity,room_type FROM locations", con);
+            //DataTable dtbl = new DataTable();
+            //sqlDataAdapter.Fill(dtbl);
 
-            loc_dgridv.DataSource = dtbl;
-            con.Close();
+            //loc_dgridv.DataSource = dtbl;
+            //con.Close();
         }
 
         private void loc_dgridv_Click(object sender, EventArgs e)
         {
-            //Locations.UpdateLocationForm ulform = new Locations.UpdateLocationForm();
-
-            //ulform.editbuil_cmb.Text = loc_dgridv.CurrentRow.Cells[0].Value.ToString();
-            //ulform.editroom_cmb.Text = loc_dgridv.CurrentRow.Cells[1].Value.ToString();
-            //ulform.editcap_txtbox.Text = loc_dgridv.CurrentRow.Cells[2].Value.ToString();
-            //ulform.editroomtype_cmb.Text = loc_dgridv.CurrentRow.Cells[3].Value.ToString();
-            //ulform.ShowDialog();
+            
 
         }
 
         private void editbuil_cmb_DropDown(object sender, EventArgs e)
         {
-            //editbuil_cmb.Items.Clear();
-            //con.Open();
-            //SqlCommand cmd = con.CreateCommand();
-            //cmd.CommandType = CommandType.Text;
-            //cmd.CommandText = "SELECT Building_Name FROM buildings";
-            //cmd.ExecuteNonQuery();
-            //DataTable dt = new DataTable();
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //da.Fill(dt);
-
-
-            //foreach (DataRow dr in dt.Rows)
-            //{
-            //    building_cmb.Items.Add(dr["Building_Name"].ToString());
-            //}
-
-            //con.Close();
+            
         }
 
         private void editroom_cmb_DropDown(object sender, EventArgs e)
         {
-            //SqlDataAdapter sda = new SqlDataAdapter("SELECT room_num from rooms where building_name ='" + building_cmb.Text + "'", con);
-            //DataTable dataTable = new DataTable();
-            //sda.Fill(dataTable);
-            //room_cmb.Items.Clear();
-            //foreach (DataRow dataRow in dataTable.Rows)
-            //{
-            //    editroom_cmb.Items.Add(dataRow["room_num"].ToString());
-            //}
+    
             editroom_cmb.Items.Clear();
             con.Open();
             SqlCommand cmd = con.CreateCommand();
@@ -211,34 +175,12 @@ namespace TimetableManagementSystem.Locations
             LoadLocations();
             loc_tabcontrol.SelectedTab = viewloc_tab;
 
-
-            //SqlCommand cmd = new SqlCommand("UPDATE Lecturers SET LecName = @LecName, LecDepartment = @LecDepartment WHERE LecturerID = @LecturerID", con);
-            //cmd.CommandType = CommandType.Text;
-            //cmd.Parameters.AddWithValue("@LecName", txtLecNameEdit.Text);
-            //cmd.Parameters.AddWithValue("@LecDepartment", txtLecDepEdit.Text);
-            //cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
-
-            //con.Open();
-            //cmd.ExecuteNonQuery();
-            //con.Close();
-
-            //MessageBox.Show("Lecturer details Updated", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //GetLecturers();
-
-            //ClearFields();
-
-            //tabControlLecturers.SelectedTab = tabPageLecView;
-
-            //else
-            //{
-            //    MessageBox.Show("Please select a name to update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
         }
 
         private void Location_Load(object sender, EventArgs e)
         {
             LoadLocations();
+
         }
 
         private void loc_dgridv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -270,7 +212,7 @@ namespace TimetableManagementSystem.Locations
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
 
-            while(dr.Read())
+            while (dr.Read())
             {
                 string r_building = (string)dr["building"].ToString();
                 edit_building_txt_box.Text = r_building;
@@ -301,8 +243,64 @@ namespace TimetableManagementSystem.Locations
             LoadLocations();
             loc_tabcontrol.SelectedTab = viewloc_tab;
 
-            
+
         }
+
+
+
+        private void search_txt_box_TextChanged(object sender, EventArgs e)
+        {
+            
+
+            if (search_by_cmb.Text == "Building")
+            {
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE building LIKE '%" + search_txt_box.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                loc_dgridv.DataSource = dt;
+                con.Close();
+
+            }
+
+
+            if (search_by_cmb.Text == "Room")
+            {
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE room LIKE '%"+ search_txt_box .Text+ "%'",con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                loc_dgridv.DataSource = dt;
+                con.Close();
+
+            }
+
+            if (search_by_cmb.Text == "Capacity")
+            {
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE capacity LIKE '%" + search_txt_box.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                loc_dgridv.DataSource = dt;
+                con.Close();
+
+            }
+
+            if (search_by_cmb.Text == "Room Type")
+            {
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE room_type LIKE '%" + search_txt_box.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                loc_dgridv.DataSource = dt;
+                con.Close();
+
+            }
+
+
+        }
+        
+
     }
 }
 

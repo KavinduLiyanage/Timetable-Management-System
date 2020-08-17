@@ -33,11 +33,10 @@
             this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
             this.viewloc_tab = new System.Windows.Forms.TabPage();
             this.locationview_panel = new System.Windows.Forms.Panel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.search_txt_box = new MetroFramework.Controls.MetroTextBox();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.sort_btn = new MetroFramework.Controls.MetroButton();
             this.loc_dgridv = new System.Windows.Forms.DataGridView();
-            this.search_btn = new MetroFramework.Controls.MetroButton();
             this.addloc_tab = new System.Windows.Forms.TabPage();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.clr_btn = new MetroFramework.Controls.MetroButton();
@@ -53,6 +52,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.editloc_tab = new System.Windows.Forms.TabPage();
             this.editloc_panel = new MetroFramework.Controls.MetroPanel();
+            this.edit_building_txt_box = new MetroFramework.Controls.MetroTextBox();
             this.delete_btn = new MetroFramework.Controls.MetroButton();
             this.editloc_btn = new MetroFramework.Controls.MetroButton();
             this.editcap_cmb = new System.Windows.Forms.NumericUpDown();
@@ -64,7 +64,7 @@
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
-            this.edit_building_txt_box = new MetroFramework.Controls.MetroTextBox();
+            this.search_by_cmb = new MetroFramework.Controls.MetroComboBox();
             this.loc_tabcontrol.SuspendLayout();
             this.viewloc_tab.SuspendLayout();
             this.locationview_panel.SuspendLayout();
@@ -87,7 +87,7 @@
             this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.loc_tabcontrol.Location = new System.Drawing.Point(138, 120);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 1;
+            this.loc_tabcontrol.SelectedIndex = 0;
             this.loc_tabcontrol.Size = new System.Drawing.Size(788, 461);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.loc_tabcontrol.TabIndex = 0;
@@ -114,45 +114,46 @@
             // 
             // locationview_panel
             // 
-            this.locationview_panel.Controls.Add(this.metroTextBox1);
+            this.locationview_panel.Controls.Add(this.search_by_cmb);
+            this.locationview_panel.Controls.Add(this.search_txt_box);
             this.locationview_panel.Controls.Add(this.metroComboBox1);
             this.locationview_panel.Controls.Add(this.sort_btn);
             this.locationview_panel.Controls.Add(this.loc_dgridv);
-            this.locationview_panel.Controls.Add(this.search_btn);
             this.locationview_panel.Location = new System.Drawing.Point(-1, -1);
             this.locationview_panel.Name = "locationview_panel";
             this.locationview_panel.Size = new System.Drawing.Size(779, 419);
             this.locationview_panel.TabIndex = 0;
             // 
-            // metroTextBox1
+            // search_txt_box
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(152, 2);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(35, 22);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(180, 30);
-            this.metroTextBox1.TabIndex = 0;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.search_txt_box.CustomButton.Image = null;
+            this.search_txt_box.CustomButton.Location = new System.Drawing.Point(152, 2);
+            this.search_txt_box.CustomButton.Name = "";
+            this.search_txt_box.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.search_txt_box.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.search_txt_box.CustomButton.TabIndex = 1;
+            this.search_txt_box.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.search_txt_box.CustomButton.UseSelectable = true;
+            this.search_txt_box.CustomButton.Visible = false;
+            this.search_txt_box.Lines = new string[0];
+            this.search_txt_box.Location = new System.Drawing.Point(197, 22);
+            this.search_txt_box.MaxLength = 32767;
+            this.search_txt_box.Name = "search_txt_box";
+            this.search_txt_box.PasswordChar = '\0';
+            this.search_txt_box.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.search_txt_box.SelectedText = "";
+            this.search_txt_box.SelectionLength = 0;
+            this.search_txt_box.SelectionStart = 0;
+            this.search_txt_box.ShortcutsEnabled = true;
+            this.search_txt_box.Size = new System.Drawing.Size(180, 30);
+            this.search_txt_box.TabIndex = 0;
+            this.search_txt_box.UseSelectable = true;
+            this.search_txt_box.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.search_txt_box.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.search_txt_box.TextChanged += new System.EventHandler(this.search_txt_box_TextChanged);
             // 
             // metroComboBox1
             // 
@@ -216,21 +217,6 @@
             this.loc_dgridv.TabIndex = 18;
             this.loc_dgridv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loc_dgridv_CellClick);
             this.loc_dgridv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loc_dgridv_CellDoubleClick);
-            // 
-            // search_btn
-            // 
-            this.search_btn.BackColor = System.Drawing.SystemColors.GrayText;
-            this.search_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.search_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.search_btn.Location = new System.Drawing.Point(232, 22);
-            this.search_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.search_btn.Name = "search_btn";
-            this.search_btn.Size = new System.Drawing.Size(105, 30);
-            this.search_btn.TabIndex = 15;
-            this.search_btn.Text = "Search";
-            this.search_btn.UseCustomBackColor = true;
-            this.search_btn.UseCustomForeColor = true;
-            this.search_btn.UseSelectable = true;
             // 
             // addloc_tab
             // 
@@ -462,6 +448,37 @@
             this.editloc_panel.VerticalScrollbarHighlightOnWheel = false;
             this.editloc_panel.VerticalScrollbarSize = 10;
             // 
+            // edit_building_txt_box
+            // 
+            // 
+            // 
+            // 
+            this.edit_building_txt_box.CustomButton.Image = null;
+            this.edit_building_txt_box.CustomButton.Location = new System.Drawing.Point(210, 1);
+            this.edit_building_txt_box.CustomButton.Name = "";
+            this.edit_building_txt_box.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.edit_building_txt_box.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.edit_building_txt_box.CustomButton.TabIndex = 1;
+            this.edit_building_txt_box.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.edit_building_txt_box.CustomButton.UseSelectable = true;
+            this.edit_building_txt_box.CustomButton.Visible = false;
+            this.edit_building_txt_box.Lines = new string[0];
+            this.edit_building_txt_box.Location = new System.Drawing.Point(389, 129);
+            this.edit_building_txt_box.MaxLength = 32767;
+            this.edit_building_txt_box.Name = "edit_building_txt_box";
+            this.edit_building_txt_box.PasswordChar = '\0';
+            this.edit_building_txt_box.ReadOnly = true;
+            this.edit_building_txt_box.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.edit_building_txt_box.SelectedText = "";
+            this.edit_building_txt_box.SelectionLength = 0;
+            this.edit_building_txt_box.SelectionStart = 0;
+            this.edit_building_txt_box.ShortcutsEnabled = true;
+            this.edit_building_txt_box.Size = new System.Drawing.Size(234, 25);
+            this.edit_building_txt_box.TabIndex = 40;
+            this.edit_building_txt_box.UseSelectable = true;
+            this.edit_building_txt_box.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.edit_building_txt_box.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // delete_btn
             // 
             this.delete_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -616,36 +633,21 @@
             this.locations_lbl.Text = "Locations";
             this.locations_lbl.UseCustomBackColor = true;
             // 
-            // edit_building_txt_box
+            // search_by_cmb
             // 
-            // 
-            // 
-            // 
-            this.edit_building_txt_box.CustomButton.Image = null;
-            this.edit_building_txt_box.CustomButton.Location = new System.Drawing.Point(210, 1);
-            this.edit_building_txt_box.CustomButton.Name = "";
-            this.edit_building_txt_box.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.edit_building_txt_box.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.edit_building_txt_box.CustomButton.TabIndex = 1;
-            this.edit_building_txt_box.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.edit_building_txt_box.CustomButton.UseSelectable = true;
-            this.edit_building_txt_box.CustomButton.Visible = false;
-            this.edit_building_txt_box.Lines = new string[0];
-            this.edit_building_txt_box.Location = new System.Drawing.Point(389, 129);
-            this.edit_building_txt_box.MaxLength = 32767;
-            this.edit_building_txt_box.Name = "edit_building_txt_box";
-            this.edit_building_txt_box.PasswordChar = '\0';
-            this.edit_building_txt_box.ReadOnly = true;
-            this.edit_building_txt_box.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.edit_building_txt_box.SelectedText = "";
-            this.edit_building_txt_box.SelectionLength = 0;
-            this.edit_building_txt_box.SelectionStart = 0;
-            this.edit_building_txt_box.ShortcutsEnabled = true;
-            this.edit_building_txt_box.Size = new System.Drawing.Size(234, 25);
-            this.edit_building_txt_box.TabIndex = 40;
-            this.edit_building_txt_box.UseSelectable = true;
-            this.edit_building_txt_box.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.edit_building_txt_box.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.search_by_cmb.FormattingEnabled = true;
+            this.search_by_cmb.ItemHeight = 23;
+            this.search_by_cmb.Items.AddRange(new object[] {
+            "Building",
+            "Room",
+            "Capacity",
+            "Room Type"});
+            this.search_by_cmb.Location = new System.Drawing.Point(40, 23);
+            this.search_by_cmb.Name = "search_by_cmb";
+            this.search_by_cmb.PromptText = "Search By...";
+            this.search_by_cmb.Size = new System.Drawing.Size(138, 29);
+            this.search_by_cmb.TabIndex = 19;
+            this.search_by_cmb.UseSelectable = true;
             // 
             // Location
             // 
@@ -711,12 +713,12 @@
         public MetroFramework.Controls.MetroComboBox roomtype_cmb;
         public MetroFramework.Controls.MetroComboBox room_cmb;
         public MetroFramework.Controls.MetroComboBox building_cmb;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox search_txt_box;
         private System.Windows.Forms.DataGridView loc_dgridv;
         private MetroFramework.Controls.MetroButton sort_btn;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroButton search_btn;
         private System.Windows.Forms.Panel locationview_panel;
         private MetroFramework.Controls.MetroTextBox edit_building_txt_box;
+        private MetroFramework.Controls.MetroComboBox search_by_cmb;
     }
 }
