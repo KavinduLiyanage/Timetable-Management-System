@@ -107,6 +107,11 @@
     <Compile Include="Tags\Tags.Designer.cs">
       <DependentUpon>Tags.cs</DependentUpon>
     </Compile>
+    <Compile Include="timetablemngsysdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>timetablemngsysdbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Working Days\Add Number of Working Days.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +162,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="timetablemngsysdbDataSet.xsc">
+      <DependentUpon>timetablemngsysdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="timetablemngsysdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>timetablemngsysdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="timetablemngsysdbDataSet.xss">
+      <DependentUpon>timetablemngsysdbDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

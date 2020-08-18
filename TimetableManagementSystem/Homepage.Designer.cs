@@ -142,6 +142,7 @@
             this.statBtn.TabIndex = 7;
             this.statBtn.Text = "Statistics";
             this.statBtn.UseVisualStyleBackColor = true;
+            this.statBtn.Click += new System.EventHandler(this.statBtn_Click);
             // 
             // sessionBtn
             // 

@@ -84,15 +84,6 @@ namespace TimetableManagementSystem.Locations
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
 
-            //sqldr = cmd.ExecuteReader();
-
-            //while(sqldr.Read())
-            //{
-            //    building_cmb.Items.Add(sqldr["Building_Name"]);
-            //}
-            //DataTable dt = new DataTable();
-            //SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
-            //sqlda.Fill(dt);
 
             foreach (DataRow dr in dt.Rows)
             {
@@ -135,13 +126,7 @@ namespace TimetableManagementSystem.Locations
 
         public void metroButton1_Click(object sender, EventArgs e)
         {
-            //con.Open();
-            //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT building,room,capacity,room_type FROM locations", con);
-            //DataTable dtbl = new DataTable();
-            //sqlDataAdapter.Fill(dtbl);
-
-            //loc_dgridv.DataSource = dtbl;
-            //con.Close();
+           
         }
 
         private void loc_dgridv_Click(object sender, EventArgs e)
@@ -211,11 +196,7 @@ namespace TimetableManagementSystem.Locations
         //notrequiredto
         private void loc_dgridv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //loc_tabcontrol.SelectedTab = editloc_tab;
-            //editroom_cmb.Text = loc_dgridv.SelectedRows[0].Cells[2].Value.ToString();
-            //editbuil_cmb.Text = loc_dgridv.SelectedRows[0].Cells[1].Value.ToString();
-            //editcap_cmb.Text = loc_dgridv.SelectedRows[0].Cells[3].Value.ToString();
-            ////editroomtype_cmb = loc_dgridv.SelectedRows[0].Cells[4].Value.ToString();
+         
 
         }
 
