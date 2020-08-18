@@ -147,5 +147,96 @@ namespace TimetableManagementSystem.Students
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        private void Students_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            SqlDataAdapter adapter1;
+            SqlDataAdapter adapter2;
+            SqlDataAdapter adapter3;
+            SqlDataAdapter adapter4;
+            SqlDataAdapter adapter5;
+            SqlDataAdapter adapter6;
+            SqlDataAdapter adapter7;
+
+            DataSet ds1 = new DataSet();
+            DataSet ds2 = new DataSet();
+            DataSet ds3 = new DataSet();
+            DataSet ds4 = new DataSet();
+            DataSet ds5 = new DataSet();
+            DataSet ds6 = new DataSet();
+            DataSet ds7 = new DataSet();
+
+            try
+            {
+                String query1 = "Select * from YearSemester";
+                String query2 = "Select * from Programme";
+                String query3 = "Select * from GroupNumber";
+                String query4 = "Select * from SubGroupNumber";
+                String query5 = "Select * from GenGroupNumber";
+                String query6 = "Select * from GenSubGroupNumber";
+                String query7 = "Select * from YearSemester";
+
+                con.Open();
+                adapter1 = new SqlDataAdapter(query1, con);
+                adapter2 = new SqlDataAdapter(query2, con);
+                adapter3 = new SqlDataAdapter(query3, con);
+                adapter4 = new SqlDataAdapter(query4, con);
+                adapter5 = new SqlDataAdapter(query5, con);
+                adapter6 = new SqlDataAdapter(query6, con);
+                adapter7 = new SqlDataAdapter(query7, con);
+
+                adapter1.Fill(ds1);
+                adapter2.Fill(ds2);
+                adapter3.Fill(ds3);
+                adapter4.Fill(ds4);
+                adapter5.Fill(ds5);
+                adapter6.Fill(ds6);
+                adapter7.Fill(ds7);
+
+                yrSemData.AutoGenerateColumns = true;
+                yrSemData.DataSource = ds1;
+                //string ConName = ds1.Tables[0].Rows[0]["ds1"].ToString();
+                //Console.WriteLine(ConName);
+
+                prgData.AutoGenerateColumns = true;
+                prgData.DataSource = ds2;
+                //string ConName2 = ds2.Tables[0].Rows[0]["ds2"].ToString();
+                //Console.WriteLine(ConName2);
+
+                grpNumData.AutoGenerateColumns = true;
+                grpNumData.DataSource = ds3;
+                //string ConName3 = ds3.Tables[0].Rows[0]["ds3"].ToString();
+                //Console.WriteLine(ConName3);
+
+                genIdData.AutoGenerateColumns = true;
+                genIdData.DataSource = ds4;
+                //string ConName4 = ds4.Tables[0].Rows[0]["ds4"].ToString();
+                //Console.WriteLine(ConName4);
+
+                subGrpNumData.AutoGenerateColumns = true;
+                subGrpNumData.DataSource = ds5;
+                //string ConName5 = ds5.Tables[0].Rows[0]["ds5"].ToString();
+                //Console.WriteLine(ConName5);
+
+                genSubIdData.AutoGenerateColumns = true;
+                genSubIdData.DataSource = ds6;
+                //string ConName6 = ds6.Tables[0].Rows[0]["ds6"].ToString();
+                //Console.WriteLine(ConName6);
+
+                viewData.AutoGenerateColumns = true;
+                viewData.DataSource = ds7;
+                //string ConName7 = ds7.Tables[0].Rows[0]["ds7"].ToString();
+                //Console.WriteLine(ConName7);
+
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            finally {
+                con.Close();
+            }
+        }
     }
 }

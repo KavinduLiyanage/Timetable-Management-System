@@ -98,11 +98,11 @@ namespace TimetableManagementSystem
             tag.ShowDialog();
         }
 
-        private void statBtn_Click(object sender, EventArgs e)
+        private void btnHeaderHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Statistics.Statistics stat = new Statistics.Statistics();
-            stat.ShowDialog();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
         }
     }
 }
