@@ -133,20 +133,58 @@ namespace TimetableManagementSystem.Lecturers
         {           
             LecturerID = Convert.ToInt32(dgvLectures.SelectedRows[0].Cells[0].Value);
             txtLecNameEdit.Text = dgvLectures.SelectedRows[0].Cells[1].Value.ToString();
-            cmbLecFacEdit.SelectedValue = dgvLectures.SelectedRows[0].Cells[2].Value;
+            cmbLecFacEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[2].Value;
             txtLecDepEdit.Text = dgvLectures.SelectedRows[0].Cells[3].Value.ToString();
-            tabControlLecturers.SelectedTab = tabPageLecEdit;
+            cmbLecCenterEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[4].Value;
+            cmbLecBuildingEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[6].Value;
+            cmbLecLevelEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[5].Value;
 
+            tabControlLecturers.SelectedTab = tabPageLecEdit;
         }
 
         private void btnLecUpdate_Click(object sender, EventArgs e)
         {
             if (LecturerID > 0)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Lecturers SET LecName = @LecName, LecDepartment = @LecDepartment WHERE LecturerID = @LecturerID", con);
+                SqlCommand cmd = new SqlCommand("UPDATE Lecturers SET LecName = @LecName, LecFaculty = @LecFaculty, LecDepartment = @LecDepartment, LecCenter = @LecCenter, LecBuilding = @LecBuilding, LecLevel = @LecLevel, LecRank = @LecRank WHERE LecturerID = @LecturerID", con);
                 cmd.CommandType = CommandType.Text;
+
                 cmd.Parameters.AddWithValue("@LecName", txtLecNameEdit.Text);
-                cmd.Parameters.AddWithValue("@LecDepartment", txtLecDepEdit.Text);
+                cmd.Parameters.AddWithValue("@lecfaculty", cmbLecFacEdit.Text);
+                cmd.Parameters.AddWithValue("@lecdepartment", txtLecDepEdit.Text);
+                cmd.Parameters.AddWithValue("@leccenter", cmbLecCenterEdit.Text);
+                cmd.Parameters.AddWithValue("@lecbuilding", cmbLecBuildingEdit.Text);
+                cmd.Parameters.AddWithValue("@leclevel", cmbLecLevelEdit.Text);
+
+                if (cmbLecLevelEdit.Text.Equals("Professor"))
+                {
+                    LecturerRank = 1;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Assistant Professor"))
+                {
+                    LecturerRank = 2;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer(HG)"))
+                {
+                    LecturerRank = 4;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer"))
+                {
+                    LecturerRank = 5;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Lecturer"))
+                {
+                    LecturerRank = 3;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Assistant Lecturer"))
+                {
+                    LecturerRank = 6;
+                }
+                else
+                {
+                    LecturerRank = 7;
+                }
+                cmd.Parameters.AddWithValue("@lecrank", LecturerRank);
                 cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
 
                 con.Open();
