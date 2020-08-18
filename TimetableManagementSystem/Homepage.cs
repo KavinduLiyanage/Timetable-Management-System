@@ -104,5 +104,12 @@ namespace TimetableManagementSystem
             Homepage homepage = new Homepage();
             homepage.ShowDialog();
         }
+
+        private void statBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
     }
 }
