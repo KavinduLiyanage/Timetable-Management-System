@@ -38,6 +38,13 @@
             this.tabControlLecturers = new MetroFramework.Controls.MetroTabControl();
             this.tabPageLecView = new System.Windows.Forms.TabPage();
             this.dgvLectures = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecFaculty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecCenter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecBuilding = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.tabPageLecAdd = new System.Windows.Forms.TabPage();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
@@ -53,7 +60,6 @@
             this.cmbLecBuilding = new MetroFramework.Controls.MetroComboBox();
             this.txtLecName = new MetroFramework.Controls.MetroTextBox();
             this.cmbLecCenter = new MetroFramework.Controls.MetroComboBox();
-            this.txtLecDep = new MetroFramework.Controls.MetroTextBox();
             this.cmbLecFac = new MetroFramework.Controls.MetroComboBox();
             this.tabPageLecEdit = new System.Windows.Forms.TabPage();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
@@ -76,13 +82,8 @@
             this.btnHeaderSessions = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecFaculty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecCenter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecBuilding = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbLecDepartment = new MetroFramework.Controls.MetroComboBox();
+            this.cmbLecDepartmentEdit = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -186,7 +187,7 @@
             this.tabControlLecturers.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlLecturers.Location = new System.Drawing.Point(154, 93);
             this.tabControlLecturers.Name = "tabControlLecturers";
-            this.tabControlLecturers.SelectedIndex = 0;
+            this.tabControlLecturers.SelectedIndex = 2;
             this.tabControlLecturers.Size = new System.Drawing.Size(788, 461);
             this.tabControlLecturers.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlLecturers.TabIndex = 26;
@@ -233,6 +234,65 @@
             this.dgvLectures.TabIndex = 66;
             this.dgvLectures.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLectures_CellClick);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "LecturerID";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // LecName
+            // 
+            this.LecName.DataPropertyName = "LecName";
+            this.LecName.HeaderText = "Name";
+            this.LecName.MinimumWidth = 6;
+            this.LecName.Name = "LecName";
+            this.LecName.ReadOnly = true;
+            this.LecName.Width = 130;
+            // 
+            // LecFaculty
+            // 
+            this.LecFaculty.DataPropertyName = "LecFaculty";
+            this.LecFaculty.HeaderText = "Faculty";
+            this.LecFaculty.MinimumWidth = 6;
+            this.LecFaculty.Name = "LecFaculty";
+            this.LecFaculty.ReadOnly = true;
+            this.LecFaculty.Width = 120;
+            // 
+            // LecDepartment
+            // 
+            this.LecDepartment.DataPropertyName = "LecDepartment";
+            this.LecDepartment.HeaderText = "Department";
+            this.LecDepartment.MinimumWidth = 6;
+            this.LecDepartment.Name = "LecDepartment";
+            this.LecDepartment.ReadOnly = true;
+            this.LecDepartment.Width = 125;
+            // 
+            // LecCenter
+            // 
+            this.LecCenter.DataPropertyName = "LecCenter";
+            this.LecCenter.HeaderText = "Center";
+            this.LecCenter.MinimumWidth = 6;
+            this.LecCenter.Name = "LecCenter";
+            this.LecCenter.ReadOnly = true;
+            this.LecCenter.Width = 125;
+            // 
+            // LecLevel
+            // 
+            this.LecLevel.DataPropertyName = "LecLevel";
+            this.LecLevel.HeaderText = "Level";
+            this.LecLevel.MinimumWidth = 6;
+            this.LecLevel.Name = "LecLevel";
+            this.LecLevel.ReadOnly = true;
+            this.LecLevel.Width = 150;
+            // 
+            // LecBuilding
+            // 
+            this.LecBuilding.DataPropertyName = "LecBuilding";
+            this.LecBuilding.HeaderText = "Building";
+            this.LecBuilding.Name = "LecBuilding";
+            // 
             // metroLabel15
             // 
             this.metroLabel15.AutoSize = true;
@@ -250,6 +310,7 @@
             // tabPageLecAdd
             // 
             this.tabPageLecAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageLecAdd.Controls.Add(this.cmbLecDepartment);
             this.tabPageLecAdd.Controls.Add(this.metroLabel8);
             this.tabPageLecAdd.Controls.Add(this.btnClear);
             this.tabPageLecAdd.Controls.Add(this.metroLabel1);
@@ -263,7 +324,6 @@
             this.tabPageLecAdd.Controls.Add(this.cmbLecBuilding);
             this.tabPageLecAdd.Controls.Add(this.txtLecName);
             this.tabPageLecAdd.Controls.Add(this.cmbLecCenter);
-            this.tabPageLecAdd.Controls.Add(this.txtLecDep);
             this.tabPageLecAdd.Controls.Add(this.cmbLecFac);
             this.tabPageLecAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageLecAdd.Location = new System.Drawing.Point(4, 37);
@@ -478,39 +538,6 @@
             this.cmbLecCenter.TabIndex = 41;
             this.cmbLecCenter.UseSelectable = true;
             // 
-            // txtLecDep
-            // 
-            // 
-            // 
-            // 
-            this.txtLecDep.CustomButton.Image = null;
-            this.txtLecDep.CustomButton.Location = new System.Drawing.Point(172, 2);
-            this.txtLecDep.CustomButton.Name = "";
-            this.txtLecDep.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtLecDep.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtLecDep.CustomButton.TabIndex = 1;
-            this.txtLecDep.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtLecDep.CustomButton.UseSelectable = true;
-            this.txtLecDep.CustomButton.Visible = false;
-            this.txtLecDep.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtLecDep.Lines = new string[0];
-            this.txtLecDep.Location = new System.Drawing.Point(410, 162);
-            this.txtLecDep.MaxLength = 32767;
-            this.txtLecDep.Name = "txtLecDep";
-            this.txtLecDep.PasswordChar = '\0';
-            this.txtLecDep.PromptText = "Enter Department";
-            this.txtLecDep.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtLecDep.SelectedText = "";
-            this.txtLecDep.SelectionLength = 0;
-            this.txtLecDep.SelectionStart = 0;
-            this.txtLecDep.ShortcutsEnabled = true;
-            this.txtLecDep.Size = new System.Drawing.Size(200, 30);
-            this.txtLecDep.TabIndex = 39;
-            this.txtLecDep.UseSelectable = true;
-            this.txtLecDep.WaterMark = "Enter Department";
-            this.txtLecDep.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtLecDep.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // cmbLecFac
             // 
             this.cmbLecFac.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -528,10 +555,12 @@
             this.cmbLecFac.Size = new System.Drawing.Size(200, 29);
             this.cmbLecFac.TabIndex = 40;
             this.cmbLecFac.UseSelectable = true;
+            this.cmbLecFac.SelectedIndexChanged += new System.EventHandler(this.cmbLecFac_SelectedIndexChanged);
             // 
             // tabPageLecEdit
             // 
             this.tabPageLecEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageLecEdit.Controls.Add(this.cmbLecDepartmentEdit);
             this.tabPageLecEdit.Controls.Add(this.metroLabel7);
             this.tabPageLecEdit.Controls.Add(this.btnLecDelete);
             this.tabPageLecEdit.Controls.Add(this.metroLabel9);
@@ -810,6 +839,7 @@
             this.cmbLecFacEdit.Size = new System.Drawing.Size(200, 29);
             this.cmbLecFacEdit.TabIndex = 55;
             this.cmbLecFacEdit.UseSelectable = true;
+            this.cmbLecFacEdit.SelectedIndexChanged += new System.EventHandler(this.cmbLecFacEdit_SelectedIndexChanged);
             // 
             // btnHeaderHome
             // 
@@ -877,64 +907,31 @@
             this.btnHeaderAdvanced.Text = "Advanced";
             this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
             // 
-            // ID
+            // cmbLecDepartment
             // 
-            this.ID.DataPropertyName = "LecturerID";
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
+            this.cmbLecDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbLecDepartment.FormattingEnabled = true;
+            this.cmbLecDepartment.ItemHeight = 23;
+            this.cmbLecDepartment.Location = new System.Drawing.Point(410, 162);
+            this.cmbLecDepartment.Name = "cmbLecDepartment";
+            this.cmbLecDepartment.PromptText = "Select Department";
+            this.cmbLecDepartment.Size = new System.Drawing.Size(200, 29);
+            this.cmbLecDepartment.TabIndex = 46;
+            this.cmbLecDepartment.UseSelectable = true;
             // 
-            // LecName
+            // cmbLecDepartmentEdit
             // 
-            this.LecName.DataPropertyName = "LecName";
-            this.LecName.HeaderText = "Name";
-            this.LecName.MinimumWidth = 6;
-            this.LecName.Name = "LecName";
-            this.LecName.ReadOnly = true;
-            this.LecName.Width = 130;
-            // 
-            // LecFaculty
-            // 
-            this.LecFaculty.DataPropertyName = "LecFaculty";
-            this.LecFaculty.HeaderText = "Faculty";
-            this.LecFaculty.MinimumWidth = 6;
-            this.LecFaculty.Name = "LecFaculty";
-            this.LecFaculty.ReadOnly = true;
-            this.LecFaculty.Width = 120;
-            // 
-            // LecDepartment
-            // 
-            this.LecDepartment.DataPropertyName = "LecDepartment";
-            this.LecDepartment.HeaderText = "Department";
-            this.LecDepartment.MinimumWidth = 6;
-            this.LecDepartment.Name = "LecDepartment";
-            this.LecDepartment.ReadOnly = true;
-            this.LecDepartment.Width = 125;
-            // 
-            // LecCenter
-            // 
-            this.LecCenter.DataPropertyName = "LecCenter";
-            this.LecCenter.HeaderText = "Center";
-            this.LecCenter.MinimumWidth = 6;
-            this.LecCenter.Name = "LecCenter";
-            this.LecCenter.ReadOnly = true;
-            this.LecCenter.Width = 125;
-            // 
-            // LecLevel
-            // 
-            this.LecLevel.DataPropertyName = "LecLevel";
-            this.LecLevel.HeaderText = "Level";
-            this.LecLevel.MinimumWidth = 6;
-            this.LecLevel.Name = "LecLevel";
-            this.LecLevel.ReadOnly = true;
-            this.LecLevel.Width = 150;
-            // 
-            // LecBuilding
-            // 
-            this.LecBuilding.DataPropertyName = "LecBuilding";
-            this.LecBuilding.HeaderText = "Building";
-            this.LecBuilding.Name = "LecBuilding";
+            this.cmbLecDepartmentEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbLecDepartmentEdit.FormattingEnabled = true;
+            this.cmbLecDepartmentEdit.ItemHeight = 23;
+            this.cmbLecDepartmentEdit.Location = new System.Drawing.Point(574, 163);
+            this.cmbLecDepartmentEdit.Name = "cmbLecDepartmentEdit";
+            this.cmbLecDepartmentEdit.PromptText = "Select Department";
+            this.cmbLecDepartmentEdit.Size = new System.Drawing.Size(200, 29);
+            this.cmbLecDepartmentEdit.TabIndex = 61;
+            this.cmbLecDepartmentEdit.UseSelectable = true;
             // 
             // AddLecturer
             // 
@@ -1009,7 +1006,6 @@
         private MetroFramework.Controls.MetroComboBox cmbLecBuilding;
         private MetroFramework.Controls.MetroTextBox txtLecName;
         private MetroFramework.Controls.MetroComboBox cmbLecCenter;
-        private MetroFramework.Controls.MetroTextBox txtLecDep;
         private MetroFramework.Controls.MetroComboBox cmbLecFac;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroButton btnLecDelete;
@@ -1040,5 +1036,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LecCenter;
         private System.Windows.Forms.DataGridViewTextBoxColumn LecLevel;
         private System.Windows.Forms.DataGridViewTextBoxColumn LecBuilding;
+        private MetroFramework.Controls.MetroComboBox cmbLecDepartment;
+        private MetroFramework.Controls.MetroComboBox cmbLecDepartmentEdit;
     }
 }

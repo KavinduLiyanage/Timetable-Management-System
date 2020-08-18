@@ -52,7 +52,7 @@ namespace TimetableManagementSystem.Lecturers
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@lecname", txtLecName.Text);
                 cmd.Parameters.AddWithValue("@lecfaculty", cmbLecFac.Text);
-                cmd.Parameters.AddWithValue("@lecdepartment", txtLecDep.Text);
+                cmd.Parameters.AddWithValue("@lecdepartment", cmbLecDepartment.Text);
                 cmd.Parameters.AddWithValue("@leccenter", cmbLecCenter.Text);
                 cmd.Parameters.AddWithValue("@lecbuilding", cmbLecBuilding.Text);
                 cmd.Parameters.AddWithValue("@leclevel", cmbLecLevel.Text);
@@ -103,11 +103,12 @@ namespace TimetableManagementSystem.Lecturers
         {
             txtLecName.Clear();
             txtLecDep.Clear();
-            cmbLecFac.SelectedIndex = -1;
+            //cmbLecFac.SelectedIndex = -1;
             cmbLecBuilding.SelectedIndex = -1;
             cmbLecCenter.SelectedIndex = -1;
             cmbLecLevel.SelectedIndex = -1;
             LecturerID = 0;
+            cmbLecDepartment.SelectedIndex = -1;
 
         }
 
@@ -134,7 +135,8 @@ namespace TimetableManagementSystem.Lecturers
             LecturerID = Convert.ToInt32(dgvLectures.SelectedRows[0].Cells[0].Value);
             txtLecNameEdit.Text = dgvLectures.SelectedRows[0].Cells[1].Value.ToString();
             cmbLecFacEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[2].Value;
-            txtLecDepEdit.Text = dgvLectures.SelectedRows[0].Cells[3].Value.ToString();
+            //txtLecDepEdit.Text = dgvLectures.SelectedRows[0].Cells[3].Value.ToString();
+            cmbLecDepartmentEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[3].Value;
             cmbLecCenterEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[4].Value;
             cmbLecBuildingEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[6].Value;
             cmbLecLevelEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[5].Value;
@@ -251,6 +253,41 @@ namespace TimetableManagementSystem.Lecturers
             this.Hide();
             Homepage homepage = new Homepage();
             homepage.ShowDialog();
+        }
+
+        private void cmbLecFac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbLecDepartment.Items.Clear();
+
+            if (cmbLecFac.SelectedItem.Equals("Engineering"))
+            {
+                cmbLecDepartment.Items.Add("CE");
+                cmbLecDepartment.Items.Add("EE");
+            }
+            else if (cmbLecFac.SelectedItem.Equals("Computing"))
+            {
+                cmbLecDepartment.Items.Add("CSSE");
+                cmbLecDepartment.Items.Add("DS");
+                cmbLecDepartment.Items.Add("IT");
+               
+            }
+            else if (cmbLecFac.SelectedItem.Equals("Business"))
+            {
+                cmbLecDepartment.Items.Add("IM");
+                cmbLecDepartment.Items.Add("BM");
+               
+            }
+            else
+            {
+
+            }
+
+            //cmbLecFac.SelectedIndex = -1;
+        }
+
+        private void cmbLecFacEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
