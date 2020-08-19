@@ -69,13 +69,11 @@
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SubStat_tabpage = new System.Windows.Forms.TabPage();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.metroButton8 = new MetroFramework.Controls.MetroButton();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.subyear_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lecturersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timetablemngsysdbDataSet = new TimetableManagementSystem.timetablemngsysdbDataSet();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
@@ -104,7 +102,7 @@
             this.SubStat_tabpage.SuspendLayout();
             this.metroPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subyear_chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1)).BeginInit();
@@ -487,13 +485,11 @@
             // metroPanel3
             // 
             this.metroPanel3.Controls.Add(this.subject_count_txt);
-            this.metroPanel3.Controls.Add(this.metroButton7);
             this.metroPanel3.Controls.Add(this.metroLabel3);
             this.metroPanel3.Controls.Add(this.chart4);
-            this.metroPanel3.Controls.Add(this.metroButton8);
             this.metroPanel3.Controls.Add(this.metroButton9);
             this.metroPanel3.Controls.Add(this.metroLabel4);
-            this.metroPanel3.Controls.Add(this.chart5);
+            this.metroPanel3.Controls.Add(this.subyear_chart);
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 10;
@@ -504,21 +500,6 @@
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
-            // metroButton7
-            // 
-            this.metroButton7.BackColor = System.Drawing.Color.Navy;
-            this.metroButton7.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton7.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton7.Location = new System.Drawing.Point(626, 69);
-            this.metroButton7.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton7.Name = "metroButton7";
-            this.metroButton7.Size = new System.Drawing.Size(97, 30);
-            this.metroButton7.TabIndex = 43;
-            this.metroButton7.Text = "Generate";
-            this.metroButton7.UseCustomBackColor = true;
-            this.metroButton7.UseCustomForeColor = true;
-            this.metroButton7.UseSelectable = true;
             // 
             // metroLabel3
             // 
@@ -558,21 +539,6 @@
             this.chart4.TabIndex = 41;
             this.chart4.Text = "chart4";
             // 
-            // metroButton8
-            // 
-            this.metroButton8.BackColor = System.Drawing.Color.Navy;
-            this.metroButton8.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton8.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton8.Location = new System.Drawing.Point(222, 69);
-            this.metroButton8.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton8.Name = "metroButton8";
-            this.metroButton8.Size = new System.Drawing.Size(97, 30);
-            this.metroButton8.TabIndex = 40;
-            this.metroButton8.Text = "Generate";
-            this.metroButton8.UseCustomBackColor = true;
-            this.metroButton8.UseCustomForeColor = true;
-            this.metroButton8.UseSelectable = true;
-            // 
             // metroButton9
             // 
             this.metroButton9.BackColor = System.Drawing.Color.Navy;
@@ -594,23 +560,23 @@
             this.metroLabel4.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(32, 80);
+            this.metroLabel4.Location = new System.Drawing.Point(74, 80);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(176, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(153, 19);
             this.metroLabel4.TabIndex = 30;
-            this.metroLabel4.Text = "Faculty vs Lecturer Count";
+            this.metroLabel4.Text = "Year vs Subject Count";
             this.metroLabel4.UseCustomBackColor = true;
             // 
-            // chart5
+            // subyear_chart
             // 
             chartArea6.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea6);
+            this.subyear_chart.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";
-            this.chart5.Legends.Add(legend6);
-            this.chart5.Location = new System.Drawing.Point(32, 120);
-            this.chart5.Name = "chart5";
-            this.chart5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart5.PaletteCustomColors = new System.Drawing.Color[] {
+            this.subyear_chart.Legends.Add(legend6);
+            this.subyear_chart.Location = new System.Drawing.Point(32, 120);
+            this.subyear_chart.Name = "subyear_chart";
+            this.subyear_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.subyear_chart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64))))),
         System.Drawing.Color.Olive,
         System.Drawing.Color.Teal,
@@ -618,13 +584,13 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
             series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.IsValueShownAsLabel = true;
             series6.Legend = "Legend1";
             series6.Name = "Series1";
-            this.chart5.Series.Add(series6);
-            this.chart5.Size = new System.Drawing.Size(337, 261);
-            this.chart5.TabIndex = 2;
-            this.chart5.Text = "chart1";
+            this.subyear_chart.Series.Add(series6);
+            this.subyear_chart.Size = new System.Drawing.Size(337, 261);
+            this.subyear_chart.TabIndex = 2;
+            this.subyear_chart.Text = "chart1";
             // 
             // lecturersBindingSource
             // 
@@ -816,7 +782,7 @@
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subyear_chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1)).EndInit();
@@ -857,13 +823,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private MetroFramework.Controls.MetroPanel metroPanel3;
-        private MetroFramework.Controls.MetroButton metroButton7;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
-        private MetroFramework.Controls.MetroButton metroButton8;
         private MetroFramework.Controls.MetroButton metroButton9;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart subyear_chart;
         private timetablemngsysdbDataSet timetablemngsysdbDataSet;
         private System.Windows.Forms.BindingSource lecturersBindingSource;
         private timetablemngsysdbDataSetTableAdapters.LecturersTableAdapter lecturersTableAdapter;

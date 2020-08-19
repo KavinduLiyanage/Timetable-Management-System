@@ -25,10 +25,11 @@ namespace TimetableManagementSystem.Statistics
         private void Statistics_Load(object sender, EventArgs e)
         {
 
-           totalLecturerCount();
+          totalLecturerCount();
             totalSubjectCount();
-          LoadLecFacChart();
+            LoadLecFacChart();
             LoadLecDeptChart();
+            LoadSubjectYearChart();
             //LoadLecCentreChart();
         }
 
@@ -121,6 +122,29 @@ namespace TimetableManagementSystem.Statistics
 
         }
 
+        // Chart for Subject Count vs Year
+        private void LoadSubjectYearChart()
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
+
+            DataSet ds = new DataSet();
+            con.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter("Select SubYear,COUNT(SubCode) as subyrcount from Subjects GROUP BY SubYear", con);
+            adapt.Fill(ds, "subyrcount");
+            subyear_chart.DataSource = ds.Tables["subyrcount"];
+
+
+            subyear_chart.Series["Series1"].XValueMember = "SubYear";
+            subyear_chart.Series["Series1"].YValueMembers = "subyrcount";
+            subyear_chart.Series["Series1"].ChartType = SeriesChartType.Bar;
+
+
+            subyear_chart.DataBind();
+            con.Close();
+        }
+
+
         //Calculating total subject count
         private void totalSubjectCount()
         {
@@ -128,7 +152,7 @@ namespace TimetableManagementSystem.Statistics
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT COUNT(id) as subCount FROM Programme";
+            cmd.CommandText = "SELECT COUNT(SubCode) as subCount FROM Subjects";
             cmd.ExecuteNonQuery();
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
