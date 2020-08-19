@@ -70,7 +70,6 @@
             this.getStartedBtn.TabIndex = 0;
             this.getStartedBtn.Text = "Get Started";
             this.getStartedBtn.UseVisualStyleBackColor = true;
-            this.getStartedBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // wdhBtn
             // 
@@ -268,6 +267,7 @@
             this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavStatistics.TabIndex = 18;
             this.btnSideNavStatistics.TabStop = false;
+            this.btnSideNavStatistics.Click += new System.EventHandler(this.btnSideNavStatistics_Click);
             // 
             // btnHeaderAdvanced
             // 

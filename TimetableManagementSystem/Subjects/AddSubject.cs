@@ -18,6 +18,7 @@ namespace TimetableManagementSystem.Subjects
             InitializeComponent();
         }
 
+        //----Side Nav Buttons----
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -28,10 +29,11 @@ namespace TimetableManagementSystem.Subjects
         private void btnSideNavSubjects_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Subjects.AddSubject addSubject = new Subjects.AddSubject();
+            TimetableManagementSystem.Subjects.AddSubject addSubject = new TimetableManagementSystem.Subjects.AddSubject();
             addSubject.ShowDialog();
         }
 
+        //----Header Buttons----
         private void btnHeaderHome_Click(object sender, EventArgs e)
         {
             this.Hide();

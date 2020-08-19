@@ -109,7 +109,6 @@ namespace TimetableManagementSystem.Lecturers
             cmbLecBuilding.SelectedIndex = -1;
             cmbLecLevel.SelectedIndex = -1;
             LecturerID = 0;
-
         }
 
         private bool IsValid()
@@ -140,7 +139,6 @@ namespace TimetableManagementSystem.Lecturers
             cmbLecLevelEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[5].Value;
 
             tabControlLecturers.SelectedTab = tabPageLecEdit;
-
         }
 
         private void btnLecUpdate_Click(object sender, EventArgs e)
@@ -215,7 +213,6 @@ namespace TimetableManagementSystem.Lecturers
             cmbLecBuildingEdit.SelectedIndex = -1;
             cmbLecLevelEdit.SelectedIndex = -1;
             LecturerID = 0;
-
         }
 
         private void btnLecDelete_Click(object sender, EventArgs e)
@@ -248,20 +245,6 @@ namespace TimetableManagementSystem.Lecturers
             {
                 MessageBox.Show("Please Select a lecturer to Delete ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnSideNavLecturers_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
-            addLecturer.ShowDialog();
-        }
-
-        private void btnSideNavSubjects_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Subjects.AddSubject addSubject = new Subjects.AddSubject();
-            addSubject.ShowDialog();
         }
 
         private void cmbLecFac_SelectedIndexChanged(object sender, EventArgs e)
@@ -313,11 +296,27 @@ namespace TimetableManagementSystem.Lecturers
             }
         }
 
+        //----Header Buttons----
         private void btnHeaderHome_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             Homepage homepage = new Homepage();
             homepage.ShowDialog();
+        }
+
+        //----Side Nav Buttons----
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
+            addSubject.ShowDialog();
         }
 
         private void btnSideNavStudents_Click(object sender, EventArgs e)

@@ -19,21 +19,12 @@ namespace TimetableManagementSystem
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Homepage_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void wdhBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //----DashBoard Buttons----
         private void lecBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -55,35 +46,6 @@ namespace TimetableManagementSystem
             stu.ShowDialog();
         }
 
-        private void btnSideNavLecturers_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
-            addLecturer.ShowDialog();
-        }
-
-        private void btnSideNavSubjects_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Subjects.AddSubject addSubject = new Subjects.AddSubject();
-            addSubject.ShowDialog();
-        }
-
-        private void locBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Locations.Location loc = new Locations.Location();
-            loc.ShowDialog();
-        }
-
-        private void btnSideNavStatistics_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-           Statistics.Statistics stat = new Statistics.Statistics();
-            stat.ShowDialog();
-        }
-
-        //executing
         private void locBtn_Click_1(object sender, EventArgs e)
         {
             this.Hide();
@@ -98,6 +60,19 @@ namespace TimetableManagementSystem
             tag.ShowDialog();
         }
 
+        private void statBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
+        }
+
+        private void wdhBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //----Header Buttons----
         private void btnHeaderHome_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -105,11 +80,19 @@ namespace TimetableManagementSystem
             homepage.ShowDialog();
         }
 
-        private void statBtn_Click(object sender, EventArgs e)
+        //----Side Nav Buttons----
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Statistics.Statistics stat = new Statistics.Statistics();
-            stat.ShowDialog();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
+            addSubject.ShowDialog();
         }
 
         private void btnSideNavStudents_Click(object sender, EventArgs e)
@@ -118,5 +101,12 @@ namespace TimetableManagementSystem
             Students.Students stu = new Students.Students();
             stu.ShowDialog();
         }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+           Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
+        }  
     }
 }
