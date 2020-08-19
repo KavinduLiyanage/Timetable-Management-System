@@ -112,6 +112,14 @@ namespace TimetableManagementSystem.Students
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO YearSemester (Year, Semester) VALUES (" + yearTxt.Text + ", '" + semTxt.Text + "');";
             cmd.ExecuteNonQuery();
+
+            String query1 = "Select * from YearSemester";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query1, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            yrSemData.DataSource = dt;
+
             con.Close();
         }
 
@@ -123,6 +131,14 @@ namespace TimetableManagementSystem.Students
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO Programme (Programme) VALUES ('" + prgBtn.Text + "');";
             cmd.ExecuteNonQuery();
+
+            String query2 = "Select * from Programme";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            yrSemData.DataSource = dt;
+
             con.Close();
         }
 
@@ -134,6 +150,15 @@ namespace TimetableManagementSystem.Students
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO GroupNumber (GrpNum) VALUES ('" + grpNumTxt.Text + "');";
             cmd.ExecuteNonQuery();
+
+            String query3 = "Select * from GroupNumber";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query3, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            yrSemData.DataSource = dt;
+
+
             con.Close();
         }
 
@@ -145,98 +170,146 @@ namespace TimetableManagementSystem.Students
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO SubGroupNumber (SubGrpNum) VALUES ('" + subGrpNumTxt.Text + "');";
             cmd.ExecuteNonQuery();
+
+            String query4 = "Select * from SubGroupNumber";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query4, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            yrSemData.DataSource = dt;
+
             con.Close();
         }
 
         private void Students_Load(object sender, EventArgs e)
         {
+            String query1 = "Select * from YearSemester";
+            String query2 = "Select * from Programme";
+            String query3 = "Select * from GroupNumber";
+            String query4 = "Select * from SubGroupNumber";
+            String query5 = "Select * from GenGroupNumber";
+            String query6 = "Select * from GenSubGroupNumber";
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
             SqlConnection con = Config.con;
-            SqlDataAdapter adapter1;
-            SqlDataAdapter adapter2;
-            SqlDataAdapter adapter3;
-            SqlDataAdapter adapter4;
-            SqlDataAdapter adapter5;
-            SqlDataAdapter adapter6;
-            SqlDataAdapter adapter7;
+            con.Open();
 
-            DataSet ds1 = new DataSet();
-            DataSet ds2 = new DataSet();
-            DataSet ds3 = new DataSet();
-            DataSet ds4 = new DataSet();
-            DataSet ds5 = new DataSet();
-            DataSet ds6 = new DataSet();
-            DataSet ds7 = new DataSet();
+            SqlCommand cmd = new SqlCommand(query1, con);
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
 
-            try
-            {
-                String query1 = "Select * from YearSemester";
-                String query2 = "Select * from Programme";
-                String query3 = "Select * from GroupNumber";
-                String query4 = "Select * from SubGroupNumber";
-                String query5 = "Select * from GenGroupNumber";
-                String query6 = "Select * from GenSubGroupNumber";
-                String query7 = "Select * from YearSemester";
+            SqlCommand cmd2 = new SqlCommand(query2, con);
+            DataTable dt2 = new DataTable();
+            SqlDataReader sdr2 = cmd2.ExecuteReader();
+            dt2.Load(sdr2);
 
-                con.Open();
-                adapter1 = new SqlDataAdapter(query1, con);
-                adapter2 = new SqlDataAdapter(query2, con);
-                adapter3 = new SqlDataAdapter(query3, con);
-                adapter4 = new SqlDataAdapter(query4, con);
-                adapter5 = new SqlDataAdapter(query5, con);
-                adapter6 = new SqlDataAdapter(query6, con);
-                adapter7 = new SqlDataAdapter(query7, con);
+            SqlCommand cmd3 = new SqlCommand(query3, con);
+            DataTable dt3 = new DataTable();
+            SqlDataReader sdr3 = cmd3.ExecuteReader();
+            dt3.Load(sdr3);
 
-                adapter1.Fill(ds1);
-                adapter2.Fill(ds2);
-                adapter3.Fill(ds3);
-                adapter4.Fill(ds4);
-                adapter5.Fill(ds5);
-                adapter6.Fill(ds6);
-                adapter7.Fill(ds7);
+            SqlCommand cmd4 = new SqlCommand(query4, con);
+            DataTable dt4 = new DataTable();
+            SqlDataReader sdr4 = cmd4.ExecuteReader();
+            dt4.Load(sdr4);
 
-                yrSemData.AutoGenerateColumns = true;
-                yrSemData.DataSource = ds1;
-                //string ConName = ds1.Tables[0].Rows[0]["ds1"].ToString();
-                //Console.WriteLine(ConName);
+            SqlCommand cmd5 = new SqlCommand(query5, con);
+            DataTable dt5 = new DataTable();
+            SqlDataReader sdr5 = cmd5.ExecuteReader();
+            dt5.Load(sdr5);
 
-                prgData.AutoGenerateColumns = true;
-                prgData.DataSource = ds2;
-                //string ConName2 = ds2.Tables[0].Rows[0]["ds2"].ToString();
-                //Console.WriteLine(ConName2);
+            SqlCommand cmd6 = new SqlCommand(query6, con);
+            DataTable dt6 = new DataTable();
+            SqlDataReader sdr6 = cmd6.ExecuteReader();
+            dt6.Load(sdr6);
 
-                grpNumData.AutoGenerateColumns = true;
-                grpNumData.DataSource = ds3;
-                //string ConName3 = ds3.Tables[0].Rows[0]["ds3"].ToString();
-                //Console.WriteLine(ConName3);
+            SqlCommand cmd7 = new SqlCommand(query7, con);
+            DataTable dt7 = new DataTable();
+            SqlDataReader sdr7 = cmd7.ExecuteReader();
+            dt7.Load(sdr7);
 
-                genIdData.AutoGenerateColumns = true;
-                genIdData.DataSource = ds4;
-                //string ConName4 = ds4.Tables[0].Rows[0]["ds4"].ToString();
-                //Console.WriteLine(ConName4);
 
-                subGrpNumData.AutoGenerateColumns = true;
-                subGrpNumData.DataSource = ds5;
-                //string ConName5 = ds5.Tables[0].Rows[0]["ds5"].ToString();
-                //Console.WriteLine(ConName5);
 
-                genSubIdData.AutoGenerateColumns = true;
-                genSubIdData.DataSource = ds6;
-                //string ConName6 = ds6.Tables[0].Rows[0]["ds6"].ToString();
-                //Console.WriteLine(ConName6);
+            yrSemData.AutoGenerateColumns = true;
+            yrSemData.DataSource = dt;
 
-                viewData.AutoGenerateColumns = true;
-                viewData.DataSource = ds7;
-                //string ConName7 = ds7.Tables[0].Rows[0]["ds7"].ToString();
-                //Console.WriteLine(ConName7);
+            prgData.AutoGenerateColumns = true;
+            prgData.DataSource = dt2;
 
-            }
-            catch (Exception ex)
-            {
-                con.Close();
-            }
-            finally {
-                con.Close();
-            }
+            grpNumData.AutoGenerateColumns = true;
+            grpNumData.DataSource = dt3;
+
+            genIdData.AutoGenerateColumns = true;
+            genIdData.DataSource = dt4;
+
+            subGrpNumData.AutoGenerateColumns = true;
+            subGrpNumData.DataSource = dt5;
+
+            genSubIdData.AutoGenerateColumns = true;
+            genSubIdData.DataSource = dt6;
+
+            viewData.AutoGenerateColumns = true;
+            viewData.DataSource = dt7;
+
+            con.Close();
+        }
+
+        private void searchBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE building LIKE '%" + searchBox.Text + "%'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            yrSemData.DataSource = dt;
+            con.Close();
+        }
+
+        private void yrSemSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM YearSemester WHERE Year LIKE '%" + yrSemSearchBox.Text + "%'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            yrSemData.DataSource = dt;
+            con.Close();
+        }
+
+        private void conAddBtn_Click(object sender, EventArgs e)
+        {
+
+            String query5 = "Select * from GenGroupNumber";
+
+
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(query5, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            yrSemData.DataSource = dt;
+            con.Close();
+        }
+
+        private void conSubAddBtn_Click(object sender, EventArgs e)
+        {
+
+            String query6 = "Select * from GenSubGroupNumber";
+
+
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(query6, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            yrSemData.DataSource = dt;
+            con.Close();
         }
     }
 }
