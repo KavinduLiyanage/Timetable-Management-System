@@ -21,15 +21,22 @@ namespace TimetableManagementSystem.Subjects
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddLecturer addLecturer = new AddLecturer();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
             addLecturer.ShowDialog();
         }
 
         private void btnSideNavSubjects_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddSubject addSubject = new AddSubject();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
             addSubject.ShowDialog();
+        }
+
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
         }
     }
 }

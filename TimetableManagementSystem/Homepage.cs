@@ -37,14 +37,14 @@ namespace TimetableManagementSystem
         private void lecBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddLecturer addLecturer = new AddLecturer();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
             addLecturer.ShowDialog();
         }
 
         private void subBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddSubject addSubject = new AddSubject();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
             addSubject.ShowDialog();
         }
 
@@ -58,14 +58,14 @@ namespace TimetableManagementSystem
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddLecturer addLecturer = new AddLecturer();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
             addLecturer.ShowDialog();
         }
 
         private void btnSideNavSubjects_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddSubject addSubject = new AddSubject();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
             addSubject.ShowDialog();
         }
 
@@ -110,6 +110,13 @@ namespace TimetableManagementSystem
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
+        }
+
+        private void btnSideNavStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Students.Students stu = new Students.Students();
+            stu.ShowDialog();
         }
     }
 }

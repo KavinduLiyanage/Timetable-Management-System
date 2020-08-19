@@ -78,11 +78,11 @@
             this.txtLecNameEdit = new MetroFramework.Controls.MetroTextBox();
             this.cmbLecCenterEdit = new MetroFramework.Controls.MetroComboBox();
             this.cmbLecFacEdit = new MetroFramework.Controls.MetroComboBox();
-            this.btnHeaderHome = new System.Windows.Forms.Button();
-            this.btnHeaderGenerate = new System.Windows.Forms.Button();
-            this.btnHeaderSessions = new System.Windows.Forms.Button();
-            this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
+            this.btnHeaderRooms = new System.Windows.Forms.Button();
+            this.btnHeaderSessions = new System.Windows.Forms.Button();
+            this.btnHeaderGenerate = new System.Windows.Forms.Button();
+            this.btnHeaderHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -140,6 +140,7 @@
             this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavStudents.TabIndex = 22;
             this.btnSideNavStudents.TabStop = false;
+            this.btnSideNavStudents.Click += new System.EventHandler(this.btnSideNavStudents_Click);
             // 
             // btnSideNavSubjects
             // 
@@ -834,71 +835,71 @@
             this.cmbLecFacEdit.UseSelectable = true;
             this.cmbLecFacEdit.SelectedIndexChanged += new System.EventHandler(this.cmbLecFacEdit_SelectedIndexChanged);
             // 
-            // btnHeaderHome
+            // btnHeaderAdvanced
             // 
-            this.btnHeaderHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnHeaderHome.FlatAppearance.BorderSize = 0;
-            this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHeaderHome.Location = new System.Drawing.Point(211, 10);
-            this.btnHeaderHome.Name = "btnHeaderHome";
-            this.btnHeaderHome.Size = new System.Drawing.Size(79, 40);
-            this.btnHeaderHome.TabIndex = 32;
-            this.btnHeaderHome.Text = "Home";
-            this.btnHeaderHome.UseVisualStyleBackColor = false;
-            this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
-            // 
-            // btnHeaderGenerate
-            // 
-            this.btnHeaderGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnHeaderGenerate.FlatAppearance.BorderSize = 0;
-            this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHeaderGenerate.Location = new System.Drawing.Point(740, 10);
-            this.btnHeaderGenerate.Name = "btnHeaderGenerate";
-            this.btnHeaderGenerate.Size = new System.Drawing.Size(112, 40);
-            this.btnHeaderGenerate.TabIndex = 33;
-            this.btnHeaderGenerate.Text = "Generate";
-            this.btnHeaderGenerate.UseVisualStyleBackColor = false;
-            // 
-            // btnHeaderSessions
-            // 
-            this.btnHeaderSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnHeaderSessions.FlatAppearance.BorderSize = 0;
-            this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHeaderSessions.Location = new System.Drawing.Point(327, 10);
-            this.btnHeaderSessions.Name = "btnHeaderSessions";
-            this.btnHeaderSessions.Size = new System.Drawing.Size(103, 40);
-            this.btnHeaderSessions.TabIndex = 34;
-            this.btnHeaderSessions.Text = "Sessions";
-            this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            this.btnHeaderAdvanced.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderAdvanced.FlatAppearance.BorderSize = 0;
+            this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderAdvanced.Location = new System.Drawing.Point(588, 10);
+            this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
+            this.btnHeaderAdvanced.Size = new System.Drawing.Size(115, 40);
+            this.btnHeaderAdvanced.TabIndex = 46;
+            this.btnHeaderAdvanced.Text = "Advanced";
+            this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
             // 
             // btnHeaderRooms
             // 
             this.btnHeaderRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.btnHeaderRooms.FlatAppearance.BorderSize = 0;
-            this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderRooms.Location = new System.Drawing.Point(467, 10);
             this.btnHeaderRooms.Name = "btnHeaderRooms";
             this.btnHeaderRooms.Size = new System.Drawing.Size(84, 40);
-            this.btnHeaderRooms.TabIndex = 35;
+            this.btnHeaderRooms.TabIndex = 45;
             this.btnHeaderRooms.Text = "Rooms";
             this.btnHeaderRooms.UseVisualStyleBackColor = false;
             // 
-            // btnHeaderAdvanced
+            // btnHeaderSessions
             // 
-            this.btnHeaderAdvanced.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnHeaderAdvanced.FlatAppearance.BorderSize = 0;
-            this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHeaderAdvanced.Location = new System.Drawing.Point(588, 10);
-            this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
-            this.btnHeaderAdvanced.Size = new System.Drawing.Size(115, 40);
-            this.btnHeaderAdvanced.TabIndex = 36;
-            this.btnHeaderAdvanced.Text = "Advanced";
-            this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            this.btnHeaderSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderSessions.FlatAppearance.BorderSize = 0;
+            this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderSessions.Location = new System.Drawing.Point(327, 10);
+            this.btnHeaderSessions.Name = "btnHeaderSessions";
+            this.btnHeaderSessions.Size = new System.Drawing.Size(103, 40);
+            this.btnHeaderSessions.TabIndex = 44;
+            this.btnHeaderSessions.Text = "Sessions";
+            this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderGenerate
+            // 
+            this.btnHeaderGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderGenerate.FlatAppearance.BorderSize = 0;
+            this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderGenerate.Location = new System.Drawing.Point(740, 10);
+            this.btnHeaderGenerate.Name = "btnHeaderGenerate";
+            this.btnHeaderGenerate.Size = new System.Drawing.Size(112, 40);
+            this.btnHeaderGenerate.TabIndex = 43;
+            this.btnHeaderGenerate.Text = "Generate";
+            this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderHome
+            // 
+            this.btnHeaderHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderHome.FlatAppearance.BorderSize = 0;
+            this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderHome.Location = new System.Drawing.Point(211, 10);
+            this.btnHeaderHome.Name = "btnHeaderHome";
+            this.btnHeaderHome.Size = new System.Drawing.Size(79, 40);
+            this.btnHeaderHome.TabIndex = 42;
+            this.btnHeaderHome.Text = "Home";
+            this.btnHeaderHome.UseVisualStyleBackColor = false;
+            this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click_1);
             // 
             // AddLecturer
             // 
@@ -990,11 +991,6 @@
         private MetroFramework.Controls.MetroComboBox cmbLecFacEdit;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private System.Windows.Forms.DataGridView dgvLectures;
-        private System.Windows.Forms.Button btnHeaderHome;
-        private System.Windows.Forms.Button btnHeaderGenerate;
-        private System.Windows.Forms.Button btnHeaderSessions;
-        private System.Windows.Forms.Button btnHeaderRooms;
-        private System.Windows.Forms.Button btnHeaderAdvanced;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn LecName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LecFaculty;
@@ -1004,5 +1000,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LecBuilding;
         private MetroFramework.Controls.MetroComboBox cmbLecDepartment;
         private MetroFramework.Controls.MetroComboBox cmbLecDepartmentEdit;
+        private System.Windows.Forms.Button btnHeaderAdvanced;
+        private System.Windows.Forms.Button btnHeaderRooms;
+        private System.Windows.Forms.Button btnHeaderSessions;
+        private System.Windows.Forms.Button btnHeaderGenerate;
+        private System.Windows.Forms.Button btnHeaderHome;
     }
 }

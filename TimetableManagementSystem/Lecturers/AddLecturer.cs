@@ -253,22 +253,15 @@ namespace TimetableManagementSystem.Lecturers
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddLecturer addLecturer = new AddLecturer();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
             addLecturer.ShowDialog();
         }
 
         private void btnSideNavSubjects_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddSubject addSubject = new AddSubject();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
             addSubject.ShowDialog();
-        }
-
-        private void btnHeaderHome_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Homepage homepage = new Homepage();
-            homepage.ShowDialog();
         }
 
         private void cmbLecFac_SelectedIndexChanged(object sender, EventArgs e)
@@ -318,6 +311,20 @@ namespace TimetableManagementSystem.Lecturers
                 cmbLecDepartmentEdit.Items.Add("IM");
                 cmbLecDepartmentEdit.Items.Add("BM");
             }
+        }
+
+        private void btnHeaderHome_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
+
+        private void btnSideNavStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Students.Students stu = new Students.Students();
+            stu.ShowDialog();
         }
     }
 }

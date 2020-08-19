@@ -234,6 +234,7 @@
             this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavStudents.TabIndex = 15;
             this.btnSideNavStudents.TabStop = false;
+            this.btnSideNavStudents.Click += new System.EventHandler(this.btnSideNavStudents_Click);
             // 
             // btnSideNavTags
             // 
