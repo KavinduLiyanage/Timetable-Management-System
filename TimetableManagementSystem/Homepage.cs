@@ -97,5 +97,19 @@ namespace TimetableManagementSystem
             Tags.Tags tag = new Tags.Tags();
             tag.ShowDialog();
         }
+
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
+
+        private void statBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
+        }
     }
 }

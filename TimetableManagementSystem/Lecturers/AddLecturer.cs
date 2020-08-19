@@ -17,6 +17,7 @@ namespace TimetableManagementSystem.Lecturers
         public AddLecturer()
         {
             InitializeComponent();
+
         }
 
         SqlConnection con = Config.con;
@@ -52,7 +53,7 @@ namespace TimetableManagementSystem.Lecturers
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@lecname", txtLecName.Text);
                 cmd.Parameters.AddWithValue("@lecfaculty", cmbLecFac.Text);
-                cmd.Parameters.AddWithValue("@lecdepartment", txtLecDep.Text);
+                cmd.Parameters.AddWithValue("@lecdepartment", cmbLecDepartment.Text);
                 cmd.Parameters.AddWithValue("@leccenter", cmbLecCenter.Text);
                 cmd.Parameters.AddWithValue("@lecbuilding", cmbLecBuilding.Text);
                 cmd.Parameters.AddWithValue("@leclevel", cmbLecLevel.Text);
@@ -93,19 +94,19 @@ namespace TimetableManagementSystem.Lecturers
 
                 GetLecturers();
 
-                ClearFields();
+                ClearFieldsAfterAdd();
 
                 tabControlLecturers.SelectedTab = tabPageLecView;
             }
         }
 
-        private void ClearFields()
+        private void ClearFieldsAfterAdd()
         {
             txtLecName.Clear();
-            txtLecDep.Clear();
-            cmbLecFac.SelectedIndex = -1;
-            cmbLecBuilding.SelectedIndex = -1;
+            //cmbLecFac.SelectedIndex = -1;
+            cmbLecDepartment.SelectedIndex = -1;
             cmbLecCenter.SelectedIndex = -1;
+            cmbLecBuilding.SelectedIndex = -1;
             cmbLecLevel.SelectedIndex = -1;
             LecturerID = 0;
 
@@ -113,28 +114,31 @@ namespace TimetableManagementSystem.Lecturers
 
         private bool IsValid()
         {
-            if ((txtLecName.Text == string.Empty) && (txtLecDep.Text == string.Empty) && (cmbLecFac.Text == string.Empty)
+            if ((txtLecName.Text == string.Empty) && (cmbLecFac.Text == string.Empty)
                 && (cmbLecCenter.Text == string.Empty) && (cmbLecBuilding.Text == string.Empty) && (cmbLecLevel.Text == string.Empty))
             {
                 MessageBox.Show("Fill the all fields", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-
             return true;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            ClearFields();
+            ClearFieldsAfterAdd();
         }
 
         private void dgvLectures_CellClick(object sender, DataGridViewCellEventArgs e)
         {           
             LecturerID = Convert.ToInt32(dgvLectures.SelectedRows[0].Cells[0].Value);
             txtLecNameEdit.Text = dgvLectures.SelectedRows[0].Cells[1].Value.ToString();
-            cmbLecFacEdit.SelectedValue = dgvLectures.SelectedRows[0].Cells[2].Value;
-            txtLecDepEdit.Text = dgvLectures.SelectedRows[0].Cells[3].Value.ToString();
+            cmbLecFacEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[2].Value;
+            cmbLecDepartmentEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[3].Value;
+            cmbLecCenterEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[4].Value;
+            cmbLecBuildingEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[6].Value;
+            cmbLecLevelEdit.SelectedItem = dgvLectures.SelectedRows[0].Cells[5].Value;
+
             tabControlLecturers.SelectedTab = tabPageLecEdit;
 
         }
@@ -143,54 +147,106 @@ namespace TimetableManagementSystem.Lecturers
         {
             if (LecturerID > 0)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Lecturers SET LecName = @LecName, LecDepartment = @LecDepartment WHERE LecturerID = @LecturerID", con);
+                SqlCommand cmd = new SqlCommand("UPDATE Lecturers SET LecName = @LecName, LecFaculty = @LecFaculty, LecDepartment = @LecDepartment, LecCenter = @LecCenter, LecBuilding = @LecBuilding, LecLevel = @LecLevel, LecRank = @LecRank WHERE LecturerID = @LecturerID", con);
                 cmd.CommandType = CommandType.Text;
+
                 cmd.Parameters.AddWithValue("@LecName", txtLecNameEdit.Text);
-                cmd.Parameters.AddWithValue("@LecDepartment", txtLecDepEdit.Text);
+                cmd.Parameters.AddWithValue("@lecfaculty", cmbLecFacEdit.Text);
+                cmd.Parameters.AddWithValue("@lecdepartment", cmbLecDepartmentEdit.Text);
+                cmd.Parameters.AddWithValue("@leccenter", cmbLecCenterEdit.Text);
+                cmd.Parameters.AddWithValue("@lecbuilding", cmbLecBuildingEdit.Text);
+                cmd.Parameters.AddWithValue("@leclevel", cmbLecLevelEdit.Text);
+
+                if (cmbLecLevelEdit.Text.Equals("Professor"))
+                {
+                    LecturerRank = 1;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Assistant Professor"))
+                {
+                    LecturerRank = 2;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer(HG)"))
+                {
+                    LecturerRank = 4;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer"))
+                {
+                    LecturerRank = 5;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Lecturer"))
+                {
+                    LecturerRank = 3;
+                }
+                else if (cmbLecLevelEdit.Text.Equals("Assistant Lecturer"))
+                {
+                    LecturerRank = 6;
+                }
+                else
+                {
+                    LecturerRank = 7;
+                }
+                cmd.Parameters.AddWithValue("@lecrank", LecturerRank);
                 cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("Lecturer details Updated", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lecturer Details Updated", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 GetLecturers();
 
-                ClearFields();
+                ClearFieldsAfterUpdate();
 
                 tabControlLecturers.SelectedTab = tabPageLecView;
             }
             else
             {
-                MessageBox.Show("Please select a name to update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please Select a lecturer to Update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ClearFieldsAfterUpdate()
+        {
+            txtLecNameEdit.Clear();
+            //cmbLecFac.SelectedIndex = -1;
+            cmbLecDepartmentEdit.SelectedIndex = -1;
+            cmbLecCenterEdit.SelectedIndex = -1;
+            cmbLecBuildingEdit.SelectedIndex = -1;
+            cmbLecLevelEdit.SelectedIndex = -1;
+            LecturerID = 0;
+
         }
 
         private void btnLecDelete_Click(object sender, EventArgs e)
         {
             if (LecturerID > 0)
             {
-                SqlCommand cmd = new SqlCommand("DELETE FROM Lecturers WHERE LecturerID = @LecturerID", con);
-                cmd.CommandType = CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
+                if(MessageBox.Show("Are You Sure You Want to Delete the Lecturer?","Delete Lecturer",MessageBoxButtons.YesNo,MessageBoxIcon.Information)==DialogResult.Yes)
+                {
+                    SqlCommand cmd = new SqlCommand("DELETE FROM Lecturers WHERE LecturerID = @LecturerID", con);
+                    cmd.CommandType = CommandType.Text;
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
 
-                MessageBox.Show("Name is Deleted", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                GetLecturers();
+                    MessageBox.Show("Lecturer is Deleted", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                ClearFields();
+                    GetLecturers();
 
-                tabControlLecturers.SelectedTab = tabPageLecView;
+                    ClearFieldsAfterUpdate();
+
+                    tabControlLecturers.SelectedTab = tabPageLecView;
+                }
+                
             }
             else
             {
-                MessageBox.Show("Please select a name to delete ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please Select a lecturer to Delete ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -208,6 +264,60 @@ namespace TimetableManagementSystem.Lecturers
             addSubject.ShowDialog();
         }
 
-        
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
+
+        private void cmbLecFac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbLecDepartment.Items.Clear();
+
+            if (cmbLecFac.SelectedItem.Equals("Engineering"))
+            {
+                cmbLecDepartment.Items.Add("CE");
+                cmbLecDepartment.Items.Add("EE");
+            }
+            else if (cmbLecFac.SelectedItem.Equals("Computing"))
+            {
+                cmbLecDepartment.Items.Add("CSSE");
+                cmbLecDepartment.Items.Add("DS");
+                cmbLecDepartment.Items.Add("IT");
+               
+            }
+            else if (cmbLecFac.SelectedItem.Equals("Business"))
+            {
+                cmbLecDepartment.Items.Add("IM");
+                cmbLecDepartment.Items.Add("BM");
+               
+            }
+
+            //cmbLecFac.SelectedIndex = -1;
+        }
+
+        private void cmbLecFacEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbLecDepartmentEdit.Items.Clear();
+
+            if (cmbLecFacEdit.SelectedItem.Equals("Engineering"))
+            {
+                cmbLecDepartmentEdit.Items.Add("CE");
+                cmbLecDepartmentEdit.Items.Add("EE");
+            }
+            else if (cmbLecFacEdit.SelectedItem.Equals("Computing"))
+            {
+                cmbLecDepartmentEdit.Items.Add("CSSE");
+                cmbLecDepartmentEdit.Items.Add("DS");
+                cmbLecDepartmentEdit.Items.Add("IT");
+
+            }
+            else if (cmbLecFacEdit.SelectedItem.Equals("Business"))
+            {
+                cmbLecDepartmentEdit.Items.Add("IM");
+                cmbLecDepartmentEdit.Items.Add("BM");
+            }
+        }
     }
 }
