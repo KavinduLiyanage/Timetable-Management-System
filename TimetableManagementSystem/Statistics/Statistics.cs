@@ -25,7 +25,8 @@ namespace TimetableManagementSystem.Statistics
         private void Statistics_Load(object sender, EventArgs e)
         {
 
-           //totalLecturerCount();
+           totalLecturerCount();
+            totalSubjectCount();
           LoadLecFacChart();
             LoadLecDeptChart();
             //LoadLecCentreChart();
@@ -95,23 +96,56 @@ namespace TimetableManagementSystem.Statistics
         //    con.Close();
         //}
 
+
+
+        //Calculating total lecturer count
         private void totalLecturerCount()
         {
-            SqlCommand command = new SqlCommand("getLecCount", con);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
 
             con.Open();
-            SqlDataReader dr = command.ExecuteReader();
-            command.Parameters.AddWithValue("@totalCountLec", total_lecturers.Text);
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT COUNT(LecturerID) as lecCount FROM Lecturers";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
 
-            dr.Read();
-            total_lecturers.Text = dr["@totalCountLec"].ToString();
+            while (dr.Read())
+            {
+                string lec_count = (string)dr["lecCount"].ToString();
+                total_lecturers.Text = lec_count;
+                
+
+            }
             con.Close();
-
 
         }
 
-        //Side Nav Bar Buttons' Links
+        //Calculating total subject count
+        private void totalSubjectCount()
+        {
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT COUNT(id) as subCount FROM Programme";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string sub_count = (string)dr["subCount"].ToString();
+                subject_count_txt.Text = sub_count;
+
+
+            }
+            con.Close();
+
+        }
+
+
+        //---------------------------------Side Nav Bar Buttons' Links--------------------------------------------------------
         private void btnSideNavWorking_Click(object sender, EventArgs e)
         {
 

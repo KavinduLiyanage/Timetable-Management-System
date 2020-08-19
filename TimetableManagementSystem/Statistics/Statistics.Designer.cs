@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea37 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend37 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea38 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend38 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea39 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend39 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea40 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend40 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea41 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend41 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea42 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend42 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.LecStat_tabpage = new System.Windows.Forms.TabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
@@ -57,8 +57,6 @@
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.faclec_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lecturersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.timetablemngsysdbDataSet = new TimetableManagementSystem.timetablemngsysdbDataSet();
             this.StuGStat_tabpage = new System.Windows.Forms.TabPage();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
@@ -77,8 +75,9 @@
             this.metroButton8 = new MetroFramework.Controls.MetroButton();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lecturersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.timetablemngsysdbDataSet = new TimetableManagementSystem.timetablemngsysdbDataSet();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
             this.lecturersTableAdapter = new TimetableManagementSystem.timetablemngsysdbDataSetTableAdapters.LecturersTableAdapter();
             this.timetablemngsysdbDataSet1 = new TimetableManagementSystem.timetablemngsysdbDataSet1();
@@ -90,14 +89,13 @@
             this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
             this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
             this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
+            this.subject_count_txt = new MetroFramework.Controls.MetroTextBox();
             this.metroTabControl1.SuspendLayout();
             this.LecStat_tabpage.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.metroPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deptLec_chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faclec_chart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).BeginInit();
             this.StuGStat_tabpage.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -106,8 +104,9 @@
             this.SubStat_tabpage.SuspendLayout();
             this.metroPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
@@ -129,7 +128,7 @@
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.metroTabControl1.Location = new System.Drawing.Point(139, 116);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(788, 461);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabControl1.TabIndex = 1;
@@ -195,7 +194,7 @@
             // 
             // 
             this.total_lecturers.CustomButton.Image = null;
-            this.total_lecturers.CustomButton.Location = new System.Drawing.Point(63, 1);
+            this.total_lecturers.CustomButton.Location = new System.Drawing.Point(33, 1);
             this.total_lecturers.CustomButton.Name = "";
             this.total_lecturers.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.total_lecturers.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -213,7 +212,7 @@
             this.total_lecturers.SelectionLength = 0;
             this.total_lecturers.SelectionStart = 0;
             this.total_lecturers.ShortcutsEnabled = true;
-            this.total_lecturers.Size = new System.Drawing.Size(89, 27);
+            this.total_lecturers.Size = new System.Drawing.Size(59, 27);
             this.total_lecturers.TabIndex = 44;
             this.total_lecturers.UseSelectable = true;
             this.total_lecturers.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -234,10 +233,10 @@
             // 
             // deptLec_chart
             // 
-            chartArea37.Name = "ChartArea1";
-            this.deptLec_chart.ChartAreas.Add(chartArea37);
-            legend37.Name = "Legend1";
-            this.deptLec_chart.Legends.Add(legend37);
+            chartArea1.Name = "ChartArea1";
+            this.deptLec_chart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.deptLec_chart.Legends.Add(legend1);
             this.deptLec_chart.Location = new System.Drawing.Point(391, 120);
             this.deptLec_chart.Name = "deptLec_chart";
             this.deptLec_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
@@ -248,10 +247,10 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series37.ChartArea = "ChartArea1";
-            series37.Legend = "Legend1";
-            series37.Name = "Series1";
-            this.deptLec_chart.Series.Add(series37);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.deptLec_chart.Series.Add(series1);
             this.deptLec_chart.Size = new System.Drawing.Size(337, 261);
             this.deptLec_chart.TabIndex = 41;
             this.deptLec_chart.Text = "chart1";
@@ -261,12 +260,12 @@
             this.metroButton2.BackColor = System.Drawing.Color.Navy;
             this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.metroButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton2.Location = new System.Drawing.Point(292, 21);
+            this.metroButton2.Location = new System.Drawing.Point(254, 21);
             this.metroButton2.Margin = new System.Windows.Forms.Padding(2);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(97, 30);
+            this.metroButton2.Size = new System.Drawing.Size(147, 30);
             this.metroButton2.TabIndex = 39;
-            this.metroButton2.Text = "Total Count";
+            this.metroButton2.Text = "Total Lecturer Count";
             this.metroButton2.UseCustomBackColor = true;
             this.metroButton2.UseCustomForeColor = true;
             this.metroButton2.UseSelectable = true;
@@ -286,10 +285,10 @@
             // 
             // faclec_chart
             // 
-            chartArea38.Name = "ChartArea1";
-            this.faclec_chart.ChartAreas.Add(chartArea38);
-            legend38.Name = "Legend1";
-            this.faclec_chart.Legends.Add(legend38);
+            chartArea2.Name = "ChartArea1";
+            this.faclec_chart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.faclec_chart.Legends.Add(legend2);
             this.faclec_chart.Location = new System.Drawing.Point(32, 120);
             this.faclec_chart.Name = "faclec_chart";
             this.faclec_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -300,23 +299,13 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series38.ChartArea = "ChartArea1";
-            series38.Legend = "Legend1";
-            series38.Name = "Series1";
-            this.faclec_chart.Series.Add(series38);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.faclec_chart.Series.Add(series2);
             this.faclec_chart.Size = new System.Drawing.Size(337, 261);
             this.faclec_chart.TabIndex = 2;
             this.faclec_chart.Text = "chart1";
-            // 
-            // lecturersBindingSource
-            // 
-            this.lecturersBindingSource.DataMember = "Lecturers";
-            this.lecturersBindingSource.DataSource = this.timetablemngsysdbDataSet;
-            // 
-            // timetablemngsysdbDataSet
-            // 
-            this.timetablemngsysdbDataSet.DataSetName = "timetablemngsysdbDataSet";
-            this.timetablemngsysdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // StuGStat_tabpage
             // 
@@ -381,10 +370,10 @@
             // 
             // chart2
             // 
-            chartArea39.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea39);
-            legend39.Name = "Legend1";
-            this.chart2.Legends.Add(legend39);
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
             this.chart2.Location = new System.Drawing.Point(375, 120);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
@@ -395,11 +384,11 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series39.ChartArea = "ChartArea1";
-            series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series39.Legend = "Legend1";
-            series39.Name = "Series1";
-            this.chart2.Series.Add(series39);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart2.Series.Add(series3);
             this.chart2.Size = new System.Drawing.Size(337, 261);
             this.chart2.TabIndex = 41;
             this.chart2.Text = "chart2";
@@ -460,10 +449,10 @@
             // 
             // chart3
             // 
-            chartArea40.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea40);
-            legend40.Name = "Legend1";
-            this.chart3.Legends.Add(legend40);
+            chartArea4.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart3.Legends.Add(legend4);
             this.chart3.Location = new System.Drawing.Point(32, 120);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -474,11 +463,11 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series40.ChartArea = "ChartArea1";
-            series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series40.Legend = "Legend1";
-            series40.Name = "Series1";
-            this.chart3.Series.Add(series40);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart3.Series.Add(series4);
             this.chart3.Size = new System.Drawing.Size(337, 261);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart1";
@@ -497,13 +486,13 @@
             // 
             // metroPanel3
             // 
+            this.metroPanel3.Controls.Add(this.subject_count_txt);
             this.metroPanel3.Controls.Add(this.metroButton7);
             this.metroPanel3.Controls.Add(this.metroLabel3);
             this.metroPanel3.Controls.Add(this.chart4);
             this.metroPanel3.Controls.Add(this.metroButton8);
             this.metroPanel3.Controls.Add(this.metroButton9);
             this.metroPanel3.Controls.Add(this.metroLabel4);
-            this.metroPanel3.Controls.Add(this.dataGridView2);
             this.metroPanel3.Controls.Add(this.chart5);
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
@@ -546,10 +535,10 @@
             // 
             // chart4
             // 
-            chartArea41.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea41);
-            legend41.Name = "Legend1";
-            this.chart4.Legends.Add(legend41);
+            chartArea5.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart4.Legends.Add(legend5);
             this.chart4.Location = new System.Drawing.Point(375, 120);
             this.chart4.Name = "chart4";
             this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
@@ -560,11 +549,11 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series41.ChartArea = "ChartArea1";
-            series41.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series41.Legend = "Legend1";
-            series41.Name = "Series1";
-            this.chart4.Series.Add(series41);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart4.Series.Add(series5);
             this.chart4.Size = new System.Drawing.Size(337, 261);
             this.chart4.TabIndex = 41;
             this.chart4.Text = "chart4";
@@ -589,12 +578,12 @@
             this.metroButton9.BackColor = System.Drawing.Color.Navy;
             this.metroButton9.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.metroButton9.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton9.Location = new System.Drawing.Point(292, 21);
+            this.metroButton9.Location = new System.Drawing.Point(239, 21);
             this.metroButton9.Margin = new System.Windows.Forms.Padding(2);
             this.metroButton9.Name = "metroButton9";
-            this.metroButton9.Size = new System.Drawing.Size(97, 30);
+            this.metroButton9.Size = new System.Drawing.Size(150, 30);
             this.metroButton9.TabIndex = 39;
-            this.metroButton9.Text = "Total Count";
+            this.metroButton9.Text = "Total Subject Count";
             this.metroButton9.UseCustomBackColor = true;
             this.metroButton9.UseCustomForeColor = true;
             this.metroButton9.UseSelectable = true;
@@ -612,23 +601,12 @@
             this.metroLabel4.Text = "Faculty vs Lecturer Count";
             this.metroLabel4.UseCustomBackColor = true;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.Location = new System.Drawing.Point(407, 21);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(93, 30);
-            this.dataGridView2.TabIndex = 3;
-            // 
             // chart5
             // 
-            chartArea42.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea42);
-            legend42.Name = "Legend1";
-            this.chart5.Legends.Add(legend42);
+            chartArea6.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart5.Legends.Add(legend6);
             this.chart5.Location = new System.Drawing.Point(32, 120);
             this.chart5.Name = "chart5";
             this.chart5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -639,14 +617,24 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series42.ChartArea = "ChartArea1";
-            series42.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series42.Legend = "Legend1";
-            series42.Name = "Series1";
-            this.chart5.Series.Add(series42);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart5.Series.Add(series6);
             this.chart5.Size = new System.Drawing.Size(337, 261);
             this.chart5.TabIndex = 2;
             this.chart5.Text = "chart1";
+            // 
+            // lecturersBindingSource
+            // 
+            this.lecturersBindingSource.DataMember = "Lecturers";
+            this.lecturersBindingSource.DataSource = this.timetablemngsysdbDataSet;
+            // 
+            // timetablemngsysdbDataSet
+            // 
+            this.timetablemngsysdbDataSet.DataSetName = "timetablemngsysdbDataSet";
+            this.timetablemngsysdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // locations_lbl
             // 
@@ -759,6 +747,36 @@
             this.btnSideNavWorking.TabStop = false;
             this.btnSideNavWorking.Click += new System.EventHandler(this.btnSideNavWorking_Click);
             // 
+            // subject_count_txt
+            // 
+            // 
+            // 
+            // 
+            this.subject_count_txt.CustomButton.Image = null;
+            this.subject_count_txt.CustomButton.Location = new System.Drawing.Point(33, 1);
+            this.subject_count_txt.CustomButton.Name = "";
+            this.subject_count_txt.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.subject_count_txt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.subject_count_txt.CustomButton.TabIndex = 1;
+            this.subject_count_txt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.subject_count_txt.CustomButton.UseSelectable = true;
+            this.subject_count_txt.CustomButton.Visible = false;
+            this.subject_count_txt.Lines = new string[0];
+            this.subject_count_txt.Location = new System.Drawing.Point(403, 24);
+            this.subject_count_txt.MaxLength = 32767;
+            this.subject_count_txt.Name = "subject_count_txt";
+            this.subject_count_txt.PasswordChar = '\0';
+            this.subject_count_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.subject_count_txt.SelectedText = "";
+            this.subject_count_txt.SelectionLength = 0;
+            this.subject_count_txt.SelectionStart = 0;
+            this.subject_count_txt.ShortcutsEnabled = true;
+            this.subject_count_txt.Size = new System.Drawing.Size(59, 27);
+            this.subject_count_txt.TabIndex = 45;
+            this.subject_count_txt.UseSelectable = true;
+            this.subject_count_txt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.subject_count_txt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // Statistics
             // 
             this.ApplyImageInvert = true;
@@ -788,8 +806,6 @@
             this.metroPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deptLec_chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faclec_chart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).EndInit();
             this.StuGStat_tabpage.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
@@ -800,8 +816,9 @@
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).EndInit();
@@ -846,7 +863,6 @@
         private MetroFramework.Controls.MetroButton metroButton8;
         private MetroFramework.Controls.MetroButton metroButton9;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
         private timetablemngsysdbDataSet timetablemngsysdbDataSet;
         private System.Windows.Forms.BindingSource lecturersBindingSource;
@@ -861,5 +877,6 @@
         private System.Windows.Forms.PictureBox btnSideNavSubjects;
         private System.Windows.Forms.PictureBox btnSideNavLecturers;
         private System.Windows.Forms.PictureBox btnSideNavWorking;
+        private MetroFramework.Controls.MetroTextBox subject_count_txt;
     }
 }
