@@ -353,12 +353,13 @@ namespace TimetableManagementSystem.Locations
         }
 
 
-
-
-        
-
-
-
+        //-----------------header nav buttons--------------------------------------------
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
     }
 }
 

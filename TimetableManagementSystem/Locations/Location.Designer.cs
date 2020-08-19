@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
             this.viewloc_tab = new System.Windows.Forms.TabPage();
             this.locationview_panel = new System.Windows.Forms.Panel();
@@ -71,6 +71,11 @@
             this.btnSideNavTags = new System.Windows.Forms.PictureBox();
             this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
             this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
+            this.btnHeaderHome = new System.Windows.Forms.Button();
+            this.btnHeaderSessions = new System.Windows.Forms.Button();
+            this.btnHeaderRooms = new System.Windows.Forms.Button();
+            this.btnHeaderAdvanced = new System.Windows.Forms.Button();
+            this.btnHeaderGenerate = new System.Windows.Forms.Button();
             this.loc_tabcontrol.SuspendLayout();
             this.viewloc_tab.SuspendLayout();
             this.locationview_panel.SuspendLayout();
@@ -190,14 +195,14 @@
             this.loc_dgridv.AllowUserToResizeRows = false;
             this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.loc_dgridv.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.loc_dgridv.ColumnHeadersHeight = 29;
             this.loc_dgridv.Location = new System.Drawing.Point(22, 80);
             this.loc_dgridv.MultiSelect = false;
@@ -205,11 +210,11 @@
             this.loc_dgridv.ReadOnly = true;
             this.loc_dgridv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.loc_dgridv.RowHeadersWidth = 51;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.loc_dgridv.RowTemplate.Height = 24;
             this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.loc_dgridv.Size = new System.Drawing.Size(738, 316);
@@ -725,6 +730,72 @@
             this.btnSideNavStatistics.TabStop = false;
             this.btnSideNavStatistics.Click += new System.EventHandler(this.btnSideNavStatistics_Click);
             // 
+            // btnHeaderHome
+            // 
+            this.btnHeaderHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderHome.FlatAppearance.BorderSize = 0;
+            this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderHome.Location = new System.Drawing.Point(216, 9);
+            this.btnHeaderHome.Name = "btnHeaderHome";
+            this.btnHeaderHome.Size = new System.Drawing.Size(79, 40);
+            this.btnHeaderHome.TabIndex = 44;
+            this.btnHeaderHome.Text = "Home";
+            this.btnHeaderHome.UseVisualStyleBackColor = false;
+            this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
+            // 
+            // btnHeaderSessions
+            // 
+            this.btnHeaderSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderSessions.FlatAppearance.BorderSize = 0;
+            this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderSessions.Location = new System.Drawing.Point(348, 9);
+            this.btnHeaderSessions.Name = "btnHeaderSessions";
+            this.btnHeaderSessions.Size = new System.Drawing.Size(103, 40);
+            this.btnHeaderSessions.TabIndex = 45;
+            this.btnHeaderSessions.Text = "Sessions";
+            this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderRooms
+            // 
+            this.btnHeaderRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderRooms.FlatAppearance.BorderSize = 0;
+            this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderRooms.Location = new System.Drawing.Point(512, 9);
+            this.btnHeaderRooms.Name = "btnHeaderRooms";
+            this.btnHeaderRooms.Size = new System.Drawing.Size(84, 40);
+            this.btnHeaderRooms.TabIndex = 46;
+            this.btnHeaderRooms.Text = "Rooms";
+            this.btnHeaderRooms.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderAdvanced
+            // 
+            this.btnHeaderAdvanced.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderAdvanced.FlatAppearance.BorderSize = 0;
+            this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderAdvanced.Location = new System.Drawing.Point(642, 9);
+            this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
+            this.btnHeaderAdvanced.Size = new System.Drawing.Size(115, 40);
+            this.btnHeaderAdvanced.TabIndex = 47;
+            this.btnHeaderAdvanced.Text = "Advanced";
+            this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderGenerate
+            // 
+            this.btnHeaderGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderGenerate.FlatAppearance.BorderSize = 0;
+            this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderGenerate.Location = new System.Drawing.Point(794, 9);
+            this.btnHeaderGenerate.Name = "btnHeaderGenerate";
+            this.btnHeaderGenerate.Size = new System.Drawing.Size(112, 40);
+            this.btnHeaderGenerate.TabIndex = 48;
+            this.btnHeaderGenerate.Text = "Generate";
+            this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            // 
             // Location
             // 
             this.ApplyImageInvert = true;
@@ -733,6 +804,11 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.btnHeaderGenerate);
+            this.Controls.Add(this.btnHeaderAdvanced);
+            this.Controls.Add(this.btnHeaderRooms);
+            this.Controls.Add(this.btnHeaderSessions);
+            this.Controls.Add(this.btnHeaderHome);
             this.Controls.Add(this.btnSideNavStatistics);
             this.Controls.Add(this.btnSideNavLocations);
             this.Controls.Add(this.btnSideNavTags);
@@ -817,5 +893,10 @@
         private System.Windows.Forms.PictureBox btnSideNavTags;
         private System.Windows.Forms.PictureBox btnSideNavLocations;
         private System.Windows.Forms.PictureBox btnSideNavStatistics;
+        private System.Windows.Forms.Button btnHeaderHome;
+        private System.Windows.Forms.Button btnHeaderSessions;
+        private System.Windows.Forms.Button btnHeaderRooms;
+        private System.Windows.Forms.Button btnHeaderAdvanced;
+        private System.Windows.Forms.Button btnHeaderGenerate;
     }
 }

@@ -30,6 +30,8 @@ namespace TimetableManagementSystem.Statistics
             LoadLecFacChart();
             LoadLecDeptChart();
             LoadSubjectYearChart();
+            LoadProgrammeStdGroupChart();
+            totalStdGrpCount();
             //LoadLecCentreChart();
         }
 
@@ -76,29 +78,7 @@ namespace TimetableManagementSystem.Statistics
             con.Close();
         }
 
-        //private void LoadLecCentreChart()
-        //{
-        //    SqlCommand command = new SqlCommand();
-        //    command.Connection = con;
-
-        //    DataSet ds = new DataSet();
-        //    con.Open();
-        //    SqlDataAdapter adapt = new SqlDataAdapter("Select LecCenter,COUNT(LecturerID) as countcentlec from Lecturers GROUP BY LecCenter", con);
-        //    adapt.Fill(ds, "countcentlec");
-        //    centreLec_chart.DataSource = ds.Tables["countcentlec"];
-
-
-        //    centreLec_chart.Series["Series1"].XValueMember = "LecCenter";
-        //    centreLec_chart.Series["Series1"].YValueMembers = "countcentlec";
-        //    centreLec_chart.Series["Series1"].ChartType = SeriesChartType.Pie;
-
-
-        //    centreLec_chart.DataBind();
-        //    con.Close();
-        //}
-
-
-
+     
         //Calculating total lecturer count
         private void totalLecturerCount()
         {
@@ -122,6 +102,52 @@ namespace TimetableManagementSystem.Statistics
 
         }
 
+        //Calculating total subject count
+        private void totalStdGrpCount()
+        {
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT count(GenGrpNum) as grpcount from GenGroupNumber group by ProgrammeRef ";
+            cmd.ExecuteNonQuery();
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string grp_count = (string)dr["grpcount"].ToString();
+                stdgrpcount_txt.Text = grp_count;
+
+
+            }
+            con.Close();
+
+        }
+
+
+        // Chart for Programme vs Student Group Count 
+        private void LoadProgrammeStdGroupChart()
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
+
+            DataSet ds = new DataSet();
+            con.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter("select ProgrammeRef, count(GenGrpNum) as grpcount from GenGroupNumber group by ProgrammeRef", con);
+            adapt.Fill(ds, "grpcount");
+            progrpcount_chart.DataSource = ds.Tables["grpcount"];
+
+
+            progrpcount_chart.Series["Series1"].XValueMember = "ProgrammeRef";
+            progrpcount_chart.Series["Series1"].YValueMembers = "grpcount";
+            progrpcount_chart.Series["Series1"].ChartType = SeriesChartType.Bar;
+
+
+            progrpcount_chart.DataBind();
+            con.Close();
+        }
+
         // Chart for Subject Count vs Year
         private void LoadSubjectYearChart()
         {
@@ -143,6 +169,8 @@ namespace TimetableManagementSystem.Statistics
             subyear_chart.DataBind();
             con.Close();
         }
+
+        
 
 
         //Calculating total subject count
@@ -208,8 +236,13 @@ namespace TimetableManagementSystem.Statistics
             stat.ShowDialog();
         }
 
-      
 
-       
+        //-----------------header nav buttons--------------------------------------------
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
     }
 }
