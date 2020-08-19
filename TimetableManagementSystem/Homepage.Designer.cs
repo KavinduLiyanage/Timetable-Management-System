@@ -28,17 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.getStartedBtn = new System.Windows.Forms.Button();
-            this.wdhBtn = new System.Windows.Forms.Button();
-            this.subBtn = new System.Windows.Forms.Button();
-            this.stuBtn = new System.Windows.Forms.Button();
-            this.tagBtn = new System.Windows.Forms.Button();
-            this.locBtn = new System.Windows.Forms.Button();
-            this.statBtn = new System.Windows.Forms.Button();
-            this.sessionBtn = new System.Windows.Forms.Button();
-            this.advOpBtn = new System.Windows.Forms.Button();
-            this.roomBtn = new System.Windows.Forms.Button();
-            this.genTimetBtn = new System.Windows.Forms.Button();
             this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
             this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
             this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
@@ -51,6 +40,17 @@
             this.btnHeaderSessions = new System.Windows.Forms.Button();
             this.btnHeaderGenerate = new System.Windows.Forms.Button();
             this.btnHeaderHome = new System.Windows.Forms.Button();
+            this.genTimetBtn = new MetroFramework.Controls.MetroTile();
+            this.roomBtn = new MetroFramework.Controls.MetroTile();
+            this.advOpBtn = new MetroFramework.Controls.MetroTile();
+            this.sessionBtn = new MetroFramework.Controls.MetroTile();
+            this.statBtn = new MetroFramework.Controls.MetroTile();
+            this.locBtn = new MetroFramework.Controls.MetroTile();
+            this.tagBtn = new MetroFramework.Controls.MetroTile();
+            this.stuBtn = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.wdhBtn = new MetroFramework.Controls.MetroTile();
+            this.subBtn = new MetroFramework.Controls.MetroTile();
             this.lecBtn = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
@@ -60,122 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             this.SuspendLayout();
-            // 
-            // getStartedBtn
-            // 
-            this.getStartedBtn.Location = new System.Drawing.Point(180, 172);
-            this.getStartedBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.getStartedBtn.Name = "getStartedBtn";
-            this.getStartedBtn.Size = new System.Drawing.Size(110, 79);
-            this.getStartedBtn.TabIndex = 0;
-            this.getStartedBtn.Text = "Get Started";
-            this.getStartedBtn.UseVisualStyleBackColor = true;
-            // 
-            // wdhBtn
-            // 
-            this.wdhBtn.Location = new System.Drawing.Point(389, 172);
-            this.wdhBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.wdhBtn.Name = "wdhBtn";
-            this.wdhBtn.Size = new System.Drawing.Size(110, 79);
-            this.wdhBtn.TabIndex = 1;
-            this.wdhBtn.Text = "Working Days & Hours";
-            this.wdhBtn.UseVisualStyleBackColor = true;
-            this.wdhBtn.Click += new System.EventHandler(this.wdhBtn_Click);
-            // 
-            // subBtn
-            // 
-            this.subBtn.Location = new System.Drawing.Point(768, 172);
-            this.subBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.subBtn.Name = "subBtn";
-            this.subBtn.Size = new System.Drawing.Size(110, 79);
-            this.subBtn.TabIndex = 3;
-            this.subBtn.Text = "Subjects";
-            this.subBtn.UseVisualStyleBackColor = true;
-            this.subBtn.Click += new System.EventHandler(this.subBtn_Click);
-            // 
-            // stuBtn
-            // 
-            this.stuBtn.Location = new System.Drawing.Point(180, 301);
-            this.stuBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.stuBtn.Name = "stuBtn";
-            this.stuBtn.Size = new System.Drawing.Size(110, 79);
-            this.stuBtn.TabIndex = 4;
-            this.stuBtn.Text = "Students";
-            this.stuBtn.UseVisualStyleBackColor = true;
-            this.stuBtn.Click += new System.EventHandler(this.stuBtn_Click);
-            // 
-            // tagBtn
-            // 
-            this.tagBtn.Location = new System.Drawing.Point(389, 301);
-            this.tagBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.tagBtn.Name = "tagBtn";
-            this.tagBtn.Size = new System.Drawing.Size(110, 79);
-            this.tagBtn.TabIndex = 5;
-            this.tagBtn.Text = "Tags";
-            this.tagBtn.UseVisualStyleBackColor = true;
-            this.tagBtn.Click += new System.EventHandler(this.tagBtn_Click);
-            // 
-            // locBtn
-            // 
-            this.locBtn.Location = new System.Drawing.Point(575, 301);
-            this.locBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.locBtn.Name = "locBtn";
-            this.locBtn.Size = new System.Drawing.Size(110, 79);
-            this.locBtn.TabIndex = 6;
-            this.locBtn.Text = "Location";
-            this.locBtn.UseVisualStyleBackColor = true;
-            this.locBtn.Click += new System.EventHandler(this.locBtn_Click_1);
-            // 
-            // statBtn
-            // 
-            this.statBtn.Location = new System.Drawing.Point(768, 301);
-            this.statBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.statBtn.Name = "statBtn";
-            this.statBtn.Size = new System.Drawing.Size(110, 79);
-            this.statBtn.TabIndex = 7;
-            this.statBtn.Text = "Statistics";
-            this.statBtn.UseVisualStyleBackColor = true;
-            this.statBtn.Click += new System.EventHandler(this.statBtn_Click);
-            // 
-            // sessionBtn
-            // 
-            this.sessionBtn.Location = new System.Drawing.Point(180, 431);
-            this.sessionBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.sessionBtn.Name = "sessionBtn";
-            this.sessionBtn.Size = new System.Drawing.Size(110, 79);
-            this.sessionBtn.TabIndex = 8;
-            this.sessionBtn.Text = "Sessions";
-            this.sessionBtn.UseVisualStyleBackColor = true;
-            // 
-            // advOpBtn
-            // 
-            this.advOpBtn.Location = new System.Drawing.Point(389, 431);
-            this.advOpBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.advOpBtn.Name = "advOpBtn";
-            this.advOpBtn.Size = new System.Drawing.Size(110, 79);
-            this.advOpBtn.TabIndex = 9;
-            this.advOpBtn.Text = "Advanced Options";
-            this.advOpBtn.UseVisualStyleBackColor = true;
-            // 
-            // roomBtn
-            // 
-            this.roomBtn.Location = new System.Drawing.Point(575, 431);
-            this.roomBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.roomBtn.Name = "roomBtn";
-            this.roomBtn.Size = new System.Drawing.Size(110, 79);
-            this.roomBtn.TabIndex = 10;
-            this.roomBtn.Text = "Rooms";
-            this.roomBtn.UseVisualStyleBackColor = true;
-            // 
-            // genTimetBtn
-            // 
-            this.genTimetBtn.Location = new System.Drawing.Point(768, 431);
-            this.genTimetBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.genTimetBtn.Name = "genTimetBtn";
-            this.genTimetBtn.Size = new System.Drawing.Size(110, 79);
-            this.genTimetBtn.TabIndex = 11;
-            this.genTimetBtn.Text = "Generate Timetables";
-            this.genTimetBtn.UseVisualStyleBackColor = true;
             // 
             // btnSideNavWorking
             // 
@@ -324,14 +208,186 @@
             this.btnHeaderHome.UseVisualStyleBackColor = false;
             this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
             // 
+            // genTimetBtn
+            // 
+            this.genTimetBtn.ActiveControl = null;
+            this.genTimetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.genTimetBtn.Location = new System.Drawing.Point(709, 380);
+            this.genTimetBtn.Name = "genTimetBtn";
+            this.genTimetBtn.Size = new System.Drawing.Size(150, 100);
+            this.genTimetBtn.TabIndex = 77;
+            this.genTimetBtn.Text = "Generate Timetables";
+            this.genTimetBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.genTimetBtn.UseCustomBackColor = true;
+            this.genTimetBtn.UseCustomForeColor = true;
+            this.genTimetBtn.UseSelectable = true;
+            this.genTimetBtn.UseTileImage = true;
+            // 
+            // roomBtn
+            // 
+            this.roomBtn.ActiveControl = null;
+            this.roomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.roomBtn.Location = new System.Drawing.Point(376, 380);
+            this.roomBtn.Name = "roomBtn";
+            this.roomBtn.Size = new System.Drawing.Size(150, 100);
+            this.roomBtn.TabIndex = 76;
+            this.roomBtn.Text = "Rooms";
+            this.roomBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.roomBtn.UseCustomBackColor = true;
+            this.roomBtn.UseCustomForeColor = true;
+            this.roomBtn.UseSelectable = true;
+            this.roomBtn.UseTileImage = true;
+            // 
+            // advOpBtn
+            // 
+            this.advOpBtn.ActiveControl = null;
+            this.advOpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.advOpBtn.Location = new System.Drawing.Point(542, 380);
+            this.advOpBtn.Name = "advOpBtn";
+            this.advOpBtn.Size = new System.Drawing.Size(150, 100);
+            this.advOpBtn.TabIndex = 75;
+            this.advOpBtn.Text = "Advanced Options";
+            this.advOpBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.advOpBtn.UseCustomBackColor = true;
+            this.advOpBtn.UseCustomForeColor = true;
+            this.advOpBtn.UseSelectable = true;
+            this.advOpBtn.UseTileImage = true;
+            // 
+            // sessionBtn
+            // 
+            this.sessionBtn.ActiveControl = null;
+            this.sessionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.sessionBtn.Location = new System.Drawing.Point(210, 380);
+            this.sessionBtn.Name = "sessionBtn";
+            this.sessionBtn.Size = new System.Drawing.Size(150, 100);
+            this.sessionBtn.TabIndex = 74;
+            this.sessionBtn.Text = "Sessions";
+            this.sessionBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.sessionBtn.UseCustomBackColor = true;
+            this.sessionBtn.UseCustomForeColor = true;
+            this.sessionBtn.UseSelectable = true;
+            this.sessionBtn.UseTileImage = true;
+            // 
+            // statBtn
+            // 
+            this.statBtn.ActiveControl = null;
+            this.statBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.statBtn.Location = new System.Drawing.Point(709, 268);
+            this.statBtn.Name = "statBtn";
+            this.statBtn.Size = new System.Drawing.Size(150, 100);
+            this.statBtn.TabIndex = 73;
+            this.statBtn.Text = "Statistics";
+            this.statBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.statBtn.UseCustomBackColor = true;
+            this.statBtn.UseCustomForeColor = true;
+            this.statBtn.UseSelectable = true;
+            this.statBtn.UseTileImage = true;
+            this.statBtn.Click += new System.EventHandler(this.statBtn_Click);
+            // 
+            // locBtn
+            // 
+            this.locBtn.ActiveControl = null;
+            this.locBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.locBtn.Location = new System.Drawing.Point(542, 268);
+            this.locBtn.Name = "locBtn";
+            this.locBtn.Size = new System.Drawing.Size(150, 100);
+            this.locBtn.TabIndex = 72;
+            this.locBtn.Text = "Locations";
+            this.locBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.locBtn.UseCustomBackColor = true;
+            this.locBtn.UseCustomForeColor = true;
+            this.locBtn.UseSelectable = true;
+            this.locBtn.UseTileImage = true;
+            this.locBtn.Click += new System.EventHandler(this.locBtn_Click_1);
+            // 
+            // tagBtn
+            // 
+            this.tagBtn.ActiveControl = null;
+            this.tagBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.tagBtn.Location = new System.Drawing.Point(376, 268);
+            this.tagBtn.Name = "tagBtn";
+            this.tagBtn.Size = new System.Drawing.Size(150, 100);
+            this.tagBtn.TabIndex = 71;
+            this.tagBtn.Text = "Tags";
+            this.tagBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tagBtn.UseCustomBackColor = true;
+            this.tagBtn.UseCustomForeColor = true;
+            this.tagBtn.UseSelectable = true;
+            this.tagBtn.UseTileImage = true;
+            this.tagBtn.Click += new System.EventHandler(this.tagBtn_Click);
+            // 
+            // stuBtn
+            // 
+            this.stuBtn.ActiveControl = null;
+            this.stuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.stuBtn.Location = new System.Drawing.Point(210, 268);
+            this.stuBtn.Name = "stuBtn";
+            this.stuBtn.Size = new System.Drawing.Size(150, 100);
+            this.stuBtn.TabIndex = 70;
+            this.stuBtn.Text = "Students";
+            this.stuBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.stuBtn.UseCustomBackColor = true;
+            this.stuBtn.UseCustomForeColor = true;
+            this.stuBtn.UseSelectable = true;
+            this.stuBtn.UseTileImage = true;
+            this.stuBtn.Click += new System.EventHandler(this.stuBtn_Click);
+            // 
+            // metroTile3
+            // 
+            this.metroTile3.ActiveControl = null;
+            this.metroTile3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.metroTile3.Location = new System.Drawing.Point(210, 156);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(150, 100);
+            this.metroTile3.TabIndex = 69;
+            this.metroTile3.Text = "Get Started";
+            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile3.UseCustomBackColor = true;
+            this.metroTile3.UseCustomForeColor = true;
+            this.metroTile3.UseSelectable = true;
+            this.metroTile3.UseTileImage = true;
+            // 
+            // wdhBtn
+            // 
+            this.wdhBtn.ActiveControl = null;
+            this.wdhBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.wdhBtn.Location = new System.Drawing.Point(376, 156);
+            this.wdhBtn.Name = "wdhBtn";
+            this.wdhBtn.Size = new System.Drawing.Size(150, 100);
+            this.wdhBtn.TabIndex = 68;
+            this.wdhBtn.Text = "Working Days & Hours";
+            this.wdhBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.wdhBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.wdhBtn.UseCustomBackColor = true;
+            this.wdhBtn.UseCustomForeColor = true;
+            this.wdhBtn.UseSelectable = true;
+            this.wdhBtn.UseTileImage = true;
+            this.wdhBtn.Click += new System.EventHandler(this.wdhBtn_Click);
+            // 
+            // subBtn
+            // 
+            this.subBtn.ActiveControl = null;
+            this.subBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.subBtn.Location = new System.Drawing.Point(709, 156);
+            this.subBtn.Name = "subBtn";
+            this.subBtn.Size = new System.Drawing.Size(150, 100);
+            this.subBtn.TabIndex = 67;
+            this.subBtn.Text = "Subjects";
+            this.subBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.subBtn.UseCustomBackColor = true;
+            this.subBtn.UseCustomForeColor = true;
+            this.subBtn.UseSelectable = true;
+            this.subBtn.UseTileImage = true;
+            this.subBtn.Click += new System.EventHandler(this.subBtn_Click);
+            // 
             // lecBtn
             // 
             this.lecBtn.ActiveControl = null;
             this.lecBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.lecBtn.Location = new System.Drawing.Point(588, 157);
+            this.lecBtn.Location = new System.Drawing.Point(542, 156);
             this.lecBtn.Name = "lecBtn";
-            this.lecBtn.Size = new System.Drawing.Size(94, 94);
-            this.lecBtn.TabIndex = 42;
+            this.lecBtn.Size = new System.Drawing.Size(150, 100);
+            this.lecBtn.TabIndex = 66;
             this.lecBtn.Text = "Lecturers";
             this.lecBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lecBtn.UseCustomBackColor = true;
@@ -348,6 +404,17 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.genTimetBtn);
+            this.Controls.Add(this.roomBtn);
+            this.Controls.Add(this.advOpBtn);
+            this.Controls.Add(this.sessionBtn);
+            this.Controls.Add(this.statBtn);
+            this.Controls.Add(this.locBtn);
+            this.Controls.Add(this.tagBtn);
+            this.Controls.Add(this.stuBtn);
+            this.Controls.Add(this.metroTile3);
+            this.Controls.Add(this.wdhBtn);
+            this.Controls.Add(this.subBtn);
             this.Controls.Add(this.lecBtn);
             this.Controls.Add(this.btnHeaderAdvanced);
             this.Controls.Add(this.btnHeaderRooms);
@@ -361,17 +428,6 @@
             this.Controls.Add(this.btnSideNavSubjects);
             this.Controls.Add(this.btnSideNavLecturers);
             this.Controls.Add(this.btnSideNavWorking);
-            this.Controls.Add(this.genTimetBtn);
-            this.Controls.Add(this.roomBtn);
-            this.Controls.Add(this.advOpBtn);
-            this.Controls.Add(this.sessionBtn);
-            this.Controls.Add(this.statBtn);
-            this.Controls.Add(this.locBtn);
-            this.Controls.Add(this.tagBtn);
-            this.Controls.Add(this.stuBtn);
-            this.Controls.Add(this.subBtn);
-            this.Controls.Add(this.wdhBtn);
-            this.Controls.Add(this.getStartedBtn);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Homepage";
@@ -392,18 +448,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button getStartedBtn;
-        private System.Windows.Forms.Button wdhBtn;
-        private System.Windows.Forms.Button subBtn;
-        private System.Windows.Forms.Button stuBtn;
-        private System.Windows.Forms.Button tagBtn;
-        private System.Windows.Forms.Button locBtn;
-        private System.Windows.Forms.Button statBtn;
-        private System.Windows.Forms.Button sessionBtn;
-        private System.Windows.Forms.Button advOpBtn;
-        private System.Windows.Forms.Button roomBtn;
-        private System.Windows.Forms.Button genTimetBtn;
         private System.Windows.Forms.PictureBox btnSideNavWorking;
         private System.Windows.Forms.PictureBox btnSideNavLecturers;
         private System.Windows.Forms.PictureBox btnSideNavSubjects;
@@ -416,6 +460,17 @@
         private System.Windows.Forms.Button btnHeaderSessions;
         private System.Windows.Forms.Button btnHeaderGenerate;
         private System.Windows.Forms.Button btnHeaderHome;
+        private MetroFramework.Controls.MetroTile genTimetBtn;
+        private MetroFramework.Controls.MetroTile roomBtn;
+        private MetroFramework.Controls.MetroTile advOpBtn;
+        private MetroFramework.Controls.MetroTile sessionBtn;
+        private MetroFramework.Controls.MetroTile statBtn;
+        private MetroFramework.Controls.MetroTile locBtn;
+        private MetroFramework.Controls.MetroTile tagBtn;
+        private MetroFramework.Controls.MetroTile stuBtn;
+        private MetroFramework.Controls.MetroTile metroTile3;
+        private MetroFramework.Controls.MetroTile wdhBtn;
+        private MetroFramework.Controls.MetroTile subBtn;
         private MetroFramework.Controls.MetroTile lecBtn;
     }
 }
