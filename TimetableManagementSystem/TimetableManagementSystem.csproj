@@ -235,5 +235,26 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D2-Lecturers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D-WorkingDaysAndHours.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D3-Subjects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D4-Students.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D5-Tags.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D6-Locations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D7-Statistics.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

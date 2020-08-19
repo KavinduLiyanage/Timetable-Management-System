@@ -218,6 +218,7 @@
             this.genTimetBtn.TabIndex = 77;
             this.genTimetBtn.Text = "Generate Timetables";
             this.genTimetBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.genTimetBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.genTimetBtn.UseCustomBackColor = true;
             this.genTimetBtn.UseCustomForeColor = true;
             this.genTimetBtn.UseSelectable = true;
@@ -233,6 +234,7 @@
             this.roomBtn.TabIndex = 76;
             this.roomBtn.Text = "Rooms";
             this.roomBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.roomBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.roomBtn.UseCustomBackColor = true;
             this.roomBtn.UseCustomForeColor = true;
             this.roomBtn.UseSelectable = true;
@@ -248,6 +250,7 @@
             this.advOpBtn.TabIndex = 75;
             this.advOpBtn.Text = "Advanced Options";
             this.advOpBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.advOpBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.advOpBtn.UseCustomBackColor = true;
             this.advOpBtn.UseCustomForeColor = true;
             this.advOpBtn.UseSelectable = true;
@@ -263,6 +266,7 @@
             this.sessionBtn.TabIndex = 74;
             this.sessionBtn.Text = "Sessions";
             this.sessionBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.sessionBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.sessionBtn.UseCustomBackColor = true;
             this.sessionBtn.UseCustomForeColor = true;
             this.sessionBtn.UseSelectable = true;
@@ -277,7 +281,9 @@
             this.statBtn.Size = new System.Drawing.Size(150, 100);
             this.statBtn.TabIndex = 73;
             this.statBtn.Text = "Statistics";
+            this.statBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D7_Statistics;
             this.statBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.statBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.statBtn.UseCustomBackColor = true;
             this.statBtn.UseCustomForeColor = true;
             this.statBtn.UseSelectable = true;
@@ -293,7 +299,9 @@
             this.locBtn.Size = new System.Drawing.Size(150, 100);
             this.locBtn.TabIndex = 72;
             this.locBtn.Text = "Locations";
+            this.locBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D6_Locations;
             this.locBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.locBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.locBtn.UseCustomBackColor = true;
             this.locBtn.UseCustomForeColor = true;
             this.locBtn.UseSelectable = true;
@@ -309,7 +317,9 @@
             this.tagBtn.Size = new System.Drawing.Size(150, 100);
             this.tagBtn.TabIndex = 71;
             this.tagBtn.Text = "Tags";
+            this.tagBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D5_Tags;
             this.tagBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tagBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.tagBtn.UseCustomBackColor = true;
             this.tagBtn.UseCustomForeColor = true;
             this.tagBtn.UseSelectable = true;
@@ -325,7 +335,9 @@
             this.stuBtn.Size = new System.Drawing.Size(150, 100);
             this.stuBtn.TabIndex = 70;
             this.stuBtn.Text = "Students";
+            this.stuBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D4_Students;
             this.stuBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.stuBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.stuBtn.UseCustomBackColor = true;
             this.stuBtn.UseCustomForeColor = true;
             this.stuBtn.UseSelectable = true;
@@ -342,6 +354,7 @@
             this.metroTile3.TabIndex = 69;
             this.metroTile3.Text = "Get Started";
             this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile3.UseCustomBackColor = true;
             this.metroTile3.UseCustomForeColor = true;
             this.metroTile3.UseSelectable = true;
@@ -357,7 +370,9 @@
             this.wdhBtn.TabIndex = 68;
             this.wdhBtn.Text = "Working Days & Hours";
             this.wdhBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.wdhBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D_WorkingDaysAndHours;
             this.wdhBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.wdhBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.wdhBtn.UseCustomBackColor = true;
             this.wdhBtn.UseCustomForeColor = true;
             this.wdhBtn.UseSelectable = true;
@@ -373,7 +388,9 @@
             this.subBtn.Size = new System.Drawing.Size(150, 100);
             this.subBtn.TabIndex = 67;
             this.subBtn.Text = "Subjects";
+            this.subBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D3_Subjects;
             this.subBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.subBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.subBtn.UseCustomBackColor = true;
             this.subBtn.UseCustomForeColor = true;
             this.subBtn.UseSelectable = true;
@@ -389,7 +406,9 @@
             this.lecBtn.Size = new System.Drawing.Size(150, 100);
             this.lecBtn.TabIndex = 66;
             this.lecBtn.Text = "Lecturers";
+            this.lecBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D2_Lecturers;
             this.lecBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lecBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.lecBtn.UseCustomBackColor = true;
             this.lecBtn.UseCustomForeColor = true;
             this.lecBtn.UseSelectable = true;
