@@ -110,5 +110,48 @@ namespace TimetableManagementSystem.Statistics
 
 
         }
+
+        //Side Nav Bar Buttons' Links
+        private void btnSideNavWorking_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
+            addSubject.ShowDialog();
+        }
+
+        private void btnSideNavStudents_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSideNavLocations_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics stat = new Statistics();
+            stat.ShowDialog();
+        }
+
+      
+
+       
     }
 }

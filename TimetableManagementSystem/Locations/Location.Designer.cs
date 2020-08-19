@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
             this.viewloc_tab = new System.Windows.Forms.TabPage();
             this.locationview_panel = new System.Windows.Forms.Panel();
@@ -64,6 +64,13 @@
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
             this.sort_tooltip = new MetroFramework.Components.MetroToolTip();
+            this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
+            this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
+            this.btnSideNavStudents = new System.Windows.Forms.PictureBox();
+            this.btnSideNavTags = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
+            this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
             this.loc_tabcontrol.SuspendLayout();
             this.viewloc_tab.SuspendLayout();
             this.locationview_panel.SuspendLayout();
@@ -74,6 +81,13 @@
             this.editloc_tab.SuspendLayout();
             this.editloc_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editcap_cmb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             this.SuspendLayout();
             // 
             // loc_tabcontrol
@@ -176,14 +190,14 @@
             this.loc_dgridv.AllowUserToResizeRows = false;
             this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.loc_dgridv.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.loc_dgridv.ColumnHeadersHeight = 29;
             this.loc_dgridv.Location = new System.Drawing.Point(22, 80);
             this.loc_dgridv.MultiSelect = false;
@@ -191,11 +205,11 @@
             this.loc_dgridv.ReadOnly = true;
             this.loc_dgridv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.loc_dgridv.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
+            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle28;
             this.loc_dgridv.RowTemplate.Height = 24;
             this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.loc_dgridv.Size = new System.Drawing.Size(738, 316);
@@ -627,6 +641,90 @@
             this.sort_tooltip.StyleManager = null;
             this.sort_tooltip.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
+            // btnSideNavWorking
+            // 
+            this.btnSideNavWorking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavWorking.Image = global::TimetableManagementSystem.Properties.Resources.Sub1_WorkingDaysAndHours;
+            this.btnSideNavWorking.Location = new System.Drawing.Point(7, 109);
+            this.btnSideNavWorking.Name = "btnSideNavWorking";
+            this.btnSideNavWorking.Size = new System.Drawing.Size(80, 70);
+            this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavWorking.TabIndex = 37;
+            this.btnSideNavWorking.TabStop = false;
+            this.btnSideNavWorking.Click += new System.EventHandler(this.btnSideNavWorking_Click);
+            // 
+            // btnSideNavLecturers
+            // 
+            this.btnSideNavLecturers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavLecturers.Image = global::TimetableManagementSystem.Properties.Resources.Sub2_Lecturers;
+            this.btnSideNavLecturers.Location = new System.Drawing.Point(7, 185);
+            this.btnSideNavLecturers.Name = "btnSideNavLecturers";
+            this.btnSideNavLecturers.Size = new System.Drawing.Size(70, 50);
+            this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLecturers.TabIndex = 38;
+            this.btnSideNavLecturers.TabStop = false;
+            this.btnSideNavLecturers.Click += new System.EventHandler(this.btnSideNavLecturers_Click);
+            // 
+            // btnSideNavSubjects
+            // 
+            this.btnSideNavSubjects.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavSubjects.Image = global::TimetableManagementSystem.Properties.Resources.Sub3_Subjects;
+            this.btnSideNavSubjects.Location = new System.Drawing.Point(7, 241);
+            this.btnSideNavSubjects.Name = "btnSideNavSubjects";
+            this.btnSideNavSubjects.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavSubjects.TabIndex = 39;
+            this.btnSideNavSubjects.TabStop = false;
+            this.btnSideNavSubjects.Click += new System.EventHandler(this.btnSideNavSubjects_Click);
+            // 
+            // btnSideNavStudents
+            // 
+            this.btnSideNavStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavStudents.Image = global::TimetableManagementSystem.Properties.Resources.Sub4_Students;
+            this.btnSideNavStudents.Location = new System.Drawing.Point(7, 302);
+            this.btnSideNavStudents.Name = "btnSideNavStudents";
+            this.btnSideNavStudents.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStudents.TabIndex = 40;
+            this.btnSideNavStudents.TabStop = false;
+            this.btnSideNavStudents.Click += new System.EventHandler(this.btnSideNavStudents_Click);
+            // 
+            // btnSideNavTags
+            // 
+            this.btnSideNavTags.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavTags.Image = global::TimetableManagementSystem.Properties.Resources.Sub5_Tags;
+            this.btnSideNavTags.Location = new System.Drawing.Point(7, 363);
+            this.btnSideNavTags.Name = "btnSideNavTags";
+            this.btnSideNavTags.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavTags.TabIndex = 41;
+            this.btnSideNavTags.TabStop = false;
+            this.btnSideNavTags.Click += new System.EventHandler(this.btnSideNavTags_Click);
+            // 
+            // btnSideNavLocations
+            // 
+            this.btnSideNavLocations.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavLocations.Image = global::TimetableManagementSystem.Properties.Resources.Sub6_Locations;
+            this.btnSideNavLocations.Location = new System.Drawing.Point(7, 424);
+            this.btnSideNavLocations.Name = "btnSideNavLocations";
+            this.btnSideNavLocations.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLocations.TabIndex = 42;
+            this.btnSideNavLocations.TabStop = false;
+            this.btnSideNavLocations.Click += new System.EventHandler(this.btnSideNavLocations_Click);
+            // 
+            // btnSideNavStatistics
+            // 
+            this.btnSideNavStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavStatistics.Image = global::TimetableManagementSystem.Properties.Resources.Sub7_Statistics;
+            this.btnSideNavStatistics.Location = new System.Drawing.Point(7, 485);
+            this.btnSideNavStatistics.Name = "btnSideNavStatistics";
+            this.btnSideNavStatistics.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStatistics.TabIndex = 43;
+            this.btnSideNavStatistics.TabStop = false;
+            this.btnSideNavStatistics.Click += new System.EventHandler(this.btnSideNavStatistics_Click);
+            // 
             // Location
             // 
             this.ApplyImageInvert = true;
@@ -635,6 +733,13 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.btnSideNavStatistics);
+            this.Controls.Add(this.btnSideNavLocations);
+            this.Controls.Add(this.btnSideNavTags);
+            this.Controls.Add(this.btnSideNavStudents);
+            this.Controls.Add(this.btnSideNavSubjects);
+            this.Controls.Add(this.btnSideNavLecturers);
+            this.Controls.Add(this.btnSideNavWorking);
             this.Controls.Add(this.locations_lbl);
             this.Controls.Add(this.loc_tabcontrol);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -657,6 +762,13 @@
             this.editloc_panel.ResumeLayout(false);
             this.editloc_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editcap_cmb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -698,5 +810,12 @@
         private MetroFramework.Controls.MetroTextBox edit_building_txt_box;
         private MetroFramework.Controls.MetroComboBox search_by_cmb;
         private MetroFramework.Components.MetroToolTip sort_tooltip;
+        private System.Windows.Forms.PictureBox btnSideNavWorking;
+        private System.Windows.Forms.PictureBox btnSideNavLecturers;
+        private System.Windows.Forms.PictureBox btnSideNavSubjects;
+        private System.Windows.Forms.PictureBox btnSideNavStudents;
+        private System.Windows.Forms.PictureBox btnSideNavTags;
+        private System.Windows.Forms.PictureBox btnSideNavLocations;
+        private System.Windows.Forms.PictureBox btnSideNavStatistics;
     }
 }

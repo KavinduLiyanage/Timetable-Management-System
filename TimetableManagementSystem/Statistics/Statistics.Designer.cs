@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea37 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend37 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea38 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend38 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea39 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend39 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea40 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend40 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea41 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend41 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea42 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend42 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.LecStat_tabpage = new System.Windows.Forms.TabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
@@ -83,6 +83,13 @@
             this.lecturersTableAdapter = new TimetableManagementSystem.timetablemngsysdbDataSetTableAdapters.LecturersTableAdapter();
             this.timetablemngsysdbDataSet1 = new TimetableManagementSystem.timetablemngsysdbDataSet1();
             this.timetablemngsysdbDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
+            this.btnSideNavTags = new System.Windows.Forms.PictureBox();
+            this.btnSideNavStudents = new System.Windows.Forms.PictureBox();
+            this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
+            this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
             this.metroTabControl1.SuspendLayout();
             this.LecStat_tabpage.SuspendLayout();
             this.metroPanel1.SuspendLayout();
@@ -103,6 +110,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -220,10 +234,10 @@
             // 
             // deptLec_chart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.deptLec_chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.deptLec_chart.Legends.Add(legend1);
+            chartArea37.Name = "ChartArea1";
+            this.deptLec_chart.ChartAreas.Add(chartArea37);
+            legend37.Name = "Legend1";
+            this.deptLec_chart.Legends.Add(legend37);
             this.deptLec_chart.Location = new System.Drawing.Point(391, 120);
             this.deptLec_chart.Name = "deptLec_chart";
             this.deptLec_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
@@ -234,10 +248,10 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.deptLec_chart.Series.Add(series1);
+            series37.ChartArea = "ChartArea1";
+            series37.Legend = "Legend1";
+            series37.Name = "Series1";
+            this.deptLec_chart.Series.Add(series37);
             this.deptLec_chart.Size = new System.Drawing.Size(337, 261);
             this.deptLec_chart.TabIndex = 41;
             this.deptLec_chart.Text = "chart1";
@@ -272,10 +286,10 @@
             // 
             // faclec_chart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.faclec_chart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.faclec_chart.Legends.Add(legend2);
+            chartArea38.Name = "ChartArea1";
+            this.faclec_chart.ChartAreas.Add(chartArea38);
+            legend38.Name = "Legend1";
+            this.faclec_chart.Legends.Add(legend38);
             this.faclec_chart.Location = new System.Drawing.Point(32, 120);
             this.faclec_chart.Name = "faclec_chart";
             this.faclec_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -286,10 +300,10 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.faclec_chart.Series.Add(series2);
+            series38.ChartArea = "ChartArea1";
+            series38.Legend = "Legend1";
+            series38.Name = "Series1";
+            this.faclec_chart.Series.Add(series38);
             this.faclec_chart.Size = new System.Drawing.Size(337, 261);
             this.faclec_chart.TabIndex = 2;
             this.faclec_chart.Text = "chart1";
@@ -367,10 +381,10 @@
             // 
             // chart2
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
+            chartArea39.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea39);
+            legend39.Name = "Legend1";
+            this.chart2.Legends.Add(legend39);
             this.chart2.Location = new System.Drawing.Point(375, 120);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
@@ -381,11 +395,11 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart2.Series.Add(series3);
+            series39.ChartArea = "ChartArea1";
+            series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series39.Legend = "Legend1";
+            series39.Name = "Series1";
+            this.chart2.Series.Add(series39);
             this.chart2.Size = new System.Drawing.Size(337, 261);
             this.chart2.TabIndex = 41;
             this.chart2.Text = "chart2";
@@ -446,10 +460,10 @@
             // 
             // chart3
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart3.Legends.Add(legend4);
+            chartArea40.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea40);
+            legend40.Name = "Legend1";
+            this.chart3.Legends.Add(legend40);
             this.chart3.Location = new System.Drawing.Point(32, 120);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -460,11 +474,11 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart3.Series.Add(series4);
+            series40.ChartArea = "ChartArea1";
+            series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series40.Legend = "Legend1";
+            series40.Name = "Series1";
+            this.chart3.Series.Add(series40);
             this.chart3.Size = new System.Drawing.Size(337, 261);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart1";
@@ -532,10 +546,10 @@
             // 
             // chart4
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart4.Legends.Add(legend5);
+            chartArea41.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea41);
+            legend41.Name = "Legend1";
+            this.chart4.Legends.Add(legend41);
             this.chart4.Location = new System.Drawing.Point(375, 120);
             this.chart4.Name = "chart4";
             this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
@@ -546,11 +560,11 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart4.Series.Add(series5);
+            series41.ChartArea = "ChartArea1";
+            series41.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series41.Legend = "Legend1";
+            series41.Name = "Series1";
+            this.chart4.Series.Add(series41);
             this.chart4.Size = new System.Drawing.Size(337, 261);
             this.chart4.TabIndex = 41;
             this.chart4.Text = "chart4";
@@ -611,10 +625,10 @@
             // 
             // chart5
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart5.Legends.Add(legend6);
+            chartArea42.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea42);
+            legend42.Name = "Legend1";
+            this.chart5.Legends.Add(legend42);
             this.chart5.Location = new System.Drawing.Point(32, 120);
             this.chart5.Name = "chart5";
             this.chart5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -625,11 +639,11 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart5.Series.Add(series6);
+            series42.ChartArea = "ChartArea1";
+            series42.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series42.Legend = "Legend1";
+            series42.Name = "Series1";
+            this.chart5.Series.Add(series42);
             this.chart5.Size = new System.Drawing.Size(337, 261);
             this.chart5.TabIndex = 2;
             this.chart5.Text = "chart1";
@@ -662,6 +676,89 @@
             this.timetablemngsysdbDataSet1BindingSource.DataSource = this.timetablemngsysdbDataSet1;
             this.timetablemngsysdbDataSet1BindingSource.Position = 0;
             // 
+            // btnSideNavStatistics
+            // 
+            this.btnSideNavStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavStatistics.Image = global::TimetableManagementSystem.Properties.Resources.Sub7_Statistics;
+            this.btnSideNavStatistics.Location = new System.Drawing.Point(10, 479);
+            this.btnSideNavStatistics.Name = "btnSideNavStatistics";
+            this.btnSideNavStatistics.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStatistics.TabIndex = 30;
+            this.btnSideNavStatistics.TabStop = false;
+            this.btnSideNavStatistics.Click += new System.EventHandler(this.btnSideNavStatistics_Click);
+            // 
+            // btnSideNavLocations
+            // 
+            this.btnSideNavLocations.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavLocations.Image = global::TimetableManagementSystem.Properties.Resources.Sub6_Locations;
+            this.btnSideNavLocations.Location = new System.Drawing.Point(10, 418);
+            this.btnSideNavLocations.Name = "btnSideNavLocations";
+            this.btnSideNavLocations.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLocations.TabIndex = 31;
+            this.btnSideNavLocations.TabStop = false;
+            this.btnSideNavLocations.Click += new System.EventHandler(this.btnSideNavLocations_Click);
+            // 
+            // btnSideNavTags
+            // 
+            this.btnSideNavTags.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavTags.Image = global::TimetableManagementSystem.Properties.Resources.Sub5_Tags;
+            this.btnSideNavTags.Location = new System.Drawing.Point(10, 357);
+            this.btnSideNavTags.Name = "btnSideNavTags";
+            this.btnSideNavTags.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavTags.TabIndex = 32;
+            this.btnSideNavTags.TabStop = false;
+            // 
+            // btnSideNavStudents
+            // 
+            this.btnSideNavStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavStudents.Image = global::TimetableManagementSystem.Properties.Resources.Sub4_Students;
+            this.btnSideNavStudents.Location = new System.Drawing.Point(10, 296);
+            this.btnSideNavStudents.Name = "btnSideNavStudents";
+            this.btnSideNavStudents.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStudents.TabIndex = 33;
+            this.btnSideNavStudents.TabStop = false;
+            this.btnSideNavStudents.Click += new System.EventHandler(this.btnSideNavStudents_Click);
+            // 
+            // btnSideNavSubjects
+            // 
+            this.btnSideNavSubjects.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavSubjects.Image = global::TimetableManagementSystem.Properties.Resources.Sub3_Subjects;
+            this.btnSideNavSubjects.Location = new System.Drawing.Point(10, 235);
+            this.btnSideNavSubjects.Name = "btnSideNavSubjects";
+            this.btnSideNavSubjects.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavSubjects.TabIndex = 34;
+            this.btnSideNavSubjects.TabStop = false;
+            this.btnSideNavSubjects.Click += new System.EventHandler(this.btnSideNavSubjects_Click);
+            // 
+            // btnSideNavLecturers
+            // 
+            this.btnSideNavLecturers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavLecturers.Image = global::TimetableManagementSystem.Properties.Resources.Sub2_Lecturers;
+            this.btnSideNavLecturers.Location = new System.Drawing.Point(10, 179);
+            this.btnSideNavLecturers.Name = "btnSideNavLecturers";
+            this.btnSideNavLecturers.Size = new System.Drawing.Size(70, 50);
+            this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLecturers.TabIndex = 35;
+            this.btnSideNavLecturers.TabStop = false;
+            this.btnSideNavLecturers.Click += new System.EventHandler(this.btnSideNavLecturers_Click);
+            // 
+            // btnSideNavWorking
+            // 
+            this.btnSideNavWorking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavWorking.Image = global::TimetableManagementSystem.Properties.Resources.Sub1_WorkingDaysAndHours;
+            this.btnSideNavWorking.Location = new System.Drawing.Point(10, 103);
+            this.btnSideNavWorking.Name = "btnSideNavWorking";
+            this.btnSideNavWorking.Size = new System.Drawing.Size(80, 70);
+            this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavWorking.TabIndex = 36;
+            this.btnSideNavWorking.TabStop = false;
+            this.btnSideNavWorking.Click += new System.EventHandler(this.btnSideNavWorking_Click);
+            // 
             // Statistics
             // 
             this.ApplyImageInvert = true;
@@ -670,6 +767,13 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.btnSideNavWorking);
+            this.Controls.Add(this.btnSideNavLecturers);
+            this.Controls.Add(this.btnSideNavSubjects);
+            this.Controls.Add(this.btnSideNavStudents);
+            this.Controls.Add(this.btnSideNavTags);
+            this.Controls.Add(this.btnSideNavLocations);
+            this.Controls.Add(this.btnSideNavStatistics);
             this.Controls.Add(this.locations_lbl);
             this.Controls.Add(this.metroTabControl1);
             this.MaximizeBox = false;
@@ -700,6 +804,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -743,5 +854,12 @@
         private MetroFramework.Controls.MetroTextBox total_lecturers;
         private System.Windows.Forms.BindingSource timetablemngsysdbDataSet1BindingSource;
         private timetablemngsysdbDataSet1 timetablemngsysdbDataSet1;
+        private System.Windows.Forms.PictureBox btnSideNavStatistics;
+        private System.Windows.Forms.PictureBox btnSideNavLocations;
+        private System.Windows.Forms.PictureBox btnSideNavTags;
+        private System.Windows.Forms.PictureBox btnSideNavStudents;
+        private System.Windows.Forms.PictureBox btnSideNavSubjects;
+        private System.Windows.Forms.PictureBox btnSideNavLecturers;
+        private System.Windows.Forms.PictureBox btnSideNavWorking;
     }
 }
