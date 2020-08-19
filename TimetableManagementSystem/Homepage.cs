@@ -108,8 +108,8 @@ namespace TimetableManagementSystem
         private void statBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Homepage homepage = new Homepage();
-            homepage.ShowDialog();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
         }
     }
 }

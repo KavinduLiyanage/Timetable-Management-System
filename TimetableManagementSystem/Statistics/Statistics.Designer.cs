@@ -51,13 +51,14 @@
             this.LecStat_tabpage = new System.Windows.Forms.TabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.total_lecturers = new MetroFramework.Controls.MetroTextBox();
+            this.lbldept = new MetroFramework.Controls.MetroLabel();
+            this.deptLec_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.faclec_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lecturersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.timetablemngsysdbDataSet = new TimetableManagementSystem.timetablemngsysdbDataSet();
             this.StuGStat_tabpage = new System.Windows.Forms.TabPage();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
@@ -79,16 +80,17 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
-            this.timetablemngsysdbDataSet = new TimetableManagementSystem.timetablemngsysdbDataSet();
-            this.lecturersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lecturersTableAdapter = new TimetableManagementSystem.timetablemngsysdbDataSetTableAdapters.LecturersTableAdapter();
-            this.total_lecturers = new MetroFramework.Controls.MetroTextBox();
+            this.timetablemngsysdbDataSet1 = new TimetableManagementSystem.timetablemngsysdbDataSet1();
+            this.timetablemngsysdbDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroTabControl1.SuspendLayout();
             this.LecStat_tabpage.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.metroPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptLec_chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faclec_chart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).BeginInit();
             this.StuGStat_tabpage.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -99,8 +101,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -157,10 +159,8 @@
             // metroPanel4
             // 
             this.metroPanel4.Controls.Add(this.total_lecturers);
-            this.metroPanel4.Controls.Add(this.metroButton3);
-            this.metroPanel4.Controls.Add(this.metroLabel12);
-            this.metroPanel4.Controls.Add(this.chart1);
-            this.metroPanel4.Controls.Add(this.metroButton1);
+            this.metroPanel4.Controls.Add(this.lbldept);
+            this.metroPanel4.Controls.Add(this.deptLec_chart);
             this.metroPanel4.Controls.Add(this.metroButton2);
             this.metroPanel4.Controls.Add(this.metroLabel11);
             this.metroPanel4.Controls.Add(this.faclec_chart);
@@ -175,44 +175,59 @@
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
             // 
-            // metroButton3
+            // total_lecturers
             // 
-            this.metroButton3.BackColor = System.Drawing.Color.Navy;
-            this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton3.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton3.Location = new System.Drawing.Point(626, 69);
-            this.metroButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(97, 30);
-            this.metroButton3.TabIndex = 43;
-            this.metroButton3.Text = "Generate";
-            this.metroButton3.UseCustomBackColor = true;
-            this.metroButton3.UseCustomForeColor = true;
-            this.metroButton3.UseSelectable = true;
             // 
-            // metroLabel12
             // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel12.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel12.Location = new System.Drawing.Point(446, 80);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(162, 19);
-            this.metroLabel12.TabIndex = 42;
-            this.metroLabel12.Text = "Rank vs Lecturer Count";
-            this.metroLabel12.UseCustomBackColor = true;
             // 
-            // chart1
+            this.total_lecturers.CustomButton.Image = null;
+            this.total_lecturers.CustomButton.Location = new System.Drawing.Point(63, 1);
+            this.total_lecturers.CustomButton.Name = "";
+            this.total_lecturers.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.total_lecturers.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.total_lecturers.CustomButton.TabIndex = 1;
+            this.total_lecturers.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.total_lecturers.CustomButton.UseSelectable = true;
+            this.total_lecturers.CustomButton.Visible = false;
+            this.total_lecturers.Lines = new string[0];
+            this.total_lecturers.Location = new System.Drawing.Point(406, 24);
+            this.total_lecturers.MaxLength = 32767;
+            this.total_lecturers.Name = "total_lecturers";
+            this.total_lecturers.PasswordChar = '\0';
+            this.total_lecturers.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.total_lecturers.SelectedText = "";
+            this.total_lecturers.SelectionLength = 0;
+            this.total_lecturers.SelectionStart = 0;
+            this.total_lecturers.ShortcutsEnabled = true;
+            this.total_lecturers.Size = new System.Drawing.Size(89, 27);
+            this.total_lecturers.TabIndex = 44;
+            this.total_lecturers.UseSelectable = true;
+            this.total_lecturers.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.total_lecturers.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lbldept
+            // 
+            this.lbldept.AutoSize = true;
+            this.lbldept.BackColor = System.Drawing.Color.Transparent;
+            this.lbldept.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbldept.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbldept.Location = new System.Drawing.Point(446, 80);
+            this.lbldept.Name = "lbldept";
+            this.lbldept.Size = new System.Drawing.Size(209, 19);
+            this.lbldept.TabIndex = 42;
+            this.lbldept.Text = "Department vs Lecturer Count";
+            this.lbldept.UseCustomBackColor = true;
+            // 
+            // deptLec_chart
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.deptLec_chart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(375, 120);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
+            this.deptLec_chart.Legends.Add(legend1);
+            this.deptLec_chart.Location = new System.Drawing.Point(391, 120);
+            this.deptLec_chart.Name = "deptLec_chart";
+            this.deptLec_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            this.deptLec_chart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64))))),
         System.Drawing.Color.Olive,
         System.Drawing.Color.Teal,
@@ -220,28 +235,12 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(337, 261);
-            this.chart1.TabIndex = 41;
-            this.chart1.Text = "chart1";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.BackColor = System.Drawing.Color.Navy;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton1.Location = new System.Drawing.Point(222, 69);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(97, 30);
-            this.metroButton1.TabIndex = 40;
-            this.metroButton1.Text = "Generate";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseCustomForeColor = true;
-            this.metroButton1.UseSelectable = true;
+            this.deptLec_chart.Series.Add(series1);
+            this.deptLec_chart.Size = new System.Drawing.Size(337, 261);
+            this.deptLec_chart.TabIndex = 41;
+            this.deptLec_chart.Text = "chart1";
             // 
             // metroButton2
             // 
@@ -275,7 +274,6 @@
             // 
             chartArea2.Name = "ChartArea1";
             this.faclec_chart.ChartAreas.Add(chartArea2);
-            this.faclec_chart.DataSource = this.lecturersBindingSource;
             legend2.Name = "Legend1";
             this.faclec_chart.Legends.Add(legend2);
             this.faclec_chart.Location = new System.Drawing.Point(32, 120);
@@ -291,11 +289,20 @@
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
-            series2.XValueMember = "LecFaculty";
             this.faclec_chart.Series.Add(series2);
             this.faclec_chart.Size = new System.Drawing.Size(337, 261);
             this.faclec_chart.TabIndex = 2;
             this.faclec_chart.Text = "chart1";
+            // 
+            // lecturersBindingSource
+            // 
+            this.lecturersBindingSource.DataMember = "Lecturers";
+            this.lecturersBindingSource.DataSource = this.timetablemngsysdbDataSet;
+            // 
+            // timetablemngsysdbDataSet
+            // 
+            this.timetablemngsysdbDataSet.DataSetName = "timetablemngsysdbDataSet";
+            this.timetablemngsysdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // StuGStat_tabpage
             // 
@@ -641,49 +648,19 @@
             this.locations_lbl.Text = "Statistics";
             this.locations_lbl.UseCustomBackColor = true;
             // 
-            // timetablemngsysdbDataSet
-            // 
-            this.timetablemngsysdbDataSet.DataSetName = "timetablemngsysdbDataSet";
-            this.timetablemngsysdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lecturersBindingSource
-            // 
-            this.lecturersBindingSource.DataMember = "Lecturers";
-            this.lecturersBindingSource.DataSource = this.timetablemngsysdbDataSet;
-            // 
             // lecturersTableAdapter
             // 
             this.lecturersTableAdapter.ClearBeforeFill = true;
             // 
-            // total_lecturers
+            // timetablemngsysdbDataSet1
             // 
+            this.timetablemngsysdbDataSet1.DataSetName = "timetablemngsysdbDataSet1";
+            this.timetablemngsysdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // timetablemngsysdbDataSet1BindingSource
             // 
-            // 
-            this.total_lecturers.CustomButton.Image = null;
-            this.total_lecturers.CustomButton.Location = new System.Drawing.Point(63, 1);
-            this.total_lecturers.CustomButton.Name = "";
-            this.total_lecturers.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.total_lecturers.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.total_lecturers.CustomButton.TabIndex = 1;
-            this.total_lecturers.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.total_lecturers.CustomButton.UseSelectable = true;
-            this.total_lecturers.CustomButton.Visible = false;
-            this.total_lecturers.Lines = new string[0];
-            this.total_lecturers.Location = new System.Drawing.Point(406, 24);
-            this.total_lecturers.MaxLength = 32767;
-            this.total_lecturers.Name = "total_lecturers";
-            this.total_lecturers.PasswordChar = '\0';
-            this.total_lecturers.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.total_lecturers.SelectedText = "";
-            this.total_lecturers.SelectionLength = 0;
-            this.total_lecturers.SelectionStart = 0;
-            this.total_lecturers.ShortcutsEnabled = true;
-            this.total_lecturers.Size = new System.Drawing.Size(89, 27);
-            this.total_lecturers.TabIndex = 44;
-            this.total_lecturers.UseSelectable = true;
-            this.total_lecturers.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.total_lecturers.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.timetablemngsysdbDataSet1BindingSource.DataSource = this.timetablemngsysdbDataSet1;
+            this.timetablemngsysdbDataSet1BindingSource.Position = 0;
             // 
             // Statistics
             // 
@@ -705,8 +682,10 @@
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptLec_chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faclec_chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).EndInit();
             this.StuGStat_tabpage.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
@@ -719,8 +698,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetablemngsysdbDataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -738,10 +717,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel locations_lbl;
         private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroLabel metroLabel12;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroLabel lbldept;
+        private System.Windows.Forms.DataVisualization.Charting.Chart deptLec_chart;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroLabel metroLabel1;
@@ -764,5 +741,7 @@
         private System.Windows.Forms.BindingSource lecturersBindingSource;
         private timetablemngsysdbDataSetTableAdapters.LecturersTableAdapter lecturersTableAdapter;
         private MetroFramework.Controls.MetroTextBox total_lecturers;
+        private System.Windows.Forms.BindingSource timetablemngsysdbDataSet1BindingSource;
+        private timetablemngsysdbDataSet1 timetablemngsysdbDataSet1;
     }
 }
