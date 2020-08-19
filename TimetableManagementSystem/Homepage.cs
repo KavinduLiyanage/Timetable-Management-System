@@ -107,6 +107,7 @@ namespace TimetableManagementSystem
             this.Hide();
            Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
-        }  
+        }
+
     }
 }

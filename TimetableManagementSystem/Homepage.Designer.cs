@@ -30,7 +30,6 @@
         {
             this.getStartedBtn = new System.Windows.Forms.Button();
             this.wdhBtn = new System.Windows.Forms.Button();
-            this.lecBtn = new System.Windows.Forms.Button();
             this.subBtn = new System.Windows.Forms.Button();
             this.stuBtn = new System.Windows.Forms.Button();
             this.tagBtn = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.btnHeaderSessions = new System.Windows.Forms.Button();
             this.btnHeaderGenerate = new System.Windows.Forms.Button();
             this.btnHeaderHome = new System.Windows.Forms.Button();
+            this.lecBtn = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
@@ -81,17 +81,6 @@
             this.wdhBtn.Text = "Working Days & Hours";
             this.wdhBtn.UseVisualStyleBackColor = true;
             this.wdhBtn.Click += new System.EventHandler(this.wdhBtn_Click);
-            // 
-            // lecBtn
-            // 
-            this.lecBtn.Location = new System.Drawing.Point(575, 172);
-            this.lecBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.lecBtn.Name = "lecBtn";
-            this.lecBtn.Size = new System.Drawing.Size(110, 79);
-            this.lecBtn.TabIndex = 2;
-            this.lecBtn.Text = "Lecturers";
-            this.lecBtn.UseVisualStyleBackColor = true;
-            this.lecBtn.Click += new System.EventHandler(this.lecBtn_Click);
             // 
             // subBtn
             // 
@@ -335,6 +324,22 @@
             this.btnHeaderHome.UseVisualStyleBackColor = false;
             this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
             // 
+            // lecBtn
+            // 
+            this.lecBtn.ActiveControl = null;
+            this.lecBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.lecBtn.Location = new System.Drawing.Point(588, 157);
+            this.lecBtn.Name = "lecBtn";
+            this.lecBtn.Size = new System.Drawing.Size(94, 94);
+            this.lecBtn.TabIndex = 42;
+            this.lecBtn.Text = "Lecturers";
+            this.lecBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lecBtn.UseCustomBackColor = true;
+            this.lecBtn.UseCustomForeColor = true;
+            this.lecBtn.UseSelectable = true;
+            this.lecBtn.UseTileImage = true;
+            this.lecBtn.Click += new System.EventHandler(this.lecBtn_Click);
+            // 
             // Homepage
             // 
             this.ApplyImageInvert = true;
@@ -343,6 +348,7 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.lecBtn);
             this.Controls.Add(this.btnHeaderAdvanced);
             this.Controls.Add(this.btnHeaderRooms);
             this.Controls.Add(this.btnHeaderSessions);
@@ -364,7 +370,6 @@
             this.Controls.Add(this.tagBtn);
             this.Controls.Add(this.stuBtn);
             this.Controls.Add(this.subBtn);
-            this.Controls.Add(this.lecBtn);
             this.Controls.Add(this.wdhBtn);
             this.Controls.Add(this.getStartedBtn);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -390,7 +395,6 @@
 
         private System.Windows.Forms.Button getStartedBtn;
         private System.Windows.Forms.Button wdhBtn;
-        private System.Windows.Forms.Button lecBtn;
         private System.Windows.Forms.Button subBtn;
         private System.Windows.Forms.Button stuBtn;
         private System.Windows.Forms.Button tagBtn;
@@ -412,5 +416,6 @@
         private System.Windows.Forms.Button btnHeaderSessions;
         private System.Windows.Forms.Button btnHeaderGenerate;
         private System.Windows.Forms.Button btnHeaderHome;
+        private MetroFramework.Controls.MetroTile lecBtn;
     }
 }
