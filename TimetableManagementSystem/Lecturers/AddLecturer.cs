@@ -238,8 +238,7 @@ namespace TimetableManagementSystem.Lecturers
                     ClearFieldsAfterUpdate();
 
                     tabControlLecturers.SelectedTab = tabPageLecView;
-                }
-                
+                }              
             }
             else
             {
@@ -254,22 +253,34 @@ namespace TimetableManagementSystem.Lecturers
             if (cmbLecFac.SelectedItem.Equals("Engineering"))
             {
                 cmbLecDepartment.Items.Add("CE");
-                cmbLecDepartment.Items.Add("EE");
+                cmbLecDepartment.Items.Add("EEE");
+                cmbLecDepartment.Items.Add("ME");
+                cmbLecDepartment.Items.Add("QS");
             }
             else if (cmbLecFac.SelectedItem.Equals("Computing"))
             {
                 cmbLecDepartment.Items.Add("CSSE");
                 cmbLecDepartment.Items.Add("DS");
+                cmbLecDepartment.Items.Add("CSNE");
                 cmbLecDepartment.Items.Add("IT");
-               
+                cmbLecDepartment.Items.Add("CS");
+                cmbLecDepartment.Items.Add("IM");
+                cmbLecDepartment.Items.Add("ISE");
             }
             else if (cmbLecFac.SelectedItem.Equals("Business"))
             {
+                cmbLecDepartment.Items.Add("AF");
+                cmbLecDepartment.Items.Add("BA");
+                cmbLecDepartment.Items.Add("HCM");
+                cmbLecDepartment.Items.Add("MM");
                 cmbLecDepartment.Items.Add("IM");
-                cmbLecDepartment.Items.Add("BM");
-               
+                cmbLecDepartment.Items.Add("BM");             
             }
-
+            else if (cmbLecFac.SelectedItem.Equals("Humanities and Science"))
+            {
+                cmbLecDepartment.Items.Add("MU");
+                cmbLecDepartment.Items.Add("ELT");              
+            }
             //cmbLecFac.SelectedIndex = -1;
         }
 
@@ -280,19 +291,34 @@ namespace TimetableManagementSystem.Lecturers
             if (cmbLecFacEdit.SelectedItem.Equals("Engineering"))
             {
                 cmbLecDepartmentEdit.Items.Add("CE");
-                cmbLecDepartmentEdit.Items.Add("EE");
+                cmbLecDepartmentEdit.Items.Add("EEE");
+                cmbLecDepartmentEdit.Items.Add("ME");
+                cmbLecDepartmentEdit.Items.Add("QS");
             }
             else if (cmbLecFacEdit.SelectedItem.Equals("Computing"))
             {
                 cmbLecDepartmentEdit.Items.Add("CSSE");
                 cmbLecDepartmentEdit.Items.Add("DS");
+                cmbLecDepartmentEdit.Items.Add("CSNE");
                 cmbLecDepartmentEdit.Items.Add("IT");
+                cmbLecDepartmentEdit.Items.Add("CS");
+                cmbLecDepartmentEdit.Items.Add("IM");
+                cmbLecDepartmentEdit.Items.Add("ISE");
 
             }
             else if (cmbLecFacEdit.SelectedItem.Equals("Business"))
             {
+                cmbLecDepartmentEdit.Items.Add("AF");
+                cmbLecDepartmentEdit.Items.Add("BA");
+                cmbLecDepartmentEdit.Items.Add("HCM");
+                cmbLecDepartmentEdit.Items.Add("MM");
                 cmbLecDepartmentEdit.Items.Add("IM");
                 cmbLecDepartmentEdit.Items.Add("BM");
+            }
+            else if (cmbLecFacEdit.SelectedItem.Equals("Humanities and Science"))
+            {
+                cmbLecDepartmentEdit.Items.Add("MU");
+                cmbLecDepartmentEdit.Items.Add("ELT");
             }
         }
 
@@ -345,6 +371,58 @@ namespace TimetableManagementSystem.Lecturers
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
+        }
+
+        private void txtLecSearch_TextChanged(object sender, EventArgs e)
+        {
+            cmbLecFilterFaculty.SelectedIndex = -1;
+            cmbLecFilterLevel.SelectedIndex = -1;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Lecturers where LecName like '%" + txtLecSearch.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvLectures.DataSource = dt;
+            con.Close();
+            
+
+        }
+
+        private void cmbLecFilterFaculty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtLecSearch.Clear();
+            cmbLecFilterLevel.SelectedIndex = -1;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Lecturers where LecFaculty like '%" + cmbLecFilterFaculty.Text + "' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvLectures.DataSource = dt;
+            con.Close();
+            
+        }
+
+        private void cmbLecFilterLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtLecSearch.Clear();
+            cmbLecFilterFaculty.SelectedIndex = -1;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Lecturers where LecLevel like '%" + cmbLecFilterLevel.Text + "' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvLectures.DataSource = dt;
+            con.Close();
+            
         }
     }
 }
