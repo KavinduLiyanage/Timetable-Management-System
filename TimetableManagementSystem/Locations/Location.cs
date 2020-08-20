@@ -124,21 +124,7 @@ namespace TimetableManagementSystem.Locations
 
         
 
-        public void metroButton1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void loc_dgridv_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void editbuil_cmb_DropDown(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void editroom_cmb_DropDown(object sender, EventArgs e)
         {
@@ -193,12 +179,6 @@ namespace TimetableManagementSystem.Locations
             room_type_txt_box.Text = loc_dgridv.CurrentRow.Cells[3].Value.ToString();
         }
 
-        //notrequiredto
-        private void loc_dgridv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-         
-
-        }
 
         private void editroom_cmb_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -359,6 +339,29 @@ namespace TimetableManagementSystem.Locations
             this.Hide();
             Homepage homepage = new Homepage();
             homepage.ShowDialog();
+        }
+
+        //-------------events not in use---------------
+        public void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loc_dgridv_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void editbuil_cmb_DropDown(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loc_dgridv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
         }
     }
 }

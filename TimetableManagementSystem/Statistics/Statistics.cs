@@ -46,9 +46,9 @@ namespace TimetableManagementSystem.Statistics
             adapt.Fill(ds, "LecFaculty");
             faclec_chart.DataSource = ds.Tables["LecFaculty"];
 
-            faclec_chart.Series["Series1"].XValueMember = "LecFaculty";
-            faclec_chart.Series["Series1"].YValueMembers = "c";
-            faclec_chart.Series["Series1"].ChartType = SeriesChartType.Bar;
+            faclec_chart.Series["Faculty"].XValueMember = "LecFaculty";
+            faclec_chart.Series["Faculty"].YValueMembers = "c";
+            faclec_chart.Series["Faculty"].ChartType = SeriesChartType.Bar;
 
 
             faclec_chart.DataBind();
@@ -139,9 +139,9 @@ namespace TimetableManagementSystem.Statistics
             progrpcount_chart.DataSource = ds.Tables["grpcount"];
 
 
-            progrpcount_chart.Series["Series1"].XValueMember = "ProgrammeRef";
-            progrpcount_chart.Series["Series1"].YValueMembers = "grpcount";
-            progrpcount_chart.Series["Series1"].ChartType = SeriesChartType.Bar;
+            progrpcount_chart.Series["Programme"].XValueMember = "ProgrammeRef";
+            progrpcount_chart.Series["Programme"].YValueMembers = "grpcount";
+            progrpcount_chart.Series["Programme"].ChartType = SeriesChartType.Bar;
 
 
             progrpcount_chart.DataBind();
@@ -161,9 +161,9 @@ namespace TimetableManagementSystem.Statistics
             subyear_chart.DataSource = ds.Tables["subyrcount"];
 
 
-            subyear_chart.Series["Series1"].XValueMember = "SubYear";
-            subyear_chart.Series["Series1"].YValueMembers = "subyrcount";
-            subyear_chart.Series["Series1"].ChartType = SeriesChartType.Bar;
+            subyear_chart.Series["Academic Year"].XValueMember = "SubYear";
+            subyear_chart.Series["Academic Year"].YValueMembers = "subyrcount";
+            subyear_chart.Series["Academic Year"].ChartType = SeriesChartType.Bar;
 
 
             subyear_chart.DataBind();
