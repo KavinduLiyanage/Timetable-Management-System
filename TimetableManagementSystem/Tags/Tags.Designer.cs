@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tagNameSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.tagNameData = new System.Windows.Forms.DataGridView();
             this.tagNameSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
@@ -107,14 +107,14 @@
             this.tagNameData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tagNameData.BackgroundColor = System.Drawing.Color.White;
             this.tagNameData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tagNameData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tagNameData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.tagNameData.ColumnHeadersHeight = 29;
             this.tagNameData.Location = new System.Drawing.Point(515, 220);
             this.tagNameData.MultiSelect = false;
@@ -264,6 +264,7 @@
             this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavStatistics.TabIndex = 71;
             this.btnSideNavStatistics.TabStop = false;
+            this.btnSideNavStatistics.Click += new System.EventHandler(this.btnSideNavStatistics_Click);
             // 
             // btnSideNavLocations
             // 
@@ -275,6 +276,7 @@
             this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavLocations.TabIndex = 70;
             this.btnSideNavLocations.TabStop = false;
+            this.btnSideNavLocations.Click += new System.EventHandler(this.btnSideNavLocations_Click);
             // 
             // btnSideNavTags
             // 
@@ -286,6 +288,7 @@
             this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavTags.TabIndex = 69;
             this.btnSideNavTags.TabStop = false;
+            this.btnSideNavTags.Click += new System.EventHandler(this.btnSideNavTags_Click);
             // 
             // btnSideNavStudents
             // 
@@ -297,6 +300,7 @@
             this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavStudents.TabIndex = 68;
             this.btnSideNavStudents.TabStop = false;
+            this.btnSideNavStudents.Click += new System.EventHandler(this.btnSideNavStudents_Click);
             // 
             // btnSideNavSubjects
             // 
@@ -308,6 +312,7 @@
             this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavSubjects.TabIndex = 67;
             this.btnSideNavSubjects.TabStop = false;
+            this.btnSideNavSubjects.Click += new System.EventHandler(this.btnSideNavSubjects_Click);
             // 
             // btnSideNavLecturers
             // 
@@ -319,6 +324,7 @@
             this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavLecturers.TabIndex = 66;
             this.btnSideNavLecturers.TabStop = false;
+            this.btnSideNavLecturers.Click += new System.EventHandler(this.btnSideNavLecturers_Click);
             // 
             // btnSideNavWorking
             // 
@@ -330,6 +336,7 @@
             this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavWorking.TabIndex = 65;
             this.btnSideNavWorking.TabStop = false;
+            this.btnSideNavWorking.Click += new System.EventHandler(this.btnSideNavWorking_Click);
             // 
             // btnHeaderAdvanced
             // 
@@ -343,6 +350,7 @@
             this.btnHeaderAdvanced.TabIndex = 76;
             this.btnHeaderAdvanced.Text = "Advanced";
             this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            this.btnHeaderAdvanced.Click += new System.EventHandler(this.btnHeaderAdvanced_Click);
             // 
             // btnHeaderRooms
             // 
@@ -356,6 +364,7 @@
             this.btnHeaderRooms.TabIndex = 75;
             this.btnHeaderRooms.Text = "Rooms";
             this.btnHeaderRooms.UseVisualStyleBackColor = false;
+            this.btnHeaderRooms.Click += new System.EventHandler(this.btnHeaderRooms_Click);
             // 
             // btnHeaderSessions
             // 
@@ -369,6 +378,7 @@
             this.btnHeaderSessions.TabIndex = 74;
             this.btnHeaderSessions.Text = "Sessions";
             this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            this.btnHeaderSessions.Click += new System.EventHandler(this.btnHeaderSessions_Click);
             // 
             // btnHeaderGenerate
             // 
@@ -382,6 +392,7 @@
             this.btnHeaderGenerate.TabIndex = 73;
             this.btnHeaderGenerate.Text = "Generate";
             this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            this.btnHeaderGenerate.Click += new System.EventHandler(this.btnHeaderGenerate_Click);
             // 
             // btnHeaderHome
             // 
@@ -395,6 +406,7 @@
             this.btnHeaderHome.TabIndex = 72;
             this.btnHeaderHome.Text = "Home";
             this.btnHeaderHome.UseVisualStyleBackColor = false;
+            this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
             // 
             // Tags
             // 

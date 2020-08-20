@@ -80,5 +80,77 @@ namespace TimetableManagementSystem.Tags
             tagNameData.DataSource = dt;
             con.Close();
         }
+
+        private void btnSideNavWorking_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
+            addSubject.ShowDialog();
+        }
+
+        private void btnSideNavStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Students.Students stu = new Students.Students();
+            stu.ShowDialog();
+        }
+
+        private void btnSideNavTags_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags tag = new Tags();
+            tag.ShowDialog();
+        }
+
+        private void btnSideNavLocations_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
+        }
+
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
+
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderRooms_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderAdvanced_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderGenerate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
