@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tagNameSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.tagNameData = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tagNameSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
             this.tagNameDltBtn = new MetroFramework.Controls.MetroButton();
             this.tagNameEditBtn = new MetroFramework.Controls.MetroButton();
@@ -79,6 +77,7 @@
             this.tagNameSearchBox.UseSelectable = true;
             this.tagNameSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tagNameSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tagNameSearchBox.TextChanged += new System.EventHandler(this.tagNameSearchBox_TextChanged);
             this.tagNameSearchBox.Click += new System.EventHandler(this.tagNameSearchBox_Click);
             // 
             // tagNameData
@@ -89,17 +88,15 @@
             this.tagNameData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tagNameData.BackgroundColor = System.Drawing.Color.White;
             this.tagNameData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tagNameData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tagNameData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tagNameData.ColumnHeadersHeight = 29;
-            this.tagNameData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2});
             this.tagNameData.Location = new System.Drawing.Point(515, 220);
             this.tagNameData.MultiSelect = false;
             this.tagNameData.Name = "tagNameData";
@@ -110,16 +107,6 @@
             this.tagNameData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tagNameData.Size = new System.Drawing.Size(390, 215);
             this.tagNameData.TabIndex = 58;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tags";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // tagNameSrtDrpDwn
             // 
@@ -195,6 +182,7 @@
             this.tagNameAddBtn.UseCustomBackColor = true;
             this.tagNameAddBtn.UseCustomForeColor = true;
             this.tagNameAddBtn.UseSelectable = true;
+            this.tagNameAddBtn.Click += new System.EventHandler(this.tagNameAddBtn_Click);
             // 
             // tagNameTxt
             // 
@@ -285,6 +273,5 @@
         private MetroFramework.Controls.MetroButton tagNameAddBtn;
         private MetroFramework.Controls.MetroTextBox tagNameTxt;
         private MetroFramework.Controls.MetroButton tagNameSrtBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

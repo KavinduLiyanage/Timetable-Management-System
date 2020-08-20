@@ -35,24 +35,50 @@ namespace TimetableManagementSystem.Tags
 
         private void Tags_Load(object sender, EventArgs e)
         {
+            String query1 = "Select * from Tags";
+
             SqlConnection con = Config.con;
-            SqlDataAdapter adapter1;
+            con.Open();
 
-            DataSet ds1 = new DataSet();
+            SqlCommand cmd = new SqlCommand(query1, con);
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
 
-            try
-            {
-                String query1 = "Select * from Tags";
+            tagNameData.AutoGenerateColumns = true;
+            tagNameData.DataSource = dt;
 
-                con.Open();
-                adapter1 = new SqlDataAdapter(query1, con);
+            con.Close();
+        }
 
-                adapter1.Fill(ds1);
-            }
-            catch (Exception ex)
-            {
-                con.Close();
-            }
+        private void tagNameAddBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO Tags (TagName) VALUES ('" + tagNameTxt.Text + "');";
+            cmd.ExecuteNonQuery();
+
+            String query2 = "Select * from Tags";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            tagNameData.DataSource = dt;
+
+            con.Close();
+        }
+
+        private void tagNameSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Tags WHERE TagName LIKE '%" + tagNameSearchBox.Text + "%'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            tagNameData.DataSource = dt;
+            con.Close();
         }
     }
 }
