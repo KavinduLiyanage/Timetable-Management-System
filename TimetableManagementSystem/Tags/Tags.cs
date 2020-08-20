@@ -75,13 +75,35 @@ namespace TimetableManagementSystem.Tags
 
         private void tagNameSearchBox_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Tags WHERE TagName LIKE '%" + tagNameSearchBox.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            tagNameData.DataSource = dt;
-            con.Close();
+            if (tagNameSrtDrpDwn.Text == "")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Tags WHERE TagName LIKE '%" + tagNameSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                tagNameData.DataSource = dt;
+                con.Close();
+            }
+            else if (tagNameSrtDrpDwn.Text == "Tag Name") {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Tags WHERE TagName LIKE '%" + tagNameSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                tagNameData.DataSource = dt;
+                con.Close();
+            }
+            else if (tagNameSrtDrpDwn.Text == "ID")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Tags WHERE id LIKE '%" + tagNameSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                tagNameData.DataSource = dt;
+                con.Close();
+            }
         }
 
         private void btnSideNavWorking_Click(object sender, EventArgs e)
