@@ -13,6 +13,9 @@ namespace TimetableManagementSystem.Tags
 {
     public partial class Tags : MetroFramework.Forms.MetroForm
     {
+
+        int tagID;
+
         public Tags()
         {
             InitializeComponent();
@@ -20,7 +23,7 @@ namespace TimetableManagementSystem.Tags
 
         private void tagNameTxt_Click(object sender, EventArgs e)
         {
-            tagNameTxt.Text = "";
+            //tagNameTxt.Text = "";
         }
 
         private void tagNameClrBtn_Click(object sender, EventArgs e)
@@ -35,23 +38,179 @@ namespace TimetableManagementSystem.Tags
 
         private void Tags_Load(object sender, EventArgs e)
         {
+            String query1 = "Select * from Tags";
+
             SqlConnection con = Config.con;
-            SqlDataAdapter adapter1;
+            con.Open();
 
-            DataSet ds1 = new DataSet();
+            SqlCommand cmd = new SqlCommand(query1, con);
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
 
-            try
+            tagNameData.AutoGenerateColumns = true;
+            tagNameData.DataSource = dt;
+
+            con.Close();
+        }
+
+        private void tagNameAddBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO Tags (TagName) VALUES ('" + tagNameTxt.Text + "');";
+            cmd.ExecuteNonQuery();
+
+            String query2 = "Select * from Tags";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            tagNameData.DataSource = dt;
+
+            con.Close();
+        }
+
+        private void tagNameSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Tags WHERE TagName LIKE '%" + tagNameSearchBox.Text + "%'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            tagNameData.DataSource = dt;
+            con.Close();
+        }
+
+        private void btnSideNavWorking_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
+            addSubject.ShowDialog();
+        }
+
+        private void btnSideNavStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Students.Students stu = new Students.Students();
+            stu.ShowDialog();
+        }
+
+        private void btnSideNavTags_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags tag = new Tags();
+            tag.ShowDialog();
+        }
+
+        private void btnSideNavLocations_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
+        }
+
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
+
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderRooms_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderAdvanced_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderGenerate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tagNameData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = tagNameData.Rows[index];
+            tagID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+            tagNameTxt.Text = selectRow.Cells[1].Value.ToString();
+
+        }
+
+        private void tagNameEditBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE Tags SET TagName = '" + tagNameTxt.Text + "' WHERE id = '" + tagID + "'";
+            cmd.ExecuteNonQuery();
+
+            String query2 = "Select * from Tags";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            tagNameData.DataSource = dt;
+
+            con.Close();
+
+            MessageBox.Show("Updated Succesfully");
+        }
+
+        private void tagNameDltBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
             {
-                String query1 = "Select * from Tags";
-
+                SqlConnection con = Config.con;
                 con.Open();
-                adapter1 = new SqlDataAdapter(query1, con);
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from Tags where id = '" + tagID + "'";
+                cmd.ExecuteNonQuery();
 
-                adapter1.Fill(ds1);
-            }
-            catch (Exception ex)
-            {
+
+                String query2 = "Select * from Tags";
+
+                SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                tagNameData.DataSource = dt;
+
+
                 con.Close();
+
+                MessageBox.Show("Delete Succesfully");
             }
         }
     }

@@ -50,12 +50,13 @@ namespace TimetableManagementSystem.Locations
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "INSERT INTO [dbo].[locations] ([building],[room],[capacity],[room_type]) VALUES ('" + building_cmb.Text + "','" + room_cmb.Text + "'," + capacity_cmb.Value + ",'" + roomtype_cmb.Text + "')";
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Data inserted !");
+                MessageBox.Show("Location Added!");
                 con.Close();
 
                 LoadLocations();
-                loc_tabcontrol.SelectedTab = viewloc_tab;
-                
+                ClearLocationData();
+                ClearUpdateLocDetails();
+                loc_tabcontrol.SelectedTab = viewloc_tab;                
 
             }
             else
@@ -122,7 +123,13 @@ namespace TimetableManagementSystem.Locations
 
         }
 
-        
+        private void ClearUpdateLocDetails()
+        {
+            editroom_cmb.SelectedIndex = -1;
+            edit_building_txt_box.Clear();
+            editcap_cmb.Value = 0;
+            room_type_txt_box.SelectedIndex = -1;
+        }
 
         
 
@@ -157,10 +164,11 @@ namespace TimetableManagementSystem.Locations
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "UPDATE locations SET capacity ='" + editcap_cmb.Text + "',room_type = '" + room_type_txt_box.Text + "' WHERE room ='" + editroom_cmb.Text + "'";
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Data Updated!");
+            MessageBox.Show("Location Updated!");
             con.Close();
 
             LoadLocations();
+            ClearUpdateLocDetails();
             loc_tabcontrol.SelectedTab = viewloc_tab;
 
         }
@@ -215,7 +223,7 @@ namespace TimetableManagementSystem.Locations
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "DELETE FROM locations WHERE room = '" + editroom_cmb.Text + "'";
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Record Deleted!");
+            MessageBox.Show("Location Deleted!");
             con.Close();
 
             LoadLocations();
