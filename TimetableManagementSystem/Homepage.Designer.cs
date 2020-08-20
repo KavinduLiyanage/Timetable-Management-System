@@ -48,7 +48,7 @@
             this.locBtn = new MetroFramework.Controls.MetroTile();
             this.tagBtn = new MetroFramework.Controls.MetroTile();
             this.stuBtn = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.btnGetStarted = new MetroFramework.Controls.MetroTile();
             this.wdhBtn = new MetroFramework.Controls.MetroTile();
             this.subBtn = new MetroFramework.Controls.MetroTile();
             this.lecBtn = new MetroFramework.Controls.MetroTile();
@@ -355,22 +355,23 @@
             this.stuBtn.UseTileImage = true;
             this.stuBtn.Click += new System.EventHandler(this.stuBtn_Click);
             // 
-            // metroTile3
+            // btnGetStarted
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.metroTile3.Location = new System.Drawing.Point(210, 156);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(150, 100);
-            this.metroTile3.TabIndex = 69;
-            this.metroTile3.Text = "Get Started";
-            this.metroTile3.TileImage = global::TimetableManagementSystem.Properties.Resources.D14_Getting_Start;
-            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroTile3.UseCustomBackColor = true;
-            this.metroTile3.UseCustomForeColor = true;
-            this.metroTile3.UseSelectable = true;
-            this.metroTile3.UseTileImage = true;
+            this.btnGetStarted.ActiveControl = null;
+            this.btnGetStarted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnGetStarted.Location = new System.Drawing.Point(210, 156);
+            this.btnGetStarted.Name = "btnGetStarted";
+            this.btnGetStarted.Size = new System.Drawing.Size(150, 100);
+            this.btnGetStarted.TabIndex = 69;
+            this.btnGetStarted.Text = "Get Started";
+            this.btnGetStarted.TileImage = global::TimetableManagementSystem.Properties.Resources.D14_Getting_Start;
+            this.btnGetStarted.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGetStarted.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnGetStarted.UseCustomBackColor = true;
+            this.btnGetStarted.UseCustomForeColor = true;
+            this.btnGetStarted.UseSelectable = true;
+            this.btnGetStarted.UseTileImage = true;
+            this.btnGetStarted.Click += new System.EventHandler(this.btnGetStarted_Click);
             // 
             // wdhBtn
             // 
@@ -443,7 +444,7 @@
             this.Controls.Add(this.locBtn);
             this.Controls.Add(this.tagBtn);
             this.Controls.Add(this.stuBtn);
-            this.Controls.Add(this.metroTile3);
+            this.Controls.Add(this.btnGetStarted);
             this.Controls.Add(this.wdhBtn);
             this.Controls.Add(this.subBtn);
             this.Controls.Add(this.lecBtn);
@@ -499,7 +500,7 @@
         private MetroFramework.Controls.MetroTile locBtn;
         private MetroFramework.Controls.MetroTile tagBtn;
         private MetroFramework.Controls.MetroTile stuBtn;
-        private MetroFramework.Controls.MetroTile metroTile3;
+        private MetroFramework.Controls.MetroTile btnGetStarted;
         private MetroFramework.Controls.MetroTile wdhBtn;
         private MetroFramework.Controls.MetroTile subBtn;
         private MetroFramework.Controls.MetroTile lecBtn;

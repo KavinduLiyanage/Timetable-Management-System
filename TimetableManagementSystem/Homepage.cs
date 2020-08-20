@@ -25,6 +25,16 @@ namespace TimetableManagementSystem
         }
 
         //----DashBoard Buttons----
+        private void btnGetStarted_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wdhBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void lecBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -67,17 +77,32 @@ namespace TimetableManagementSystem
             stat.ShowDialog();
         }
 
-        private void wdhBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //----Header Buttons----
         private void btnHeaderHome_Click(object sender, EventArgs e)
         {
             this.Hide();
             Homepage homepage = new Homepage();
             homepage.ShowDialog();
+        }
+
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderRooms_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderAdvanced_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderGenerate_Click(object sender, EventArgs e)
+        {
+
         }
 
         //----Side Nav Buttons----
@@ -105,13 +130,8 @@ namespace TimetableManagementSystem
         private void btnSideNavStatistics_Click(object sender, EventArgs e)
         {
             this.Hide();
-           Statistics.Statistics stat = new Statistics.Statistics();
+            Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
-        }
-
-        private void btnHeaderSessions_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSideNavWorking_Click(object sender, EventArgs e)
@@ -128,22 +148,9 @@ namespace TimetableManagementSystem
 
         private void btnSideNavLocations_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnHeaderGenerate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHeaderAdvanced_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHeaderRooms_Click(object sender, EventArgs e)
-        {
-
-        }
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }   
     }
 }

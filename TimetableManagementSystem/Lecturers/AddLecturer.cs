@@ -325,5 +325,26 @@ namespace TimetableManagementSystem.Lecturers
             Students.Students stu = new Students.Students();
             stu.ShowDialog();
         }
+
+        private void btnSideNavTags_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags.Tags tag = new Tags.Tags();
+            tag.ShowDialog();
+        }
+
+        private void btnSideNavLocations_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
+        }
     }
 }

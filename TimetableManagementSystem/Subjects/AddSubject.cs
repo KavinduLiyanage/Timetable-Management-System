@@ -132,7 +132,6 @@ namespace TimetableManagementSystem.Subjects
                 cmd.Parameters.AddWithValue("@SubEvaHours", cmbSubEvaHoursEdit.Text);
                 cmd.Parameters.AddWithValue("@SubCode", this.SubCode);
 
-
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -197,6 +196,14 @@ namespace TimetableManagementSystem.Subjects
 
         }
 
+        //----Header Buttons----
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
+
         //----Side Nav Buttons----
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
@@ -208,16 +215,36 @@ namespace TimetableManagementSystem.Subjects
         private void btnSideNavSubjects_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TimetableManagementSystem.Subjects.AddSubject addSubject = new TimetableManagementSystem.Subjects.AddSubject();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
             addSubject.ShowDialog();
         }
 
-        //----Header Buttons----
-        private void btnHeaderHome_Click(object sender, EventArgs e)
+        private void btnSideNavStudents_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Homepage homepage = new Homepage();
-            homepage.ShowDialog();
+            Students.Students stu = new Students.Students();
+            stu.ShowDialog();
+        }
+
+        private void btnSideNavTags_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags.Tags tag = new Tags.Tags();
+            tag.ShowDialog();
+        }
+
+        private void btnSideNavLocations_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
         }
     }
 }
