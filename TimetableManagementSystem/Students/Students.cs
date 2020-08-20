@@ -396,7 +396,7 @@ namespace TimetableManagementSystem.Students
         private void conAddBtn_Click(object sender, EventArgs e)
         {
 
-            String query5 = "Select * from GenGroupNumber";
+            String query5 = "select id,GenGrpNum from GenGroupNumber";
 
 
             SqlConnection con = Config.con;
@@ -411,7 +411,7 @@ namespace TimetableManagementSystem.Students
         private void conSubAddBtn_Click(object sender, EventArgs e)
         {
 
-            String query6 = "Select * from GenSubGroupNumber";
+            String query6 = "select id,GenSubGrpNum from GenSubGroupNumber";
 
 
             SqlConnection con = Config.con;
@@ -873,6 +873,26 @@ namespace TimetableManagementSystem.Students
 
                 MessageBox.Show("Delete Succesfully");
             }
+        }
+
+        private void genIdBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genIdEditBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genIdDltBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genSubIdEditBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
