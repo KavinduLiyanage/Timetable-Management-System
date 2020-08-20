@@ -54,8 +54,8 @@ namespace TimetableManagementSystem.Locations
                 con.Close();
 
                 LoadLocations();
-                loc_tabcontrol.SelectedTab = viewloc_tab;
-                
+                ClearLocationData();
+                loc_tabcontrol.SelectedTab = viewloc_tab;                
 
             }
             else
@@ -122,7 +122,13 @@ namespace TimetableManagementSystem.Locations
 
         }
 
-        
+        private void ClearUpdateLocDetails()
+        {
+            editroom_cmb.SelectedIndex = -1;
+            room_cmb.SelectedIndex = -1;
+            capacity_cmb.Value = 0;
+            roomtype_cmb.SelectedIndex = -1;
+        }
 
         
 
@@ -161,6 +167,7 @@ namespace TimetableManagementSystem.Locations
             con.Close();
 
             LoadLocations();
+            ClearUpdateLocDetails();
             loc_tabcontrol.SelectedTab = viewloc_tab;
 
         }
