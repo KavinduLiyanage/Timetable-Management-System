@@ -32,7 +32,9 @@ namespace TimetableManagementSystem
 
         private void wdhBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
+            workingDays.ShowDialog();
         }
 
         private void lecBtn_Click(object sender, EventArgs e)
