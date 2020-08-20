@@ -28,14 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.genSubGrpId = new MetroFramework.Controls.MetroTabPage();
+            this.genSubIdSearchBox = new MetroFramework.Controls.MetroTextBox();
+            this.genSubIdDltBtn = new MetroFramework.Controls.MetroButton();
+            this.genSubIdEditBtn = new MetroFramework.Controls.MetroButton();
+            this.conSubAddBtn = new MetroFramework.Controls.MetroButton();
+            this.genSubIdBtn = new MetroFramework.Controls.MetroButton();
+            this.gentedSubIdNumTxt = new MetroFramework.Controls.MetroTextBox();
+            this.genSubIdData = new System.Windows.Forms.DataGridView();
+            this.genSubIdSrtBtn = new MetroFramework.Controls.MetroButton();
+            this.genSubIdSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
             this.subGrpNum = new MetroFramework.Controls.MetroTabPage();
             this.subGrpNumSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.subGrpNumDltBtn = new MetroFramework.Controls.MetroButton();
@@ -87,22 +97,26 @@
             this.genIdData = new System.Windows.Forms.DataGridView();
             this.genIdSrtBtn = new MetroFramework.Controls.MetroButton();
             this.genIdSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
-            this.genSubGrpId = new MetroFramework.Controls.MetroTabPage();
-            this.genSubIdSearchBox = new MetroFramework.Controls.MetroTextBox();
-            this.genSubIdDltBtn = new MetroFramework.Controls.MetroButton();
-            this.genSubIdEditBtn = new MetroFramework.Controls.MetroButton();
-            this.conSubAddBtn = new MetroFramework.Controls.MetroButton();
-            this.genSubIdBtn = new MetroFramework.Controls.MetroButton();
-            this.gentedSubIdNumTxt = new MetroFramework.Controls.MetroTextBox();
-            this.genSubIdData = new System.Windows.Forms.DataGridView();
-            this.genSubIdSrtBtn = new MetroFramework.Controls.MetroButton();
-            this.genSubIdSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
             this.viewDe = new MetroFramework.Controls.MetroTabPage();
             this.searchBox = new MetroFramework.Controls.MetroTextBox();
             this.viewData = new System.Windows.Forms.DataGridView();
             this.srtBtn = new MetroFramework.Controls.MetroButton();
             this.srtDrpDwn = new MetroFramework.Controls.MetroComboBox();
+            this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
+            this.btnSideNavTags = new System.Windows.Forms.PictureBox();
+            this.btnSideNavStudents = new System.Windows.Forms.PictureBox();
+            this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
+            this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
+            this.btnHeaderAdvanced = new System.Windows.Forms.Button();
+            this.btnHeaderRooms = new System.Windows.Forms.Button();
+            this.btnHeaderSessions = new System.Windows.Forms.Button();
+            this.btnHeaderGenerate = new System.Windows.Forms.Button();
+            this.btnHeaderHome = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
+            this.genSubGrpId.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genSubIdData)).BeginInit();
             this.subGrpNum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subGrpNumData)).BeginInit();
             this.year.SuspendLayout();
@@ -113,20 +127,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpNumData)).BeginInit();
             this.genGrpID.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.genIdData)).BeginInit();
-            this.genSubGrpId.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.genSubIdData)).BeginInit();
             this.viewDe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
             // 
+            this.metroTabControl1.Controls.Add(this.genGrpID);
             this.metroTabControl1.Controls.Add(this.genSubGrpId);
             this.metroTabControl1.Controls.Add(this.subGrpNum);
             this.metroTabControl1.Controls.Add(this.year);
             this.metroTabControl1.Controls.Add(this.programme);
             this.metroTabControl1.Controls.Add(this.grpNum);
-            this.metroTabControl1.Controls.Add(this.genGrpID);
             this.metroTabControl1.Controls.Add(this.viewDe);
             this.metroTabControl1.Location = new System.Drawing.Point(131, 95);
             this.metroTabControl1.Name = "metroTabControl1";
@@ -134,6 +153,222 @@
             this.metroTabControl1.Size = new System.Drawing.Size(811, 486);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
+            // 
+            // genSubGrpId
+            // 
+            this.genSubGrpId.Controls.Add(this.genSubIdSearchBox);
+            this.genSubGrpId.Controls.Add(this.genSubIdDltBtn);
+            this.genSubGrpId.Controls.Add(this.genSubIdEditBtn);
+            this.genSubGrpId.Controls.Add(this.conSubAddBtn);
+            this.genSubGrpId.Controls.Add(this.genSubIdBtn);
+            this.genSubGrpId.Controls.Add(this.gentedSubIdNumTxt);
+            this.genSubGrpId.Controls.Add(this.genSubIdData);
+            this.genSubGrpId.Controls.Add(this.genSubIdSrtBtn);
+            this.genSubGrpId.Controls.Add(this.genSubIdSrtDrpDwn);
+            this.genSubGrpId.HorizontalScrollbarBarColor = true;
+            this.genSubGrpId.HorizontalScrollbarHighlightOnWheel = false;
+            this.genSubGrpId.HorizontalScrollbarSize = 10;
+            this.genSubGrpId.Location = new System.Drawing.Point(4, 38);
+            this.genSubGrpId.Name = "genSubGrpId";
+            this.genSubGrpId.Size = new System.Drawing.Size(803, 444);
+            this.genSubGrpId.TabIndex = 5;
+            this.genSubGrpId.Text = "Generate Sub-Group IDs";
+            this.genSubGrpId.VerticalScrollbarBarColor = true;
+            this.genSubGrpId.VerticalScrollbarHighlightOnWheel = false;
+            this.genSubGrpId.VerticalScrollbarSize = 10;
+            // 
+            // genSubIdSearchBox
+            // 
+            // 
+            // 
+            // 
+            this.genSubIdSearchBox.CustomButton.Image = null;
+            this.genSubIdSearchBox.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.genSubIdSearchBox.CustomButton.Name = "";
+            this.genSubIdSearchBox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.genSubIdSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.genSubIdSearchBox.CustomButton.TabIndex = 1;
+            this.genSubIdSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.genSubIdSearchBox.CustomButton.UseSelectable = true;
+            this.genSubIdSearchBox.CustomButton.Visible = false;
+            this.genSubIdSearchBox.DisplayIcon = true;
+            this.genSubIdSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.genSubIdSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.genSubIdSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
+            this.genSubIdSearchBox.IconRight = true;
+            this.genSubIdSearchBox.Lines = new string[] {
+        "Search"};
+            this.genSubIdSearchBox.Location = new System.Drawing.Point(367, 74);
+            this.genSubIdSearchBox.MaxLength = 32767;
+            this.genSubIdSearchBox.Name = "genSubIdSearchBox";
+            this.genSubIdSearchBox.PasswordChar = '\0';
+            this.genSubIdSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.genSubIdSearchBox.SelectedText = "";
+            this.genSubIdSearchBox.SelectionLength = 0;
+            this.genSubIdSearchBox.SelectionStart = 0;
+            this.genSubIdSearchBox.ShortcutsEnabled = true;
+            this.genSubIdSearchBox.Size = new System.Drawing.Size(163, 30);
+            this.genSubIdSearchBox.TabIndex = 64;
+            this.genSubIdSearchBox.Text = "Search";
+            this.genSubIdSearchBox.UseSelectable = true;
+            this.genSubIdSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.genSubIdSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.genSubIdSearchBox.TextChanged += new System.EventHandler(this.genSubIdSearchBox_TextChanged);
+            this.genSubIdSearchBox.Click += new System.EventHandler(this.genSubIdSearchBox_Click);
+            // 
+            // genSubIdDltBtn
+            // 
+            this.genSubIdDltBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.genSubIdDltBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.genSubIdDltBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.genSubIdDltBtn.Location = new System.Drawing.Point(594, 330);
+            this.genSubIdDltBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.genSubIdDltBtn.Name = "genSubIdDltBtn";
+            this.genSubIdDltBtn.Size = new System.Drawing.Size(161, 40);
+            this.genSubIdDltBtn.TabIndex = 63;
+            this.genSubIdDltBtn.Text = "Delete";
+            this.genSubIdDltBtn.UseCustomBackColor = true;
+            this.genSubIdDltBtn.UseCustomForeColor = true;
+            this.genSubIdDltBtn.UseSelectable = true;
+            // 
+            // genSubIdEditBtn
+            // 
+            this.genSubIdEditBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.genSubIdEditBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.genSubIdEditBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.genSubIdEditBtn.Location = new System.Drawing.Point(367, 330);
+            this.genSubIdEditBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.genSubIdEditBtn.Name = "genSubIdEditBtn";
+            this.genSubIdEditBtn.Size = new System.Drawing.Size(161, 40);
+            this.genSubIdEditBtn.TabIndex = 62;
+            this.genSubIdEditBtn.Text = "Edit Details";
+            this.genSubIdEditBtn.UseCustomBackColor = true;
+            this.genSubIdEditBtn.UseCustomForeColor = true;
+            this.genSubIdEditBtn.UseSelectable = true;
+            // 
+            // conSubAddBtn
+            // 
+            this.conSubAddBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.conSubAddBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.conSubAddBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.conSubAddBtn.Location = new System.Drawing.Point(45, 307);
+            this.conSubAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.conSubAddBtn.Name = "conSubAddBtn";
+            this.conSubAddBtn.Size = new System.Drawing.Size(205, 40);
+            this.conSubAddBtn.TabIndex = 61;
+            this.conSubAddBtn.Text = "Confirm and Add";
+            this.conSubAddBtn.UseCustomBackColor = true;
+            this.conSubAddBtn.UseCustomForeColor = true;
+            this.conSubAddBtn.UseSelectable = true;
+            this.conSubAddBtn.Click += new System.EventHandler(this.conSubAddBtn_Click);
+            // 
+            // genSubIdBtn
+            // 
+            this.genSubIdBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.genSubIdBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.genSubIdBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.genSubIdBtn.Location = new System.Drawing.Point(45, 263);
+            this.genSubIdBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.genSubIdBtn.Name = "genSubIdBtn";
+            this.genSubIdBtn.Size = new System.Drawing.Size(205, 40);
+            this.genSubIdBtn.TabIndex = 60;
+            this.genSubIdBtn.Text = "Generate Sub-Grp ID";
+            this.genSubIdBtn.UseCustomBackColor = true;
+            this.genSubIdBtn.UseCustomForeColor = true;
+            this.genSubIdBtn.UseSelectable = true;
+            // 
+            // gentedSubIdNumTxt
+            // 
+            // 
+            // 
+            // 
+            this.gentedSubIdNumTxt.CustomButton.Image = null;
+            this.gentedSubIdNumTxt.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.gentedSubIdNumTxt.CustomButton.Name = "";
+            this.gentedSubIdNumTxt.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.gentedSubIdNumTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.gentedSubIdNumTxt.CustomButton.TabIndex = 1;
+            this.gentedSubIdNumTxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.gentedSubIdNumTxt.CustomButton.UseSelectable = true;
+            this.gentedSubIdNumTxt.CustomButton.Visible = false;
+            this.gentedSubIdNumTxt.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.gentedSubIdNumTxt.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.gentedSubIdNumTxt.Lines = new string[] {
+        "Generated ID"};
+            this.gentedSubIdNumTxt.Location = new System.Drawing.Point(45, 192);
+            this.gentedSubIdNumTxt.MaxLength = 32767;
+            this.gentedSubIdNumTxt.Name = "gentedSubIdNumTxt";
+            this.gentedSubIdNumTxt.PasswordChar = '\0';
+            this.gentedSubIdNumTxt.ReadOnly = true;
+            this.gentedSubIdNumTxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gentedSubIdNumTxt.SelectedText = "";
+            this.gentedSubIdNumTxt.SelectionLength = 0;
+            this.gentedSubIdNumTxt.SelectionStart = 0;
+            this.gentedSubIdNumTxt.ShortcutsEnabled = true;
+            this.gentedSubIdNumTxt.ShowClearButton = true;
+            this.gentedSubIdNumTxt.Size = new System.Drawing.Size(205, 30);
+            this.gentedSubIdNumTxt.TabIndex = 59;
+            this.gentedSubIdNumTxt.Text = "Generated ID";
+            this.gentedSubIdNumTxt.UseSelectable = true;
+            this.gentedSubIdNumTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.gentedSubIdNumTxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // genSubIdData
+            // 
+            this.genSubIdData.AllowUserToAddRows = false;
+            this.genSubIdData.AllowUserToDeleteRows = false;
+            this.genSubIdData.AllowUserToOrderColumns = true;
+            this.genSubIdData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.genSubIdData.BackgroundColor = System.Drawing.Color.White;
+            this.genSubIdData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.genSubIdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            this.genSubIdData.ColumnHeadersHeight = 29;
+            this.genSubIdData.Location = new System.Drawing.Point(367, 110);
+            this.genSubIdData.MultiSelect = false;
+            this.genSubIdData.Name = "genSubIdData";
+            this.genSubIdData.ReadOnly = true;
+            this.genSubIdData.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.genSubIdData.RowHeadersWidth = 51;
+            this.genSubIdData.RowTemplate.Height = 24;
+            this.genSubIdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.genSubIdData.Size = new System.Drawing.Size(390, 215);
+            this.genSubIdData.TabIndex = 58;
+            // 
+            // genSubIdSrtBtn
+            // 
+            this.genSubIdSrtBtn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.genSubIdSrtBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.genSubIdSrtBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.genSubIdSrtBtn.Location = new System.Drawing.Point(693, 76);
+            this.genSubIdSrtBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.genSubIdSrtBtn.Name = "genSubIdSrtBtn";
+            this.genSubIdSrtBtn.Size = new System.Drawing.Size(62, 29);
+            this.genSubIdSrtBtn.TabIndex = 57;
+            this.genSubIdSrtBtn.Text = "Sort";
+            this.genSubIdSrtBtn.UseCustomBackColor = true;
+            this.genSubIdSrtBtn.UseCustomForeColor = true;
+            this.genSubIdSrtBtn.UseSelectable = true;
+            // 
+            // genSubIdSrtDrpDwn
+            // 
+            this.genSubIdSrtDrpDwn.FormattingEnabled = true;
+            this.genSubIdSrtDrpDwn.ItemHeight = 23;
+            this.genSubIdSrtDrpDwn.Items.AddRange(new object[] {
+            "Building",
+            "Capacity",
+            "Room Type"});
+            this.genSubIdSrtDrpDwn.Location = new System.Drawing.Point(594, 76);
+            this.genSubIdSrtDrpDwn.Name = "genSubIdSrtDrpDwn";
+            this.genSubIdSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
+            this.genSubIdSrtDrpDwn.TabIndex = 56;
+            this.genSubIdSrtDrpDwn.UseSelectable = true;
             // 
             // subGrpNum
             // 
@@ -1257,222 +1492,6 @@
             this.genIdSrtDrpDwn.TabIndex = 56;
             this.genIdSrtDrpDwn.UseSelectable = true;
             // 
-            // genSubGrpId
-            // 
-            this.genSubGrpId.Controls.Add(this.genSubIdSearchBox);
-            this.genSubGrpId.Controls.Add(this.genSubIdDltBtn);
-            this.genSubGrpId.Controls.Add(this.genSubIdEditBtn);
-            this.genSubGrpId.Controls.Add(this.conSubAddBtn);
-            this.genSubGrpId.Controls.Add(this.genSubIdBtn);
-            this.genSubGrpId.Controls.Add(this.gentedSubIdNumTxt);
-            this.genSubGrpId.Controls.Add(this.genSubIdData);
-            this.genSubGrpId.Controls.Add(this.genSubIdSrtBtn);
-            this.genSubGrpId.Controls.Add(this.genSubIdSrtDrpDwn);
-            this.genSubGrpId.HorizontalScrollbarBarColor = true;
-            this.genSubGrpId.HorizontalScrollbarHighlightOnWheel = false;
-            this.genSubGrpId.HorizontalScrollbarSize = 10;
-            this.genSubGrpId.Location = new System.Drawing.Point(4, 38);
-            this.genSubGrpId.Name = "genSubGrpId";
-            this.genSubGrpId.Size = new System.Drawing.Size(803, 444);
-            this.genSubGrpId.TabIndex = 5;
-            this.genSubGrpId.Text = "Generate Sub-Group IDs";
-            this.genSubGrpId.VerticalScrollbarBarColor = true;
-            this.genSubGrpId.VerticalScrollbarHighlightOnWheel = false;
-            this.genSubGrpId.VerticalScrollbarSize = 10;
-            // 
-            // genSubIdSearchBox
-            // 
-            // 
-            // 
-            // 
-            this.genSubIdSearchBox.CustomButton.Image = null;
-            this.genSubIdSearchBox.CustomButton.Location = new System.Drawing.Point(135, 2);
-            this.genSubIdSearchBox.CustomButton.Name = "";
-            this.genSubIdSearchBox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.genSubIdSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.genSubIdSearchBox.CustomButton.TabIndex = 1;
-            this.genSubIdSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.genSubIdSearchBox.CustomButton.UseSelectable = true;
-            this.genSubIdSearchBox.CustomButton.Visible = false;
-            this.genSubIdSearchBox.DisplayIcon = true;
-            this.genSubIdSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.genSubIdSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.genSubIdSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
-            this.genSubIdSearchBox.IconRight = true;
-            this.genSubIdSearchBox.Lines = new string[] {
-        "Search"};
-            this.genSubIdSearchBox.Location = new System.Drawing.Point(367, 74);
-            this.genSubIdSearchBox.MaxLength = 32767;
-            this.genSubIdSearchBox.Name = "genSubIdSearchBox";
-            this.genSubIdSearchBox.PasswordChar = '\0';
-            this.genSubIdSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.genSubIdSearchBox.SelectedText = "";
-            this.genSubIdSearchBox.SelectionLength = 0;
-            this.genSubIdSearchBox.SelectionStart = 0;
-            this.genSubIdSearchBox.ShortcutsEnabled = true;
-            this.genSubIdSearchBox.Size = new System.Drawing.Size(163, 30);
-            this.genSubIdSearchBox.TabIndex = 64;
-            this.genSubIdSearchBox.Text = "Search";
-            this.genSubIdSearchBox.UseSelectable = true;
-            this.genSubIdSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.genSubIdSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.genSubIdSearchBox.TextChanged += new System.EventHandler(this.genSubIdSearchBox_TextChanged);
-            this.genSubIdSearchBox.Click += new System.EventHandler(this.genSubIdSearchBox_Click);
-            // 
-            // genSubIdDltBtn
-            // 
-            this.genSubIdDltBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.genSubIdDltBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.genSubIdDltBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.genSubIdDltBtn.Location = new System.Drawing.Point(594, 330);
-            this.genSubIdDltBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.genSubIdDltBtn.Name = "genSubIdDltBtn";
-            this.genSubIdDltBtn.Size = new System.Drawing.Size(161, 40);
-            this.genSubIdDltBtn.TabIndex = 63;
-            this.genSubIdDltBtn.Text = "Delete";
-            this.genSubIdDltBtn.UseCustomBackColor = true;
-            this.genSubIdDltBtn.UseCustomForeColor = true;
-            this.genSubIdDltBtn.UseSelectable = true;
-            // 
-            // genSubIdEditBtn
-            // 
-            this.genSubIdEditBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.genSubIdEditBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.genSubIdEditBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.genSubIdEditBtn.Location = new System.Drawing.Point(367, 330);
-            this.genSubIdEditBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.genSubIdEditBtn.Name = "genSubIdEditBtn";
-            this.genSubIdEditBtn.Size = new System.Drawing.Size(161, 40);
-            this.genSubIdEditBtn.TabIndex = 62;
-            this.genSubIdEditBtn.Text = "Edit Details";
-            this.genSubIdEditBtn.UseCustomBackColor = true;
-            this.genSubIdEditBtn.UseCustomForeColor = true;
-            this.genSubIdEditBtn.UseSelectable = true;
-            // 
-            // conSubAddBtn
-            // 
-            this.conSubAddBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.conSubAddBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.conSubAddBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.conSubAddBtn.Location = new System.Drawing.Point(45, 307);
-            this.conSubAddBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.conSubAddBtn.Name = "conSubAddBtn";
-            this.conSubAddBtn.Size = new System.Drawing.Size(205, 40);
-            this.conSubAddBtn.TabIndex = 61;
-            this.conSubAddBtn.Text = "Confirm and Add";
-            this.conSubAddBtn.UseCustomBackColor = true;
-            this.conSubAddBtn.UseCustomForeColor = true;
-            this.conSubAddBtn.UseSelectable = true;
-            this.conSubAddBtn.Click += new System.EventHandler(this.conSubAddBtn_Click);
-            // 
-            // genSubIdBtn
-            // 
-            this.genSubIdBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.genSubIdBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.genSubIdBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.genSubIdBtn.Location = new System.Drawing.Point(45, 263);
-            this.genSubIdBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.genSubIdBtn.Name = "genSubIdBtn";
-            this.genSubIdBtn.Size = new System.Drawing.Size(205, 40);
-            this.genSubIdBtn.TabIndex = 60;
-            this.genSubIdBtn.Text = "Generate Sub-Grp ID";
-            this.genSubIdBtn.UseCustomBackColor = true;
-            this.genSubIdBtn.UseCustomForeColor = true;
-            this.genSubIdBtn.UseSelectable = true;
-            // 
-            // gentedSubIdNumTxt
-            // 
-            // 
-            // 
-            // 
-            this.gentedSubIdNumTxt.CustomButton.Image = null;
-            this.gentedSubIdNumTxt.CustomButton.Location = new System.Drawing.Point(177, 2);
-            this.gentedSubIdNumTxt.CustomButton.Name = "";
-            this.gentedSubIdNumTxt.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.gentedSubIdNumTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.gentedSubIdNumTxt.CustomButton.TabIndex = 1;
-            this.gentedSubIdNumTxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.gentedSubIdNumTxt.CustomButton.UseSelectable = true;
-            this.gentedSubIdNumTxt.CustomButton.Visible = false;
-            this.gentedSubIdNumTxt.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.gentedSubIdNumTxt.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.gentedSubIdNumTxt.Lines = new string[] {
-        "Generated ID"};
-            this.gentedSubIdNumTxt.Location = new System.Drawing.Point(45, 192);
-            this.gentedSubIdNumTxt.MaxLength = 32767;
-            this.gentedSubIdNumTxt.Name = "gentedSubIdNumTxt";
-            this.gentedSubIdNumTxt.PasswordChar = '\0';
-            this.gentedSubIdNumTxt.ReadOnly = true;
-            this.gentedSubIdNumTxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.gentedSubIdNumTxt.SelectedText = "";
-            this.gentedSubIdNumTxt.SelectionLength = 0;
-            this.gentedSubIdNumTxt.SelectionStart = 0;
-            this.gentedSubIdNumTxt.ShortcutsEnabled = true;
-            this.gentedSubIdNumTxt.ShowClearButton = true;
-            this.gentedSubIdNumTxt.Size = new System.Drawing.Size(205, 30);
-            this.gentedSubIdNumTxt.TabIndex = 59;
-            this.gentedSubIdNumTxt.Text = "Generated ID";
-            this.gentedSubIdNumTxt.UseSelectable = true;
-            this.gentedSubIdNumTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.gentedSubIdNumTxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // genSubIdData
-            // 
-            this.genSubIdData.AllowUserToAddRows = false;
-            this.genSubIdData.AllowUserToDeleteRows = false;
-            this.genSubIdData.AllowUserToOrderColumns = true;
-            this.genSubIdData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.genSubIdData.BackgroundColor = System.Drawing.Color.White;
-            this.genSubIdData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.genSubIdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
-            this.genSubIdData.ColumnHeadersHeight = 29;
-            this.genSubIdData.Location = new System.Drawing.Point(367, 110);
-            this.genSubIdData.MultiSelect = false;
-            this.genSubIdData.Name = "genSubIdData";
-            this.genSubIdData.ReadOnly = true;
-            this.genSubIdData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.genSubIdData.RowHeadersWidth = 51;
-            this.genSubIdData.RowTemplate.Height = 24;
-            this.genSubIdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.genSubIdData.Size = new System.Drawing.Size(390, 215);
-            this.genSubIdData.TabIndex = 58;
-            // 
-            // genSubIdSrtBtn
-            // 
-            this.genSubIdSrtBtn.BackColor = System.Drawing.SystemColors.GrayText;
-            this.genSubIdSrtBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.genSubIdSrtBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.genSubIdSrtBtn.Location = new System.Drawing.Point(693, 76);
-            this.genSubIdSrtBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.genSubIdSrtBtn.Name = "genSubIdSrtBtn";
-            this.genSubIdSrtBtn.Size = new System.Drawing.Size(62, 29);
-            this.genSubIdSrtBtn.TabIndex = 57;
-            this.genSubIdSrtBtn.Text = "Sort";
-            this.genSubIdSrtBtn.UseCustomBackColor = true;
-            this.genSubIdSrtBtn.UseCustomForeColor = true;
-            this.genSubIdSrtBtn.UseSelectable = true;
-            // 
-            // genSubIdSrtDrpDwn
-            // 
-            this.genSubIdSrtDrpDwn.FormattingEnabled = true;
-            this.genSubIdSrtDrpDwn.ItemHeight = 23;
-            this.genSubIdSrtDrpDwn.Items.AddRange(new object[] {
-            "Building",
-            "Capacity",
-            "Room Type"});
-            this.genSubIdSrtDrpDwn.Location = new System.Drawing.Point(594, 76);
-            this.genSubIdSrtDrpDwn.Name = "genSubIdSrtDrpDwn";
-            this.genSubIdSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
-            this.genSubIdSrtDrpDwn.TabIndex = 56;
-            this.genSubIdSrtDrpDwn.UseSelectable = true;
-            // 
             // viewDe
             // 
             this.viewDe.Controls.Add(this.searchBox);
@@ -1586,6 +1605,148 @@
             this.srtDrpDwn.TabIndex = 21;
             this.srtDrpDwn.UseSelectable = true;
             // 
+            // btnSideNavStatistics
+            // 
+            this.btnSideNavStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavStatistics.Image = global::TimetableManagementSystem.Properties.Resources.Sub7_Statistics;
+            this.btnSideNavStatistics.Location = new System.Drawing.Point(13, 488);
+            this.btnSideNavStatistics.Name = "btnSideNavStatistics";
+            this.btnSideNavStatistics.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStatistics.TabIndex = 25;
+            this.btnSideNavStatistics.TabStop = false;
+            // 
+            // btnSideNavLocations
+            // 
+            this.btnSideNavLocations.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavLocations.Image = global::TimetableManagementSystem.Properties.Resources.Sub6_Locations;
+            this.btnSideNavLocations.Location = new System.Drawing.Point(13, 427);
+            this.btnSideNavLocations.Name = "btnSideNavLocations";
+            this.btnSideNavLocations.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLocations.TabIndex = 24;
+            this.btnSideNavLocations.TabStop = false;
+            // 
+            // btnSideNavTags
+            // 
+            this.btnSideNavTags.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavTags.Image = global::TimetableManagementSystem.Properties.Resources.Sub5_Tags;
+            this.btnSideNavTags.Location = new System.Drawing.Point(13, 366);
+            this.btnSideNavTags.Name = "btnSideNavTags";
+            this.btnSideNavTags.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavTags.TabIndex = 23;
+            this.btnSideNavTags.TabStop = false;
+            // 
+            // btnSideNavStudents
+            // 
+            this.btnSideNavStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavStudents.Image = global::TimetableManagementSystem.Properties.Resources.Sub4_Students;
+            this.btnSideNavStudents.Location = new System.Drawing.Point(13, 305);
+            this.btnSideNavStudents.Name = "btnSideNavStudents";
+            this.btnSideNavStudents.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStudents.TabIndex = 22;
+            this.btnSideNavStudents.TabStop = false;
+            // 
+            // btnSideNavSubjects
+            // 
+            this.btnSideNavSubjects.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavSubjects.Image = global::TimetableManagementSystem.Properties.Resources.Sub3_Subjects;
+            this.btnSideNavSubjects.Location = new System.Drawing.Point(13, 244);
+            this.btnSideNavSubjects.Name = "btnSideNavSubjects";
+            this.btnSideNavSubjects.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavSubjects.TabIndex = 21;
+            this.btnSideNavSubjects.TabStop = false;
+            // 
+            // btnSideNavLecturers
+            // 
+            this.btnSideNavLecturers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavLecturers.Image = global::TimetableManagementSystem.Properties.Resources.Sub2_Lecturers;
+            this.btnSideNavLecturers.Location = new System.Drawing.Point(13, 188);
+            this.btnSideNavLecturers.Name = "btnSideNavLecturers";
+            this.btnSideNavLecturers.Size = new System.Drawing.Size(70, 50);
+            this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLecturers.TabIndex = 20;
+            this.btnSideNavLecturers.TabStop = false;
+            // 
+            // btnSideNavWorking
+            // 
+            this.btnSideNavWorking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideNavWorking.Image = global::TimetableManagementSystem.Properties.Resources.Sub1_WorkingDaysAndHours;
+            this.btnSideNavWorking.Location = new System.Drawing.Point(8, 112);
+            this.btnSideNavWorking.Name = "btnSideNavWorking";
+            this.btnSideNavWorking.Size = new System.Drawing.Size(80, 70);
+            this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavWorking.TabIndex = 19;
+            this.btnSideNavWorking.TabStop = false;
+            // 
+            // btnHeaderAdvanced
+            // 
+            this.btnHeaderAdvanced.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderAdvanced.FlatAppearance.BorderSize = 0;
+            this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderAdvanced.Location = new System.Drawing.Point(588, 10);
+            this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
+            this.btnHeaderAdvanced.Size = new System.Drawing.Size(115, 40);
+            this.btnHeaderAdvanced.TabIndex = 46;
+            this.btnHeaderAdvanced.Text = "Advanced";
+            this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderRooms
+            // 
+            this.btnHeaderRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderRooms.FlatAppearance.BorderSize = 0;
+            this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderRooms.Location = new System.Drawing.Point(467, 10);
+            this.btnHeaderRooms.Name = "btnHeaderRooms";
+            this.btnHeaderRooms.Size = new System.Drawing.Size(84, 40);
+            this.btnHeaderRooms.TabIndex = 45;
+            this.btnHeaderRooms.Text = "Rooms";
+            this.btnHeaderRooms.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderSessions
+            // 
+            this.btnHeaderSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderSessions.FlatAppearance.BorderSize = 0;
+            this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderSessions.Location = new System.Drawing.Point(327, 10);
+            this.btnHeaderSessions.Name = "btnHeaderSessions";
+            this.btnHeaderSessions.Size = new System.Drawing.Size(103, 40);
+            this.btnHeaderSessions.TabIndex = 44;
+            this.btnHeaderSessions.Text = "Sessions";
+            this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderGenerate
+            // 
+            this.btnHeaderGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderGenerate.FlatAppearance.BorderSize = 0;
+            this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderGenerate.Location = new System.Drawing.Point(740, 10);
+            this.btnHeaderGenerate.Name = "btnHeaderGenerate";
+            this.btnHeaderGenerate.Size = new System.Drawing.Size(112, 40);
+            this.btnHeaderGenerate.TabIndex = 43;
+            this.btnHeaderGenerate.Text = "Generate";
+            this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderHome
+            // 
+            this.btnHeaderHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderHome.FlatAppearance.BorderSize = 0;
+            this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderHome.Location = new System.Drawing.Point(211, 10);
+            this.btnHeaderHome.Name = "btnHeaderHome";
+            this.btnHeaderHome.Size = new System.Drawing.Size(79, 40);
+            this.btnHeaderHome.TabIndex = 42;
+            this.btnHeaderHome.Text = "Home";
+            this.btnHeaderHome.UseVisualStyleBackColor = false;
+            // 
             // Students
             // 
             this.ApplyImageInvert = true;
@@ -1594,6 +1755,18 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.btnHeaderAdvanced);
+            this.Controls.Add(this.btnHeaderRooms);
+            this.Controls.Add(this.btnHeaderSessions);
+            this.Controls.Add(this.btnHeaderGenerate);
+            this.Controls.Add(this.btnHeaderHome);
+            this.Controls.Add(this.btnSideNavStatistics);
+            this.Controls.Add(this.btnSideNavLocations);
+            this.Controls.Add(this.btnSideNavTags);
+            this.Controls.Add(this.btnSideNavStudents);
+            this.Controls.Add(this.btnSideNavSubjects);
+            this.Controls.Add(this.btnSideNavLecturers);
+            this.Controls.Add(this.btnSideNavWorking);
             this.Controls.Add(this.metroTabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -1603,6 +1776,8 @@
             this.Text = "Students";
             this.Load += new System.EventHandler(this.Students_Load);
             this.metroTabControl1.ResumeLayout(false);
+            this.genSubGrpId.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.genSubIdData)).EndInit();
             this.subGrpNum.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.subGrpNumData)).EndInit();
             this.year.ResumeLayout(false);
@@ -1613,11 +1788,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpNumData)).EndInit();
             this.genGrpID.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.genIdData)).EndInit();
-            this.genSubGrpId.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.genSubIdData)).EndInit();
             this.viewDe.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.viewData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1690,5 +1871,17 @@
         private MetroFramework.Controls.MetroTextBox subGrpNumSearchBox;
         private MetroFramework.Controls.MetroTextBox genSubIdSearchBox;
         private MetroFramework.Controls.MetroTextBox searchBox;
+        private System.Windows.Forms.PictureBox btnSideNavStatistics;
+        private System.Windows.Forms.PictureBox btnSideNavLocations;
+        private System.Windows.Forms.PictureBox btnSideNavTags;
+        private System.Windows.Forms.PictureBox btnSideNavStudents;
+        private System.Windows.Forms.PictureBox btnSideNavSubjects;
+        private System.Windows.Forms.PictureBox btnSideNavLecturers;
+        private System.Windows.Forms.PictureBox btnSideNavWorking;
+        private System.Windows.Forms.Button btnHeaderAdvanced;
+        private System.Windows.Forms.Button btnHeaderRooms;
+        private System.Windows.Forms.Button btnHeaderSessions;
+        private System.Windows.Forms.Button btnHeaderGenerate;
+        private System.Windows.Forms.Button btnHeaderHome;
     }
 }
