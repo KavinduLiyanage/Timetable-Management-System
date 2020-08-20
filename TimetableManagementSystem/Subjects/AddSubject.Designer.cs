@@ -37,6 +37,7 @@
             this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
             this.tabControlSubjects = new MetroFramework.Controls.MetroTabControl();
             this.tabPageSubView = new System.Windows.Forms.TabPage();
+            this.dgvSubjects = new System.Windows.Forms.DataGridView();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.tabPageSubAdd = new System.Windows.Forms.TabPage();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -59,6 +60,14 @@
             this.btnSubClear = new MetroFramework.Controls.MetroButton();
             this.btnSubSave = new MetroFramework.Controls.MetroButton();
             this.tabPageSubEdit = new System.Windows.Forms.TabPage();
+            this.cmbSubLecHoursEdit = new MetroFramework.Controls.MetroComboBox();
+            this.cmbSubSemEdit = new MetroFramework.Controls.MetroComboBox();
+            this.cmbSubEvaHoursEdit = new MetroFramework.Controls.MetroComboBox();
+            this.cmbSubLabHoursEdit = new MetroFramework.Controls.MetroComboBox();
+            this.cmbSubTuteHoursEdit = new MetroFramework.Controls.MetroComboBox();
+            this.cmbSubYearEdit = new MetroFramework.Controls.MetroComboBox();
+            this.txtSubCodeEdit = new MetroFramework.Controls.MetroTextBox();
+            this.txtSubNameEdit = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
@@ -75,15 +84,14 @@
             this.btnHeaderSessions = new System.Windows.Forms.Button();
             this.btnHeaderGenerate = new System.Windows.Forms.Button();
             this.btnHeaderHome = new System.Windows.Forms.Button();
-            this.cmbSubLecHoursEdit = new MetroFramework.Controls.MetroComboBox();
-            this.cmbSubSemEdit = new MetroFramework.Controls.MetroComboBox();
-            this.cmbSubEvaHoursEdit = new MetroFramework.Controls.MetroComboBox();
-            this.cmbSubLabHoursEdit = new MetroFramework.Controls.MetroComboBox();
-            this.cmbSubTuteHoursEdit = new MetroFramework.Controls.MetroComboBox();
-            this.cmbSubYearEdit = new MetroFramework.Controls.MetroComboBox();
-            this.txtSubCodeEdit = new MetroFramework.Controls.MetroTextBox();
-            this.txtSubNameEdit = new MetroFramework.Controls.MetroTextBox();
-            this.dgvSubjects = new System.Windows.Forms.DataGridView();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubLecHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTuteHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubLabHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubEvaHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -93,9 +101,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             this.tabControlSubjects.SuspendLayout();
             this.tabPageSubView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).BeginInit();
             this.tabPageSubAdd.SuspendLayout();
             this.tabPageSubEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSideNavStatistics
@@ -187,7 +195,7 @@
             this.tabControlSubjects.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlSubjects.Location = new System.Drawing.Point(131, 82);
             this.tabControlSubjects.Name = "tabControlSubjects";
-            this.tabControlSubjects.SelectedIndex = 2;
+            this.tabControlSubjects.SelectedIndex = 0;
             this.tabControlSubjects.Size = new System.Drawing.Size(788, 495);
             this.tabControlSubjects.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlSubjects.TabIndex = 47;
@@ -212,6 +220,28 @@
             this.tabPageSubView.TabIndex = 0;
             this.tabPageSubView.Text = "View Subjects";
             this.tabPageSubView.UseVisualStyleBackColor = true;
+            // 
+            // dgvSubjects
+            // 
+            this.dgvSubjects.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Code,
+            this.SubName,
+            this.SubYear,
+            this.SubSem,
+            this.SubLecHours,
+            this.SubTuteHours,
+            this.SubLabHours,
+            this.SubEvaHours});
+            this.dgvSubjects.Location = new System.Drawing.Point(36, 72);
+            this.dgvSubjects.Name = "dgvSubjects";
+            this.dgvSubjects.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvSubjects.RowHeadersWidth = 51;
+            this.dgvSubjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSubjects.Size = new System.Drawing.Size(706, 308);
+            this.dgvSubjects.TabIndex = 67;
+            this.dgvSubjects.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubjects_CellClick);
             // 
             // metroLabel7
             // 
@@ -297,8 +327,8 @@
             this.cmbSubSem.FormattingEnabled = true;
             this.cmbSubSem.ItemHeight = 23;
             this.cmbSubSem.Items.AddRange(new object[] {
-            "1st",
-            "2nd"});
+            "1",
+            "2"});
             this.cmbSubSem.Location = new System.Drawing.Point(414, 174);
             this.cmbSubSem.Name = "cmbSubSem";
             this.cmbSubSem.PromptText = "Select Semester";
@@ -403,10 +433,10 @@
             this.cmbSubYear.FormattingEnabled = true;
             this.cmbSubYear.ItemHeight = 23;
             this.cmbSubYear.Items.AddRange(new object[] {
-            "1st",
-            "2nd",
-            "3rd",
-            "4th"});
+            "1",
+            "2",
+            "3",
+            "4"});
             this.cmbSubYear.Location = new System.Drawing.Point(414, 132);
             this.cmbSubYear.Name = "cmbSubYear";
             this.cmbSubYear.PromptText = "Select Year";
@@ -596,6 +626,182 @@
             this.tabPageSubEdit.TabIndex = 2;
             this.tabPageSubEdit.Text = "Edit Subject";
             this.tabPageSubEdit.UseVisualStyleBackColor = true;
+            // 
+            // cmbSubLecHoursEdit
+            // 
+            this.cmbSubLecHoursEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSubLecHoursEdit.FormattingEnabled = true;
+            this.cmbSubLecHoursEdit.ItemHeight = 23;
+            this.cmbSubLecHoursEdit.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbSubLecHoursEdit.Location = new System.Drawing.Point(414, 216);
+            this.cmbSubLecHoursEdit.Name = "cmbSubLecHoursEdit";
+            this.cmbSubLecHoursEdit.PromptText = "Select Lec Hours";
+            this.cmbSubLecHoursEdit.Size = new System.Drawing.Size(200, 29);
+            this.cmbSubLecHoursEdit.TabIndex = 84;
+            this.cmbSubLecHoursEdit.UseSelectable = true;
+            // 
+            // cmbSubSemEdit
+            // 
+            this.cmbSubSemEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSubSemEdit.FormattingEnabled = true;
+            this.cmbSubSemEdit.ItemHeight = 23;
+            this.cmbSubSemEdit.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cmbSubSemEdit.Location = new System.Drawing.Point(414, 174);
+            this.cmbSubSemEdit.Name = "cmbSubSemEdit";
+            this.cmbSubSemEdit.PromptText = "Select Semester";
+            this.cmbSubSemEdit.Size = new System.Drawing.Size(200, 29);
+            this.cmbSubSemEdit.TabIndex = 83;
+            this.cmbSubSemEdit.UseSelectable = true;
+            // 
+            // cmbSubEvaHoursEdit
+            // 
+            this.cmbSubEvaHoursEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSubEvaHoursEdit.FormattingEnabled = true;
+            this.cmbSubEvaHoursEdit.ItemHeight = 23;
+            this.cmbSubEvaHoursEdit.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbSubEvaHoursEdit.Location = new System.Drawing.Point(414, 341);
+            this.cmbSubEvaHoursEdit.Name = "cmbSubEvaHoursEdit";
+            this.cmbSubEvaHoursEdit.PromptText = "Select Eva Hours";
+            this.cmbSubEvaHoursEdit.Size = new System.Drawing.Size(200, 29);
+            this.cmbSubEvaHoursEdit.TabIndex = 82;
+            this.cmbSubEvaHoursEdit.UseSelectable = true;
+            // 
+            // cmbSubLabHoursEdit
+            // 
+            this.cmbSubLabHoursEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSubLabHoursEdit.FormattingEnabled = true;
+            this.cmbSubLabHoursEdit.ItemHeight = 23;
+            this.cmbSubLabHoursEdit.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbSubLabHoursEdit.Location = new System.Drawing.Point(414, 299);
+            this.cmbSubLabHoursEdit.Name = "cmbSubLabHoursEdit";
+            this.cmbSubLabHoursEdit.PromptText = "Select Lab Hours";
+            this.cmbSubLabHoursEdit.Size = new System.Drawing.Size(200, 29);
+            this.cmbSubLabHoursEdit.TabIndex = 81;
+            this.cmbSubLabHoursEdit.UseSelectable = true;
+            // 
+            // cmbSubTuteHoursEdit
+            // 
+            this.cmbSubTuteHoursEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSubTuteHoursEdit.FormattingEnabled = true;
+            this.cmbSubTuteHoursEdit.ItemHeight = 23;
+            this.cmbSubTuteHoursEdit.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbSubTuteHoursEdit.Location = new System.Drawing.Point(414, 257);
+            this.cmbSubTuteHoursEdit.Name = "cmbSubTuteHoursEdit";
+            this.cmbSubTuteHoursEdit.PromptText = "Select Tute Hours";
+            this.cmbSubTuteHoursEdit.Size = new System.Drawing.Size(200, 29);
+            this.cmbSubTuteHoursEdit.TabIndex = 80;
+            this.cmbSubTuteHoursEdit.UseSelectable = true;
+            // 
+            // cmbSubYearEdit
+            // 
+            this.cmbSubYearEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSubYearEdit.FormattingEnabled = true;
+            this.cmbSubYearEdit.ItemHeight = 23;
+            this.cmbSubYearEdit.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cmbSubYearEdit.Location = new System.Drawing.Point(414, 132);
+            this.cmbSubYearEdit.Name = "cmbSubYearEdit";
+            this.cmbSubYearEdit.PromptText = "Select Year";
+            this.cmbSubYearEdit.Size = new System.Drawing.Size(200, 29);
+            this.cmbSubYearEdit.TabIndex = 79;
+            this.cmbSubYearEdit.UseSelectable = true;
+            // 
+            // txtSubCodeEdit
+            // 
+            // 
+            // 
+            // 
+            this.txtSubCodeEdit.CustomButton.Image = null;
+            this.txtSubCodeEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
+            this.txtSubCodeEdit.CustomButton.Name = "";
+            this.txtSubCodeEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtSubCodeEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSubCodeEdit.CustomButton.TabIndex = 1;
+            this.txtSubCodeEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSubCodeEdit.CustomButton.UseSelectable = true;
+            this.txtSubCodeEdit.CustomButton.Visible = false;
+            this.txtSubCodeEdit.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtSubCodeEdit.Lines = new string[0];
+            this.txtSubCodeEdit.Location = new System.Drawing.Point(414, 48);
+            this.txtSubCodeEdit.MaxLength = 32767;
+            this.txtSubCodeEdit.Name = "txtSubCodeEdit";
+            this.txtSubCodeEdit.PasswordChar = '\0';
+            this.txtSubCodeEdit.PromptText = "Enter Code";
+            this.txtSubCodeEdit.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSubCodeEdit.SelectedText = "";
+            this.txtSubCodeEdit.SelectionLength = 0;
+            this.txtSubCodeEdit.SelectionStart = 0;
+            this.txtSubCodeEdit.ShortcutsEnabled = true;
+            this.txtSubCodeEdit.Size = new System.Drawing.Size(200, 30);
+            this.txtSubCodeEdit.TabIndex = 78;
+            this.txtSubCodeEdit.UseSelectable = true;
+            this.txtSubCodeEdit.WaterMark = "Enter Code";
+            this.txtSubCodeEdit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSubCodeEdit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtSubNameEdit
+            // 
+            // 
+            // 
+            // 
+            this.txtSubNameEdit.CustomButton.Image = null;
+            this.txtSubNameEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
+            this.txtSubNameEdit.CustomButton.Name = "";
+            this.txtSubNameEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtSubNameEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSubNameEdit.CustomButton.TabIndex = 1;
+            this.txtSubNameEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSubNameEdit.CustomButton.UseSelectable = true;
+            this.txtSubNameEdit.CustomButton.Visible = false;
+            this.txtSubNameEdit.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtSubNameEdit.Lines = new string[0];
+            this.txtSubNameEdit.Location = new System.Drawing.Point(414, 90);
+            this.txtSubNameEdit.MaxLength = 32767;
+            this.txtSubNameEdit.Name = "txtSubNameEdit";
+            this.txtSubNameEdit.PasswordChar = '\0';
+            this.txtSubNameEdit.PromptText = "Enter Name";
+            this.txtSubNameEdit.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSubNameEdit.SelectedText = "";
+            this.txtSubNameEdit.SelectionLength = 0;
+            this.txtSubNameEdit.SelectionStart = 0;
+            this.txtSubNameEdit.ShortcutsEnabled = true;
+            this.txtSubNameEdit.Size = new System.Drawing.Size(200, 30);
+            this.txtSubNameEdit.TabIndex = 77;
+            this.txtSubNameEdit.UseSelectable = true;
+            this.txtSubNameEdit.WaterMark = "Enter Name";
+            this.txtSubNameEdit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSubNameEdit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel11
             // 
@@ -795,194 +1001,69 @@
             this.btnHeaderHome.UseVisualStyleBackColor = false;
             this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
             // 
-            // cmbSubLecHoursEdit
+            // Code
             // 
-            this.cmbSubLecHoursEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbSubLecHoursEdit.FormattingEnabled = true;
-            this.cmbSubLecHoursEdit.ItemHeight = 23;
-            this.cmbSubLecHoursEdit.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbSubLecHoursEdit.Location = new System.Drawing.Point(414, 216);
-            this.cmbSubLecHoursEdit.Name = "cmbSubLecHoursEdit";
-            this.cmbSubLecHoursEdit.PromptText = "Select Lec Hours";
-            this.cmbSubLecHoursEdit.Size = new System.Drawing.Size(200, 29);
-            this.cmbSubLecHoursEdit.TabIndex = 84;
-            this.cmbSubLecHoursEdit.UseSelectable = true;
+            this.Code.DataPropertyName = "SubCode";
+            this.Code.HeaderText = "Code";
+            this.Code.MinimumWidth = 80;
+            this.Code.Name = "Code";
+            this.Code.Width = 80;
             // 
-            // cmbSubSemEdit
+            // SubName
             // 
-            this.cmbSubSemEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbSubSemEdit.FormattingEnabled = true;
-            this.cmbSubSemEdit.ItemHeight = 23;
-            this.cmbSubSemEdit.Items.AddRange(new object[] {
-            "1st",
-            "2nd"});
-            this.cmbSubSemEdit.Location = new System.Drawing.Point(414, 174);
-            this.cmbSubSemEdit.Name = "cmbSubSemEdit";
-            this.cmbSubSemEdit.PromptText = "Select Semester";
-            this.cmbSubSemEdit.Size = new System.Drawing.Size(200, 29);
-            this.cmbSubSemEdit.TabIndex = 83;
-            this.cmbSubSemEdit.UseSelectable = true;
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.HeaderText = "Name";
+            this.SubName.MinimumWidth = 200;
+            this.SubName.Name = "SubName";
+            this.SubName.Width = 200;
             // 
-            // cmbSubEvaHoursEdit
+            // SubYear
             // 
-            this.cmbSubEvaHoursEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbSubEvaHoursEdit.FormattingEnabled = true;
-            this.cmbSubEvaHoursEdit.ItemHeight = 23;
-            this.cmbSubEvaHoursEdit.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbSubEvaHoursEdit.Location = new System.Drawing.Point(414, 341);
-            this.cmbSubEvaHoursEdit.Name = "cmbSubEvaHoursEdit";
-            this.cmbSubEvaHoursEdit.PromptText = "Select Eva Hours";
-            this.cmbSubEvaHoursEdit.Size = new System.Drawing.Size(200, 29);
-            this.cmbSubEvaHoursEdit.TabIndex = 82;
-            this.cmbSubEvaHoursEdit.UseSelectable = true;
+            this.SubYear.DataPropertyName = "SubYear";
+            this.SubYear.HeaderText = "Year";
+            this.SubYear.MinimumWidth = 50;
+            this.SubYear.Name = "SubYear";
+            this.SubYear.Width = 50;
             // 
-            // cmbSubLabHoursEdit
+            // SubSem
             // 
-            this.cmbSubLabHoursEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbSubLabHoursEdit.FormattingEnabled = true;
-            this.cmbSubLabHoursEdit.ItemHeight = 23;
-            this.cmbSubLabHoursEdit.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbSubLabHoursEdit.Location = new System.Drawing.Point(414, 299);
-            this.cmbSubLabHoursEdit.Name = "cmbSubLabHoursEdit";
-            this.cmbSubLabHoursEdit.PromptText = "Select Lab Hours";
-            this.cmbSubLabHoursEdit.Size = new System.Drawing.Size(200, 29);
-            this.cmbSubLabHoursEdit.TabIndex = 81;
-            this.cmbSubLabHoursEdit.UseSelectable = true;
+            this.SubSem.DataPropertyName = "SubSem";
+            this.SubSem.HeaderText = "Semester";
+            this.SubSem.MinimumWidth = 60;
+            this.SubSem.Name = "SubSem";
+            this.SubSem.Width = 60;
             // 
-            // cmbSubTuteHoursEdit
+            // SubLecHours
             // 
-            this.cmbSubTuteHoursEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbSubTuteHoursEdit.FormattingEnabled = true;
-            this.cmbSubTuteHoursEdit.ItemHeight = 23;
-            this.cmbSubTuteHoursEdit.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbSubTuteHoursEdit.Location = new System.Drawing.Point(414, 257);
-            this.cmbSubTuteHoursEdit.Name = "cmbSubTuteHoursEdit";
-            this.cmbSubTuteHoursEdit.PromptText = "Select Tute Hours";
-            this.cmbSubTuteHoursEdit.Size = new System.Drawing.Size(200, 29);
-            this.cmbSubTuteHoursEdit.TabIndex = 80;
-            this.cmbSubTuteHoursEdit.UseSelectable = true;
+            this.SubLecHours.DataPropertyName = "SubLecHours";
+            this.SubLecHours.HeaderText = "Lecturer Hours";
+            this.SubLecHours.MinimumWidth = 60;
+            this.SubLecHours.Name = "SubLecHours";
+            this.SubLecHours.Width = 60;
             // 
-            // cmbSubYearEdit
+            // SubTuteHours
             // 
-            this.cmbSubYearEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbSubYearEdit.FormattingEnabled = true;
-            this.cmbSubYearEdit.ItemHeight = 23;
-            this.cmbSubYearEdit.Items.AddRange(new object[] {
-            "1st",
-            "2nd",
-            "3rd",
-            "4th"});
-            this.cmbSubYearEdit.Location = new System.Drawing.Point(414, 132);
-            this.cmbSubYearEdit.Name = "cmbSubYearEdit";
-            this.cmbSubYearEdit.PromptText = "Select Year";
-            this.cmbSubYearEdit.Size = new System.Drawing.Size(200, 29);
-            this.cmbSubYearEdit.TabIndex = 79;
-            this.cmbSubYearEdit.UseSelectable = true;
+            this.SubTuteHours.DataPropertyName = "SubTuteHours";
+            this.SubTuteHours.HeaderText = "Tute Hours";
+            this.SubTuteHours.MinimumWidth = 60;
+            this.SubTuteHours.Name = "SubTuteHours";
+            this.SubTuteHours.Width = 60;
             // 
-            // txtSubCodeEdit
+            // SubLabHours
             // 
+            this.SubLabHours.DataPropertyName = "SubLabHours";
+            this.SubLabHours.HeaderText = "Lab Hours";
+            this.SubLabHours.MinimumWidth = 60;
+            this.SubLabHours.Name = "SubLabHours";
+            this.SubLabHours.Width = 60;
             // 
+            // SubEvaHours
             // 
-            // 
-            this.txtSubCodeEdit.CustomButton.Image = null;
-            this.txtSubCodeEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
-            this.txtSubCodeEdit.CustomButton.Name = "";
-            this.txtSubCodeEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtSubCodeEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSubCodeEdit.CustomButton.TabIndex = 1;
-            this.txtSubCodeEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSubCodeEdit.CustomButton.UseSelectable = true;
-            this.txtSubCodeEdit.CustomButton.Visible = false;
-            this.txtSubCodeEdit.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtSubCodeEdit.Lines = new string[0];
-            this.txtSubCodeEdit.Location = new System.Drawing.Point(414, 48);
-            this.txtSubCodeEdit.MaxLength = 32767;
-            this.txtSubCodeEdit.Name = "txtSubCodeEdit";
-            this.txtSubCodeEdit.PasswordChar = '\0';
-            this.txtSubCodeEdit.PromptText = "Enter Code";
-            this.txtSubCodeEdit.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSubCodeEdit.SelectedText = "";
-            this.txtSubCodeEdit.SelectionLength = 0;
-            this.txtSubCodeEdit.SelectionStart = 0;
-            this.txtSubCodeEdit.ShortcutsEnabled = true;
-            this.txtSubCodeEdit.Size = new System.Drawing.Size(200, 30);
-            this.txtSubCodeEdit.TabIndex = 78;
-            this.txtSubCodeEdit.UseSelectable = true;
-            this.txtSubCodeEdit.WaterMark = "Enter Code";
-            this.txtSubCodeEdit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSubCodeEdit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtSubNameEdit
-            // 
-            // 
-            // 
-            // 
-            this.txtSubNameEdit.CustomButton.Image = null;
-            this.txtSubNameEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
-            this.txtSubNameEdit.CustomButton.Name = "";
-            this.txtSubNameEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtSubNameEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSubNameEdit.CustomButton.TabIndex = 1;
-            this.txtSubNameEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSubNameEdit.CustomButton.UseSelectable = true;
-            this.txtSubNameEdit.CustomButton.Visible = false;
-            this.txtSubNameEdit.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtSubNameEdit.Lines = new string[0];
-            this.txtSubNameEdit.Location = new System.Drawing.Point(414, 90);
-            this.txtSubNameEdit.MaxLength = 32767;
-            this.txtSubNameEdit.Name = "txtSubNameEdit";
-            this.txtSubNameEdit.PasswordChar = '\0';
-            this.txtSubNameEdit.PromptText = "Enter Name";
-            this.txtSubNameEdit.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSubNameEdit.SelectedText = "";
-            this.txtSubNameEdit.SelectionLength = 0;
-            this.txtSubNameEdit.SelectionStart = 0;
-            this.txtSubNameEdit.ShortcutsEnabled = true;
-            this.txtSubNameEdit.Size = new System.Drawing.Size(200, 30);
-            this.txtSubNameEdit.TabIndex = 77;
-            this.txtSubNameEdit.UseSelectable = true;
-            this.txtSubNameEdit.WaterMark = "Enter Name";
-            this.txtSubNameEdit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSubNameEdit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // dgvSubjects
-            // 
-            this.dgvSubjects.BackgroundColor = System.Drawing.Color.White;
-            this.dgvSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubjects.Location = new System.Drawing.Point(36, 72);
-            this.dgvSubjects.Name = "dgvSubjects";
-            this.dgvSubjects.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvSubjects.RowHeadersWidth = 51;
-            this.dgvSubjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSubjects.Size = new System.Drawing.Size(706, 308);
-            this.dgvSubjects.TabIndex = 67;
-            this.dgvSubjects.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubjects_CellClick);
+            this.SubEvaHours.DataPropertyName = "SubEvaHours";
+            this.SubEvaHours.HeaderText = "Evalution Hours";
+            this.SubEvaHours.MinimumWidth = 70;
+            this.SubEvaHours.Name = "SubEvaHours";
+            this.SubEvaHours.Width = 70;
             // 
             // AddSubject
             // 
@@ -1020,11 +1101,11 @@
             this.tabControlSubjects.ResumeLayout(false);
             this.tabPageSubView.ResumeLayout(false);
             this.tabPageSubView.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).EndInit();
             this.tabPageSubAdd.ResumeLayout(false);
             this.tabPageSubAdd.PerformLayout();
             this.tabPageSubEdit.ResumeLayout(false);
             this.tabPageSubEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1087,5 +1168,13 @@
         private MetroFramework.Controls.MetroTextBox txtSubCodeEdit;
         private MetroFramework.Controls.MetroTextBox txtSubNameEdit;
         private System.Windows.Forms.DataGridView dgvSubjects;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubYear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubSem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubLecHours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubTuteHours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubLabHours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubEvaHours;
     }
 }

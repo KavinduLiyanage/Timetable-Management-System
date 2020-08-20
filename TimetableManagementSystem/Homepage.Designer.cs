@@ -212,7 +212,7 @@
             // 
             this.genTimetBtn.ActiveControl = null;
             this.genTimetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.genTimetBtn.Location = new System.Drawing.Point(709, 380);
+            this.genTimetBtn.Location = new System.Drawing.Point(705, 380);
             this.genTimetBtn.Name = "genTimetBtn";
             this.genTimetBtn.Size = new System.Drawing.Size(150, 100);
             this.genTimetBtn.TabIndex = 77;
@@ -229,7 +229,7 @@
             // 
             this.roomBtn.ActiveControl = null;
             this.roomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.roomBtn.Location = new System.Drawing.Point(376, 380);
+            this.roomBtn.Location = new System.Drawing.Point(375, 380);
             this.roomBtn.Name = "roomBtn";
             this.roomBtn.Size = new System.Drawing.Size(150, 100);
             this.roomBtn.TabIndex = 76;
@@ -246,7 +246,7 @@
             // 
             this.advOpBtn.ActiveControl = null;
             this.advOpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.advOpBtn.Location = new System.Drawing.Point(542, 380);
+            this.advOpBtn.Location = new System.Drawing.Point(540, 380);
             this.advOpBtn.Name = "advOpBtn";
             this.advOpBtn.Size = new System.Drawing.Size(150, 100);
             this.advOpBtn.TabIndex = 75;
@@ -280,7 +280,7 @@
             // 
             this.statBtn.ActiveControl = null;
             this.statBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.statBtn.Location = new System.Drawing.Point(709, 268);
+            this.statBtn.Location = new System.Drawing.Point(705, 268);
             this.statBtn.Name = "statBtn";
             this.statBtn.Size = new System.Drawing.Size(150, 100);
             this.statBtn.TabIndex = 73;
@@ -298,7 +298,7 @@
             // 
             this.locBtn.ActiveControl = null;
             this.locBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.locBtn.Location = new System.Drawing.Point(542, 268);
+            this.locBtn.Location = new System.Drawing.Point(540, 268);
             this.locBtn.Name = "locBtn";
             this.locBtn.Size = new System.Drawing.Size(150, 100);
             this.locBtn.TabIndex = 72;
@@ -316,7 +316,7 @@
             // 
             this.tagBtn.ActiveControl = null;
             this.tagBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.tagBtn.Location = new System.Drawing.Point(376, 268);
+            this.tagBtn.Location = new System.Drawing.Point(375, 268);
             this.tagBtn.Name = "tagBtn";
             this.tagBtn.Size = new System.Drawing.Size(150, 100);
             this.tagBtn.TabIndex = 71;
@@ -369,7 +369,7 @@
             // 
             this.wdhBtn.ActiveControl = null;
             this.wdhBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.wdhBtn.Location = new System.Drawing.Point(376, 156);
+            this.wdhBtn.Location = new System.Drawing.Point(375, 156);
             this.wdhBtn.Name = "wdhBtn";
             this.wdhBtn.Size = new System.Drawing.Size(150, 100);
             this.wdhBtn.TabIndex = 68;
@@ -388,7 +388,7 @@
             // 
             this.subBtn.ActiveControl = null;
             this.subBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.subBtn.Location = new System.Drawing.Point(709, 156);
+            this.subBtn.Location = new System.Drawing.Point(705, 156);
             this.subBtn.Name = "subBtn";
             this.subBtn.Size = new System.Drawing.Size(150, 100);
             this.subBtn.TabIndex = 67;
@@ -406,7 +406,7 @@
             // 
             this.lecBtn.ActiveControl = null;
             this.lecBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.lecBtn.Location = new System.Drawing.Point(542, 156);
+            this.lecBtn.Location = new System.Drawing.Point(540, 156);
             this.lecBtn.Name = "lecBtn";
             this.lecBtn.Size = new System.Drawing.Size(150, 100);
             this.lecBtn.TabIndex = 66;

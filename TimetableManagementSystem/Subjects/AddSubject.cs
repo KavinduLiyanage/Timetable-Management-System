@@ -39,7 +39,7 @@ namespace TimetableManagementSystem.Subjects
             dt.Load(sdr);
             con.Close();
 
-            //dgvSubjects.AutoGenerateColumns = false;
+            dgvSubjects.AutoGenerateColumns = false;
             dgvSubjects.DataSource = dt;
         }
 
@@ -112,7 +112,6 @@ namespace TimetableManagementSystem.Subjects
 
             tabControlSubjects.SelectedTab = tabPageSubEdit;
 
-            MessageBox.Show("SubCode : "+ SubCode, "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //----Side Nav Buttons----
