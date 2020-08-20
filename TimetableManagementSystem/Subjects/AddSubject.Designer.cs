@@ -38,6 +38,14 @@
             this.tabControlSubjects = new MetroFramework.Controls.MetroTabControl();
             this.tabPageSubView = new System.Windows.Forms.TabPage();
             this.dgvSubjects = new System.Windows.Forms.DataGridView();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubLecHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTuteHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubLabHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubEvaHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.tabPageSubAdd = new System.Windows.Forms.TabPage();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -84,14 +92,6 @@
             this.btnHeaderSessions = new System.Windows.Forms.Button();
             this.btnHeaderGenerate = new System.Windows.Forms.Button();
             this.btnHeaderHome = new System.Windows.Forms.Button();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubLecHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTuteHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubLabHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubEvaHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -195,7 +195,7 @@
             this.tabControlSubjects.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlSubjects.Location = new System.Drawing.Point(131, 82);
             this.tabControlSubjects.Name = "tabControlSubjects";
-            this.tabControlSubjects.SelectedIndex = 0;
+            this.tabControlSubjects.SelectedIndex = 2;
             this.tabControlSubjects.Size = new System.Drawing.Size(788, 495);
             this.tabControlSubjects.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlSubjects.TabIndex = 47;
@@ -242,6 +242,70 @@
             this.dgvSubjects.Size = new System.Drawing.Size(706, 308);
             this.dgvSubjects.TabIndex = 67;
             this.dgvSubjects.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubjects_CellClick);
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "SubCode";
+            this.Code.HeaderText = "Code";
+            this.Code.MinimumWidth = 80;
+            this.Code.Name = "Code";
+            this.Code.Width = 80;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.HeaderText = "Name";
+            this.SubName.MinimumWidth = 200;
+            this.SubName.Name = "SubName";
+            this.SubName.Width = 200;
+            // 
+            // SubYear
+            // 
+            this.SubYear.DataPropertyName = "SubYear";
+            this.SubYear.HeaderText = "Year";
+            this.SubYear.MinimumWidth = 50;
+            this.SubYear.Name = "SubYear";
+            this.SubYear.Width = 50;
+            // 
+            // SubSem
+            // 
+            this.SubSem.DataPropertyName = "SubSem";
+            this.SubSem.HeaderText = "Semester";
+            this.SubSem.MinimumWidth = 60;
+            this.SubSem.Name = "SubSem";
+            this.SubSem.Width = 60;
+            // 
+            // SubLecHours
+            // 
+            this.SubLecHours.DataPropertyName = "SubLecHours";
+            this.SubLecHours.HeaderText = "Lecturer Hours";
+            this.SubLecHours.MinimumWidth = 60;
+            this.SubLecHours.Name = "SubLecHours";
+            this.SubLecHours.Width = 60;
+            // 
+            // SubTuteHours
+            // 
+            this.SubTuteHours.DataPropertyName = "SubTuteHours";
+            this.SubTuteHours.HeaderText = "Tute Hours";
+            this.SubTuteHours.MinimumWidth = 60;
+            this.SubTuteHours.Name = "SubTuteHours";
+            this.SubTuteHours.Width = 60;
+            // 
+            // SubLabHours
+            // 
+            this.SubLabHours.DataPropertyName = "SubLabHours";
+            this.SubLabHours.HeaderText = "Lab Hours";
+            this.SubLabHours.MinimumWidth = 60;
+            this.SubLabHours.Name = "SubLabHours";
+            this.SubLabHours.Width = 60;
+            // 
+            // SubEvaHours
+            // 
+            this.SubEvaHours.DataPropertyName = "SubEvaHours";
+            this.SubEvaHours.HeaderText = "Evalution Hours";
+            this.SubEvaHours.MinimumWidth = 70;
+            this.SubEvaHours.Name = "SubEvaHours";
+            this.SubEvaHours.Width = 70;
             // 
             // metroLabel7
             // 
@@ -919,6 +983,7 @@
             this.btnSubDelete.UseCustomBackColor = true;
             this.btnSubDelete.UseCustomForeColor = true;
             this.btnSubDelete.UseSelectable = true;
+            this.btnSubDelete.Click += new System.EventHandler(this.btnSubDelete_Click);
             // 
             // btnSubUpdate
             // 
@@ -934,6 +999,7 @@
             this.btnSubUpdate.UseCustomBackColor = true;
             this.btnSubUpdate.UseCustomForeColor = true;
             this.btnSubUpdate.UseSelectable = true;
+            this.btnSubUpdate.Click += new System.EventHandler(this.btnSubUpdate_Click);
             // 
             // btnHeaderAdvanced
             // 
@@ -1000,70 +1066,6 @@
             this.btnHeaderHome.Text = "Home";
             this.btnHeaderHome.UseVisualStyleBackColor = false;
             this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "SubCode";
-            this.Code.HeaderText = "Code";
-            this.Code.MinimumWidth = 80;
-            this.Code.Name = "Code";
-            this.Code.Width = 80;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.HeaderText = "Name";
-            this.SubName.MinimumWidth = 200;
-            this.SubName.Name = "SubName";
-            this.SubName.Width = 200;
-            // 
-            // SubYear
-            // 
-            this.SubYear.DataPropertyName = "SubYear";
-            this.SubYear.HeaderText = "Year";
-            this.SubYear.MinimumWidth = 50;
-            this.SubYear.Name = "SubYear";
-            this.SubYear.Width = 50;
-            // 
-            // SubSem
-            // 
-            this.SubSem.DataPropertyName = "SubSem";
-            this.SubSem.HeaderText = "Semester";
-            this.SubSem.MinimumWidth = 60;
-            this.SubSem.Name = "SubSem";
-            this.SubSem.Width = 60;
-            // 
-            // SubLecHours
-            // 
-            this.SubLecHours.DataPropertyName = "SubLecHours";
-            this.SubLecHours.HeaderText = "Lecturer Hours";
-            this.SubLecHours.MinimumWidth = 60;
-            this.SubLecHours.Name = "SubLecHours";
-            this.SubLecHours.Width = 60;
-            // 
-            // SubTuteHours
-            // 
-            this.SubTuteHours.DataPropertyName = "SubTuteHours";
-            this.SubTuteHours.HeaderText = "Tute Hours";
-            this.SubTuteHours.MinimumWidth = 60;
-            this.SubTuteHours.Name = "SubTuteHours";
-            this.SubTuteHours.Width = 60;
-            // 
-            // SubLabHours
-            // 
-            this.SubLabHours.DataPropertyName = "SubLabHours";
-            this.SubLabHours.HeaderText = "Lab Hours";
-            this.SubLabHours.MinimumWidth = 60;
-            this.SubLabHours.Name = "SubLabHours";
-            this.SubLabHours.Width = 60;
-            // 
-            // SubEvaHours
-            // 
-            this.SubEvaHours.DataPropertyName = "SubEvaHours";
-            this.SubEvaHours.HeaderText = "Evalution Hours";
-            this.SubEvaHours.MinimumWidth = 70;
-            this.SubEvaHours.Name = "SubEvaHours";
-            this.SubEvaHours.Width = 70;
             // 
             // AddSubject
             // 

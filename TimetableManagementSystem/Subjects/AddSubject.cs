@@ -22,6 +22,7 @@ namespace TimetableManagementSystem.Subjects
         SqlConnection con = Config.con;
 
         public String SubCode;
+        public int SubCodeValue = 0;
 
         private void AddSubject_Load(object sender, EventArgs e)
         {
@@ -105,12 +106,94 @@ namespace TimetableManagementSystem.Subjects
             txtSubNameEdit.Text = dgvSubjects.SelectedRows[0].Cells[1].Value.ToString();
             cmbSubYearEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[2].Value;
             cmbSubSemEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[3].Value;
-            cmbSubLecHoursEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[4].Value;
-            cmbSubTuteHoursEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[5].Value;
-            cmbSubLabHoursEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[6].Value;
-            cmbSubEvaHoursEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[7].Value;
-
+            cmbSubLecHoursEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[4].Value.ToString();
+            cmbSubTuteHoursEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[5].Value.ToString();
+            cmbSubLabHoursEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[6].Value.ToString();
+            cmbSubEvaHoursEdit.SelectedItem = dgvSubjects.SelectedRows[0].Cells[7].Value.ToString();
+            SubCodeValue = 1;
             tabControlSubjects.SelectedTab = tabPageSubEdit;
+
+        }
+
+        private void btnSubUpdate_Click(object sender, EventArgs e)
+        {
+            if (SubCodeValue > 0)
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE Subjects SET SubCode = @SubCodenew, SubName = @SubName, SubYear = @SubYear, SubSem = @SubSem, SubLecHours = @SubLecHours, SubTuteHours = @SubTuteHours, SubLabHours = @SubLabHours, SubEvaHours = @SubEvaHours WHERE SubCode = @SubCode", con);
+                cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@SubCodenew", txtSubCodeEdit.Text);
+                cmd.Parameters.AddWithValue("@SubName", txtSubNameEdit.Text);
+                cmd.Parameters.AddWithValue("@SubYear", cmbSubYearEdit.Text);
+                cmd.Parameters.AddWithValue("@SubSem", cmbSubSemEdit.Text);
+                cmd.Parameters.AddWithValue("@SubLecHours", cmbSubLecHoursEdit.Text);
+                cmd.Parameters.AddWithValue("@SubTuteHours", cmbSubTuteHoursEdit.Text);
+                cmd.Parameters.AddWithValue("@SubLabHours", cmbSubLabHoursEdit.Text);
+                cmd.Parameters.AddWithValue("@SubEvaHours", cmbSubEvaHoursEdit.Text);
+                cmd.Parameters.AddWithValue("@SubCode", this.SubCode);
+
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Subject Details Updated", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                GetSubjects();
+
+                ClearFieldsAfterUpdate();
+
+                tabControlSubjects.SelectedTab = tabPageSubView;
+            }
+            else
+            {
+                MessageBox.Show("Please Select a Subject to Update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ClearFieldsAfterUpdate()
+        {
+            txtSubCodeEdit.Clear();
+            txtSubNameEdit.Clear();
+            cmbSubYearEdit.SelectedIndex = -1;
+            cmbSubSemEdit.SelectedIndex = -1;
+            cmbSubLecHoursEdit.SelectedIndex = -1;
+            cmbSubTuteHoursEdit.SelectedIndex = -1;
+            cmbSubLabHoursEdit.SelectedIndex = -1;
+            cmbSubEvaHoursEdit.SelectedIndex = -1;
+            SubCodeValue = 0;
+        }
+
+        private void btnSubDelete_Click(object sender, EventArgs e)
+        {
+            if (SubCodeValue > 0)
+            {
+
+                if (MessageBox.Show("Are You Sure You Want to Delete the Subject?", "Delete Subject", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    SqlCommand cmd = new SqlCommand("DELETE FROM Subjects WHERE SubCode = @SubCode", con);
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.Parameters.AddWithValue("@SubCode", this.SubCode);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    MessageBox.Show("Subject is Deleted", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    GetSubjects();
+
+                    ClearFieldsAfterUpdate();
+
+                    tabControlSubjects.SelectedTab = tabPageSubView;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please Select a Subject to Delete ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -136,7 +219,5 @@ namespace TimetableManagementSystem.Subjects
             Homepage homepage = new Homepage();
             homepage.ShowDialog();
         }
-
-        
     }
 }
