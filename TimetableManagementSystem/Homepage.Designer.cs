@@ -71,6 +71,7 @@
             this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavWorking.TabIndex = 12;
             this.btnSideNavWorking.TabStop = false;
+            this.btnSideNavWorking.Click += new System.EventHandler(this.btnSideNavWorking_Click);
             // 
             // btnSideNavLecturers
             // 
@@ -118,6 +119,7 @@
             this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavTags.TabIndex = 16;
             this.btnSideNavTags.TabStop = false;
+            this.btnSideNavTags.Click += new System.EventHandler(this.btnSideNavTags_Click);
             // 
             // btnSideNavLocations
             // 
@@ -129,6 +131,7 @@
             this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavLocations.TabIndex = 17;
             this.btnSideNavLocations.TabStop = false;
+            this.btnSideNavLocations.Click += new System.EventHandler(this.btnSideNavLocations_Click);
             // 
             // btnSideNavStatistics
             // 
@@ -154,6 +157,7 @@
             this.btnHeaderAdvanced.TabIndex = 41;
             this.btnHeaderAdvanced.Text = "Advanced";
             this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            this.btnHeaderAdvanced.Click += new System.EventHandler(this.btnHeaderAdvanced_Click);
             // 
             // btnHeaderRooms
             // 
@@ -167,6 +171,7 @@
             this.btnHeaderRooms.TabIndex = 40;
             this.btnHeaderRooms.Text = "Rooms";
             this.btnHeaderRooms.UseVisualStyleBackColor = false;
+            this.btnHeaderRooms.Click += new System.EventHandler(this.btnHeaderRooms_Click);
             // 
             // btnHeaderSessions
             // 
@@ -180,6 +185,7 @@
             this.btnHeaderSessions.TabIndex = 39;
             this.btnHeaderSessions.Text = "Sessions";
             this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            this.btnHeaderSessions.Click += new System.EventHandler(this.btnHeaderSessions_Click);
             // 
             // btnHeaderGenerate
             // 
@@ -193,6 +199,7 @@
             this.btnHeaderGenerate.TabIndex = 38;
             this.btnHeaderGenerate.Text = "Generate";
             this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            this.btnHeaderGenerate.Click += new System.EventHandler(this.btnHeaderGenerate_Click);
             // 
             // btnHeaderHome
             // 

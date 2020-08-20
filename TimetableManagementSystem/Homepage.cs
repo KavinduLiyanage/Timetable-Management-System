@@ -109,5 +109,41 @@ namespace TimetableManagementSystem
             stat.ShowDialog();
         }
 
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSideNavWorking_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSideNavTags_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags.Tags tag = new Tags.Tags();
+            tag.ShowDialog();
+        }
+
+        private void btnSideNavLocations_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderGenerate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderAdvanced_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderRooms_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

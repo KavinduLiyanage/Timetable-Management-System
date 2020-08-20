@@ -366,5 +366,57 @@ namespace TimetableManagementSystem.Students
             subGrpNumData.DataSource = dt;
             con.Close();
         }
+
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
+
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
+            addSubject.ShowDialog();
+        }
+
+        private void btnSideNavStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Students stu = new Students();
+            stu.ShowDialog();
+        }
+
+        private void btnSideNavTags_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags.Tags tag = new Tags.Tags();
+            tag.ShowDialog();
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
+        }
+
+        private void btnSideNavWorking_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSideNavLocations_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
