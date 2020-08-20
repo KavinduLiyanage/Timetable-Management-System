@@ -83,6 +83,56 @@ namespace TimetableManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap D10_Advanced {
+            get {
+                object obj = ResourceManager.GetObject("D10-Advanced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap D11_Generate {
+            get {
+                object obj = ResourceManager.GetObject("D11-Generate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap D12_Getting_Start {
+            get {
+                object obj = ResourceManager.GetObject("D12-Getting Start", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap D13_Getting_Start2 {
+            get {
+                object obj = ResourceManager.GetObject("D13-Getting Start2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap D14_Getting_Start {
+            get {
+                object obj = ResourceManager.GetObject("D14-Getting Start", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap D2_Lecturers {
             get {
                 object obj = ResourceManager.GetObject("D2-Lecturers", resourceCulture);
@@ -136,6 +186,26 @@ namespace TimetableManagementSystem.Properties {
         internal static System.Drawing.Bitmap D7_Statistics {
             get {
                 object obj = ResourceManager.GetObject("D7-Statistics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap D8_Sessions {
+            get {
+                object obj = ResourceManager.GetObject("D8-Sessions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap D9_Rooms {
+            get {
+                object obj = ResourceManager.GetObject("D9-Rooms", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

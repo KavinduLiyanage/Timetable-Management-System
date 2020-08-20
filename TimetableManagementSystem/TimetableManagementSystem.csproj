@@ -256,5 +256,26 @@
   <ItemGroup>
     <None Include="Resources\D7-Statistics.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D8-Sessions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D9-Rooms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D10-Advanced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D11-Generate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D12-Getting Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D13-Getting Start2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D14-Getting Start.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

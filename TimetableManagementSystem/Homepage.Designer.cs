@@ -217,6 +217,7 @@
             this.genTimetBtn.Size = new System.Drawing.Size(150, 100);
             this.genTimetBtn.TabIndex = 77;
             this.genTimetBtn.Text = "Generate Timetables";
+            this.genTimetBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D11_Generate;
             this.genTimetBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.genTimetBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.genTimetBtn.UseCustomBackColor = true;
@@ -233,6 +234,7 @@
             this.roomBtn.Size = new System.Drawing.Size(150, 100);
             this.roomBtn.TabIndex = 76;
             this.roomBtn.Text = "Rooms";
+            this.roomBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D9_Rooms;
             this.roomBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.roomBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.roomBtn.UseCustomBackColor = true;
@@ -249,6 +251,7 @@
             this.advOpBtn.Size = new System.Drawing.Size(150, 100);
             this.advOpBtn.TabIndex = 75;
             this.advOpBtn.Text = "Advanced Options";
+            this.advOpBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D10_Advanced;
             this.advOpBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.advOpBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.advOpBtn.UseCustomBackColor = true;
@@ -265,6 +268,7 @@
             this.sessionBtn.Size = new System.Drawing.Size(150, 100);
             this.sessionBtn.TabIndex = 74;
             this.sessionBtn.Text = "Sessions";
+            this.sessionBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D8_Sessions;
             this.sessionBtn.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.sessionBtn.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.sessionBtn.UseCustomBackColor = true;
@@ -353,6 +357,7 @@
             this.metroTile3.Size = new System.Drawing.Size(150, 100);
             this.metroTile3.TabIndex = 69;
             this.metroTile3.Text = "Get Started";
+            this.metroTile3.TileImage = global::TimetableManagementSystem.Properties.Resources.D14_Getting_Start;
             this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile3.UseCustomBackColor = true;
