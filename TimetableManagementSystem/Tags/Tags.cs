@@ -13,6 +13,9 @@ namespace TimetableManagementSystem.Tags
 {
     public partial class Tags : MetroFramework.Forms.MetroForm
     {
+
+        int tagID;
+
         public Tags()
         {
             InitializeComponent();
@@ -20,7 +23,7 @@ namespace TimetableManagementSystem.Tags
 
         private void tagNameTxt_Click(object sender, EventArgs e)
         {
-            tagNameTxt.Text = "";
+            //tagNameTxt.Text = "";
         }
 
         private void tagNameClrBtn_Click(object sender, EventArgs e)
@@ -151,6 +154,64 @@ namespace TimetableManagementSystem.Tags
         private void btnHeaderGenerate_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tagNameData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = tagNameData.Rows[index];
+            tagID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+            tagNameTxt.Text = selectRow.Cells[1].Value.ToString();
+
+        }
+
+        private void tagNameEditBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE Tags SET TagName = '" + tagNameTxt.Text + "' WHERE id = '" + tagID + "'";
+            cmd.ExecuteNonQuery();
+
+            String query2 = "Select * from Tags";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            tagNameData.DataSource = dt;
+
+            con.Close();
+
+            MessageBox.Show("Updated Succesfully");
+        }
+
+        private void tagNameDltBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from Tags where id = '" + tagID + "'";
+                cmd.ExecuteNonQuery();
+
+
+                String query2 = "Select * from Tags";
+
+                SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                tagNameData.DataSource = dt;
+
+
+                con.Close();
+
+                MessageBox.Show("Delete Succesfully");
+            }
         }
     }
 }
