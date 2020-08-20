@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
             this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
             this.btnSideNavTags = new System.Windows.Forms.PictureBox();
@@ -38,14 +40,6 @@
             this.tabControlSubjects = new MetroFramework.Controls.MetroTabControl();
             this.tabPageSubView = new System.Windows.Forms.TabPage();
             this.dgvSubjects = new System.Windows.Forms.DataGridView();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubLecHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTuteHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubLabHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubEvaHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.tabPageSubAdd = new System.Windows.Forms.TabPage();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -92,6 +86,18 @@
             this.btnHeaderSessions = new System.Windows.Forms.Button();
             this.btnHeaderGenerate = new System.Windows.Forms.Button();
             this.btnHeaderHome = new System.Windows.Forms.Button();
+            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
+            this.cmbSubFilterYear = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
+            this.txtSubSearch = new MetroFramework.Controls.MetroTextBox();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubLecHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTuteHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubLabHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubEvaHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -199,7 +205,7 @@
             this.tabControlSubjects.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlSubjects.Location = new System.Drawing.Point(131, 82);
             this.tabControlSubjects.Name = "tabControlSubjects";
-            this.tabControlSubjects.SelectedIndex = 2;
+            this.tabControlSubjects.SelectedIndex = 0;
             this.tabControlSubjects.Size = new System.Drawing.Size(788, 495);
             this.tabControlSubjects.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlSubjects.TabIndex = 47;
@@ -212,6 +218,10 @@
             // tabPageSubView
             // 
             this.tabPageSubView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageSubView.Controls.Add(this.metroLabel21);
+            this.tabPageSubView.Controls.Add(this.cmbSubFilterYear);
+            this.tabPageSubView.Controls.Add(this.metroLabel22);
+            this.tabPageSubView.Controls.Add(this.txtSubSearch);
             this.tabPageSubView.Controls.Add(this.dgvSubjects);
             this.tabPageSubView.Controls.Add(this.metroLabel7);
             this.tabPageSubView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,6 +238,14 @@
             // dgvSubjects
             // 
             this.dgvSubjects.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubjects.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Code,
@@ -238,78 +256,22 @@
             this.SubTuteHours,
             this.SubLabHours,
             this.SubEvaHours});
-            this.dgvSubjects.Location = new System.Drawing.Point(36, 72);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSubjects.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvSubjects.Location = new System.Drawing.Point(36, 107);
             this.dgvSubjects.Name = "dgvSubjects";
             this.dgvSubjects.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvSubjects.RowHeadersWidth = 51;
             this.dgvSubjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSubjects.Size = new System.Drawing.Size(706, 308);
+            this.dgvSubjects.Size = new System.Drawing.Size(706, 317);
             this.dgvSubjects.TabIndex = 67;
             this.dgvSubjects.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubjects_CellClick);
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "SubCode";
-            this.Code.HeaderText = "Code";
-            this.Code.MinimumWidth = 80;
-            this.Code.Name = "Code";
-            this.Code.Width = 80;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.HeaderText = "Name";
-            this.SubName.MinimumWidth = 200;
-            this.SubName.Name = "SubName";
-            this.SubName.Width = 200;
-            // 
-            // SubYear
-            // 
-            this.SubYear.DataPropertyName = "SubYear";
-            this.SubYear.HeaderText = "Year";
-            this.SubYear.MinimumWidth = 50;
-            this.SubYear.Name = "SubYear";
-            this.SubYear.Width = 50;
-            // 
-            // SubSem
-            // 
-            this.SubSem.DataPropertyName = "SubSem";
-            this.SubSem.HeaderText = "Semester";
-            this.SubSem.MinimumWidth = 60;
-            this.SubSem.Name = "SubSem";
-            this.SubSem.Width = 60;
-            // 
-            // SubLecHours
-            // 
-            this.SubLecHours.DataPropertyName = "SubLecHours";
-            this.SubLecHours.HeaderText = "Lecturer Hours";
-            this.SubLecHours.MinimumWidth = 60;
-            this.SubLecHours.Name = "SubLecHours";
-            this.SubLecHours.Width = 60;
-            // 
-            // SubTuteHours
-            // 
-            this.SubTuteHours.DataPropertyName = "SubTuteHours";
-            this.SubTuteHours.HeaderText = "Tute Hours";
-            this.SubTuteHours.MinimumWidth = 60;
-            this.SubTuteHours.Name = "SubTuteHours";
-            this.SubTuteHours.Width = 60;
-            // 
-            // SubLabHours
-            // 
-            this.SubLabHours.DataPropertyName = "SubLabHours";
-            this.SubLabHours.HeaderText = "Lab Hours";
-            this.SubLabHours.MinimumWidth = 60;
-            this.SubLabHours.Name = "SubLabHours";
-            this.SubLabHours.Width = 60;
-            // 
-            // SubEvaHours
-            // 
-            this.SubEvaHours.DataPropertyName = "SubEvaHours";
-            this.SubEvaHours.HeaderText = "Evalution Hours";
-            this.SubEvaHours.MinimumWidth = 70;
-            this.SubEvaHours.Name = "SubEvaHours";
-            this.SubEvaHours.Width = 70;
             // 
             // metroLabel7
             // 
@@ -318,7 +280,7 @@
             this.metroLabel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(310, 24);
+            this.metroLabel7.Location = new System.Drawing.Point(319, 16);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(117, 25);
             this.metroLabel7.TabIndex = 64;
@@ -1071,6 +1033,147 @@
             this.btnHeaderHome.UseVisualStyleBackColor = false;
             this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
             // 
+            // metroLabel21
+            // 
+            this.metroLabel21.AutoSize = true;
+            this.metroLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel21.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel21.Location = new System.Drawing.Point(62, 66);
+            this.metroLabel21.Name = "metroLabel21";
+            this.metroLabel21.Size = new System.Drawing.Size(99, 19);
+            this.metroLabel21.TabIndex = 76;
+            this.metroLabel21.Text = "Filter by Year : ";
+            this.metroLabel21.UseCustomBackColor = true;
+            // 
+            // cmbSubFilterYear
+            // 
+            this.cmbSubFilterYear.FormattingEnabled = true;
+            this.cmbSubFilterYear.ItemHeight = 23;
+            this.cmbSubFilterYear.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cmbSubFilterYear.Location = new System.Drawing.Point(161, 62);
+            this.cmbSubFilterYear.Name = "cmbSubFilterYear";
+            this.cmbSubFilterYear.PromptText = "Select Year";
+            this.cmbSubFilterYear.Size = new System.Drawing.Size(120, 29);
+            this.cmbSubFilterYear.TabIndex = 75;
+            this.cmbSubFilterYear.UseSelectable = true;
+            this.cmbSubFilterYear.SelectedIndexChanged += new System.EventHandler(this.cmbSubFilterYear_SelectedIndexChanged);
+            // 
+            // metroLabel22
+            // 
+            this.metroLabel22.AutoSize = true;
+            this.metroLabel22.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel22.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel22.Location = new System.Drawing.Point(559, 65);
+            this.metroLabel22.Name = "metroLabel22";
+            this.metroLabel22.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel22.TabIndex = 74;
+            this.metroLabel22.Text = "Search : ";
+            this.metroLabel22.UseCustomBackColor = true;
+            // 
+            // txtSubSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtSubSearch.CustomButton.Image = null;
+            this.txtSubSearch.CustomButton.Location = new System.Drawing.Point(96, 1);
+            this.txtSubSearch.CustomButton.Name = "";
+            this.txtSubSearch.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtSubSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSubSearch.CustomButton.TabIndex = 1;
+            this.txtSubSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSubSearch.CustomButton.UseSelectable = true;
+            this.txtSubSearch.CustomButton.Visible = false;
+            this.txtSubSearch.Lines = new string[0];
+            this.txtSubSearch.Location = new System.Drawing.Point(619, 64);
+            this.txtSubSearch.MaxLength = 32767;
+            this.txtSubSearch.Name = "txtSubSearch";
+            this.txtSubSearch.PasswordChar = '\0';
+            this.txtSubSearch.PromptText = "Type Name";
+            this.txtSubSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSubSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSubSearch.SelectedText = "";
+            this.txtSubSearch.SelectionLength = 0;
+            this.txtSubSearch.SelectionStart = 0;
+            this.txtSubSearch.ShortcutsEnabled = true;
+            this.txtSubSearch.Size = new System.Drawing.Size(120, 25);
+            this.txtSubSearch.TabIndex = 73;
+            this.txtSubSearch.UseSelectable = true;
+            this.txtSubSearch.WaterMark = "Type Name";
+            this.txtSubSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSubSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSubSearch.TextChanged += new System.EventHandler(this.txtSubSearch_TextChanged);
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "SubCode";
+            this.Code.HeaderText = "Code";
+            this.Code.MinimumWidth = 75;
+            this.Code.Name = "Code";
+            this.Code.Width = 75;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.HeaderText = "Name";
+            this.SubName.MinimumWidth = 200;
+            this.SubName.Name = "SubName";
+            this.SubName.Width = 200;
+            // 
+            // SubYear
+            // 
+            this.SubYear.DataPropertyName = "SubYear";
+            this.SubYear.HeaderText = "Year";
+            this.SubYear.MinimumWidth = 50;
+            this.SubYear.Name = "SubYear";
+            this.SubYear.Width = 50;
+            // 
+            // SubSem
+            // 
+            this.SubSem.DataPropertyName = "SubSem";
+            this.SubSem.HeaderText = "Semester";
+            this.SubSem.MinimumWidth = 70;
+            this.SubSem.Name = "SubSem";
+            this.SubSem.Width = 70;
+            // 
+            // SubLecHours
+            // 
+            this.SubLecHours.DataPropertyName = "SubLecHours";
+            this.SubLecHours.HeaderText = "Lecturer Hours";
+            this.SubLecHours.MinimumWidth = 60;
+            this.SubLecHours.Name = "SubLecHours";
+            this.SubLecHours.Width = 60;
+            // 
+            // SubTuteHours
+            // 
+            this.SubTuteHours.DataPropertyName = "SubTuteHours";
+            this.SubTuteHours.HeaderText = "Tute Hours";
+            this.SubTuteHours.MinimumWidth = 60;
+            this.SubTuteHours.Name = "SubTuteHours";
+            this.SubTuteHours.Width = 60;
+            // 
+            // SubLabHours
+            // 
+            this.SubLabHours.DataPropertyName = "SubLabHours";
+            this.SubLabHours.HeaderText = "Lab Hours";
+            this.SubLabHours.MinimumWidth = 60;
+            this.SubLabHours.Name = "SubLabHours";
+            this.SubLabHours.Width = 60;
+            // 
+            // SubEvaHours
+            // 
+            this.SubEvaHours.DataPropertyName = "SubEvaHours";
+            this.SubEvaHours.HeaderText = "Evalution Hours";
+            this.SubEvaHours.MinimumWidth = 65;
+            this.SubEvaHours.Name = "SubEvaHours";
+            this.SubEvaHours.Width = 65;
+            // 
             // AddSubject
             // 
             this.ApplyImageInvert = true;
@@ -1095,7 +1198,7 @@
             this.MaximizeBox = false;
             this.Name = "AddSubject";
             this.Resizable = false;
-            this.Text = "AddSubject";
+            this.Text = "Subjects";
             this.Load += new System.EventHandler(this.AddSubject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).EndInit();
@@ -1174,6 +1277,10 @@
         private MetroFramework.Controls.MetroTextBox txtSubCodeEdit;
         private MetroFramework.Controls.MetroTextBox txtSubNameEdit;
         private System.Windows.Forms.DataGridView dgvSubjects;
+        private MetroFramework.Controls.MetroLabel metroLabel21;
+        private MetroFramework.Controls.MetroComboBox cmbSubFilterYear;
+        private MetroFramework.Controls.MetroLabel metroLabel22;
+        private MetroFramework.Controls.MetroTextBox txtSubSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubYear;

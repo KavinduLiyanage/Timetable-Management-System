@@ -24,6 +24,7 @@ namespace TimetableManagementSystem.Subjects
         public String SubCode;
         public int SubCodeValue = 0;
 
+
         private void AddSubject_Load(object sender, EventArgs e)
         {
             GetSubjects();
@@ -42,6 +43,8 @@ namespace TimetableManagementSystem.Subjects
 
             dgvSubjects.AutoGenerateColumns = false;
             dgvSubjects.DataSource = dt;
+
+         
         }
 
         private void btnSubSave_Click(object sender, EventArgs e)
@@ -245,6 +248,36 @@ namespace TimetableManagementSystem.Subjects
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
+        }
+
+        private void txtSubSearch_TextChanged(object sender, EventArgs e)
+        {
+            cmbSubFilterYear.SelectedIndex = -1;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Subjects where SubName like '%" + txtSubSearch.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvSubjects.DataSource = dt;
+            con.Close();
+        }
+
+        private void cmbSubFilterYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSubSearch.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Subjects where SubYear like '%" + cmbSubFilterYear.Text + "' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvSubjects.DataSource = dt;
+            con.Close();
         }
     }
 }
