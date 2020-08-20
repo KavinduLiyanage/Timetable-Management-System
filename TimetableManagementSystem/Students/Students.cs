@@ -31,7 +31,7 @@ namespace TimetableManagementSystem.Students
 
         private void prgBtn_Click(object sender, EventArgs e)
         {
-            prgBtn.Text = "";
+            //prgBtn.Text = "";
         }
 
         private void prgClrBtn_Click(object sender, EventArgs e)
@@ -46,12 +46,12 @@ namespace TimetableManagementSystem.Students
 
         private void yearTxt_Click(object sender, EventArgs e)
         {
-            yearTxt.Text = "";
+            //yearTxt.Text = "";
         }
 
         private void semTxt_Click(object sender, EventArgs e)
         {
-            semTxt.Text = "";
+            //semTxt.Text = "";
         }
 
         private void yrSemClrBtn_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace TimetableManagementSystem.Students
 
         private void grpNumTxt_Click(object sender, EventArgs e)
         {
-            grpNumTxt.Text = "";
+            //grpNumTxt.Text = "";
         }
 
         private void grpNumClrBtn_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace TimetableManagementSystem.Students
 
         private void subGrpNumTxt_Click(object sender, EventArgs e)
         {
-            subGrpNumTxt.Text = "";
+            //subGrpNumTxt.Text = "";
         }
 
         private void subGrpNumClrBtn_Click(object sender, EventArgs e)
