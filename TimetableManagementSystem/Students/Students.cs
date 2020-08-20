@@ -192,9 +192,9 @@ namespace TimetableManagementSystem.Students
             String query1 = "Select * from YearSemester";
             String query2 = "Select * from Programme";
             String query3 = "Select * from GroupNumber";
-            String query4 = "Select * from GenGroupNumber";
+            String query4 = "select id,GenGrpNum from GenGroupNumber";
             String query5 = "Select * from SubGroupNumber";
-            String query6 = "Select * from GenSubGroupNumber";
+            String query6 = "select id,GenSubGrpNum from GenSubGroupNumber";
             String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
 
             SqlConnection con = Config.con;

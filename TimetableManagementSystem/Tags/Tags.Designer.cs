@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tagNameSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.tagNameData = new System.Windows.Forms.DataGridView();
             this.tagNameSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
@@ -37,7 +37,6 @@
             this.tagNameClrBtn = new MetroFramework.Controls.MetroButton();
             this.tagNameAddBtn = new MetroFramework.Controls.MetroButton();
             this.tagNameTxt = new MetroFramework.Controls.MetroTextBox();
-            this.tagNameSrtBtn = new MetroFramework.Controls.MetroButton();
             this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
             this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
             this.btnSideNavTags = new System.Windows.Forms.PictureBox();
@@ -79,12 +78,12 @@
             this.tagNameSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.tagNameSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
             this.tagNameSearchBox.IconRight = true;
-            this.tagNameSearchBox.Lines = new string[] {
-        "Search"};
-            this.tagNameSearchBox.Location = new System.Drawing.Point(515, 186);
+            this.tagNameSearchBox.Lines = new string[0];
+            this.tagNameSearchBox.Location = new System.Drawing.Point(742, 186);
             this.tagNameSearchBox.MaxLength = 32767;
             this.tagNameSearchBox.Name = "tagNameSearchBox";
             this.tagNameSearchBox.PasswordChar = '\0';
+            this.tagNameSearchBox.PromptText = "Search";
             this.tagNameSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tagNameSearchBox.SelectedText = "";
             this.tagNameSearchBox.SelectionLength = 0;
@@ -92,10 +91,10 @@
             this.tagNameSearchBox.ShortcutsEnabled = true;
             this.tagNameSearchBox.Size = new System.Drawing.Size(163, 30);
             this.tagNameSearchBox.TabIndex = 64;
-            this.tagNameSearchBox.Text = "Search";
             this.tagNameSearchBox.UseSelectable = true;
+            this.tagNameSearchBox.WaterMark = "Search";
             this.tagNameSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tagNameSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tagNameSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tagNameSearchBox.TextChanged += new System.EventHandler(this.tagNameSearchBox_TextChanged);
             this.tagNameSearchBox.Click += new System.EventHandler(this.tagNameSearchBox_Click);
             // 
@@ -107,14 +106,14 @@
             this.tagNameData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tagNameData.BackgroundColor = System.Drawing.Color.White;
             this.tagNameData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tagNameData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tagNameData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tagNameData.ColumnHeadersHeight = 29;
             this.tagNameData.Location = new System.Drawing.Point(515, 220);
             this.tagNameData.MultiSelect = false;
@@ -133,10 +132,9 @@
             this.tagNameSrtDrpDwn.FormattingEnabled = true;
             this.tagNameSrtDrpDwn.ItemHeight = 23;
             this.tagNameSrtDrpDwn.Items.AddRange(new object[] {
-            "Building",
-            "Capacity",
-            "Room Type"});
-            this.tagNameSrtDrpDwn.Location = new System.Drawing.Point(742, 186);
+            "Tag Name",
+            "ID"});
+            this.tagNameSrtDrpDwn.Location = new System.Drawing.Point(642, 187);
             this.tagNameSrtDrpDwn.Name = "tagNameSrtDrpDwn";
             this.tagNameSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
             this.tagNameSrtDrpDwn.TabIndex = 56;
@@ -222,12 +220,12 @@
             this.tagNameTxt.CustomButton.Visible = false;
             this.tagNameTxt.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tagNameTxt.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.tagNameTxt.Lines = new string[] {
-        "Tag Name"};
+            this.tagNameTxt.Lines = new string[0];
             this.tagNameTxt.Location = new System.Drawing.Point(193, 302);
             this.tagNameTxt.MaxLength = 32767;
             this.tagNameTxt.Name = "tagNameTxt";
             this.tagNameTxt.PasswordChar = '\0';
+            this.tagNameTxt.PromptText = "Tag Name";
             this.tagNameTxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tagNameTxt.SelectedText = "";
             this.tagNameTxt.SelectionLength = 0;
@@ -236,26 +234,11 @@
             this.tagNameTxt.ShowClearButton = true;
             this.tagNameTxt.Size = new System.Drawing.Size(205, 30);
             this.tagNameTxt.TabIndex = 59;
-            this.tagNameTxt.Text = "Tag Name";
             this.tagNameTxt.UseSelectable = true;
+            this.tagNameTxt.WaterMark = "Tag Name";
             this.tagNameTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tagNameTxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tagNameTxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tagNameTxt.Click += new System.EventHandler(this.tagNameTxt_Click);
-            // 
-            // tagNameSrtBtn
-            // 
-            this.tagNameSrtBtn.BackColor = System.Drawing.SystemColors.GrayText;
-            this.tagNameSrtBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.tagNameSrtBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.tagNameSrtBtn.Location = new System.Drawing.Point(841, 186);
-            this.tagNameSrtBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.tagNameSrtBtn.Name = "tagNameSrtBtn";
-            this.tagNameSrtBtn.Size = new System.Drawing.Size(62, 29);
-            this.tagNameSrtBtn.TabIndex = 57;
-            this.tagNameSrtBtn.Text = "Sort";
-            this.tagNameSrtBtn.UseCustomBackColor = true;
-            this.tagNameSrtBtn.UseCustomForeColor = true;
-            this.tagNameSrtBtn.UseSelectable = true;
             // 
             // btnSideNavStatistics
             // 
@@ -439,7 +422,6 @@
             this.Controls.Add(this.tagNameClrBtn);
             this.Controls.Add(this.tagNameAddBtn);
             this.Controls.Add(this.tagNameTxt);
-            this.Controls.Add(this.tagNameSrtBtn);
             this.MaximizeBox = false;
             this.Name = "Tags";
             this.Resizable = false;
@@ -468,7 +450,6 @@
         private MetroFramework.Controls.MetroButton tagNameClrBtn;
         private MetroFramework.Controls.MetroButton tagNameAddBtn;
         private MetroFramework.Controls.MetroTextBox tagNameTxt;
-        private MetroFramework.Controls.MetroButton tagNameSrtBtn;
         private System.Windows.Forms.PictureBox btnSideNavStatistics;
         private System.Windows.Forms.PictureBox btnSideNavLocations;
         private System.Windows.Forms.PictureBox btnSideNavTags;
