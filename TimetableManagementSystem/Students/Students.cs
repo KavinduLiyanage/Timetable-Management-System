@@ -13,6 +13,12 @@ namespace TimetableManagementSystem.Students
 {
     public partial class Students : MetroFramework.Forms.MetroForm
     {
+
+        int grpNumID;
+        int subGrpNumID;
+        int YrSemID;
+        int prgID;
+
         public Students()
         {
             InitializeComponent();
@@ -186,8 +192,8 @@ namespace TimetableManagementSystem.Students
             String query1 = "Select * from YearSemester";
             String query2 = "Select * from Programme";
             String query3 = "Select * from GroupNumber";
-            String query4 = "Select * from SubGroupNumber";
-            String query5 = "Select * from GenGroupNumber";
+            String query4 = "Select * from GenGroupNumber";
+            String query5 = "Select * from SubGroupNumber";
             String query6 = "Select * from GenSubGroupNumber";
             String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
 
@@ -418,5 +424,236 @@ namespace TimetableManagementSystem.Students
         {
 
         }
+
+        private void grpNumEditBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE GroupNumber SET GrpNum = '" + grpNumTxt.Text + "' WHERE id = '" + grpNumID + "'";
+            cmd.ExecuteNonQuery();
+
+            String query2 = "Select * from GroupNumber";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            grpNumData.DataSource = dt;
+
+            con.Close();
+
+            MessageBox.Show("Updated Succesfully");
+        }
+
+        private void grpNumDltBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from GroupNumber where id = '" + grpNumID + "'";
+                cmd.ExecuteNonQuery();
+
+
+                String query2 = "Select * from GroupNumber";
+
+                SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                grpNumData.DataSource = dt;
+
+
+                con.Close();
+
+                MessageBox.Show("Delete Succesfully");
+            }
+        }
+
+        private void grpNumData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = grpNumData.Rows[index];
+            grpNumID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+            grpNumTxt.Text = selectRow.Cells[1].Value.ToString();
+        }
+
+        private void subGrpNumData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = subGrpNumData.Rows[index];
+            subGrpNumID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+            subGrpNumTxt.Text = selectRow.Cells[1].Value.ToString();
+        }
+
+        private void subGrpNumEditBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE SubGroupNumber SET GrpNum = '" + grpNumTxt.Text + "' WHERE id = '" + subGrpNumID + "'";
+            cmd.ExecuteNonQuery();
+
+            String query2 = "Select * from SubGroupNumber";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            subGrpNumData.DataSource = dt;
+
+            con.Close();
+
+            MessageBox.Show("Updated Succesfully");
+        }
+
+        private void subGrpNumDltBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from SubGroupNumber where id = '" + subGrpNumID + "'";
+                cmd.ExecuteNonQuery();
+
+
+                String query2 = "Select * from SubGroupNumber";
+
+                SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                subGrpNumData.DataSource = dt;
+
+
+                con.Close();
+
+                MessageBox.Show("Delete Succesfully");
+            }
+
+        }
+
+        private void yrSemData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = yrSemData.Rows[index];
+            YrSemID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+            yearTxt.Text = selectRow.Cells[1].Value.ToString();
+            semTxt.Text = selectRow.Cells[2].Value.ToString();
+        }
+
+        private void yrSemEditBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE YearSemester SET Year = '" + yearTxt.Text + "', Semester = '" + semTxt.Text + "' WHERE id = '" + YrSemID + "'";
+            cmd.ExecuteNonQuery();
+
+            String query2 = "Select * from YearSemester";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            yrSemData.DataSource = dt;
+
+            con.Close();
+
+            MessageBox.Show("Updated Succesfully");
+        }
+
+        private void yrSemDltBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from YearSemester where id = '" + YrSemID + "'";
+                cmd.ExecuteNonQuery();
+
+
+                String query2 = "Select * from YearSemester";
+
+                SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                yrSemData.DataSource = dt;
+
+
+                con.Close();
+
+                MessageBox.Show("Delete Succesfully");
+            }
+        }
+
+        private void prgData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = prgData.Rows[index];
+            prgID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+            prgBtn.Text = selectRow.Cells[1].Value.ToString();
+        }
+
+        private void prgEditBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = Config.con;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE Programme SET Programme = '" + prgBtn.Text + "' WHERE id = '" + prgID + "'";
+            cmd.ExecuteNonQuery();
+
+            String query2 = "Select * from Programme";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            prgData.DataSource = dt;
+
+            con.Close();
+
+            MessageBox.Show("Updated Succesfully");
+        }
+
+        private void prgDltBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from Programme where id = '" + prgID + "'";
+                cmd.ExecuteNonQuery();
+
+
+                String query2 = "Select * from Programme";
+
+                SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                prgData.DataSource = dt;
+
+
+                con.Close();
+
+                MessageBox.Show("Delete Succesfully");
+            }
+        }
     }
+
 }
