@@ -136,6 +136,7 @@
             "ID"});
             this.tagNameSrtDrpDwn.Location = new System.Drawing.Point(642, 187);
             this.tagNameSrtDrpDwn.Name = "tagNameSrtDrpDwn";
+            this.tagNameSrtDrpDwn.PromptText = "Search By...";
             this.tagNameSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
             this.tagNameSrtDrpDwn.TabIndex = 56;
             this.tagNameSrtDrpDwn.UseSelectable = true;

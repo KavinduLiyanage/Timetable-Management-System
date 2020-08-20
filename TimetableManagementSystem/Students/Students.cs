@@ -268,24 +268,129 @@ namespace TimetableManagementSystem.Students
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM locations WHERE building LIKE '%" + searchBox.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            yrSemData.DataSource = dt;
-            con.Close();
+
+            if (srtDrpDwn.Text=="") {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id and YS.Year LIKE '%" + searchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                viewData.DataSource = dt;
+                con.Close();
+            }
+            else if (srtDrpDwn.Text == "Year")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id and YS.Year LIKE '%" + searchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                viewData.DataSource = dt;
+                con.Close();
+            }
+            else if (srtDrpDwn.Text == "Semester")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id and YS.Semester LIKE '%" + searchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                viewData.DataSource = dt;
+                con.Close();
+            }
+            else if (srtDrpDwn.Text == "Programme")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id and P.Programme LIKE '%" + searchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                viewData.DataSource = dt;
+                con.Close();
+            }
+            else if (srtDrpDwn.Text == "Group No")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id and GNo.GrpNum LIKE '%" + searchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                viewData.DataSource = dt;
+                con.Close();
+            }
+            else if (srtDrpDwn.Text == "Generated Group No")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id and GS.GenGrpNum LIKE '%" + searchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                viewData.DataSource = dt;
+                con.Close();
+            }
+            else if (srtDrpDwn.Text == "Sub Group No")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id and SubGNo.SubGrpNum LIKE '%" + searchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                viewData.DataSource = dt;
+                con.Close();
+            }
+            else if (srtDrpDwn.Text == "Generated Sub Group No")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id and GSG.GenSubGrpNum LIKE '%" + searchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                viewData.DataSource = dt;
+                con.Close();
+            }
         }
 
         private void yrSemSearchBox_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM YearSemester WHERE Year LIKE '%" + yrSemSearchBox.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            yrSemData.DataSource = dt;
-            con.Close();
+            if (yrSemSrtDrpDwn.Text == "Year")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM YearSemester WHERE Year LIKE '%" + yrSemSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                yrSemData.DataSource = dt;
+                con.Close();
+            }
+            else if (yrSemSrtDrpDwn.Text == "Semester")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM YearSemester WHERE Semester LIKE '%" + yrSemSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                yrSemData.DataSource = dt;
+                con.Close();
+            }
+            else if (yrSemSrtDrpDwn.Text == "ID")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM YearSemester WHERE id LIKE '%" + yrSemSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                yrSemData.DataSource = dt;
+                con.Close();
+            }
+            else if (yrSemSrtDrpDwn.Text == "") {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM YearSemester WHERE Year LIKE '%" + yrSemSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                yrSemData.DataSource = dt;
+                con.Close();
+            }
         }
 
         private void conAddBtn_Click(object sender, EventArgs e)
@@ -320,57 +425,172 @@ namespace TimetableManagementSystem.Students
 
         private void subGrpNumSearchBox_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM SubGroupNumber WHERE SubGrpNum LIKE '%" + subGrpNumSearchBox.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            subGrpNumData.DataSource = dt;
-            con.Close();
+            if (subGrpNumSrtDrpDwn.Text == "")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM SubGroupNumber WHERE SubGrpNum LIKE '%" + subGrpNumSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                subGrpNumData.DataSource = dt;
+                con.Close();
+            }
+            else if (subGrpNumSrtDrpDwn.Text == "Group Number")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM SubGroupNumber WHERE SubGrpNum LIKE '%" + subGrpNumSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                subGrpNumData.DataSource = dt;
+                con.Close();
+            }
+            else if (subGrpNumSrtDrpDwn.Text == "ID")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM SubGroupNumber WHERE id LIKE '%" + subGrpNumSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                subGrpNumData.DataSource = dt;
+                con.Close();
+            }
         }
 
         private void prgSearchBox_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Programme WHERE Programme LIKE '%" + prgSearchBox.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            subGrpNumData.DataSource = dt;
-            con.Close();
+
+            if (prgSrtDrpDwn.Text == "Programme")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Programme WHERE Programme LIKE '%" + prgSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                prgData.DataSource = dt;
+                con.Close();
+            }
+            else if (prgSrtDrpDwn.Text == "ID") {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Programme WHERE id LIKE '%" + prgSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                prgData.DataSource = dt;
+                con.Close();
+            }
+            else if (prgSrtDrpDwn.Text == "")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Programme WHERE Programme LIKE '%" + prgSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                prgData.DataSource = dt;
+                con.Close();
+            }
         }
 
         private void grpNumSearchBox_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM GroupNumber WHERE GrpNum LIKE '%" + grpNumSearchBox.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            subGrpNumData.DataSource = dt;
-            con.Close();
+            if (grpNumSrtDrpDwn.Text == "Group Number")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM GroupNumber WHERE GrpNum LIKE '%" + grpNumSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                grpNumData.DataSource = dt;
+                con.Close();
+            }
+            else if (grpNumSrtDrpDwn.Text == "ID")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM GroupNumber WHERE id LIKE '%" + grpNumSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                grpNumData.DataSource = dt;
+                con.Close();
+            }
+            else if (grpNumSrtDrpDwn.Text == "")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM GroupNumber WHERE GrpNum LIKE '%" + grpNumSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                grpNumData.DataSource = dt;
+                con.Close();
+            }
         }
 
         private void genIdSearchBox_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM GenGroupNumber WHERE GrpNum LIKE '%" + genIdSearchBox.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            subGrpNumData.DataSource = dt;
-            con.Close();
+            if (genIdSrtDrpDwn.Text == "")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT id,GenGrpNum FROM GenGroupNumber WHERE GenGrpNum LIKE '%" + genIdSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                genIdData.DataSource = dt;
+                con.Close();
+            }
+            else if (genIdSrtDrpDwn.Text == "Group Number")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT id,GenGrpNum FROM GenGroupNumber WHERE GenGrpNum LIKE '%" + genIdSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                genIdData.DataSource = dt;
+                con.Close();
+            }
+            else if (genIdSrtDrpDwn.Text == "ID")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT id,GenGrpNum FROM GenGroupNumber WHERE id LIKE '%" + genIdSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                genIdData.DataSource = dt;
+                con.Close();
+            }
         }
 
         private void genSubIdSearchBox_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM GenSubGroupNumber WHERE GenSubGrpNum LIKE '%" + genSubIdSearchBox.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            subGrpNumData.DataSource = dt;
-            con.Close();
+            if (genIdSrtDrpDwn.Text == "")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT id,GenSubGrpNum FROM GenSubGroupNumber WHERE GenSubGrpNum LIKE '%" + genSubIdSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                subGrpNumData.DataSource = dt;
+                con.Close();
+            }
+            else if (genIdSrtDrpDwn.Text == "Group Number")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT id,GenSubGrpNum FROM GenSubGroupNumber WHERE GenSubGrpNum LIKE '%" + genSubIdSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                subGrpNumData.DataSource = dt;
+                con.Close();
+            }
+            else if (genIdSrtDrpDwn.Text == "ID")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT id,GenSubGrpNum FROM GenSubGroupNumber WHERE id LIKE '%" + genSubIdSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                subGrpNumData.DataSource = dt;
+                con.Close();
+            }
         }
 
         private void btnHeaderHome_Click(object sender, EventArgs e)
