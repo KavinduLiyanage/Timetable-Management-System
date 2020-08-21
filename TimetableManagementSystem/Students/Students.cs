@@ -18,6 +18,10 @@ namespace TimetableManagementSystem.Students
         int subGrpNumID;
         int YrSemID;
         int prgID;
+        int genGrpID1;
+        int genSubGrpID1;
+        int no1 = 1;
+        int no2 = 1;
 
         public Students()
         {
@@ -143,7 +147,7 @@ namespace TimetableManagementSystem.Students
             SqlDataAdapter sda = new SqlDataAdapter(query2, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            yrSemData.DataSource = dt;
+            prgData.DataSource = dt;
 
             con.Close();
         }
@@ -162,7 +166,7 @@ namespace TimetableManagementSystem.Students
             SqlDataAdapter sda = new SqlDataAdapter(query3, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            yrSemData.DataSource = dt;
+            grpNumData.DataSource = dt;
 
 
             con.Close();
@@ -182,7 +186,7 @@ namespace TimetableManagementSystem.Students
             SqlDataAdapter sda = new SqlDataAdapter(query4, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            yrSemData.DataSource = dt;
+            subGrpNumData.DataSource = dt;
 
             con.Close();
         }
@@ -395,31 +399,87 @@ namespace TimetableManagementSystem.Students
 
         private void conAddBtn_Click(object sender, EventArgs e)
         {
+            SqlConnection con = Config.con;
+            con.Open();
+
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            if (no1 == 2)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenGroupNumber]([GenGrpNum],[yearSemRef],[programmeRef],[GroupNumber]) VALUES('Y1.S1.DS.01',1,4,1)";
+            }
+            else if (no1 == 3)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenGroupNumber] ([GenGrpNum],[yearSemRef],[programmeRef],[GroupNumber]) VALUES('Y1.S2.DS.01',2,4,1)";
+            }
+            else if (no1 == 4)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenGroupNumber]([GenGrpNum],[yearSemRef],[programmeRef],[GroupNumber]) VALUES('Y1.S2.DS.02',2,4,2)";
+            }
+            else {
+                cmd.CommandText = "INSERT INTO [dbo].[GenGroupNumber]([GenGrpNum],[yearSemRef],[programmeRef],[GroupNumber]) VALUES('Y1.S1.DS.02',1,4,2)";
+            }
+
+            cmd.ExecuteNonQuery();
 
             String query5 = "select id,GenGrpNum from GenGroupNumber";
 
-
-            SqlConnection con = Config.con;
-            con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(query5, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            yrSemData.DataSource = dt;
+            genIdData.DataSource = dt;
             con.Close();
         }
 
         private void conSubAddBtn_Click(object sender, EventArgs e)
         {
 
-            String query6 = "select id,GenSubGrpNum from GenSubGroupNumber";
-
-
             SqlConnection con = Config.con;
             con.Open();
+
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            if (no2 == 2)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S1.DS.01.01',13,1)";
+            }
+            else if (no2 == 3)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S1.DS.01.02',13,2)";
+            }
+            else if (no2 == 4)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S1.DS.02.01',16,1))";
+            }
+            else if (no2 == 5)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S1.DS.02.02',16,2)";
+            }
+            else if (no2 == 6)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S2.DS.01.01',14,1)";
+            }
+            else if (no2 == 7)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S2.DS.01.02',14,2)";
+            }
+            else if (no2 == 8)
+            {
+                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S2.DS.02.01',15,1)";
+            }
+            else {
+                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S2.DS.02.02',15,2)";
+            }
+
+            cmd.ExecuteNonQuery();
+
+            String query6 = "select id,GenSubGrpNum from GenSubGroupNumber";
             SqlDataAdapter sda = new SqlDataAdapter(query6, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            yrSemData.DataSource = dt;
+            genSubIdData.DataSource = dt;
             con.Close();
         }
 
@@ -691,15 +751,20 @@ namespace TimetableManagementSystem.Students
                 con.Close();
 
                 MessageBox.Show("Delete Succesfully");
+
+                grpNumTxt.Text = "";
             }
         }
 
         private void grpNumData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            DataGridViewRow selectRow = grpNumData.Rows[index];
-            grpNumID = Int32.Parse(selectRow.Cells[0].Value.ToString());
-            grpNumTxt.Text = selectRow.Cells[1].Value.ToString();
+            if (index > 0)
+            {
+                DataGridViewRow selectRow = grpNumData.Rows[index];
+                grpNumID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+                grpNumTxt.Text = selectRow.Cells[1].Value.ToString();
+            }
         }
 
         private void subGrpNumData_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -716,7 +781,7 @@ namespace TimetableManagementSystem.Students
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE SubGroupNumber SET GrpNum = '" + grpNumTxt.Text + "' WHERE id = '" + subGrpNumID + "'";
+            cmd.CommandText = "UPDATE SubGroupNumber SET SubGrpNum = '" + grpNumTxt.Text + "' WHERE id = '" + subGrpNumID + "'";
             cmd.ExecuteNonQuery();
 
             String query2 = "Select * from SubGroupNumber";
@@ -756,6 +821,8 @@ namespace TimetableManagementSystem.Students
                 con.Close();
 
                 MessageBox.Show("Delete Succesfully");
+
+                subGrpNumTxt.Text = "";
             }
 
         }
@@ -763,10 +830,13 @@ namespace TimetableManagementSystem.Students
         private void yrSemData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            DataGridViewRow selectRow = yrSemData.Rows[index];
-            YrSemID = Int32.Parse(selectRow.Cells[0].Value.ToString());
-            yearTxt.Text = selectRow.Cells[1].Value.ToString();
-            semTxt.Text = selectRow.Cells[2].Value.ToString();
+            if (index > 0)
+            {
+                DataGridViewRow selectRow = yrSemData.Rows[index];
+                YrSemID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+                yearTxt.Text = selectRow.Cells[1].Value.ToString();
+                semTxt.Text = selectRow.Cells[2].Value.ToString();
+            }
         }
 
         private void yrSemEditBtn_Click(object sender, EventArgs e)
@@ -815,15 +885,21 @@ namespace TimetableManagementSystem.Students
                 con.Close();
 
                 MessageBox.Show("Delete Succesfully");
+
+                yearTxt.Text = "";
+                semTxt.Text = "";
             }
         }
 
         private void prgData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            DataGridViewRow selectRow = prgData.Rows[index];
-            prgID = Int32.Parse(selectRow.Cells[0].Value.ToString());
-            prgBtn.Text = selectRow.Cells[1].Value.ToString();
+            if (index > 0)
+            {
+                DataGridViewRow selectRow = prgData.Rows[index];
+                prgID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+                prgBtn.Text = selectRow.Cells[1].Value.ToString();
+            }
         }
 
         private void prgEditBtn_Click(object sender, EventArgs e)
@@ -872,12 +948,32 @@ namespace TimetableManagementSystem.Students
                 con.Close();
 
                 MessageBox.Show("Delete Succesfully");
+
+                prgBtn.Text = "";
             }
         }
 
         private void genIdBtn_Click(object sender, EventArgs e)
         {
-
+            if (no1 == 1)
+            {
+                gentedIdNumTxt.Text = "Y1.S1.DS.01";
+                no1++;
+            }
+            else if (no1 == 2) {
+                gentedIdNumTxt.Text = "Y1.S2.DS.01";
+                no1++;
+            }
+            else if (no1 == 3)
+            {
+                gentedIdNumTxt.Text = "Y1.S2.DS.02";
+                no1++;
+            }
+            else if (no1 == 4)
+            {
+                gentedIdNumTxt.Text = "Y1.S1.DS.02";
+                no1++;
+            }
         }
 
         private void genIdEditBtn_Click(object sender, EventArgs e)
@@ -887,12 +983,138 @@ namespace TimetableManagementSystem.Students
 
         private void genIdDltBtn_Click(object sender, EventArgs e)
         {
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+            if (dlgResult == DialogResult.Yes)
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "DELETE FROM [dbo].[GenGroupNumber] WHERE id=" + genGrpID1 + "";
+                cmd.ExecuteNonQuery();
+
+
+                String query2 = "select id, GenGrpNum from GenGroupNumber";
+
+                SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                genIdData.DataSource = dt;
+
+
+                con.Close();
+
+                MessageBox.Show("Delete Succesfully");
+
+                gentedIdNumTxt.Text = "";
+            }
         }
 
         private void genSubIdEditBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void genSubIdBtn_Click(object sender, EventArgs e)
+        {
+            if (no2 == 1)
+            {
+                gentedSubIdNumTxt.Text = "Y1.S1.DS.01.01";
+                no2++;
+            }
+            else if (no2 == 2)
+            {
+                gentedSubIdNumTxt.Text = "Y1.S1.DS.01.02";
+                no2++;
+            }
+            else if (no2 == 3)
+            {
+                gentedSubIdNumTxt.Text = "Y1.S1.DS.02.01";
+                no2++;
+            }
+            else if (no2 == 4)
+            {
+                gentedSubIdNumTxt.Text = "Y1.S1.DS.02.02";
+                no2++;
+            }
+            else if (no2 == 5)
+            {
+                gentedSubIdNumTxt.Text = "Y1.S2.DS.01.01";
+                no2++;
+            }
+            else if (no2 == 6)
+            {
+                gentedSubIdNumTxt.Text = "Y1.S2.DS.01.02";
+                no2++;
+            }
+            else if (no2 == 7)
+            {
+                gentedSubIdNumTxt.Text = "Y1.S2.DS.02.01";
+                no2++;
+            }
+            else if (no2 == 8)
+            {
+                gentedSubIdNumTxt.Text = "Y1.S2.DS.02.02";
+                no2++;
+            }
+        }
+
+        private void gentedSubIdNumTxt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genIdData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            if (index > 0)
+            {
+                DataGridViewRow selectRow = genIdData.Rows[index];
+                genGrpID1 = Int32.Parse(selectRow.Cells[0].Value.ToString());
+                gentedIdNumTxt.Text = selectRow.Cells[1].Value.ToString();
+            }
+        }
+
+        private void genSubIdDltBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "DELETE FROM [dbo].[GenSubGroupNumber] WHERE id=" + genSubGrpID1 + "";
+                cmd.ExecuteNonQuery();
+
+
+                String query2 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+                SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                genSubIdData.DataSource = dt;
+
+
+                con.Close();
+
+                MessageBox.Show("Delete Succesfully");
+
+                gentedIdNumTxt.Text = "";
+            }
+        }
+
+        private void genSubIdData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            if (index > 0)
+            {
+                DataGridViewRow selectRow = genSubIdData.Rows[index];
+                genSubGrpID1 = Int32.Parse(selectRow.Cells[0].Value.ToString());
+                gentedSubIdNumTxt.Text = selectRow.Cells[1].Value.ToString();
+            }
         }
     }
 

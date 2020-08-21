@@ -181,9 +181,12 @@ namespace TimetableManagementSystem.Tags
         private void tagNameData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            DataGridViewRow selectRow = tagNameData.Rows[index];
-            tagID = Int32.Parse(selectRow.Cells[0].Value.ToString());
-            tagNameTxt.Text = selectRow.Cells[1].Value.ToString();
+            if (index > 0)
+            {
+                DataGridViewRow selectRow = tagNameData.Rows[index];
+                tagID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+                tagNameTxt.Text = selectRow.Cells[1].Value.ToString();
+            }
 
         }
 
@@ -233,6 +236,8 @@ namespace TimetableManagementSystem.Tags
                 con.Close();
 
                 MessageBox.Show("Delete Succesfully");
+
+                tagNameTxt.Text = "";
             }
         }
     }
