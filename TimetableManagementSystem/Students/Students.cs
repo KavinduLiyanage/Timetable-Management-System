@@ -770,9 +770,12 @@ namespace TimetableManagementSystem.Students
         private void subGrpNumData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            DataGridViewRow selectRow = subGrpNumData.Rows[index];
-            subGrpNumID = Int32.Parse(selectRow.Cells[0].Value.ToString());
-            subGrpNumTxt.Text = selectRow.Cells[1].Value.ToString();
+            if (index > 0)
+            {
+                DataGridViewRow selectRow = subGrpNumData.Rows[index];
+                subGrpNumID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+                subGrpNumTxt.Text = selectRow.Cells[1].Value.ToString();
+            }
         }
 
         private void subGrpNumEditBtn_Click(object sender, EventArgs e)
@@ -781,7 +784,7 @@ namespace TimetableManagementSystem.Students
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE SubGroupNumber SET SubGrpNum = '" + grpNumTxt.Text + "' WHERE id = '" + subGrpNumID + "'";
+            cmd.CommandText = "UPDATE SubGroupNumber SET SubGrpNum = '" + subGrpNumTxt.Text + "' WHERE id = '" + subGrpNumID + "'";
             cmd.ExecuteNonQuery();
 
             String query2 = "Select * from SubGroupNumber";
