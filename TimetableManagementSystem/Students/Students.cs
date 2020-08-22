@@ -21,6 +21,13 @@ namespace TimetableManagementSystem.Students
         public string[] sortedOutcome;
         public List<string[]> list3 = new List<string[]>();
 
+        public string[] allOutcome3;
+        public List<string[]> list4 = new List<string[]>();
+        public string[] allOutcome4;
+        public List<string> list5 = new List<string>();
+        public string[] sortedOutcome2;
+        public List<string[]> list6 = new List<string[]>();
+
         int grpNumID;
         int subGrpNumID;
         int YrSemID;
@@ -439,39 +446,12 @@ namespace TimetableManagementSystem.Students
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
-            if (no2 == 2)
+            foreach (string[] allItem in list6)
             {
-                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S1.DS.01.01',13,1)";
+                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('" + allItem[0] + "'," + allItem[1] + "," + allItem[2] + ")";
+                cmd.ExecuteNonQuery();
             }
-            else if (no2 == 3)
-            {
-                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S1.DS.01.02',13,2)";
-            }
-            else if (no2 == 4)
-            {
-                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S1.DS.02.01',16,1))";
-            }
-            else if (no2 == 5)
-            {
-                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S1.DS.02.02',16,2)";
-            }
-            else if (no2 == 6)
-            {
-                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S2.DS.01.01',14,1)";
-            }
-            else if (no2 == 7)
-            {
-                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S2.DS.01.02',14,2)";
-            }
-            else if (no2 == 8)
-            {
-                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S2.DS.02.01',15,1)";
-            }
-            else {
-                cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('Y1.S2.DS.02.02',15,2)";
-            }
-
-            cmd.ExecuteNonQuery();
+            con.Close();
 
             String query6 = "select id,GenSubGrpNum from GenSubGroupNumber";
             SqlDataAdapter sda = new SqlDataAdapter(query6, con);
@@ -1147,7 +1127,149 @@ namespace TimetableManagementSystem.Students
 
         private void genSubIdBtn_Click(object sender, EventArgs e)
         {
-            
+            SqlConnection con = Config.con;
+            String query1 = "select GGN.GenGrpNum, SGN.SubGrpNum, GGN.id, SGN.id from GenGroupNumber GGN, SubGroupNumber SGN";
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(query1, con);
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+            con.Close();
+            string res = string.Join(Environment.NewLine,
+                dt.Rows.OfType<DataRow>()
+                .Select(x => string.Join(".", x.ItemArray)));
+
+
+            string[] allList = res.Split('\n');
+
+            string last = allList.Last();
+
+            foreach (string res22 in allList)
+            {
+
+                string reeee;
+                if (res22.Equals(last))
+                {
+                    reeee = res22;
+                }
+                else
+                {
+                    reeee = res22.Substring(0, res22.Length - 1);
+                }
+
+                string[] idList = reeee.Split('.');
+
+
+                int i = 0;
+                string newStr = "";
+                string pID = "";
+                string yrSemID = "";
+                string grpNoId = "";
+                foreach (string id in idList)
+                {
+                    if (i == 0)
+                    {
+                        newStr = newStr + id + ".";
+                    }
+                    else if (i == 1)
+                    {
+                        newStr = newStr + id + ".";
+                    }
+                    else if (i == 2)
+                    {
+                        newStr = newStr + id + ".";
+                    }
+                    else if (i == 3)
+                    {
+                        newStr = newStr + id + ".";
+                    }
+                    else if (i == 4)
+                    {
+                        newStr = newStr + int.Parse(id).ToString("00");
+                    }
+                    else if (i == 5)
+                    {
+                        pID = id;
+                    }
+                    else if (i == 6)
+                    {
+                        grpNoId = id;
+                    }
+                    i++;
+                }
+                string[] innerResult = { newStr, pID, grpNoId };
+                list4.Add(innerResult);
+            }
+
+            foreach (string[] res22 in list4)
+            {
+                Console.WriteLine(res22[0]);
+            }
+
+
+            String query2 = "select GenSubGrpNum from GenSubGroupNumber";
+            con.Open();
+
+            SqlCommand cmd2 = new SqlCommand(query2, con);
+            DataTable dt2 = new DataTable();
+            SqlDataReader sdr2 = cmd2.ExecuteReader();
+            dt2.Load(sdr2);
+            con.Close();
+            string res2 = string.Join(Environment.NewLine,
+                dt2.Rows.OfType<DataRow>()
+                .Select(x => string.Join(".", x.ItemArray)));
+
+
+            string[] allList2 = res2.Split('\n');
+            string last2 = allList2.Last();
+
+            foreach (string res22 in allList2)
+            {
+
+                string reeee;
+                if (res22.Equals(last2))
+                {
+                    reeee = res22;
+                }
+                else
+                {
+                    reeee = res22.Substring(0, res22.Length - 1);
+                }
+                list5.Add(reeee);
+            }
+            allOutcome2 = list5.ToArray();
+            Console.WriteLine();
+            foreach (string res22 in allOutcome2)
+            {
+                Console.WriteLine(res22);
+            }
+
+
+            listView1.View = View.Details;
+            listView1.Columns.Add("Name");
+
+            listView1.Items.Clear();
+
+            foreach (string[] listItem in list4)
+            {
+                Boolean found = false;
+                foreach (string innerItem in list5)
+                {
+                    if (listItem[0].Equals(innerItem))
+                    {
+                        found = true;
+                    }
+                }
+                if (!found)
+                {
+                    list6.Add(listItem);
+                    listView1.Items.Add(new ListViewItem(listItem[0]));
+                }
+            }
+
+            listView1.GridLines = true;
+            listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
         }
 
         private void gentedSubIdNumTxt_Click(object sender, EventArgs e)
