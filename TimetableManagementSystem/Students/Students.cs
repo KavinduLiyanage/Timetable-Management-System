@@ -138,6 +138,8 @@ namespace TimetableManagementSystem.Students
             yrSemData.DataSource = dt;
 
             con.Close();
+
+            MessageBox.Show("Year and Semester Added Successfully", "Added Successful");
         }
 
         private void addPrgBtn_Click(object sender, EventArgs e)
@@ -157,6 +159,8 @@ namespace TimetableManagementSystem.Students
             prgData.DataSource = dt;
 
             con.Close();
+
+            MessageBox.Show("Programme Added Successfully", "Added Successful");
         }
 
         private void grpNumAddBtn_Click(object sender, EventArgs e)
@@ -177,6 +181,8 @@ namespace TimetableManagementSystem.Students
 
 
             con.Close();
+
+            MessageBox.Show("Group Number Added Successfully", "Added Successful");
         }
 
         private void subGrpNumAddBtn_Click(object sender, EventArgs e)
@@ -196,6 +202,8 @@ namespace TimetableManagementSystem.Students
             subGrpNumData.DataSource = dt;
 
             con.Close();
+
+            MessageBox.Show("Sub-Group Added Successfully", "Added Successful");
         }
 
         private void Students_Load(object sender, EventArgs e)
@@ -418,6 +426,8 @@ namespace TimetableManagementSystem.Students
             }
 
             con.Close();
+
+            MessageBox.Show("IDs Added Successfully", "Added Successful");
         }
 
         private void conSubAddBtn_Click(object sender, EventArgs e)
@@ -469,6 +479,9 @@ namespace TimetableManagementSystem.Students
             sda.Fill(dt);
             genSubIdData.DataSource = dt;
             con.Close();
+
+
+            MessageBox.Show("IDs Added Successfully", "Added Successful");
         }
 
         private void subGrpNumSearchBox_TextChanged(object sender, EventArgs e)
@@ -711,7 +724,7 @@ namespace TimetableManagementSystem.Students
 
             con.Close();
 
-            MessageBox.Show("Updated Succesfully");
+            MessageBox.Show("Group Number Updated Successfully","Update Successfully");
         }
 
         private void grpNumDltBtn_Click(object sender, EventArgs e)
@@ -738,7 +751,7 @@ namespace TimetableManagementSystem.Students
 
                 con.Close();
 
-                MessageBox.Show("Delete Succesfully");
+                MessageBox.Show("Group Number Deleted Succesfully", "Delete Successful");
 
                 grpNumTxt.Text = "";
             }
@@ -784,7 +797,7 @@ namespace TimetableManagementSystem.Students
 
             con.Close();
 
-            MessageBox.Show("Updated Succesfully");
+            MessageBox.Show("Sub-Group Updated Successfully","Update Successfully");
         }
 
         private void subGrpNumDltBtn_Click(object sender, EventArgs e)
@@ -811,7 +824,7 @@ namespace TimetableManagementSystem.Students
 
                 con.Close();
 
-                MessageBox.Show("Delete Succesfully");
+                MessageBox.Show("Sub-Group Number Deleted Successfully", "Delete Successful");
 
                 subGrpNumTxt.Text = "";
             }
@@ -848,7 +861,7 @@ namespace TimetableManagementSystem.Students
 
             con.Close();
 
-            MessageBox.Show("Updated Succesfully");
+            MessageBox.Show("Year and Semester Updated Successfully", "Update Successful");
         }
 
         private void yrSemDltBtn_Click(object sender, EventArgs e)
@@ -875,7 +888,7 @@ namespace TimetableManagementSystem.Students
 
                 con.Close();
 
-                MessageBox.Show("Delete Succesfully");
+                MessageBox.Show("Year and Semester Deleted Successfully", "Delete Successful");
 
                 yearTxt.Text = "";
                 semTxt.Text = "";
@@ -911,7 +924,7 @@ namespace TimetableManagementSystem.Students
 
             con.Close();
 
-            MessageBox.Show("Updated Succesfully");
+            MessageBox.Show("Programme Updated Successfully", "Update Successful");
         }
 
         private void prgDltBtn_Click(object sender, EventArgs e)
@@ -938,7 +951,7 @@ namespace TimetableManagementSystem.Students
 
                 con.Close();
 
-                MessageBox.Show("Delete Succesfully");
+                MessageBox.Show("Programme Deleted Successfully", "Delete Successful");
 
                 prgBtn.Text = "";
             }
@@ -1120,7 +1133,7 @@ namespace TimetableManagementSystem.Students
 
                 con.Close();
 
-                MessageBox.Show("Delete Succesfully");
+                MessageBox.Show("Delete Successfully");
 
                 gentedIdNumTxt.Text = "";
             }
@@ -1180,7 +1193,7 @@ namespace TimetableManagementSystem.Students
 
                 con.Close();
 
-                MessageBox.Show("Delete Succesfully");
+                MessageBox.Show("Delete Successfully");
 
                 gentedIdNumTxt.Text = "";
             }
