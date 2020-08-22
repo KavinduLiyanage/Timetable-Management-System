@@ -1015,11 +1015,6 @@ namespace TimetableManagementSystem.Students
                 list.Add(innerResult);
             }
 
-            foreach (string[] res22 in list)
-            {
-                Console.WriteLine(res22[0]);
-            }
-
             String query2 = "Select GenGrpNum from GenGroupNumber";
             con.Open();
 
@@ -1051,11 +1046,6 @@ namespace TimetableManagementSystem.Students
                 list2.Add(reeee);
             }
             allOutcome2 = list2.ToArray();
-            Console.WriteLine();
-            foreach (string res22 in allOutcome2)
-            {
-                Console.WriteLine(res22);
-            }
 
             listView2.View = View.Details;
             listView2.Columns.Add("Name");
@@ -1200,12 +1190,6 @@ namespace TimetableManagementSystem.Students
                 list4.Add(innerResult);
             }
 
-            foreach (string[] res22 in list4)
-            {
-                Console.WriteLine(res22[0]);
-            }
-
-
             String query2 = "select GenSubGrpNum from GenSubGroupNumber";
             con.Open();
 
@@ -1237,12 +1221,6 @@ namespace TimetableManagementSystem.Students
                 list5.Add(reeee);
             }
             allOutcome2 = list5.ToArray();
-            Console.WriteLine();
-            foreach (string res22 in allOutcome2)
-            {
-                Console.WriteLine(res22);
-            }
-
 
             listView1.View = View.Details;
             listView1.Columns.Add("Name");
