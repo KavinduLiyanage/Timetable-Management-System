@@ -1075,7 +1075,7 @@ namespace TimetableManagementSystem.Students
                 if (!found)
                 {
                     list3.Add(listItem);
-                    listView2.Items.Add(new ListViewItem(new string[] { listItem[0] }));
+                    listView2.Items.Add(new ListViewItem(listItem[0]));
                 }
             }
 
@@ -1090,7 +1090,7 @@ namespace TimetableManagementSystem.Students
 
         private void genIdDltBtn_Click(object sender, EventArgs e)
         {
-            /*
+            
             DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dlgResult == DialogResult.Yes)
@@ -1113,11 +1113,9 @@ namespace TimetableManagementSystem.Students
 
                 con.Close();
 
-                MessageBox.Show("Delete Successfully");
-
-                gentedIdNumTxt.Text = "";
+                MessageBox.Show("Generated Group Number Deleted Successfully", "Delete Successful");
             }
-            */
+            
         }
 
         private void genSubIdEditBtn_Click(object sender, EventArgs e)
@@ -1279,20 +1277,16 @@ namespace TimetableManagementSystem.Students
 
         private void genIdData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*
             int index = e.RowIndex;
             if (index > 0)
             {
                 DataGridViewRow selectRow = genIdData.Rows[index];
                 genGrpID1 = Int32.Parse(selectRow.Cells[0].Value.ToString());
-                gentedIdNumTxt.Text = selectRow.Cells[1].Value.ToString();
             }
-            */
         }
 
         private void genSubIdDltBtn_Click(object sender, EventArgs e)
         {
-            /*
             DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dlgResult == DialogResult.Yes)
@@ -1315,24 +1309,19 @@ namespace TimetableManagementSystem.Students
 
                 con.Close();
 
-                MessageBox.Show("Delete Successfully");
-
-                gentedIdNumTxt.Text = "";
+                MessageBox.Show("Sub-Group Deleted Successfully","Delete Successful");
             }
-            */
         }
 
         private void genSubIdData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*
+            
             int index = e.RowIndex;
             if (index > 0)
             {
                 DataGridViewRow selectRow = genSubIdData.Rows[index];
                 genSubGrpID1 = Int32.Parse(selectRow.Cells[0].Value.ToString());
-                gentedSubIdNumTxt.Text = selectRow.Cells[1].Value.ToString();
-            }
-            */
+            }    
         }
     }
 
