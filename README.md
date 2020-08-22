@@ -10,9 +10,9 @@ Desktop application for managing the timetables
   - [Ridmi Ekanayake](https://github.com/Ridmi95)
 
 # Technologies
-*c#
-*.Net Framework
-*Azure
+  * c#
+  * .Net Framework
+  * Azure
 
 License
 ----
