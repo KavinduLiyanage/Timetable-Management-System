@@ -14,6 +14,13 @@ namespace TimetableManagementSystem.Students
     public partial class Students : MetroFramework.Forms.MetroForm
     {
 
+        public string[] allOutcome;
+        public List<string[]> list = new List<string[]>();
+        public string[] allOutcome2;
+        public List<string> list2 = new List<string>();
+        public string[] sortedOutcome;
+        public List<string[]> list3 = new List<string[]>();
+
         int grpNumID;
         int subGrpNumID;
         int YrSemID;
@@ -401,34 +408,15 @@ namespace TimetableManagementSystem.Students
         {
             SqlConnection con = Config.con;
             con.Open();
-
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
-            if (no1 == 2)
+            foreach (string[] allItem in list3)
             {
-                cmd.CommandText = "INSERT INTO [dbo].[GenGroupNumber]([GenGrpNum],[yearSemRef],[programmeRef],[GroupNumber]) VALUES('Y1.S1.DS.01',1,4,1)";
-            }
-            else if (no1 == 3)
-            {
-                cmd.CommandText = "INSERT INTO [dbo].[GenGroupNumber] ([GenGrpNum],[yearSemRef],[programmeRef],[GroupNumber]) VALUES('Y1.S2.DS.01',2,4,1)";
-            }
-            else if (no1 == 4)
-            {
-                cmd.CommandText = "INSERT INTO [dbo].[GenGroupNumber]([GenGrpNum],[yearSemRef],[programmeRef],[GroupNumber]) VALUES('Y1.S2.DS.02',2,4,2)";
-            }
-            else {
-                cmd.CommandText = "INSERT INTO [dbo].[GenGroupNumber]([GenGrpNum],[yearSemRef],[programmeRef],[GroupNumber]) VALUES('Y1.S1.DS.02',1,4,2)";
+                cmd.CommandText = "INSERT INTO [dbo].[GenGroupNumber] ([GenGrpNum],[yearSemRef],[programmeRef],[GroupNumber]) VALUES('" + allItem[0] + "'," + allItem[1] + "," + allItem[2] + "," + allItem[3] + ")";
+                cmd.ExecuteNonQuery();
             }
 
-            cmd.ExecuteNonQuery();
-
-            String query5 = "select id,GenGrpNum from GenGroupNumber";
-
-            SqlDataAdapter sda = new SqlDataAdapter(query5, con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            genIdData.DataSource = dt;
             con.Close();
         }
 
@@ -958,25 +946,148 @@ namespace TimetableManagementSystem.Students
 
         private void genIdBtn_Click(object sender, EventArgs e)
         {
-            if (no1 == 1)
+            String query1 = "Select Year,Semester,Programme,GrpNum,YS.id,P.id,GNo.id from YearSemester YS, Programme P, GroupNumber GNo";
+
+            SqlConnection con = Config.con;
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(query1, con);
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+            con.Close();
+            string res = string.Join(Environment.NewLine,
+                dt.Rows.OfType<DataRow>()
+                .Select(x => string.Join(".", x.ItemArray)));
+
+
+            string[] allList = res.Split('\n');
+
+            string last = allList.Last();
+
+            foreach (string res22 in allList)
             {
-                gentedIdNumTxt.Text = "Y1.S1.DS.01";
-                no1++;
+
+                string reeee;
+                if (res22.Equals(last))
+                {
+                    reeee = res22;
+                }
+                else
+                {
+                    reeee = res22.Substring(0, res22.Length - 1);
+                }
+
+                string[] idList = reeee.Split('.');
+
+
+                int i = 0;
+                string newStr = "";
+                string pID = "";
+                string yrSemID = "";
+                string grpNoId = "";
+                foreach (string id in idList)
+                {
+                    if (i == 0)
+                    {
+                        newStr = newStr + "Y" + id + ".";
+                    }
+                    else if (i == 1)
+                    {
+                        newStr = newStr + "S" + id + ".";
+                    }
+                    else if (i == 2)
+                    {
+                        newStr = newStr + id + ".";
+                    }
+                    else if (i == 3)
+                    {
+                        newStr = newStr + int.Parse(id).ToString("00");
+                    }
+                    else if (i == 4)
+                    {
+                        yrSemID = id;
+                    }
+                    else if (i == 5)
+                    {
+                        pID = id;
+                    }
+                    else if (i == 6)
+                    {
+                        grpNoId = id;
+                    }
+                    i++;
+                }
+                string[] innerResult = { newStr, yrSemID, pID, grpNoId };
+                list.Add(innerResult);
             }
-            else if (no1 == 2) {
-                gentedIdNumTxt.Text = "Y1.S2.DS.01";
-                no1++;
-            }
-            else if (no1 == 3)
+
+            foreach (string[] res22 in list)
             {
-                gentedIdNumTxt.Text = "Y1.S2.DS.02";
-                no1++;
+                Console.WriteLine(res22[0]);
             }
-            else if (no1 == 4)
+
+            String query2 = "Select GenGrpNum from GenGroupNumber";
+            con.Open();
+
+            SqlCommand cmd2 = new SqlCommand(query2, con);
+            DataTable dt2 = new DataTable();
+            SqlDataReader sdr2 = cmd2.ExecuteReader();
+            dt2.Load(sdr2);
+            con.Close();
+            string res2 = string.Join(Environment.NewLine,
+                dt2.Rows.OfType<DataRow>()
+                .Select(x => string.Join(".", x.ItemArray)));
+
+
+            string[] allList2 = res2.Split('\n');
+            string last2 = allList2.Last();
+
+            foreach (string res22 in allList2)
             {
-                gentedIdNumTxt.Text = "Y1.S1.DS.02";
-                no1++;
+
+                string reeee;
+                if (res22.Equals(last2))
+                {
+                    reeee = res22;
+                }
+                else
+                {
+                    reeee = res22.Substring(0, res22.Length - 1);
+                }
+                list2.Add(reeee);
             }
+            allOutcome2 = list2.ToArray();
+            Console.WriteLine();
+            foreach (string res22 in allOutcome2)
+            {
+                Console.WriteLine(res22);
+            }
+
+            listView2.View = View.Details;
+            listView2.Columns.Add("Name");
+
+            listView2.Items.Clear();
+
+            foreach (string[] listItem in list)
+            {
+                Boolean found = false;
+                foreach (string innerItem in list2)
+                {
+                    if (listItem[0].Equals(innerItem))
+                    {
+                        found = true;
+                    }
+                }
+                if (!found)
+                {
+                    list3.Add(listItem);
+                    listView2.Items.Add(new ListViewItem(new string[] { listItem[0] }));
+                }
+            }
+
+            listView2.GridLines = true;
+            listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
         }
 
         private void genIdEditBtn_Click(object sender, EventArgs e)
@@ -986,6 +1097,7 @@ namespace TimetableManagementSystem.Students
 
         private void genIdDltBtn_Click(object sender, EventArgs e)
         {
+            /*
             DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dlgResult == DialogResult.Yes)
@@ -1012,6 +1124,7 @@ namespace TimetableManagementSystem.Students
 
                 gentedIdNumTxt.Text = "";
             }
+            */
         }
 
         private void genSubIdEditBtn_Click(object sender, EventArgs e)
@@ -1021,46 +1134,7 @@ namespace TimetableManagementSystem.Students
 
         private void genSubIdBtn_Click(object sender, EventArgs e)
         {
-            if (no2 == 1)
-            {
-                gentedSubIdNumTxt.Text = "Y1.S1.DS.01.01";
-                no2++;
-            }
-            else if (no2 == 2)
-            {
-                gentedSubIdNumTxt.Text = "Y1.S1.DS.01.02";
-                no2++;
-            }
-            else if (no2 == 3)
-            {
-                gentedSubIdNumTxt.Text = "Y1.S1.DS.02.01";
-                no2++;
-            }
-            else if (no2 == 4)
-            {
-                gentedSubIdNumTxt.Text = "Y1.S1.DS.02.02";
-                no2++;
-            }
-            else if (no2 == 5)
-            {
-                gentedSubIdNumTxt.Text = "Y1.S2.DS.01.01";
-                no2++;
-            }
-            else if (no2 == 6)
-            {
-                gentedSubIdNumTxt.Text = "Y1.S2.DS.01.02";
-                no2++;
-            }
-            else if (no2 == 7)
-            {
-                gentedSubIdNumTxt.Text = "Y1.S2.DS.02.01";
-                no2++;
-            }
-            else if (no2 == 8)
-            {
-                gentedSubIdNumTxt.Text = "Y1.S2.DS.02.02";
-                no2++;
-            }
+            
         }
 
         private void gentedSubIdNumTxt_Click(object sender, EventArgs e)
@@ -1070,6 +1144,7 @@ namespace TimetableManagementSystem.Students
 
         private void genIdData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             int index = e.RowIndex;
             if (index > 0)
             {
@@ -1077,10 +1152,12 @@ namespace TimetableManagementSystem.Students
                 genGrpID1 = Int32.Parse(selectRow.Cells[0].Value.ToString());
                 gentedIdNumTxt.Text = selectRow.Cells[1].Value.ToString();
             }
+            */
         }
 
         private void genSubIdDltBtn_Click(object sender, EventArgs e)
         {
+            /*
             DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dlgResult == DialogResult.Yes)
@@ -1107,10 +1184,12 @@ namespace TimetableManagementSystem.Students
 
                 gentedIdNumTxt.Text = "";
             }
+            */
         }
 
         private void genSubIdData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             int index = e.RowIndex;
             if (index > 0)
             {
@@ -1118,6 +1197,7 @@ namespace TimetableManagementSystem.Students
                 genSubGrpID1 = Int32.Parse(selectRow.Cells[0].Value.ToString());
                 gentedSubIdNumTxt.Text = selectRow.Cells[1].Value.ToString();
             }
+            */
         }
     }
 
