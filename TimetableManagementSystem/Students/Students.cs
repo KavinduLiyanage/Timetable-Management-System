@@ -432,6 +432,13 @@ namespace TimetableManagementSystem.Students
                 cmd.ExecuteNonQuery();
             }
 
+            String query1 = "select id,GenGrpNum from GenGroupNumber";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query1, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            genIdData.DataSource = dt;
+
             con.Close();
 
             MessageBox.Show("IDs Added Successfully", "Added Successful");
