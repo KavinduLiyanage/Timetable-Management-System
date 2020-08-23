@@ -24,7 +24,8 @@ namespace TimetableManagementSystem
 
         }
 
-        //----DashBoard Buttons----
+        //--------------------DashBoard Buttons--------------------
+
         private void btnGetStarted_Click(object sender, EventArgs e)
         {
 
@@ -86,12 +87,37 @@ namespace TimetableManagementSystem
             sessions.ShowDialog();
         }
 
-        //----Header Buttons----
+        private void roomBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void advOpBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genTimetBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        //--------------------Header Buttons--------------------
+
         private void btnHeaderHome_Click(object sender, EventArgs e)
         {
             this.Hide();
             Homepage homepage = new Homepage();
             homepage.ShowDialog();
+        }
+
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
         }
 
         private void btnHeaderRooms_Click(object sender, EventArgs e)
@@ -109,7 +135,10 @@ namespace TimetableManagementSystem
 
         }
 
-        //----Side Nav Buttons----
+
+
+        //--------------------Side Nav Buttons--------------------
+
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -140,7 +169,9 @@ namespace TimetableManagementSystem
 
         private void btnSideNavWorking_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
+            workingDays.ShowDialog();
         }
 
         private void btnSideNavTags_Click(object sender, EventArgs e)
@@ -156,14 +187,5 @@ namespace TimetableManagementSystem
             Locations.Location loc = new Locations.Location();
             loc.ShowDialog();
         }
-
-        private void btnHeaderSessions_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Sessions.Sessions sessions = new Sessions.Sessions();
-            sessions.ShowDialog();
-        }
-
-        
     }
 }

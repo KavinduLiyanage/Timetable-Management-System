@@ -322,7 +322,7 @@ namespace TimetableManagementSystem.Lecturers
             }
         }
 
-        //----Header Buttons----
+        //--------------------Header Buttons--------------------
         private void btnHeaderHome_Click_1(object sender, EventArgs e)
         {
             this.Hide();
@@ -330,7 +330,7 @@ namespace TimetableManagementSystem.Lecturers
             homepage.ShowDialog();
         }
 
-        //----Side Nav Buttons----
+        //--------------------Side Nav Buttons--------------------
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();

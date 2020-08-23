@@ -66,7 +66,7 @@
             this.btnSideNavWorking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavWorking.Image = global::TimetableManagementSystem.Properties.Resources.Sub1_WorkingDaysAndHours;
             this.btnSideNavWorking.Location = new System.Drawing.Point(11, 138);
-            this.btnSideNavWorking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavWorking.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavWorking.Name = "btnSideNavWorking";
             this.btnSideNavWorking.Size = new System.Drawing.Size(80, 70);
             this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -79,7 +79,7 @@
             this.btnSideNavLecturers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavLecturers.Image = global::TimetableManagementSystem.Properties.Resources.Sub2_Lecturers;
             this.btnSideNavLecturers.Location = new System.Drawing.Point(17, 231);
-            this.btnSideNavLecturers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavLecturers.Name = "btnSideNavLecturers";
             this.btnSideNavLecturers.Size = new System.Drawing.Size(70, 50);
             this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -92,7 +92,7 @@
             this.btnSideNavSubjects.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavSubjects.Image = global::TimetableManagementSystem.Properties.Resources.Sub3_Subjects;
             this.btnSideNavSubjects.Location = new System.Drawing.Point(17, 300);
-            this.btnSideNavSubjects.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavSubjects.Name = "btnSideNavSubjects";
             this.btnSideNavSubjects.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -105,7 +105,7 @@
             this.btnSideNavStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavStudents.Image = global::TimetableManagementSystem.Properties.Resources.Sub4_Students;
             this.btnSideNavStudents.Location = new System.Drawing.Point(17, 375);
-            this.btnSideNavStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavStudents.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavStudents.Name = "btnSideNavStudents";
             this.btnSideNavStudents.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -118,7 +118,7 @@
             this.btnSideNavTags.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavTags.Image = global::TimetableManagementSystem.Properties.Resources.Sub5_Tags;
             this.btnSideNavTags.Location = new System.Drawing.Point(17, 450);
-            this.btnSideNavTags.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavTags.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavTags.Name = "btnSideNavTags";
             this.btnSideNavTags.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -131,7 +131,7 @@
             this.btnSideNavLocations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavLocations.Image = global::TimetableManagementSystem.Properties.Resources.Sub6_Locations;
             this.btnSideNavLocations.Location = new System.Drawing.Point(17, 526);
-            this.btnSideNavLocations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavLocations.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavLocations.Name = "btnSideNavLocations";
             this.btnSideNavLocations.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -144,7 +144,7 @@
             this.btnSideNavStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavStatistics.Image = global::TimetableManagementSystem.Properties.Resources.Sub7_Statistics;
             this.btnSideNavStatistics.Location = new System.Drawing.Point(17, 601);
-            this.btnSideNavStatistics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavStatistics.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavStatistics.Name = "btnSideNavStatistics";
             this.btnSideNavStatistics.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -159,7 +159,7 @@
             this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderAdvanced.Location = new System.Drawing.Point(784, 12);
-            this.btnHeaderAdvanced.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderAdvanced.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
             this.btnHeaderAdvanced.Size = new System.Drawing.Size(153, 49);
             this.btnHeaderAdvanced.TabIndex = 41;
@@ -174,7 +174,7 @@
             this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderRooms.Location = new System.Drawing.Point(623, 12);
-            this.btnHeaderRooms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderRooms.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderRooms.Name = "btnHeaderRooms";
             this.btnHeaderRooms.Size = new System.Drawing.Size(112, 49);
             this.btnHeaderRooms.TabIndex = 40;
@@ -189,7 +189,7 @@
             this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderSessions.Location = new System.Drawing.Point(436, 12);
-            this.btnHeaderSessions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderSessions.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderSessions.Name = "btnHeaderSessions";
             this.btnHeaderSessions.Size = new System.Drawing.Size(137, 49);
             this.btnHeaderSessions.TabIndex = 39;
@@ -204,7 +204,7 @@
             this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderGenerate.Location = new System.Drawing.Point(987, 12);
-            this.btnHeaderGenerate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderGenerate.Name = "btnHeaderGenerate";
             this.btnHeaderGenerate.Size = new System.Drawing.Size(149, 49);
             this.btnHeaderGenerate.TabIndex = 38;
@@ -219,7 +219,7 @@
             this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderHome.Location = new System.Drawing.Point(281, 12);
-            this.btnHeaderHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderHome.Name = "btnHeaderHome";
             this.btnHeaderHome.Size = new System.Drawing.Size(105, 49);
             this.btnHeaderHome.TabIndex = 37;
@@ -232,7 +232,7 @@
             this.genTimetBtn.ActiveControl = null;
             this.genTimetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.genTimetBtn.Location = new System.Drawing.Point(940, 468);
-            this.genTimetBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.genTimetBtn.Margin = new System.Windows.Forms.Padding(4);
             this.genTimetBtn.Name = "genTimetBtn";
             this.genTimetBtn.Size = new System.Drawing.Size(200, 123);
             this.genTimetBtn.TabIndex = 77;
@@ -244,13 +244,14 @@
             this.genTimetBtn.UseCustomForeColor = true;
             this.genTimetBtn.UseSelectable = true;
             this.genTimetBtn.UseTileImage = true;
+            this.genTimetBtn.Click += new System.EventHandler(this.genTimetBtn_Click);
             // 
             // roomBtn
             // 
             this.roomBtn.ActiveControl = null;
             this.roomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.roomBtn.Location = new System.Drawing.Point(500, 468);
-            this.roomBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roomBtn.Margin = new System.Windows.Forms.Padding(4);
             this.roomBtn.Name = "roomBtn";
             this.roomBtn.Size = new System.Drawing.Size(200, 123);
             this.roomBtn.TabIndex = 76;
@@ -262,13 +263,14 @@
             this.roomBtn.UseCustomForeColor = true;
             this.roomBtn.UseSelectable = true;
             this.roomBtn.UseTileImage = true;
+            this.roomBtn.Click += new System.EventHandler(this.roomBtn_Click);
             // 
             // advOpBtn
             // 
             this.advOpBtn.ActiveControl = null;
             this.advOpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.advOpBtn.Location = new System.Drawing.Point(720, 468);
-            this.advOpBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.advOpBtn.Margin = new System.Windows.Forms.Padding(4);
             this.advOpBtn.Name = "advOpBtn";
             this.advOpBtn.Size = new System.Drawing.Size(200, 123);
             this.advOpBtn.TabIndex = 75;
@@ -280,13 +282,14 @@
             this.advOpBtn.UseCustomForeColor = true;
             this.advOpBtn.UseSelectable = true;
             this.advOpBtn.UseTileImage = true;
+            this.advOpBtn.Click += new System.EventHandler(this.advOpBtn_Click);
             // 
             // sessionBtn
             // 
             this.sessionBtn.ActiveControl = null;
             this.sessionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.sessionBtn.Location = new System.Drawing.Point(280, 468);
-            this.sessionBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sessionBtn.Margin = new System.Windows.Forms.Padding(4);
             this.sessionBtn.Name = "sessionBtn";
             this.sessionBtn.Size = new System.Drawing.Size(200, 123);
             this.sessionBtn.TabIndex = 74;
@@ -305,7 +308,7 @@
             this.statBtn.ActiveControl = null;
             this.statBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.statBtn.Location = new System.Drawing.Point(940, 330);
-            this.statBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.statBtn.Margin = new System.Windows.Forms.Padding(4);
             this.statBtn.Name = "statBtn";
             this.statBtn.Size = new System.Drawing.Size(200, 123);
             this.statBtn.TabIndex = 73;
@@ -324,7 +327,7 @@
             this.locBtn.ActiveControl = null;
             this.locBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.locBtn.Location = new System.Drawing.Point(720, 330);
-            this.locBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.locBtn.Margin = new System.Windows.Forms.Padding(4);
             this.locBtn.Name = "locBtn";
             this.locBtn.Size = new System.Drawing.Size(200, 123);
             this.locBtn.TabIndex = 72;
@@ -343,7 +346,7 @@
             this.tagBtn.ActiveControl = null;
             this.tagBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.tagBtn.Location = new System.Drawing.Point(500, 330);
-            this.tagBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tagBtn.Margin = new System.Windows.Forms.Padding(4);
             this.tagBtn.Name = "tagBtn";
             this.tagBtn.Size = new System.Drawing.Size(200, 123);
             this.tagBtn.TabIndex = 71;
@@ -362,7 +365,7 @@
             this.stuBtn.ActiveControl = null;
             this.stuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.stuBtn.Location = new System.Drawing.Point(280, 330);
-            this.stuBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stuBtn.Margin = new System.Windows.Forms.Padding(4);
             this.stuBtn.Name = "stuBtn";
             this.stuBtn.Size = new System.Drawing.Size(200, 123);
             this.stuBtn.TabIndex = 70;
@@ -381,7 +384,7 @@
             this.btnGetStarted.ActiveControl = null;
             this.btnGetStarted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.btnGetStarted.Location = new System.Drawing.Point(280, 192);
-            this.btnGetStarted.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGetStarted.Margin = new System.Windows.Forms.Padding(4);
             this.btnGetStarted.Name = "btnGetStarted";
             this.btnGetStarted.Size = new System.Drawing.Size(200, 123);
             this.btnGetStarted.TabIndex = 69;
@@ -400,7 +403,7 @@
             this.wdhBtn.ActiveControl = null;
             this.wdhBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.wdhBtn.Location = new System.Drawing.Point(500, 192);
-            this.wdhBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wdhBtn.Margin = new System.Windows.Forms.Padding(4);
             this.wdhBtn.Name = "wdhBtn";
             this.wdhBtn.Size = new System.Drawing.Size(200, 123);
             this.wdhBtn.TabIndex = 68;
@@ -420,7 +423,7 @@
             this.subBtn.ActiveControl = null;
             this.subBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.subBtn.Location = new System.Drawing.Point(940, 192);
-            this.subBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subBtn.Margin = new System.Windows.Forms.Padding(4);
             this.subBtn.Name = "subBtn";
             this.subBtn.Size = new System.Drawing.Size(200, 123);
             this.subBtn.TabIndex = 67;
@@ -439,7 +442,7 @@
             this.lecBtn.ActiveControl = null;
             this.lecBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.lecBtn.Location = new System.Drawing.Point(720, 192);
-            this.lecBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lecBtn.Margin = new System.Windows.Forms.Padding(4);
             this.lecBtn.Name = "lecBtn";
             this.lecBtn.Size = new System.Drawing.Size(200, 123);
             this.lecBtn.TabIndex = 66;
