@@ -92,6 +92,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sessions\Sessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sessions\Sessions.Designer.cs">
+      <DependentUpon>Sessions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Statistics\Statistics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sessions\Sessions.resx">
+      <DependentUpon>Sessions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Statistics\Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
