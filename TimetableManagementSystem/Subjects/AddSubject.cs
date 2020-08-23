@@ -139,7 +139,7 @@ namespace TimetableManagementSystem.Subjects
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("Subject Details Updated", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Subject Details Updated", "Successfully");
 
                 GetSubjects();
 
@@ -182,7 +182,7 @@ namespace TimetableManagementSystem.Subjects
                     cmd.ExecuteNonQuery();
                     con.Close();
 
-                    MessageBox.Show("Subject is Deleted", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Subject is Deleted", "Successfully");
 
                     GetSubjects();
 

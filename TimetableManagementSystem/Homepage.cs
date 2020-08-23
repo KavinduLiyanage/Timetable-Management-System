@@ -79,17 +79,19 @@ namespace TimetableManagementSystem
             stat.ShowDialog();
         }
 
+        private void sessionBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
+        }
+
         //----Header Buttons----
         private void btnHeaderHome_Click(object sender, EventArgs e)
         {
             this.Hide();
             Homepage homepage = new Homepage();
             homepage.ShowDialog();
-        }
-
-        private void btnHeaderSessions_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnHeaderRooms_Click(object sender, EventArgs e)
@@ -153,6 +155,15 @@ namespace TimetableManagementSystem
             this.Hide();
             Locations.Location loc = new Locations.Location();
             loc.ShowDialog();
-        }   
+        }
+
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
+        }
+
+        
     }
 }

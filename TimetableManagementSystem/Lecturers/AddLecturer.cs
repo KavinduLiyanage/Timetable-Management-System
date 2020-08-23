@@ -190,7 +190,7 @@ namespace TimetableManagementSystem.Lecturers
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("Lecturer Details Updated", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lecturer Details Updated", "Successfully");
 
                 GetLecturers();
 
@@ -231,7 +231,7 @@ namespace TimetableManagementSystem.Lecturers
                     cmd.ExecuteNonQuery();
                     con.Close();
 
-                    MessageBox.Show("Lecturer is Deleted", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Lecturer is Deleted", "Successfully");
 
                     GetLecturers();
 

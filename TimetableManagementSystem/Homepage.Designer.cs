@@ -65,7 +65,8 @@
             // 
             this.btnSideNavWorking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavWorking.Image = global::TimetableManagementSystem.Properties.Resources.Sub1_WorkingDaysAndHours;
-            this.btnSideNavWorking.Location = new System.Drawing.Point(8, 112);
+            this.btnSideNavWorking.Location = new System.Drawing.Point(11, 138);
+            this.btnSideNavWorking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSideNavWorking.Name = "btnSideNavWorking";
             this.btnSideNavWorking.Size = new System.Drawing.Size(80, 70);
             this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -77,7 +78,8 @@
             // 
             this.btnSideNavLecturers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavLecturers.Image = global::TimetableManagementSystem.Properties.Resources.Sub2_Lecturers;
-            this.btnSideNavLecturers.Location = new System.Drawing.Point(13, 188);
+            this.btnSideNavLecturers.Location = new System.Drawing.Point(17, 231);
+            this.btnSideNavLecturers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSideNavLecturers.Name = "btnSideNavLecturers";
             this.btnSideNavLecturers.Size = new System.Drawing.Size(70, 50);
             this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -89,7 +91,8 @@
             // 
             this.btnSideNavSubjects.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavSubjects.Image = global::TimetableManagementSystem.Properties.Resources.Sub3_Subjects;
-            this.btnSideNavSubjects.Location = new System.Drawing.Point(13, 244);
+            this.btnSideNavSubjects.Location = new System.Drawing.Point(17, 300);
+            this.btnSideNavSubjects.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSideNavSubjects.Name = "btnSideNavSubjects";
             this.btnSideNavSubjects.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -101,7 +104,8 @@
             // 
             this.btnSideNavStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavStudents.Image = global::TimetableManagementSystem.Properties.Resources.Sub4_Students;
-            this.btnSideNavStudents.Location = new System.Drawing.Point(13, 305);
+            this.btnSideNavStudents.Location = new System.Drawing.Point(17, 375);
+            this.btnSideNavStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSideNavStudents.Name = "btnSideNavStudents";
             this.btnSideNavStudents.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -113,7 +117,8 @@
             // 
             this.btnSideNavTags.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavTags.Image = global::TimetableManagementSystem.Properties.Resources.Sub5_Tags;
-            this.btnSideNavTags.Location = new System.Drawing.Point(13, 366);
+            this.btnSideNavTags.Location = new System.Drawing.Point(17, 450);
+            this.btnSideNavTags.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSideNavTags.Name = "btnSideNavTags";
             this.btnSideNavTags.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -125,7 +130,8 @@
             // 
             this.btnSideNavLocations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavLocations.Image = global::TimetableManagementSystem.Properties.Resources.Sub6_Locations;
-            this.btnSideNavLocations.Location = new System.Drawing.Point(13, 427);
+            this.btnSideNavLocations.Location = new System.Drawing.Point(17, 526);
+            this.btnSideNavLocations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSideNavLocations.Name = "btnSideNavLocations";
             this.btnSideNavLocations.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -137,7 +143,8 @@
             // 
             this.btnSideNavStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavStatistics.Image = global::TimetableManagementSystem.Properties.Resources.Sub7_Statistics;
-            this.btnSideNavStatistics.Location = new System.Drawing.Point(13, 488);
+            this.btnSideNavStatistics.Location = new System.Drawing.Point(17, 601);
+            this.btnSideNavStatistics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSideNavStatistics.Name = "btnSideNavStatistics";
             this.btnSideNavStatistics.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -151,9 +158,10 @@
             this.btnHeaderAdvanced.FlatAppearance.BorderSize = 0;
             this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHeaderAdvanced.Location = new System.Drawing.Point(588, 10);
+            this.btnHeaderAdvanced.Location = new System.Drawing.Point(784, 12);
+            this.btnHeaderAdvanced.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
-            this.btnHeaderAdvanced.Size = new System.Drawing.Size(115, 40);
+            this.btnHeaderAdvanced.Size = new System.Drawing.Size(153, 49);
             this.btnHeaderAdvanced.TabIndex = 41;
             this.btnHeaderAdvanced.Text = "Advanced";
             this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
@@ -165,9 +173,10 @@
             this.btnHeaderRooms.FlatAppearance.BorderSize = 0;
             this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHeaderRooms.Location = new System.Drawing.Point(467, 10);
+            this.btnHeaderRooms.Location = new System.Drawing.Point(623, 12);
+            this.btnHeaderRooms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHeaderRooms.Name = "btnHeaderRooms";
-            this.btnHeaderRooms.Size = new System.Drawing.Size(84, 40);
+            this.btnHeaderRooms.Size = new System.Drawing.Size(112, 49);
             this.btnHeaderRooms.TabIndex = 40;
             this.btnHeaderRooms.Text = "Rooms";
             this.btnHeaderRooms.UseVisualStyleBackColor = false;
@@ -179,9 +188,10 @@
             this.btnHeaderSessions.FlatAppearance.BorderSize = 0;
             this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHeaderSessions.Location = new System.Drawing.Point(327, 10);
+            this.btnHeaderSessions.Location = new System.Drawing.Point(436, 12);
+            this.btnHeaderSessions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHeaderSessions.Name = "btnHeaderSessions";
-            this.btnHeaderSessions.Size = new System.Drawing.Size(103, 40);
+            this.btnHeaderSessions.Size = new System.Drawing.Size(137, 49);
             this.btnHeaderSessions.TabIndex = 39;
             this.btnHeaderSessions.Text = "Sessions";
             this.btnHeaderSessions.UseVisualStyleBackColor = false;
@@ -193,9 +203,10 @@
             this.btnHeaderGenerate.FlatAppearance.BorderSize = 0;
             this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHeaderGenerate.Location = new System.Drawing.Point(740, 10);
+            this.btnHeaderGenerate.Location = new System.Drawing.Point(987, 12);
+            this.btnHeaderGenerate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHeaderGenerate.Name = "btnHeaderGenerate";
-            this.btnHeaderGenerate.Size = new System.Drawing.Size(112, 40);
+            this.btnHeaderGenerate.Size = new System.Drawing.Size(149, 49);
             this.btnHeaderGenerate.TabIndex = 38;
             this.btnHeaderGenerate.Text = "Generate";
             this.btnHeaderGenerate.UseVisualStyleBackColor = false;
@@ -207,9 +218,10 @@
             this.btnHeaderHome.FlatAppearance.BorderSize = 0;
             this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHeaderHome.Location = new System.Drawing.Point(211, 10);
+            this.btnHeaderHome.Location = new System.Drawing.Point(281, 12);
+            this.btnHeaderHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHeaderHome.Name = "btnHeaderHome";
-            this.btnHeaderHome.Size = new System.Drawing.Size(79, 40);
+            this.btnHeaderHome.Size = new System.Drawing.Size(105, 49);
             this.btnHeaderHome.TabIndex = 37;
             this.btnHeaderHome.Text = "Home";
             this.btnHeaderHome.UseVisualStyleBackColor = false;
@@ -219,9 +231,10 @@
             // 
             this.genTimetBtn.ActiveControl = null;
             this.genTimetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.genTimetBtn.Location = new System.Drawing.Point(705, 380);
+            this.genTimetBtn.Location = new System.Drawing.Point(940, 468);
+            this.genTimetBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.genTimetBtn.Name = "genTimetBtn";
-            this.genTimetBtn.Size = new System.Drawing.Size(150, 100);
+            this.genTimetBtn.Size = new System.Drawing.Size(200, 123);
             this.genTimetBtn.TabIndex = 77;
             this.genTimetBtn.Text = "Generate Timetables";
             this.genTimetBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D11_Generate;
@@ -236,9 +249,10 @@
             // 
             this.roomBtn.ActiveControl = null;
             this.roomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.roomBtn.Location = new System.Drawing.Point(375, 380);
+            this.roomBtn.Location = new System.Drawing.Point(500, 468);
+            this.roomBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.roomBtn.Name = "roomBtn";
-            this.roomBtn.Size = new System.Drawing.Size(150, 100);
+            this.roomBtn.Size = new System.Drawing.Size(200, 123);
             this.roomBtn.TabIndex = 76;
             this.roomBtn.Text = "Rooms";
             this.roomBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D9_Rooms;
@@ -253,9 +267,10 @@
             // 
             this.advOpBtn.ActiveControl = null;
             this.advOpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.advOpBtn.Location = new System.Drawing.Point(540, 380);
+            this.advOpBtn.Location = new System.Drawing.Point(720, 468);
+            this.advOpBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.advOpBtn.Name = "advOpBtn";
-            this.advOpBtn.Size = new System.Drawing.Size(150, 100);
+            this.advOpBtn.Size = new System.Drawing.Size(200, 123);
             this.advOpBtn.TabIndex = 75;
             this.advOpBtn.Text = "Advanced Options";
             this.advOpBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D10_Advanced;
@@ -270,9 +285,10 @@
             // 
             this.sessionBtn.ActiveControl = null;
             this.sessionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.sessionBtn.Location = new System.Drawing.Point(210, 380);
+            this.sessionBtn.Location = new System.Drawing.Point(280, 468);
+            this.sessionBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sessionBtn.Name = "sessionBtn";
-            this.sessionBtn.Size = new System.Drawing.Size(150, 100);
+            this.sessionBtn.Size = new System.Drawing.Size(200, 123);
             this.sessionBtn.TabIndex = 74;
             this.sessionBtn.Text = "Sessions";
             this.sessionBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D8_Sessions;
@@ -282,14 +298,16 @@
             this.sessionBtn.UseCustomForeColor = true;
             this.sessionBtn.UseSelectable = true;
             this.sessionBtn.UseTileImage = true;
+            this.sessionBtn.Click += new System.EventHandler(this.sessionBtn_Click);
             // 
             // statBtn
             // 
             this.statBtn.ActiveControl = null;
             this.statBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.statBtn.Location = new System.Drawing.Point(705, 268);
+            this.statBtn.Location = new System.Drawing.Point(940, 330);
+            this.statBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.statBtn.Name = "statBtn";
-            this.statBtn.Size = new System.Drawing.Size(150, 100);
+            this.statBtn.Size = new System.Drawing.Size(200, 123);
             this.statBtn.TabIndex = 73;
             this.statBtn.Text = "Statistics";
             this.statBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D7_Statistics;
@@ -305,9 +323,10 @@
             // 
             this.locBtn.ActiveControl = null;
             this.locBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.locBtn.Location = new System.Drawing.Point(540, 268);
+            this.locBtn.Location = new System.Drawing.Point(720, 330);
+            this.locBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.locBtn.Name = "locBtn";
-            this.locBtn.Size = new System.Drawing.Size(150, 100);
+            this.locBtn.Size = new System.Drawing.Size(200, 123);
             this.locBtn.TabIndex = 72;
             this.locBtn.Text = "Locations";
             this.locBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D6_Locations;
@@ -323,9 +342,10 @@
             // 
             this.tagBtn.ActiveControl = null;
             this.tagBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.tagBtn.Location = new System.Drawing.Point(375, 268);
+            this.tagBtn.Location = new System.Drawing.Point(500, 330);
+            this.tagBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tagBtn.Name = "tagBtn";
-            this.tagBtn.Size = new System.Drawing.Size(150, 100);
+            this.tagBtn.Size = new System.Drawing.Size(200, 123);
             this.tagBtn.TabIndex = 71;
             this.tagBtn.Text = "Tags";
             this.tagBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D5_Tags;
@@ -341,9 +361,10 @@
             // 
             this.stuBtn.ActiveControl = null;
             this.stuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.stuBtn.Location = new System.Drawing.Point(210, 268);
+            this.stuBtn.Location = new System.Drawing.Point(280, 330);
+            this.stuBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stuBtn.Name = "stuBtn";
-            this.stuBtn.Size = new System.Drawing.Size(150, 100);
+            this.stuBtn.Size = new System.Drawing.Size(200, 123);
             this.stuBtn.TabIndex = 70;
             this.stuBtn.Text = "Students";
             this.stuBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D4_Students;
@@ -359,9 +380,10 @@
             // 
             this.btnGetStarted.ActiveControl = null;
             this.btnGetStarted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnGetStarted.Location = new System.Drawing.Point(210, 156);
+            this.btnGetStarted.Location = new System.Drawing.Point(280, 192);
+            this.btnGetStarted.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGetStarted.Name = "btnGetStarted";
-            this.btnGetStarted.Size = new System.Drawing.Size(150, 100);
+            this.btnGetStarted.Size = new System.Drawing.Size(200, 123);
             this.btnGetStarted.TabIndex = 69;
             this.btnGetStarted.Text = "Get Started";
             this.btnGetStarted.TileImage = global::TimetableManagementSystem.Properties.Resources.D14_Getting_Start;
@@ -377,9 +399,10 @@
             // 
             this.wdhBtn.ActiveControl = null;
             this.wdhBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.wdhBtn.Location = new System.Drawing.Point(375, 156);
+            this.wdhBtn.Location = new System.Drawing.Point(500, 192);
+            this.wdhBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.wdhBtn.Name = "wdhBtn";
-            this.wdhBtn.Size = new System.Drawing.Size(150, 100);
+            this.wdhBtn.Size = new System.Drawing.Size(200, 123);
             this.wdhBtn.TabIndex = 68;
             this.wdhBtn.Text = "Working Days & Hours";
             this.wdhBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -396,9 +419,10 @@
             // 
             this.subBtn.ActiveControl = null;
             this.subBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.subBtn.Location = new System.Drawing.Point(705, 156);
+            this.subBtn.Location = new System.Drawing.Point(940, 192);
+            this.subBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.subBtn.Name = "subBtn";
-            this.subBtn.Size = new System.Drawing.Size(150, 100);
+            this.subBtn.Size = new System.Drawing.Size(200, 123);
             this.subBtn.TabIndex = 67;
             this.subBtn.Text = "Subjects";
             this.subBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D3_Subjects;
@@ -414,9 +438,10 @@
             // 
             this.lecBtn.ActiveControl = null;
             this.lecBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.lecBtn.Location = new System.Drawing.Point(540, 156);
+            this.lecBtn.Location = new System.Drawing.Point(720, 192);
+            this.lecBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lecBtn.Name = "lecBtn";
-            this.lecBtn.Size = new System.Drawing.Size(150, 100);
+            this.lecBtn.Size = new System.Drawing.Size(200, 123);
             this.lecBtn.TabIndex = 66;
             this.lecBtn.Text = "Lecturers";
             this.lecBtn.TileImage = global::TimetableManagementSystem.Properties.Resources.D2_Lecturers;
@@ -431,11 +456,11 @@
             // Homepage
             // 
             this.ApplyImageInvert = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
-            this.ClientSize = new System.Drawing.Size(960, 600);
+            this.ClientSize = new System.Drawing.Size(1280, 738);
             this.Controls.Add(this.genTimetBtn);
             this.Controls.Add(this.roomBtn);
             this.Controls.Add(this.advOpBtn);
@@ -460,10 +485,10 @@
             this.Controls.Add(this.btnSideNavSubjects);
             this.Controls.Add(this.btnSideNavLecturers);
             this.Controls.Add(this.btnSideNavWorking);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Homepage";
-            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Resizable = false;
             this.Text = "Homepage";
             this.Load += new System.EventHandler(this.Homepage_Load);
