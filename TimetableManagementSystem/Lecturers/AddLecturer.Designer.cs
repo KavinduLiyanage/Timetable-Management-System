@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
             this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
             this.btnSideNavTags = new System.Windows.Forms.PictureBox();
@@ -45,6 +45,13 @@
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.txtLecSearch = new MetroFramework.Controls.MetroTextBox();
             this.dgvLectures = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecFaculty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecCenter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LecBuilding = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.tabPageLecAdd = new System.Windows.Forms.TabPage();
             this.cmbLecDepartment = new MetroFramework.Controls.MetroComboBox();
@@ -83,13 +90,6 @@
             this.btnHeaderSessions = new System.Windows.Forms.Button();
             this.btnHeaderGenerate = new System.Windows.Forms.Button();
             this.btnHeaderHome = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecFaculty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecCenter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LecBuilding = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -186,6 +186,7 @@
             this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnSideNavWorking.TabIndex = 19;
             this.btnSideNavWorking.TabStop = false;
+            this.btnSideNavWorking.Click += new System.EventHandler(this.btnSideNavWorking_Click);
             // 
             // tabControlLecturers
             // 
@@ -342,14 +343,14 @@
             // dgvLectures
             // 
             this.dgvLectures.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLectures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLectures.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -367,6 +368,67 @@
             this.dgvLectures.Size = new System.Drawing.Size(706, 312);
             this.dgvLectures.TabIndex = 66;
             this.dgvLectures.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLectures_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "LecturerID";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 50;
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // LecName
+            // 
+            this.LecName.DataPropertyName = "LecName";
+            this.LecName.HeaderText = "Name";
+            this.LecName.MinimumWidth = 150;
+            this.LecName.Name = "LecName";
+            this.LecName.ReadOnly = true;
+            this.LecName.Width = 150;
+            // 
+            // LecFaculty
+            // 
+            this.LecFaculty.DataPropertyName = "LecFaculty";
+            this.LecFaculty.HeaderText = "Faculty";
+            this.LecFaculty.MinimumWidth = 6;
+            this.LecFaculty.Name = "LecFaculty";
+            this.LecFaculty.ReadOnly = true;
+            this.LecFaculty.Width = 120;
+            // 
+            // LecDepartment
+            // 
+            this.LecDepartment.DataPropertyName = "LecDepartment";
+            this.LecDepartment.HeaderText = "Department";
+            this.LecDepartment.MinimumWidth = 80;
+            this.LecDepartment.Name = "LecDepartment";
+            this.LecDepartment.ReadOnly = true;
+            this.LecDepartment.Width = 80;
+            // 
+            // LecCenter
+            // 
+            this.LecCenter.DataPropertyName = "LecCenter";
+            this.LecCenter.HeaderText = "Center";
+            this.LecCenter.MinimumWidth = 80;
+            this.LecCenter.Name = "LecCenter";
+            this.LecCenter.ReadOnly = true;
+            this.LecCenter.Width = 80;
+            // 
+            // LecLevel
+            // 
+            this.LecLevel.DataPropertyName = "LecLevel";
+            this.LecLevel.HeaderText = "Level";
+            this.LecLevel.MinimumWidth = 130;
+            this.LecLevel.Name = "LecLevel";
+            this.LecLevel.ReadOnly = true;
+            this.LecLevel.Width = 130;
+            // 
+            // LecBuilding
+            // 
+            this.LecBuilding.DataPropertyName = "LecBuilding";
+            this.LecBuilding.HeaderText = "Building";
+            this.LecBuilding.MinimumWidth = 6;
+            this.LecBuilding.Name = "LecBuilding";
+            this.LecBuilding.Width = 125;
             // 
             // metroLabel15
             // 
@@ -946,6 +1008,7 @@
             this.btnHeaderSessions.TabIndex = 44;
             this.btnHeaderSessions.Text = "Sessions";
             this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            this.btnHeaderSessions.Click += new System.EventHandler(this.btnHeaderSessions_Click);
             // 
             // btnHeaderGenerate
             // 
@@ -973,67 +1036,6 @@
             this.btnHeaderHome.Text = "Home";
             this.btnHeaderHome.UseVisualStyleBackColor = false;
             this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click_1);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "LecturerID";
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 50;
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // LecName
-            // 
-            this.LecName.DataPropertyName = "LecName";
-            this.LecName.HeaderText = "Name";
-            this.LecName.MinimumWidth = 150;
-            this.LecName.Name = "LecName";
-            this.LecName.ReadOnly = true;
-            this.LecName.Width = 150;
-            // 
-            // LecFaculty
-            // 
-            this.LecFaculty.DataPropertyName = "LecFaculty";
-            this.LecFaculty.HeaderText = "Faculty";
-            this.LecFaculty.MinimumWidth = 6;
-            this.LecFaculty.Name = "LecFaculty";
-            this.LecFaculty.ReadOnly = true;
-            this.LecFaculty.Width = 120;
-            // 
-            // LecDepartment
-            // 
-            this.LecDepartment.DataPropertyName = "LecDepartment";
-            this.LecDepartment.HeaderText = "Department";
-            this.LecDepartment.MinimumWidth = 80;
-            this.LecDepartment.Name = "LecDepartment";
-            this.LecDepartment.ReadOnly = true;
-            this.LecDepartment.Width = 80;
-            // 
-            // LecCenter
-            // 
-            this.LecCenter.DataPropertyName = "LecCenter";
-            this.LecCenter.HeaderText = "Center";
-            this.LecCenter.MinimumWidth = 80;
-            this.LecCenter.Name = "LecCenter";
-            this.LecCenter.ReadOnly = true;
-            this.LecCenter.Width = 80;
-            // 
-            // LecLevel
-            // 
-            this.LecLevel.DataPropertyName = "LecLevel";
-            this.LecLevel.HeaderText = "Level";
-            this.LecLevel.MinimumWidth = 130;
-            this.LecLevel.Name = "LecLevel";
-            this.LecLevel.ReadOnly = true;
-            this.LecLevel.Width = 130;
-            // 
-            // LecBuilding
-            // 
-            this.LecBuilding.DataPropertyName = "LecBuilding";
-            this.LecBuilding.HeaderText = "Building";
-            this.LecBuilding.MinimumWidth = 6;
-            this.LecBuilding.Name = "LecBuilding";
-            this.LecBuilding.Width = 125;
             // 
             // AddLecturer
             // 

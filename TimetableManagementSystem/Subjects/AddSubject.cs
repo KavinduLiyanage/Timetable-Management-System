@@ -199,6 +199,36 @@ namespace TimetableManagementSystem.Subjects
 
         }
 
+        private void txtSubSearch_TextChanged(object sender, EventArgs e)
+        {
+            cmbSubFilterYear.SelectedIndex = -1;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Subjects where SubName like '%" + txtSubSearch.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvSubjects.DataSource = dt;
+            con.Close();
+        }
+
+        private void cmbSubFilterYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSubSearch.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Subjects where SubYear like '%" + cmbSubFilterYear.Text + "' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvSubjects.DataSource = dt;
+            con.Close();
+        }
+
         //--------------------Header Buttons--------------------
         private void btnHeaderHome_Click(object sender, EventArgs e)
         {
@@ -207,7 +237,21 @@ namespace TimetableManagementSystem.Subjects
             homepage.ShowDialog();
         }
 
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
+        }
+
         //--------------------Side Nav Buttons--------------------
+        private void btnSideNavWorking_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
+            workingDays.ShowDialog();
+        }
+
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -248,36 +292,6 @@ namespace TimetableManagementSystem.Subjects
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
-        }
-
-        private void txtSubSearch_TextChanged(object sender, EventArgs e)
-        {
-            cmbSubFilterYear.SelectedIndex = -1;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Subjects where SubName like '%" + txtSubSearch.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvSubjects.DataSource = dt;
-            con.Close();
-        }
-
-        private void cmbSubFilterYear_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtSubSearch.Clear();
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Subjects where SubYear like '%" + cmbSubFilterYear.Text + "' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvSubjects.DataSource = dt;
-            con.Close();
         }
     }
 }

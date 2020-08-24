@@ -322,6 +322,54 @@ namespace TimetableManagementSystem.Lecturers
             }
         }
 
+        private void txtLecSearch_TextChanged(object sender, EventArgs e)
+        {
+            cmbLecFilterFaculty.SelectedIndex = -1;
+            cmbLecFilterLevel.SelectedIndex = -1;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Lecturers where LecName like '%" + txtLecSearch.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvLectures.DataSource = dt;
+            con.Close();
+        }
+
+        private void cmbLecFilterFaculty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtLecSearch.Clear();
+            cmbLecFilterLevel.SelectedIndex = -1;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Lecturers where LecFaculty like '%" + cmbLecFilterFaculty.Text + "' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvLectures.DataSource = dt;
+            con.Close();
+        }
+
+        private void cmbLecFilterLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtLecSearch.Clear();
+            cmbLecFilterFaculty.SelectedIndex = -1;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Lecturers where LecLevel like '%" + cmbLecFilterLevel.Text + "' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvLectures.DataSource = dt;
+            con.Close();
+        }
+
         //--------------------Header Buttons--------------------
         private void btnHeaderHome_Click_1(object sender, EventArgs e)
         {
@@ -330,7 +378,20 @@ namespace TimetableManagementSystem.Lecturers
             homepage.ShowDialog();
         }
 
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
+        }
+
         //--------------------Side Nav Buttons--------------------
+        private void btnSideNavWorking_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
+            workingDays.ShowDialog();
+        }
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -371,58 +432,6 @@ namespace TimetableManagementSystem.Lecturers
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
-        }
-
-        private void txtLecSearch_TextChanged(object sender, EventArgs e)
-        {
-            cmbLecFilterFaculty.SelectedIndex = -1;
-            cmbLecFilterLevel.SelectedIndex = -1;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Lecturers where LecName like '%" + txtLecSearch.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvLectures.DataSource = dt;
-            con.Close();
-            
-
-        }
-
-        private void cmbLecFilterFaculty_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtLecSearch.Clear();
-            cmbLecFilterLevel.SelectedIndex = -1;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Lecturers where LecFaculty like '%" + cmbLecFilterFaculty.Text + "' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvLectures.DataSource = dt;
-            con.Close();
-            
-        }
-
-        private void cmbLecFilterLevel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtLecSearch.Clear();
-            cmbLecFilterFaculty.SelectedIndex = -1;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Lecturers where LecLevel like '%" + cmbLecFilterLevel.Text + "' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvLectures.DataSource = dt;
-            con.Close();
-            
         }
     }
 }
