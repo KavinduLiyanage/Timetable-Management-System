@@ -144,6 +144,13 @@ namespace TimetableManagementSystem.Students
             sda.Fill(dt);
             yrSemData.DataSource = dt;
 
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
+
             con.Close();
 
             MessageBox.Show("Year and Semester Added Successfully", "Added Successful");
@@ -164,6 +171,13 @@ namespace TimetableManagementSystem.Students
             DataTable dt = new DataTable();
             sda.Fill(dt);
             prgData.DataSource = dt;
+
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
 
             con.Close();
 
@@ -186,6 +200,13 @@ namespace TimetableManagementSystem.Students
             sda.Fill(dt);
             grpNumData.DataSource = dt;
 
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
+
 
             con.Close();
 
@@ -207,6 +228,13 @@ namespace TimetableManagementSystem.Students
             DataTable dt = new DataTable();
             sda.Fill(dt);
             subGrpNumData.DataSource = dt;
+
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
 
             con.Close();
 
@@ -439,6 +467,13 @@ namespace TimetableManagementSystem.Students
             sda.Fill(dt);
             genIdData.DataSource = dt;
 
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
+
             con.Close();
 
             MessageBox.Show("IDs Added Successfully", "Added Successful");
@@ -458,13 +493,20 @@ namespace TimetableManagementSystem.Students
                 cmd.CommandText = "INSERT INTO [dbo].[GenSubGroupNumber]([GenSubGrpNum],[GenGroupNumberRef],[SubGroupNumberRef]) VALUES('" + allItem[0] + "'," + allItem[1] + "," + allItem[2] + ")";
                 cmd.ExecuteNonQuery();
             }
-            con.Close();
 
             String query6 = "select id,GenSubGrpNum from GenSubGroupNumber";
             SqlDataAdapter sda = new SqlDataAdapter(query6, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             genSubIdData.DataSource = dt;
+
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
+
             con.Close();
 
 
@@ -709,6 +751,27 @@ namespace TimetableManagementSystem.Students
             sda.Fill(dt);
             grpNumData.DataSource = dt;
 
+            String query3 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+            SqlDataAdapter sda22 = new SqlDataAdapter(query3, con);
+            DataTable dt22 = new DataTable();
+            sda22.Fill(dt22);
+            genSubIdData.DataSource = dt22;
+
+            String query4 = "select id, GenGrpNum from GenGroupNumber";
+
+            SqlDataAdapter sda33 = new SqlDataAdapter(query4, con);
+            DataTable dt33 = new DataTable();
+            sda33.Fill(dt33);
+            genIdData.DataSource = dt33;
+
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
+
             con.Close();
 
             MessageBox.Show("Group Number Updated Successfully","Update Successfully");
@@ -734,6 +797,27 @@ namespace TimetableManagementSystem.Students
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 grpNumData.DataSource = dt;
+
+                String query3 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+                SqlDataAdapter sda22 = new SqlDataAdapter(query3, con);
+                DataTable dt22 = new DataTable();
+                sda22.Fill(dt22);
+                genSubIdData.DataSource = dt22;
+
+                String query4 = "select id, GenGrpNum from GenGroupNumber";
+
+                SqlDataAdapter sda33 = new SqlDataAdapter(query4, con);
+                DataTable dt33 = new DataTable();
+                sda33.Fill(dt33);
+                genIdData.DataSource = dt33;
+
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
 
                 con.Close();
@@ -782,6 +866,27 @@ namespace TimetableManagementSystem.Students
             sda.Fill(dt);
             subGrpNumData.DataSource = dt;
 
+            String query3 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+            SqlDataAdapter sda22 = new SqlDataAdapter(query3, con);
+            DataTable dt22 = new DataTable();
+            sda22.Fill(dt22);
+            genSubIdData.DataSource = dt22;
+
+            String query4 = "select id, GenGrpNum from GenGroupNumber";
+
+            SqlDataAdapter sda33 = new SqlDataAdapter(query4, con);
+            DataTable dt33 = new DataTable();
+            sda33.Fill(dt33);
+            genIdData.DataSource = dt33;
+
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
+
             con.Close();
 
             MessageBox.Show("Sub-Group Updated Successfully","Update Successfully");
@@ -807,6 +912,27 @@ namespace TimetableManagementSystem.Students
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 subGrpNumData.DataSource = dt;
+
+                String query3 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+                SqlDataAdapter sda22 = new SqlDataAdapter(query3, con);
+                DataTable dt22 = new DataTable();
+                sda22.Fill(dt22);
+                genSubIdData.DataSource = dt22;
+
+                String query4 = "select id, GenGrpNum from GenGroupNumber";
+
+                SqlDataAdapter sda33 = new SqlDataAdapter(query4, con);
+                DataTable dt33 = new DataTable();
+                sda33.Fill(dt33);
+                genIdData.DataSource = dt33;
+
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
 
                 con.Close();
@@ -846,6 +972,27 @@ namespace TimetableManagementSystem.Students
             sda.Fill(dt);
             yrSemData.DataSource = dt;
 
+            String query3 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+            SqlDataAdapter sda22 = new SqlDataAdapter(query3, con);
+            DataTable dt22 = new DataTable();
+            sda22.Fill(dt22);
+            genSubIdData.DataSource = dt22;
+
+            String query4 = "select id, GenGrpNum from GenGroupNumber";
+
+            SqlDataAdapter sda33 = new SqlDataAdapter(query4, con);
+            DataTable dt33 = new DataTable();
+            sda33.Fill(dt33);
+            genIdData.DataSource = dt33;
+
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
+
             con.Close();
 
             MessageBox.Show("Year and Semester Updated Successfully", "Update Successful");
@@ -871,6 +1018,27 @@ namespace TimetableManagementSystem.Students
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 yrSemData.DataSource = dt;
+
+                String query3 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+                SqlDataAdapter sda22 = new SqlDataAdapter(query3, con);
+                DataTable dt22 = new DataTable();
+                sda22.Fill(dt22);
+                genSubIdData.DataSource = dt22;
+
+                String query4 = "select id, GenGrpNum from GenGroupNumber";
+
+                SqlDataAdapter sda33 = new SqlDataAdapter(query4, con);
+                DataTable dt33 = new DataTable();
+                sda33.Fill(dt33);
+                genIdData.DataSource = dt33;
+
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
 
                 con.Close();
@@ -909,6 +1077,27 @@ namespace TimetableManagementSystem.Students
             sda.Fill(dt);
             prgData.DataSource = dt;
 
+            String query3 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+            SqlDataAdapter sda22 = new SqlDataAdapter(query3, con);
+            DataTable dt22 = new DataTable();
+            sda22.Fill(dt22);
+            genSubIdData.DataSource = dt22;
+
+            String query4 = "select id, GenGrpNum from GenGroupNumber";
+
+            SqlDataAdapter sda33 = new SqlDataAdapter(query4, con);
+            DataTable dt33 = new DataTable();
+            sda33.Fill(dt33);
+            genIdData.DataSource = dt33;
+
+            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+            DataTable dt77 = new DataTable();
+            sda77.Fill(dt77);
+            viewData.DataSource = dt77;
+
             con.Close();
 
             MessageBox.Show("Programme Updated Successfully", "Update Successful");
@@ -934,6 +1123,27 @@ namespace TimetableManagementSystem.Students
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 prgData.DataSource = dt;
+
+                String query3 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+                SqlDataAdapter sda22 = new SqlDataAdapter(query3, con);
+                DataTable dt22 = new DataTable();
+                sda22.Fill(dt22);
+                genSubIdData.DataSource = dt22;
+
+                String query4 = "select id, GenGrpNum from GenGroupNumber";
+
+                SqlDataAdapter sda33 = new SqlDataAdapter(query4, con);
+                DataTable dt33 = new DataTable();
+                sda33.Fill(dt33);
+                genIdData.DataSource = dt33;
+
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
 
                 con.Close();
@@ -1106,6 +1316,20 @@ namespace TimetableManagementSystem.Students
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 genIdData.DataSource = dt;
+
+                String query3 = "select id,GenSubGrpNum from GenSubGroupNumber";
+
+                SqlDataAdapter sda22 = new SqlDataAdapter(query3, con);
+                DataTable dt22 = new DataTable();
+                sda22.Fill(dt22);
+                genSubIdData.DataSource = dt22;
+
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
 
                 con.Close();
@@ -1290,6 +1514,14 @@ namespace TimetableManagementSystem.Students
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 genSubIdData.DataSource = dt;
+
+
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
 
                 con.Close();
