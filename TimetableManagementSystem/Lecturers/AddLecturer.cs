@@ -207,7 +207,7 @@ namespace TimetableManagementSystem.Lecturers
                 {
                     LecturerRank = 7;
                 }
-                cmd.Parameters.AddWithValue("@lecrank", LecturerRank);
+                cmd.Parameters.AddWithValue("@lecrank", LecturerRank+"."+ this.LecturerID);
                 cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
 
                 con.Open();

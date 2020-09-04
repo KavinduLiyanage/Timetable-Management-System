@@ -110,7 +110,7 @@
             this.btnSideNavStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavStatistics.Image = global::TimetableManagementSystem.Properties.Resources.Sub7_Statistics;
             this.btnSideNavStatistics.Location = new System.Drawing.Point(17, 601);
-            this.btnSideNavStatistics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavStatistics.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavStatistics.Name = "btnSideNavStatistics";
             this.btnSideNavStatistics.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -123,7 +123,7 @@
             this.btnSideNavLocations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavLocations.Image = global::TimetableManagementSystem.Properties.Resources.Sub6_Locations;
             this.btnSideNavLocations.Location = new System.Drawing.Point(17, 526);
-            this.btnSideNavLocations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavLocations.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavLocations.Name = "btnSideNavLocations";
             this.btnSideNavLocations.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -136,7 +136,7 @@
             this.btnSideNavTags.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavTags.Image = global::TimetableManagementSystem.Properties.Resources.Sub5_Tags;
             this.btnSideNavTags.Location = new System.Drawing.Point(17, 450);
-            this.btnSideNavTags.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavTags.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavTags.Name = "btnSideNavTags";
             this.btnSideNavTags.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -149,7 +149,7 @@
             this.btnSideNavStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavStudents.Image = global::TimetableManagementSystem.Properties.Resources.Sub4_Students;
             this.btnSideNavStudents.Location = new System.Drawing.Point(17, 375);
-            this.btnSideNavStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavStudents.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavStudents.Name = "btnSideNavStudents";
             this.btnSideNavStudents.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -162,7 +162,7 @@
             this.btnSideNavSubjects.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavSubjects.Image = global::TimetableManagementSystem.Properties.Resources.Sub3_Subjects;
             this.btnSideNavSubjects.Location = new System.Drawing.Point(17, 300);
-            this.btnSideNavSubjects.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavSubjects.Name = "btnSideNavSubjects";
             this.btnSideNavSubjects.Size = new System.Drawing.Size(70, 55);
             this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -175,7 +175,7 @@
             this.btnSideNavLecturers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavLecturers.Image = global::TimetableManagementSystem.Properties.Resources.Sub2_Lecturers;
             this.btnSideNavLecturers.Location = new System.Drawing.Point(17, 231);
-            this.btnSideNavLecturers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavLecturers.Name = "btnSideNavLecturers";
             this.btnSideNavLecturers.Size = new System.Drawing.Size(70, 50);
             this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -188,7 +188,7 @@
             this.btnSideNavWorking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideNavWorking.Image = global::TimetableManagementSystem.Properties.Resources.Sub1_WorkingDaysAndHours;
             this.btnSideNavWorking.Location = new System.Drawing.Point(11, 138);
-            this.btnSideNavWorking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSideNavWorking.Margin = new System.Windows.Forms.Padding(4);
             this.btnSideNavWorking.Name = "btnSideNavWorking";
             this.btnSideNavWorking.Size = new System.Drawing.Size(80, 70);
             this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -205,7 +205,7 @@
             this.tabControlLecturers.FontSize = MetroFramework.MetroTabControlSize.Small;
             this.tabControlLecturers.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlLecturers.Location = new System.Drawing.Point(197, 114);
-            this.tabControlLecturers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControlLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlLecturers.Name = "tabControlLecturers";
             this.tabControlLecturers.SelectedIndex = 0;
             this.tabControlLecturers.Size = new System.Drawing.Size(1043, 585);
@@ -230,9 +230,9 @@
             this.tabPageLecView.Controls.Add(this.metroLabel15);
             this.tabPageLecView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageLecView.Location = new System.Drawing.Point(4, 37);
-            this.tabPageLecView.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.tabPageLecView.Margin = new System.Windows.Forms.Padding(9);
             this.tabPageLecView.Name = "tabPageLecView";
-            this.tabPageLecView.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageLecView.Padding = new System.Windows.Forms.Padding(4);
             this.tabPageLecView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabPageLecView.Size = new System.Drawing.Size(1035, 544);
             this.tabPageLecView.TabIndex = 0;
@@ -266,7 +266,7 @@
             "Assistant Lecturer",
             "Instructors"});
             this.cmbLecFilterLevel.Location = new System.Drawing.Point(559, 62);
-            this.cmbLecFilterLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecFilterLevel.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecFilterLevel.Name = "cmbLecFilterLevel";
             this.cmbLecFilterLevel.PromptText = "Select Level";
             this.cmbLecFilterLevel.Size = new System.Drawing.Size(159, 30);
@@ -298,7 +298,7 @@
             "Business",
             "Humanities and Science"});
             this.cmbLecFilterFaculty.Location = new System.Drawing.Point(212, 62);
-            this.cmbLecFilterFaculty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecFilterFaculty.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecFilterFaculty.Name = "cmbLecFilterFaculty";
             this.cmbLecFilterFaculty.PromptText = "Select Faculty";
             this.cmbLecFilterFaculty.Size = new System.Drawing.Size(159, 30);
@@ -326,10 +326,10 @@
             // 
             // 
             this.txtLecSearch.CustomButton.Image = null;
-            this.txtLecSearch.CustomButton.Location = new System.Drawing.Point(141, 1);
-            this.txtLecSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecSearch.CustomButton.Location = new System.Drawing.Point(106, 1);
+            this.txtLecSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecSearch.CustomButton.Name = "";
-            this.txtLecSearch.CustomButton.Size = new System.Drawing.Size(39, 36);
+            this.txtLecSearch.CustomButton.Size = new System.Drawing.Size(29, 29);
             this.txtLecSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecSearch.CustomButton.TabIndex = 1;
             this.txtLecSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -337,7 +337,7 @@
             this.txtLecSearch.CustomButton.Visible = false;
             this.txtLecSearch.Lines = new string[0];
             this.txtLecSearch.Location = new System.Drawing.Point(839, 64);
-            this.txtLecSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecSearch.MaxLength = 32767;
             this.txtLecSearch.Name = "txtLecSearch";
             this.txtLecSearch.PasswordChar = '\0';
@@ -378,9 +378,10 @@
             this.LecBuilding,
             this.LecRank});
             this.dgvLectures.Location = new System.Drawing.Point(45, 117);
-            this.dgvLectures.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvLectures.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLectures.Name = "dgvLectures";
             this.dgvLectures.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvLectures.RowHeadersVisible = false;
             this.dgvLectures.RowHeadersWidth = 51;
             this.dgvLectures.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLectures.Size = new System.Drawing.Size(941, 384);
@@ -422,7 +423,7 @@
             this.tabPageLecAdd.Controls.Add(this.cmbLecFac);
             this.tabPageLecAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageLecAdd.Location = new System.Drawing.Point(4, 37);
-            this.tabPageLecAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageLecAdd.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageLecAdd.Name = "tabPageLecAdd";
             this.tabPageLecAdd.Size = new System.Drawing.Size(1035, 544);
             this.tabPageLecAdd.TabIndex = 1;
@@ -436,7 +437,7 @@
             this.cmbLecDepartment.FormattingEnabled = true;
             this.cmbLecDepartment.ItemHeight = 23;
             this.cmbLecDepartment.Location = new System.Drawing.Point(547, 199);
-            this.cmbLecDepartment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecDepartment.Name = "cmbLecDepartment";
             this.cmbLecDepartment.PromptText = "Select Department";
             this.cmbLecDepartment.Size = new System.Drawing.Size(257, 29);
@@ -565,7 +566,7 @@
             "Assistant Lecturer",
             "Instructors"});
             this.cmbLecLevel.Location = new System.Drawing.Point(547, 366);
-            this.cmbLecLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecLevel.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecLevel.Name = "cmbLecLevel";
             this.cmbLecLevel.PromptText = "Select Level";
             this.cmbLecLevel.Size = new System.Drawing.Size(257, 29);
@@ -597,7 +598,7 @@
             "Business Building",
             "D-Block"});
             this.cmbLecBuilding.Location = new System.Drawing.Point(547, 310);
-            this.cmbLecBuilding.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecBuilding.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecBuilding.Name = "cmbLecBuilding";
             this.cmbLecBuilding.PromptText = "Select Building";
             this.cmbLecBuilding.Size = new System.Drawing.Size(257, 29);
@@ -610,10 +611,10 @@
             // 
             // 
             this.txtLecName.CustomButton.Image = null;
-            this.txtLecName.CustomButton.Location = new System.Drawing.Point(308, 1);
-            this.txtLecName.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecName.CustomButton.Location = new System.Drawing.Point(231, 1);
+            this.txtLecName.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecName.CustomButton.Name = "";
-            this.txtLecName.CustomButton.Size = new System.Drawing.Size(47, 43);
+            this.txtLecName.CustomButton.Size = new System.Drawing.Size(35, 35);
             this.txtLecName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecName.CustomButton.TabIndex = 1;
             this.txtLecName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -622,7 +623,7 @@
             this.txtLecName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtLecName.Lines = new string[0];
             this.txtLecName.Location = new System.Drawing.Point(547, 89);
-            this.txtLecName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecName.MaxLength = 32767;
             this.txtLecName.Name = "txtLecName";
             this.txtLecName.PasswordChar = '\0';
@@ -653,7 +654,7 @@
             "Kurunagala",
             "Jaffna"});
             this.cmbLecCenter.Location = new System.Drawing.Point(547, 255);
-            this.cmbLecCenter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecCenter.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecCenter.Name = "cmbLecCenter";
             this.cmbLecCenter.PromptText = "Select Center";
             this.cmbLecCenter.Size = new System.Drawing.Size(257, 29);
@@ -672,7 +673,7 @@
             "Business",
             "Humanities and Science"});
             this.cmbLecFac.Location = new System.Drawing.Point(547, 144);
-            this.cmbLecFac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecFac.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecFac.Name = "cmbLecFac";
             this.cmbLecFac.PromptText = "Select Faculty";
             this.cmbLecFac.Size = new System.Drawing.Size(257, 29);
@@ -700,7 +701,7 @@
             this.tabPageLecEdit.Controls.Add(this.cmbLecFacEdit);
             this.tabPageLecEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageLecEdit.Location = new System.Drawing.Point(4, 37);
-            this.tabPageLecEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageLecEdit.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageLecEdit.Name = "tabPageLecEdit";
             this.tabPageLecEdit.Size = new System.Drawing.Size(1035, 544);
             this.tabPageLecEdit.TabIndex = 2;
@@ -714,7 +715,7 @@
             this.cmbLecDepartmentEdit.FormattingEnabled = true;
             this.cmbLecDepartmentEdit.ItemHeight = 23;
             this.cmbLecDepartmentEdit.Location = new System.Drawing.Point(547, 199);
-            this.cmbLecDepartmentEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecDepartmentEdit.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecDepartmentEdit.Name = "cmbLecDepartmentEdit";
             this.cmbLecDepartmentEdit.PromptText = "Select Department";
             this.cmbLecDepartmentEdit.Size = new System.Drawing.Size(265, 29);
@@ -843,7 +844,7 @@
             "Assistant Lecturer",
             "Instructors"});
             this.cmbLecLevelEdit.Location = new System.Drawing.Point(547, 366);
-            this.cmbLecLevelEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecLevelEdit.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecLevelEdit.Name = "cmbLecLevelEdit";
             this.cmbLecLevelEdit.PromptText = "Select Level";
             this.cmbLecLevelEdit.Size = new System.Drawing.Size(265, 29);
@@ -875,7 +876,7 @@
             "Business Building",
             "D-Block"});
             this.cmbLecBuildingEdit.Location = new System.Drawing.Point(547, 310);
-            this.cmbLecBuildingEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecBuildingEdit.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecBuildingEdit.Name = "cmbLecBuildingEdit";
             this.cmbLecBuildingEdit.PromptText = "Select Building";
             this.cmbLecBuildingEdit.Size = new System.Drawing.Size(265, 29);
@@ -888,10 +889,10 @@
             // 
             // 
             this.txtLecNameEdit.CustomButton.Image = null;
-            this.txtLecNameEdit.CustomButton.Location = new System.Drawing.Point(308, 1);
-            this.txtLecNameEdit.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecNameEdit.CustomButton.Location = new System.Drawing.Point(231, 1);
+            this.txtLecNameEdit.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecNameEdit.CustomButton.Name = "";
-            this.txtLecNameEdit.CustomButton.Size = new System.Drawing.Size(47, 43);
+            this.txtLecNameEdit.CustomButton.Size = new System.Drawing.Size(35, 35);
             this.txtLecNameEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecNameEdit.CustomButton.TabIndex = 1;
             this.txtLecNameEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -900,7 +901,7 @@
             this.txtLecNameEdit.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtLecNameEdit.Lines = new string[0];
             this.txtLecNameEdit.Location = new System.Drawing.Point(547, 89);
-            this.txtLecNameEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecNameEdit.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecNameEdit.MaxLength = 32767;
             this.txtLecNameEdit.Name = "txtLecNameEdit";
             this.txtLecNameEdit.PasswordChar = '\0';
@@ -931,7 +932,7 @@
             "Kurunagala",
             "Jaffna"});
             this.cmbLecCenterEdit.Location = new System.Drawing.Point(547, 255);
-            this.cmbLecCenterEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecCenterEdit.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecCenterEdit.Name = "cmbLecCenterEdit";
             this.cmbLecCenterEdit.PromptText = "Select Center";
             this.cmbLecCenterEdit.Size = new System.Drawing.Size(265, 29);
@@ -950,7 +951,7 @@
             "Business",
             "Humanities and Science"});
             this.cmbLecFacEdit.Location = new System.Drawing.Point(547, 144);
-            this.cmbLecFacEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLecFacEdit.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLecFacEdit.Name = "cmbLecFacEdit";
             this.cmbLecFacEdit.PromptText = "Select Faculty";
             this.cmbLecFacEdit.Size = new System.Drawing.Size(265, 29);
@@ -965,7 +966,7 @@
             this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderAdvanced.Location = new System.Drawing.Point(784, 12);
-            this.btnHeaderAdvanced.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderAdvanced.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
             this.btnHeaderAdvanced.Size = new System.Drawing.Size(153, 49);
             this.btnHeaderAdvanced.TabIndex = 46;
@@ -979,7 +980,7 @@
             this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderRooms.Location = new System.Drawing.Point(623, 12);
-            this.btnHeaderRooms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderRooms.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderRooms.Name = "btnHeaderRooms";
             this.btnHeaderRooms.Size = new System.Drawing.Size(112, 49);
             this.btnHeaderRooms.TabIndex = 45;
@@ -993,7 +994,7 @@
             this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderSessions.Location = new System.Drawing.Point(436, 12);
-            this.btnHeaderSessions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderSessions.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderSessions.Name = "btnHeaderSessions";
             this.btnHeaderSessions.Size = new System.Drawing.Size(137, 49);
             this.btnHeaderSessions.TabIndex = 44;
@@ -1008,7 +1009,7 @@
             this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderGenerate.Location = new System.Drawing.Point(987, 12);
-            this.btnHeaderGenerate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderGenerate.Name = "btnHeaderGenerate";
             this.btnHeaderGenerate.Size = new System.Drawing.Size(149, 49);
             this.btnHeaderGenerate.TabIndex = 43;
@@ -1022,7 +1023,7 @@
             this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeaderHome.Location = new System.Drawing.Point(281, 12);
-            this.btnHeaderHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeaderHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeaderHome.Name = "btnHeaderHome";
             this.btnHeaderHome.Size = new System.Drawing.Size(105, 49);
             this.btnHeaderHome.TabIndex = 42;
@@ -1051,10 +1052,10 @@
             // 
             this.LecFaculty.DataPropertyName = "LecFaculty";
             this.LecFaculty.HeaderText = "Faculty";
-            this.LecFaculty.MinimumWidth = 6;
+            this.LecFaculty.MinimumWidth = 85;
             this.LecFaculty.Name = "LecFaculty";
             this.LecFaculty.ReadOnly = true;
-            this.LecFaculty.Width = 120;
+            this.LecFaculty.Width = 85;
             // 
             // LecDepartment
             // 
@@ -1069,35 +1070,33 @@
             // 
             this.LecCenter.DataPropertyName = "LecCenter";
             this.LecCenter.HeaderText = "Center";
-            this.LecCenter.MinimumWidth = 80;
+            this.LecCenter.MinimumWidth = 60;
             this.LecCenter.Name = "LecCenter";
             this.LecCenter.ReadOnly = true;
-            this.LecCenter.Width = 80;
+            this.LecCenter.Width = 60;
             // 
             // LecLevel
             // 
             this.LecLevel.DataPropertyName = "LecLevel";
             this.LecLevel.HeaderText = "Level";
-            this.LecLevel.MinimumWidth = 130;
+            this.LecLevel.MinimumWidth = 100;
             this.LecLevel.Name = "LecLevel";
             this.LecLevel.ReadOnly = true;
-            this.LecLevel.Width = 130;
             // 
             // LecBuilding
             // 
             this.LecBuilding.DataPropertyName = "LecBuilding";
             this.LecBuilding.HeaderText = "Building";
-            this.LecBuilding.MinimumWidth = 6;
+            this.LecBuilding.MinimumWidth = 100;
             this.LecBuilding.Name = "LecBuilding";
-            this.LecBuilding.Width = 125;
             // 
             // LecRank
             // 
             this.LecRank.DataPropertyName = "LecRank";
             this.LecRank.HeaderText = "Rank";
-            this.LecRank.MinimumWidth = 6;
+            this.LecRank.MinimumWidth = 60;
             this.LecRank.Name = "LecRank";
-            this.LecRank.Width = 125;
+            this.LecRank.Width = 60;
             // 
             // AddLecturer
             // 
