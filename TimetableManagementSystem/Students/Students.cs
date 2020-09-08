@@ -727,12 +727,16 @@ namespace TimetableManagementSystem.Students
 
         private void btnSideNavWorking_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
+            workingDays.ShowDialog();
         }
 
         private void btnSideNavLocations_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
         }
 
         private void grpNumEditBtn_Click(object sender, EventArgs e)

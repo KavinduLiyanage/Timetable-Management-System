@@ -108,7 +108,9 @@ namespace TimetableManagementSystem.Tags
 
         private void btnSideNavWorking_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
+            workingDays.ShowDialog();
         }
 
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
@@ -141,7 +143,9 @@ namespace TimetableManagementSystem.Tags
 
         private void btnSideNavLocations_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
         }
 
         private void btnSideNavStatistics_Click(object sender, EventArgs e)

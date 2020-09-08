@@ -200,7 +200,9 @@ namespace TimetableManagementSystem.Statistics
         //---------------------------------Side Nav Bar Buttons' Links--------------------------------------------------------
         private void btnSideNavWorking_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
+            workingDays.ShowDialog();
         }
 
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
@@ -219,7 +221,16 @@ namespace TimetableManagementSystem.Statistics
 
         private void btnSideNavStudents_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Students.Students stu = new Students.Students();
+            stu.ShowDialog();
+        }
 
+        private void btnSideNavTags_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags.Tags tag = new Tags.Tags();
+            tag.ShowDialog();
         }
 
         private void btnSideNavLocations_Click(object sender, EventArgs e)
@@ -244,5 +255,13 @@ namespace TimetableManagementSystem.Statistics
             Homepage homepage = new Homepage();
             homepage.ShowDialog();
         }
+
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
+        }
+
     }
 }
