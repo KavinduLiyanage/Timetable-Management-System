@@ -94,7 +94,9 @@ namespace TimetableManagementSystem
 
         private void advOpBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AdvancedOp.Advanced advc = new AdvancedOp.Advanced();
+            advc.ShowDialog();
         }
 
         private void genTimetBtn_Click(object sender, EventArgs e)
@@ -127,7 +129,9 @@ namespace TimetableManagementSystem
 
         private void btnHeaderAdvanced_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AdvancedOp.Advanced advc = new AdvancedOp.Advanced();
+            advc.ShowDialog();
         }
 
         private void btnHeaderGenerate_Click(object sender, EventArgs e)
