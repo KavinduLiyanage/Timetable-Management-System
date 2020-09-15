@@ -94,5 +94,10 @@ namespace TimetableManagementSystem.AdvancedOp
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
         }
+
+        private void noAvaBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

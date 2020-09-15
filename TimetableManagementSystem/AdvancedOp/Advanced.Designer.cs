@@ -45,6 +45,13 @@
             this.consecutiveSessions = new MetroFramework.Controls.MetroTabPage();
             this.parallelSessions = new MetroFramework.Controls.MetroTabPage();
             this.shouldNotOverlap = new MetroFramework.Controls.MetroTabPage();
+            this.typeLbl = new MetroFramework.Controls.MetroLabel();
+            this.typeCmbo = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.noAvaBtn = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -53,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             this.advancedOp.SuspendLayout();
+            this.notAvailableTime.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnHeaderAdvanced
@@ -217,13 +225,20 @@
             this.advancedOp.Controls.Add(this.shouldNotOverlap);
             this.advancedOp.Location = new System.Drawing.Point(131, 95);
             this.advancedOp.Name = "advancedOp";
-            this.advancedOp.SelectedIndex = 3;
+            this.advancedOp.SelectedIndex = 0;
             this.advancedOp.Size = new System.Drawing.Size(811, 486);
             this.advancedOp.TabIndex = 59;
             this.advancedOp.UseSelectable = true;
             // 
             // notAvailableTime
             // 
+            this.notAvailableTime.Controls.Add(this.noAvaBtn);
+            this.notAvailableTime.Controls.Add(this.metroComboBox2);
+            this.notAvailableTime.Controls.Add(this.metroLabel2);
+            this.notAvailableTime.Controls.Add(this.metroComboBox1);
+            this.notAvailableTime.Controls.Add(this.metroLabel1);
+            this.notAvailableTime.Controls.Add(this.typeCmbo);
+            this.notAvailableTime.Controls.Add(this.typeLbl);
             this.notAvailableTime.HorizontalScrollbarBarColor = true;
             this.notAvailableTime.HorizontalScrollbarHighlightOnWheel = false;
             this.notAvailableTime.HorizontalScrollbarSize = 10;
@@ -278,6 +293,109 @@
             this.shouldNotOverlap.VerticalScrollbarHighlightOnWheel = false;
             this.shouldNotOverlap.VerticalScrollbarSize = 10;
             // 
+            // typeLbl
+            // 
+            this.typeLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.typeLbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.typeLbl.Location = new System.Drawing.Point(76, 75);
+            this.typeLbl.Name = "typeLbl";
+            this.typeLbl.Size = new System.Drawing.Size(150, 30);
+            this.typeLbl.TabIndex = 33;
+            this.typeLbl.Text = "Type";
+            this.typeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // typeCmbo
+            // 
+            this.typeCmbo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeCmbo.FormattingEnabled = true;
+            this.typeCmbo.ItemHeight = 23;
+            this.typeCmbo.Items.AddRange(new object[] {
+            "Lecturers",
+            "Sessions",
+            "Groups",
+            "Sub-Groups"});
+            this.typeCmbo.Location = new System.Drawing.Point(310, 76);
+            this.typeCmbo.Name = "typeCmbo";
+            this.typeCmbo.PromptText = "Select Type";
+            this.typeCmbo.Size = new System.Drawing.Size(194, 29);
+            this.typeCmbo.TabIndex = 41;
+            this.typeCmbo.UseSelectable = true;
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "Lecturers",
+            "Sessions",
+            "Groups",
+            "Sub-Groups"});
+            this.metroComboBox1.Location = new System.Drawing.Point(310, 137);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.PromptText = "Select Type";
+            this.metroComboBox1.Size = new System.Drawing.Size(194, 29);
+            this.metroComboBox1.TabIndex = 43;
+            this.metroComboBox1.UseSelectable = true;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.Location = new System.Drawing.Point(76, 136);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(150, 30);
+            this.metroLabel1.TabIndex = 42;
+            this.metroLabel1.Text = "Type";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "Lecturers",
+            "Sessions",
+            "Groups",
+            "Sub-Groups"});
+            this.metroComboBox2.Location = new System.Drawing.Point(310, 198);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.PromptText = "Select Type";
+            this.metroComboBox2.Size = new System.Drawing.Size(194, 29);
+            this.metroComboBox2.TabIndex = 45;
+            this.metroComboBox2.UseSelectable = true;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel2.Location = new System.Drawing.Point(76, 197);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(150, 30);
+            this.metroLabel2.TabIndex = 44;
+            this.metroLabel2.Text = "Time Slot";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // noAvaBtn
+            // 
+            this.noAvaBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.noAvaBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.noAvaBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.noAvaBtn.Location = new System.Drawing.Point(258, 342);
+            this.noAvaBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.noAvaBtn.Name = "noAvaBtn";
+            this.noAvaBtn.Size = new System.Drawing.Size(216, 40);
+            this.noAvaBtn.TabIndex = 46;
+            this.noAvaBtn.Text = "Set Not Available Time";
+            this.noAvaBtn.UseCustomBackColor = true;
+            this.noAvaBtn.UseCustomForeColor = true;
+            this.noAvaBtn.UseSelectable = true;
+            this.noAvaBtn.Click += new System.EventHandler(this.noAvaBtn_Click);
+            // 
             // Advanced
             // 
             this.ApplyImageInvert = true;
@@ -311,6 +429,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).EndInit();
             this.advancedOp.ResumeLayout(false);
+            this.notAvailableTime.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +454,12 @@
         private MetroFramework.Controls.MetroTabPage consecutiveSessions;
         private MetroFramework.Controls.MetroTabPage parallelSessions;
         private MetroFramework.Controls.MetroTabPage shouldNotOverlap;
+        private MetroFramework.Controls.MetroLabel typeLbl;
+        private MetroFramework.Controls.MetroComboBox typeCmbo;
+        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroButton noAvaBtn;
     }
 }
