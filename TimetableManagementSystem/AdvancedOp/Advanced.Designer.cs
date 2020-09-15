@@ -40,7 +40,11 @@
             this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
             this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
             this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.advancedOp = new MetroFramework.Controls.MetroTabControl();
+            this.notAvailableTime = new MetroFramework.Controls.MetroTabPage();
+            this.consecutiveSessions = new MetroFramework.Controls.MetroTabPage();
+            this.parallelSessions = new MetroFramework.Controls.MetroTabPage();
+            this.shouldNotOverlap = new MetroFramework.Controls.MetroTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -48,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
+            this.advancedOp.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnHeaderAdvanced
@@ -204,13 +209,74 @@
             this.btnSideNavWorking.TabStop = false;
             this.btnSideNavWorking.Click += new System.EventHandler(this.btnSideNavWorking_Click);
             // 
-            // metroTabControl1
+            // advancedOp
             // 
-            this.metroTabControl1.Location = new System.Drawing.Point(131, 95);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.Size = new System.Drawing.Size(811, 486);
-            this.metroTabControl1.TabIndex = 59;
-            this.metroTabControl1.UseSelectable = true;
+            this.advancedOp.Controls.Add(this.notAvailableTime);
+            this.advancedOp.Controls.Add(this.consecutiveSessions);
+            this.advancedOp.Controls.Add(this.parallelSessions);
+            this.advancedOp.Controls.Add(this.shouldNotOverlap);
+            this.advancedOp.Location = new System.Drawing.Point(131, 95);
+            this.advancedOp.Name = "advancedOp";
+            this.advancedOp.SelectedIndex = 3;
+            this.advancedOp.Size = new System.Drawing.Size(811, 486);
+            this.advancedOp.TabIndex = 59;
+            this.advancedOp.UseSelectable = true;
+            // 
+            // notAvailableTime
+            // 
+            this.notAvailableTime.HorizontalScrollbarBarColor = true;
+            this.notAvailableTime.HorizontalScrollbarHighlightOnWheel = false;
+            this.notAvailableTime.HorizontalScrollbarSize = 10;
+            this.notAvailableTime.Location = new System.Drawing.Point(4, 38);
+            this.notAvailableTime.Name = "notAvailableTime";
+            this.notAvailableTime.Size = new System.Drawing.Size(803, 444);
+            this.notAvailableTime.TabIndex = 0;
+            this.notAvailableTime.Text = "Set Not Available Time";
+            this.notAvailableTime.VerticalScrollbarBarColor = true;
+            this.notAvailableTime.VerticalScrollbarHighlightOnWheel = false;
+            this.notAvailableTime.VerticalScrollbarSize = 10;
+            // 
+            // consecutiveSessions
+            // 
+            this.consecutiveSessions.HorizontalScrollbarBarColor = true;
+            this.consecutiveSessions.HorizontalScrollbarHighlightOnWheel = false;
+            this.consecutiveSessions.HorizontalScrollbarSize = 10;
+            this.consecutiveSessions.Location = new System.Drawing.Point(4, 38);
+            this.consecutiveSessions.Name = "consecutiveSessions";
+            this.consecutiveSessions.Size = new System.Drawing.Size(803, 444);
+            this.consecutiveSessions.TabIndex = 1;
+            this.consecutiveSessions.Text = "Add Consecutive Sessions";
+            this.consecutiveSessions.VerticalScrollbarBarColor = true;
+            this.consecutiveSessions.VerticalScrollbarHighlightOnWheel = false;
+            this.consecutiveSessions.VerticalScrollbarSize = 10;
+            // 
+            // parallelSessions
+            // 
+            this.parallelSessions.HorizontalScrollbarBarColor = true;
+            this.parallelSessions.HorizontalScrollbarHighlightOnWheel = false;
+            this.parallelSessions.HorizontalScrollbarSize = 10;
+            this.parallelSessions.Location = new System.Drawing.Point(4, 38);
+            this.parallelSessions.Name = "parallelSessions";
+            this.parallelSessions.Size = new System.Drawing.Size(803, 444);
+            this.parallelSessions.TabIndex = 2;
+            this.parallelSessions.Text = "Add Parallel Sessions";
+            this.parallelSessions.VerticalScrollbarBarColor = true;
+            this.parallelSessions.VerticalScrollbarHighlightOnWheel = false;
+            this.parallelSessions.VerticalScrollbarSize = 10;
+            // 
+            // shouldNotOverlap
+            // 
+            this.shouldNotOverlap.HorizontalScrollbarBarColor = true;
+            this.shouldNotOverlap.HorizontalScrollbarHighlightOnWheel = false;
+            this.shouldNotOverlap.HorizontalScrollbarSize = 10;
+            this.shouldNotOverlap.Location = new System.Drawing.Point(4, 38);
+            this.shouldNotOverlap.Name = "shouldNotOverlap";
+            this.shouldNotOverlap.Size = new System.Drawing.Size(803, 444);
+            this.shouldNotOverlap.TabIndex = 3;
+            this.shouldNotOverlap.Text = "Should Not Overlap Session";
+            this.shouldNotOverlap.VerticalScrollbarBarColor = true;
+            this.shouldNotOverlap.VerticalScrollbarHighlightOnWheel = false;
+            this.shouldNotOverlap.VerticalScrollbarSize = 10;
             // 
             // Advanced
             // 
@@ -220,7 +286,7 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
-            this.Controls.Add(this.metroTabControl1);
+            this.Controls.Add(this.advancedOp);
             this.Controls.Add(this.btnSideNavStatistics);
             this.Controls.Add(this.btnSideNavLocations);
             this.Controls.Add(this.btnSideNavTags);
@@ -244,6 +310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).EndInit();
+            this.advancedOp.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +330,10 @@
         private System.Windows.Forms.PictureBox btnSideNavSubjects;
         private System.Windows.Forms.PictureBox btnSideNavLecturers;
         private System.Windows.Forms.PictureBox btnSideNavWorking;
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabControl advancedOp;
+        private MetroFramework.Controls.MetroTabPage notAvailableTime;
+        private MetroFramework.Controls.MetroTabPage consecutiveSessions;
+        private MetroFramework.Controls.MetroTabPage parallelSessions;
+        private MetroFramework.Controls.MetroTabPage shouldNotOverlap;
     }
 }
