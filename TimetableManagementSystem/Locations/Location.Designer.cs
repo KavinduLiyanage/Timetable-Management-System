@@ -105,7 +105,7 @@
             this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.loc_tabcontrol.Location = new System.Drawing.Point(138, 120);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 1;
+            this.loc_tabcontrol.SelectedIndex = 0;
             this.loc_tabcontrol.Size = new System.Drawing.Size(788, 461);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.loc_tabcontrol.TabIndex = 0;
@@ -176,6 +176,7 @@
             this.search_txt_box.MaxLength = 32767;
             this.search_txt_box.Name = "search_txt_box";
             this.search_txt_box.PasswordChar = '\0';
+            this.search_txt_box.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.search_txt_box.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.search_txt_box.SelectedText = "";
             this.search_txt_box.SelectionLength = 0;
@@ -316,7 +317,7 @@
             this.roomtype_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.roomtype_cmb.FormattingEnabled = true;
-            this.roomtype_cmb.ItemHeight = 23;
+            this.roomtype_cmb.ItemHeight = 24;
             this.roomtype_cmb.Items.AddRange(new object[] {
             "Lecture Hall",
             "PC Lab",
@@ -324,7 +325,7 @@
             this.roomtype_cmb.Location = new System.Drawing.Point(389, 251);
             this.roomtype_cmb.Name = "roomtype_cmb";
             this.roomtype_cmb.PromptText = "Select Room Type";
-            this.roomtype_cmb.Size = new System.Drawing.Size(200, 29);
+            this.roomtype_cmb.Size = new System.Drawing.Size(200, 30);
             this.roomtype_cmb.TabIndex = 35;
             this.roomtype_cmb.UseSelectable = true;
             // 
@@ -333,12 +334,12 @@
             this.room_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.room_cmb.FormattingEnabled = true;
-            this.room_cmb.ItemHeight = 23;
+            this.room_cmb.ItemHeight = 24;
             this.room_cmb.Location = new System.Drawing.Point(389, 129);
             this.room_cmb.MaxDropDownItems = 100;
             this.room_cmb.Name = "room_cmb";
             this.room_cmb.PromptText = "Select Room";
-            this.room_cmb.Size = new System.Drawing.Size(200, 29);
+            this.room_cmb.Size = new System.Drawing.Size(200, 30);
             this.room_cmb.TabIndex = 34;
             this.room_cmb.UseSelectable = true;
             this.room_cmb.DropDown += new System.EventHandler(this.room_cmb_DropDown);
@@ -348,12 +349,12 @@
             this.building_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.building_cmb.FormattingEnabled = true;
-            this.building_cmb.ItemHeight = 23;
+            this.building_cmb.ItemHeight = 24;
             this.building_cmb.Location = new System.Drawing.Point(389, 72);
             this.building_cmb.MaxDropDownItems = 10;
             this.building_cmb.Name = "building_cmb";
             this.building_cmb.PromptText = "Select Building";
-            this.building_cmb.Size = new System.Drawing.Size(200, 29);
+            this.building_cmb.Size = new System.Drawing.Size(200, 30);
             this.building_cmb.TabIndex = 33;
             this.building_cmb.UseSelectable = true;
             this.building_cmb.DropDown += new System.EventHandler(this.building_cmb_DropDown);
@@ -756,6 +757,7 @@
             this.btnHeaderSessions.TabIndex = 45;
             this.btnHeaderSessions.Text = "Sessions";
             this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            this.btnHeaderSessions.Click += new System.EventHandler(this.btnHeaderSessions_Click);
             // 
             // btnHeaderRooms
             // 

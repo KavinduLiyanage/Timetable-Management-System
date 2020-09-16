@@ -68,15 +68,15 @@ namespace TimetableManagementSystem.Lecturers
                 }
                 else if (cmbLecLevel.Text.Equals("Senior Lecturer(HG)"))
                 {
-                    LecturerRank = 4;
+                    LecturerRank = 3;
                 }
                 else if (cmbLecLevel.Text.Equals("Senior Lecturer"))
                 {
-                    LecturerRank = 5;
+                    LecturerRank = 4;
                 }
                 else if (cmbLecLevel.Text.Equals("Lecturer"))
                 {
-                    LecturerRank = 3;
+                    LecturerRank = 5;
                 }
                 else if (cmbLecLevel.Text.Equals("Assistant Lecturer"))
                 {
@@ -90,6 +90,30 @@ namespace TimetableManagementSystem.Lecturers
 
                 con.Open();
                 cmd.ExecuteNonQuery();
+
+                SqlCommand command = new SqlCommand("SELECT TOP(1) LecturerID FROM Lecturers ORDER BY 1 DESC", con);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                reader.Read();
+
+                string data = reader["LecturerID"].ToString();
+
+                reader.Close();
+
+                con.Close();
+
+                SqlCommand command2 = new SqlCommand("UPDATE Lecturers SET LecRank = @LecRank Where LecturerID = @LecturerID ", con);
+                command2.CommandType = CommandType.Text;
+
+                command2.Parameters.AddWithValue("@LecRank", LecturerRank+"."+data);
+
+                command2.Parameters.AddWithValue("@LecturerID", data);
+
+                con.Open();
+
+                command2.ExecuteNonQuery();
+
                 con.Close();
 
                 GetLecturers();
@@ -165,15 +189,15 @@ namespace TimetableManagementSystem.Lecturers
                 }
                 else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer(HG)"))
                 {
-                    LecturerRank = 4;
+                    LecturerRank = 3;
                 }
                 else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer"))
                 {
-                    LecturerRank = 5;
+                    LecturerRank = 4;
                 }
                 else if (cmbLecLevelEdit.Text.Equals("Lecturer"))
                 {
-                    LecturerRank = 3;
+                    LecturerRank = 5;
                 }
                 else if (cmbLecLevelEdit.Text.Equals("Assistant Lecturer"))
                 {
@@ -183,7 +207,7 @@ namespace TimetableManagementSystem.Lecturers
                 {
                     LecturerRank = 7;
                 }
-                cmd.Parameters.AddWithValue("@lecrank", LecturerRank);
+                cmd.Parameters.AddWithValue("@lecrank", LecturerRank+"."+ this.LecturerID);
                 cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
 
                 con.Open();

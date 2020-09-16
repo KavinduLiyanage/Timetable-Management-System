@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedOp\Advanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvancedOp\Advanced.Designer.cs">
+      <DependentUpon>Advanced.cs</DependentUpon>
+    </Compile>
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <Compile Include="Working Days\Add Number of Working Days.Designer.cs">
       <DependentUpon>Add Number of Working Days.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdvancedOp\Advanced.resx">
+      <DependentUpon>Advanced.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>

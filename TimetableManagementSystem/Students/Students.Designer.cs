@@ -28,30 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.genSubGrpId = new MetroFramework.Controls.MetroTabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.genSubIdSearchBox = new MetroFramework.Controls.MetroTextBox();
-            this.genSubIdDltBtn = new MetroFramework.Controls.MetroButton();
-            this.conSubAddBtn = new MetroFramework.Controls.MetroButton();
-            this.genSubIdBtn = new MetroFramework.Controls.MetroButton();
-            this.genSubIdData = new System.Windows.Forms.DataGridView();
-            this.genSubIdSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
-            this.genGrpID = new MetroFramework.Controls.MetroTabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.genIdSearchBox = new MetroFramework.Controls.MetroTextBox();
-            this.genIdDltBtn = new MetroFramework.Controls.MetroButton();
-            this.conAddBtn = new MetroFramework.Controls.MetroButton();
-            this.genIdBtn = new MetroFramework.Controls.MetroButton();
-            this.genIdData = new System.Windows.Forms.DataGridView();
-            this.genIdSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
+            this.studentsTab = new MetroFramework.Controls.MetroTabControl();
             this.year = new MetroFramework.Controls.MetroTabPage();
             this.yearTxt = new MetroFramework.Controls.MetroTextBox();
             this.yrSemData = new System.Windows.Forms.DataGridView();
@@ -89,6 +73,22 @@
             this.subGrpNumTxt = new MetroFramework.Controls.MetroTextBox();
             this.subGrpNumData = new System.Windows.Forms.DataGridView();
             this.subGrpNumSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
+            this.genGrpID = new MetroFramework.Controls.MetroTabPage();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.genIdSearchBox = new MetroFramework.Controls.MetroTextBox();
+            this.genIdDltBtn = new MetroFramework.Controls.MetroButton();
+            this.conAddBtn = new MetroFramework.Controls.MetroButton();
+            this.genIdBtn = new MetroFramework.Controls.MetroButton();
+            this.genIdData = new System.Windows.Forms.DataGridView();
+            this.genIdSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
+            this.genSubGrpId = new MetroFramework.Controls.MetroTabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.genSubIdSearchBox = new MetroFramework.Controls.MetroTextBox();
+            this.genSubIdDltBtn = new MetroFramework.Controls.MetroButton();
+            this.conSubAddBtn = new MetroFramework.Controls.MetroButton();
+            this.genSubIdBtn = new MetroFramework.Controls.MetroButton();
+            this.genSubIdData = new System.Windows.Forms.DataGridView();
+            this.genSubIdSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
             this.viewDe = new MetroFramework.Controls.MetroTabPage();
             this.searchBox = new MetroFramework.Controls.MetroTextBox();
             this.viewData = new System.Windows.Forms.DataGridView();
@@ -105,11 +105,7 @@
             this.btnHeaderSessions = new System.Windows.Forms.Button();
             this.btnHeaderGenerate = new System.Windows.Forms.Button();
             this.btnHeaderHome = new System.Windows.Forms.Button();
-            this.metroTabControl1.SuspendLayout();
-            this.genSubGrpId.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.genSubIdData)).BeginInit();
-            this.genGrpID.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.genIdData)).BeginInit();
+            this.studentsTab.SuspendLayout();
             this.year.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yrSemData)).BeginInit();
             this.programme.SuspendLayout();
@@ -118,6 +114,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpNumData)).BeginInit();
             this.subGrpNum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subGrpNumData)).BeginInit();
+            this.genGrpID.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genIdData)).BeginInit();
+            this.genSubGrpId.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genSubIdData)).BeginInit();
             this.viewDe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
@@ -129,341 +129,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroTabControl1
+            // studentsTab
             // 
-            this.metroTabControl1.Controls.Add(this.year);
-            this.metroTabControl1.Controls.Add(this.programme);
-            this.metroTabControl1.Controls.Add(this.grpNum);
-            this.metroTabControl1.Controls.Add(this.subGrpNum);
-            this.metroTabControl1.Controls.Add(this.genGrpID);
-            this.metroTabControl1.Controls.Add(this.genSubGrpId);
-            this.metroTabControl1.Controls.Add(this.viewDe);
-            this.metroTabControl1.Location = new System.Drawing.Point(131, 95);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(811, 486);
-            this.metroTabControl1.TabIndex = 0;
-            this.metroTabControl1.UseSelectable = true;
-            // 
-            // genSubGrpId
-            // 
-            this.genSubGrpId.Controls.Add(this.listView1);
-            this.genSubGrpId.Controls.Add(this.genSubIdSearchBox);
-            this.genSubGrpId.Controls.Add(this.genSubIdDltBtn);
-            this.genSubGrpId.Controls.Add(this.conSubAddBtn);
-            this.genSubGrpId.Controls.Add(this.genSubIdBtn);
-            this.genSubGrpId.Controls.Add(this.genSubIdData);
-            this.genSubGrpId.Controls.Add(this.genSubIdSrtDrpDwn);
-            this.genSubGrpId.HorizontalScrollbarBarColor = true;
-            this.genSubGrpId.HorizontalScrollbarHighlightOnWheel = false;
-            this.genSubGrpId.HorizontalScrollbarSize = 10;
-            this.genSubGrpId.Location = new System.Drawing.Point(4, 38);
-            this.genSubGrpId.Name = "genSubGrpId";
-            this.genSubGrpId.Size = new System.Drawing.Size(803, 444);
-            this.genSubGrpId.TabIndex = 5;
-            this.genSubGrpId.Text = "Generate Sub-Group IDs";
-            this.genSubGrpId.VerticalScrollbarBarColor = true;
-            this.genSubGrpId.VerticalScrollbarHighlightOnWheel = false;
-            this.genSubGrpId.VerticalScrollbarSize = 10;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(45, 111);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(205, 137);
-            this.listView1.TabIndex = 65;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // genSubIdSearchBox
-            // 
-            // 
-            // 
-            // 
-            this.genSubIdSearchBox.CustomButton.Image = null;
-            this.genSubIdSearchBox.CustomButton.Location = new System.Drawing.Point(135, 2);
-            this.genSubIdSearchBox.CustomButton.Name = "";
-            this.genSubIdSearchBox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.genSubIdSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.genSubIdSearchBox.CustomButton.TabIndex = 1;
-            this.genSubIdSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.genSubIdSearchBox.CustomButton.UseSelectable = true;
-            this.genSubIdSearchBox.CustomButton.Visible = false;
-            this.genSubIdSearchBox.DisplayIcon = true;
-            this.genSubIdSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.genSubIdSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.genSubIdSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
-            this.genSubIdSearchBox.IconRight = true;
-            this.genSubIdSearchBox.Lines = new string[0];
-            this.genSubIdSearchBox.Location = new System.Drawing.Point(592, 74);
-            this.genSubIdSearchBox.MaxLength = 32767;
-            this.genSubIdSearchBox.Name = "genSubIdSearchBox";
-            this.genSubIdSearchBox.PasswordChar = '\0';
-            this.genSubIdSearchBox.PromptText = "Search";
-            this.genSubIdSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.genSubIdSearchBox.SelectedText = "";
-            this.genSubIdSearchBox.SelectionLength = 0;
-            this.genSubIdSearchBox.SelectionStart = 0;
-            this.genSubIdSearchBox.ShortcutsEnabled = true;
-            this.genSubIdSearchBox.Size = new System.Drawing.Size(163, 30);
-            this.genSubIdSearchBox.TabIndex = 64;
-            this.genSubIdSearchBox.UseSelectable = true;
-            this.genSubIdSearchBox.WaterMark = "Search";
-            this.genSubIdSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.genSubIdSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genSubIdSearchBox.TextChanged += new System.EventHandler(this.genSubIdSearchBox_TextChanged);
-            this.genSubIdSearchBox.Click += new System.EventHandler(this.genSubIdSearchBox_Click);
-            // 
-            // genSubIdDltBtn
-            // 
-            this.genSubIdDltBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.genSubIdDltBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.genSubIdDltBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.genSubIdDltBtn.Location = new System.Drawing.Point(474, 330);
-            this.genSubIdDltBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.genSubIdDltBtn.Name = "genSubIdDltBtn";
-            this.genSubIdDltBtn.Size = new System.Drawing.Size(161, 40);
-            this.genSubIdDltBtn.TabIndex = 63;
-            this.genSubIdDltBtn.Text = "Delete";
-            this.genSubIdDltBtn.UseCustomBackColor = true;
-            this.genSubIdDltBtn.UseCustomForeColor = true;
-            this.genSubIdDltBtn.UseSelectable = true;
-            this.genSubIdDltBtn.Click += new System.EventHandler(this.genSubIdDltBtn_Click);
-            // 
-            // conSubAddBtn
-            // 
-            this.conSubAddBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.conSubAddBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.conSubAddBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.conSubAddBtn.Location = new System.Drawing.Point(45, 307);
-            this.conSubAddBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.conSubAddBtn.Name = "conSubAddBtn";
-            this.conSubAddBtn.Size = new System.Drawing.Size(205, 40);
-            this.conSubAddBtn.TabIndex = 61;
-            this.conSubAddBtn.Text = "Confirm and Add";
-            this.conSubAddBtn.UseCustomBackColor = true;
-            this.conSubAddBtn.UseCustomForeColor = true;
-            this.conSubAddBtn.UseSelectable = true;
-            this.conSubAddBtn.Click += new System.EventHandler(this.conSubAddBtn_Click);
-            // 
-            // genSubIdBtn
-            // 
-            this.genSubIdBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.genSubIdBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.genSubIdBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.genSubIdBtn.Location = new System.Drawing.Point(45, 263);
-            this.genSubIdBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.genSubIdBtn.Name = "genSubIdBtn";
-            this.genSubIdBtn.Size = new System.Drawing.Size(205, 40);
-            this.genSubIdBtn.TabIndex = 60;
-            this.genSubIdBtn.Text = "Generate Sub-Grp ID";
-            this.genSubIdBtn.UseCustomBackColor = true;
-            this.genSubIdBtn.UseCustomForeColor = true;
-            this.genSubIdBtn.UseSelectable = true;
-            this.genSubIdBtn.Click += new System.EventHandler(this.genSubIdBtn_Click);
-            // 
-            // genSubIdData
-            // 
-            this.genSubIdData.AllowUserToAddRows = false;
-            this.genSubIdData.AllowUserToDeleteRows = false;
-            this.genSubIdData.AllowUserToOrderColumns = true;
-            this.genSubIdData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.genSubIdData.BackgroundColor = System.Drawing.Color.White;
-            this.genSubIdData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.genSubIdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.genSubIdData.ColumnHeadersHeight = 29;
-            this.genSubIdData.Location = new System.Drawing.Point(367, 110);
-            this.genSubIdData.MultiSelect = false;
-            this.genSubIdData.Name = "genSubIdData";
-            this.genSubIdData.ReadOnly = true;
-            this.genSubIdData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.genSubIdData.RowHeadersWidth = 51;
-            this.genSubIdData.RowTemplate.Height = 24;
-            this.genSubIdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.genSubIdData.Size = new System.Drawing.Size(390, 215);
-            this.genSubIdData.TabIndex = 58;
-            this.genSubIdData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genSubIdData_CellClick);
-            // 
-            // genSubIdSrtDrpDwn
-            // 
-            this.genSubIdSrtDrpDwn.FormattingEnabled = true;
-            this.genSubIdSrtDrpDwn.ItemHeight = 23;
-            this.genSubIdSrtDrpDwn.Items.AddRange(new object[] {
-            "Group Number",
-            "ID"});
-            this.genSubIdSrtDrpDwn.Location = new System.Drawing.Point(474, 74);
-            this.genSubIdSrtDrpDwn.Name = "genSubIdSrtDrpDwn";
-            this.genSubIdSrtDrpDwn.PromptText = "Search By...";
-            this.genSubIdSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
-            this.genSubIdSrtDrpDwn.TabIndex = 56;
-            this.genSubIdSrtDrpDwn.UseSelectable = true;
-            // 
-            // genGrpID
-            // 
-            this.genGrpID.Controls.Add(this.listView2);
-            this.genGrpID.Controls.Add(this.genIdSearchBox);
-            this.genGrpID.Controls.Add(this.genIdDltBtn);
-            this.genGrpID.Controls.Add(this.conAddBtn);
-            this.genGrpID.Controls.Add(this.genIdBtn);
-            this.genGrpID.Controls.Add(this.genIdData);
-            this.genGrpID.Controls.Add(this.genIdSrtDrpDwn);
-            this.genGrpID.HorizontalScrollbarBarColor = true;
-            this.genGrpID.HorizontalScrollbarHighlightOnWheel = false;
-            this.genGrpID.HorizontalScrollbarSize = 10;
-            this.genGrpID.Location = new System.Drawing.Point(4, 38);
-            this.genGrpID.Name = "genGrpID";
-            this.genGrpID.Size = new System.Drawing.Size(803, 444);
-            this.genGrpID.TabIndex = 3;
-            this.genGrpID.Text = "Generate Group IDs";
-            this.genGrpID.VerticalScrollbarBarColor = true;
-            this.genGrpID.VerticalScrollbarHighlightOnWheel = false;
-            this.genGrpID.VerticalScrollbarSize = 10;
-            // 
-            // listView2
-            // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(45, 110);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(205, 137);
-            this.listView2.TabIndex = 66;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // genIdSearchBox
-            // 
-            // 
-            // 
-            // 
-            this.genIdSearchBox.CustomButton.Image = null;
-            this.genIdSearchBox.CustomButton.Location = new System.Drawing.Point(135, 2);
-            this.genIdSearchBox.CustomButton.Name = "";
-            this.genIdSearchBox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.genIdSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.genIdSearchBox.CustomButton.TabIndex = 1;
-            this.genIdSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.genIdSearchBox.CustomButton.UseSelectable = true;
-            this.genIdSearchBox.CustomButton.Visible = false;
-            this.genIdSearchBox.DisplayIcon = true;
-            this.genIdSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.genIdSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.genIdSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
-            this.genIdSearchBox.IconRight = true;
-            this.genIdSearchBox.Lines = new string[0];
-            this.genIdSearchBox.Location = new System.Drawing.Point(592, 74);
-            this.genIdSearchBox.MaxLength = 32767;
-            this.genIdSearchBox.Name = "genIdSearchBox";
-            this.genIdSearchBox.PasswordChar = '\0';
-            this.genIdSearchBox.PromptText = "Search";
-            this.genIdSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.genIdSearchBox.SelectedText = "";
-            this.genIdSearchBox.SelectionLength = 0;
-            this.genIdSearchBox.SelectionStart = 0;
-            this.genIdSearchBox.ShortcutsEnabled = true;
-            this.genIdSearchBox.Size = new System.Drawing.Size(163, 30);
-            this.genIdSearchBox.TabIndex = 64;
-            this.genIdSearchBox.UseSelectable = true;
-            this.genIdSearchBox.WaterMark = "Search";
-            this.genIdSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.genIdSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genIdSearchBox.TextChanged += new System.EventHandler(this.genIdSearchBox_TextChanged);
-            this.genIdSearchBox.Click += new System.EventHandler(this.genIdSearchBox_Click);
-            // 
-            // genIdDltBtn
-            // 
-            this.genIdDltBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.genIdDltBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.genIdDltBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.genIdDltBtn.Location = new System.Drawing.Point(474, 330);
-            this.genIdDltBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.genIdDltBtn.Name = "genIdDltBtn";
-            this.genIdDltBtn.Size = new System.Drawing.Size(161, 40);
-            this.genIdDltBtn.TabIndex = 63;
-            this.genIdDltBtn.Text = "Delete";
-            this.genIdDltBtn.UseCustomBackColor = true;
-            this.genIdDltBtn.UseCustomForeColor = true;
-            this.genIdDltBtn.UseSelectable = true;
-            this.genIdDltBtn.Click += new System.EventHandler(this.genIdDltBtn_Click);
-            // 
-            // conAddBtn
-            // 
-            this.conAddBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.conAddBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.conAddBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.conAddBtn.Location = new System.Drawing.Point(45, 307);
-            this.conAddBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.conAddBtn.Name = "conAddBtn";
-            this.conAddBtn.Size = new System.Drawing.Size(205, 40);
-            this.conAddBtn.TabIndex = 61;
-            this.conAddBtn.Text = "Confirm and Add";
-            this.conAddBtn.UseCustomBackColor = true;
-            this.conAddBtn.UseCustomForeColor = true;
-            this.conAddBtn.UseSelectable = true;
-            this.conAddBtn.Click += new System.EventHandler(this.conAddBtn_Click);
-            // 
-            // genIdBtn
-            // 
-            this.genIdBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.genIdBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.genIdBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.genIdBtn.Location = new System.Drawing.Point(45, 263);
-            this.genIdBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.genIdBtn.Name = "genIdBtn";
-            this.genIdBtn.Size = new System.Drawing.Size(205, 40);
-            this.genIdBtn.TabIndex = 60;
-            this.genIdBtn.Text = "Generate Group ID";
-            this.genIdBtn.UseCustomBackColor = true;
-            this.genIdBtn.UseCustomForeColor = true;
-            this.genIdBtn.UseSelectable = true;
-            this.genIdBtn.Click += new System.EventHandler(this.genIdBtn_Click);
-            // 
-            // genIdData
-            // 
-            this.genIdData.AllowUserToAddRows = false;
-            this.genIdData.AllowUserToDeleteRows = false;
-            this.genIdData.AllowUserToOrderColumns = true;
-            this.genIdData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.genIdData.BackgroundColor = System.Drawing.Color.White;
-            this.genIdData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.genIdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.genIdData.ColumnHeadersHeight = 29;
-            this.genIdData.Location = new System.Drawing.Point(367, 110);
-            this.genIdData.MultiSelect = false;
-            this.genIdData.Name = "genIdData";
-            this.genIdData.ReadOnly = true;
-            this.genIdData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.genIdData.RowHeadersWidth = 51;
-            this.genIdData.RowTemplate.Height = 24;
-            this.genIdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.genIdData.Size = new System.Drawing.Size(390, 215);
-            this.genIdData.TabIndex = 58;
-            this.genIdData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genIdData_CellClick);
-            // 
-            // genIdSrtDrpDwn
-            // 
-            this.genIdSrtDrpDwn.FormattingEnabled = true;
-            this.genIdSrtDrpDwn.ItemHeight = 23;
-            this.genIdSrtDrpDwn.Items.AddRange(new object[] {
-            "Group Number",
-            "ID"});
-            this.genIdSrtDrpDwn.Location = new System.Drawing.Point(474, 74);
-            this.genIdSrtDrpDwn.Name = "genIdSrtDrpDwn";
-            this.genIdSrtDrpDwn.PromptText = "Search By...";
-            this.genIdSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
-            this.genIdSrtDrpDwn.TabIndex = 56;
-            this.genIdSrtDrpDwn.UseSelectable = true;
+            this.studentsTab.Controls.Add(this.year);
+            this.studentsTab.Controls.Add(this.programme);
+            this.studentsTab.Controls.Add(this.grpNum);
+            this.studentsTab.Controls.Add(this.subGrpNum);
+            this.studentsTab.Controls.Add(this.genGrpID);
+            this.studentsTab.Controls.Add(this.genSubGrpId);
+            this.studentsTab.Controls.Add(this.viewDe);
+            this.studentsTab.Location = new System.Drawing.Point(131, 95);
+            this.studentsTab.Name = "studentsTab";
+            this.studentsTab.SelectedIndex = 0;
+            this.studentsTab.Size = new System.Drawing.Size(811, 486);
+            this.studentsTab.TabIndex = 0;
+            this.studentsTab.UseSelectable = true;
             // 
             // year
             // 
@@ -1319,6 +999,326 @@
             this.subGrpNumSrtDrpDwn.TabIndex = 56;
             this.subGrpNumSrtDrpDwn.UseSelectable = true;
             // 
+            // genGrpID
+            // 
+            this.genGrpID.Controls.Add(this.listView2);
+            this.genGrpID.Controls.Add(this.genIdSearchBox);
+            this.genGrpID.Controls.Add(this.genIdDltBtn);
+            this.genGrpID.Controls.Add(this.conAddBtn);
+            this.genGrpID.Controls.Add(this.genIdBtn);
+            this.genGrpID.Controls.Add(this.genIdData);
+            this.genGrpID.Controls.Add(this.genIdSrtDrpDwn);
+            this.genGrpID.HorizontalScrollbarBarColor = true;
+            this.genGrpID.HorizontalScrollbarHighlightOnWheel = false;
+            this.genGrpID.HorizontalScrollbarSize = 10;
+            this.genGrpID.Location = new System.Drawing.Point(4, 38);
+            this.genGrpID.Name = "genGrpID";
+            this.genGrpID.Size = new System.Drawing.Size(803, 444);
+            this.genGrpID.TabIndex = 3;
+            this.genGrpID.Text = "Generate Group IDs";
+            this.genGrpID.VerticalScrollbarBarColor = true;
+            this.genGrpID.VerticalScrollbarHighlightOnWheel = false;
+            this.genGrpID.VerticalScrollbarSize = 10;
+            // 
+            // listView2
+            // 
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(45, 110);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(205, 137);
+            this.listView2.TabIndex = 66;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // genIdSearchBox
+            // 
+            // 
+            // 
+            // 
+            this.genIdSearchBox.CustomButton.Image = null;
+            this.genIdSearchBox.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.genIdSearchBox.CustomButton.Name = "";
+            this.genIdSearchBox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.genIdSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.genIdSearchBox.CustomButton.TabIndex = 1;
+            this.genIdSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.genIdSearchBox.CustomButton.UseSelectable = true;
+            this.genIdSearchBox.CustomButton.Visible = false;
+            this.genIdSearchBox.DisplayIcon = true;
+            this.genIdSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.genIdSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.genIdSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
+            this.genIdSearchBox.IconRight = true;
+            this.genIdSearchBox.Lines = new string[0];
+            this.genIdSearchBox.Location = new System.Drawing.Point(592, 74);
+            this.genIdSearchBox.MaxLength = 32767;
+            this.genIdSearchBox.Name = "genIdSearchBox";
+            this.genIdSearchBox.PasswordChar = '\0';
+            this.genIdSearchBox.PromptText = "Search";
+            this.genIdSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.genIdSearchBox.SelectedText = "";
+            this.genIdSearchBox.SelectionLength = 0;
+            this.genIdSearchBox.SelectionStart = 0;
+            this.genIdSearchBox.ShortcutsEnabled = true;
+            this.genIdSearchBox.Size = new System.Drawing.Size(163, 30);
+            this.genIdSearchBox.TabIndex = 64;
+            this.genIdSearchBox.UseSelectable = true;
+            this.genIdSearchBox.WaterMark = "Search";
+            this.genIdSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.genIdSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genIdSearchBox.TextChanged += new System.EventHandler(this.genIdSearchBox_TextChanged);
+            this.genIdSearchBox.Click += new System.EventHandler(this.genIdSearchBox_Click);
+            // 
+            // genIdDltBtn
+            // 
+            this.genIdDltBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.genIdDltBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.genIdDltBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.genIdDltBtn.Location = new System.Drawing.Point(474, 330);
+            this.genIdDltBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.genIdDltBtn.Name = "genIdDltBtn";
+            this.genIdDltBtn.Size = new System.Drawing.Size(161, 40);
+            this.genIdDltBtn.TabIndex = 63;
+            this.genIdDltBtn.Text = "Delete";
+            this.genIdDltBtn.UseCustomBackColor = true;
+            this.genIdDltBtn.UseCustomForeColor = true;
+            this.genIdDltBtn.UseSelectable = true;
+            this.genIdDltBtn.Click += new System.EventHandler(this.genIdDltBtn_Click);
+            // 
+            // conAddBtn
+            // 
+            this.conAddBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.conAddBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.conAddBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.conAddBtn.Location = new System.Drawing.Point(45, 307);
+            this.conAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.conAddBtn.Name = "conAddBtn";
+            this.conAddBtn.Size = new System.Drawing.Size(205, 40);
+            this.conAddBtn.TabIndex = 61;
+            this.conAddBtn.Text = "Confirm and Add";
+            this.conAddBtn.UseCustomBackColor = true;
+            this.conAddBtn.UseCustomForeColor = true;
+            this.conAddBtn.UseSelectable = true;
+            this.conAddBtn.Click += new System.EventHandler(this.conAddBtn_Click);
+            // 
+            // genIdBtn
+            // 
+            this.genIdBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.genIdBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.genIdBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.genIdBtn.Location = new System.Drawing.Point(45, 263);
+            this.genIdBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.genIdBtn.Name = "genIdBtn";
+            this.genIdBtn.Size = new System.Drawing.Size(205, 40);
+            this.genIdBtn.TabIndex = 60;
+            this.genIdBtn.Text = "Generate Group ID";
+            this.genIdBtn.UseCustomBackColor = true;
+            this.genIdBtn.UseCustomForeColor = true;
+            this.genIdBtn.UseSelectable = true;
+            this.genIdBtn.Click += new System.EventHandler(this.genIdBtn_Click);
+            // 
+            // genIdData
+            // 
+            this.genIdData.AllowUserToAddRows = false;
+            this.genIdData.AllowUserToDeleteRows = false;
+            this.genIdData.AllowUserToOrderColumns = true;
+            this.genIdData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.genIdData.BackgroundColor = System.Drawing.Color.White;
+            this.genIdData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.genIdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.genIdData.ColumnHeadersHeight = 29;
+            this.genIdData.Location = new System.Drawing.Point(367, 110);
+            this.genIdData.MultiSelect = false;
+            this.genIdData.Name = "genIdData";
+            this.genIdData.ReadOnly = true;
+            this.genIdData.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.genIdData.RowHeadersWidth = 51;
+            this.genIdData.RowTemplate.Height = 24;
+            this.genIdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.genIdData.Size = new System.Drawing.Size(390, 215);
+            this.genIdData.TabIndex = 58;
+            this.genIdData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genIdData_CellClick);
+            // 
+            // genIdSrtDrpDwn
+            // 
+            this.genIdSrtDrpDwn.FormattingEnabled = true;
+            this.genIdSrtDrpDwn.ItemHeight = 23;
+            this.genIdSrtDrpDwn.Items.AddRange(new object[] {
+            "Group Number",
+            "ID"});
+            this.genIdSrtDrpDwn.Location = new System.Drawing.Point(474, 74);
+            this.genIdSrtDrpDwn.Name = "genIdSrtDrpDwn";
+            this.genIdSrtDrpDwn.PromptText = "Search By...";
+            this.genIdSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
+            this.genIdSrtDrpDwn.TabIndex = 56;
+            this.genIdSrtDrpDwn.UseSelectable = true;
+            // 
+            // genSubGrpId
+            // 
+            this.genSubGrpId.Controls.Add(this.listView1);
+            this.genSubGrpId.Controls.Add(this.genSubIdSearchBox);
+            this.genSubGrpId.Controls.Add(this.genSubIdDltBtn);
+            this.genSubGrpId.Controls.Add(this.conSubAddBtn);
+            this.genSubGrpId.Controls.Add(this.genSubIdBtn);
+            this.genSubGrpId.Controls.Add(this.genSubIdData);
+            this.genSubGrpId.Controls.Add(this.genSubIdSrtDrpDwn);
+            this.genSubGrpId.HorizontalScrollbarBarColor = true;
+            this.genSubGrpId.HorizontalScrollbarHighlightOnWheel = false;
+            this.genSubGrpId.HorizontalScrollbarSize = 10;
+            this.genSubGrpId.Location = new System.Drawing.Point(4, 38);
+            this.genSubGrpId.Name = "genSubGrpId";
+            this.genSubGrpId.Size = new System.Drawing.Size(803, 444);
+            this.genSubGrpId.TabIndex = 5;
+            this.genSubGrpId.Text = "Generate Sub-Group IDs";
+            this.genSubGrpId.VerticalScrollbarBarColor = true;
+            this.genSubGrpId.VerticalScrollbarHighlightOnWheel = false;
+            this.genSubGrpId.VerticalScrollbarSize = 10;
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(45, 111);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(205, 137);
+            this.listView1.TabIndex = 65;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // genSubIdSearchBox
+            // 
+            // 
+            // 
+            // 
+            this.genSubIdSearchBox.CustomButton.Image = null;
+            this.genSubIdSearchBox.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.genSubIdSearchBox.CustomButton.Name = "";
+            this.genSubIdSearchBox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.genSubIdSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.genSubIdSearchBox.CustomButton.TabIndex = 1;
+            this.genSubIdSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.genSubIdSearchBox.CustomButton.UseSelectable = true;
+            this.genSubIdSearchBox.CustomButton.Visible = false;
+            this.genSubIdSearchBox.DisplayIcon = true;
+            this.genSubIdSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.genSubIdSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.genSubIdSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
+            this.genSubIdSearchBox.IconRight = true;
+            this.genSubIdSearchBox.Lines = new string[0];
+            this.genSubIdSearchBox.Location = new System.Drawing.Point(592, 74);
+            this.genSubIdSearchBox.MaxLength = 32767;
+            this.genSubIdSearchBox.Name = "genSubIdSearchBox";
+            this.genSubIdSearchBox.PasswordChar = '\0';
+            this.genSubIdSearchBox.PromptText = "Search";
+            this.genSubIdSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.genSubIdSearchBox.SelectedText = "";
+            this.genSubIdSearchBox.SelectionLength = 0;
+            this.genSubIdSearchBox.SelectionStart = 0;
+            this.genSubIdSearchBox.ShortcutsEnabled = true;
+            this.genSubIdSearchBox.Size = new System.Drawing.Size(163, 30);
+            this.genSubIdSearchBox.TabIndex = 64;
+            this.genSubIdSearchBox.UseSelectable = true;
+            this.genSubIdSearchBox.WaterMark = "Search";
+            this.genSubIdSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.genSubIdSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genSubIdSearchBox.TextChanged += new System.EventHandler(this.genSubIdSearchBox_TextChanged);
+            this.genSubIdSearchBox.Click += new System.EventHandler(this.genSubIdSearchBox_Click);
+            // 
+            // genSubIdDltBtn
+            // 
+            this.genSubIdDltBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.genSubIdDltBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.genSubIdDltBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.genSubIdDltBtn.Location = new System.Drawing.Point(474, 330);
+            this.genSubIdDltBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.genSubIdDltBtn.Name = "genSubIdDltBtn";
+            this.genSubIdDltBtn.Size = new System.Drawing.Size(161, 40);
+            this.genSubIdDltBtn.TabIndex = 63;
+            this.genSubIdDltBtn.Text = "Delete";
+            this.genSubIdDltBtn.UseCustomBackColor = true;
+            this.genSubIdDltBtn.UseCustomForeColor = true;
+            this.genSubIdDltBtn.UseSelectable = true;
+            this.genSubIdDltBtn.Click += new System.EventHandler(this.genSubIdDltBtn_Click);
+            // 
+            // conSubAddBtn
+            // 
+            this.conSubAddBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.conSubAddBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.conSubAddBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.conSubAddBtn.Location = new System.Drawing.Point(45, 307);
+            this.conSubAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.conSubAddBtn.Name = "conSubAddBtn";
+            this.conSubAddBtn.Size = new System.Drawing.Size(205, 40);
+            this.conSubAddBtn.TabIndex = 61;
+            this.conSubAddBtn.Text = "Confirm and Add";
+            this.conSubAddBtn.UseCustomBackColor = true;
+            this.conSubAddBtn.UseCustomForeColor = true;
+            this.conSubAddBtn.UseSelectable = true;
+            this.conSubAddBtn.Click += new System.EventHandler(this.conSubAddBtn_Click);
+            // 
+            // genSubIdBtn
+            // 
+            this.genSubIdBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.genSubIdBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.genSubIdBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.genSubIdBtn.Location = new System.Drawing.Point(45, 263);
+            this.genSubIdBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.genSubIdBtn.Name = "genSubIdBtn";
+            this.genSubIdBtn.Size = new System.Drawing.Size(205, 40);
+            this.genSubIdBtn.TabIndex = 60;
+            this.genSubIdBtn.Text = "Generate Sub-Grp ID";
+            this.genSubIdBtn.UseCustomBackColor = true;
+            this.genSubIdBtn.UseCustomForeColor = true;
+            this.genSubIdBtn.UseSelectable = true;
+            this.genSubIdBtn.Click += new System.EventHandler(this.genSubIdBtn_Click);
+            // 
+            // genSubIdData
+            // 
+            this.genSubIdData.AllowUserToAddRows = false;
+            this.genSubIdData.AllowUserToDeleteRows = false;
+            this.genSubIdData.AllowUserToOrderColumns = true;
+            this.genSubIdData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.genSubIdData.BackgroundColor = System.Drawing.Color.White;
+            this.genSubIdData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.genSubIdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.genSubIdData.ColumnHeadersHeight = 29;
+            this.genSubIdData.Location = new System.Drawing.Point(367, 110);
+            this.genSubIdData.MultiSelect = false;
+            this.genSubIdData.Name = "genSubIdData";
+            this.genSubIdData.ReadOnly = true;
+            this.genSubIdData.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.genSubIdData.RowHeadersWidth = 51;
+            this.genSubIdData.RowTemplate.Height = 24;
+            this.genSubIdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.genSubIdData.Size = new System.Drawing.Size(390, 215);
+            this.genSubIdData.TabIndex = 58;
+            this.genSubIdData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genSubIdData_CellClick);
+            // 
+            // genSubIdSrtDrpDwn
+            // 
+            this.genSubIdSrtDrpDwn.FormattingEnabled = true;
+            this.genSubIdSrtDrpDwn.ItemHeight = 23;
+            this.genSubIdSrtDrpDwn.Items.AddRange(new object[] {
+            "Group Number",
+            "ID"});
+            this.genSubIdSrtDrpDwn.Location = new System.Drawing.Point(474, 74);
+            this.genSubIdSrtDrpDwn.Name = "genSubIdSrtDrpDwn";
+            this.genSubIdSrtDrpDwn.PromptText = "Search By...";
+            this.genSubIdSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
+            this.genSubIdSrtDrpDwn.TabIndex = 56;
+            this.genSubIdSrtDrpDwn.UseSelectable = true;
+            // 
             // viewDe
             // 
             this.viewDe.Controls.Add(this.searchBox);
@@ -1517,6 +1517,7 @@
             this.btnHeaderAdvanced.TabIndex = 46;
             this.btnHeaderAdvanced.Text = "Advanced";
             this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            this.btnHeaderAdvanced.Click += new System.EventHandler(this.btnHeaderAdvanced_Click);
             // 
             // btnHeaderRooms
             // 
@@ -1530,6 +1531,7 @@
             this.btnHeaderRooms.TabIndex = 45;
             this.btnHeaderRooms.Text = "Rooms";
             this.btnHeaderRooms.UseVisualStyleBackColor = false;
+            this.btnHeaderRooms.Click += new System.EventHandler(this.btnHeaderRooms_Click);
             // 
             // btnHeaderSessions
             // 
@@ -1543,6 +1545,7 @@
             this.btnHeaderSessions.TabIndex = 44;
             this.btnHeaderSessions.Text = "Sessions";
             this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            this.btnHeaderSessions.Click += new System.EventHandler(this.btnHeaderSessions_Click);
             // 
             // btnHeaderGenerate
             // 
@@ -1556,6 +1559,7 @@
             this.btnHeaderGenerate.TabIndex = 43;
             this.btnHeaderGenerate.Text = "Generate";
             this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            this.btnHeaderGenerate.Click += new System.EventHandler(this.btnHeaderGenerate_Click);
             // 
             // btnHeaderHome
             // 
@@ -1591,7 +1595,7 @@
             this.Controls.Add(this.btnSideNavSubjects);
             this.Controls.Add(this.btnSideNavLecturers);
             this.Controls.Add(this.btnSideNavWorking);
-            this.Controls.Add(this.metroTabControl1);
+            this.Controls.Add(this.studentsTab);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Students";
@@ -1599,11 +1603,7 @@
             this.Resizable = false;
             this.Text = "Students";
             this.Load += new System.EventHandler(this.Students_Load);
-            this.metroTabControl1.ResumeLayout(false);
-            this.genSubGrpId.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.genSubIdData)).EndInit();
-            this.genGrpID.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.genIdData)).EndInit();
+            this.studentsTab.ResumeLayout(false);
             this.year.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.yrSemData)).EndInit();
             this.programme.ResumeLayout(false);
@@ -1612,6 +1612,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpNumData)).EndInit();
             this.subGrpNum.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.subGrpNumData)).EndInit();
+            this.genGrpID.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.genIdData)).EndInit();
+            this.genSubGrpId.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.genSubIdData)).EndInit();
             this.viewDe.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.viewData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).EndInit();
@@ -1628,7 +1632,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabControl studentsTab;
         private MetroFramework.Controls.MetroTabPage year;
         private MetroFramework.Controls.MetroTabPage programme;
         private MetroFramework.Controls.MetroTabPage grpNum;

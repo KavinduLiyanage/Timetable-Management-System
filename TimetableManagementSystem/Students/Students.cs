@@ -727,12 +727,16 @@ namespace TimetableManagementSystem.Students
 
         private void btnSideNavWorking_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
+            workingDays.ShowDialog();
         }
 
         private void btnSideNavLocations_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
         }
 
         private void grpNumEditBtn_Click(object sender, EventArgs e)
@@ -1539,6 +1543,28 @@ namespace TimetableManagementSystem.Students
                 DataGridViewRow selectRow = genSubIdData.Rows[index];
                 genSubGrpID1 = Int32.Parse(selectRow.Cells[0].Value.ToString());
             }    
+        }
+
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderRooms_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHeaderAdvanced_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdvancedOp.Advanced advc = new AdvancedOp.Advanced();
+            advc.ShowDialog();
+        }
+
+        private void btnHeaderGenerate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -683,6 +683,8 @@ namespace TimetableManagementSystem.Working_Days
             this.Hide();
         }
 
+        //--------------------Header Buttons--------------------
+
         private void btnHeaderHome_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -690,9 +692,68 @@ namespace TimetableManagementSystem.Working_Days
             homePage.ShowDialog();
         }
 
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
+        }
+
         private void metroTabPage2_Click(object sender, EventArgs e)
         {
 
         }
+
+        //--------------------Side Nav Buttons--------------------
+
+        private void btnSideNavWorking_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
+            workingDays.ShowDialog();
+        }
+
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
+            addSubject.ShowDialog();
+        }
+
+        private void btnSideNavStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Students.Students stu = new Students.Students();
+            stu.ShowDialog();
+        }
+
+        private void btnSideNavTags_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags.Tags tag = new Tags.Tags();
+            tag.ShowDialog();
+        }
+
+        private void btnSideNavLocations_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
+        }
+
     }
 }
