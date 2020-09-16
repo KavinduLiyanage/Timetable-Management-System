@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
             this.viewloc_tab = new System.Windows.Forms.TabPage();
             this.locationview_panel = new System.Windows.Forms.Panel();
@@ -121,9 +121,9 @@
             this.viewloc_tab.Controls.Add(this.locationview_panel);
             this.viewloc_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewloc_tab.Location = new System.Drawing.Point(4, 37);
-            this.viewloc_tab.Margin = new System.Windows.Forms.Padding(7);
+            this.viewloc_tab.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.viewloc_tab.Name = "viewloc_tab";
-            this.viewloc_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.viewloc_tab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.viewloc_tab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.viewloc_tab.Size = new System.Drawing.Size(780, 420);
             this.viewloc_tab.TabIndex = 0;
@@ -163,9 +163,9 @@
             // 
             // 
             this.search_txt_box.CustomButton.Image = null;
-            this.search_txt_box.CustomButton.Location = new System.Drawing.Point(152, 2);
+            this.search_txt_box.CustomButton.Location = new System.Drawing.Point(114, 2);
             this.search_txt_box.CustomButton.Name = "";
-            this.search_txt_box.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.search_txt_box.CustomButton.Size = new System.Drawing.Size(19, 20);
             this.search_txt_box.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.search_txt_box.CustomButton.TabIndex = 1;
             this.search_txt_box.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -195,14 +195,14 @@
             this.loc_dgridv.AllowUserToResizeRows = false;
             this.loc_dgridv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.loc_dgridv.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.loc_dgridv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.loc_dgridv.ColumnHeadersHeight = 29;
             this.loc_dgridv.Location = new System.Drawing.Point(22, 80);
             this.loc_dgridv.MultiSelect = false;
@@ -210,11 +210,11 @@
             this.loc_dgridv.ReadOnly = true;
             this.loc_dgridv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.loc_dgridv.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.loc_dgridv.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.loc_dgridv.RowTemplate.Height = 24;
             this.loc_dgridv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.loc_dgridv.Size = new System.Drawing.Size(738, 316);
@@ -267,7 +267,7 @@
             this.clr_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.clr_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.clr_btn.Location = new System.Drawing.Point(404, 328);
-            this.clr_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clr_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.clr_btn.Name = "clr_btn";
             this.clr_btn.Size = new System.Drawing.Size(150, 40);
             this.clr_btn.TabIndex = 38;
@@ -283,7 +283,7 @@
             this.addloc_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.addloc_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.addloc_btn.Location = new System.Drawing.Point(237, 328);
-            this.addloc_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.addloc_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addloc_btn.Name = "addloc_btn";
             this.addloc_btn.Size = new System.Drawing.Size(150, 40);
             this.addloc_btn.TabIndex = 37;
@@ -461,9 +461,9 @@
             // 
             // 
             this.edit_building_txt_box.CustomButton.Image = null;
-            this.edit_building_txt_box.CustomButton.Location = new System.Drawing.Point(210, 1);
+            this.edit_building_txt_box.CustomButton.Location = new System.Drawing.Point(158, 1);
             this.edit_building_txt_box.CustomButton.Name = "";
-            this.edit_building_txt_box.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.edit_building_txt_box.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.edit_building_txt_box.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.edit_building_txt_box.CustomButton.TabIndex = 1;
             this.edit_building_txt_box.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -492,7 +492,7 @@
             this.delete_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.delete_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.delete_btn.Location = new System.Drawing.Point(404, 328);
-            this.delete_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.delete_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(150, 40);
             this.delete_btn.TabIndex = 38;
@@ -508,7 +508,7 @@
             this.editloc_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.editloc_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.editloc_btn.Location = new System.Drawing.Point(237, 328);
-            this.editloc_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.editloc_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editloc_btn.Name = "editloc_btn";
             this.editloc_btn.Size = new System.Drawing.Size(150, 40);
             this.editloc_btn.TabIndex = 37;
@@ -819,7 +819,7 @@
             this.Controls.Add(this.locations_lbl);
             this.Controls.Add(this.loc_tabcontrol);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Location";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
