@@ -103,6 +103,7 @@
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
+            this.locations_lbl = new MetroFramework.Controls.MetroLabel();
             this.loc_tabcontrol.SuspendLayout();
             this.tag_tab.SuspendLayout();
             this.locationview_panel.SuspendLayout();
@@ -130,9 +131,9 @@
             this.loc_tabcontrol.Controls.Add(this.consec_session_tab);
             this.loc_tabcontrol.FontSize = MetroFramework.MetroTabControlSize.Small;
             this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
-            this.loc_tabcontrol.Location = new System.Drawing.Point(133, 89);
+            this.loc_tabcontrol.Location = new System.Drawing.Point(149, 116);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 6;
+            this.loc_tabcontrol.SelectedIndex = 1;
             this.loc_tabcontrol.Size = new System.Drawing.Size(788, 461);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.loc_tabcontrol.TabIndex = 1;
@@ -1169,6 +1170,19 @@
             this.metroComboBox4.TabIndex = 57;
             this.metroComboBox4.UseSelectable = true;
             // 
+            // locations_lbl
+            // 
+            this.locations_lbl.AutoSize = true;
+            this.locations_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.locations_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.locations_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.locations_lbl.Location = new System.Drawing.Point(439, 75);
+            this.locations_lbl.Name = "locations_lbl";
+            this.locations_lbl.Size = new System.Drawing.Size(184, 25);
+            this.locations_lbl.TabIndex = 29;
+            this.locations_lbl.Text = "Add Suitable Rooms";
+            this.locations_lbl.UseCustomBackColor = true;
+            // 
             // Rooms
             // 
             this.ApplyImageInvert = true;
@@ -1177,6 +1191,7 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.locations_lbl);
             this.Controls.Add(this.loc_tabcontrol);
             this.MaximizeBox = false;
             this.Name = "Rooms";
@@ -1203,6 +1218,7 @@
             this.non_res_rooms_tab.PerformLayout();
             this.metroPanel8.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1283,5 +1299,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel7;
         private MetroFramework.Controls.MetroPanel metroPanel8;
         public MetroFramework.Controls.MetroComboBox metroComboBox4;
+        private MetroFramework.Controls.MetroLabel locations_lbl;
     }
 }
