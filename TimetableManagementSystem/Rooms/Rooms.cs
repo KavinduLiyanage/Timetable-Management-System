@@ -369,7 +369,8 @@ namespace TimetableManagementSystem.Rooms
         //adding consecutive session fields
         private void newsession2_btn_Click(object sender, EventArgs e)
         {
-            if(session1_cmb.Text != String.Empty) 
+
+            if (session1_cmb.Text != String.Empty) 
             {
                 session2_lbl.Visible = true;
                 session2_cmb.Visible = true;
@@ -383,7 +384,12 @@ namespace TimetableManagementSystem.Rooms
 
         private void newsession3_btn_Click(object sender, EventArgs e)
         {
-            if (session2_cmb.Text != String.Empty)
+
+            if (session1_cmb.Text == session2_cmb.Text)
+            {
+                MessageBox.Show("Session Already Selected.Please choose another!");
+            }
+           else if (session2_cmb.Text != String.Empty)
             {
                 session3_lbl.Visible = true;
                 session3_cmb.Visible = true;
@@ -398,7 +404,11 @@ namespace TimetableManagementSystem.Rooms
 
         private void newsession4_btn_Click(object sender, EventArgs e)
         {
-            if (session3_cmb.Text != String.Empty)
+            if( (session1_cmb.Text == session2_cmb.Text) || (session1_cmb.Text == session3_cmb.Text) || (session2_cmb.Text == session3_cmb.Text))
+            {
+                MessageBox.Show("Session Already Selected.Please choose another!");
+            }
+            else if ((session3_cmb.Text != String.Empty) && (session1_cmb.Text != session2_cmb.Text))
             {
                 session4_lbl.Visible = true;
                 session4_cmb.Visible = true;
@@ -413,7 +423,13 @@ namespace TimetableManagementSystem.Rooms
 
         private void newsession6_btn_Click(object sender, EventArgs e)
         {
-            if (session4_cmb.Text != String.Empty)
+            if ((session1_cmb.Text == session2_cmb.Text) || (session1_cmb.Text == session3_cmb.Text) ||
+                (session1_cmb.Text == session4_cmb.Text) || (session2_cmb.Text == session3_cmb.Text) ||
+                (session2_cmb.Text == session4_cmb.Text) || (session3_cmb.Text == session4_cmb.Text))
+            {
+                MessageBox.Show("Session Already Selected.Please choose another!");
+            }
+            else if (session4_cmb.Text != String.Empty)
             {
                 session5_lbl.Visible = true;
                 session5_cmb.Visible = true;
@@ -464,6 +480,10 @@ namespace TimetableManagementSystem.Rooms
                session2_cmb.Items.Add(dataRow["SessionID"].ToString());
               
             }   
+            //if(session1_cmb.Text == session2_cmb.Text)
+            //{
+            //    MessageBox.Show("Session Already Selected.Please choose another!");
+            //}
         }
         //dropdown session 3
         private void session3_cmb_Click(object sender, EventArgs e)
