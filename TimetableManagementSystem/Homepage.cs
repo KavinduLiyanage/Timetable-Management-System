@@ -89,7 +89,9 @@ namespace TimetableManagementSystem
 
         private void roomBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Rooms.Rooms rooms = new Rooms.Rooms();
+            rooms.ShowDialog();
         }
 
         private void advOpBtn_Click(object sender, EventArgs e)

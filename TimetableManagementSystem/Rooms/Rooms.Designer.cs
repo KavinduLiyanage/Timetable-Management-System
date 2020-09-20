@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
+            this.tag_tab = new System.Windows.Forms.TabPage();
+            this.locationview_panel = new System.Windows.Forms.Panel();
+            this.clear_tag_btn = new MetroFramework.Controls.MetroButton();
+            this.allocate_tag_btn = new MetroFramework.Controls.MetroButton();
+            this.addrooms_lbl = new MetroFramework.Controls.MetroLabel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.tagroom_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.tag_lbl = new MetroFramework.Controls.MetroLabel();
+            this.tag_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.room_lbl = new MetroFramework.Controls.MetroLabel();
             this.grp_subgrp_tab = new System.Windows.Forms.TabPage();
             this.grproom_cmb = new MetroFramework.Controls.MetroComboBox();
             this.grproom_lbl = new MetroFramework.Controls.MetroLabel();
@@ -61,6 +71,12 @@
             this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
             this.consec_session_tab = new System.Windows.Forms.TabPage();
             this.metroPanel7 = new MetroFramework.Controls.MetroPanel();
+            this.addsession5_btn = new MetroFramework.Controls.MetroButton();
+            this.clrsession5_btn = new MetroFramework.Controls.MetroButton();
+            this.clrsession4_btn = new MetroFramework.Controls.MetroButton();
+            this.clrsession3_btn = new MetroFramework.Controls.MetroButton();
+            this.clrsession2_btn = new MetroFramework.Controls.MetroButton();
+            this.clrsession1_btn = new MetroFramework.Controls.MetroButton();
             this.session5_lbl = new MetroFramework.Controls.MetroLabel();
             this.session5_cmb = new MetroFramework.Controls.MetroComboBox();
             this.newsession5_btn = new MetroFramework.Controls.MetroButton();
@@ -102,24 +118,23 @@
             this.lecroom_lbl = new MetroFramework.Controls.MetroLabel();
             this.lecturer_lbl = new MetroFramework.Controls.MetroLabel();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
-            this.tag_tab = new System.Windows.Forms.TabPage();
-            this.locationview_panel = new System.Windows.Forms.Panel();
-            this.clear_tag_btn = new MetroFramework.Controls.MetroButton();
-            this.allocate_tag_btn = new MetroFramework.Controls.MetroButton();
-            this.addrooms_lbl = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.tagroom_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.tag_lbl = new MetroFramework.Controls.MetroLabel();
-            this.tag_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.room_lbl = new MetroFramework.Controls.MetroLabel();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
-            this.clrsession4_btn = new MetroFramework.Controls.MetroButton();
-            this.clrsession3_btn = new MetroFramework.Controls.MetroButton();
-            this.clrsession2_btn = new MetroFramework.Controls.MetroButton();
-            this.clrsession1_btn = new MetroFramework.Controls.MetroButton();
-            this.clrsession5_btn = new MetroFramework.Controls.MetroButton();
-            this.addsession5_btn = new MetroFramework.Controls.MetroButton();
+            this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
+            this.btnSideNavTags = new System.Windows.Forms.PictureBox();
+            this.btnSideNavStudents = new System.Windows.Forms.PictureBox();
+            this.btnSideNavSubjects = new System.Windows.Forms.PictureBox();
+            this.btnSideNavLecturers = new System.Windows.Forms.PictureBox();
+            this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
+            this.btnHeaderGenerate = new System.Windows.Forms.Button();
+            this.btnHeaderAdvanced = new System.Windows.Forms.Button();
+            this.btnHeaderRooms = new System.Windows.Forms.Button();
+            this.btnHeaderSessions = new System.Windows.Forms.Button();
+            this.btnHeaderHome = new System.Windows.Forms.Button();
             this.loc_tabcontrol.SuspendLayout();
+            this.tag_tab.SuspendLayout();
+            this.locationview_panel.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
             this.grp_subgrp_tab.SuspendLayout();
             this.non_res_rooms_tab.SuspendLayout();
             this.metroPanel8.SuspendLayout();
@@ -131,26 +146,30 @@
             this.metroPanel3.SuspendLayout();
             this.lecturer_tab.SuspendLayout();
             this.editloc_panel.SuspendLayout();
-            this.tag_tab.SuspendLayout();
-            this.locationview_panel.SuspendLayout();
-            this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             this.SuspendLayout();
             // 
             // loc_tabcontrol
             // 
             this.loc_tabcontrol.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.loc_tabcontrol.Controls.Add(this.tag_tab);
-            this.loc_tabcontrol.Controls.Add(this.grp_subgrp_tab);
-            this.loc_tabcontrol.Controls.Add(this.non_res_rooms_tab);
-            this.loc_tabcontrol.Controls.Add(this.session_tab);
-            this.loc_tabcontrol.Controls.Add(this.consec_session_tab);
             this.loc_tabcontrol.Controls.Add(this.subtag_tab);
             this.loc_tabcontrol.Controls.Add(this.lecturer_tab);
+            this.loc_tabcontrol.Controls.Add(this.grp_subgrp_tab);
+            this.loc_tabcontrol.Controls.Add(this.session_tab);
+            this.loc_tabcontrol.Controls.Add(this.consec_session_tab);
+            this.loc_tabcontrol.Controls.Add(this.non_res_rooms_tab);
             this.loc_tabcontrol.FontSize = MetroFramework.MetroTabControlSize.Small;
             this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.loc_tabcontrol.Location = new System.Drawing.Point(149, 116);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 3;
+            this.loc_tabcontrol.SelectedIndex = 0;
             this.loc_tabcontrol.Size = new System.Drawing.Size(788, 461);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.loc_tabcontrol.TabIndex = 1;
@@ -159,6 +178,148 @@
             this.loc_tabcontrol.UseCustomForeColor = true;
             this.loc_tabcontrol.UseSelectable = true;
             this.loc_tabcontrol.UseStyleColors = true;
+            // 
+            // tag_tab
+            // 
+            this.tag_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tag_tab.Controls.Add(this.locationview_panel);
+            this.tag_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tag_tab.Location = new System.Drawing.Point(4, 37);
+            this.tag_tab.Margin = new System.Windows.Forms.Padding(7);
+            this.tag_tab.Name = "tag_tab";
+            this.tag_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.tag_tab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tag_tab.Size = new System.Drawing.Size(780, 420);
+            this.tag_tab.TabIndex = 0;
+            this.tag_tab.Text = "Tag";
+            this.tag_tab.UseVisualStyleBackColor = true;
+            // 
+            // locationview_panel
+            // 
+            this.locationview_panel.Controls.Add(this.clear_tag_btn);
+            this.locationview_panel.Controls.Add(this.allocate_tag_btn);
+            this.locationview_panel.Controls.Add(this.addrooms_lbl);
+            this.locationview_panel.Controls.Add(this.metroPanel1);
+            this.locationview_panel.Location = new System.Drawing.Point(-1, -1);
+            this.locationview_panel.Name = "locationview_panel";
+            this.locationview_panel.Size = new System.Drawing.Size(779, 419);
+            this.locationview_panel.TabIndex = 0;
+            // 
+            // clear_tag_btn
+            // 
+            this.clear_tag_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clear_tag_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clear_tag_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clear_tag_btn.Location = new System.Drawing.Point(426, 304);
+            this.clear_tag_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clear_tag_btn.Name = "clear_tag_btn";
+            this.clear_tag_btn.Size = new System.Drawing.Size(150, 40);
+            this.clear_tag_btn.TabIndex = 41;
+            this.clear_tag_btn.Text = "Clear";
+            this.clear_tag_btn.UseCustomBackColor = true;
+            this.clear_tag_btn.UseCustomForeColor = true;
+            this.clear_tag_btn.UseSelectable = true;
+            this.clear_tag_btn.Click += new System.EventHandler(this.clear_tag_btn_Click);
+            // 
+            // allocate_tag_btn
+            // 
+            this.allocate_tag_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.allocate_tag_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.allocate_tag_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.allocate_tag_btn.Location = new System.Drawing.Point(184, 304);
+            this.allocate_tag_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.allocate_tag_btn.Name = "allocate_tag_btn";
+            this.allocate_tag_btn.Size = new System.Drawing.Size(194, 40);
+            this.allocate_tag_btn.TabIndex = 40;
+            this.allocate_tag_btn.Text = "Allocate Room";
+            this.allocate_tag_btn.UseCustomBackColor = true;
+            this.allocate_tag_btn.UseCustomForeColor = true;
+            this.allocate_tag_btn.UseSelectable = true;
+            this.allocate_tag_btn.Click += new System.EventHandler(this.allocate_tag_btn_Click);
+            // 
+            // addrooms_lbl
+            // 
+            this.addrooms_lbl.AutoSize = true;
+            this.addrooms_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.addrooms_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.addrooms_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.addrooms_lbl.Location = new System.Drawing.Point(268, 36);
+            this.addrooms_lbl.Name = "addrooms_lbl";
+            this.addrooms_lbl.Size = new System.Drawing.Size(264, 25);
+            this.addrooms_lbl.TabIndex = 39;
+            this.addrooms_lbl.Text = "Add Suitable Rooms for a Tag";
+            this.addrooms_lbl.UseCustomBackColor = true;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.metroPanel1.Controls.Add(this.tagroom_cmb);
+            this.metroPanel1.Controls.Add(this.tag_lbl);
+            this.metroPanel1.Controls.Add(this.tag_cmb);
+            this.metroPanel1.Controls.Add(this.room_lbl);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(0, 3);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(779, 416);
+            this.metroPanel1.TabIndex = 42;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // tagroom_cmb
+            // 
+            this.tagroom_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tagroom_cmb.FormattingEnabled = true;
+            this.tagroom_cmb.ItemHeight = 23;
+            this.tagroom_cmb.Location = new System.Drawing.Point(406, 183);
+            this.tagroom_cmb.MaxDropDownItems = 100;
+            this.tagroom_cmb.Name = "tagroom_cmb";
+            this.tagroom_cmb.PromptText = "Select Room";
+            this.tagroom_cmb.Size = new System.Drawing.Size(200, 29);
+            this.tagroom_cmb.TabIndex = 38;
+            this.tagroom_cmb.UseSelectable = true;
+            this.tagroom_cmb.DropDown += new System.EventHandler(this.tagroom_cmb_DropDown);
+            // 
+            // tag_lbl
+            // 
+            this.tag_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tag_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.tag_lbl.Location = new System.Drawing.Point(185, 125);
+            this.tag_lbl.Name = "tag_lbl";
+            this.tag_lbl.Size = new System.Drawing.Size(180, 30);
+            this.tag_lbl.TabIndex = 35;
+            this.tag_lbl.Text = "Tag";
+            this.tag_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tag_cmb
+            // 
+            this.tag_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tag_cmb.FormattingEnabled = true;
+            this.tag_cmb.ItemHeight = 23;
+            this.tag_cmb.Location = new System.Drawing.Point(406, 126);
+            this.tag_cmb.MaxDropDownItems = 10;
+            this.tag_cmb.Name = "tag_cmb";
+            this.tag_cmb.PromptText = "Select Tag";
+            this.tag_cmb.Size = new System.Drawing.Size(200, 29);
+            this.tag_cmb.TabIndex = 37;
+            this.tag_cmb.UseSelectable = true;
+            this.tag_cmb.DropDown += new System.EventHandler(this.tag_cmb_DropDown);
+            // 
+            // room_lbl
+            // 
+            this.room_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.room_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.room_lbl.Location = new System.Drawing.Point(185, 182);
+            this.room_lbl.Name = "room_lbl";
+            this.room_lbl.Size = new System.Drawing.Size(180, 30);
+            this.room_lbl.TabIndex = 36;
+            this.room_lbl.Text = "Room";
+            this.room_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // grp_subgrp_tab
             // 
@@ -647,6 +808,107 @@
             this.metroPanel7.VerticalScrollbarBarColor = true;
             this.metroPanel7.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel7.VerticalScrollbarSize = 10;
+            // 
+            // addsession5_btn
+            // 
+            this.addsession5_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addsession5_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.addsession5_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addsession5_btn.Location = new System.Drawing.Point(521, 295);
+            this.addsession5_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.addsession5_btn.Name = "addsession5_btn";
+            this.addsession5_btn.Size = new System.Drawing.Size(122, 30);
+            this.addsession5_btn.TabIndex = 83;
+            this.addsession5_btn.Text = "Add Session";
+            this.addsession5_btn.UseCustomBackColor = true;
+            this.addsession5_btn.UseCustomForeColor = true;
+            this.addsession5_btn.UseSelectable = true;
+            this.addsession5_btn.Visible = false;
+            this.addsession5_btn.Click += new System.EventHandler(this.addsession5_btn_Click);
+            // 
+            // clrsession5_btn
+            // 
+            this.clrsession5_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession5_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession5_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession5_btn.Location = new System.Drawing.Point(647, 295);
+            this.clrsession5_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession5_btn.Name = "clrsession5_btn";
+            this.clrsession5_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession5_btn.TabIndex = 82;
+            this.clrsession5_btn.Text = "Clear";
+            this.clrsession5_btn.UseCustomBackColor = true;
+            this.clrsession5_btn.UseCustomForeColor = true;
+            this.clrsession5_btn.UseSelectable = true;
+            this.clrsession5_btn.Visible = false;
+            this.clrsession5_btn.Click += new System.EventHandler(this.clrsession5_btn_Click);
+            // 
+            // clrsession4_btn
+            // 
+            this.clrsession4_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession4_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession4_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession4_btn.Location = new System.Drawing.Point(647, 249);
+            this.clrsession4_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession4_btn.Name = "clrsession4_btn";
+            this.clrsession4_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession4_btn.TabIndex = 81;
+            this.clrsession4_btn.Text = "Clear";
+            this.clrsession4_btn.UseCustomBackColor = true;
+            this.clrsession4_btn.UseCustomForeColor = true;
+            this.clrsession4_btn.UseSelectable = true;
+            this.clrsession4_btn.Visible = false;
+            this.clrsession4_btn.Click += new System.EventHandler(this.clrsession4_btn_Click);
+            // 
+            // clrsession3_btn
+            // 
+            this.clrsession3_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession3_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession3_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession3_btn.Location = new System.Drawing.Point(647, 204);
+            this.clrsession3_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession3_btn.Name = "clrsession3_btn";
+            this.clrsession3_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession3_btn.TabIndex = 80;
+            this.clrsession3_btn.Text = "Clear";
+            this.clrsession3_btn.UseCustomBackColor = true;
+            this.clrsession3_btn.UseCustomForeColor = true;
+            this.clrsession3_btn.UseSelectable = true;
+            this.clrsession3_btn.Visible = false;
+            this.clrsession3_btn.Click += new System.EventHandler(this.clrsession3_btn_Click);
+            // 
+            // clrsession2_btn
+            // 
+            this.clrsession2_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession2_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession2_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession2_btn.Location = new System.Drawing.Point(647, 159);
+            this.clrsession2_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession2_btn.Name = "clrsession2_btn";
+            this.clrsession2_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession2_btn.TabIndex = 79;
+            this.clrsession2_btn.Text = "Clear";
+            this.clrsession2_btn.UseCustomBackColor = true;
+            this.clrsession2_btn.UseCustomForeColor = true;
+            this.clrsession2_btn.UseSelectable = true;
+            this.clrsession2_btn.Visible = false;
+            this.clrsession2_btn.Click += new System.EventHandler(this.clrsession2_btn_Click);
+            // 
+            // clrsession1_btn
+            // 
+            this.clrsession1_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession1_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession1_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession1_btn.Location = new System.Drawing.Point(647, 115);
+            this.clrsession1_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession1_btn.Name = "clrsession1_btn";
+            this.clrsession1_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession1_btn.TabIndex = 78;
+            this.clrsession1_btn.Text = "Clear";
+            this.clrsession1_btn.UseCustomBackColor = true;
+            this.clrsession1_btn.UseCustomForeColor = true;
+            this.clrsession1_btn.UseSelectable = true;
+            this.clrsession1_btn.Click += new System.EventHandler(this.clrsession1_btn_Click);
             // 
             // session5_lbl
             // 
@@ -1244,148 +1506,6 @@
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
             // 
-            // tag_tab
-            // 
-            this.tag_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tag_tab.Controls.Add(this.locationview_panel);
-            this.tag_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tag_tab.Location = new System.Drawing.Point(4, 37);
-            this.tag_tab.Margin = new System.Windows.Forms.Padding(7);
-            this.tag_tab.Name = "tag_tab";
-            this.tag_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.tag_tab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tag_tab.Size = new System.Drawing.Size(780, 420);
-            this.tag_tab.TabIndex = 0;
-            this.tag_tab.Text = "Tag";
-            this.tag_tab.UseVisualStyleBackColor = true;
-            // 
-            // locationview_panel
-            // 
-            this.locationview_panel.Controls.Add(this.clear_tag_btn);
-            this.locationview_panel.Controls.Add(this.allocate_tag_btn);
-            this.locationview_panel.Controls.Add(this.addrooms_lbl);
-            this.locationview_panel.Controls.Add(this.metroPanel1);
-            this.locationview_panel.Location = new System.Drawing.Point(-1, -1);
-            this.locationview_panel.Name = "locationview_panel";
-            this.locationview_panel.Size = new System.Drawing.Size(779, 419);
-            this.locationview_panel.TabIndex = 0;
-            // 
-            // clear_tag_btn
-            // 
-            this.clear_tag_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.clear_tag_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.clear_tag_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clear_tag_btn.Location = new System.Drawing.Point(426, 304);
-            this.clear_tag_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.clear_tag_btn.Name = "clear_tag_btn";
-            this.clear_tag_btn.Size = new System.Drawing.Size(150, 40);
-            this.clear_tag_btn.TabIndex = 41;
-            this.clear_tag_btn.Text = "Clear";
-            this.clear_tag_btn.UseCustomBackColor = true;
-            this.clear_tag_btn.UseCustomForeColor = true;
-            this.clear_tag_btn.UseSelectable = true;
-            this.clear_tag_btn.Click += new System.EventHandler(this.clear_tag_btn_Click);
-            // 
-            // allocate_tag_btn
-            // 
-            this.allocate_tag_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.allocate_tag_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.allocate_tag_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.allocate_tag_btn.Location = new System.Drawing.Point(184, 304);
-            this.allocate_tag_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.allocate_tag_btn.Name = "allocate_tag_btn";
-            this.allocate_tag_btn.Size = new System.Drawing.Size(194, 40);
-            this.allocate_tag_btn.TabIndex = 40;
-            this.allocate_tag_btn.Text = "Allocate Room";
-            this.allocate_tag_btn.UseCustomBackColor = true;
-            this.allocate_tag_btn.UseCustomForeColor = true;
-            this.allocate_tag_btn.UseSelectable = true;
-            this.allocate_tag_btn.Click += new System.EventHandler(this.allocate_tag_btn_Click);
-            // 
-            // addrooms_lbl
-            // 
-            this.addrooms_lbl.AutoSize = true;
-            this.addrooms_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.addrooms_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.addrooms_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.addrooms_lbl.Location = new System.Drawing.Point(268, 36);
-            this.addrooms_lbl.Name = "addrooms_lbl";
-            this.addrooms_lbl.Size = new System.Drawing.Size(264, 25);
-            this.addrooms_lbl.TabIndex = 39;
-            this.addrooms_lbl.Text = "Add Suitable Rooms for a Tag";
-            this.addrooms_lbl.UseCustomBackColor = true;
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroPanel1.Controls.Add(this.tagroom_cmb);
-            this.metroPanel1.Controls.Add(this.tag_lbl);
-            this.metroPanel1.Controls.Add(this.tag_cmb);
-            this.metroPanel1.Controls.Add(this.room_lbl);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 3);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(779, 416);
-            this.metroPanel1.TabIndex = 42;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // tagroom_cmb
-            // 
-            this.tagroom_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagroom_cmb.FormattingEnabled = true;
-            this.tagroom_cmb.ItemHeight = 23;
-            this.tagroom_cmb.Location = new System.Drawing.Point(406, 183);
-            this.tagroom_cmb.MaxDropDownItems = 100;
-            this.tagroom_cmb.Name = "tagroom_cmb";
-            this.tagroom_cmb.PromptText = "Select Room";
-            this.tagroom_cmb.Size = new System.Drawing.Size(200, 29);
-            this.tagroom_cmb.TabIndex = 38;
-            this.tagroom_cmb.UseSelectable = true;
-            this.tagroom_cmb.DropDown += new System.EventHandler(this.tagroom_cmb_DropDown);
-            // 
-            // tag_lbl
-            // 
-            this.tag_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tag_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.tag_lbl.Location = new System.Drawing.Point(185, 125);
-            this.tag_lbl.Name = "tag_lbl";
-            this.tag_lbl.Size = new System.Drawing.Size(180, 30);
-            this.tag_lbl.TabIndex = 35;
-            this.tag_lbl.Text = "Tag";
-            this.tag_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tag_cmb
-            // 
-            this.tag_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tag_cmb.FormattingEnabled = true;
-            this.tag_cmb.ItemHeight = 23;
-            this.tag_cmb.Location = new System.Drawing.Point(406, 126);
-            this.tag_cmb.MaxDropDownItems = 10;
-            this.tag_cmb.Name = "tag_cmb";
-            this.tag_cmb.PromptText = "Select Tag";
-            this.tag_cmb.Size = new System.Drawing.Size(200, 29);
-            this.tag_cmb.TabIndex = 37;
-            this.tag_cmb.UseSelectable = true;
-            this.tag_cmb.DropDown += new System.EventHandler(this.tag_cmb_DropDown);
-            // 
-            // room_lbl
-            // 
-            this.room_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.room_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.room_lbl.Location = new System.Drawing.Point(185, 182);
-            this.room_lbl.Name = "room_lbl";
-            this.room_lbl.Size = new System.Drawing.Size(180, 30);
-            this.room_lbl.TabIndex = 36;
-            this.room_lbl.Text = "Room";
-            this.room_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // locations_lbl
             // 
             this.locations_lbl.AutoSize = true;
@@ -1399,106 +1519,151 @@
             this.locations_lbl.Text = "Add Suitable Rooms";
             this.locations_lbl.UseCustomBackColor = true;
             // 
-            // clrsession4_btn
+            // btnSideNavStatistics
             // 
-            this.clrsession4_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.clrsession4_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.clrsession4_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clrsession4_btn.Location = new System.Drawing.Point(647, 249);
-            this.clrsession4_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.clrsession4_btn.Name = "clrsession4_btn";
-            this.clrsession4_btn.Size = new System.Drawing.Size(122, 30);
-            this.clrsession4_btn.TabIndex = 81;
-            this.clrsession4_btn.Text = "Clear";
-            this.clrsession4_btn.UseCustomBackColor = true;
-            this.clrsession4_btn.UseCustomForeColor = true;
-            this.clrsession4_btn.UseSelectable = true;
-            this.clrsession4_btn.Visible = false;
-            this.clrsession4_btn.Click += new System.EventHandler(this.clrsession4_btn_Click);
+            this.btnSideNavStatistics.Image = global::TimetableManagementSystem.Properties.Resources.Sub7_Statistics;
+            this.btnSideNavStatistics.Location = new System.Drawing.Point(8, 469);
+            this.btnSideNavStatistics.Name = "btnSideNavStatistics";
+            this.btnSideNavStatistics.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStatistics.TabIndex = 50;
+            this.btnSideNavStatistics.TabStop = false;
+            this.btnSideNavStatistics.Click += new System.EventHandler(this.btnSideNavStatistics_Click);
             // 
-            // clrsession3_btn
+            // btnSideNavLocations
             // 
-            this.clrsession3_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.clrsession3_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.clrsession3_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clrsession3_btn.Location = new System.Drawing.Point(647, 204);
-            this.clrsession3_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.clrsession3_btn.Name = "clrsession3_btn";
-            this.clrsession3_btn.Size = new System.Drawing.Size(122, 30);
-            this.clrsession3_btn.TabIndex = 80;
-            this.clrsession3_btn.Text = "Clear";
-            this.clrsession3_btn.UseCustomBackColor = true;
-            this.clrsession3_btn.UseCustomForeColor = true;
-            this.clrsession3_btn.UseSelectable = true;
-            this.clrsession3_btn.Visible = false;
-            this.clrsession3_btn.Click += new System.EventHandler(this.clrsession3_btn_Click);
+            this.btnSideNavLocations.Image = global::TimetableManagementSystem.Properties.Resources.Sub6_Locations;
+            this.btnSideNavLocations.Location = new System.Drawing.Point(8, 408);
+            this.btnSideNavLocations.Name = "btnSideNavLocations";
+            this.btnSideNavLocations.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavLocations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLocations.TabIndex = 49;
+            this.btnSideNavLocations.TabStop = false;
+            this.btnSideNavLocations.Click += new System.EventHandler(this.btnSideNavLocations_Click);
             // 
-            // clrsession2_btn
+            // btnSideNavTags
             // 
-            this.clrsession2_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.clrsession2_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.clrsession2_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clrsession2_btn.Location = new System.Drawing.Point(647, 159);
-            this.clrsession2_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.clrsession2_btn.Name = "clrsession2_btn";
-            this.clrsession2_btn.Size = new System.Drawing.Size(122, 30);
-            this.clrsession2_btn.TabIndex = 79;
-            this.clrsession2_btn.Text = "Clear";
-            this.clrsession2_btn.UseCustomBackColor = true;
-            this.clrsession2_btn.UseCustomForeColor = true;
-            this.clrsession2_btn.UseSelectable = true;
-            this.clrsession2_btn.Visible = false;
-            this.clrsession2_btn.Click += new System.EventHandler(this.clrsession2_btn_Click);
+            this.btnSideNavTags.Image = global::TimetableManagementSystem.Properties.Resources.Sub5_Tags;
+            this.btnSideNavTags.Location = new System.Drawing.Point(8, 347);
+            this.btnSideNavTags.Name = "btnSideNavTags";
+            this.btnSideNavTags.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavTags.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavTags.TabIndex = 48;
+            this.btnSideNavTags.TabStop = false;
+            this.btnSideNavTags.Click += new System.EventHandler(this.btnSideNavTags_Click);
             // 
-            // clrsession1_btn
+            // btnSideNavStudents
             // 
-            this.clrsession1_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.clrsession1_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.clrsession1_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clrsession1_btn.Location = new System.Drawing.Point(647, 115);
-            this.clrsession1_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.clrsession1_btn.Name = "clrsession1_btn";
-            this.clrsession1_btn.Size = new System.Drawing.Size(122, 30);
-            this.clrsession1_btn.TabIndex = 78;
-            this.clrsession1_btn.Text = "Clear";
-            this.clrsession1_btn.UseCustomBackColor = true;
-            this.clrsession1_btn.UseCustomForeColor = true;
-            this.clrsession1_btn.UseSelectable = true;
-            this.clrsession1_btn.Click += new System.EventHandler(this.clrsession1_btn_Click);
+            this.btnSideNavStudents.Image = global::TimetableManagementSystem.Properties.Resources.Sub4_Students;
+            this.btnSideNavStudents.Location = new System.Drawing.Point(8, 286);
+            this.btnSideNavStudents.Name = "btnSideNavStudents";
+            this.btnSideNavStudents.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavStudents.TabIndex = 47;
+            this.btnSideNavStudents.TabStop = false;
+            this.btnSideNavStudents.Click += new System.EventHandler(this.btnSideNavStudents_Click);
             // 
-            // clrsession5_btn
+            // btnSideNavSubjects
             // 
-            this.clrsession5_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.clrsession5_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.clrsession5_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clrsession5_btn.Location = new System.Drawing.Point(647, 295);
-            this.clrsession5_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.clrsession5_btn.Name = "clrsession5_btn";
-            this.clrsession5_btn.Size = new System.Drawing.Size(122, 30);
-            this.clrsession5_btn.TabIndex = 82;
-            this.clrsession5_btn.Text = "Clear";
-            this.clrsession5_btn.UseCustomBackColor = true;
-            this.clrsession5_btn.UseCustomForeColor = true;
-            this.clrsession5_btn.UseSelectable = true;
-            this.clrsession5_btn.Visible = false;
-            this.clrsession5_btn.Click += new System.EventHandler(this.clrsession5_btn_Click);
+            this.btnSideNavSubjects.Image = global::TimetableManagementSystem.Properties.Resources.Sub3_Subjects;
+            this.btnSideNavSubjects.Location = new System.Drawing.Point(8, 225);
+            this.btnSideNavSubjects.Name = "btnSideNavSubjects";
+            this.btnSideNavSubjects.Size = new System.Drawing.Size(70, 55);
+            this.btnSideNavSubjects.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavSubjects.TabIndex = 46;
+            this.btnSideNavSubjects.TabStop = false;
+            this.btnSideNavSubjects.Click += new System.EventHandler(this.btnSideNavSubjects_Click);
             // 
-            // addsession5_btn
+            // btnSideNavLecturers
             // 
-            this.addsession5_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.addsession5_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.addsession5_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.addsession5_btn.Location = new System.Drawing.Point(521, 295);
-            this.addsession5_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.addsession5_btn.Name = "addsession5_btn";
-            this.addsession5_btn.Size = new System.Drawing.Size(122, 30);
-            this.addsession5_btn.TabIndex = 83;
-            this.addsession5_btn.Text = "Add Session";
-            this.addsession5_btn.UseCustomBackColor = true;
-            this.addsession5_btn.UseCustomForeColor = true;
-            this.addsession5_btn.UseSelectable = true;
-            this.addsession5_btn.Visible = false;
-            this.addsession5_btn.Click += new System.EventHandler(this.addsession5_btn_Click);
+            this.btnSideNavLecturers.Image = global::TimetableManagementSystem.Properties.Resources.Sub2_Lecturers;
+            this.btnSideNavLecturers.Location = new System.Drawing.Point(8, 169);
+            this.btnSideNavLecturers.Name = "btnSideNavLecturers";
+            this.btnSideNavLecturers.Size = new System.Drawing.Size(70, 50);
+            this.btnSideNavLecturers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavLecturers.TabIndex = 45;
+            this.btnSideNavLecturers.TabStop = false;
+            this.btnSideNavLecturers.Click += new System.EventHandler(this.btnSideNavLecturers_Click);
+            // 
+            // btnSideNavWorking
+            // 
+            this.btnSideNavWorking.Image = global::TimetableManagementSystem.Properties.Resources.Sub1_WorkingDaysAndHours;
+            this.btnSideNavWorking.Location = new System.Drawing.Point(8, 93);
+            this.btnSideNavWorking.Name = "btnSideNavWorking";
+            this.btnSideNavWorking.Size = new System.Drawing.Size(80, 70);
+            this.btnSideNavWorking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSideNavWorking.TabIndex = 44;
+            this.btnSideNavWorking.TabStop = false;
+            this.btnSideNavWorking.Click += new System.EventHandler(this.btnSideNavWorking_Click);
+            // 
+            // btnHeaderGenerate
+            // 
+            this.btnHeaderGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderGenerate.FlatAppearance.BorderSize = 0;
+            this.btnHeaderGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderGenerate.Location = new System.Drawing.Point(773, 8);
+            this.btnHeaderGenerate.Name = "btnHeaderGenerate";
+            this.btnHeaderGenerate.Size = new System.Drawing.Size(112, 40);
+            this.btnHeaderGenerate.TabIndex = 55;
+            this.btnHeaderGenerate.Text = "Generate";
+            this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            // 
+            // btnHeaderAdvanced
+            // 
+            this.btnHeaderAdvanced.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderAdvanced.FlatAppearance.BorderSize = 0;
+            this.btnHeaderAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderAdvanced.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderAdvanced.Location = new System.Drawing.Point(621, 8);
+            this.btnHeaderAdvanced.Name = "btnHeaderAdvanced";
+            this.btnHeaderAdvanced.Size = new System.Drawing.Size(115, 40);
+            this.btnHeaderAdvanced.TabIndex = 54;
+            this.btnHeaderAdvanced.Text = "Advanced";
+            this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            this.btnHeaderAdvanced.Click += new System.EventHandler(this.btnHeaderAdvanced_Click);
+            // 
+            // btnHeaderRooms
+            // 
+            this.btnHeaderRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderRooms.FlatAppearance.BorderSize = 0;
+            this.btnHeaderRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderRooms.Location = new System.Drawing.Point(491, 8);
+            this.btnHeaderRooms.Name = "btnHeaderRooms";
+            this.btnHeaderRooms.Size = new System.Drawing.Size(84, 40);
+            this.btnHeaderRooms.TabIndex = 53;
+            this.btnHeaderRooms.Text = "Rooms";
+            this.btnHeaderRooms.UseVisualStyleBackColor = false;
+            this.btnHeaderRooms.Click += new System.EventHandler(this.btnHeaderRooms_Click);
+            // 
+            // btnHeaderSessions
+            // 
+            this.btnHeaderSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderSessions.FlatAppearance.BorderSize = 0;
+            this.btnHeaderSessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderSessions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderSessions.Location = new System.Drawing.Point(327, 8);
+            this.btnHeaderSessions.Name = "btnHeaderSessions";
+            this.btnHeaderSessions.Size = new System.Drawing.Size(103, 40);
+            this.btnHeaderSessions.TabIndex = 52;
+            this.btnHeaderSessions.Text = "Sessions";
+            this.btnHeaderSessions.UseVisualStyleBackColor = false;
+            this.btnHeaderSessions.Click += new System.EventHandler(this.btnHeaderSessions_Click);
+            // 
+            // btnHeaderHome
+            // 
+            this.btnHeaderHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.btnHeaderHome.FlatAppearance.BorderSize = 0;
+            this.btnHeaderHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeaderHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHeaderHome.Location = new System.Drawing.Point(195, 8);
+            this.btnHeaderHome.Name = "btnHeaderHome";
+            this.btnHeaderHome.Size = new System.Drawing.Size(79, 40);
+            this.btnHeaderHome.TabIndex = 51;
+            this.btnHeaderHome.Text = "Home";
+            this.btnHeaderHome.UseVisualStyleBackColor = false;
+            this.btnHeaderHome.Click += new System.EventHandler(this.btnHeaderHome_Click);
             // 
             // Rooms
             // 
@@ -1508,6 +1673,18 @@
             this.BackImage = global::TimetableManagementSystem.Properties.Resources.Background;
             this.BackMaxSize = 960;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.btnHeaderGenerate);
+            this.Controls.Add(this.btnHeaderAdvanced);
+            this.Controls.Add(this.btnHeaderRooms);
+            this.Controls.Add(this.btnHeaderSessions);
+            this.Controls.Add(this.btnHeaderHome);
+            this.Controls.Add(this.btnSideNavStatistics);
+            this.Controls.Add(this.btnSideNavLocations);
+            this.Controls.Add(this.btnSideNavTags);
+            this.Controls.Add(this.btnSideNavStudents);
+            this.Controls.Add(this.btnSideNavSubjects);
+            this.Controls.Add(this.btnSideNavLecturers);
+            this.Controls.Add(this.btnSideNavWorking);
             this.Controls.Add(this.locations_lbl);
             this.Controls.Add(this.loc_tabcontrol);
             this.MaximizeBox = false;
@@ -1515,6 +1692,10 @@
             this.Resizable = false;
             this.Text = "Rooms";
             this.loc_tabcontrol.ResumeLayout(false);
+            this.tag_tab.ResumeLayout(false);
+            this.locationview_panel.ResumeLayout(false);
+            this.locationview_panel.PerformLayout();
+            this.metroPanel1.ResumeLayout(false);
             this.grp_subgrp_tab.ResumeLayout(false);
             this.grp_subgrp_tab.PerformLayout();
             this.non_res_rooms_tab.ResumeLayout(false);
@@ -1532,10 +1713,13 @@
             this.lecturer_tab.ResumeLayout(false);
             this.editloc_panel.ResumeLayout(false);
             this.editloc_panel.PerformLayout();
-            this.tag_tab.ResumeLayout(false);
-            this.locationview_panel.ResumeLayout(false);
-            this.locationview_panel.PerformLayout();
-            this.metroPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavSubjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLecturers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1634,5 +1818,17 @@
         private MetroFramework.Controls.MetroButton clrsession2_btn;
         private MetroFramework.Controls.MetroButton clrsession1_btn;
         private MetroFramework.Controls.MetroButton addsession5_btn;
+        private System.Windows.Forms.PictureBox btnSideNavStatistics;
+        private System.Windows.Forms.PictureBox btnSideNavLocations;
+        private System.Windows.Forms.PictureBox btnSideNavTags;
+        private System.Windows.Forms.PictureBox btnSideNavStudents;
+        private System.Windows.Forms.PictureBox btnSideNavSubjects;
+        private System.Windows.Forms.PictureBox btnSideNavLecturers;
+        private System.Windows.Forms.PictureBox btnSideNavWorking;
+        private System.Windows.Forms.Button btnHeaderGenerate;
+        private System.Windows.Forms.Button btnHeaderAdvanced;
+        private System.Windows.Forms.Button btnHeaderRooms;
+        private System.Windows.Forms.Button btnHeaderSessions;
+        private System.Windows.Forms.Button btnHeaderHome;
     }
 }
