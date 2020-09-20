@@ -144,7 +144,7 @@
             this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.loc_tabcontrol.Location = new System.Drawing.Point(149, 116);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 0;
+            this.loc_tabcontrol.SelectedIndex = 6;
             this.loc_tabcontrol.Size = new System.Drawing.Size(788, 461);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.loc_tabcontrol.TabIndex = 1;
@@ -1249,6 +1249,7 @@
             this.grproom_cmb.Size = new System.Drawing.Size(200, 29);
             this.grproom_cmb.TabIndex = 59;
             this.grproom_cmb.UseSelectable = true;
+            this.grproom_cmb.DropDown += new System.EventHandler(this.grproom_cmb_DropDown);
             // 
             // grproom_lbl
             // 
@@ -1275,6 +1276,7 @@
             this.clr_grp_btn.UseCustomBackColor = true;
             this.clr_grp_btn.UseCustomForeColor = true;
             this.clr_grp_btn.UseSelectable = true;
+            this.clr_grp_btn.Click += new System.EventHandler(this.clr_grp_btn_Click);
             // 
             // grpallocateroom_btn
             // 
@@ -1290,6 +1292,7 @@
             this.grpallocateroom_btn.UseCustomBackColor = true;
             this.grpallocateroom_btn.UseCustomForeColor = true;
             this.grpallocateroom_btn.UseSelectable = true;
+            this.grpallocateroom_btn.Click += new System.EventHandler(this.grpallocateroom_btn_Click);
             // 
             // grpsubgrp_lbl
             // 
@@ -1318,6 +1321,7 @@
             this.subgrp_cmb.Size = new System.Drawing.Size(200, 29);
             this.subgrp_cmb.TabIndex = 54;
             this.subgrp_cmb.UseSelectable = true;
+            this.subgrp_cmb.DropDown += new System.EventHandler(this.subgrp_cmb_DropDown);
             // 
             // grp_cmb
             // 
@@ -1332,6 +1336,7 @@
             this.grp_cmb.Size = new System.Drawing.Size(200, 29);
             this.grp_cmb.TabIndex = 53;
             this.grp_cmb.UseSelectable = true;
+            this.grp_cmb.DropDown += new System.EventHandler(this.grp_cmb_DropDown);
             // 
             // subgrp_lbl
             // 

@@ -608,5 +608,89 @@ namespace TimetableManagementSystem.Rooms
             non_res_room_cmb.SelectedIndex = -1;
             clearDayTimeFields();
         }
+
+        //SUITABLE ROOM FOR GROUP/SUB GROUP
+
+        //selecing a group
+        private void grp_cmb_DropDown(object sender, EventArgs e)
+        {
+            grp_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select GenGrpNum from GenGroupNumber", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                grp_cmb.Items.Add(dataRow["GenGrpNum"].ToString());
+            }
+        }
+
+        //selecting a sub group
+        private void subgrp_cmb_DropDown(object sender, EventArgs e)
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT s.GenSubGrpNum from GenSubGroupNumber s, GenGroupNumber g" +
+                " where  g.id = s.GenGroupNumberRef and g.GenGrpNum ='" + grp_cmb.Text + "'", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            subgrp_cmb.Items.Clear();
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                subgrp_cmb.Items.Add(dataRow["GenSubGrpNum"].ToString());
+            }
+        }
+
+        //selecting a room
+        private void grproom_cmb_DropDown(object sender, EventArgs e)
+        {
+            grproom_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Rooms", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                grproom_cmb.Items.Add(dataRow["room_num"].ToString());
+            }
+        }
+
+        //allocating a room for a group/sub group
+        private void grpallocateroom_btn_Click(object sender, EventArgs e)
+        {
+            if ((grp_cmb.Text != string.Empty) && (subgrp_cmb.Text != string.Empty) && (grproom_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select GroupNum, SubGroupNum, Room from GroupSubGroup_Rooms" +
+                    " where GroupNum = '" + grp_cmb.Text + "' and  SubGroupNum = '" + subgrp_cmb.Text + "'and  Room = '" + grproom_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("The room is already allocated for the selected group and sub group!");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[GroupSubGroup_Rooms] ([GroupNum],[SubGroupNum],[Room]) " +
+                        "VALUES ('" + grp_cmb.Text + "','" + subgrp_cmb.Text + "','" + grproom_cmb.Text + "'  )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Room Allocated Successfully!");
+                    con.Close();
+                    grproom_cmb.SelectedIndex = -1;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //clear all data in group/sub group
+        private void clr_grp_btn_Click(object sender, EventArgs e)
+        {
+            grp_cmb.SelectedIndex = -1;
+            subgrp_cmb.SelectedIndex = -1;
+            grproom_cmb.SelectedIndex = -1;
+        }
     }
 }
