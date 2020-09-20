@@ -527,7 +527,16 @@ namespace TimetableManagementSystem.Rooms
         //allocating room for consective session
         private void allocateroomconsecsession_btn_Click(object sender, EventArgs e)
         {
-            if (consec_room_cmb.Text != string.Empty) 
+            if ((session1_cmb.Text == session2_cmb.Text) || (session1_cmb.Text == session3_cmb.Text) ||
+                   (session1_cmb.Text == session4_cmb.Text) || (session1_cmb.Text == session5_cmb.Text) || 
+                   (session2_cmb.Text == session3_cmb.Text) || (session2_cmb.Text == session4_cmb.Text) ||
+                   (session2_cmb.Text == session5_cmb.Text) || (session3_cmb.Text == session4_cmb.Text) ||
+                   (session3_cmb.Text == session5_cmb.Text) || (session4_cmb.Text == session5_cmb.Text) )
+
+            {
+                MessageBox.Show("Session selected for Consecutive Session 5 is already selected for another.Please choose another session!");
+            }
+            else if (consec_room_cmb.Text != string.Empty) 
             {
                 //check duplicate before save
                 SqlDataAdapter da = new SqlDataAdapter("Select Room, ConsecSession1,ConsecSession2,ConsecSession3,ConsecSession4,ConsecSession5 from ConsecSession_Rooms" +
