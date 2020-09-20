@@ -134,7 +134,7 @@
             this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.loc_tabcontrol.Location = new System.Drawing.Point(149, 116);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 1;
+            this.loc_tabcontrol.SelectedIndex = 4;
             this.loc_tabcontrol.Size = new System.Drawing.Size(788, 461);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.loc_tabcontrol.TabIndex = 1;
@@ -787,6 +787,7 @@
             this.clr_session_btn.UseCustomBackColor = true;
             this.clr_session_btn.UseCustomForeColor = true;
             this.clr_session_btn.UseSelectable = true;
+            this.clr_session_btn.Click += new System.EventHandler(this.clr_session_btn_Click);
             // 
             // allocatesession_room_btn
             // 
@@ -802,6 +803,7 @@
             this.allocatesession_room_btn.UseCustomBackColor = true;
             this.allocatesession_room_btn.UseCustomForeColor = true;
             this.allocatesession_room_btn.UseSelectable = true;
+            this.allocatesession_room_btn.Click += new System.EventHandler(this.allocatesession_room_btn_Click);
             // 
             // sessionheading_lbl
             // 
@@ -829,6 +831,7 @@
             this.session_room_cmb.Size = new System.Drawing.Size(200, 29);
             this.session_room_cmb.TabIndex = 52;
             this.session_room_cmb.UseSelectable = true;
+            this.session_room_cmb.DropDown += new System.EventHandler(this.session_room_cmb_DropDown);
             // 
             // session_cmb
             // 
@@ -843,6 +846,7 @@
             this.session_cmb.Size = new System.Drawing.Size(200, 29);
             this.session_cmb.TabIndex = 51;
             this.session_cmb.UseSelectable = true;
+            this.session_cmb.DropDown += new System.EventHandler(this.session_cmb_DropDown);
             // 
             // session_room_lbl
             // 
@@ -1058,7 +1062,7 @@
             this.non_res_rooms_tab.Name = "non_res_rooms_tab";
             this.non_res_rooms_tab.Size = new System.Drawing.Size(780, 420);
             this.non_res_rooms_tab.TabIndex = 6;
-            this.non_res_rooms_tab.Text = "Non-Reservable Rooms";
+            this.non_res_rooms_tab.Text = "Non-Reservable Time for a Room";
             // 
             // non_reservable_lbl
             // 

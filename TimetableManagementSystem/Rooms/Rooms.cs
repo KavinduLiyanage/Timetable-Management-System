@@ -290,7 +290,78 @@ namespace TimetableManagementSystem.Rooms
             lecroom_cmb.SelectedIndex = -1;
         }
 
+
         //SUITABLE ROOM FOR A SESSION
 
+        //selecting a session
+        private void session_cmb_DropDown(object sender, EventArgs e)
+        {
+            session_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select SessionID from Sessions ", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                session_cmb.Items.Add(dataRow["SessionID"].ToString());
+            }
+        }
+
+        //selecting a room
+        private void session_room_cmb_DropDown(object sender, EventArgs e)
+        {
+            session_room_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Rooms", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                session_room_cmb.Items.Add(dataRow["room_num"].ToString());
+            }
+        }
+
+        //allocating a room
+        private void allocatesession_room_btn_Click(object sender, EventArgs e)
+        {
+            if ((session_cmb.Text != string.Empty) && (session_room_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select SessionID, Room from Session_Rooms where SessionID = '" + session_cmb.Text + "' and  Room = '" + session_room_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("The room is already allocated for the selected session");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[Session_Rooms] ([SessionID],[Room]) VALUES ('" + session_cmb.Text + "','" + session_room_cmb.Text + "' )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Room Allocated!");
+                    con.Close();
+                    clearRoomFieldForSession();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //clear Room Field For Session
+        public void clearRoomFieldForSession()
+        {
+            session_room_cmb.SelectedIndex = -1;
+        }
+
+        // clear all fields in session
+        private void clr_session_btn_Click(object sender, EventArgs e)
+        {
+            session_cmb.SelectedIndex = -1;
+            session_room_cmb.SelectedIndex = -1;
+        }
     }
 }
