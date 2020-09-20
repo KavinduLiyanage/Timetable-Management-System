@@ -375,6 +375,7 @@ namespace TimetableManagementSystem.Rooms
                 session2_lbl.Visible = true;
                 session2_cmb.Visible = true;
                 newsession3_btn.Visible = true;
+                clrsession2_btn.Visible = true;
             }
             else
             {
@@ -387,13 +388,14 @@ namespace TimetableManagementSystem.Rooms
 
             if (session1_cmb.Text == session2_cmb.Text)
             {
-                MessageBox.Show("Session Already Selected.Please choose another!");
+                MessageBox.Show("Session selected is already selected for another.Please choose another session!");
             }
            else if (session2_cmb.Text != String.Empty)
             {
                 session3_lbl.Visible = true;
                 session3_cmb.Visible = true;
                 newsession4_btn.Visible = true;
+                clrsession3_btn.Visible = true;
             }
             else
             {
@@ -406,13 +408,14 @@ namespace TimetableManagementSystem.Rooms
         {
             if( (session1_cmb.Text == session2_cmb.Text) || (session1_cmb.Text == session3_cmb.Text) || (session2_cmb.Text == session3_cmb.Text))
             {
-                MessageBox.Show("Session Already Selected.Please choose another!");
+                MessageBox.Show("Session selected is already selected for another.Please choose another session!");
             }
             else if ((session3_cmb.Text != String.Empty) && (session1_cmb.Text != session2_cmb.Text))
             {
                 session4_lbl.Visible = true;
                 session4_cmb.Visible = true;
                 newsession5_btn.Visible = true;
+                clrsession4_btn.Visible = true;
             }
             else
             {
@@ -427,12 +430,14 @@ namespace TimetableManagementSystem.Rooms
                 (session1_cmb.Text == session4_cmb.Text) || (session2_cmb.Text == session3_cmb.Text) ||
                 (session2_cmb.Text == session4_cmb.Text) || (session3_cmb.Text == session4_cmb.Text))
             {
-                MessageBox.Show("Session Already Selected.Please choose another!");
+                MessageBox.Show("Session selected is already selected for another.Please choose another session!");
             }
             else if (session4_cmb.Text != String.Empty)
             {
                 session5_lbl.Visible = true;
                 session5_cmb.Visible = true;
+                addsession5_btn.Visible = true;
+                clrsession5_btn.Visible = true;
             }
             else
             {
@@ -440,8 +445,49 @@ namespace TimetableManagementSystem.Rooms
             }
             
         }
+        private void addsession5_btn_Click(object sender, EventArgs e)
+        {
+            if ((session1_cmb.Text == session2_cmb.Text) || (session1_cmb.Text == session3_cmb.Text) ||
+                   (session1_cmb.Text == session4_cmb.Text) || (session1_cmb.Text == session5_cmb.Text) ||
+                   (session2_cmb.Text == session3_cmb.Text) || (session2_cmb.Text == session4_cmb.Text) ||
+                   (session2_cmb.Text == session5_cmb.Text) || (session3_cmb.Text == session4_cmb.Text) ||
+                   (session3_cmb.Text == session5_cmb.Text) || (session4_cmb.Text == session5_cmb.Text))
 
-        //selecting a room
+            {
+                MessageBox.Show("Session selected is already selected for another.Please choose another session!");
+            }
+            else 
+            {
+                MessageBox.Show("Maximum limit of consecutive sessions for a room : 5 ");
+            }
+        }
+        //clear drop down for session one by one
+        private void clrsession1_btn_Click(object sender, EventArgs e)
+        {
+            session1_cmb.SelectedIndex = -1;
+        }
+
+        private void clrsession2_btn_Click(object sender, EventArgs e)
+        {
+            session2_cmb.SelectedIndex = -1;
+        }
+
+        private void clrsession3_btn_Click(object sender, EventArgs e)
+        {
+            session3_cmb.SelectedIndex = -1;
+        }
+
+        private void clrsession4_btn_Click(object sender, EventArgs e)
+        {
+            session4_cmb.SelectedIndex = -1;
+        }
+
+        private void clrsession5_btn_Click(object sender, EventArgs e)
+        {
+            session5_cmb.SelectedIndex = -1;
+        }
+
+        //drop down for a room
         private void consec_room_cmb_DropDown(object sender, EventArgs e)
         {
             consec_room_cmb.Items.Clear();
@@ -480,10 +526,7 @@ namespace TimetableManagementSystem.Rooms
                session2_cmb.Items.Add(dataRow["SessionID"].ToString());
               
             }   
-            //if(session1_cmb.Text == session2_cmb.Text)
-            //{
-            //    MessageBox.Show("Session Already Selected.Please choose another!");
-            //}
+            
         }
         //dropdown session 3
         private void session3_cmb_Click(object sender, EventArgs e)
@@ -527,22 +570,13 @@ namespace TimetableManagementSystem.Rooms
         //allocating room for consective session
         private void allocateroomconsecsession_btn_Click(object sender, EventArgs e)
         {
-            if ((session1_cmb.Text == session2_cmb.Text) || (session1_cmb.Text == session3_cmb.Text) ||
-                   (session1_cmb.Text == session4_cmb.Text) || (session1_cmb.Text == session5_cmb.Text) || 
-                   (session2_cmb.Text == session3_cmb.Text) || (session2_cmb.Text == session4_cmb.Text) ||
-                   (session2_cmb.Text == session5_cmb.Text) || (session3_cmb.Text == session4_cmb.Text) ||
-                   (session3_cmb.Text == session5_cmb.Text) || (session4_cmb.Text == session5_cmb.Text) )
-
-            {
-                MessageBox.Show("Session selected for Consecutive Session 5 is already selected for another.Please choose another session!");
-            }
-            else if (consec_room_cmb.Text != string.Empty) 
+            if (consec_room_cmb.Text != string.Empty) 
             {
                 //check duplicate before save
                 SqlDataAdapter da = new SqlDataAdapter("Select Room, ConsecSession1,ConsecSession2,ConsecSession3,ConsecSession4,ConsecSession5 from ConsecSession_Rooms" +
                     " where Room = '" + consec_room_cmb.Text + "' and  ConsecSession1 = '" + session1_cmb.Text + "' and  ConsecSession2 = '" + session2_cmb.Text + "'" +
                     "and  ConsecSession3 = '" + session3_cmb.Text + "'and  ConsecSession4 = '" + session4_cmb.Text + "'" +
-                    "and  ConsecSession5 = '" + session5_cmb.Text + "'", con);
+                    "and  ConsecSession5 = '" + session5_cmb.Text + "' ", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if (dt.Rows.Count >= 1)
@@ -721,5 +755,7 @@ namespace TimetableManagementSystem.Rooms
             subgrp_cmb.SelectedIndex = -1;
             grproom_cmb.SelectedIndex = -1;
         }
+
+        
     }
 }

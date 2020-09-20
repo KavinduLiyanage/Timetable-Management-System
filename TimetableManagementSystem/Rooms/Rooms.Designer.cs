@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
+            this.grp_subgrp_tab = new System.Windows.Forms.TabPage();
+            this.grproom_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.grproom_lbl = new MetroFramework.Controls.MetroLabel();
+            this.clr_grp_btn = new MetroFramework.Controls.MetroButton();
+            this.grpallocateroom_btn = new MetroFramework.Controls.MetroButton();
+            this.grpsubgrp_lbl = new MetroFramework.Controls.MetroLabel();
+            this.subgrp_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.grp_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.subgrp_lbl = new MetroFramework.Controls.MetroLabel();
+            this.grp_lbl = new MetroFramework.Controls.MetroLabel();
+            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.non_res_rooms_tab = new System.Windows.Forms.TabPage();
             this.non_reservable_lbl = new MetroFramework.Controls.MetroLabel();
             this.day_cmb = new MetroFramework.Controls.MetroComboBox();
@@ -101,19 +112,15 @@
             this.tag_lbl = new MetroFramework.Controls.MetroLabel();
             this.tag_cmb = new MetroFramework.Controls.MetroComboBox();
             this.room_lbl = new MetroFramework.Controls.MetroLabel();
-            this.grp_subgrp_tab = new System.Windows.Forms.TabPage();
-            this.grproom_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.grproom_lbl = new MetroFramework.Controls.MetroLabel();
-            this.clr_grp_btn = new MetroFramework.Controls.MetroButton();
-            this.grpallocateroom_btn = new MetroFramework.Controls.MetroButton();
-            this.grpsubgrp_lbl = new MetroFramework.Controls.MetroLabel();
-            this.subgrp_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.grp_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.subgrp_lbl = new MetroFramework.Controls.MetroLabel();
-            this.grp_lbl = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
+            this.clrsession4_btn = new MetroFramework.Controls.MetroButton();
+            this.clrsession3_btn = new MetroFramework.Controls.MetroButton();
+            this.clrsession2_btn = new MetroFramework.Controls.MetroButton();
+            this.clrsession1_btn = new MetroFramework.Controls.MetroButton();
+            this.clrsession5_btn = new MetroFramework.Controls.MetroButton();
+            this.addsession5_btn = new MetroFramework.Controls.MetroButton();
             this.loc_tabcontrol.SuspendLayout();
+            this.grp_subgrp_tab.SuspendLayout();
             this.non_res_rooms_tab.SuspendLayout();
             this.metroPanel8.SuspendLayout();
             this.session_tab.SuspendLayout();
@@ -127,24 +134,23 @@
             this.tag_tab.SuspendLayout();
             this.locationview_panel.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            this.grp_subgrp_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // loc_tabcontrol
             // 
             this.loc_tabcontrol.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.loc_tabcontrol.Controls.Add(this.tag_tab);
             this.loc_tabcontrol.Controls.Add(this.grp_subgrp_tab);
             this.loc_tabcontrol.Controls.Add(this.non_res_rooms_tab);
             this.loc_tabcontrol.Controls.Add(this.session_tab);
             this.loc_tabcontrol.Controls.Add(this.consec_session_tab);
             this.loc_tabcontrol.Controls.Add(this.subtag_tab);
             this.loc_tabcontrol.Controls.Add(this.lecturer_tab);
-            this.loc_tabcontrol.Controls.Add(this.tag_tab);
             this.loc_tabcontrol.FontSize = MetroFramework.MetroTabControlSize.Small;
             this.loc_tabcontrol.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.loc_tabcontrol.Location = new System.Drawing.Point(149, 116);
             this.loc_tabcontrol.Name = "loc_tabcontrol";
-            this.loc_tabcontrol.SelectedIndex = 6;
+            this.loc_tabcontrol.SelectedIndex = 3;
             this.loc_tabcontrol.Size = new System.Drawing.Size(788, 461);
             this.loc_tabcontrol.Style = MetroFramework.MetroColorStyle.Blue;
             this.loc_tabcontrol.TabIndex = 1;
@@ -153,6 +159,162 @@
             this.loc_tabcontrol.UseCustomForeColor = true;
             this.loc_tabcontrol.UseSelectable = true;
             this.loc_tabcontrol.UseStyleColors = true;
+            // 
+            // grp_subgrp_tab
+            // 
+            this.grp_subgrp_tab.Controls.Add(this.grproom_cmb);
+            this.grp_subgrp_tab.Controls.Add(this.grproom_lbl);
+            this.grp_subgrp_tab.Controls.Add(this.clr_grp_btn);
+            this.grp_subgrp_tab.Controls.Add(this.grpallocateroom_btn);
+            this.grp_subgrp_tab.Controls.Add(this.grpsubgrp_lbl);
+            this.grp_subgrp_tab.Controls.Add(this.subgrp_cmb);
+            this.grp_subgrp_tab.Controls.Add(this.grp_cmb);
+            this.grp_subgrp_tab.Controls.Add(this.subgrp_lbl);
+            this.grp_subgrp_tab.Controls.Add(this.grp_lbl);
+            this.grp_subgrp_tab.Controls.Add(this.metroPanel5);
+            this.grp_subgrp_tab.Location = new System.Drawing.Point(4, 37);
+            this.grp_subgrp_tab.Name = "grp_subgrp_tab";
+            this.grp_subgrp_tab.Size = new System.Drawing.Size(780, 420);
+            this.grp_subgrp_tab.TabIndex = 3;
+            this.grp_subgrp_tab.Text = "Group / Sub Group";
+            // 
+            // grproom_cmb
+            // 
+            this.grproom_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grproom_cmb.FormattingEnabled = true;
+            this.grproom_cmb.ItemHeight = 23;
+            this.grproom_cmb.Location = new System.Drawing.Point(401, 249);
+            this.grproom_cmb.MaxDropDownItems = 100;
+            this.grproom_cmb.Name = "grproom_cmb";
+            this.grproom_cmb.PromptText = "Select Room";
+            this.grproom_cmb.Size = new System.Drawing.Size(200, 29);
+            this.grproom_cmb.TabIndex = 59;
+            this.grproom_cmb.UseSelectable = true;
+            this.grproom_cmb.DropDown += new System.EventHandler(this.grproom_cmb_DropDown);
+            // 
+            // grproom_lbl
+            // 
+            this.grproom_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.grproom_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.grproom_lbl.Location = new System.Drawing.Point(180, 248);
+            this.grproom_lbl.Name = "grproom_lbl";
+            this.grproom_lbl.Size = new System.Drawing.Size(180, 30);
+            this.grproom_lbl.TabIndex = 58;
+            this.grproom_lbl.Text = "Room";
+            this.grproom_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // clr_grp_btn
+            // 
+            this.clr_grp_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clr_grp_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clr_grp_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clr_grp_btn.Location = new System.Drawing.Point(435, 330);
+            this.clr_grp_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clr_grp_btn.Name = "clr_grp_btn";
+            this.clr_grp_btn.Size = new System.Drawing.Size(150, 40);
+            this.clr_grp_btn.TabIndex = 57;
+            this.clr_grp_btn.Text = "Clear";
+            this.clr_grp_btn.UseCustomBackColor = true;
+            this.clr_grp_btn.UseCustomForeColor = true;
+            this.clr_grp_btn.UseSelectable = true;
+            this.clr_grp_btn.Click += new System.EventHandler(this.clr_grp_btn_Click);
+            // 
+            // grpallocateroom_btn
+            // 
+            this.grpallocateroom_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.grpallocateroom_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.grpallocateroom_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.grpallocateroom_btn.Location = new System.Drawing.Point(193, 330);
+            this.grpallocateroom_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.grpallocateroom_btn.Name = "grpallocateroom_btn";
+            this.grpallocateroom_btn.Size = new System.Drawing.Size(194, 40);
+            this.grpallocateroom_btn.TabIndex = 56;
+            this.grpallocateroom_btn.Text = "Allocate Room";
+            this.grpallocateroom_btn.UseCustomBackColor = true;
+            this.grpallocateroom_btn.UseCustomForeColor = true;
+            this.grpallocateroom_btn.UseSelectable = true;
+            this.grpallocateroom_btn.Click += new System.EventHandler(this.grpallocateroom_btn_Click);
+            // 
+            // grpsubgrp_lbl
+            // 
+            this.grpsubgrp_lbl.AutoSize = true;
+            this.grpsubgrp_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.grpsubgrp_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.grpsubgrp_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.grpsubgrp_lbl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.grpsubgrp_lbl.Location = new System.Drawing.Point(217, 50);
+            this.grpsubgrp_lbl.Name = "grpsubgrp_lbl";
+            this.grpsubgrp_lbl.Size = new System.Drawing.Size(385, 25);
+            this.grpsubgrp_lbl.TabIndex = 55;
+            this.grpsubgrp_lbl.Text = "Add Suitable Rooms for a Group/Sub Group";
+            this.grpsubgrp_lbl.UseCustomBackColor = true;
+            // 
+            // subgrp_cmb
+            // 
+            this.subgrp_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.subgrp_cmb.FormattingEnabled = true;
+            this.subgrp_cmb.ItemHeight = 23;
+            this.subgrp_cmb.Location = new System.Drawing.Point(401, 191);
+            this.subgrp_cmb.MaxDropDownItems = 100;
+            this.subgrp_cmb.Name = "subgrp_cmb";
+            this.subgrp_cmb.PromptText = "Select Sub Group";
+            this.subgrp_cmb.Size = new System.Drawing.Size(200, 29);
+            this.subgrp_cmb.TabIndex = 54;
+            this.subgrp_cmb.UseSelectable = true;
+            this.subgrp_cmb.DropDown += new System.EventHandler(this.subgrp_cmb_DropDown);
+            // 
+            // grp_cmb
+            // 
+            this.grp_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grp_cmb.FormattingEnabled = true;
+            this.grp_cmb.ItemHeight = 23;
+            this.grp_cmb.Location = new System.Drawing.Point(401, 134);
+            this.grp_cmb.MaxDropDownItems = 10;
+            this.grp_cmb.Name = "grp_cmb";
+            this.grp_cmb.PromptText = "Select Group";
+            this.grp_cmb.Size = new System.Drawing.Size(200, 29);
+            this.grp_cmb.TabIndex = 53;
+            this.grp_cmb.UseSelectable = true;
+            this.grp_cmb.DropDown += new System.EventHandler(this.grp_cmb_DropDown);
+            // 
+            // subgrp_lbl
+            // 
+            this.subgrp_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.subgrp_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.subgrp_lbl.Location = new System.Drawing.Point(180, 190);
+            this.subgrp_lbl.Name = "subgrp_lbl";
+            this.subgrp_lbl.Size = new System.Drawing.Size(180, 30);
+            this.subgrp_lbl.TabIndex = 52;
+            this.subgrp_lbl.Text = "Sub Group";
+            this.subgrp_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // grp_lbl
+            // 
+            this.grp_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.grp_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.grp_lbl.Location = new System.Drawing.Point(180, 133);
+            this.grp_lbl.Name = "grp_lbl";
+            this.grp_lbl.Size = new System.Drawing.Size(180, 30);
+            this.grp_lbl.TabIndex = 51;
+            this.grp_lbl.Text = "Group";
+            this.grp_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // metroPanel5
+            // 
+            this.metroPanel5.HorizontalScrollbarBarColor = true;
+            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.HorizontalScrollbarSize = 10;
+            this.metroPanel5.Location = new System.Drawing.Point(0, 0);
+            this.metroPanel5.Name = "metroPanel5";
+            this.metroPanel5.Size = new System.Drawing.Size(780, 420);
+            this.metroPanel5.TabIndex = 60;
+            this.metroPanel5.UseCustomBackColor = true;
+            this.metroPanel5.VerticalScrollbarBarColor = true;
+            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.VerticalScrollbarSize = 10;
             // 
             // non_res_rooms_tab
             // 
@@ -449,6 +611,12 @@
             // 
             // metroPanel7
             // 
+            this.metroPanel7.Controls.Add(this.addsession5_btn);
+            this.metroPanel7.Controls.Add(this.clrsession5_btn);
+            this.metroPanel7.Controls.Add(this.clrsession4_btn);
+            this.metroPanel7.Controls.Add(this.clrsession3_btn);
+            this.metroPanel7.Controls.Add(this.clrsession2_btn);
+            this.metroPanel7.Controls.Add(this.clrsession1_btn);
             this.metroPanel7.Controls.Add(this.session5_lbl);
             this.metroPanel7.Controls.Add(this.session5_cmb);
             this.metroPanel7.Controls.Add(this.newsession5_btn);
@@ -484,7 +652,7 @@
             // 
             this.session5_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.session5_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.session5_lbl.Location = new System.Drawing.Point(179, 296);
+            this.session5_lbl.Location = new System.Drawing.Point(83, 295);
             this.session5_lbl.Name = "session5_lbl";
             this.session5_lbl.Size = new System.Drawing.Size(180, 30);
             this.session5_lbl.TabIndex = 76;
@@ -498,7 +666,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.session5_cmb.FormattingEnabled = true;
             this.session5_cmb.ItemHeight = 23;
-            this.session5_cmb.Location = new System.Drawing.Point(400, 297);
+            this.session5_cmb.Location = new System.Drawing.Point(304, 296);
             this.session5_cmb.MaxDropDownItems = 100;
             this.session5_cmb.Name = "session5_cmb";
             this.session5_cmb.PromptText = "Select Session";
@@ -513,7 +681,7 @@
             this.newsession5_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.newsession5_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.newsession5_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.newsession5_btn.Location = new System.Drawing.Point(618, 250);
+            this.newsession5_btn.Location = new System.Drawing.Point(521, 250);
             this.newsession5_btn.Margin = new System.Windows.Forms.Padding(2);
             this.newsession5_btn.Name = "newsession5_btn";
             this.newsession5_btn.Size = new System.Drawing.Size(122, 30);
@@ -530,7 +698,7 @@
             this.newsession4_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.newsession4_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.newsession4_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.newsession4_btn.Location = new System.Drawing.Point(618, 205);
+            this.newsession4_btn.Location = new System.Drawing.Point(521, 205);
             this.newsession4_btn.Margin = new System.Windows.Forms.Padding(2);
             this.newsession4_btn.Name = "newsession4_btn";
             this.newsession4_btn.Size = new System.Drawing.Size(122, 30);
@@ -547,7 +715,7 @@
             this.newsession3_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.newsession3_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.newsession3_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.newsession3_btn.Location = new System.Drawing.Point(618, 160);
+            this.newsession3_btn.Location = new System.Drawing.Point(521, 160);
             this.newsession3_btn.Margin = new System.Windows.Forms.Padding(2);
             this.newsession3_btn.Name = "newsession3_btn";
             this.newsession3_btn.Size = new System.Drawing.Size(122, 30);
@@ -596,7 +764,7 @@
             this.newsession2_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.newsession2_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.newsession2_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.newsession2_btn.Location = new System.Drawing.Point(618, 116);
+            this.newsession2_btn.Location = new System.Drawing.Point(521, 116);
             this.newsession2_btn.Margin = new System.Windows.Forms.Padding(2);
             this.newsession2_btn.Name = "newsession2_btn";
             this.newsession2_btn.Size = new System.Drawing.Size(122, 30);
@@ -611,7 +779,7 @@
             // 
             this.session4_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.session4_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.session4_lbl.Location = new System.Drawing.Point(179, 250);
+            this.session4_lbl.Location = new System.Drawing.Point(83, 249);
             this.session4_lbl.Name = "session4_lbl";
             this.session4_lbl.Size = new System.Drawing.Size(180, 30);
             this.session4_lbl.TabIndex = 71;
@@ -625,7 +793,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.session4_cmb.FormattingEnabled = true;
             this.session4_cmb.ItemHeight = 23;
-            this.session4_cmb.Location = new System.Drawing.Point(400, 251);
+            this.session4_cmb.Location = new System.Drawing.Point(304, 250);
             this.session4_cmb.MaxDropDownItems = 100;
             this.session4_cmb.Name = "session4_cmb";
             this.session4_cmb.PromptText = "Select Session";
@@ -639,7 +807,7 @@
             // 
             this.session3_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.session3_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.session3_lbl.Location = new System.Drawing.Point(179, 205);
+            this.session3_lbl.Location = new System.Drawing.Point(83, 204);
             this.session3_lbl.Name = "session3_lbl";
             this.session3_lbl.Size = new System.Drawing.Size(180, 30);
             this.session3_lbl.TabIndex = 69;
@@ -653,7 +821,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.session3_cmb.FormattingEnabled = true;
             this.session3_cmb.ItemHeight = 23;
-            this.session3_cmb.Location = new System.Drawing.Point(400, 206);
+            this.session3_cmb.Location = new System.Drawing.Point(304, 205);
             this.session3_cmb.MaxDropDownItems = 100;
             this.session3_cmb.Name = "session3_cmb";
             this.session3_cmb.PromptText = "Select Session";
@@ -667,7 +835,7 @@
             // 
             this.session2_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.session2_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.session2_lbl.Location = new System.Drawing.Point(179, 160);
+            this.session2_lbl.Location = new System.Drawing.Point(83, 159);
             this.session2_lbl.Name = "session2_lbl";
             this.session2_lbl.Size = new System.Drawing.Size(180, 30);
             this.session2_lbl.TabIndex = 67;
@@ -681,7 +849,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.session2_cmb.FormattingEnabled = true;
             this.session2_cmb.ItemHeight = 23;
-            this.session2_cmb.Location = new System.Drawing.Point(400, 161);
+            this.session2_cmb.Location = new System.Drawing.Point(304, 160);
             this.session2_cmb.MaxDropDownItems = 100;
             this.session2_cmb.Name = "session2_cmb";
             this.session2_cmb.PromptText = "Select Session";
@@ -697,7 +865,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.consec_room_cmb.FormattingEnabled = true;
             this.consec_room_cmb.ItemHeight = 23;
-            this.consec_room_cmb.Location = new System.Drawing.Point(400, 71);
+            this.consec_room_cmb.Location = new System.Drawing.Point(304, 70);
             this.consec_room_cmb.MaxDropDownItems = 10;
             this.consec_room_cmb.Name = "consec_room_cmb";
             this.consec_room_cmb.PromptText = "Select Room";
@@ -710,7 +878,7 @@
             // 
             this.session1_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.session1_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.session1_lbl.Location = new System.Drawing.Point(179, 116);
+            this.session1_lbl.Location = new System.Drawing.Point(83, 115);
             this.session1_lbl.Name = "session1_lbl";
             this.session1_lbl.Size = new System.Drawing.Size(180, 30);
             this.session1_lbl.TabIndex = 61;
@@ -723,7 +891,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.session1_cmb.FormattingEnabled = true;
             this.session1_cmb.ItemHeight = 23;
-            this.session1_cmb.Location = new System.Drawing.Point(400, 117);
+            this.session1_cmb.Location = new System.Drawing.Point(304, 116);
             this.session1_cmb.MaxDropDownItems = 100;
             this.session1_cmb.Name = "session1_cmb";
             this.session1_cmb.PromptText = "Select Session";
@@ -736,7 +904,7 @@
             // 
             this.con_session_room_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.con_session_room_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.con_session_room_lbl.Location = new System.Drawing.Point(179, 70);
+            this.con_session_room_lbl.Location = new System.Drawing.Point(83, 69);
             this.con_session_room_lbl.Name = "con_session_room_lbl";
             this.con_session_room_lbl.Size = new System.Drawing.Size(180, 30);
             this.con_session_room_lbl.TabIndex = 60;
@@ -749,7 +917,7 @@
             this.consec_session_lbl.BackColor = System.Drawing.Color.Transparent;
             this.consec_session_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.consec_session_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.consec_session_lbl.Location = new System.Drawing.Point(210, 16);
+            this.consec_session_lbl.Location = new System.Drawing.Point(183, 15);
             this.consec_session_lbl.Name = "consec_session_lbl";
             this.consec_session_lbl.Size = new System.Drawing.Size(390, 25);
             this.consec_session_lbl.TabIndex = 64;
@@ -1218,162 +1386,6 @@
             this.room_lbl.Text = "Room";
             this.room_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // grp_subgrp_tab
-            // 
-            this.grp_subgrp_tab.Controls.Add(this.grproom_cmb);
-            this.grp_subgrp_tab.Controls.Add(this.grproom_lbl);
-            this.grp_subgrp_tab.Controls.Add(this.clr_grp_btn);
-            this.grp_subgrp_tab.Controls.Add(this.grpallocateroom_btn);
-            this.grp_subgrp_tab.Controls.Add(this.grpsubgrp_lbl);
-            this.grp_subgrp_tab.Controls.Add(this.subgrp_cmb);
-            this.grp_subgrp_tab.Controls.Add(this.grp_cmb);
-            this.grp_subgrp_tab.Controls.Add(this.subgrp_lbl);
-            this.grp_subgrp_tab.Controls.Add(this.grp_lbl);
-            this.grp_subgrp_tab.Controls.Add(this.metroPanel5);
-            this.grp_subgrp_tab.Location = new System.Drawing.Point(4, 37);
-            this.grp_subgrp_tab.Name = "grp_subgrp_tab";
-            this.grp_subgrp_tab.Size = new System.Drawing.Size(780, 420);
-            this.grp_subgrp_tab.TabIndex = 3;
-            this.grp_subgrp_tab.Text = "Group / Sub Group";
-            // 
-            // grproom_cmb
-            // 
-            this.grproom_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grproom_cmb.FormattingEnabled = true;
-            this.grproom_cmb.ItemHeight = 23;
-            this.grproom_cmb.Location = new System.Drawing.Point(401, 249);
-            this.grproom_cmb.MaxDropDownItems = 100;
-            this.grproom_cmb.Name = "grproom_cmb";
-            this.grproom_cmb.PromptText = "Select Room";
-            this.grproom_cmb.Size = new System.Drawing.Size(200, 29);
-            this.grproom_cmb.TabIndex = 59;
-            this.grproom_cmb.UseSelectable = true;
-            this.grproom_cmb.DropDown += new System.EventHandler(this.grproom_cmb_DropDown);
-            // 
-            // grproom_lbl
-            // 
-            this.grproom_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.grproom_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.grproom_lbl.Location = new System.Drawing.Point(180, 248);
-            this.grproom_lbl.Name = "grproom_lbl";
-            this.grproom_lbl.Size = new System.Drawing.Size(180, 30);
-            this.grproom_lbl.TabIndex = 58;
-            this.grproom_lbl.Text = "Room";
-            this.grproom_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // clr_grp_btn
-            // 
-            this.clr_grp_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.clr_grp_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.clr_grp_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clr_grp_btn.Location = new System.Drawing.Point(435, 330);
-            this.clr_grp_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.clr_grp_btn.Name = "clr_grp_btn";
-            this.clr_grp_btn.Size = new System.Drawing.Size(150, 40);
-            this.clr_grp_btn.TabIndex = 57;
-            this.clr_grp_btn.Text = "Clear";
-            this.clr_grp_btn.UseCustomBackColor = true;
-            this.clr_grp_btn.UseCustomForeColor = true;
-            this.clr_grp_btn.UseSelectable = true;
-            this.clr_grp_btn.Click += new System.EventHandler(this.clr_grp_btn_Click);
-            // 
-            // grpallocateroom_btn
-            // 
-            this.grpallocateroom_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.grpallocateroom_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.grpallocateroom_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.grpallocateroom_btn.Location = new System.Drawing.Point(193, 330);
-            this.grpallocateroom_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.grpallocateroom_btn.Name = "grpallocateroom_btn";
-            this.grpallocateroom_btn.Size = new System.Drawing.Size(194, 40);
-            this.grpallocateroom_btn.TabIndex = 56;
-            this.grpallocateroom_btn.Text = "Allocate Room";
-            this.grpallocateroom_btn.UseCustomBackColor = true;
-            this.grpallocateroom_btn.UseCustomForeColor = true;
-            this.grpallocateroom_btn.UseSelectable = true;
-            this.grpallocateroom_btn.Click += new System.EventHandler(this.grpallocateroom_btn_Click);
-            // 
-            // grpsubgrp_lbl
-            // 
-            this.grpsubgrp_lbl.AutoSize = true;
-            this.grpsubgrp_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.grpsubgrp_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.grpsubgrp_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.grpsubgrp_lbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.grpsubgrp_lbl.Location = new System.Drawing.Point(217, 50);
-            this.grpsubgrp_lbl.Name = "grpsubgrp_lbl";
-            this.grpsubgrp_lbl.Size = new System.Drawing.Size(385, 25);
-            this.grpsubgrp_lbl.TabIndex = 55;
-            this.grpsubgrp_lbl.Text = "Add Suitable Rooms for a Group/Sub Group";
-            this.grpsubgrp_lbl.UseCustomBackColor = true;
-            // 
-            // subgrp_cmb
-            // 
-            this.subgrp_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.subgrp_cmb.FormattingEnabled = true;
-            this.subgrp_cmb.ItemHeight = 23;
-            this.subgrp_cmb.Location = new System.Drawing.Point(401, 191);
-            this.subgrp_cmb.MaxDropDownItems = 100;
-            this.subgrp_cmb.Name = "subgrp_cmb";
-            this.subgrp_cmb.PromptText = "Select Sub Group";
-            this.subgrp_cmb.Size = new System.Drawing.Size(200, 29);
-            this.subgrp_cmb.TabIndex = 54;
-            this.subgrp_cmb.UseSelectable = true;
-            this.subgrp_cmb.DropDown += new System.EventHandler(this.subgrp_cmb_DropDown);
-            // 
-            // grp_cmb
-            // 
-            this.grp_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grp_cmb.FormattingEnabled = true;
-            this.grp_cmb.ItemHeight = 23;
-            this.grp_cmb.Location = new System.Drawing.Point(401, 134);
-            this.grp_cmb.MaxDropDownItems = 10;
-            this.grp_cmb.Name = "grp_cmb";
-            this.grp_cmb.PromptText = "Select Group";
-            this.grp_cmb.Size = new System.Drawing.Size(200, 29);
-            this.grp_cmb.TabIndex = 53;
-            this.grp_cmb.UseSelectable = true;
-            this.grp_cmb.DropDown += new System.EventHandler(this.grp_cmb_DropDown);
-            // 
-            // subgrp_lbl
-            // 
-            this.subgrp_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.subgrp_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.subgrp_lbl.Location = new System.Drawing.Point(180, 190);
-            this.subgrp_lbl.Name = "subgrp_lbl";
-            this.subgrp_lbl.Size = new System.Drawing.Size(180, 30);
-            this.subgrp_lbl.TabIndex = 52;
-            this.subgrp_lbl.Text = "Sub Group";
-            this.subgrp_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // grp_lbl
-            // 
-            this.grp_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.grp_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.grp_lbl.Location = new System.Drawing.Point(180, 133);
-            this.grp_lbl.Name = "grp_lbl";
-            this.grp_lbl.Size = new System.Drawing.Size(180, 30);
-            this.grp_lbl.TabIndex = 51;
-            this.grp_lbl.Text = "Group";
-            this.grp_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroPanel5
-            // 
-            this.metroPanel5.HorizontalScrollbarBarColor = true;
-            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.HorizontalScrollbarSize = 10;
-            this.metroPanel5.Location = new System.Drawing.Point(0, 0);
-            this.metroPanel5.Name = "metroPanel5";
-            this.metroPanel5.Size = new System.Drawing.Size(780, 420);
-            this.metroPanel5.TabIndex = 60;
-            this.metroPanel5.UseCustomBackColor = true;
-            this.metroPanel5.VerticalScrollbarBarColor = true;
-            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.VerticalScrollbarSize = 10;
-            // 
             // locations_lbl
             // 
             this.locations_lbl.AutoSize = true;
@@ -1386,6 +1398,107 @@
             this.locations_lbl.TabIndex = 29;
             this.locations_lbl.Text = "Add Suitable Rooms";
             this.locations_lbl.UseCustomBackColor = true;
+            // 
+            // clrsession4_btn
+            // 
+            this.clrsession4_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession4_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession4_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession4_btn.Location = new System.Drawing.Point(647, 249);
+            this.clrsession4_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession4_btn.Name = "clrsession4_btn";
+            this.clrsession4_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession4_btn.TabIndex = 81;
+            this.clrsession4_btn.Text = "Clear";
+            this.clrsession4_btn.UseCustomBackColor = true;
+            this.clrsession4_btn.UseCustomForeColor = true;
+            this.clrsession4_btn.UseSelectable = true;
+            this.clrsession4_btn.Visible = false;
+            this.clrsession4_btn.Click += new System.EventHandler(this.clrsession4_btn_Click);
+            // 
+            // clrsession3_btn
+            // 
+            this.clrsession3_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession3_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession3_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession3_btn.Location = new System.Drawing.Point(647, 204);
+            this.clrsession3_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession3_btn.Name = "clrsession3_btn";
+            this.clrsession3_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession3_btn.TabIndex = 80;
+            this.clrsession3_btn.Text = "Clear";
+            this.clrsession3_btn.UseCustomBackColor = true;
+            this.clrsession3_btn.UseCustomForeColor = true;
+            this.clrsession3_btn.UseSelectable = true;
+            this.clrsession3_btn.Visible = false;
+            this.clrsession3_btn.Click += new System.EventHandler(this.clrsession3_btn_Click);
+            // 
+            // clrsession2_btn
+            // 
+            this.clrsession2_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession2_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession2_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession2_btn.Location = new System.Drawing.Point(647, 159);
+            this.clrsession2_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession2_btn.Name = "clrsession2_btn";
+            this.clrsession2_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession2_btn.TabIndex = 79;
+            this.clrsession2_btn.Text = "Clear";
+            this.clrsession2_btn.UseCustomBackColor = true;
+            this.clrsession2_btn.UseCustomForeColor = true;
+            this.clrsession2_btn.UseSelectable = true;
+            this.clrsession2_btn.Visible = false;
+            this.clrsession2_btn.Click += new System.EventHandler(this.clrsession2_btn_Click);
+            // 
+            // clrsession1_btn
+            // 
+            this.clrsession1_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession1_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession1_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession1_btn.Location = new System.Drawing.Point(647, 115);
+            this.clrsession1_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession1_btn.Name = "clrsession1_btn";
+            this.clrsession1_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession1_btn.TabIndex = 78;
+            this.clrsession1_btn.Text = "Clear";
+            this.clrsession1_btn.UseCustomBackColor = true;
+            this.clrsession1_btn.UseCustomForeColor = true;
+            this.clrsession1_btn.UseSelectable = true;
+            this.clrsession1_btn.Click += new System.EventHandler(this.clrsession1_btn_Click);
+            // 
+            // clrsession5_btn
+            // 
+            this.clrsession5_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrsession5_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrsession5_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrsession5_btn.Location = new System.Drawing.Point(647, 295);
+            this.clrsession5_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrsession5_btn.Name = "clrsession5_btn";
+            this.clrsession5_btn.Size = new System.Drawing.Size(122, 30);
+            this.clrsession5_btn.TabIndex = 82;
+            this.clrsession5_btn.Text = "Clear";
+            this.clrsession5_btn.UseCustomBackColor = true;
+            this.clrsession5_btn.UseCustomForeColor = true;
+            this.clrsession5_btn.UseSelectable = true;
+            this.clrsession5_btn.Visible = false;
+            this.clrsession5_btn.Click += new System.EventHandler(this.clrsession5_btn_Click);
+            // 
+            // addsession5_btn
+            // 
+            this.addsession5_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addsession5_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.addsession5_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addsession5_btn.Location = new System.Drawing.Point(521, 295);
+            this.addsession5_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.addsession5_btn.Name = "addsession5_btn";
+            this.addsession5_btn.Size = new System.Drawing.Size(122, 30);
+            this.addsession5_btn.TabIndex = 83;
+            this.addsession5_btn.Text = "Add Session";
+            this.addsession5_btn.UseCustomBackColor = true;
+            this.addsession5_btn.UseCustomForeColor = true;
+            this.addsession5_btn.UseSelectable = true;
+            this.addsession5_btn.Visible = false;
+            this.addsession5_btn.Click += new System.EventHandler(this.addsession5_btn_Click);
             // 
             // Rooms
             // 
@@ -1402,6 +1515,8 @@
             this.Resizable = false;
             this.Text = "Rooms";
             this.loc_tabcontrol.ResumeLayout(false);
+            this.grp_subgrp_tab.ResumeLayout(false);
+            this.grp_subgrp_tab.PerformLayout();
             this.non_res_rooms_tab.ResumeLayout(false);
             this.non_res_rooms_tab.PerformLayout();
             this.metroPanel8.ResumeLayout(false);
@@ -1421,8 +1536,6 @@
             this.locationview_panel.ResumeLayout(false);
             this.locationview_panel.PerformLayout();
             this.metroPanel1.ResumeLayout(false);
-            this.grp_subgrp_tab.ResumeLayout(false);
-            this.grp_subgrp_tab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1515,5 +1628,11 @@
         private MetroFramework.Controls.MetroButton newsession3_btn;
         private MetroFramework.Controls.MetroLabel session5_lbl;
         public MetroFramework.Controls.MetroComboBox session5_cmb;
+        private MetroFramework.Controls.MetroButton clrsession5_btn;
+        private MetroFramework.Controls.MetroButton clrsession4_btn;
+        private MetroFramework.Controls.MetroButton clrsession3_btn;
+        private MetroFramework.Controls.MetroButton clrsession2_btn;
+        private MetroFramework.Controls.MetroButton clrsession1_btn;
+        private MetroFramework.Controls.MetroButton addsession5_btn;
     }
 }
