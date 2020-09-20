@@ -329,9 +329,10 @@
             this.tagsub_room_cmb.MaxDropDownItems = 100;
             this.tagsub_room_cmb.Name = "tagsub_room_cmb";
             this.tagsub_room_cmb.PromptText = "Select Room";
-            this.tagsub_room_cmb.Size = new System.Drawing.Size(200, 29);
+            this.tagsub_room_cmb.Size = new System.Drawing.Size(256, 29);
             this.tagsub_room_cmb.TabIndex = 50;
             this.tagsub_room_cmb.UseSelectable = true;
+            this.tagsub_room_cmb.DropDown += new System.EventHandler(this.tagsub_room_cmb_DropDown);
             // 
             // tagsub_room_lbl
             // 
@@ -358,6 +359,7 @@
             this.clrtagsub_btn.UseCustomBackColor = true;
             this.clrtagsub_btn.UseCustomForeColor = true;
             this.clrtagsub_btn.UseSelectable = true;
+            this.clrtagsub_btn.Click += new System.EventHandler(this.clrtagsub_btn_Click);
             // 
             // allocatetagsub_btn
             // 
@@ -373,6 +375,7 @@
             this.allocatetagsub_btn.UseCustomBackColor = true;
             this.allocatetagsub_btn.UseCustomForeColor = true;
             this.allocatetagsub_btn.UseSelectable = true;
+            this.allocatetagsub_btn.Click += new System.EventHandler(this.allocatetagsub_btn_Click);
             // 
             // tagsub_lbl
             // 
@@ -397,9 +400,10 @@
             this.sub_cmb.MaxDropDownItems = 100;
             this.sub_cmb.Name = "sub_cmb";
             this.sub_cmb.PromptText = "Select Subject";
-            this.sub_cmb.Size = new System.Drawing.Size(200, 29);
+            this.sub_cmb.Size = new System.Drawing.Size(256, 29);
             this.sub_cmb.TabIndex = 45;
             this.sub_cmb.UseSelectable = true;
+            this.sub_cmb.DropDown += new System.EventHandler(this.sub_cmb_DropDown);
             // 
             // tagsub_cmb
             // 
@@ -411,9 +415,10 @@
             this.tagsub_cmb.MaxDropDownItems = 10;
             this.tagsub_cmb.Name = "tagsub_cmb";
             this.tagsub_cmb.PromptText = "Select Tag";
-            this.tagsub_cmb.Size = new System.Drawing.Size(200, 29);
+            this.tagsub_cmb.Size = new System.Drawing.Size(256, 29);
             this.tagsub_cmb.TabIndex = 44;
             this.tagsub_cmb.UseSelectable = true;
+            this.tagsub_cmb.DropDown += new System.EventHandler(this.tagsub_cmb_DropDown);
             // 
             // sub_lbl
             // 

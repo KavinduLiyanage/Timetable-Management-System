@@ -20,7 +20,7 @@ namespace TimetableManagementSystem.Rooms
             InitializeComponent();
         }
 
-        // backend for allocation of rooms for a tag
+        // SUITABLE ROOMS FOR TAG
 
         private void tag_cmb_DropDown(object sender, EventArgs e)
         {
@@ -68,7 +68,7 @@ namespace TimetableManagementSystem.Rooms
             if ((tag_cmb.Text != string.Empty) && (tagroom_cmb.Text != string.Empty))
             {
                 //check duplicate before save
-                SqlDataAdapter da = new SqlDataAdapter("Select Tag, Room from Tag_Rooms where Tag = '"+tag_cmb.Text+ "' or Room = '" + tagroom_cmb.Text + "' ", con);
+                SqlDataAdapter da = new SqlDataAdapter("Select Tag, Room from Tag_Rooms where Tag = '"+tag_cmb.Text+ "' and Room = '" + tagroom_cmb.Text + "' ", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if(dt.Rows.Count >= 1)
@@ -129,5 +129,95 @@ namespace TimetableManagementSystem.Rooms
             tag_cmb.SelectedIndex = -1;
             tagroom_cmb.SelectedIndex = -1;
         }
+
+
+        //SUITABLE ROOMS FOR SUBJECT AND TAG
+
+        //drop down for selecting a subject
+        private void sub_cmb_DropDown(object sender, EventArgs e)
+        {
+            sub_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select SubName from Subjects ", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);           
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                sub_cmb.Items.Add(dataRow["SubName"].ToString());
+            }
+        }
+        
+        //drop down for selecting a tag
+        private void tagsub_cmb_DropDown(object sender, EventArgs e)
+        {
+            tagsub_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select TagName from Tags", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);           
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                tagsub_cmb.Items.Add(dataRow["TagName"].ToString());
+            }
+        }
+
+        //drop down for selecting a room
+        private void tagsub_room_cmb_DropDown(object sender, EventArgs e)
+        {
+            tagsub_room_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Rooms", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                tagsub_room_cmb.Items.Add(dataRow["room_num"].ToString());
+            }
+        }
+
+        //allocating room for subject and tag
+        private void allocatetagsub_btn_Click(object sender, EventArgs e)
+        {
+            if ((sub_cmb.Text != string.Empty) && (tagsub_cmb.Text != string.Empty) && (tagsub_room_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select Subject, Tag, Room from SubjectTag_Rooms where Subject = '" + sub_cmb.Text + "'and (Tag = '" + tagsub_cmb.Text + "'  and Room = '" + tagsub_room_cmb.Text + "')", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("The room is already allocated for the selected subject and tag");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[SubjectTag_Rooms] ([Subject],[Tag],[Room]) VALUES ('" + sub_cmb.Text + "','" + tagsub_cmb.Text + "','" + tagsub_room_cmb.Text + "' )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Room Allocated!");
+                    con.Close();
+                    clearRoomFieldForTagSub();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //clear room field for tag and sub
+        public void clearRoomFieldForTagSub()
+        {
+            tagsub_room_cmb.SelectedIndex = -1;
+        }
+
+        //clear all fields in tag_sub
+        private void clrtagsub_btn_Click(object sender, EventArgs e)
+        {
+            sub_cmb.SelectedIndex = -1;
+            tagsub_cmb.SelectedIndex = -1;
+            tagsub_room_cmb.SelectedIndex = -1;
+        }
+
+
     }
 }
