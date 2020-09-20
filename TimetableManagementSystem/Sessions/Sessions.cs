@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,45 @@ namespace TimetableManagementSystem.Sessions
         public Sessions()
         {
             InitializeComponent();
+        }
+
+        SqlConnection con = Config.con;
+
+        private void btnSessionSave_Click(object sender, EventArgs e)
+        {
+            if (IsValid())
+            {
+                SqlCommand cmd = new SqlCommand("INSERT INTO Sessions VALUES (@Lecturer, @Subject, @SubjectCode, @Tag, @GroupID, @StudentCount, @Duration)", con);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@Lecturer", cmbSessionLecturer.Text);
+                cmd.Parameters.AddWithValue("@Subject", cmbSessionSubject.Text);
+                cmd.Parameters.AddWithValue("@SubjectCode", cmbSessionSubject.Text);
+                cmd.Parameters.AddWithValue("@Tag", cmbSessionTag.Text);
+                cmd.Parameters.AddWithValue("@GroupID", cmbSessionGroup.Text);    
+                cmd.Parameters.AddWithValue("@StudentCount", nmudSessionNoStudents.Text);
+                cmd.Parameters.AddWithValue("@Duration", nmudSessionDuration.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                //GetSubjects();
+
+                //ClearFieldsAfterAdd();
+
+                //tabControlSubjects.SelectedTab = tabPageSubView;
+            }
+        }
+
+        private bool IsValid()
+        {
+            if (cmbSessionLecturer.Text == string.Empty)
+            {
+                MessageBox.Show("Fill the all fields", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
 
         //--------------------Header Buttons--------------------
@@ -99,5 +139,7 @@ namespace TimetableManagementSystem.Sessions
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
         }
+
+        
     }
 }
