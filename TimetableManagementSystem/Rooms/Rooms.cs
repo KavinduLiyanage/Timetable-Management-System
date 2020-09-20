@@ -549,5 +549,64 @@ namespace TimetableManagementSystem.Rooms
             session4_cmb.SelectedIndex = -1;
             session5_cmb.SelectedIndex = -1;
         }
+
+        // ALLOCATING NON RESERVABLE TIME FOR A ROOM
+
+        //drop down for room
+        private void non_res_room_cmb_DropDown(object sender, EventArgs e)
+        {
+            non_res_room_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Rooms", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                non_res_room_cmb.Items.Add(dataRow["room_num"].ToString());
+            }
+        }
+
+        private void non_reserv_room_time_btn_Click(object sender, EventArgs e)
+        {
+            if ((non_res_room_cmb.Text != string.Empty) && (day_cmb.Text != string.Empty) && (timeslot_cmb.Text != string.Empty))
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select Room, Day,Time from NonReservableTime_Rooms where Room = '" + non_res_room_cmb.Text + "' " +
+                    "and  Day = '" + day_cmb.Text + "' and Time = '" + timeslot_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("Time is already allocated as non reservable!");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[NonReservableTime_Rooms] ([Room],[Day],[Time]) VALUES ('" + non_res_room_cmb.Text + "','" + day_cmb.Text + "','" + timeslot_cmb.Text + "'  )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Time is allocated as non reservable for the selected room !");
+                    con.Close();
+                    clearDayTimeFields();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void clearDayTimeFields()
+        {
+            day_cmb.SelectedIndex = -1;
+            timeslot_cmb.SelectedIndex = -1;
+        }
+
+        private void clrnonreserve_btn_Click(object sender, EventArgs e)
+        {
+            non_res_room_cmb.SelectedIndex = -1;
+            clearDayTimeFields();
+        }
     }
 }
