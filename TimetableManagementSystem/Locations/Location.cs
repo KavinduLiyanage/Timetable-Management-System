@@ -233,7 +233,6 @@ namespace TimetableManagementSystem.Locations
         }
 
 
-
         private void search_txt_box_TextChanged(object sender, EventArgs e)
         {
             
