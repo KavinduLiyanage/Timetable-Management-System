@@ -20,6 +20,8 @@ namespace TimetableManagementSystem.Rooms
             InitializeComponent();
         }
 
+        // backend for allocation of rooms for a tag
+
         private void tag_cmb_DropDown(object sender, EventArgs e)
         {
             tag_cmb.Items.Clear();
