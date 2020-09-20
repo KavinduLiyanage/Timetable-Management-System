@@ -218,6 +218,79 @@ namespace TimetableManagementSystem.Rooms
             tagsub_room_cmb.SelectedIndex = -1;
         }
 
+        //SUITABLE ROOM FOR LECTURER
+
+        //selecting a lecturer
+        private void lecturer_cmb_DropDown(object sender, EventArgs e)
+        {
+            lecturer_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select LecName from Lecturers ", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                lecturer_cmb.Items.Add(dataRow["LecName"].ToString());
+            }
+        }
+
+        //selecting a room for a lecturer
+        private void lecroom_cmb_DropDown(object sender, EventArgs e)
+        {
+            lecroom_cmb.Items.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Rooms", con);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                lecroom_cmb.Items.Add(dataRow["room_num"].ToString());
+            }
+        }
+
+        //allocating room for a lecturer
+        private void allocatelecturer_room_btn_Click(object sender, EventArgs e)
+        {
+            if ((lecturer_cmb.Text != string.Empty) && (lecroom_cmb.Text != string.Empty) )
+            {
+                //check duplicate before save
+                SqlDataAdapter da = new SqlDataAdapter("Select LecturerName, Room from Lecturer_Rooms where LecturerName = '" + lecturer_cmb.Text + "' and  Room = '" + lecroom_cmb.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    MessageBox.Show("The room is already allocated for the selected lecturer");
+                }
+                else
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO [dbo].[Lecturer_Rooms] ([LecturerName],[Room]) VALUES ('" + lecturer_cmb.Text + "','" + lecroom_cmb.Text + "' )";
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Room Allocated!");
+                    con.Close();
+                    clearRoomFieldForLecturer();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void clearRoomFieldForLecturer()
+        {
+            
+            lecroom_cmb.SelectedIndex = -1;
+        }
+
+        private void clrLecturerroom_btn_Click(object sender, EventArgs e)
+        {
+            lecturer_cmb.SelectedIndex = -1;
+            lecroom_cmb.SelectedIndex = -1;
+        }
+
+        //SUITABLE ROOM FOR A SESSION
 
     }
 }

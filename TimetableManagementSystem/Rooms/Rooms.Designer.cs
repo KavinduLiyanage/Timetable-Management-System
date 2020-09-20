@@ -29,6 +29,28 @@
         private void InitializeComponent()
         {
             this.loc_tabcontrol = new MetroFramework.Controls.MetroTabControl();
+            this.subtag_tab = new System.Windows.Forms.TabPage();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.tagsub_room_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.tagsub_room_lbl = new MetroFramework.Controls.MetroLabel();
+            this.clrtagsub_btn = new MetroFramework.Controls.MetroButton();
+            this.allocatetagsub_btn = new MetroFramework.Controls.MetroButton();
+            this.tagsub_lbl = new MetroFramework.Controls.MetroLabel();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.tag_sub_lbl = new MetroFramework.Controls.MetroLabel();
+            this.sub_lbl = new MetroFramework.Controls.MetroLabel();
+            this.tagsub_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.sub_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.lecturer_tab = new System.Windows.Forms.TabPage();
+            this.editloc_panel = new MetroFramework.Controls.MetroPanel();
+            this.clrLecturerroom_btn = new MetroFramework.Controls.MetroButton();
+            this.allocatelecturer_room_btn = new MetroFramework.Controls.MetroButton();
+            this.lec_lbl = new MetroFramework.Controls.MetroLabel();
+            this.lecroom_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.lecturer_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.lecroom_lbl = new MetroFramework.Controls.MetroLabel();
+            this.lecturer_lbl = new MetroFramework.Controls.MetroLabel();
+            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.tag_tab = new System.Windows.Forms.TabPage();
             this.locationview_panel = new System.Windows.Forms.Panel();
             this.clear_tag_btn = new MetroFramework.Controls.MetroButton();
@@ -39,28 +61,6 @@
             this.tag_lbl = new MetroFramework.Controls.MetroLabel();
             this.tag_cmb = new MetroFramework.Controls.MetroComboBox();
             this.room_lbl = new MetroFramework.Controls.MetroLabel();
-            this.subtag_tab = new System.Windows.Forms.TabPage();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.tagsub_room_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.tagsub_room_lbl = new MetroFramework.Controls.MetroLabel();
-            this.clrtagsub_btn = new MetroFramework.Controls.MetroButton();
-            this.allocatetagsub_btn = new MetroFramework.Controls.MetroButton();
-            this.tagsub_lbl = new MetroFramework.Controls.MetroLabel();
-            this.sub_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.tagsub_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.sub_lbl = new MetroFramework.Controls.MetroLabel();
-            this.tag_sub_lbl = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.lecturer_tab = new System.Windows.Forms.TabPage();
-            this.editloc_panel = new MetroFramework.Controls.MetroPanel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.allocatelecturer_room_btn = new MetroFramework.Controls.MetroButton();
-            this.lec_lbl = new MetroFramework.Controls.MetroLabel();
-            this.lectroom_lbl = new MetroFramework.Controls.MetroComboBox();
-            this.lecturer_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.lecroom_lbl = new MetroFramework.Controls.MetroLabel();
-            this.lecturer_lbl = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.grp_subgrp_tab = new System.Windows.Forms.TabPage();
             this.grproom_cmb = new MetroFramework.Controls.MetroComboBox();
             this.grproom_lbl = new MetroFramework.Controls.MetroLabel();
@@ -105,14 +105,14 @@
             this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
             this.locations_lbl = new MetroFramework.Controls.MetroLabel();
             this.loc_tabcontrol.SuspendLayout();
-            this.tag_tab.SuspendLayout();
-            this.locationview_panel.SuspendLayout();
-            this.metroPanel1.SuspendLayout();
             this.subtag_tab.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel3.SuspendLayout();
             this.lecturer_tab.SuspendLayout();
             this.editloc_panel.SuspendLayout();
+            this.tag_tab.SuspendLayout();
+            this.locationview_panel.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
             this.grp_subgrp_tab.SuspendLayout();
             this.session_tab.SuspendLayout();
             this.consec_session_tab.SuspendLayout();
@@ -123,9 +123,9 @@
             // loc_tabcontrol
             // 
             this.loc_tabcontrol.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.loc_tabcontrol.Controls.Add(this.tag_tab);
             this.loc_tabcontrol.Controls.Add(this.subtag_tab);
             this.loc_tabcontrol.Controls.Add(this.lecturer_tab);
+            this.loc_tabcontrol.Controls.Add(this.tag_tab);
             this.loc_tabcontrol.Controls.Add(this.grp_subgrp_tab);
             this.loc_tabcontrol.Controls.Add(this.session_tab);
             this.loc_tabcontrol.Controls.Add(this.consec_session_tab);
@@ -143,6 +143,326 @@
             this.loc_tabcontrol.UseCustomForeColor = true;
             this.loc_tabcontrol.UseSelectable = true;
             this.loc_tabcontrol.UseStyleColors = true;
+            // 
+            // subtag_tab
+            // 
+            this.subtag_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.subtag_tab.Controls.Add(this.metroPanel2);
+            this.subtag_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtag_tab.Location = new System.Drawing.Point(4, 37);
+            this.subtag_tab.Name = "subtag_tab";
+            this.subtag_tab.Size = new System.Drawing.Size(780, 420);
+            this.subtag_tab.TabIndex = 1;
+            this.subtag_tab.Text = "Subject and Tag";
+            this.subtag_tab.UseVisualStyleBackColor = true;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.metroPanel2.Controls.Add(this.tagsub_room_cmb);
+            this.metroPanel2.Controls.Add(this.tagsub_room_lbl);
+            this.metroPanel2.Controls.Add(this.clrtagsub_btn);
+            this.metroPanel2.Controls.Add(this.allocatetagsub_btn);
+            this.metroPanel2.Controls.Add(this.tagsub_lbl);
+            this.metroPanel2.Controls.Add(this.metroPanel3);
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(2, -1);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(776, 419);
+            this.metroPanel2.TabIndex = 0;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // tagsub_room_cmb
+            // 
+            this.tagsub_room_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tagsub_room_cmb.FormattingEnabled = true;
+            this.tagsub_room_cmb.ItemHeight = 23;
+            this.tagsub_room_cmb.Location = new System.Drawing.Point(399, 242);
+            this.tagsub_room_cmb.MaxDropDownItems = 100;
+            this.tagsub_room_cmb.Name = "tagsub_room_cmb";
+            this.tagsub_room_cmb.PromptText = "Select Room";
+            this.tagsub_room_cmb.Size = new System.Drawing.Size(256, 29);
+            this.tagsub_room_cmb.TabIndex = 50;
+            this.tagsub_room_cmb.UseSelectable = true;
+            this.tagsub_room_cmb.DropDown += new System.EventHandler(this.tagsub_room_cmb_DropDown);
+            // 
+            // tagsub_room_lbl
+            // 
+            this.tagsub_room_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tagsub_room_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.tagsub_room_lbl.Location = new System.Drawing.Point(178, 241);
+            this.tagsub_room_lbl.Name = "tagsub_room_lbl";
+            this.tagsub_room_lbl.Size = new System.Drawing.Size(180, 30);
+            this.tagsub_room_lbl.TabIndex = 49;
+            this.tagsub_room_lbl.Text = "Room";
+            this.tagsub_room_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // clrtagsub_btn
+            // 
+            this.clrtagsub_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrtagsub_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrtagsub_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrtagsub_btn.Location = new System.Drawing.Point(433, 323);
+            this.clrtagsub_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrtagsub_btn.Name = "clrtagsub_btn";
+            this.clrtagsub_btn.Size = new System.Drawing.Size(150, 40);
+            this.clrtagsub_btn.TabIndex = 48;
+            this.clrtagsub_btn.Text = "Clear";
+            this.clrtagsub_btn.UseCustomBackColor = true;
+            this.clrtagsub_btn.UseCustomForeColor = true;
+            this.clrtagsub_btn.UseSelectable = true;
+            this.clrtagsub_btn.Click += new System.EventHandler(this.clrtagsub_btn_Click);
+            // 
+            // allocatetagsub_btn
+            // 
+            this.allocatetagsub_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.allocatetagsub_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.allocatetagsub_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.allocatetagsub_btn.Location = new System.Drawing.Point(191, 323);
+            this.allocatetagsub_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.allocatetagsub_btn.Name = "allocatetagsub_btn";
+            this.allocatetagsub_btn.Size = new System.Drawing.Size(194, 40);
+            this.allocatetagsub_btn.TabIndex = 47;
+            this.allocatetagsub_btn.Text = "Allocate Room";
+            this.allocatetagsub_btn.UseCustomBackColor = true;
+            this.allocatetagsub_btn.UseCustomForeColor = true;
+            this.allocatetagsub_btn.UseSelectable = true;
+            this.allocatetagsub_btn.Click += new System.EventHandler(this.allocatetagsub_btn_Click);
+            // 
+            // tagsub_lbl
+            // 
+            this.tagsub_lbl.AutoSize = true;
+            this.tagsub_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.tagsub_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.tagsub_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.tagsub_lbl.Location = new System.Drawing.Point(215, 43);
+            this.tagsub_lbl.Name = "tagsub_lbl";
+            this.tagsub_lbl.Size = new System.Drawing.Size(384, 25);
+            this.tagsub_lbl.TabIndex = 46;
+            this.tagsub_lbl.Text = "Add Suitable Rooms for a Subject and a Tag";
+            this.tagsub_lbl.UseCustomBackColor = true;
+            // 
+            // metroPanel3
+            // 
+            this.metroPanel3.Controls.Add(this.tag_sub_lbl);
+            this.metroPanel3.Controls.Add(this.sub_lbl);
+            this.metroPanel3.Controls.Add(this.tagsub_cmb);
+            this.metroPanel3.Controls.Add(this.sub_cmb);
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(-7, 0);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(781, 417);
+            this.metroPanel3.TabIndex = 51;
+            this.metroPanel3.UseCustomBackColor = true;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // tag_sub_lbl
+            // 
+            this.tag_sub_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tag_sub_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.tag_sub_lbl.Location = new System.Drawing.Point(185, 184);
+            this.tag_sub_lbl.Name = "tag_sub_lbl";
+            this.tag_sub_lbl.Size = new System.Drawing.Size(180, 30);
+            this.tag_sub_lbl.TabIndex = 42;
+            this.tag_sub_lbl.Text = "Tag";
+            this.tag_sub_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // sub_lbl
+            // 
+            this.sub_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sub_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.sub_lbl.Location = new System.Drawing.Point(185, 127);
+            this.sub_lbl.Name = "sub_lbl";
+            this.sub_lbl.Size = new System.Drawing.Size(180, 30);
+            this.sub_lbl.TabIndex = 43;
+            this.sub_lbl.Text = "Subject";
+            this.sub_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tagsub_cmb
+            // 
+            this.tagsub_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tagsub_cmb.FormattingEnabled = true;
+            this.tagsub_cmb.ItemHeight = 23;
+            this.tagsub_cmb.Location = new System.Drawing.Point(406, 184);
+            this.tagsub_cmb.MaxDropDownItems = 10;
+            this.tagsub_cmb.Name = "tagsub_cmb";
+            this.tagsub_cmb.PromptText = "Select Tag";
+            this.tagsub_cmb.Size = new System.Drawing.Size(256, 29);
+            this.tagsub_cmb.TabIndex = 44;
+            this.tagsub_cmb.UseSelectable = true;
+            this.tagsub_cmb.DropDown += new System.EventHandler(this.tagsub_cmb_DropDown);
+            // 
+            // sub_cmb
+            // 
+            this.sub_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sub_cmb.FormattingEnabled = true;
+            this.sub_cmb.ItemHeight = 23;
+            this.sub_cmb.Location = new System.Drawing.Point(406, 127);
+            this.sub_cmb.MaxDropDownItems = 100;
+            this.sub_cmb.Name = "sub_cmb";
+            this.sub_cmb.PromptText = "Select Subject";
+            this.sub_cmb.Size = new System.Drawing.Size(256, 29);
+            this.sub_cmb.TabIndex = 45;
+            this.sub_cmb.UseSelectable = true;
+            this.sub_cmb.DropDown += new System.EventHandler(this.sub_cmb_DropDown);
+            // 
+            // lecturer_tab
+            // 
+            this.lecturer_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lecturer_tab.Controls.Add(this.editloc_panel);
+            this.lecturer_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lecturer_tab.Location = new System.Drawing.Point(4, 37);
+            this.lecturer_tab.Name = "lecturer_tab";
+            this.lecturer_tab.Size = new System.Drawing.Size(780, 420);
+            this.lecturer_tab.TabIndex = 2;
+            this.lecturer_tab.Text = "Lecturer";
+            this.lecturer_tab.UseVisualStyleBackColor = true;
+            // 
+            // editloc_panel
+            // 
+            this.editloc_panel.BackColor = System.Drawing.Color.Transparent;
+            this.editloc_panel.Controls.Add(this.clrLecturerroom_btn);
+            this.editloc_panel.Controls.Add(this.allocatelecturer_room_btn);
+            this.editloc_panel.Controls.Add(this.lec_lbl);
+            this.editloc_panel.Controls.Add(this.lecroom_cmb);
+            this.editloc_panel.Controls.Add(this.lecturer_cmb);
+            this.editloc_panel.Controls.Add(this.lecroom_lbl);
+            this.editloc_panel.Controls.Add(this.lecturer_lbl);
+            this.editloc_panel.Controls.Add(this.metroPanel4);
+            this.editloc_panel.HorizontalScrollbarBarColor = true;
+            this.editloc_panel.HorizontalScrollbarHighlightOnWheel = false;
+            this.editloc_panel.HorizontalScrollbarSize = 10;
+            this.editloc_panel.Location = new System.Drawing.Point(1, 0);
+            this.editloc_panel.Name = "editloc_panel";
+            this.editloc_panel.Size = new System.Drawing.Size(776, 419);
+            this.editloc_panel.TabIndex = 1;
+            this.editloc_panel.UseCustomBackColor = true;
+            this.editloc_panel.VerticalScrollbarBarColor = true;
+            this.editloc_panel.VerticalScrollbarHighlightOnWheel = false;
+            this.editloc_panel.VerticalScrollbarSize = 10;
+            // 
+            // clrLecturerroom_btn
+            // 
+            this.clrLecturerroom_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.clrLecturerroom_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.clrLecturerroom_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.clrLecturerroom_btn.Location = new System.Drawing.Point(433, 323);
+            this.clrLecturerroom_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.clrLecturerroom_btn.Name = "clrLecturerroom_btn";
+            this.clrLecturerroom_btn.Size = new System.Drawing.Size(150, 40);
+            this.clrLecturerroom_btn.TabIndex = 48;
+            this.clrLecturerroom_btn.Text = "Clear";
+            this.clrLecturerroom_btn.UseCustomBackColor = true;
+            this.clrLecturerroom_btn.UseCustomForeColor = true;
+            this.clrLecturerroom_btn.UseSelectable = true;
+            this.clrLecturerroom_btn.Click += new System.EventHandler(this.clrLecturerroom_btn_Click);
+            // 
+            // allocatelecturer_room_btn
+            // 
+            this.allocatelecturer_room_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.allocatelecturer_room_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.allocatelecturer_room_btn.ForeColor = System.Drawing.SystemColors.Control;
+            this.allocatelecturer_room_btn.Location = new System.Drawing.Point(191, 323);
+            this.allocatelecturer_room_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.allocatelecturer_room_btn.Name = "allocatelecturer_room_btn";
+            this.allocatelecturer_room_btn.Size = new System.Drawing.Size(194, 40);
+            this.allocatelecturer_room_btn.TabIndex = 47;
+            this.allocatelecturer_room_btn.Text = "Allocate Room";
+            this.allocatelecturer_room_btn.UseCustomBackColor = true;
+            this.allocatelecturer_room_btn.UseCustomForeColor = true;
+            this.allocatelecturer_room_btn.UseSelectable = true;
+            this.allocatelecturer_room_btn.Click += new System.EventHandler(this.allocatelecturer_room_btn_Click);
+            // 
+            // lec_lbl
+            // 
+            this.lec_lbl.AutoSize = true;
+            this.lec_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lec_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lec_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lec_lbl.Location = new System.Drawing.Point(259, 52);
+            this.lec_lbl.Name = "lec_lbl";
+            this.lec_lbl.Size = new System.Drawing.Size(304, 25);
+            this.lec_lbl.TabIndex = 46;
+            this.lec_lbl.Text = "Add Suitable Rooms for a Lecturer";
+            this.lec_lbl.UseCustomBackColor = true;
+            // 
+            // lecroom_cmb
+            // 
+            this.lecroom_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lecroom_cmb.FormattingEnabled = true;
+            this.lecroom_cmb.ItemHeight = 23;
+            this.lecroom_cmb.Location = new System.Drawing.Point(399, 184);
+            this.lecroom_cmb.MaxDropDownItems = 100;
+            this.lecroom_cmb.Name = "lecroom_cmb";
+            this.lecroom_cmb.PromptText = "Select Room";
+            this.lecroom_cmb.Size = new System.Drawing.Size(200, 29);
+            this.lecroom_cmb.TabIndex = 45;
+            this.lecroom_cmb.UseSelectable = true;
+            this.lecroom_cmb.DropDown += new System.EventHandler(this.lecroom_cmb_DropDown);
+            // 
+            // lecturer_cmb
+            // 
+            this.lecturer_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lecturer_cmb.FormattingEnabled = true;
+            this.lecturer_cmb.ItemHeight = 23;
+            this.lecturer_cmb.Location = new System.Drawing.Point(399, 127);
+            this.lecturer_cmb.MaxDropDownItems = 10;
+            this.lecturer_cmb.Name = "lecturer_cmb";
+            this.lecturer_cmb.PromptText = "Select Lecturer";
+            this.lecturer_cmb.Size = new System.Drawing.Size(200, 29);
+            this.lecturer_cmb.TabIndex = 44;
+            this.lecturer_cmb.UseSelectable = true;
+            this.lecturer_cmb.DropDown += new System.EventHandler(this.lecturer_cmb_DropDown);
+            // 
+            // lecroom_lbl
+            // 
+            this.lecroom_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lecroom_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lecroom_lbl.Location = new System.Drawing.Point(178, 183);
+            this.lecroom_lbl.Name = "lecroom_lbl";
+            this.lecroom_lbl.Size = new System.Drawing.Size(180, 30);
+            this.lecroom_lbl.TabIndex = 43;
+            this.lecroom_lbl.Text = "Room";
+            this.lecroom_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lecturer_lbl
+            // 
+            this.lecturer_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lecturer_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lecturer_lbl.Location = new System.Drawing.Point(178, 126);
+            this.lecturer_lbl.Name = "lecturer_lbl";
+            this.lecturer_lbl.Size = new System.Drawing.Size(180, 30);
+            this.lecturer_lbl.TabIndex = 42;
+            this.lecturer_lbl.Text = "Lecturer";
+            this.lecturer_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // metroPanel4
+            // 
+            this.metroPanel4.HorizontalScrollbarBarColor = true;
+            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.HorizontalScrollbarSize = 10;
+            this.metroPanel4.Location = new System.Drawing.Point(-2, -1);
+            this.metroPanel4.Name = "metroPanel4";
+            this.metroPanel4.Size = new System.Drawing.Size(778, 420);
+            this.metroPanel4.TabIndex = 49;
+            this.metroPanel4.UseCustomBackColor = true;
+            this.metroPanel4.VerticalScrollbarBarColor = true;
+            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.VerticalScrollbarSize = 10;
             // 
             // tag_tab
             // 
@@ -285,322 +605,6 @@
             this.room_lbl.TabIndex = 36;
             this.room_lbl.Text = "Room";
             this.room_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // subtag_tab
-            // 
-            this.subtag_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.subtag_tab.Controls.Add(this.metroPanel2);
-            this.subtag_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtag_tab.Location = new System.Drawing.Point(4, 37);
-            this.subtag_tab.Name = "subtag_tab";
-            this.subtag_tab.Size = new System.Drawing.Size(780, 420);
-            this.subtag_tab.TabIndex = 1;
-            this.subtag_tab.Text = "Subject and Tag";
-            this.subtag_tab.UseVisualStyleBackColor = true;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.metroPanel2.Controls.Add(this.tagsub_room_cmb);
-            this.metroPanel2.Controls.Add(this.tagsub_room_lbl);
-            this.metroPanel2.Controls.Add(this.clrtagsub_btn);
-            this.metroPanel2.Controls.Add(this.allocatetagsub_btn);
-            this.metroPanel2.Controls.Add(this.tagsub_lbl);
-            this.metroPanel2.Controls.Add(this.metroPanel3);
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(2, -1);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(776, 419);
-            this.metroPanel2.TabIndex = 0;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // tagsub_room_cmb
-            // 
-            this.tagsub_room_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagsub_room_cmb.FormattingEnabled = true;
-            this.tagsub_room_cmb.ItemHeight = 23;
-            this.tagsub_room_cmb.Location = new System.Drawing.Point(399, 242);
-            this.tagsub_room_cmb.MaxDropDownItems = 100;
-            this.tagsub_room_cmb.Name = "tagsub_room_cmb";
-            this.tagsub_room_cmb.PromptText = "Select Room";
-            this.tagsub_room_cmb.Size = new System.Drawing.Size(256, 29);
-            this.tagsub_room_cmb.TabIndex = 50;
-            this.tagsub_room_cmb.UseSelectable = true;
-            this.tagsub_room_cmb.DropDown += new System.EventHandler(this.tagsub_room_cmb_DropDown);
-            // 
-            // tagsub_room_lbl
-            // 
-            this.tagsub_room_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tagsub_room_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.tagsub_room_lbl.Location = new System.Drawing.Point(178, 241);
-            this.tagsub_room_lbl.Name = "tagsub_room_lbl";
-            this.tagsub_room_lbl.Size = new System.Drawing.Size(180, 30);
-            this.tagsub_room_lbl.TabIndex = 49;
-            this.tagsub_room_lbl.Text = "Room";
-            this.tagsub_room_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // clrtagsub_btn
-            // 
-            this.clrtagsub_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.clrtagsub_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.clrtagsub_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clrtagsub_btn.Location = new System.Drawing.Point(433, 323);
-            this.clrtagsub_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.clrtagsub_btn.Name = "clrtagsub_btn";
-            this.clrtagsub_btn.Size = new System.Drawing.Size(150, 40);
-            this.clrtagsub_btn.TabIndex = 48;
-            this.clrtagsub_btn.Text = "Clear";
-            this.clrtagsub_btn.UseCustomBackColor = true;
-            this.clrtagsub_btn.UseCustomForeColor = true;
-            this.clrtagsub_btn.UseSelectable = true;
-            this.clrtagsub_btn.Click += new System.EventHandler(this.clrtagsub_btn_Click);
-            // 
-            // allocatetagsub_btn
-            // 
-            this.allocatetagsub_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.allocatetagsub_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.allocatetagsub_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.allocatetagsub_btn.Location = new System.Drawing.Point(191, 323);
-            this.allocatetagsub_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.allocatetagsub_btn.Name = "allocatetagsub_btn";
-            this.allocatetagsub_btn.Size = new System.Drawing.Size(194, 40);
-            this.allocatetagsub_btn.TabIndex = 47;
-            this.allocatetagsub_btn.Text = "Allocate Room";
-            this.allocatetagsub_btn.UseCustomBackColor = true;
-            this.allocatetagsub_btn.UseCustomForeColor = true;
-            this.allocatetagsub_btn.UseSelectable = true;
-            this.allocatetagsub_btn.Click += new System.EventHandler(this.allocatetagsub_btn_Click);
-            // 
-            // tagsub_lbl
-            // 
-            this.tagsub_lbl.AutoSize = true;
-            this.tagsub_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.tagsub_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.tagsub_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.tagsub_lbl.Location = new System.Drawing.Point(215, 43);
-            this.tagsub_lbl.Name = "tagsub_lbl";
-            this.tagsub_lbl.Size = new System.Drawing.Size(384, 25);
-            this.tagsub_lbl.TabIndex = 46;
-            this.tagsub_lbl.Text = "Add Suitable Rooms for a Subject and a Tag";
-            this.tagsub_lbl.UseCustomBackColor = true;
-            // 
-            // sub_cmb
-            // 
-            this.sub_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sub_cmb.FormattingEnabled = true;
-            this.sub_cmb.ItemHeight = 23;
-            this.sub_cmb.Location = new System.Drawing.Point(406, 127);
-            this.sub_cmb.MaxDropDownItems = 100;
-            this.sub_cmb.Name = "sub_cmb";
-            this.sub_cmb.PromptText = "Select Subject";
-            this.sub_cmb.Size = new System.Drawing.Size(256, 29);
-            this.sub_cmb.TabIndex = 45;
-            this.sub_cmb.UseSelectable = true;
-            this.sub_cmb.DropDown += new System.EventHandler(this.sub_cmb_DropDown);
-            // 
-            // tagsub_cmb
-            // 
-            this.tagsub_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagsub_cmb.FormattingEnabled = true;
-            this.tagsub_cmb.ItemHeight = 23;
-            this.tagsub_cmb.Location = new System.Drawing.Point(406, 184);
-            this.tagsub_cmb.MaxDropDownItems = 10;
-            this.tagsub_cmb.Name = "tagsub_cmb";
-            this.tagsub_cmb.PromptText = "Select Tag";
-            this.tagsub_cmb.Size = new System.Drawing.Size(256, 29);
-            this.tagsub_cmb.TabIndex = 44;
-            this.tagsub_cmb.UseSelectable = true;
-            this.tagsub_cmb.DropDown += new System.EventHandler(this.tagsub_cmb_DropDown);
-            // 
-            // sub_lbl
-            // 
-            this.sub_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sub_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.sub_lbl.Location = new System.Drawing.Point(185, 127);
-            this.sub_lbl.Name = "sub_lbl";
-            this.sub_lbl.Size = new System.Drawing.Size(180, 30);
-            this.sub_lbl.TabIndex = 43;
-            this.sub_lbl.Text = "Subject";
-            this.sub_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tag_sub_lbl
-            // 
-            this.tag_sub_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tag_sub_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.tag_sub_lbl.Location = new System.Drawing.Point(185, 184);
-            this.tag_sub_lbl.Name = "tag_sub_lbl";
-            this.tag_sub_lbl.Size = new System.Drawing.Size(180, 30);
-            this.tag_sub_lbl.TabIndex = 42;
-            this.tag_sub_lbl.Text = "Tag";
-            this.tag_sub_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroPanel3
-            // 
-            this.metroPanel3.Controls.Add(this.tag_sub_lbl);
-            this.metroPanel3.Controls.Add(this.sub_lbl);
-            this.metroPanel3.Controls.Add(this.tagsub_cmb);
-            this.metroPanel3.Controls.Add(this.sub_cmb);
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(-7, 0);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(781, 417);
-            this.metroPanel3.TabIndex = 51;
-            this.metroPanel3.UseCustomBackColor = true;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
-            // lecturer_tab
-            // 
-            this.lecturer_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lecturer_tab.Controls.Add(this.editloc_panel);
-            this.lecturer_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lecturer_tab.Location = new System.Drawing.Point(4, 37);
-            this.lecturer_tab.Name = "lecturer_tab";
-            this.lecturer_tab.Size = new System.Drawing.Size(780, 420);
-            this.lecturer_tab.TabIndex = 2;
-            this.lecturer_tab.Text = "Lecturer";
-            this.lecturer_tab.UseVisualStyleBackColor = true;
-            // 
-            // editloc_panel
-            // 
-            this.editloc_panel.BackColor = System.Drawing.Color.Transparent;
-            this.editloc_panel.Controls.Add(this.metroButton1);
-            this.editloc_panel.Controls.Add(this.allocatelecturer_room_btn);
-            this.editloc_panel.Controls.Add(this.lec_lbl);
-            this.editloc_panel.Controls.Add(this.lectroom_lbl);
-            this.editloc_panel.Controls.Add(this.lecturer_cmb);
-            this.editloc_panel.Controls.Add(this.lecroom_lbl);
-            this.editloc_panel.Controls.Add(this.lecturer_lbl);
-            this.editloc_panel.Controls.Add(this.metroPanel4);
-            this.editloc_panel.HorizontalScrollbarBarColor = true;
-            this.editloc_panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.editloc_panel.HorizontalScrollbarSize = 10;
-            this.editloc_panel.Location = new System.Drawing.Point(1, 0);
-            this.editloc_panel.Name = "editloc_panel";
-            this.editloc_panel.Size = new System.Drawing.Size(776, 419);
-            this.editloc_panel.TabIndex = 1;
-            this.editloc_panel.UseCustomBackColor = true;
-            this.editloc_panel.VerticalScrollbarBarColor = true;
-            this.editloc_panel.VerticalScrollbarHighlightOnWheel = false;
-            this.editloc_panel.VerticalScrollbarSize = 10;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton1.Location = new System.Drawing.Point(433, 323);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(150, 40);
-            this.metroButton1.TabIndex = 48;
-            this.metroButton1.Text = "Clear";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseCustomForeColor = true;
-            this.metroButton1.UseSelectable = true;
-            // 
-            // allocatelecturer_room_btn
-            // 
-            this.allocatelecturer_room_btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.allocatelecturer_room_btn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.allocatelecturer_room_btn.ForeColor = System.Drawing.SystemColors.Control;
-            this.allocatelecturer_room_btn.Location = new System.Drawing.Point(191, 323);
-            this.allocatelecturer_room_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.allocatelecturer_room_btn.Name = "allocatelecturer_room_btn";
-            this.allocatelecturer_room_btn.Size = new System.Drawing.Size(194, 40);
-            this.allocatelecturer_room_btn.TabIndex = 47;
-            this.allocatelecturer_room_btn.Text = "Allocate Room";
-            this.allocatelecturer_room_btn.UseCustomBackColor = true;
-            this.allocatelecturer_room_btn.UseCustomForeColor = true;
-            this.allocatelecturer_room_btn.UseSelectable = true;
-            // 
-            // lec_lbl
-            // 
-            this.lec_lbl.AutoSize = true;
-            this.lec_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.lec_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lec_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lec_lbl.Location = new System.Drawing.Point(259, 52);
-            this.lec_lbl.Name = "lec_lbl";
-            this.lec_lbl.Size = new System.Drawing.Size(304, 25);
-            this.lec_lbl.TabIndex = 46;
-            this.lec_lbl.Text = "Add Suitable Rooms for a Lecturer";
-            this.lec_lbl.UseCustomBackColor = true;
-            // 
-            // lectroom_lbl
-            // 
-            this.lectroom_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lectroom_lbl.FormattingEnabled = true;
-            this.lectroom_lbl.ItemHeight = 23;
-            this.lectroom_lbl.Location = new System.Drawing.Point(399, 184);
-            this.lectroom_lbl.MaxDropDownItems = 100;
-            this.lectroom_lbl.Name = "lectroom_lbl";
-            this.lectroom_lbl.PromptText = "Select Room";
-            this.lectroom_lbl.Size = new System.Drawing.Size(200, 29);
-            this.lectroom_lbl.TabIndex = 45;
-            this.lectroom_lbl.UseSelectable = true;
-            // 
-            // lecturer_cmb
-            // 
-            this.lecturer_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lecturer_cmb.FormattingEnabled = true;
-            this.lecturer_cmb.ItemHeight = 23;
-            this.lecturer_cmb.Location = new System.Drawing.Point(399, 127);
-            this.lecturer_cmb.MaxDropDownItems = 10;
-            this.lecturer_cmb.Name = "lecturer_cmb";
-            this.lecturer_cmb.PromptText = "Select Lecturer";
-            this.lecturer_cmb.Size = new System.Drawing.Size(200, 29);
-            this.lecturer_cmb.TabIndex = 44;
-            this.lecturer_cmb.UseSelectable = true;
-            // 
-            // lecroom_lbl
-            // 
-            this.lecroom_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lecroom_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lecroom_lbl.Location = new System.Drawing.Point(178, 183);
-            this.lecroom_lbl.Name = "lecroom_lbl";
-            this.lecroom_lbl.Size = new System.Drawing.Size(180, 30);
-            this.lecroom_lbl.TabIndex = 43;
-            this.lecroom_lbl.Text = "Room";
-            this.lecroom_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lecturer_lbl
-            // 
-            this.lecturer_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lecturer_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lecturer_lbl.Location = new System.Drawing.Point(178, 126);
-            this.lecturer_lbl.Name = "lecturer_lbl";
-            this.lecturer_lbl.Size = new System.Drawing.Size(180, 30);
-            this.lecturer_lbl.TabIndex = 42;
-            this.lecturer_lbl.Text = "Lecturer";
-            this.lecturer_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroPanel4
-            // 
-            this.metroPanel4.HorizontalScrollbarBarColor = true;
-            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.HorizontalScrollbarSize = 10;
-            this.metroPanel4.Location = new System.Drawing.Point(-2, -1);
-            this.metroPanel4.Name = "metroPanel4";
-            this.metroPanel4.Size = new System.Drawing.Size(778, 420);
-            this.metroPanel4.TabIndex = 49;
-            this.metroPanel4.UseCustomBackColor = true;
-            this.metroPanel4.VerticalScrollbarBarColor = true;
-            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.VerticalScrollbarSize = 10;
             // 
             // grp_subgrp_tab
             // 
@@ -1208,10 +1212,6 @@
             this.Resizable = false;
             this.Text = "Rooms";
             this.loc_tabcontrol.ResumeLayout(false);
-            this.tag_tab.ResumeLayout(false);
-            this.locationview_panel.ResumeLayout(false);
-            this.locationview_panel.PerformLayout();
-            this.metroPanel1.ResumeLayout(false);
             this.subtag_tab.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
@@ -1219,6 +1219,10 @@
             this.lecturer_tab.ResumeLayout(false);
             this.editloc_panel.ResumeLayout(false);
             this.editloc_panel.PerformLayout();
+            this.tag_tab.ResumeLayout(false);
+            this.locationview_panel.ResumeLayout(false);
+            this.locationview_panel.PerformLayout();
+            this.metroPanel1.ResumeLayout(false);
             this.grp_subgrp_tab.ResumeLayout(false);
             this.grp_subgrp_tab.PerformLayout();
             this.session_tab.ResumeLayout(false);
@@ -1262,10 +1266,10 @@
         public MetroFramework.Controls.MetroComboBox tagsub_cmb;
         private MetroFramework.Controls.MetroLabel sub_lbl;
         private MetroFramework.Controls.MetroLabel tag_sub_lbl;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton clrLecturerroom_btn;
         private MetroFramework.Controls.MetroButton allocatelecturer_room_btn;
         private MetroFramework.Controls.MetroLabel lec_lbl;
-        public MetroFramework.Controls.MetroComboBox lectroom_lbl;
+        public MetroFramework.Controls.MetroComboBox lecroom_cmb;
         public MetroFramework.Controls.MetroComboBox lecturer_cmb;
         private MetroFramework.Controls.MetroLabel lecroom_lbl;
         private MetroFramework.Controls.MetroLabel lecturer_lbl;
