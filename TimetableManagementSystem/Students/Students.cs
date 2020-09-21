@@ -130,115 +130,150 @@ namespace TimetableManagementSystem.Students
 
         private void yrSemAddBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO YearSemester (Year, Semester) VALUES (" + yearTxt.Text + ", '" + semTxt.Text + "');";
-            cmd.ExecuteNonQuery();
 
-            String query1 = "Select * from YearSemester";
+            if ((yearTxt.Text != string.Empty) && (semTxt.Text != string.Empty))
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO YearSemester (Year, Semester) VALUES (" + yearTxt.Text + ", '" + semTxt.Text + "');";
+                cmd.ExecuteNonQuery();
 
-            SqlDataAdapter sda = new SqlDataAdapter(query1, con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            yrSemData.DataSource = dt;
+                String query1 = "Select * from YearSemester";
 
-            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+                SqlDataAdapter sda = new SqlDataAdapter(query1, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                yrSemData.DataSource = dt;
 
-            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
-            DataTable dt77 = new DataTable();
-            sda77.Fill(dt77);
-            viewData.DataSource = dt77;
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
 
-            con.Close();
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
-            MessageBox.Show("Year and Semester Added Successfully", "Added Successful");
+                con.Close();
+
+                MessageBox.Show("Year and Semester Added Successfully", "Added Successful");
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void addPrgBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO Programme (Programme) VALUES ('" + prgBtn.Text + "');";
-            cmd.ExecuteNonQuery();
+            if ((prgBtn.Text != string.Empty))
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO Programme (Programme) VALUES ('" + prgBtn.Text + "');";
+                cmd.ExecuteNonQuery();
 
-            String query2 = "Select * from Programme";
+                String query2 = "Select * from Programme";
 
-            SqlDataAdapter sda = new SqlDataAdapter(query2, con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            prgData.DataSource = dt;
+                SqlDataAdapter sda = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                prgData.DataSource = dt;
 
-            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
 
-            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
-            DataTable dt77 = new DataTable();
-            sda77.Fill(dt77);
-            viewData.DataSource = dt77;
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
-            con.Close();
+                con.Close();
 
-            MessageBox.Show("Programme Added Successfully", "Added Successful");
+                MessageBox.Show("Programme Added Successfully", "Added Successful");
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void grpNumAddBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO GroupNumber (GrpNum) VALUES ('" + grpNumTxt.Text + "');";
-            cmd.ExecuteNonQuery();
 
-            String query3 = "Select * from GroupNumber";
+            if ((grpNumTxt.Text != string.Empty))
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO GroupNumber (GrpNum) VALUES ('" + grpNumTxt.Text + "');";
+                cmd.ExecuteNonQuery();
 
-            SqlDataAdapter sda = new SqlDataAdapter(query3, con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            grpNumData.DataSource = dt;
+                String query3 = "Select * from GroupNumber";
 
-            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+                SqlDataAdapter sda = new SqlDataAdapter(query3, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                grpNumData.DataSource = dt;
 
-            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
-            DataTable dt77 = new DataTable();
-            sda77.Fill(dt77);
-            viewData.DataSource = dt77;
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
 
-            con.Close();
+                con.Close();
 
-            MessageBox.Show("Group Number Added Successfully", "Added Successful");
+                MessageBox.Show("Group Number Added Successfully", "Added Successful");
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void subGrpNumAddBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = Config.con;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO SubGroupNumber (SubGrpNum) VALUES ('" + subGrpNumTxt.Text + "');";
-            cmd.ExecuteNonQuery();
 
-            String query4 = "Select * from SubGroupNumber";
+            if ((subGrpNumTxt.Text != string.Empty))
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO SubGroupNumber (SubGrpNum) VALUES ('" + subGrpNumTxt.Text + "');";
+                cmd.ExecuteNonQuery();
 
-            SqlDataAdapter sda = new SqlDataAdapter(query4, con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            subGrpNumData.DataSource = dt;
+                String query4 = "Select * from SubGroupNumber";
 
-            String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
+                SqlDataAdapter sda = new SqlDataAdapter(query4, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                subGrpNumData.DataSource = dt;
 
-            SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
-            DataTable dt77 = new DataTable();
-            sda77.Fill(dt77);
-            viewData.DataSource = dt77;
+                String query7 = "Select YS.Year, YS.Semester, P.Programme, GNo.GrpNum, GS.GenGrpNum, SubGNo.SubGrpNum, GSG.GenSubGrpNum from GenSubGroupNumber GSG, GenGroupNumber GS, YearSemester YS, Programme P, GroupNumber GNo, SubGroupNumber SubGNo where GSG.GenGroupNumberRef=GS.id and GS.yearSemRef=YS.id and GS.programmeRef=P.id and GS.GroupNumber=GNo.id and GSG.SubGroupNumberRef=SubGNo.id";
 
-            con.Close();
+                SqlDataAdapter sda77 = new SqlDataAdapter(query7, con);
+                DataTable dt77 = new DataTable();
+                sda77.Fill(dt77);
+                viewData.DataSource = dt77;
 
-            MessageBox.Show("Sub-Group Added Successfully", "Added Successful");
+                con.Close();
+
+                MessageBox.Show("Sub-Group Added Successfully", "Added Successful");
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Students_Load(object sender, EventArgs e)
