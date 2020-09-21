@@ -107,7 +107,56 @@ namespace TimetableManagementSystem.AdvancedOp
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot]) VALUES('" + typeCmbo.Text  + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "')";
+
+                if (typeCmbo.Text == "Lecturers")
+                {
+                    String ID="";
+
+                    if (itmCmbBox.SelectedItem != null)
+                    {
+                        DataRowView drv = itmCmbBox.SelectedItem as DataRowView;
+                        ID = drv.Row["LecturerID"].ToString();
+                    }
+
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "',null,null," + ID + ",null)";
+                }
+                else if (typeCmbo.Text == "Sessions")
+                {
+                    String ID = "";
+
+                    if (itmCmbBox.SelectedItem != null)
+                    {
+                        DataRowView drv = itmCmbBox.SelectedItem as DataRowView;
+                        ID = drv.Row["SessionID"].ToString();
+                    }
+
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "',null,null,null," + ID + ")";
+                }
+                else if (typeCmbo.Text == "Groups")
+                {
+                    String ID = "";
+
+                    if (itmCmbBox.SelectedItem != null)
+                    {
+                        DataRowView drv = itmCmbBox.SelectedItem as DataRowView;
+                        ID = drv.Row["id"].ToString();
+                    }
+
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "'," + ID + ",null,null,null)";
+                }
+                else if (typeCmbo.Text == "Sub-Groups")
+                {
+                    String ID = "";
+
+                    if (itmCmbBox.SelectedItem != null)
+                    {
+                        DataRowView drv = itmCmbBox.SelectedItem as DataRowView;
+                        ID = drv.Row["id"].ToString();
+                    }
+
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "',null," + ID + ",null,null)";
+                }
+
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Not Available Time Added");
                 con.Close();
