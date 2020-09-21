@@ -477,5 +477,79 @@ namespace TimetableManagementSystem.AdvancedOp
             }
             */
         }
+
+        private void addParBtn_Click(object sender, EventArgs e)
+        {
+            if ((parSesCmbBox01.Text != string.Empty) && (parSesCmbBox02.Text != string.Empty) && (parSesDurationCmb.Text != string.Empty) && (parSesDayCmb.Text != string.Empty) && (parSesTimeSlotCmb.Text != string.Empty))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+
+                String ID = "";
+
+                if (parSesCmbBox01.SelectedItem != null)
+                {
+                    DataRowView drv = parSesCmbBox01.SelectedItem as DataRowView;
+                    ID = drv.Row["SessionID"].ToString();
+                }
+
+                String ID2 = "";
+
+                if (parSesCmbBox02.SelectedItem != null)
+                {
+                    DataRowView drv = parSesCmbBox02.SelectedItem as DataRowView;
+                    ID2 = drv.Row["SessionID"].ToString();
+                }
+
+                cmd.CommandText = "INSERT INTO [dbo].[ParallelSession] ([Session01] ,[Session02] ,[Duration] ,[Day] ,[Time] ,[Session01Ref] ,[Session02Ref]) VALUES ('" + parSesCmbBox01.Text + "' ,'" + parSesCmbBox02.Text + "' , " + parSesDurationCmb.Text + " ,'" + parSesDayCmb.Text + "' ,'" + parSesTimeSlotCmb.Text + "' ," + ID + " ," + ID2 + ")";
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Parallel Session Added");
+                con.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void addNotOverlapSesBtn_Click(object sender, EventArgs e)
+        {
+            if ((notOverlapSesCmbBox01.Text != string.Empty) && (notOverlapSesCmbBox02.Text != string.Empty) && (notOverlapSesDurationCmbBox.Text != string.Empty) && (notOverlapSesDayCmbBox.Text != string.Empty) && (notOverlapSesTimeSlotCmbBox.Text != string.Empty))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+
+                String ID = "";
+
+                if (notOverlapSesCmbBox01.SelectedItem != null)
+                {
+                    DataRowView drv = notOverlapSesCmbBox01.SelectedItem as DataRowView;
+                    ID = drv.Row["SessionID"].ToString();
+                }
+
+                String ID2 = "";
+
+                if (notOverlapSesCmbBox02.SelectedItem != null)
+                {
+                    DataRowView drv = notOverlapSesCmbBox02.SelectedItem as DataRowView;
+                    ID2 = drv.Row["SessionID"].ToString();
+                }
+
+                cmd.CommandText = "INSERT INTO [dbo].[NotOverlapSession] ([Session01],[Session02],[Duration],[Day],[Time],[Session01Ref],[Session02Ref]) VALUES ('" + notOverlapSesCmbBox01.Text + "' ,'" + notOverlapSesCmbBox02.Text + "' , " + notOverlapSesDurationCmbBox.Text + " ,'" + notOverlapSesDayCmbBox.Text + "' ,'" + notOverlapSesTimeSlotCmbBox.Text + "' ," + ID + " ," + ID2 + ")";
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Should Not Overlap Session Added");
+                con.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
