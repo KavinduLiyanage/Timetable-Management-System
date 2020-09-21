@@ -50,15 +50,25 @@
             this.typeCmbo = new MetroFramework.Controls.MetroComboBox();
             this.typeLbl = new MetroFramework.Controls.MetroLabel();
             this.consecutiveSessions = new MetroFramework.Controls.MetroTabPage();
-            this.parallelSessions = new MetroFramework.Controls.MetroTabPage();
-            this.shouldNotOverlap = new MetroFramework.Controls.MetroTabPage();
+            this.addConBtn = new MetroFramework.Controls.MetroButton();
             this.sesCmb02 = new MetroFramework.Controls.MetroComboBox();
             this.sesLbl02 = new MetroFramework.Controls.MetroLabel();
             this.sesCmb01 = new MetroFramework.Controls.MetroComboBox();
             this.sesLbl01 = new MetroFramework.Controls.MetroLabel();
             this.subCmbBox = new MetroFramework.Controls.MetroComboBox();
             this.subLbl = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.parallelSessions = new MetroFramework.Controls.MetroTabPage();
+            this.shouldNotOverlap = new MetroFramework.Controls.MetroTabPage();
+            this.addParBtn = new MetroFramework.Controls.MetroButton();
+            this.parSesCmbBox02 = new MetroFramework.Controls.MetroComboBox();
+            this.parSesLbl02 = new MetroFramework.Controls.MetroLabel();
+            this.parSesCmbBox01 = new MetroFramework.Controls.MetroComboBox();
+            this.parSesLbl01 = new MetroFramework.Controls.MetroLabel();
+            this.addNotOverlapSesBtn = new MetroFramework.Controls.MetroButton();
+            this.notOverlapSesCmbBox02 = new MetroFramework.Controls.MetroComboBox();
+            this.notOverlapSesLbl02 = new MetroFramework.Controls.MetroLabel();
+            this.notOverlapSesCmbBox01 = new MetroFramework.Controls.MetroComboBox();
+            this.notOverlapSesLbl01 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -69,6 +79,8 @@
             this.advancedOp.SuspendLayout();
             this.notAvailableTime.SuspendLayout();
             this.consecutiveSessions.SuspendLayout();
+            this.parallelSessions.SuspendLayout();
+            this.shouldNotOverlap.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnHeaderAdvanced
@@ -233,7 +245,7 @@
             this.advancedOp.Controls.Add(this.shouldNotOverlap);
             this.advancedOp.Location = new System.Drawing.Point(131, 95);
             this.advancedOp.Name = "advancedOp";
-            this.advancedOp.SelectedIndex = 1;
+            this.advancedOp.SelectedIndex = 3;
             this.advancedOp.Size = new System.Drawing.Size(811, 486);
             this.advancedOp.TabIndex = 59;
             this.advancedOp.UseSelectable = true;
@@ -355,7 +367,7 @@
             // 
             // consecutiveSessions
             // 
-            this.consecutiveSessions.Controls.Add(this.metroButton1);
+            this.consecutiveSessions.Controls.Add(this.addConBtn);
             this.consecutiveSessions.Controls.Add(this.sesCmb02);
             this.consecutiveSessions.Controls.Add(this.sesLbl02);
             this.consecutiveSessions.Controls.Add(this.sesCmb01);
@@ -374,33 +386,20 @@
             this.consecutiveSessions.VerticalScrollbarHighlightOnWheel = false;
             this.consecutiveSessions.VerticalScrollbarSize = 10;
             // 
-            // parallelSessions
+            // addConBtn
             // 
-            this.parallelSessions.HorizontalScrollbarBarColor = true;
-            this.parallelSessions.HorizontalScrollbarHighlightOnWheel = false;
-            this.parallelSessions.HorizontalScrollbarSize = 10;
-            this.parallelSessions.Location = new System.Drawing.Point(4, 38);
-            this.parallelSessions.Name = "parallelSessions";
-            this.parallelSessions.Size = new System.Drawing.Size(803, 444);
-            this.parallelSessions.TabIndex = 2;
-            this.parallelSessions.Text = "Add Parallel Sessions";
-            this.parallelSessions.VerticalScrollbarBarColor = true;
-            this.parallelSessions.VerticalScrollbarHighlightOnWheel = false;
-            this.parallelSessions.VerticalScrollbarSize = 10;
-            // 
-            // shouldNotOverlap
-            // 
-            this.shouldNotOverlap.HorizontalScrollbarBarColor = true;
-            this.shouldNotOverlap.HorizontalScrollbarHighlightOnWheel = false;
-            this.shouldNotOverlap.HorizontalScrollbarSize = 10;
-            this.shouldNotOverlap.Location = new System.Drawing.Point(4, 38);
-            this.shouldNotOverlap.Name = "shouldNotOverlap";
-            this.shouldNotOverlap.Size = new System.Drawing.Size(803, 444);
-            this.shouldNotOverlap.TabIndex = 3;
-            this.shouldNotOverlap.Text = "Should Not Overlap Session";
-            this.shouldNotOverlap.VerticalScrollbarBarColor = true;
-            this.shouldNotOverlap.VerticalScrollbarHighlightOnWheel = false;
-            this.shouldNotOverlap.VerticalScrollbarSize = 10;
+            this.addConBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addConBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.addConBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addConBtn.Location = new System.Drawing.Point(169, 309);
+            this.addConBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addConBtn.Name = "addConBtn";
+            this.addConBtn.Size = new System.Drawing.Size(216, 40);
+            this.addConBtn.TabIndex = 52;
+            this.addConBtn.Text = "Add Consecutive Session";
+            this.addConBtn.UseCustomBackColor = true;
+            this.addConBtn.UseCustomForeColor = true;
+            this.addConBtn.UseSelectable = true;
             // 
             // sesCmb02
             // 
@@ -474,20 +473,169 @@
             this.subLbl.Text = "Subject";
             this.subLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // metroButton1
+            // parallelSessions
             // 
-            this.metroButton1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.metroButton1.Location = new System.Drawing.Point(169, 309);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(216, 40);
-            this.metroButton1.TabIndex = 52;
-            this.metroButton1.Text = "Add Consecutive Session";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseCustomForeColor = true;
-            this.metroButton1.UseSelectable = true;
+            this.parallelSessions.Controls.Add(this.addParBtn);
+            this.parallelSessions.Controls.Add(this.parSesCmbBox02);
+            this.parallelSessions.Controls.Add(this.parSesLbl02);
+            this.parallelSessions.Controls.Add(this.parSesCmbBox01);
+            this.parallelSessions.Controls.Add(this.parSesLbl01);
+            this.parallelSessions.HorizontalScrollbarBarColor = true;
+            this.parallelSessions.HorizontalScrollbarHighlightOnWheel = false;
+            this.parallelSessions.HorizontalScrollbarSize = 10;
+            this.parallelSessions.Location = new System.Drawing.Point(4, 38);
+            this.parallelSessions.Name = "parallelSessions";
+            this.parallelSessions.Size = new System.Drawing.Size(803, 444);
+            this.parallelSessions.TabIndex = 2;
+            this.parallelSessions.Text = "Add Parallel Sessions";
+            this.parallelSessions.VerticalScrollbarBarColor = true;
+            this.parallelSessions.VerticalScrollbarHighlightOnWheel = false;
+            this.parallelSessions.VerticalScrollbarSize = 10;
+            // 
+            // shouldNotOverlap
+            // 
+            this.shouldNotOverlap.Controls.Add(this.addNotOverlapSesBtn);
+            this.shouldNotOverlap.Controls.Add(this.notOverlapSesCmbBox02);
+            this.shouldNotOverlap.Controls.Add(this.notOverlapSesLbl02);
+            this.shouldNotOverlap.Controls.Add(this.notOverlapSesCmbBox01);
+            this.shouldNotOverlap.Controls.Add(this.notOverlapSesLbl01);
+            this.shouldNotOverlap.HorizontalScrollbarBarColor = true;
+            this.shouldNotOverlap.HorizontalScrollbarHighlightOnWheel = false;
+            this.shouldNotOverlap.HorizontalScrollbarSize = 10;
+            this.shouldNotOverlap.Location = new System.Drawing.Point(4, 38);
+            this.shouldNotOverlap.Name = "shouldNotOverlap";
+            this.shouldNotOverlap.Size = new System.Drawing.Size(803, 444);
+            this.shouldNotOverlap.TabIndex = 3;
+            this.shouldNotOverlap.Text = "Should Not Overlap Session";
+            this.shouldNotOverlap.VerticalScrollbarBarColor = true;
+            this.shouldNotOverlap.VerticalScrollbarHighlightOnWheel = false;
+            this.shouldNotOverlap.VerticalScrollbarSize = 10;
+            // 
+            // addParBtn
+            // 
+            this.addParBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addParBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.addParBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addParBtn.Location = new System.Drawing.Point(167, 309);
+            this.addParBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addParBtn.Name = "addParBtn";
+            this.addParBtn.Size = new System.Drawing.Size(216, 40);
+            this.addParBtn.TabIndex = 59;
+            this.addParBtn.Text = "Add  Parallel Session";
+            this.addParBtn.UseCustomBackColor = true;
+            this.addParBtn.UseCustomForeColor = true;
+            this.addParBtn.UseSelectable = true;
+            // 
+            // parSesCmbBox02
+            // 
+            this.parSesCmbBox02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.parSesCmbBox02.FormattingEnabled = true;
+            this.parSesCmbBox02.ItemHeight = 23;
+            this.parSesCmbBox02.Location = new System.Drawing.Point(289, 137);
+            this.parSesCmbBox02.Name = "parSesCmbBox02";
+            this.parSesCmbBox02.PromptText = "Select Session 02";
+            this.parSesCmbBox02.Size = new System.Drawing.Size(194, 29);
+            this.parSesCmbBox02.TabIndex = 58;
+            this.parSesCmbBox02.UseSelectable = true;
+            // 
+            // parSesLbl02
+            // 
+            this.parSesLbl02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.parSesLbl02.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.parSesLbl02.Location = new System.Drawing.Point(55, 136);
+            this.parSesLbl02.Name = "parSesLbl02";
+            this.parSesLbl02.Size = new System.Drawing.Size(150, 30);
+            this.parSesLbl02.TabIndex = 57;
+            this.parSesLbl02.Text = "Session 02";
+            this.parSesLbl02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // parSesCmbBox01
+            // 
+            this.parSesCmbBox01.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.parSesCmbBox01.FormattingEnabled = true;
+            this.parSesCmbBox01.ItemHeight = 23;
+            this.parSesCmbBox01.Location = new System.Drawing.Point(289, 76);
+            this.parSesCmbBox01.Name = "parSesCmbBox01";
+            this.parSesCmbBox01.PromptText = "Select Session 01";
+            this.parSesCmbBox01.Size = new System.Drawing.Size(194, 29);
+            this.parSesCmbBox01.TabIndex = 56;
+            this.parSesCmbBox01.UseSelectable = true;
+            // 
+            // parSesLbl01
+            // 
+            this.parSesLbl01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.parSesLbl01.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.parSesLbl01.Location = new System.Drawing.Point(55, 75);
+            this.parSesLbl01.Name = "parSesLbl01";
+            this.parSesLbl01.Size = new System.Drawing.Size(150, 30);
+            this.parSesLbl01.TabIndex = 55;
+            this.parSesLbl01.Text = "Session 01";
+            this.parSesLbl01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // addNotOverlapSesBtn
+            // 
+            this.addNotOverlapSesBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addNotOverlapSesBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.addNotOverlapSesBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addNotOverlapSesBtn.Location = new System.Drawing.Point(155, 330);
+            this.addNotOverlapSesBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addNotOverlapSesBtn.Name = "addNotOverlapSesBtn";
+            this.addNotOverlapSesBtn.Size = new System.Drawing.Size(216, 40);
+            this.addNotOverlapSesBtn.TabIndex = 64;
+            this.addNotOverlapSesBtn.Text = "Add  Parallel Session";
+            this.addNotOverlapSesBtn.UseCustomBackColor = true;
+            this.addNotOverlapSesBtn.UseCustomForeColor = true;
+            this.addNotOverlapSesBtn.UseSelectable = true;
+            // 
+            // notOverlapSesCmbBox02
+            // 
+            this.notOverlapSesCmbBox02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.notOverlapSesCmbBox02.FormattingEnabled = true;
+            this.notOverlapSesCmbBox02.ItemHeight = 23;
+            this.notOverlapSesCmbBox02.Location = new System.Drawing.Point(277, 158);
+            this.notOverlapSesCmbBox02.Name = "notOverlapSesCmbBox02";
+            this.notOverlapSesCmbBox02.PromptText = "Select Session 02";
+            this.notOverlapSesCmbBox02.Size = new System.Drawing.Size(194, 29);
+            this.notOverlapSesCmbBox02.TabIndex = 63;
+            this.notOverlapSesCmbBox02.UseSelectable = true;
+            // 
+            // notOverlapSesLbl02
+            // 
+            this.notOverlapSesLbl02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.notOverlapSesLbl02.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.notOverlapSesLbl02.Location = new System.Drawing.Point(43, 157);
+            this.notOverlapSesLbl02.Name = "notOverlapSesLbl02";
+            this.notOverlapSesLbl02.Size = new System.Drawing.Size(150, 30);
+            this.notOverlapSesLbl02.TabIndex = 62;
+            this.notOverlapSesLbl02.Text = "Session 02";
+            this.notOverlapSesLbl02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // notOverlapSesCmbBox01
+            // 
+            this.notOverlapSesCmbBox01.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.notOverlapSesCmbBox01.FormattingEnabled = true;
+            this.notOverlapSesCmbBox01.ItemHeight = 23;
+            this.notOverlapSesCmbBox01.Location = new System.Drawing.Point(277, 97);
+            this.notOverlapSesCmbBox01.Name = "notOverlapSesCmbBox01";
+            this.notOverlapSesCmbBox01.PromptText = "Select Session 01";
+            this.notOverlapSesCmbBox01.Size = new System.Drawing.Size(194, 29);
+            this.notOverlapSesCmbBox01.TabIndex = 61;
+            this.notOverlapSesCmbBox01.UseSelectable = true;
+            // 
+            // notOverlapSesLbl01
+            // 
+            this.notOverlapSesLbl01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.notOverlapSesLbl01.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.notOverlapSesLbl01.Location = new System.Drawing.Point(43, 96);
+            this.notOverlapSesLbl01.Name = "notOverlapSesLbl01";
+            this.notOverlapSesLbl01.Size = new System.Drawing.Size(150, 30);
+            this.notOverlapSesLbl01.TabIndex = 60;
+            this.notOverlapSesLbl01.Text = "Session 01";
+            this.notOverlapSesLbl01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Advanced
             // 
@@ -525,6 +673,8 @@
             this.advancedOp.ResumeLayout(false);
             this.notAvailableTime.ResumeLayout(false);
             this.consecutiveSessions.ResumeLayout(false);
+            this.parallelSessions.ResumeLayout(false);
+            this.shouldNotOverlap.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,12 +706,22 @@
         private MetroFramework.Controls.MetroComboBox itmCmbBox;
         private MetroFramework.Controls.MetroLabel itmLbl;
         private MetroFramework.Controls.MetroButton noAvaBtn;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton addConBtn;
         private MetroFramework.Controls.MetroComboBox sesCmb02;
         private MetroFramework.Controls.MetroLabel sesLbl02;
         private MetroFramework.Controls.MetroComboBox sesCmb01;
         private MetroFramework.Controls.MetroLabel sesLbl01;
         private MetroFramework.Controls.MetroComboBox subCmbBox;
         private MetroFramework.Controls.MetroLabel subLbl;
+        private MetroFramework.Controls.MetroButton addParBtn;
+        private MetroFramework.Controls.MetroComboBox parSesCmbBox02;
+        private MetroFramework.Controls.MetroLabel parSesLbl02;
+        private MetroFramework.Controls.MetroComboBox parSesCmbBox01;
+        private MetroFramework.Controls.MetroLabel parSesLbl01;
+        private MetroFramework.Controls.MetroButton addNotOverlapSesBtn;
+        private MetroFramework.Controls.MetroComboBox notOverlapSesCmbBox02;
+        private MetroFramework.Controls.MetroLabel notOverlapSesLbl02;
+        private MetroFramework.Controls.MetroComboBox notOverlapSesCmbBox01;
+        private MetroFramework.Controls.MetroLabel notOverlapSesLbl01;
     }
 }
