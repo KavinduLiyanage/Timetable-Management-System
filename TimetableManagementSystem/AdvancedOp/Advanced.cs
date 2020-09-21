@@ -101,7 +101,21 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void noAvaBtn_Click(object sender, EventArgs e)
         {
-            
+            if ((typeCmbo.Text != string.Empty) && (itmCmbBox.Text != string.Empty) && (timeCmbBox.Text != string.Empty))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot]) VALUES('" + typeCmbo.Text  + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "')";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Not Available Time Added");
+                con.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Advanced_Load(object sender, EventArgs e)
@@ -196,6 +210,26 @@ namespace TimetableManagementSystem.AdvancedOp
                     itmCmbBox.Items.Add(dataRow["GenSubGrpNum"].ToString());
                 }
             }
+        }
+
+        private void day_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addConBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
