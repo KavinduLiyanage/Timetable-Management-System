@@ -56,27 +56,27 @@
             this.sesCmb01 = new MetroFramework.Controls.MetroComboBox();
             this.sesLbl01 = new MetroFramework.Controls.MetroLabel();
             this.parallelSessions = new MetroFramework.Controls.MetroTabPage();
+            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.timeslot_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.day_cmb = new MetroFramework.Controls.MetroComboBox();
+            this.nonreser_time_lbl = new MetroFramework.Controls.MetroLabel();
             this.addParBtn = new MetroFramework.Controls.MetroButton();
             this.parSesCmbBox02 = new MetroFramework.Controls.MetroComboBox();
             this.parSesLbl02 = new MetroFramework.Controls.MetroLabel();
             this.parSesCmbBox01 = new MetroFramework.Controls.MetroComboBox();
             this.parSesLbl01 = new MetroFramework.Controls.MetroLabel();
             this.shouldNotOverlap = new MetroFramework.Controls.MetroTabPage();
-            this.addNotOverlapSesBtn = new MetroFramework.Controls.MetroButton();
-            this.notOverlapSesCmbBox02 = new MetroFramework.Controls.MetroComboBox();
-            this.notOverlapSesLbl02 = new MetroFramework.Controls.MetroLabel();
-            this.notOverlapSesCmbBox01 = new MetroFramework.Controls.MetroComboBox();
-            this.notOverlapSesLbl01 = new MetroFramework.Controls.MetroLabel();
-            this.timeslot_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.day_cmb = new MetroFramework.Controls.MetroComboBox();
-            this.nonreser_time_lbl = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.addNotOverlapSesBtn = new MetroFramework.Controls.MetroButton();
+            this.notOverlapSesCmbBox02 = new MetroFramework.Controls.MetroComboBox();
+            this.notOverlapSesLbl02 = new MetroFramework.Controls.MetroLabel();
+            this.notOverlapSesCmbBox01 = new MetroFramework.Controls.MetroComboBox();
+            this.notOverlapSesLbl01 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -253,7 +253,7 @@
             this.advancedOp.Controls.Add(this.shouldNotOverlap);
             this.advancedOp.Location = new System.Drawing.Point(131, 95);
             this.advancedOp.Name = "advancedOp";
-            this.advancedOp.SelectedIndex = 1;
+            this.advancedOp.SelectedIndex = 0;
             this.advancedOp.Size = new System.Drawing.Size(811, 486);
             this.advancedOp.TabIndex = 59;
             this.advancedOp.UseSelectable = true;
@@ -331,6 +331,7 @@
             this.itmCmbBox.Size = new System.Drawing.Size(194, 29);
             this.itmCmbBox.TabIndex = 43;
             this.itmCmbBox.UseSelectable = true;
+            this.itmCmbBox.SelectedIndexChanged += new System.EventHandler(this.itmCmbBox_SelectedIndexChanged);
             // 
             // itmLbl
             // 
@@ -480,6 +481,95 @@
             this.parallelSessions.VerticalScrollbarHighlightOnWheel = false;
             this.parallelSessions.VerticalScrollbarSize = 10;
             // 
+            // metroComboBox3
+            // 
+            this.metroComboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroComboBox3.FormattingEnabled = true;
+            this.metroComboBox3.ItemHeight = 23;
+            this.metroComboBox3.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.metroComboBox3.Location = new System.Drawing.Point(289, 198);
+            this.metroComboBox3.MaxDropDownItems = 100;
+            this.metroComboBox3.Name = "metroComboBox3";
+            this.metroComboBox3.PromptText = "Select Duration";
+            this.metroComboBox3.Size = new System.Drawing.Size(194, 29);
+            this.metroComboBox3.TabIndex = 64;
+            this.metroComboBox3.UseSelectable = true;
+            this.metroComboBox3.SelectedIndexChanged += new System.EventHandler(this.metroComboBox3_SelectedIndexChanged);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel2.Location = new System.Drawing.Point(55, 197);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(150, 30);
+            this.metroLabel2.TabIndex = 63;
+            this.metroLabel2.Text = "Duration";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
+            // 
+            // timeslot_cmb
+            // 
+            this.timeslot_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.timeslot_cmb.FormattingEnabled = true;
+            this.timeslot_cmb.ItemHeight = 23;
+            this.timeslot_cmb.Items.AddRange(new object[] {
+            "8.30 am -9.30 am",
+            "9.30 am -10.30 am ",
+            "9.30 am -10.30 am ",
+            "10.30 am -11.30 am ",
+            "11.30 am -12.30 noon",
+            "1.30 pm- 2.30 pm",
+            "2.30 pm -3.30 pm",
+            "3.30 pm -4.30 pm",
+            "4.30 pm -5.30 pm"});
+            this.timeslot_cmb.Location = new System.Drawing.Point(432, 259);
+            this.timeslot_cmb.MaxDropDownItems = 100;
+            this.timeslot_cmb.Name = "timeslot_cmb";
+            this.timeslot_cmb.PromptText = "Select Time Slot";
+            this.timeslot_cmb.Size = new System.Drawing.Size(165, 29);
+            this.timeslot_cmb.TabIndex = 62;
+            this.timeslot_cmb.UseSelectable = true;
+            // 
+            // day_cmb
+            // 
+            this.day_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.day_cmb.FormattingEnabled = true;
+            this.day_cmb.ItemHeight = 23;
+            this.day_cmb.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.day_cmb.Location = new System.Drawing.Point(289, 259);
+            this.day_cmb.MaxDropDownItems = 100;
+            this.day_cmb.Name = "day_cmb";
+            this.day_cmb.PromptText = "Select Day";
+            this.day_cmb.Size = new System.Drawing.Size(123, 29);
+            this.day_cmb.TabIndex = 61;
+            this.day_cmb.UseSelectable = true;
+            this.day_cmb.SelectedIndexChanged += new System.EventHandler(this.day_cmb_SelectedIndexChanged);
+            // 
+            // nonreser_time_lbl
+            // 
+            this.nonreser_time_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nonreser_time_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.nonreser_time_lbl.Location = new System.Drawing.Point(55, 258);
+            this.nonreser_time_lbl.Name = "nonreser_time_lbl";
+            this.nonreser_time_lbl.Size = new System.Drawing.Size(150, 30);
+            this.nonreser_time_lbl.TabIndex = 60;
+            this.nonreser_time_lbl.Text = "Day and Time";
+            this.nonreser_time_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // addParBtn
             // 
             this.addParBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -567,158 +657,6 @@
             this.shouldNotOverlap.VerticalScrollbarHighlightOnWheel = false;
             this.shouldNotOverlap.VerticalScrollbarSize = 10;
             // 
-            // addNotOverlapSesBtn
-            // 
-            this.addNotOverlapSesBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.addNotOverlapSesBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.addNotOverlapSesBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.addNotOverlapSesBtn.Location = new System.Drawing.Point(192, 355);
-            this.addNotOverlapSesBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.addNotOverlapSesBtn.Name = "addNotOverlapSesBtn";
-            this.addNotOverlapSesBtn.Size = new System.Drawing.Size(216, 40);
-            this.addNotOverlapSesBtn.TabIndex = 64;
-            this.addNotOverlapSesBtn.Text = "Add  Parallel Session";
-            this.addNotOverlapSesBtn.UseCustomBackColor = true;
-            this.addNotOverlapSesBtn.UseCustomForeColor = true;
-            this.addNotOverlapSesBtn.UseSelectable = true;
-            // 
-            // notOverlapSesCmbBox02
-            // 
-            this.notOverlapSesCmbBox02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.notOverlapSesCmbBox02.FormattingEnabled = true;
-            this.notOverlapSesCmbBox02.ItemHeight = 23;
-            this.notOverlapSesCmbBox02.Location = new System.Drawing.Point(277, 158);
-            this.notOverlapSesCmbBox02.Name = "notOverlapSesCmbBox02";
-            this.notOverlapSesCmbBox02.PromptText = "Select Session 02";
-            this.notOverlapSesCmbBox02.Size = new System.Drawing.Size(194, 29);
-            this.notOverlapSesCmbBox02.TabIndex = 63;
-            this.notOverlapSesCmbBox02.UseSelectable = true;
-            // 
-            // notOverlapSesLbl02
-            // 
-            this.notOverlapSesLbl02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.notOverlapSesLbl02.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.notOverlapSesLbl02.Location = new System.Drawing.Point(43, 157);
-            this.notOverlapSesLbl02.Name = "notOverlapSesLbl02";
-            this.notOverlapSesLbl02.Size = new System.Drawing.Size(150, 30);
-            this.notOverlapSesLbl02.TabIndex = 62;
-            this.notOverlapSesLbl02.Text = "Session 02";
-            this.notOverlapSesLbl02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // notOverlapSesCmbBox01
-            // 
-            this.notOverlapSesCmbBox01.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.notOverlapSesCmbBox01.FormattingEnabled = true;
-            this.notOverlapSesCmbBox01.ItemHeight = 23;
-            this.notOverlapSesCmbBox01.Location = new System.Drawing.Point(277, 97);
-            this.notOverlapSesCmbBox01.Name = "notOverlapSesCmbBox01";
-            this.notOverlapSesCmbBox01.PromptText = "Select Session 01";
-            this.notOverlapSesCmbBox01.Size = new System.Drawing.Size(194, 29);
-            this.notOverlapSesCmbBox01.TabIndex = 61;
-            this.notOverlapSesCmbBox01.UseSelectable = true;
-            // 
-            // notOverlapSesLbl01
-            // 
-            this.notOverlapSesLbl01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.notOverlapSesLbl01.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.notOverlapSesLbl01.Location = new System.Drawing.Point(43, 96);
-            this.notOverlapSesLbl01.Name = "notOverlapSesLbl01";
-            this.notOverlapSesLbl01.Size = new System.Drawing.Size(150, 30);
-            this.notOverlapSesLbl01.TabIndex = 60;
-            this.notOverlapSesLbl01.Text = "Session 01";
-            this.notOverlapSesLbl01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // timeslot_cmb
-            // 
-            this.timeslot_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.timeslot_cmb.FormattingEnabled = true;
-            this.timeslot_cmb.ItemHeight = 23;
-            this.timeslot_cmb.Items.AddRange(new object[] {
-            "8.30 am -9.30 am",
-            "9.30 am -10.30 am ",
-            "9.30 am -10.30 am ",
-            "10.30 am -11.30 am ",
-            "11.30 am -12.30 noon",
-            "1.30 pm- 2.30 pm",
-            "2.30 pm -3.30 pm",
-            "3.30 pm -4.30 pm",
-            "4.30 pm -5.30 pm"});
-            this.timeslot_cmb.Location = new System.Drawing.Point(432, 259);
-            this.timeslot_cmb.MaxDropDownItems = 100;
-            this.timeslot_cmb.Name = "timeslot_cmb";
-            this.timeslot_cmb.PromptText = "Select Time Slot";
-            this.timeslot_cmb.Size = new System.Drawing.Size(165, 29);
-            this.timeslot_cmb.TabIndex = 62;
-            this.timeslot_cmb.UseSelectable = true;
-            // 
-            // day_cmb
-            // 
-            this.day_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.day_cmb.FormattingEnabled = true;
-            this.day_cmb.ItemHeight = 23;
-            this.day_cmb.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"});
-            this.day_cmb.Location = new System.Drawing.Point(289, 259);
-            this.day_cmb.MaxDropDownItems = 100;
-            this.day_cmb.Name = "day_cmb";
-            this.day_cmb.PromptText = "Select Day";
-            this.day_cmb.Size = new System.Drawing.Size(123, 29);
-            this.day_cmb.TabIndex = 61;
-            this.day_cmb.UseSelectable = true;
-            this.day_cmb.SelectedIndexChanged += new System.EventHandler(this.day_cmb_SelectedIndexChanged);
-            // 
-            // nonreser_time_lbl
-            // 
-            this.nonreser_time_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nonreser_time_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.nonreser_time_lbl.Location = new System.Drawing.Point(55, 258);
-            this.nonreser_time_lbl.Name = "nonreser_time_lbl";
-            this.nonreser_time_lbl.Size = new System.Drawing.Size(150, 30);
-            this.nonreser_time_lbl.TabIndex = 60;
-            this.nonreser_time_lbl.Text = "Day and Time";
-            this.nonreser_time_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(55, 197);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(150, 30);
-            this.metroLabel2.TabIndex = 63;
-            this.metroLabel2.Text = "Duration";
-            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
-            // 
-            // metroComboBox3
-            // 
-            this.metroComboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 23;
-            this.metroComboBox3.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"});
-            this.metroComboBox3.Location = new System.Drawing.Point(289, 198);
-            this.metroComboBox3.MaxDropDownItems = 100;
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.PromptText = "Select Duration";
-            this.metroComboBox3.Size = new System.Drawing.Size(194, 29);
-            this.metroComboBox3.TabIndex = 64;
-            this.metroComboBox3.UseSelectable = true;
-            this.metroComboBox3.SelectedIndexChanged += new System.EventHandler(this.metroComboBox3_SelectedIndexChanged);
-            // 
             // metroComboBox1
             // 
             this.metroComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -804,6 +742,69 @@
             this.metroLabel3.TabIndex = 65;
             this.metroLabel3.Text = "Day and Time";
             this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // addNotOverlapSesBtn
+            // 
+            this.addNotOverlapSesBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addNotOverlapSesBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.addNotOverlapSesBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addNotOverlapSesBtn.Location = new System.Drawing.Point(192, 355);
+            this.addNotOverlapSesBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addNotOverlapSesBtn.Name = "addNotOverlapSesBtn";
+            this.addNotOverlapSesBtn.Size = new System.Drawing.Size(216, 40);
+            this.addNotOverlapSesBtn.TabIndex = 64;
+            this.addNotOverlapSesBtn.Text = "Add  Parallel Session";
+            this.addNotOverlapSesBtn.UseCustomBackColor = true;
+            this.addNotOverlapSesBtn.UseCustomForeColor = true;
+            this.addNotOverlapSesBtn.UseSelectable = true;
+            // 
+            // notOverlapSesCmbBox02
+            // 
+            this.notOverlapSesCmbBox02.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.notOverlapSesCmbBox02.FormattingEnabled = true;
+            this.notOverlapSesCmbBox02.ItemHeight = 23;
+            this.notOverlapSesCmbBox02.Location = new System.Drawing.Point(277, 158);
+            this.notOverlapSesCmbBox02.Name = "notOverlapSesCmbBox02";
+            this.notOverlapSesCmbBox02.PromptText = "Select Session 02";
+            this.notOverlapSesCmbBox02.Size = new System.Drawing.Size(194, 29);
+            this.notOverlapSesCmbBox02.TabIndex = 63;
+            this.notOverlapSesCmbBox02.UseSelectable = true;
+            // 
+            // notOverlapSesLbl02
+            // 
+            this.notOverlapSesLbl02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.notOverlapSesLbl02.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.notOverlapSesLbl02.Location = new System.Drawing.Point(43, 157);
+            this.notOverlapSesLbl02.Name = "notOverlapSesLbl02";
+            this.notOverlapSesLbl02.Size = new System.Drawing.Size(150, 30);
+            this.notOverlapSesLbl02.TabIndex = 62;
+            this.notOverlapSesLbl02.Text = "Session 02";
+            this.notOverlapSesLbl02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // notOverlapSesCmbBox01
+            // 
+            this.notOverlapSesCmbBox01.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.notOverlapSesCmbBox01.FormattingEnabled = true;
+            this.notOverlapSesCmbBox01.ItemHeight = 23;
+            this.notOverlapSesCmbBox01.Location = new System.Drawing.Point(277, 97);
+            this.notOverlapSesCmbBox01.Name = "notOverlapSesCmbBox01";
+            this.notOverlapSesCmbBox01.PromptText = "Select Session 01";
+            this.notOverlapSesCmbBox01.Size = new System.Drawing.Size(194, 29);
+            this.notOverlapSesCmbBox01.TabIndex = 61;
+            this.notOverlapSesCmbBox01.UseSelectable = true;
+            // 
+            // notOverlapSesLbl01
+            // 
+            this.notOverlapSesLbl01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.notOverlapSesLbl01.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.notOverlapSesLbl01.Location = new System.Drawing.Point(43, 96);
+            this.notOverlapSesLbl01.Name = "notOverlapSesLbl01";
+            this.notOverlapSesLbl01.Size = new System.Drawing.Size(150, 30);
+            this.notOverlapSesLbl01.TabIndex = 60;
+            this.notOverlapSesLbl01.Text = "Session 01";
+            this.notOverlapSesLbl01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Advanced
             // 
