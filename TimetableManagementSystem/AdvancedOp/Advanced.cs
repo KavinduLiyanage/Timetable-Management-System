@@ -429,7 +429,39 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void addConBtn_Click(object sender, EventArgs e)
         {
+            if ((sesCmb01.Text != string.Empty) && (sesCmb02.Text != string.Empty))
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
 
+                String ID = "";
+
+                if (sesCmb01.SelectedItem != null)
+                {
+                    DataRowView drv = sesCmb01.SelectedItem as DataRowView;
+                    ID = drv.Row["SessionID"].ToString();
+                }
+
+                String ID2 = "";
+
+                if (sesCmb02.SelectedItem != null)
+                {
+                    DataRowView drv = sesCmb02.SelectedItem as DataRowView;
+                    ID2 = drv.Row["SessionID"].ToString();
+                }
+
+                cmd.CommandText = "INSERT INTO [dbo].[ConsecutiveSession] ([Session01],[Session02],[Session01Ref],[Session02Ref]) VALUES('" + sesCmb01.Text + "','" + sesCmb02.Text + "'," + ID + "," + ID2 + ")";
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Consecutive Session Added");
+                con.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void itmCmbBox_SelectedIndexChanged(object sender, EventArgs e)
