@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace TimetableManagementSystem.AdvancedOp
 {
     public partial class Advanced : MetroFramework.Forms.MetroForm
     {
+
+        public SqlConnection con = Config.con;
+
         public Advanced()
         {
             InitializeComponent();
@@ -96,6 +100,16 @@ namespace TimetableManagementSystem.AdvancedOp
         }
 
         private void noAvaBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Advanced_Load(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void typeCmbo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
