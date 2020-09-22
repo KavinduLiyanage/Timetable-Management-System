@@ -20,6 +20,12 @@ namespace TimetableManagementSystem.Sessions
 
         SqlConnection con = Config.con;
 
+        public List<string> lecturers = new List<string>();
+        public String names = "";
+        public String names2 = "";
+
+
+
         private void btnSessionSave_Click(object sender, EventArgs e)
         {
             if (IsValid())
@@ -140,6 +146,20 @@ namespace TimetableManagementSystem.Sessions
             stat.ShowDialog();
         }
 
-        
+        private void cmbSessionLecturer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lecturers.Add(cmbSessionLecturer.Text);
+            names2 = names2 + cmbSessionLecturer.Text+", ";
+            metroLabel19.Text = names2;
+            /*
+            for (int i=0; i< lecturers.Count; i++)
+            {
+                names = names + lecturers[i];
+                metroLabel19.Text = names;
+            }
+            */
+
+            //MessageBox.Show("Fill the all fields"+ lecturers[0], "Failed", MessageBoxButtons.OK);
+        }
     }
 }
