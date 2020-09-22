@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@
             this.LecRank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.tabPageSessionAdd = new System.Windows.Forms.TabPage();
+            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
             this.nmudSessionDuration = new System.Windows.Forms.NumericUpDown();
             this.nmudSessionNoStudents = new System.Windows.Forms.NumericUpDown();
             this.cmbSessionTag = new MetroFramework.Controls.MetroComboBox();
@@ -91,7 +92,7 @@
             this.txtLecNameEdit = new MetroFramework.Controls.MetroTextBox();
             this.cmbLecCenterEdit = new MetroFramework.Controls.MetroComboBox();
             this.cmbLecFacEdit = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -295,9 +296,9 @@
             this.tabPageSessionView.Controls.Add(this.metroLabel15);
             this.tabPageSessionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSessionView.Location = new System.Drawing.Point(4, 37);
-            this.tabPageSessionView.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabPageSessionView.Margin = new System.Windows.Forms.Padding(7);
             this.tabPageSessionView.Name = "tabPageSessionView";
-            this.tabPageSessionView.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageSessionView.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageSessionView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabPageSessionView.Size = new System.Drawing.Size(774, 434);
             this.tabPageSessionView.TabIndex = 0;
@@ -384,9 +385,9 @@
             // 
             // 
             this.txtLecSearch.CustomButton.Image = null;
-            this.txtLecSearch.CustomButton.Location = new System.Drawing.Point(58, 1);
+            this.txtLecSearch.CustomButton.Location = new System.Drawing.Point(78, 1);
             this.txtLecSearch.CustomButton.Name = "";
-            this.txtLecSearch.CustomButton.Size = new System.Drawing.Size(17, 19);
+            this.txtLecSearch.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtLecSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecSearch.CustomButton.TabIndex = 1;
             this.txtLecSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -414,14 +415,14 @@
             // dgvLectures
             // 
             this.dgvLectures.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLectures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLectures.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -527,6 +528,7 @@
             // tabPageSessionAdd
             // 
             this.tabPageSessionAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageSessionAdd.Controls.Add(this.textBox1);
             this.tabPageSessionAdd.Controls.Add(this.metroLabel19);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionDuration);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionNoStudents);
@@ -551,10 +553,22 @@
             this.tabPageSessionAdd.Text = "Add Session";
             this.tabPageSessionAdd.UseVisualStyleBackColor = true;
             // 
+            // metroLabel19
+            // 
+            this.metroLabel19.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.metroLabel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel19.Location = new System.Drawing.Point(543, 75);
+            this.metroLabel19.MaximumSize = new System.Drawing.Size(200, 30);
+            this.metroLabel19.Name = "metroLabel19";
+            this.metroLabel19.Size = new System.Drawing.Size(200, 30);
+            this.metroLabel19.TabIndex = 69;
+            this.metroLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // nmudSessionDuration
             // 
             this.nmudSessionDuration.Location = new System.Drawing.Point(352, 301);
-            this.nmudSessionDuration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nmudSessionDuration.Margin = new System.Windows.Forms.Padding(2);
             this.nmudSessionDuration.Name = "nmudSessionDuration";
             this.nmudSessionDuration.Size = new System.Drawing.Size(112, 22);
             this.nmudSessionDuration.TabIndex = 68;
@@ -563,7 +577,7 @@
             // nmudSessionNoStudents
             // 
             this.nmudSessionNoStudents.Location = new System.Drawing.Point(352, 256);
-            this.nmudSessionNoStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nmudSessionNoStudents.Margin = new System.Windows.Forms.Padding(2);
             this.nmudSessionNoStudents.Name = "nmudSessionNoStudents";
             this.nmudSessionNoStudents.Size = new System.Drawing.Size(112, 22);
             this.nmudSessionNoStudents.TabIndex = 67;
@@ -606,7 +620,7 @@
             this.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
             this.btnClear.Location = new System.Drawing.Point(397, 358);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(150, 40);
             this.btnClear.TabIndex = 44;
@@ -632,7 +646,7 @@
             this.btnSessionSave.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnSessionSave.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSessionSave.Location = new System.Drawing.Point(201, 358);
-            this.btnSessionSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSessionSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSessionSave.Name = "btnSessionSave";
             this.btnSessionSave.Size = new System.Drawing.Size(150, 40);
             this.btnSessionSave.TabIndex = 31;
@@ -703,12 +717,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionSubject.FormattingEnabled = true;
             this.cmbSessionSubject.ItemHeight = 23;
-            this.cmbSessionSubject.Items.AddRange(new object[] {
-            "Main Building",
-            "New Building",
-            "Engineering Building",
-            "Business Building",
-            "D-Block"});
             this.cmbSessionSubject.Location = new System.Drawing.Point(352, 208);
             this.cmbSessionSubject.Name = "cmbSessionSubject";
             this.cmbSessionSubject.PromptText = "Select Subject";
@@ -722,13 +730,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionGroup.FormattingEnabled = true;
             this.cmbSessionGroup.ItemHeight = 23;
-            this.cmbSessionGroup.Items.AddRange(new object[] {
-            "Malabe",
-            "Metro",
-            "Matara",
-            "Kandy",
-            "Kurunagala",
-            "Jaffna"});
             this.cmbSessionGroup.Location = new System.Drawing.Point(352, 163);
             this.cmbSessionGroup.Name = "cmbSessionGroup";
             this.cmbSessionGroup.PromptText = "Select Group";
@@ -786,11 +787,11 @@
             this.cmbLecDepartmentEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbLecDepartmentEdit.FormattingEnabled = true;
-            this.cmbLecDepartmentEdit.ItemHeight = 24;
+            this.cmbLecDepartmentEdit.ItemHeight = 23;
             this.cmbLecDepartmentEdit.Location = new System.Drawing.Point(410, 162);
             this.cmbLecDepartmentEdit.Name = "cmbLecDepartmentEdit";
             this.cmbLecDepartmentEdit.PromptText = "Select Department";
-            this.cmbLecDepartmentEdit.Size = new System.Drawing.Size(200, 30);
+            this.cmbLecDepartmentEdit.Size = new System.Drawing.Size(200, 29);
             this.cmbLecDepartmentEdit.TabIndex = 61;
             this.cmbLecDepartmentEdit.UseSelectable = true;
             // 
@@ -814,7 +815,7 @@
             this.btnLecDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLecDelete.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLecDelete.Location = new System.Drawing.Point(397, 358);
-            this.btnLecDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLecDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnLecDelete.Name = "btnLecDelete";
             this.btnLecDelete.Size = new System.Drawing.Size(150, 40);
             this.btnLecDelete.TabIndex = 59;
@@ -840,7 +841,7 @@
             this.btnLecUpdate.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLecUpdate.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLecUpdate.Location = new System.Drawing.Point(201, 358);
-            this.btnLecUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLecUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnLecUpdate.Name = "btnLecUpdate";
             this.btnLecUpdate.Size = new System.Drawing.Size(150, 40);
             this.btnLecUpdate.TabIndex = 46;
@@ -898,7 +899,7 @@
             this.cmbLecLevelEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbLecLevelEdit.FormattingEnabled = true;
-            this.cmbLecLevelEdit.ItemHeight = 24;
+            this.cmbLecLevelEdit.ItemHeight = 23;
             this.cmbLecLevelEdit.Items.AddRange(new object[] {
             "Professor",
             "Assistant Professor",
@@ -910,7 +911,7 @@
             this.cmbLecLevelEdit.Location = new System.Drawing.Point(410, 297);
             this.cmbLecLevelEdit.Name = "cmbLecLevelEdit";
             this.cmbLecLevelEdit.PromptText = "Select Level";
-            this.cmbLecLevelEdit.Size = new System.Drawing.Size(200, 30);
+            this.cmbLecLevelEdit.Size = new System.Drawing.Size(200, 29);
             this.cmbLecLevelEdit.TabIndex = 58;
             this.cmbLecLevelEdit.UseSelectable = true;
             // 
@@ -930,7 +931,7 @@
             this.cmbLecBuildingEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbLecBuildingEdit.FormattingEnabled = true;
-            this.cmbLecBuildingEdit.ItemHeight = 24;
+            this.cmbLecBuildingEdit.ItemHeight = 23;
             this.cmbLecBuildingEdit.Items.AddRange(new object[] {
             "Main Building",
             "New Building",
@@ -940,7 +941,7 @@
             this.cmbLecBuildingEdit.Location = new System.Drawing.Point(410, 252);
             this.cmbLecBuildingEdit.Name = "cmbLecBuildingEdit";
             this.cmbLecBuildingEdit.PromptText = "Select Building";
-            this.cmbLecBuildingEdit.Size = new System.Drawing.Size(200, 30);
+            this.cmbLecBuildingEdit.Size = new System.Drawing.Size(200, 29);
             this.cmbLecBuildingEdit.TabIndex = 57;
             this.cmbLecBuildingEdit.UseSelectable = true;
             // 
@@ -950,9 +951,9 @@
             // 
             // 
             this.txtLecNameEdit.CustomButton.Image = null;
-            this.txtLecNameEdit.CustomButton.Location = new System.Drawing.Point(129, 2);
+            this.txtLecNameEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
             this.txtLecNameEdit.CustomButton.Name = "";
-            this.txtLecNameEdit.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.txtLecNameEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtLecNameEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecNameEdit.CustomButton.TabIndex = 1;
             this.txtLecNameEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -982,7 +983,7 @@
             this.cmbLecCenterEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbLecCenterEdit.FormattingEnabled = true;
-            this.cmbLecCenterEdit.ItemHeight = 24;
+            this.cmbLecCenterEdit.ItemHeight = 23;
             this.cmbLecCenterEdit.Items.AddRange(new object[] {
             "Malabe",
             "Metro",
@@ -993,7 +994,7 @@
             this.cmbLecCenterEdit.Location = new System.Drawing.Point(410, 207);
             this.cmbLecCenterEdit.Name = "cmbLecCenterEdit";
             this.cmbLecCenterEdit.PromptText = "Select Center";
-            this.cmbLecCenterEdit.Size = new System.Drawing.Size(200, 30);
+            this.cmbLecCenterEdit.Size = new System.Drawing.Size(200, 29);
             this.cmbLecCenterEdit.TabIndex = 56;
             this.cmbLecCenterEdit.UseSelectable = true;
             // 
@@ -1002,7 +1003,7 @@
             this.cmbLecFacEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbLecFacEdit.FormattingEnabled = true;
-            this.cmbLecFacEdit.ItemHeight = 24;
+            this.cmbLecFacEdit.ItemHeight = 23;
             this.cmbLecFacEdit.Items.AddRange(new object[] {
             "Computing",
             "Engineering",
@@ -1011,21 +1012,16 @@
             this.cmbLecFacEdit.Location = new System.Drawing.Point(410, 117);
             this.cmbLecFacEdit.Name = "cmbLecFacEdit";
             this.cmbLecFacEdit.PromptText = "Select Faculty";
-            this.cmbLecFacEdit.Size = new System.Drawing.Size(200, 30);
+            this.cmbLecFacEdit.Size = new System.Drawing.Size(200, 29);
             this.cmbLecFacEdit.TabIndex = 55;
             this.cmbLecFacEdit.UseSelectable = true;
             // 
-            // metroLabel19
+            // textBox1
             // 
-            this.metroLabel19.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.metroLabel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel19.Location = new System.Drawing.Point(565, 75);
-            this.metroLabel19.MaximumSize = new System.Drawing.Size(200, 30);
-            this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(10, 10);
-            this.metroLabel19.TabIndex = 69;
-            this.metroLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.textBox1.Location = new System.Drawing.Point(542, 112);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 22);
+            this.textBox1.TabIndex = 70;
             // 
             // Sessions
             // 
@@ -1048,7 +1044,7 @@
             this.Controls.Add(this.btnHeaderSessions);
             this.Controls.Add(this.btnHeaderGenerate);
             this.Controls.Add(this.btnHeaderHome);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Sessions";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
@@ -1141,5 +1137,6 @@
         private System.Windows.Forms.NumericUpDown nmudSessionNoStudents;
         private System.Windows.Forms.NumericUpDown nmudSessionDuration;
         private MetroFramework.Controls.MetroLabel metroLabel19;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

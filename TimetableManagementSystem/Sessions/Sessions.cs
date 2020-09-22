@@ -155,6 +155,8 @@ namespace TimetableManagementSystem.Sessions
             lecturers.Add(cmbSessionLecturer.Text);
             names2 = names2 + cmbSessionLecturer.Text+", ";
             metroLabel19.Text = names2;
+
+            textBox1.Text = names2;
             /*
             for (int i=0; i< lecturers.Count; i++)
             {
