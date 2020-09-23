@@ -305,7 +305,6 @@ namespace TimetableManagementSystem.AdvancedOp
                 }
                 */
 
-                itmLbl.Text = "Lecturer";
                 itmCmbBox.PromptText = "Select Lecturer";
                 this.itmCmbBox.DataSource = null;
                 itmCmbBox.Items.Clear();

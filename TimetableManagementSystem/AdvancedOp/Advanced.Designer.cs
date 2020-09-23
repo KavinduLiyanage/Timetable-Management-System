@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -43,6 +44,10 @@
             this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
             this.advancedOp = new MetroFramework.Controls.MetroTabControl();
             this.notAvailableTime = new MetroFramework.Controls.MetroTabPage();
+            this.yrSemClrBtn = new MetroFramework.Controls.MetroButton();
+            this.yrSemData = new System.Windows.Forms.DataGridView();
+            this.yrSemSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
+            this.yrSemSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.non_reservable_lbl = new MetroFramework.Controls.MetroLabel();
             this.noAvaBtn = new MetroFramework.Controls.MetroButton();
             this.timeCmbBox = new MetroFramework.Controls.MetroComboBox();
@@ -52,9 +57,7 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.addConBtn = new MetroFramework.Controls.MetroButton();
             this.sesCmb02 = new MetroFramework.Controls.MetroComboBox();
-            this.sesLbl02 = new MetroFramework.Controls.MetroLabel();
             this.sesCmb01 = new MetroFramework.Controls.MetroComboBox();
-            this.sesLbl01 = new MetroFramework.Controls.MetroLabel();
             this.parallelSessions = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.parSesDurationCmb = new MetroFramework.Controls.MetroComboBox();
@@ -79,10 +82,12 @@
             this.notOverlapSesLbl02 = new MetroFramework.Controls.MetroLabel();
             this.notOverlapSesCmbBox01 = new MetroFramework.Controls.MetroComboBox();
             this.notOverlapSesLbl01 = new MetroFramework.Controls.MetroLabel();
-            this.yrSemData = new System.Windows.Forms.DataGridView();
-            this.yrSemSrtDrpDwn = new MetroFramework.Controls.MetroComboBox();
-            this.yrSemSearchBox = new MetroFramework.Controls.MetroTextBox();
-            this.yrSemClrBtn = new MetroFramework.Controls.MetroButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -92,10 +97,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavWorking)).BeginInit();
             this.advancedOp.SuspendLayout();
             this.notAvailableTime.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yrSemData)).BeginInit();
             this.consecutiveSessions.SuspendLayout();
             this.parallelSessions.SuspendLayout();
             this.shouldNotOverlap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.yrSemData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHeaderAdvanced
@@ -288,13 +294,109 @@
             this.notAvailableTime.VerticalScrollbarHighlightOnWheel = false;
             this.notAvailableTime.VerticalScrollbarSize = 10;
             // 
+            // yrSemClrBtn
+            // 
+            this.yrSemClrBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.yrSemClrBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.yrSemClrBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.yrSemClrBtn.Location = new System.Drawing.Point(37, 339);
+            this.yrSemClrBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.yrSemClrBtn.Name = "yrSemClrBtn";
+            this.yrSemClrBtn.Size = new System.Drawing.Size(216, 40);
+            this.yrSemClrBtn.TabIndex = 62;
+            this.yrSemClrBtn.Text = "Clear";
+            this.yrSemClrBtn.UseCustomBackColor = true;
+            this.yrSemClrBtn.UseCustomForeColor = true;
+            this.yrSemClrBtn.UseSelectable = true;
+            this.yrSemClrBtn.Click += new System.EventHandler(this.yrSemClrBtn_Click);
+            // 
+            // yrSemData
+            // 
+            this.yrSemData.AllowUserToAddRows = false;
+            this.yrSemData.AllowUserToDeleteRows = false;
+            this.yrSemData.AllowUserToOrderColumns = true;
+            this.yrSemData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.yrSemData.BackgroundColor = System.Drawing.Color.White;
+            this.yrSemData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.yrSemData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.yrSemData.ColumnHeadersHeight = 29;
+            this.yrSemData.Location = new System.Drawing.Point(365, 164);
+            this.yrSemData.MultiSelect = false;
+            this.yrSemData.Name = "yrSemData";
+            this.yrSemData.ReadOnly = true;
+            this.yrSemData.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.yrSemData.RowHeadersWidth = 51;
+            this.yrSemData.RowTemplate.Height = 24;
+            this.yrSemData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.yrSemData.Size = new System.Drawing.Size(390, 215);
+            this.yrSemData.TabIndex = 61;
+            // 
+            // yrSemSrtDrpDwn
+            // 
+            this.yrSemSrtDrpDwn.FormattingEnabled = true;
+            this.yrSemSrtDrpDwn.ItemHeight = 23;
+            this.yrSemSrtDrpDwn.Items.AddRange(new object[] {
+            "Year",
+            "Semester",
+            "ID"});
+            this.yrSemSrtDrpDwn.Location = new System.Drawing.Point(474, 111);
+            this.yrSemSrtDrpDwn.Name = "yrSemSrtDrpDwn";
+            this.yrSemSrtDrpDwn.PromptText = "Search By...";
+            this.yrSemSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
+            this.yrSemSrtDrpDwn.TabIndex = 60;
+            this.yrSemSrtDrpDwn.UseSelectable = true;
+            // 
+            // yrSemSearchBox
+            // 
+            // 
+            // 
+            // 
+            this.yrSemSearchBox.CustomButton.Image = null;
+            this.yrSemSearchBox.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.yrSemSearchBox.CustomButton.Name = "";
+            this.yrSemSearchBox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.yrSemSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.yrSemSearchBox.CustomButton.TabIndex = 1;
+            this.yrSemSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.yrSemSearchBox.CustomButton.UseSelectable = true;
+            this.yrSemSearchBox.CustomButton.Visible = false;
+            this.yrSemSearchBox.DisplayIcon = true;
+            this.yrSemSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.yrSemSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.yrSemSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
+            this.yrSemSearchBox.IconRight = true;
+            this.yrSemSearchBox.Lines = new string[0];
+            this.yrSemSearchBox.Location = new System.Drawing.Point(592, 111);
+            this.yrSemSearchBox.MaxLength = 32767;
+            this.yrSemSearchBox.Name = "yrSemSearchBox";
+            this.yrSemSearchBox.PasswordChar = '\0';
+            this.yrSemSearchBox.PromptText = "Search";
+            this.yrSemSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.yrSemSearchBox.SelectedText = "";
+            this.yrSemSearchBox.SelectionLength = 0;
+            this.yrSemSearchBox.SelectionStart = 0;
+            this.yrSemSearchBox.ShortcutsEnabled = true;
+            this.yrSemSearchBox.Size = new System.Drawing.Size(163, 30);
+            this.yrSemSearchBox.TabIndex = 59;
+            this.yrSemSearchBox.UseSelectable = true;
+            this.yrSemSearchBox.WaterMark = "Search";
+            this.yrSemSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.yrSemSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // non_reservable_lbl
             // 
             this.non_reservable_lbl.AutoSize = true;
             this.non_reservable_lbl.BackColor = System.Drawing.Color.Transparent;
             this.non_reservable_lbl.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.non_reservable_lbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.non_reservable_lbl.Location = new System.Drawing.Point(297, 24);
+            this.non_reservable_lbl.Location = new System.Drawing.Point(274, 24);
             this.non_reservable_lbl.Name = "non_reservable_lbl";
             this.non_reservable_lbl.Size = new System.Drawing.Size(207, 25);
             this.non_reservable_lbl.TabIndex = 54;
@@ -366,12 +468,14 @@
             // 
             // consecutiveSessions
             // 
+            this.consecutiveSessions.Controls.Add(this.metroButton1);
+            this.consecutiveSessions.Controls.Add(this.dataGridView1);
+            this.consecutiveSessions.Controls.Add(this.metroComboBox1);
+            this.consecutiveSessions.Controls.Add(this.metroTextBox1);
             this.consecutiveSessions.Controls.Add(this.metroLabel4);
             this.consecutiveSessions.Controls.Add(this.addConBtn);
             this.consecutiveSessions.Controls.Add(this.sesCmb02);
-            this.consecutiveSessions.Controls.Add(this.sesLbl02);
             this.consecutiveSessions.Controls.Add(this.sesCmb01);
-            this.consecutiveSessions.Controls.Add(this.sesLbl01);
             this.consecutiveSessions.HorizontalScrollbarBarColor = true;
             this.consecutiveSessions.HorizontalScrollbarHighlightOnWheel = false;
             this.consecutiveSessions.HorizontalScrollbarSize = 10;
@@ -402,7 +506,7 @@
             this.addConBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.addConBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.addConBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.addConBtn.Location = new System.Drawing.Point(169, 309);
+            this.addConBtn.Location = new System.Drawing.Point(37, 285);
             this.addConBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addConBtn.Name = "addConBtn";
             this.addConBtn.Size = new System.Drawing.Size(216, 40);
@@ -419,23 +523,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sesCmb02.FormattingEnabled = true;
             this.sesCmb02.ItemHeight = 23;
-            this.sesCmb02.Location = new System.Drawing.Point(298, 198);
+            this.sesCmb02.Location = new System.Drawing.Point(48, 233);
             this.sesCmb02.Name = "sesCmb02";
             this.sesCmb02.PromptText = "Select Session 02";
             this.sesCmb02.Size = new System.Drawing.Size(194, 29);
             this.sesCmb02.TabIndex = 51;
             this.sesCmb02.UseSelectable = true;
-            // 
-            // sesLbl02
-            // 
-            this.sesLbl02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sesLbl02.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.sesLbl02.Location = new System.Drawing.Point(64, 197);
-            this.sesLbl02.Name = "sesLbl02";
-            this.sesLbl02.Size = new System.Drawing.Size(150, 30);
-            this.sesLbl02.TabIndex = 50;
-            this.sesLbl02.Text = "Session 02";
-            this.sesLbl02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // sesCmb01
             // 
@@ -443,26 +536,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sesCmb01.FormattingEnabled = true;
             this.sesCmb01.ItemHeight = 23;
-            this.sesCmb01.Location = new System.Drawing.Point(298, 137);
+            this.sesCmb01.Location = new System.Drawing.Point(48, 183);
             this.sesCmb01.Name = "sesCmb01";
             this.sesCmb01.PromptText = "Select Session 01";
             this.sesCmb01.Size = new System.Drawing.Size(194, 29);
             this.sesCmb01.TabIndex = 49;
             this.sesCmb01.UseSelectable = true;
             // 
-            // sesLbl01
-            // 
-            this.sesLbl01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sesLbl01.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.sesLbl01.Location = new System.Drawing.Point(64, 136);
-            this.sesLbl01.Name = "sesLbl01";
-            this.sesLbl01.Size = new System.Drawing.Size(150, 30);
-            this.sesLbl01.TabIndex = 48;
-            this.sesLbl01.Text = "Session 01";
-            this.sesLbl01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // parallelSessions
             // 
+            this.parallelSessions.Controls.Add(this.metroButton2);
             this.parallelSessions.Controls.Add(this.metroLabel5);
             this.parallelSessions.Controls.Add(this.parSesDurationCmb);
             this.parallelSessions.Controls.Add(this.metroLabel2);
@@ -492,7 +575,7 @@
             this.metroLabel5.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(276, 24);
+            this.metroLabel5.Location = new System.Drawing.Point(274, 24);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(191, 25);
             this.metroLabel5.TabIndex = 65;
@@ -512,7 +595,7 @@
             "4",
             "5",
             "6"});
-            this.parSesDurationCmb.Location = new System.Drawing.Point(289, 198);
+            this.parSesDurationCmb.Location = new System.Drawing.Point(277, 216);
             this.parSesDurationCmb.MaxDropDownItems = 100;
             this.parSesDurationCmb.Name = "parSesDurationCmb";
             this.parSesDurationCmb.PromptText = "Select Duration";
@@ -525,7 +608,7 @@
             // 
             this.metroLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(55, 197);
+            this.metroLabel2.Location = new System.Drawing.Point(43, 215);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(150, 30);
             this.metroLabel2.TabIndex = 63;
@@ -549,7 +632,7 @@
             "2.30 pm -3.30 pm",
             "3.30 pm -4.30 pm",
             "4.30 pm -5.30 pm"});
-            this.parSesTimeSlotCmb.Location = new System.Drawing.Point(432, 259);
+            this.parSesTimeSlotCmb.Location = new System.Drawing.Point(420, 277);
             this.parSesTimeSlotCmb.MaxDropDownItems = 100;
             this.parSesTimeSlotCmb.Name = "parSesTimeSlotCmb";
             this.parSesTimeSlotCmb.PromptText = "Select Time Slot";
@@ -569,7 +652,7 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.parSesDayCmb.Location = new System.Drawing.Point(289, 259);
+            this.parSesDayCmb.Location = new System.Drawing.Point(277, 277);
             this.parSesDayCmb.MaxDropDownItems = 100;
             this.parSesDayCmb.Name = "parSesDayCmb";
             this.parSesDayCmb.PromptText = "Select Day";
@@ -582,7 +665,7 @@
             // 
             this.nonreser_time_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nonreser_time_lbl.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.nonreser_time_lbl.Location = new System.Drawing.Point(55, 258);
+            this.nonreser_time_lbl.Location = new System.Drawing.Point(43, 276);
             this.nonreser_time_lbl.Name = "nonreser_time_lbl";
             this.nonreser_time_lbl.Size = new System.Drawing.Size(150, 30);
             this.nonreser_time_lbl.TabIndex = 60;
@@ -594,7 +677,7 @@
             this.addParBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.addParBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.addParBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.addParBtn.Location = new System.Drawing.Point(192, 343);
+            this.addParBtn.Location = new System.Drawing.Point(120, 342);
             this.addParBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addParBtn.Name = "addParBtn";
             this.addParBtn.Size = new System.Drawing.Size(216, 40);
@@ -611,7 +694,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.parSesCmbBox02.FormattingEnabled = true;
             this.parSesCmbBox02.ItemHeight = 23;
-            this.parSesCmbBox02.Location = new System.Drawing.Point(289, 137);
+            this.parSesCmbBox02.Location = new System.Drawing.Point(277, 158);
             this.parSesCmbBox02.Name = "parSesCmbBox02";
             this.parSesCmbBox02.PromptText = "Select Session 02";
             this.parSesCmbBox02.Size = new System.Drawing.Size(194, 29);
@@ -622,7 +705,7 @@
             // 
             this.parSesLbl02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.parSesLbl02.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.parSesLbl02.Location = new System.Drawing.Point(55, 136);
+            this.parSesLbl02.Location = new System.Drawing.Point(43, 157);
             this.parSesLbl02.Name = "parSesLbl02";
             this.parSesLbl02.Size = new System.Drawing.Size(150, 30);
             this.parSesLbl02.TabIndex = 57;
@@ -635,7 +718,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.parSesCmbBox01.FormattingEnabled = true;
             this.parSesCmbBox01.ItemHeight = 23;
-            this.parSesCmbBox01.Location = new System.Drawing.Point(289, 76);
+            this.parSesCmbBox01.Location = new System.Drawing.Point(277, 97);
             this.parSesCmbBox01.Name = "parSesCmbBox01";
             this.parSesCmbBox01.PromptText = "Select Session 01";
             this.parSesCmbBox01.Size = new System.Drawing.Size(194, 29);
@@ -646,7 +729,7 @@
             // 
             this.parSesLbl01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.parSesLbl01.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.parSesLbl01.Location = new System.Drawing.Point(55, 75);
+            this.parSesLbl01.Location = new System.Drawing.Point(43, 96);
             this.parSesLbl01.Name = "parSesLbl01";
             this.parSesLbl01.Size = new System.Drawing.Size(150, 30);
             this.parSesLbl01.TabIndex = 55;
@@ -655,6 +738,7 @@
             // 
             // shouldNotOverlap
             // 
+            this.shouldNotOverlap.Controls.Add(this.metroButton3);
             this.shouldNotOverlap.Controls.Add(this.metroLabel6);
             this.shouldNotOverlap.Controls.Add(this.notOverlapSesDurationCmbBox);
             this.shouldNotOverlap.Controls.Add(this.metroLabel1);
@@ -783,7 +867,7 @@
             this.addNotOverlapSesBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.addNotOverlapSesBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.addNotOverlapSesBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.addNotOverlapSesBtn.Location = new System.Drawing.Point(192, 355);
+            this.addNotOverlapSesBtn.Location = new System.Drawing.Point(120, 342);
             this.addNotOverlapSesBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addNotOverlapSesBtn.Name = "addNotOverlapSesBtn";
             this.addNotOverlapSesBtn.Size = new System.Drawing.Size(216, 40);
@@ -842,101 +926,130 @@
             this.notOverlapSesLbl01.Text = "Session 01";
             this.notOverlapSesLbl01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // yrSemData
+            // dataGridView1
             // 
-            this.yrSemData.AllowUserToAddRows = false;
-            this.yrSemData.AllowUserToDeleteRows = false;
-            this.yrSemData.AllowUserToOrderColumns = true;
-            this.yrSemData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.yrSemData.BackgroundColor = System.Drawing.Color.White;
-            this.yrSemData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.yrSemData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.yrSemData.ColumnHeadersHeight = 29;
-            this.yrSemData.Location = new System.Drawing.Point(365, 164);
-            this.yrSemData.MultiSelect = false;
-            this.yrSemData.Name = "yrSemData";
-            this.yrSemData.ReadOnly = true;
-            this.yrSemData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.yrSemData.RowHeadersWidth = 51;
-            this.yrSemData.RowTemplate.Height = 24;
-            this.yrSemData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.yrSemData.Size = new System.Drawing.Size(390, 215);
-            this.yrSemData.TabIndex = 61;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.ColumnHeadersHeight = 29;
+            this.dataGridView1.Location = new System.Drawing.Point(365, 164);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(390, 215);
+            this.dataGridView1.TabIndex = 64;
             // 
-            // yrSemSrtDrpDwn
+            // metroComboBox1
             // 
-            this.yrSemSrtDrpDwn.FormattingEnabled = true;
-            this.yrSemSrtDrpDwn.ItemHeight = 23;
-            this.yrSemSrtDrpDwn.Items.AddRange(new object[] {
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Items.AddRange(new object[] {
             "Year",
             "Semester",
             "ID"});
-            this.yrSemSrtDrpDwn.Location = new System.Drawing.Point(474, 111);
-            this.yrSemSrtDrpDwn.Name = "yrSemSrtDrpDwn";
-            this.yrSemSrtDrpDwn.PromptText = "Search By...";
-            this.yrSemSrtDrpDwn.Size = new System.Drawing.Size(94, 29);
-            this.yrSemSrtDrpDwn.TabIndex = 60;
-            this.yrSemSrtDrpDwn.UseSelectable = true;
+            this.metroComboBox1.Location = new System.Drawing.Point(474, 111);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.PromptText = "Search By...";
+            this.metroComboBox1.Size = new System.Drawing.Size(94, 29);
+            this.metroComboBox1.TabIndex = 63;
+            this.metroComboBox1.UseSelectable = true;
             // 
-            // yrSemSearchBox
-            // 
-            // 
+            // metroTextBox1
             // 
             // 
-            this.yrSemSearchBox.CustomButton.Image = null;
-            this.yrSemSearchBox.CustomButton.Location = new System.Drawing.Point(135, 2);
-            this.yrSemSearchBox.CustomButton.Name = "";
-            this.yrSemSearchBox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.yrSemSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.yrSemSearchBox.CustomButton.TabIndex = 1;
-            this.yrSemSearchBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.yrSemSearchBox.CustomButton.UseSelectable = true;
-            this.yrSemSearchBox.CustomButton.Visible = false;
-            this.yrSemSearchBox.DisplayIcon = true;
-            this.yrSemSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.yrSemSearchBox.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.yrSemSearchBox.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
-            this.yrSemSearchBox.IconRight = true;
-            this.yrSemSearchBox.Lines = new string[0];
-            this.yrSemSearchBox.Location = new System.Drawing.Point(592, 111);
-            this.yrSemSearchBox.MaxLength = 32767;
-            this.yrSemSearchBox.Name = "yrSemSearchBox";
-            this.yrSemSearchBox.PasswordChar = '\0';
-            this.yrSemSearchBox.PromptText = "Search";
-            this.yrSemSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.yrSemSearchBox.SelectedText = "";
-            this.yrSemSearchBox.SelectionLength = 0;
-            this.yrSemSearchBox.SelectionStart = 0;
-            this.yrSemSearchBox.ShortcutsEnabled = true;
-            this.yrSemSearchBox.Size = new System.Drawing.Size(163, 30);
-            this.yrSemSearchBox.TabIndex = 59;
-            this.yrSemSearchBox.UseSelectable = true;
-            this.yrSemSearchBox.WaterMark = "Search";
-            this.yrSemSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.yrSemSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // yrSemClrBtn
             // 
-            this.yrSemClrBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.yrSemClrBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.yrSemClrBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.yrSemClrBtn.Location = new System.Drawing.Point(37, 339);
-            this.yrSemClrBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.yrSemClrBtn.Name = "yrSemClrBtn";
-            this.yrSemClrBtn.Size = new System.Drawing.Size(216, 40);
-            this.yrSemClrBtn.TabIndex = 62;
-            this.yrSemClrBtn.Text = "Clear";
-            this.yrSemClrBtn.UseCustomBackColor = true;
-            this.yrSemClrBtn.UseCustomForeColor = true;
-            this.yrSemClrBtn.UseSelectable = true;
-            this.yrSemClrBtn.Click += new System.EventHandler(this.yrSemClrBtn_Click);
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.DisplayIcon = true;
+            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.metroTextBox1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.metroTextBox1.Icon = global::TimetableManagementSystem.Properties.Resources.Search2;
+            this.metroTextBox1.IconRight = true;
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(592, 111);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.PromptText = "Search";
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(163, 30);
+            this.metroTextBox1.TabIndex = 62;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMark = "Search";
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton1.ForeColor = System.Drawing.SystemColors.Control;
+            this.metroButton1.Location = new System.Drawing.Point(37, 339);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(216, 40);
+            this.metroButton1.TabIndex = 65;
+            this.metroButton1.Text = "Clear";
+            this.metroButton1.UseCustomBackColor = true;
+            this.metroButton1.UseCustomForeColor = true;
+            this.metroButton1.UseSelectable = true;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton2.ForeColor = System.Drawing.SystemColors.Control;
+            this.metroButton2.Location = new System.Drawing.Point(381, 342);
+            this.metroButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(216, 40);
+            this.metroButton2.TabIndex = 66;
+            this.metroButton2.Text = "Clear";
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseCustomForeColor = true;
+            this.metroButton2.UseSelectable = true;
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton3.ForeColor = System.Drawing.SystemColors.Control;
+            this.metroButton3.Location = new System.Drawing.Point(381, 342);
+            this.metroButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(216, 40);
+            this.metroButton3.TabIndex = 71;
+            this.metroButton3.Text = "Clear";
+            this.metroButton3.UseCustomBackColor = true;
+            this.metroButton3.UseCustomForeColor = true;
+            this.metroButton3.UseSelectable = true;
             // 
             // Advanced
             // 
@@ -974,13 +1087,14 @@
             this.advancedOp.ResumeLayout(false);
             this.notAvailableTime.ResumeLayout(false);
             this.notAvailableTime.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.yrSemData)).EndInit();
             this.consecutiveSessions.ResumeLayout(false);
             this.consecutiveSessions.PerformLayout();
             this.parallelSessions.ResumeLayout(false);
             this.parallelSessions.PerformLayout();
             this.shouldNotOverlap.ResumeLayout(false);
             this.shouldNotOverlap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.yrSemData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1011,9 +1125,7 @@
         private MetroFramework.Controls.MetroButton noAvaBtn;
         private MetroFramework.Controls.MetroButton addConBtn;
         private MetroFramework.Controls.MetroComboBox sesCmb02;
-        private MetroFramework.Controls.MetroLabel sesLbl02;
         private MetroFramework.Controls.MetroComboBox sesCmb01;
-        private MetroFramework.Controls.MetroLabel sesLbl01;
         private MetroFramework.Controls.MetroButton addParBtn;
         private MetroFramework.Controls.MetroComboBox parSesCmbBox02;
         private MetroFramework.Controls.MetroLabel parSesLbl02;
@@ -1042,5 +1154,11 @@
         private MetroFramework.Controls.MetroComboBox yrSemSrtDrpDwn;
         private MetroFramework.Controls.MetroTextBox yrSemSearchBox;
         private MetroFramework.Controls.MetroButton yrSemClrBtn;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }
