@@ -1,6 +1,6 @@
 # Timetabel Management System
 
-Desktop application for managing the timetables
+Desktop Application for automatically scheduling the timetable of universities.
 
 # Developers
 
@@ -10,6 +10,6 @@ Desktop application for managing the timetables
   - [Ridmi Ekanayake](https://github.com/Ridmi95)
 
 # Technologies
-  * c#
+  * C#
   * .Net Framework
-  * Azure
+  * Azure DB
