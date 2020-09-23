@@ -551,5 +551,15 @@ namespace TimetableManagementSystem.AdvancedOp
                 MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void timeCmbBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yrSemClrBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
