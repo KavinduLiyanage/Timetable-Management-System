@@ -335,7 +335,6 @@ namespace TimetableManagementSystem.AdvancedOp
                 }
                 */
 
-                itmLbl.Text = "Session";
                 itmCmbBox.PromptText = "Select Session";
                 this.itmCmbBox.DataSource = null;
                 itmCmbBox.Items.Clear();
@@ -366,7 +365,6 @@ namespace TimetableManagementSystem.AdvancedOp
                 }
                 */
 
-                itmLbl.Text = "Group";
                 itmCmbBox.PromptText = "Select Group";
                 this.itmCmbBox.DataSource = null;
                 itmCmbBox.Items.Clear();
@@ -395,7 +393,6 @@ namespace TimetableManagementSystem.AdvancedOp
                 }
                 */
 
-                itmLbl.Text = "Sub-Group";
                 itmCmbBox.PromptText = "Select Sub-Group";
                 this.itmCmbBox.DataSource = null;
                 itmCmbBox.Items.Clear();
