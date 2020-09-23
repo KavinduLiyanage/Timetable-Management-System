@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -298,9 +298,9 @@
             this.tabPageSessionView.Controls.Add(this.metroLabel15);
             this.tabPageSessionView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSessionView.Location = new System.Drawing.Point(4, 37);
-            this.tabPageSessionView.Margin = new System.Windows.Forms.Padding(7);
+            this.tabPageSessionView.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tabPageSessionView.Name = "tabPageSessionView";
-            this.tabPageSessionView.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSessionView.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPageSessionView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabPageSessionView.Size = new System.Drawing.Size(774, 434);
             this.tabPageSessionView.TabIndex = 0;
@@ -387,9 +387,9 @@
             // 
             // 
             this.txtLecSearch.CustomButton.Image = null;
-            this.txtLecSearch.CustomButton.Location = new System.Drawing.Point(78, 1);
+            this.txtLecSearch.CustomButton.Location = new System.Drawing.Point(58, 1);
             this.txtLecSearch.CustomButton.Name = "";
-            this.txtLecSearch.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtLecSearch.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.txtLecSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecSearch.CustomButton.TabIndex = 1;
             this.txtLecSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -417,14 +417,14 @@
             // dgvLectures
             // 
             this.dgvLectures.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLectures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLectures.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -600,7 +600,7 @@
             // nmudSessionDuration
             // 
             this.nmudSessionDuration.Location = new System.Drawing.Point(352, 301);
-            this.nmudSessionDuration.Margin = new System.Windows.Forms.Padding(2);
+            this.nmudSessionDuration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nmudSessionDuration.Name = "nmudSessionDuration";
             this.nmudSessionDuration.Size = new System.Drawing.Size(112, 22);
             this.nmudSessionDuration.TabIndex = 68;
@@ -609,7 +609,7 @@
             // nmudSessionNoStudents
             // 
             this.nmudSessionNoStudents.Location = new System.Drawing.Point(352, 256);
-            this.nmudSessionNoStudents.Margin = new System.Windows.Forms.Padding(2);
+            this.nmudSessionNoStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nmudSessionNoStudents.Name = "nmudSessionNoStudents";
             this.nmudSessionNoStudents.Size = new System.Drawing.Size(112, 22);
             this.nmudSessionNoStudents.TabIndex = 67;
@@ -649,7 +649,7 @@
             this.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
             this.btnClear.Location = new System.Drawing.Point(397, 358);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(150, 40);
             this.btnClear.TabIndex = 44;
@@ -676,7 +676,7 @@
             this.btnSessionSave.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnSessionSave.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSessionSave.Location = new System.Drawing.Point(201, 358);
-            this.btnSessionSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSessionSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSessionSave.Name = "btnSessionSave";
             this.btnSessionSave.Size = new System.Drawing.Size(150, 40);
             this.btnSessionSave.TabIndex = 31;
@@ -753,6 +753,7 @@
             this.cmbSessionSubject.Size = new System.Drawing.Size(166, 29);
             this.cmbSessionSubject.TabIndex = 42;
             this.cmbSessionSubject.UseSelectable = true;
+            this.cmbSessionSubject.SelectedIndexChanged += new System.EventHandler(this.cmbSessionSubject_SelectedIndexChanged);
             // 
             // cmbSessionGroup
             // 
@@ -841,7 +842,7 @@
             this.btnLecDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLecDelete.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLecDelete.Location = new System.Drawing.Point(397, 358);
-            this.btnLecDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLecDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLecDelete.Name = "btnLecDelete";
             this.btnLecDelete.Size = new System.Drawing.Size(150, 40);
             this.btnLecDelete.TabIndex = 59;
@@ -867,7 +868,7 @@
             this.btnLecUpdate.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnLecUpdate.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLecUpdate.Location = new System.Drawing.Point(201, 358);
-            this.btnLecUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLecUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLecUpdate.Name = "btnLecUpdate";
             this.btnLecUpdate.Size = new System.Drawing.Size(150, 40);
             this.btnLecUpdate.TabIndex = 46;
@@ -977,9 +978,9 @@
             // 
             // 
             this.txtLecNameEdit.CustomButton.Image = null;
-            this.txtLecNameEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
+            this.txtLecNameEdit.CustomButton.Location = new System.Drawing.Point(129, 2);
             this.txtLecNameEdit.CustomButton.Name = "";
-            this.txtLecNameEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtLecNameEdit.CustomButton.Size = new System.Drawing.Size(19, 20);
             this.txtLecNameEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLecNameEdit.CustomButton.TabIndex = 1;
             this.txtLecNameEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1063,7 +1064,7 @@
             this.Controls.Add(this.btnHeaderSessions);
             this.Controls.Add(this.btnHeaderGenerate);
             this.Controls.Add(this.btnHeaderHome);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Sessions";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);

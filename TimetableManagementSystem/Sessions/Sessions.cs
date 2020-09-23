@@ -23,12 +23,14 @@ namespace TimetableManagementSystem.Sessions
         public String lecturers = "";
         public String tags = "";
         public String groups = "";
+        public String subject = "";
 
         private void Sessions_Load(object sender, EventArgs e)
         {
             GetLecturers();
             GetTags();
             GetGroups();
+            GetSubjects();
         }
 
         public void GetLecturers()
@@ -86,7 +88,7 @@ namespace TimetableManagementSystem.Sessions
         public void GetGroups()
         {
             con.Open();
-
+            cmbSessionGroup.Items.Clear();
             SqlCommand cmd = con.CreateCommand();
 
             cmd.CommandType = CommandType.Text;
@@ -104,6 +106,32 @@ namespace TimetableManagementSystem.Sessions
             foreach (DataRow dr in dtgroups.Rows)
             {
                 cmbSessionGroup.Items.Add(dr["GenGrpNum"].ToString());
+            }
+
+            con.Close();
+        }
+
+        public void GetSubjects()
+        {
+            con.Open();
+
+            SqlCommand cmd = con.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT SubCode FROM Subjects";
+
+            cmd.ExecuteNonQuery();
+
+            DataTable dtsubjects = new DataTable();
+
+            SqlDataAdapter dasubjects = new SqlDataAdapter(cmd);
+
+            dasubjects.Fill(dtsubjects);
+
+            foreach (DataRow dr in dtsubjects.Rows)
+            {
+                cmbSessionSubject.Items.Add(dr["SubCode"].ToString());
             }
 
             con.Close();
@@ -128,6 +156,13 @@ namespace TimetableManagementSystem.Sessions
             groups = groups + cmbSessionGroup.Text + ", ";
 
             txtSelectedGroups.Text = groups;
+        }
+
+        private void cmbSessionSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //groups = groups + cmbSessionGroup.Text + ", ";
+
+            txtSelectedSubject.Text = cmbSessionSubject.Text;
         }
 
         private void btnSessionSave_Click(object sender, EventArgs e)
@@ -181,6 +216,13 @@ namespace TimetableManagementSystem.Sessions
             cmbSessionGroup.SelectedIndex = -1;
             groups = "";
             txtSelectedGroups.Clear();
+
+            cmbSessionSubject.SelectedIndex = -1;
+            txtSelectedSubject.Clear();
+
+            nmudSessionNoStudents.Value = 0;
+
+            nmudSessionDuration.Value = 0;
 
         }
 
