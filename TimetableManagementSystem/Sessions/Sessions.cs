@@ -20,12 +20,13 @@ namespace TimetableManagementSystem.Sessions
 
         SqlConnection con = Config.con;
 
-        public String names = "";
         public String lecturers = "";
+        public String tags = "";
 
         private void Sessions_Load(object sender, EventArgs e)
         {
             GetLecturers();
+            GetTags();
         }
 
         public void GetLecturers()
@@ -54,6 +55,56 @@ namespace TimetableManagementSystem.Sessions
             con.Close();
         }
 
+        public void GetTags()
+        {
+            con.Open();
+
+            SqlCommand cmd = con.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT TagName FROM Tags";
+
+            cmd.ExecuteNonQuery();
+
+            DataTable dttags = new DataTable();
+
+            SqlDataAdapter datags = new SqlDataAdapter(cmd);
+
+            datags.Fill(dttags);
+
+            foreach (DataRow dr in dttags.Rows)
+            {
+                cmbSessionTag.Items.Add(dr["TagName"].ToString());
+            }
+
+            con.Close();
+        }
+
+        private void cmbSessionLecturer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lecturers.Add(cmbSessionLecturer.Text);
+            lecturers = lecturers + cmbSessionLecturer.Text + ", ";
+
+            txtSelectedLecturers.Text = lecturers;
+            /*
+            for (int i=0; i< lecturers.Count; i++)
+            {
+                names = names + lecturers[i];
+                metroLabel19.Text = names;
+            }
+            */
+
+            //MessageBox.Show("Fill the all fields"+ lecturers[0], "Failed", MessageBoxButtons.OK);
+        }
+
+        private void cmbSessionTag_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tags = tags + cmbSessionTag.Text + ", ";
+
+            txtSelectedTags.Text = tags;
+        }
+
         private void btnSessionSave_Click(object sender, EventArgs e)
         {
             if (IsValid())
@@ -63,7 +114,7 @@ namespace TimetableManagementSystem.Sessions
                 cmd.Parameters.AddWithValue("@Lecturer", lecturers);
                 cmd.Parameters.AddWithValue("@Subject", cmbSessionSubject.Text);
                 cmd.Parameters.AddWithValue("@SubjectCode", cmbSessionSubject.Text);
-                cmd.Parameters.AddWithValue("@Tag", cmbSessionTag.Text);
+                cmd.Parameters.AddWithValue("@Tag", tags);
                 cmd.Parameters.AddWithValue("@GroupID", cmbSessionGroup.Text);    
                 cmd.Parameters.AddWithValue("@StudentCount", nmudSessionNoStudents.Text);
                 cmd.Parameters.AddWithValue("@Duration", nmudSessionDuration.Text);
@@ -74,7 +125,8 @@ namespace TimetableManagementSystem.Sessions
 
                 //GetSubjects();
 
-                //ClearFieldsAfterAdd();
+
+                ClearFieldsAfterAdd();
 
                 //tabControlSubjects.SelectedTab = tabPageSubView;
             }
@@ -96,7 +148,17 @@ namespace TimetableManagementSystem.Sessions
             cmbSessionLecturer.SelectedIndex = -1;
             lecturers = "";
             txtSelectedLecturers.Clear();
-            
+
+            cmbSessionTag.SelectedIndex = -1;
+            tags = "";
+            txtSelectedTags.Clear();
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearFieldsAfterAdd();
+
         }
 
         //--------------------Header Buttons--------------------
@@ -186,28 +248,6 @@ namespace TimetableManagementSystem.Sessions
             stat.ShowDialog();
         }
 
-        private void cmbSessionLecturer_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //lecturers.Add(cmbSessionLecturer.Text);
-            lecturers = lecturers + cmbSessionLecturer.Text+", ";
-            
-
-            txtSelectedLecturers.Text = lecturers;
-            /*
-            for (int i=0; i< lecturers.Count; i++)
-            {
-                names = names + lecturers[i];
-                metroLabel19.Text = names;
-            }
-            */
-
-            //MessageBox.Show("Fill the all fields"+ lecturers[0], "Failed", MessageBoxButtons.OK);
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            ClearFieldsAfterAdd();
-
-        }
+        
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -60,6 +60,9 @@
             this.LecRank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.tabPageSessionAdd = new System.Windows.Forms.TabPage();
+            this.txtSelectedSubject = new System.Windows.Forms.TextBox();
+            this.txtSelectedGroups = new System.Windows.Forms.TextBox();
+            this.txtSelectedTags = new System.Windows.Forms.TextBox();
             this.txtSelectedLecturers = new System.Windows.Forms.TextBox();
             this.nmudSessionDuration = new System.Windows.Forms.NumericUpDown();
             this.nmudSessionNoStudents = new System.Windows.Forms.NumericUpDown();
@@ -414,14 +417,14 @@
             // dgvLectures
             // 
             this.dgvLectures.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLectures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLectures.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -527,6 +530,9 @@
             // tabPageSessionAdd
             // 
             this.tabPageSessionAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageSessionAdd.Controls.Add(this.txtSelectedSubject);
+            this.tabPageSessionAdd.Controls.Add(this.txtSelectedGroups);
+            this.tabPageSessionAdd.Controls.Add(this.txtSelectedTags);
             this.tabPageSessionAdd.Controls.Add(this.txtSelectedLecturers);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionDuration);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionNoStudents);
@@ -550,6 +556,36 @@
             this.tabPageSessionAdd.TabIndex = 1;
             this.tabPageSessionAdd.Text = "Add Session";
             this.tabPageSessionAdd.UseVisualStyleBackColor = true;
+            // 
+            // txtSelectedSubject
+            // 
+            this.txtSelectedSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSelectedSubject.Location = new System.Drawing.Point(542, 208);
+            this.txtSelectedSubject.Multiline = true;
+            this.txtSelectedSubject.Name = "txtSelectedSubject";
+            this.txtSelectedSubject.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSelectedSubject.Size = new System.Drawing.Size(200, 29);
+            this.txtSelectedSubject.TabIndex = 73;
+            // 
+            // txtSelectedGroups
+            // 
+            this.txtSelectedGroups.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSelectedGroups.Location = new System.Drawing.Point(542, 163);
+            this.txtSelectedGroups.Multiline = true;
+            this.txtSelectedGroups.Name = "txtSelectedGroups";
+            this.txtSelectedGroups.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSelectedGroups.Size = new System.Drawing.Size(200, 29);
+            this.txtSelectedGroups.TabIndex = 72;
+            // 
+            // txtSelectedTags
+            // 
+            this.txtSelectedTags.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSelectedTags.Location = new System.Drawing.Point(542, 118);
+            this.txtSelectedTags.Multiline = true;
+            this.txtSelectedTags.Name = "txtSelectedTags";
+            this.txtSelectedTags.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSelectedTags.Size = new System.Drawing.Size(200, 29);
+            this.txtSelectedTags.TabIndex = 71;
             // 
             // txtSelectedLecturers
             // 
@@ -585,16 +621,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionTag.FormattingEnabled = true;
             this.cmbSessionTag.ItemHeight = 23;
-            this.cmbSessionTag.Items.AddRange(new object[] {
-            "Lec",
-            "Tute",
-            "Lab"});
             this.cmbSessionTag.Location = new System.Drawing.Point(352, 118);
             this.cmbSessionTag.Name = "cmbSessionTag";
             this.cmbSessionTag.PromptText = "Select Tag";
             this.cmbSessionTag.Size = new System.Drawing.Size(166, 29);
             this.cmbSessionTag.TabIndex = 46;
             this.cmbSessionTag.UseSelectable = true;
+            this.cmbSessionTag.SelectedIndexChanged += new System.EventHandler(this.cmbSessionTag_SelectedIndexChanged);
             // 
             // metroLabel8
             // 
@@ -620,7 +653,7 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(150, 40);
             this.btnClear.TabIndex = 44;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Clear all";
             this.btnClear.UseCustomBackColor = true;
             this.btnClear.UseCustomForeColor = true;
             this.btnClear.UseSelectable = true;
@@ -1123,5 +1156,8 @@
         private System.Windows.Forms.NumericUpDown nmudSessionNoStudents;
         private System.Windows.Forms.NumericUpDown nmudSessionDuration;
         private System.Windows.Forms.TextBox txtSelectedLecturers;
+        private System.Windows.Forms.TextBox txtSelectedSubject;
+        private System.Windows.Forms.TextBox txtSelectedGroups;
+        private System.Windows.Forms.TextBox txtSelectedTags;
     }
 }
