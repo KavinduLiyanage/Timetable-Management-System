@@ -20,11 +20,39 @@ namespace TimetableManagementSystem.Sessions
 
         SqlConnection con = Config.con;
 
-        public List<string> lecturers = new List<string>();
         public String names = "";
-        public String names2 = "";
+        public String lecturers = "";
 
+        private void Sessions_Load(object sender, EventArgs e)
+        {
+            GetLecturers();
+        }
 
+        public void GetLecturers()
+        {
+            con.Open();
+
+            SqlCommand cmd = con.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT LecName FROM Lecturers";
+
+            cmd.ExecuteNonQuery();
+
+            DataTable dtlecturers = new DataTable();
+
+            SqlDataAdapter dalecturers = new SqlDataAdapter(cmd);
+
+            dalecturers.Fill(dtlecturers);
+
+            foreach (DataRow dr in dtlecturers.Rows)
+            {
+                cmbSessionLecturer.Items.Add(dr["LecName"].ToString());
+            }
+
+            con.Close();
+        }
 
         private void btnSessionSave_Click(object sender, EventArgs e)
         {
@@ -32,7 +60,7 @@ namespace TimetableManagementSystem.Sessions
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO Sessions VALUES (@Lecturer, @Subject, @SubjectCode, @Tag, @GroupID, @StudentCount, @Duration)", con);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@Lecturer", cmbSessionLecturer.Text);
+                cmd.Parameters.AddWithValue("@Lecturer", lecturers);
                 cmd.Parameters.AddWithValue("@Subject", cmbSessionSubject.Text);
                 cmd.Parameters.AddWithValue("@SubjectCode", cmbSessionSubject.Text);
                 cmd.Parameters.AddWithValue("@Tag", cmbSessionTag.Text);
@@ -61,6 +89,14 @@ namespace TimetableManagementSystem.Sessions
             }
 
             return true;
+        }
+
+        private void ClearFieldsAfterAdd()
+        {
+            cmbSessionLecturer.SelectedIndex = -1;
+            lecturers = "";
+            txtSelectedLecturers.Clear();
+            
         }
 
         //--------------------Header Buttons--------------------
@@ -152,11 +188,11 @@ namespace TimetableManagementSystem.Sessions
 
         private void cmbSessionLecturer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lecturers.Add(cmbSessionLecturer.Text);
-            names2 = names2 + cmbSessionLecturer.Text+", ";
-            metroLabel19.Text = names2;
+            //lecturers.Add(cmbSessionLecturer.Text);
+            lecturers = lecturers + cmbSessionLecturer.Text+", ";
+            
 
-            textBox1.Text = names2;
+            txtSelectedLecturers.Text = lecturers;
             /*
             for (int i=0; i< lecturers.Count; i++)
             {
@@ -166,6 +202,12 @@ namespace TimetableManagementSystem.Sessions
             */
 
             //MessageBox.Show("Fill the all fields"+ lecturers[0], "Failed", MessageBoxButtons.OK);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearFieldsAfterAdd();
+
         }
     }
 }

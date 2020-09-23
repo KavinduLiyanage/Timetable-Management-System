@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             this.LecRank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.tabPageSessionAdd = new System.Windows.Forms.TabPage();
-            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.txtSelectedLecturers = new System.Windows.Forms.TextBox();
             this.nmudSessionDuration = new System.Windows.Forms.NumericUpDown();
             this.nmudSessionNoStudents = new System.Windows.Forms.NumericUpDown();
             this.cmbSessionTag = new MetroFramework.Controls.MetroComboBox();
@@ -92,7 +92,6 @@
             this.txtLecNameEdit = new MetroFramework.Controls.MetroTextBox();
             this.cmbLecCenterEdit = new MetroFramework.Controls.MetroComboBox();
             this.cmbLecFacEdit = new MetroFramework.Controls.MetroComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -415,14 +414,14 @@
             // dgvLectures
             // 
             this.dgvLectures.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLectures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLectures.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -528,8 +527,7 @@
             // tabPageSessionAdd
             // 
             this.tabPageSessionAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPageSessionAdd.Controls.Add(this.textBox1);
-            this.tabPageSessionAdd.Controls.Add(this.metroLabel19);
+            this.tabPageSessionAdd.Controls.Add(this.txtSelectedLecturers);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionDuration);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionNoStudents);
             this.tabPageSessionAdd.Controls.Add(this.cmbSessionTag);
@@ -553,17 +551,15 @@
             this.tabPageSessionAdd.Text = "Add Session";
             this.tabPageSessionAdd.UseVisualStyleBackColor = true;
             // 
-            // metroLabel19
+            // txtSelectedLecturers
             // 
-            this.metroLabel19.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.metroLabel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel19.Location = new System.Drawing.Point(543, 75);
-            this.metroLabel19.MaximumSize = new System.Drawing.Size(200, 30);
-            this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(200, 30);
-            this.metroLabel19.TabIndex = 69;
-            this.metroLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtSelectedLecturers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSelectedLecturers.Location = new System.Drawing.Point(542, 73);
+            this.txtSelectedLecturers.Multiline = true;
+            this.txtSelectedLecturers.Name = "txtSelectedLecturers";
+            this.txtSelectedLecturers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSelectedLecturers.Size = new System.Drawing.Size(200, 29);
+            this.txtSelectedLecturers.TabIndex = 70;
             // 
             // nmudSessionDuration
             // 
@@ -628,6 +624,7 @@
             this.btnClear.UseCustomBackColor = true;
             this.btnClear.UseCustomForeColor = true;
             this.btnClear.UseSelectable = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // metroLabel1
             // 
@@ -743,11 +740,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionLecturer.FormattingEnabled = true;
             this.cmbSessionLecturer.ItemHeight = 23;
-            this.cmbSessionLecturer.Items.AddRange(new object[] {
-            "Computing",
-            "Engineering",
-            "Business",
-            "Humanities and Science"});
             this.cmbSessionLecturer.Location = new System.Drawing.Point(352, 73);
             this.cmbSessionLecturer.Name = "cmbSessionLecturer";
             this.cmbSessionLecturer.PromptText = "Select Lecturer";
@@ -1016,13 +1008,6 @@
             this.cmbLecFacEdit.TabIndex = 55;
             this.cmbLecFacEdit.UseSelectable = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(542, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 70;
-            // 
             // Sessions
             // 
             this.ApplyImageInvert = true;
@@ -1050,6 +1035,7 @@
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Resizable = false;
             this.Text = "Sessions";
+            this.Load += new System.EventHandler(this.Sessions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).EndInit();
@@ -1136,7 +1122,6 @@
         private MetroFramework.Controls.MetroComboBox cmbLecFacEdit;
         private System.Windows.Forms.NumericUpDown nmudSessionNoStudents;
         private System.Windows.Forms.NumericUpDown nmudSessionDuration;
-        private MetroFramework.Controls.MetroLabel metroLabel19;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSelectedLecturers;
     }
 }
