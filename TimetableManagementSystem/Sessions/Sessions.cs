@@ -27,10 +27,26 @@ namespace TimetableManagementSystem.Sessions
 
         private void Sessions_Load(object sender, EventArgs e)
         {
+            GetSessions();
             GetLecturers();
             GetTags();
             GetGroups();
             GetSubjects();
+        }
+
+        private void GetSessions()
+        {
+            SqlCommand cmd = new SqlCommand("Select * from Sessions", con);
+            DataTable dt = new DataTable();
+
+            con.Open();
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+            con.Close();
+
+            //dgvSessions.AutoGenerateColumns = false;
+            dgvSessions.DataSource = dt;
         }
 
         public void GetLecturers()
