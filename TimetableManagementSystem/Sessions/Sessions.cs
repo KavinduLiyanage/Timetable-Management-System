@@ -32,6 +32,9 @@ namespace TimetableManagementSystem.Sessions
             GetTags();
             GetGroups();
             GetSubjects();
+            GetLecturersToFilter();
+            GetSubjectsToFilter();
+            GetGroupsToFilter();
         }
 
         private void GetSessions()
@@ -232,6 +235,21 @@ namespace TimetableManagementSystem.Sessions
             
         }
 
+        private void txtSelectedTags_TextChanged(object sender, EventArgs e)
+        {
+            tags = txtSelectedTags.Text;
+        }
+
+        private void txtSelectedLecturers_TextChanged(object sender, EventArgs e)
+        {
+            lecturers = txtSelectedLecturers.Text;
+        }
+
+        private void txtSelectedGroups_TextChanged(object sender, EventArgs e)
+        {
+            groups = txtSelectedGroups.Text;
+        }
+
         private void btnSessionSave_Click(object sender, EventArgs e)
         {
             if (IsValid())
@@ -296,6 +314,84 @@ namespace TimetableManagementSystem.Sessions
         {
             ClearFieldsAfterAdd();
 
+        }
+
+        public void GetLecturersToFilter()
+        {
+            con.Open();
+
+            SqlCommand cmd = con.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT LecName FROM Lecturers";
+
+            cmd.ExecuteNonQuery();
+
+            DataTable dtlecturers = new DataTable();
+
+            SqlDataAdapter dalecturers = new SqlDataAdapter(cmd);
+
+            dalecturers.Fill(dtlecturers);
+
+            foreach (DataRow dr in dtlecturers.Rows)
+            {
+                cmbSesFilterLecturer.Items.Add(dr["LecName"].ToString());
+            }
+
+            con.Close();
+        }
+
+        public void GetSubjectsToFilter()
+        {
+            con.Open();
+
+            SqlCommand cmd = con.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT SubName FROM Subjects";
+
+            cmd.ExecuteNonQuery();
+
+            DataTable dtsubjects = new DataTable();
+
+            SqlDataAdapter dasubjects = new SqlDataAdapter(cmd);
+
+            dasubjects.Fill(dtsubjects);
+
+            foreach (DataRow dr in dtsubjects.Rows)
+            {
+                cmbSesFilterSubject.Items.Add(dr["SubName"].ToString());
+            }
+
+            con.Close();
+        }
+
+        public void GetGroupsToFilter()
+        {
+            con.Open();
+            
+            SqlCommand cmd = con.CreateCommand();
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT GenGrpNum FROM GenGroupNumber";
+
+            cmd.ExecuteNonQuery();
+
+            DataTable dtgroups = new DataTable();
+
+            SqlDataAdapter dagroups = new SqlDataAdapter(cmd);
+
+            dagroups.Fill(dtgroups);
+
+            foreach (DataRow dr in dtgroups.Rows)
+            {
+                cmbSesFilterGroup.Items.Add(dr["GenGrpNum"].ToString());
+            }
+
+            con.Close();
         }
 
         //--------------------Header Buttons--------------------
@@ -385,19 +481,6 @@ namespace TimetableManagementSystem.Sessions
             stat.ShowDialog();
         }
 
-        private void txtSelectedTags_TextChanged(object sender, EventArgs e)
-        {
-            tags = txtSelectedTags.Text;
-        }
-
-        private void txtSelectedLecturers_TextChanged(object sender, EventArgs e)
-        {
-            lecturers = txtSelectedLecturers.Text;
-        }
-
-        private void txtSelectedGroups_TextChanged(object sender, EventArgs e)
-        {
-            groups = txtSelectedGroups.Text;
-        }
+        
     }
 }

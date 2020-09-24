@@ -43,11 +43,21 @@
             this.btnSideNavWorking = new System.Windows.Forms.PictureBox();
             this.tabControlLSessions = new MetroFramework.Controls.MetroTabControl();
             this.tabPageSessionView = new System.Windows.Forms.TabPage();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.cmbSesFilterGroup = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.cmbSesFilterSubject = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.cmbSesFilterLecturer = new MetroFramework.Controls.MetroComboBox();
             this.dgvSessions = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lecturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubjectCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.tabPageSessionAdd = new System.Windows.Forms.TabPage();
             this.txtSelectedSubject = new System.Windows.Forms.TextBox();
@@ -85,16 +95,6 @@
             this.txtLecNameEdit = new MetroFramework.Controls.MetroTextBox();
             this.cmbLecCenterEdit = new MetroFramework.Controls.MetroComboBox();
             this.cmbLecFacEdit = new MetroFramework.Controls.MetroComboBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lecturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubjectCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -289,7 +289,7 @@
             // 
             this.tabPageSessionView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPageSessionView.Controls.Add(this.metroLabel16);
-            this.tabPageSessionView.Controls.Add(this.metroComboBox1);
+            this.tabPageSessionView.Controls.Add(this.cmbSesFilterGroup);
             this.tabPageSessionView.Controls.Add(this.metroLabel18);
             this.tabPageSessionView.Controls.Add(this.cmbSesFilterSubject);
             this.tabPageSessionView.Controls.Add(this.metroLabel17);
@@ -306,6 +306,30 @@
             this.tabPageSessionView.TabIndex = 0;
             this.tabPageSessionView.Text = "View Sessions";
             this.tabPageSessionView.UseVisualStyleBackColor = true;
+            // 
+            // metroLabel16
+            // 
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel16.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel16.Location = new System.Drawing.Point(568, 59);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel16.TabIndex = 74;
+            this.metroLabel16.Text = "by Group : ";
+            this.metroLabel16.UseCustomBackColor = true;
+            // 
+            // cmbSesFilterGroup
+            // 
+            this.cmbSesFilterGroup.FormattingEnabled = true;
+            this.cmbSesFilterGroup.ItemHeight = 23;
+            this.cmbSesFilterGroup.Location = new System.Drawing.Point(646, 54);
+            this.cmbSesFilterGroup.Name = "cmbSesFilterGroup";
+            this.cmbSesFilterGroup.PromptText = "Select Group";
+            this.cmbSesFilterGroup.Size = new System.Drawing.Size(120, 29);
+            this.cmbSesFilterGroup.TabIndex = 73;
+            this.cmbSesFilterGroup.UseSelectable = true;
             // 
             // metroLabel18
             // 
@@ -324,14 +348,6 @@
             // 
             this.cmbSesFilterSubject.FormattingEnabled = true;
             this.cmbSesFilterSubject.ItemHeight = 23;
-            this.cmbSesFilterSubject.Items.AddRange(new object[] {
-            "Professor",
-            "Assistant Professor",
-            "Senior Lecturer(HG)",
-            "Senior Lecturer",
-            "Lecturer",
-            "Assistant Lecturer",
-            "Instructors"});
             this.cmbSesFilterSubject.Location = new System.Drawing.Point(395, 54);
             this.cmbSesFilterSubject.Name = "cmbSesFilterSubject";
             this.cmbSesFilterSubject.PromptText = "Select Subject";
@@ -356,11 +372,6 @@
             // 
             this.cmbSesFilterLecturer.FormattingEnabled = true;
             this.cmbSesFilterLecturer.ItemHeight = 23;
-            this.cmbSesFilterLecturer.Items.AddRange(new object[] {
-            "Computing",
-            "Engineering",
-            "Business",
-            "Humanities and Science"});
             this.cmbSesFilterLecturer.Location = new System.Drawing.Point(139, 54);
             this.cmbSesFilterLecturer.Name = "cmbSesFilterLecturer";
             this.cmbSesFilterLecturer.PromptText = "Select Lecturer";
@@ -397,6 +408,75 @@
             this.dgvSessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSessions.Size = new System.Drawing.Size(750, 312);
             this.dgvSessions.TabIndex = 66;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "SessionID";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 50;
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // Lecturer
+            // 
+            this.Lecturer.DataPropertyName = "Lecturer";
+            this.Lecturer.HeaderText = "Lecturer(s)";
+            this.Lecturer.MinimumWidth = 150;
+            this.Lecturer.Name = "Lecturer";
+            this.Lecturer.ReadOnly = true;
+            this.Lecturer.Width = 150;
+            // 
+            // Subjects
+            // 
+            this.Subjects.DataPropertyName = "Subject";
+            this.Subjects.HeaderText = "Subject Name";
+            this.Subjects.MinimumWidth = 85;
+            this.Subjects.Name = "Subjects";
+            this.Subjects.ReadOnly = true;
+            this.Subjects.Width = 85;
+            // 
+            // SubjectCode
+            // 
+            this.SubjectCode.DataPropertyName = "SubjectCode";
+            this.SubjectCode.HeaderText = "Code";
+            this.SubjectCode.MinimumWidth = 80;
+            this.SubjectCode.Name = "SubjectCode";
+            this.SubjectCode.ReadOnly = true;
+            this.SubjectCode.Width = 80;
+            // 
+            // Tag
+            // 
+            this.Tag.DataPropertyName = "Tag";
+            this.Tag.HeaderText = "Tag(s)";
+            this.Tag.MinimumWidth = 60;
+            this.Tag.Name = "Tag";
+            this.Tag.ReadOnly = true;
+            this.Tag.Width = 60;
+            // 
+            // GroupID
+            // 
+            this.GroupID.DataPropertyName = "GroupID";
+            this.GroupID.HeaderText = "Group ID";
+            this.GroupID.MinimumWidth = 100;
+            this.GroupID.Name = "GroupID";
+            this.GroupID.ReadOnly = true;
+            this.GroupID.Width = 125;
+            // 
+            // StudentCount
+            // 
+            this.StudentCount.DataPropertyName = "StudentCount";
+            this.StudentCount.HeaderText = "Students";
+            this.StudentCount.MinimumWidth = 100;
+            this.StudentCount.Name = "StudentCount";
+            this.StudentCount.Width = 125;
+            // 
+            // Duration
+            // 
+            this.Duration.DataPropertyName = "Duration";
+            this.Duration.HeaderText = "Duration";
+            this.Duration.MinimumWidth = 60;
+            this.Duration.Name = "Duration";
+            this.Duration.Width = 60;
             // 
             // metroLabel15
             // 
@@ -437,7 +517,7 @@
             this.tabPageSessionAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSessionAdd.Location = new System.Drawing.Point(4, 37);
             this.tabPageSessionAdd.Name = "tabPageSessionAdd";
-            this.tabPageSessionAdd.Size = new System.Drawing.Size(774, 434);
+            this.tabPageSessionAdd.Size = new System.Drawing.Size(785, 434);
             this.tabPageSessionAdd.TabIndex = 1;
             this.tabPageSessionAdd.Text = "Add Session";
             this.tabPageSessionAdd.UseVisualStyleBackColor = true;
@@ -697,7 +777,7 @@
             this.tabPageSessionEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSessionEdit.Location = new System.Drawing.Point(4, 37);
             this.tabPageSessionEdit.Name = "tabPageSessionEdit";
-            this.tabPageSessionEdit.Size = new System.Drawing.Size(774, 434);
+            this.tabPageSessionEdit.Size = new System.Drawing.Size(785, 434);
             this.tabPageSessionEdit.TabIndex = 2;
             this.tabPageSessionEdit.Text = "Edit Session";
             this.tabPageSessionEdit.UseVisualStyleBackColor = true;
@@ -936,107 +1016,6 @@
             this.cmbLecFacEdit.TabIndex = 55;
             this.cmbLecFacEdit.UseSelectable = true;
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "SessionID";
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 50;
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // Lecturer
-            // 
-            this.Lecturer.DataPropertyName = "Lecturer";
-            this.Lecturer.HeaderText = "Lecturer(s)";
-            this.Lecturer.MinimumWidth = 150;
-            this.Lecturer.Name = "Lecturer";
-            this.Lecturer.ReadOnly = true;
-            this.Lecturer.Width = 150;
-            // 
-            // Subjects
-            // 
-            this.Subjects.DataPropertyName = "Subject";
-            this.Subjects.HeaderText = "Subject Name";
-            this.Subjects.MinimumWidth = 85;
-            this.Subjects.Name = "Subjects";
-            this.Subjects.ReadOnly = true;
-            this.Subjects.Width = 85;
-            // 
-            // SubjectCode
-            // 
-            this.SubjectCode.DataPropertyName = "SubjectCode";
-            this.SubjectCode.HeaderText = "Code";
-            this.SubjectCode.MinimumWidth = 80;
-            this.SubjectCode.Name = "SubjectCode";
-            this.SubjectCode.ReadOnly = true;
-            this.SubjectCode.Width = 80;
-            // 
-            // Tag
-            // 
-            this.Tag.DataPropertyName = "Tag";
-            this.Tag.HeaderText = "Tag(s)";
-            this.Tag.MinimumWidth = 60;
-            this.Tag.Name = "Tag";
-            this.Tag.ReadOnly = true;
-            this.Tag.Width = 60;
-            // 
-            // GroupID
-            // 
-            this.GroupID.DataPropertyName = "GroupID";
-            this.GroupID.HeaderText = "Group ID";
-            this.GroupID.MinimumWidth = 100;
-            this.GroupID.Name = "GroupID";
-            this.GroupID.ReadOnly = true;
-            this.GroupID.Width = 125;
-            // 
-            // StudentCount
-            // 
-            this.StudentCount.DataPropertyName = "StudentCount";
-            this.StudentCount.HeaderText = "Students";
-            this.StudentCount.MinimumWidth = 100;
-            this.StudentCount.Name = "StudentCount";
-            this.StudentCount.Width = 125;
-            // 
-            // Duration
-            // 
-            this.Duration.DataPropertyName = "Duration";
-            this.Duration.HeaderText = "Duration";
-            this.Duration.MinimumWidth = 60;
-            this.Duration.Name = "Duration";
-            this.Duration.Width = 60;
-            // 
-            // metroLabel16
-            // 
-            this.metroLabel16.AutoSize = true;
-            this.metroLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel16.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel16.Location = new System.Drawing.Point(568, 59);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(78, 19);
-            this.metroLabel16.TabIndex = 74;
-            this.metroLabel16.Text = "by Group : ";
-            this.metroLabel16.UseCustomBackColor = true;
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "Professor",
-            "Assistant Professor",
-            "Senior Lecturer(HG)",
-            "Senior Lecturer",
-            "Lecturer",
-            "Assistant Lecturer",
-            "Instructors"});
-            this.metroComboBox1.Location = new System.Drawing.Point(646, 54);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.PromptText = "Select Group";
-            this.metroComboBox1.Size = new System.Drawing.Size(120, 29);
-            this.metroComboBox1.TabIndex = 73;
-            this.metroComboBox1.UseSelectable = true;
-            // 
             // Sessions
             // 
             this.ApplyImageInvert = true;
@@ -1154,6 +1133,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
         private MetroFramework.Controls.MetroLabel metroLabel16;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cmbSesFilterGroup;
     }
 }
