@@ -87,28 +87,58 @@ namespace TimetableManagementSystem.Sessions
 
         public void GetGroups()
         {
-            con.Open();
-            cmbSessionGroup.Items.Clear();
-            SqlCommand cmd = con.CreateCommand();
 
-            cmd.CommandType = CommandType.Text;
-
-            cmd.CommandText = "SELECT GenGrpNum FROM GenGroupNumber";
-
-            cmd.ExecuteNonQuery();
-
-            DataTable dtgroups = new DataTable();
-
-            SqlDataAdapter dagroups = new SqlDataAdapter(cmd);
-
-            dagroups.Fill(dtgroups);
-
-            foreach (DataRow dr in dtgroups.Rows)
+            if (txtSelectedTags.Text == "Practical, ")
             {
-                cmbSessionGroup.Items.Add(dr["GenGrpNum"].ToString());
-            }
+                con.Open();
+                cmbSessionGroup.Items.Clear();
+                SqlCommand cmd2 = con.CreateCommand();
 
-            con.Close();
+                cmd2.CommandType = CommandType.Text;
+
+                cmd2.CommandText = "SELECT GenSubGrpNum FROM GenSubGroupNumber";
+
+                cmd2.ExecuteNonQuery();
+
+                DataTable dtgroups = new DataTable();
+
+                SqlDataAdapter dagroups = new SqlDataAdapter(cmd2);
+
+                dagroups.Fill(dtgroups);
+
+                foreach (DataRow dr in dtgroups.Rows)
+                {
+                    cmbSessionGroup.Items.Add(dr["GenSubGrpNum"].ToString());
+                }
+
+                con.Close();
+            }
+            else
+            {
+                con.Open();
+                cmbSessionGroup.Items.Clear();
+                SqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "SELECT GenGrpNum FROM GenGroupNumber";
+
+                cmd.ExecuteNonQuery();
+
+                DataTable dtgroups = new DataTable();
+
+                SqlDataAdapter dagroups = new SqlDataAdapter(cmd);
+
+                dagroups.Fill(dtgroups);
+
+                foreach (DataRow dr in dtgroups.Rows)
+                {
+                    cmbSessionGroup.Items.Add(dr["GenGrpNum"].ToString());
+                }
+
+                con.Close();
+            }
+        
         }
 
         public void GetSubjects()
@@ -149,6 +179,8 @@ namespace TimetableManagementSystem.Sessions
             tags = tags + cmbSessionTag.Text + ", ";
 
             txtSelectedTags.Text = tags;
+
+            GetGroups();
         }
 
         private void cmbSessionGroup_SelectedIndexChanged(object sender, EventArgs e)
@@ -160,9 +192,28 @@ namespace TimetableManagementSystem.Sessions
 
         private void cmbSessionSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //groups = groups + cmbSessionGroup.Text + ", ";
+            subject = cmbSessionSubject.Text;
 
-            txtSelectedSubject.Text = cmbSessionSubject.Text;
+            if (subject != "")
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand("SELECT SubName FROM Subjects Where SubCode = '" + subject + "'", con);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                reader.Read();
+
+                string data = reader["SubName"].ToString();
+
+                reader.Close();
+
+                con.Close();
+
+                txtSelectedSubject.Text = data;
+            }
+
+            
         }
 
         private void btnSessionSave_Click(object sender, EventArgs e)
@@ -172,7 +223,7 @@ namespace TimetableManagementSystem.Sessions
                 SqlCommand cmd = new SqlCommand("INSERT INTO Sessions VALUES (@Lecturer, @Subject, @SubjectCode, @Tag, @GroupID, @StudentCount, @Duration)", con);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@Lecturer", lecturers);
-                cmd.Parameters.AddWithValue("@Subject", cmbSessionSubject.Text);
+                cmd.Parameters.AddWithValue("@Subject", txtSelectedSubject.Text);
                 cmd.Parameters.AddWithValue("@SubjectCode", cmbSessionSubject.Text);
                 cmd.Parameters.AddWithValue("@Tag", tags);
                 cmd.Parameters.AddWithValue("@GroupID", groups);    
@@ -185,10 +236,9 @@ namespace TimetableManagementSystem.Sessions
 
                 //GetSubjects();
 
-
                 ClearFieldsAfterAdd();
 
-                //tabControlSubjects.SelectedTab = tabPageSubView;
+                tabControlLSessions.SelectedTab = tabPageSessionView;
             }
         }
 
@@ -319,6 +369,19 @@ namespace TimetableManagementSystem.Sessions
             stat.ShowDialog();
         }
 
-        
+        private void txtSelectedTags_TextChanged(object sender, EventArgs e)
+        {
+            tags = txtSelectedTags.Text;
+        }
+
+        private void txtSelectedLecturers_TextChanged(object sender, EventArgs e)
+        {
+            lecturers = txtSelectedLecturers.Text;
+        }
+
+        private void txtSelectedGroups_TextChanged(object sender, EventArgs e)
+        {
+            groups = txtSelectedGroups.Text;
+        }
     }
 }
