@@ -284,6 +284,26 @@ namespace TimetableManagementSystem.AdvancedOp
             notOverlapSesCmbBox02.ValueMember = "SessionID";
             notOverlapSesCmbBox02.DataSource = ds3.Tables["Sessions"];
 
+
+            String query1 = "select id,SelectedType,Item,TimeSlot from NotAvailableTime";
+            String query5 = "select id,Session01,Session02 from ConsecutiveSession";
+
+            SqlCommand cmd = new SqlCommand(query1, con);
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+            SqlCommand cmd2 = new SqlCommand(query5, con);
+            DataTable dt2 = new DataTable();
+            SqlDataReader sdr2 = cmd2.ExecuteReader();
+            dt2.Load(sdr2);
+
+            notAvaData.AutoGenerateColumns = true;
+            notAvaData.DataSource = dt;
+
+            consecData.AutoGenerateColumns = true;
+            consecData.DataSource = dt2;
+
             con.Close();
 
         }
@@ -556,6 +576,20 @@ namespace TimetableManagementSystem.AdvancedOp
         private void yrSemClrBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void notAvaSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (notAvaSearchDrpDown.Text == "")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select id,SelectedType,Item,TimeSlot from NotAvailableTime", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                notAvaData.DataSource = dt;
+                con.Close();
+            }
         }
     }
 }
