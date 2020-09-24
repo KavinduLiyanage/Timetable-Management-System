@@ -159,13 +159,24 @@ namespace TimetableManagementSystem.AdvancedOp
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Not Available Time Added");
-                con.Close();
 
             }
             else
             {
                 MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            String query1 = "select id,SelectedType,Item,TimeSlot from NotAvailableTime";
+
+            SqlCommand cmd2 = new SqlCommand(query1, con);
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd2.ExecuteReader();
+            dt.Load(sdr);
+
+            notAvaData.AutoGenerateColumns = true;
+            notAvaData.DataSource = dt;
+
+            con.Close();
         }
 
         private void Advanced_Load(object sender, EventArgs e)
@@ -482,13 +493,24 @@ namespace TimetableManagementSystem.AdvancedOp
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Consecutive Session Added");
-                con.Close();
 
             }
             else
             {
                 MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            String query5 = "select id,Session01,Session02 from ConsecutiveSession";
+
+            SqlCommand cmd2 = new SqlCommand(query5, con);
+            DataTable dt2 = new DataTable();
+            SqlDataReader sdr2 = cmd2.ExecuteReader();
+            dt2.Load(sdr2);
+
+            consecData.AutoGenerateColumns = true;
+            consecData.DataSource = dt2;
+
+            con.Close();
         }
 
         private void itmCmbBox_SelectedIndexChanged(object sender, EventArgs e)
