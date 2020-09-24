@@ -193,7 +193,8 @@ namespace TimetableManagementSystem.AdvancedOp
             timeCmbBox.ValueMember = "WorkingTimeSlotID";
             timeCmbBox.DataSource = ds.Tables["TimeSlot"];
             con.Close();
-            
+            timeCmbBox.SelectedIndex = -1;
+
 
 
             /*
@@ -211,7 +212,7 @@ namespace TimetableManagementSystem.AdvancedOp
             }
             */
 
-            
+
             this.sesCmb01.DataSource = null;
             sesCmb01.Items.Clear();
 
@@ -240,7 +241,10 @@ namespace TimetableManagementSystem.AdvancedOp
             notOverlapSesCmbBox01.DataSource = ds2.Tables["Sessions"];
 
             con.Close();
-            
+            sesCmb01.SelectedIndex = -1;
+            parSesCmbBox01.SelectedIndex = -1;
+            notOverlapSesCmbBox01.SelectedIndex = -1;
+
 
             /*
             sesCmb02.Items.Clear();
@@ -283,6 +287,10 @@ namespace TimetableManagementSystem.AdvancedOp
             notOverlapSesCmbBox02.DisplayMember = "NAME";
             notOverlapSesCmbBox02.ValueMember = "SessionID";
             notOverlapSesCmbBox02.DataSource = ds3.Tables["Sessions"];
+
+            sesCmb02.SelectedIndex = -1;
+            parSesCmbBox02.SelectedIndex = -1;
+            notOverlapSesCmbBox02.SelectedIndex = -1;
 
 
             String query1 = "select id,SelectedType,Item,TimeSlot from NotAvailableTime";
@@ -338,6 +346,7 @@ namespace TimetableManagementSystem.AdvancedOp
                 itmCmbBox.DataSource = ds.Tables["Lecturers"];
                 itmCmbBox.PromptText = "Select Lecturer";
                 con.Close();
+                itmCmbBox.SelectedIndex = -1;
 
             }
             else if (typeCmbo.Text == "Sessions") {
@@ -367,7 +376,7 @@ namespace TimetableManagementSystem.AdvancedOp
                 itmCmbBox.ValueMember = "SessionID";
                 itmCmbBox.DataSource = ds.Tables["Sessions"];
                 con.Close();
-
+                itmCmbBox.SelectedIndex = -1;
 
             }
             else if (typeCmbo.Text == "Groups") {
@@ -397,6 +406,7 @@ namespace TimetableManagementSystem.AdvancedOp
                 itmCmbBox.ValueMember = "id";
                 itmCmbBox.DataSource = ds.Tables["GroupNumber"];
                 con.Close();
+                itmCmbBox.SelectedIndex = -1;
             }
             else if (typeCmbo.Text == "Sub-Groups") {
                 /*
@@ -425,6 +435,7 @@ namespace TimetableManagementSystem.AdvancedOp
                 itmCmbBox.ValueMember = "id";
                 itmCmbBox.DataSource = ds.Tables["SubGroupNumber"];
                 con.Close();
+                itmCmbBox.SelectedIndex = -1;
             }
         }
 
@@ -575,7 +586,9 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void yrSemClrBtn_Click(object sender, EventArgs e)
         {
-
+            typeCmbo.SelectedIndex = -1;
+            itmCmbBox.SelectedIndex = -1;
+            timeCmbBox.SelectedIndex = -1;
         }
 
         private void notAvaSearchBox_TextChanged(object sender, EventArgs e)
@@ -584,10 +597,118 @@ namespace TimetableManagementSystem.AdvancedOp
             {
                 SqlConnection con = Config.con;
                 con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("select id,SelectedType,Item,TimeSlot from NotAvailableTime", con);
+                SqlDataAdapter sda = new SqlDataAdapter("select id,SelectedType,Item,TimeSlot from NotAvailableTime where SelectedType LIKE '%"+notAvaSearchBox.Text+"%'", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 notAvaData.DataSource = dt;
+                con.Close();
+            }
+            if (notAvaSearchDrpDown.Text == "ID")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select id,SelectedType,Item,TimeSlot from NotAvailableTime where id LIKE '%" + notAvaSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                notAvaData.DataSource = dt;
+                con.Close();
+            }
+            if (notAvaSearchDrpDown.Text == "Type")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select id,SelectedType,Item,TimeSlot from NotAvailableTime where SelectedType LIKE '%" + notAvaSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                notAvaData.DataSource = dt;
+                con.Close();
+            }
+            if (notAvaSearchDrpDown.Text == "Item")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select id,SelectedType,Item,TimeSlot from NotAvailableTime where Item LIKE '%" + notAvaSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                notAvaData.DataSource = dt;
+                con.Close();
+            }
+            if (notAvaSearchDrpDown.Text == "Time Slot")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select id,SelectedType,Item,TimeSlot from NotAvailableTime where TimeSlot LIKE '%" + notAvaSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                notAvaData.DataSource = dt;
+                con.Close();
+            }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            sesCmb01.SelectedIndex = -1;
+            sesCmb02.SelectedIndex = -1;
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            parSesCmbBox01.SelectedIndex = -1;
+            parSesCmbBox02.SelectedIndex = -1;
+            parSesDayCmb.SelectedIndex = -1;
+            parSesDurationCmb.SelectedIndex = -1;
+            parSesTimeSlotCmb.SelectedIndex = -1;
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            notOverlapSesCmbBox01.SelectedIndex = -1;
+            notOverlapSesCmbBox02.SelectedIndex = -1;
+            notOverlapSesDayCmbBox.SelectedIndex = -1;
+            notOverlapSesDurationCmbBox.SelectedIndex = -1;
+            notOverlapSesTimeSlotCmbBox.SelectedIndex = -1;
+        }
+
+        private void consecSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (consecSearchDrpDown.Text == "")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select id,Session01,Session02 from ConsecutiveSession where Session01 LIKE '%" + consecSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                consecData.DataSource = dt;
+                con.Close();
+            }
+            if (consecSearchDrpDown.Text == "ID")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select id,Session01,Session02 from ConsecutiveSession where id LIKE '%" + consecSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                consecData.DataSource = dt;
+                con.Close();
+            }
+            if (consecSearchDrpDown.Text == "Session01")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select id,Session01,Session02 from ConsecutiveSession where Session01 LIKE '%" + consecSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                consecData.DataSource = dt;
+                con.Close();
+            }
+            if (consecSearchDrpDown.Text == "Session02")
+            {
+                SqlConnection con = Config.con;
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select id,Session01,Session02 from ConsecutiveSession where Session02 LIKE '%" + consecSearchBox.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                consecData.DataSource = dt;
                 con.Close();
             }
         }

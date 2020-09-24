@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -266,7 +266,7 @@
             this.advancedOp.Controls.Add(this.shouldNotOverlap);
             this.advancedOp.Location = new System.Drawing.Point(131, 95);
             this.advancedOp.Name = "advancedOp";
-            this.advancedOp.SelectedIndex = 0;
+            this.advancedOp.SelectedIndex = 1;
             this.advancedOp.Size = new System.Drawing.Size(811, 486);
             this.advancedOp.TabIndex = 59;
             this.advancedOp.UseSelectable = true;
@@ -318,14 +318,14 @@
             this.notAvaData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.notAvaData.BackgroundColor = System.Drawing.Color.White;
             this.notAvaData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.notAvaData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.notAvaData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.notAvaData.ColumnHeadersHeight = 29;
             this.notAvaData.Location = new System.Drawing.Point(365, 164);
             this.notAvaData.MultiSelect = false;
@@ -504,6 +504,7 @@
             this.metroButton1.UseCustomBackColor = true;
             this.metroButton1.UseCustomForeColor = true;
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // consecData
             // 
@@ -513,14 +514,14 @@
             this.consecData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.consecData.BackgroundColor = System.Drawing.Color.White;
             this.consecData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.consecData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.consecData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.consecData.ColumnHeadersHeight = 29;
             this.consecData.Location = new System.Drawing.Point(365, 164);
             this.consecData.MultiSelect = false;
@@ -538,9 +539,9 @@
             this.consecSearchDrpDown.FormattingEnabled = true;
             this.consecSearchDrpDown.ItemHeight = 23;
             this.consecSearchDrpDown.Items.AddRange(new object[] {
-            "Year",
-            "Semester",
-            "ID"});
+            "ID",
+            "Session01",
+            "Session02"});
             this.consecSearchDrpDown.Location = new System.Drawing.Point(474, 111);
             this.consecSearchDrpDown.Name = "consecSearchDrpDown";
             this.consecSearchDrpDown.PromptText = "Search By...";
@@ -584,6 +585,7 @@
             this.consecSearchBox.WaterMark = "Search";
             this.consecSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.consecSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consecSearchBox.TextChanged += new System.EventHandler(this.consecSearchBox_TextChanged);
             // 
             // metroLabel4
             // 
@@ -680,6 +682,7 @@
             this.metroButton2.UseCustomBackColor = true;
             this.metroButton2.UseCustomForeColor = true;
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroLabel5
             // 
@@ -888,6 +891,7 @@
             this.metroButton3.UseCustomBackColor = true;
             this.metroButton3.UseCustomForeColor = true;
             this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // metroLabel6
             // 
