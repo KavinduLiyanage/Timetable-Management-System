@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -330,6 +330,7 @@
             this.cmbSesFilterGroup.Size = new System.Drawing.Size(120, 29);
             this.cmbSesFilterGroup.TabIndex = 73;
             this.cmbSesFilterGroup.UseSelectable = true;
+            this.cmbSesFilterGroup.SelectedIndexChanged += new System.EventHandler(this.cmbSesFilterGroup_SelectedIndexChanged);
             // 
             // metroLabel18
             // 
@@ -354,6 +355,7 @@
             this.cmbSesFilterSubject.Size = new System.Drawing.Size(150, 29);
             this.cmbSesFilterSubject.TabIndex = 71;
             this.cmbSesFilterSubject.UseSelectable = true;
+            this.cmbSesFilterSubject.SelectedIndexChanged += new System.EventHandler(this.cmbSesFilterSubject_SelectedIndexChanged);
             // 
             // metroLabel17
             // 
@@ -378,18 +380,19 @@
             this.cmbSesFilterLecturer.Size = new System.Drawing.Size(150, 29);
             this.cmbSesFilterLecturer.TabIndex = 69;
             this.cmbSesFilterLecturer.UseSelectable = true;
+            this.cmbSesFilterLecturer.SelectedIndexChanged += new System.EventHandler(this.cmbSesFilterLecturer_SelectedIndexChanged);
             // 
             // dgvSessions
             // 
             this.dgvSessions.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,

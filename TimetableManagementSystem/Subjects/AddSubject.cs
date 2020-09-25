@@ -220,7 +220,7 @@ namespace TimetableManagementSystem.Subjects
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Subjects where SubYear like '%" + cmbSubFilterYear.Text + "' ";
+            cmd.CommandText = "select * from Subjects where SubYear like '%" + cmbSubFilterYear.Text + "%' ";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);

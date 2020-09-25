@@ -394,6 +394,48 @@ namespace TimetableManagementSystem.Sessions
             con.Close();
         }
 
+        private void cmbSesFilterLecturer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Sessions where Lecturer like '%" + cmbSesFilterLecturer.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvSessions.DataSource = dt;
+            con.Close();
+        }
+
+        private void cmbSesFilterSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Sessions where Subject like '%" + cmbSesFilterSubject.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvSessions.DataSource = dt;
+            con.Close();
+        }
+
+        private void cmbSesFilterGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Sessions where GroupID like '%" + cmbSesFilterGroup.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvSessions.DataSource = dt;
+            con.Close();
+        }
+
         //--------------------Header Buttons--------------------
 
         private void btnHeaderHome_Click(object sender, EventArgs e)

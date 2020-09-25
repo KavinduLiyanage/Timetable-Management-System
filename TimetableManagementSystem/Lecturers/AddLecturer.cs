@@ -348,6 +348,7 @@ namespace TimetableManagementSystem.Lecturers
 
         private void txtLecSearch_TextChanged(object sender, EventArgs e)
         {
+            /*
             cmbLecFilterFaculty.SelectedIndex = -1;
             cmbLecFilterLevel.SelectedIndex = -1;
             con.Open();
@@ -360,6 +361,16 @@ namespace TimetableManagementSystem.Lecturers
             da.Fill(dt);
             dgvLectures.DataSource = dt;
             con.Close();
+            */
+
+            cmbLecFilterFaculty.SelectedIndex = -1;
+            cmbLecFilterLevel.SelectedIndex = -1;
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Lecturers WHERE LecName LIKE '%" + txtLecSearch.Text + "%'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dgvLectures.DataSource = dt;
+            con.Close();
         }
 
         private void cmbLecFilterFaculty_SelectedIndexChanged(object sender, EventArgs e)
@@ -369,7 +380,7 @@ namespace TimetableManagementSystem.Lecturers
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Lecturers where LecFaculty like '%" + cmbLecFilterFaculty.Text + "' ";
+            cmd.CommandText = "select * from Lecturers where LecFaculty like '%" + cmbLecFilterFaculty.Text + "%' ";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -385,7 +396,7 @@ namespace TimetableManagementSystem.Lecturers
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Lecturers where LecLevel like '%" + cmbLecFilterLevel.Text + "' ";
+            cmd.CommandText = "select * from Lecturers where LecLevel like '%" + cmbLecFilterLevel.Text + "%' ";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
