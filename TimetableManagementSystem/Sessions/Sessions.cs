@@ -404,44 +404,87 @@ namespace TimetableManagementSystem.Sessions
 
         private void cmbSesFilterLecturer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Sessions where Lecturer like '%" + cmbSesFilterLecturer.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvSessions.DataSource = dt;
-            con.Close();
+            /*
+            if (cmbSesFilterLecturer.Text == "Clear")
+            {
+                cmbSesFilterLecturer.SelectedIndex = -1;
+            }
+            */
+
+            if (cmbSesFilterLecturer.Text != "")
+            {
+                cmbSesFilterSubject.SelectedIndex = -1;
+                cmbSesFilterGroup.SelectedIndex = -1;
+
+                if (cmbSesFilterLecturer.Text == "Clear Selected Lecturer")
+                {
+                    cmbSesFilterLecturer.SelectedIndex = -1;
+                }
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Sessions where Lecturer like '%" + cmbSesFilterLecturer.Text + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dgvSessions.DataSource = dt;
+                con.Close();
+            }
+          
         }
 
         private void cmbSesFilterSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Sessions where Subject like '%" + cmbSesFilterSubject.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvSessions.DataSource = dt;
-            con.Close();
+            if (cmbSesFilterSubject.Text != "")
+            {
+                cmbSesFilterLecturer.SelectedIndex = -1;
+                cmbSesFilterGroup.SelectedIndex = -1;
+
+                if (cmbSesFilterSubject.Text == "Clear Selected Subject")
+                {
+                    cmbSesFilterSubject.SelectedIndex = -1;
+                }
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Sessions where Subject like '%" + cmbSesFilterSubject.Text + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dgvSessions.DataSource = dt;
+                con.Close();
+            }      
         }
 
         private void cmbSesFilterGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Sessions where GroupID like '%" + cmbSesFilterGroup.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvSessions.DataSource = dt;
-            con.Close();
+
+            if (cmbSesFilterGroup.Text != "")
+            {
+                cmbSesFilterLecturer.SelectedIndex = -1;
+                cmbSesFilterSubject.SelectedIndex = -1;
+
+                if (cmbSesFilterGroup.Text == "Clear Selected")
+                {
+                    cmbSesFilterGroup.SelectedIndex = -1;
+                }
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Sessions where GroupID like '%" + cmbSesFilterGroup.Text + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dgvSessions.DataSource = dt;
+                con.Close();
+            }
+            
         }
 
         //--------------------Header Buttons--------------------

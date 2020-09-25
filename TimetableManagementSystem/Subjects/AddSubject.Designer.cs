@@ -206,7 +206,7 @@
             this.tabControlSubjects.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlSubjects.Location = new System.Drawing.Point(131, 82);
             this.tabControlSubjects.Name = "tabControlSubjects";
-            this.tabControlSubjects.SelectedIndex = 0;
+            this.tabControlSubjects.SelectedIndex = 2;
             this.tabControlSubjects.Size = new System.Drawing.Size(788, 495);
             this.tabControlSubjects.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlSubjects.TabIndex = 47;
@@ -797,7 +797,7 @@
             this.tabPageSubEdit.Name = "tabPageSubEdit";
             this.tabPageSubEdit.Size = new System.Drawing.Size(780, 454);
             this.tabPageSubEdit.TabIndex = 2;
-            this.tabPageSubEdit.Text = "Edit Subject";
+            this.tabPageSubEdit.Text = "Edit/Delete Subject";
             this.tabPageSubEdit.UseVisualStyleBackColor = true;
             // 
             // cmbSubLecHoursEdit
