@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -50,14 +51,6 @@
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.cmbSesFilterLecturer = new MetroFramework.Controls.MetroComboBox();
             this.dgvSessions = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lecturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubjectCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.tabPageSessionAdd = new System.Windows.Forms.TabPage();
             this.txtSelectedSubject = new System.Windows.Forms.TextBox();
@@ -95,6 +88,14 @@
             this.txtLecNameEdit = new MetroFramework.Controls.MetroTextBox();
             this.cmbLecCenterEdit = new MetroFramework.Controls.MetroComboBox();
             this.cmbLecFacEdit = new MetroFramework.Controls.MetroComboBox();
+            this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lecturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubjectCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -384,18 +385,19 @@
             // 
             // dgvSessions
             // 
+            this.dgvSessions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSessions.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
+            this.SessionID,
             this.Lecturer,
             this.Subjects,
             this.SubjectCode,
@@ -403,6 +405,14 @@
             this.GroupID,
             this.StudentCount,
             this.Duration});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSessions.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSessions.Location = new System.Drawing.Point(16, 102);
             this.dgvSessions.Name = "dgvSessions";
             this.dgvSessions.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -411,75 +421,6 @@
             this.dgvSessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSessions.Size = new System.Drawing.Size(750, 312);
             this.dgvSessions.TabIndex = 66;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "SessionID";
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 50;
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // Lecturer
-            // 
-            this.Lecturer.DataPropertyName = "Lecturer";
-            this.Lecturer.HeaderText = "Lecturer(s)";
-            this.Lecturer.MinimumWidth = 150;
-            this.Lecturer.Name = "Lecturer";
-            this.Lecturer.ReadOnly = true;
-            this.Lecturer.Width = 150;
-            // 
-            // Subjects
-            // 
-            this.Subjects.DataPropertyName = "Subject";
-            this.Subjects.HeaderText = "Subject Name";
-            this.Subjects.MinimumWidth = 85;
-            this.Subjects.Name = "Subjects";
-            this.Subjects.ReadOnly = true;
-            this.Subjects.Width = 85;
-            // 
-            // SubjectCode
-            // 
-            this.SubjectCode.DataPropertyName = "SubjectCode";
-            this.SubjectCode.HeaderText = "Code";
-            this.SubjectCode.MinimumWidth = 80;
-            this.SubjectCode.Name = "SubjectCode";
-            this.SubjectCode.ReadOnly = true;
-            this.SubjectCode.Width = 80;
-            // 
-            // Tag
-            // 
-            this.Tag.DataPropertyName = "Tag";
-            this.Tag.HeaderText = "Tag(s)";
-            this.Tag.MinimumWidth = 60;
-            this.Tag.Name = "Tag";
-            this.Tag.ReadOnly = true;
-            this.Tag.Width = 60;
-            // 
-            // GroupID
-            // 
-            this.GroupID.DataPropertyName = "GroupID";
-            this.GroupID.HeaderText = "Group ID";
-            this.GroupID.MinimumWidth = 100;
-            this.GroupID.Name = "GroupID";
-            this.GroupID.ReadOnly = true;
-            this.GroupID.Width = 125;
-            // 
-            // StudentCount
-            // 
-            this.StudentCount.DataPropertyName = "StudentCount";
-            this.StudentCount.HeaderText = "Students";
-            this.StudentCount.MinimumWidth = 100;
-            this.StudentCount.Name = "StudentCount";
-            this.StudentCount.Width = 125;
-            // 
-            // Duration
-            // 
-            this.Duration.DataPropertyName = "Duration";
-            this.Duration.HeaderText = "Duration";
-            this.Duration.MinimumWidth = 60;
-            this.Duration.Name = "Duration";
-            this.Duration.Width = 60;
             // 
             // metroLabel15
             // 
@@ -1019,6 +960,75 @@
             this.cmbLecFacEdit.TabIndex = 55;
             this.cmbLecFacEdit.UseSelectable = true;
             // 
+            // SessionID
+            // 
+            this.SessionID.DataPropertyName = "SessionID";
+            this.SessionID.HeaderText = "SID";
+            this.SessionID.MinimumWidth = 40;
+            this.SessionID.Name = "SessionID";
+            this.SessionID.Width = 40;
+            // 
+            // Lecturer
+            // 
+            this.Lecturer.DataPropertyName = "Lecturer";
+            this.Lecturer.HeaderText = "Lecturer(s)";
+            this.Lecturer.MinimumWidth = 100;
+            this.Lecturer.Name = "Lecturer";
+            this.Lecturer.ReadOnly = true;
+            this.Lecturer.Width = 165;
+            // 
+            // Subjects
+            // 
+            this.Subjects.DataPropertyName = "Subject";
+            this.Subjects.HeaderText = "Subject Name";
+            this.Subjects.MinimumWidth = 166;
+            this.Subjects.Name = "Subjects";
+            this.Subjects.ReadOnly = true;
+            this.Subjects.Width = 166;
+            // 
+            // SubjectCode
+            // 
+            this.SubjectCode.DataPropertyName = "SubjectCode";
+            this.SubjectCode.HeaderText = "Code";
+            this.SubjectCode.MinimumWidth = 60;
+            this.SubjectCode.Name = "SubjectCode";
+            this.SubjectCode.ReadOnly = true;
+            this.SubjectCode.Width = 60;
+            // 
+            // Tag
+            // 
+            this.Tag.DataPropertyName = "Tag";
+            this.Tag.HeaderText = "Tag(s)";
+            this.Tag.MinimumWidth = 64;
+            this.Tag.Name = "Tag";
+            this.Tag.ReadOnly = true;
+            this.Tag.Width = 64;
+            // 
+            // GroupID
+            // 
+            this.GroupID.DataPropertyName = "GroupID";
+            this.GroupID.HeaderText = "Group ID";
+            this.GroupID.MinimumWidth = 115;
+            this.GroupID.Name = "GroupID";
+            this.GroupID.ReadOnly = true;
+            this.GroupID.Width = 115;
+            // 
+            // StudentCount
+            // 
+            this.StudentCount.DataPropertyName = "StudentCount";
+            this.StudentCount.HeaderText = "Students";
+            this.StudentCount.MinimumWidth = 60;
+            this.StudentCount.Name = "StudentCount";
+            this.StudentCount.Width = 60;
+            // 
+            // Duration
+            // 
+            this.Duration.DataPropertyName = "Duration";
+            this.Duration.HeaderText = "Duration";
+            this.Duration.MinimumWidth = 60;
+            this.Duration.Name = "Duration";
+            this.Duration.Width = 60;
+            // 
             // Sessions
             // 
             this.ApplyImageInvert = true;
@@ -1127,7 +1137,9 @@
         private System.Windows.Forms.TextBox txtSelectedSubject;
         private System.Windows.Forms.TextBox txtSelectedGroups;
         private System.Windows.Forms.TextBox txtSelectedTags;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private MetroFramework.Controls.MetroLabel metroLabel16;
+        private MetroFramework.Controls.MetroComboBox cmbSesFilterGroup;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SessionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lecturer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subjects;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectCode;
@@ -1135,7 +1147,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GroupID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
-        private MetroFramework.Controls.MetroLabel metroLabel16;
-        private MetroFramework.Controls.MetroComboBox cmbSesFilterGroup;
     }
 }

@@ -25,6 +25,8 @@ namespace TimetableManagementSystem.Sessions
         public String groups = "";
         public String subject = "";
 
+        
+
         private void Sessions_Load(object sender, EventArgs e)
         {
             GetSessions();
@@ -35,6 +37,7 @@ namespace TimetableManagementSystem.Sessions
             GetLecturersToFilter();
             GetSubjectsToFilter();
             GetGroupsToFilter();
+           
         }
 
         private void GetSessions()
@@ -50,6 +53,11 @@ namespace TimetableManagementSystem.Sessions
 
             //dgvSessions.AutoGenerateColumns = false;
             dgvSessions.DataSource = dt;
+
+            this.dgvSessions.Columns["SessionID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvSessions.Columns["SubjectCode"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvSessions.Columns["Duration"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvSessions.Columns["StudentCount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         public void GetLecturers()
@@ -107,7 +115,7 @@ namespace TimetableManagementSystem.Sessions
         public void GetGroups()
         {
 
-            if (txtSelectedTags.Text == "Practical, ")
+            if (txtSelectedTags.Text == "Practical ")
             {
                 con.Open();
                 cmbSessionGroup.Items.Clear();
@@ -195,7 +203,7 @@ namespace TimetableManagementSystem.Sessions
 
         private void cmbSessionTag_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tags = tags + cmbSessionTag.Text + ", ";
+            tags = tags + cmbSessionTag.Text + " ";
 
             txtSelectedTags.Text = tags;
 
@@ -204,7 +212,7 @@ namespace TimetableManagementSystem.Sessions
 
         private void cmbSessionGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
-            groups = groups + cmbSessionGroup.Text + ", ";
+            groups = groups + cmbSessionGroup.Text + " ";
 
             txtSelectedGroups.Text = groups;
         }
@@ -268,7 +276,7 @@ namespace TimetableManagementSystem.Sessions
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                //GetSubjects();
+                GetSessions();
 
                 ClearFieldsAfterAdd();
 

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
             this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
             this.btnSideNavTags = new System.Windows.Forms.PictureBox();
@@ -227,9 +227,9 @@
             this.tabPageSubView.Controls.Add(this.metroLabel7);
             this.tabPageSubView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSubView.Location = new System.Drawing.Point(4, 37);
-            this.tabPageSubView.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabPageSubView.Margin = new System.Windows.Forms.Padding(7);
             this.tabPageSubView.Name = "tabPageSubView";
-            this.tabPageSubView.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageSubView.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageSubView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabPageSubView.Size = new System.Drawing.Size(780, 454);
             this.tabPageSubView.TabIndex = 0;
@@ -285,9 +285,9 @@
             // 
             // 
             this.txtSubSearch.CustomButton.Image = null;
-            this.txtSubSearch.CustomButton.Location = new System.Drawing.Point(72, 1);
+            this.txtSubSearch.CustomButton.Location = new System.Drawing.Point(96, 1);
             this.txtSubSearch.CustomButton.Name = "";
-            this.txtSubSearch.CustomButton.Size = new System.Drawing.Size(17, 19);
+            this.txtSubSearch.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtSubSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSubSearch.CustomButton.TabIndex = 1;
             this.txtSubSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -316,14 +316,14 @@
             // dgvSubjects
             // 
             this.dgvSubjects.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubjects.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubjects.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Code,
@@ -334,14 +334,14 @@
             this.SubTuteHours,
             this.SubLabHours,
             this.SubEvaHours});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSubjects.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSubjects.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSubjects.Location = new System.Drawing.Point(36, 107);
             this.dgvSubjects.Name = "dgvSubjects";
             this.dgvSubjects.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -623,9 +623,9 @@
             // 
             // 
             this.txtSubCode.CustomButton.Image = null;
-            this.txtSubCode.CustomButton.Location = new System.Drawing.Point(129, 2);
+            this.txtSubCode.CustomButton.Location = new System.Drawing.Point(172, 2);
             this.txtSubCode.CustomButton.Name = "";
-            this.txtSubCode.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.txtSubCode.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtSubCode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSubCode.CustomButton.TabIndex = 1;
             this.txtSubCode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -656,9 +656,9 @@
             // 
             // 
             this.txtSubName.CustomButton.Image = null;
-            this.txtSubName.CustomButton.Location = new System.Drawing.Point(129, 2);
+            this.txtSubName.CustomButton.Location = new System.Drawing.Point(172, 2);
             this.txtSubName.CustomButton.Name = "";
-            this.txtSubName.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.txtSubName.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtSubName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSubName.CustomButton.TabIndex = 1;
             this.txtSubName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -744,7 +744,7 @@
             this.btnSubClear.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnSubClear.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSubClear.Location = new System.Drawing.Point(398, 390);
-            this.btnSubClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubClear.Name = "btnSubClear";
             this.btnSubClear.Size = new System.Drawing.Size(150, 40);
             this.btnSubClear.TabIndex = 44;
@@ -760,7 +760,7 @@
             this.btnSubSave.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnSubSave.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSubSave.Location = new System.Drawing.Point(202, 390);
-            this.btnSubSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubSave.Name = "btnSubSave";
             this.btnSubSave.Size = new System.Drawing.Size(150, 40);
             this.btnSubSave.TabIndex = 31;
@@ -916,9 +916,9 @@
             // 
             // 
             this.txtSubCodeEdit.CustomButton.Image = null;
-            this.txtSubCodeEdit.CustomButton.Location = new System.Drawing.Point(129, 2);
+            this.txtSubCodeEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
             this.txtSubCodeEdit.CustomButton.Name = "";
-            this.txtSubCodeEdit.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.txtSubCodeEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtSubCodeEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSubCodeEdit.CustomButton.TabIndex = 1;
             this.txtSubCodeEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -949,9 +949,9 @@
             // 
             // 
             this.txtSubNameEdit.CustomButton.Image = null;
-            this.txtSubNameEdit.CustomButton.Location = new System.Drawing.Point(129, 2);
+            this.txtSubNameEdit.CustomButton.Location = new System.Drawing.Point(172, 2);
             this.txtSubNameEdit.CustomButton.Name = "";
-            this.txtSubNameEdit.CustomButton.Size = new System.Drawing.Size(19, 20);
+            this.txtSubNameEdit.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.txtSubNameEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSubNameEdit.CustomButton.TabIndex = 1;
             this.txtSubNameEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1084,7 +1084,7 @@
             this.btnSubDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnSubDelete.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSubDelete.Location = new System.Drawing.Point(398, 390);
-            this.btnSubDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubDelete.Name = "btnSubDelete";
             this.btnSubDelete.Size = new System.Drawing.Size(150, 40);
             this.btnSubDelete.TabIndex = 59;
@@ -1100,7 +1100,7 @@
             this.btnSubUpdate.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnSubUpdate.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSubUpdate.Location = new System.Drawing.Point(202, 390);
-            this.btnSubUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubUpdate.Name = "btnSubUpdate";
             this.btnSubUpdate.Size = new System.Drawing.Size(150, 40);
             this.btnSubUpdate.TabIndex = 46;

@@ -44,7 +44,8 @@ namespace TimetableManagementSystem.Subjects
             dgvSubjects.AutoGenerateColumns = false;
             dgvSubjects.DataSource = dt;
 
-         
+            this.dgvSubjects.Columns["SubName"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
         }
 
         private void btnSubSave_Click(object sender, EventArgs e)

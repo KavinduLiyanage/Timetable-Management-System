@@ -43,6 +43,10 @@ namespace TimetableManagementSystem.Lecturers
 
             dgvLectures.AutoGenerateColumns = false;
             dgvLectures.DataSource = dt;
+
+            this.dgvLectures.Columns["ID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvLectures.Columns["LecDepartment"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvLectures.Columns["LecRank"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void btnLecSave_Click(object sender, EventArgs e)
