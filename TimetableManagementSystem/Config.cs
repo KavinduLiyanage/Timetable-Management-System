@@ -9,7 +9,7 @@ namespace TimetableManagementSystem
 {
     class Config
     {
-        public static SqlConnection con = new SqlConnection(@"Server=tcp:timetablemngsysdb2.database.windows.net,1433;Initial Catalog=timetablemngsysdb;Persist Security Info=False;User ID=timetableadmin;Password=imb@manN0tbruce;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        public static SqlConnection con = new SqlConnection(@"Server=tcp:timetablemngsysdb3.database.windows.net,1433;Initial Catalog=TimetableManageSystemDB;Persist Security Info=False;User ID=timetableadmin;Password=imb@manN0tbruce;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
         /*
         Use this as
