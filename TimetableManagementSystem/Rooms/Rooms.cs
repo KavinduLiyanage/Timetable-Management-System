@@ -49,7 +49,7 @@ namespace TimetableManagementSystem.Rooms
             //}
             //con.Close();
             tagroom_cmb.Items.Clear();
-            SqlDataAdapter sda = new SqlDataAdapter("select * from Rooms", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from rooms", con);
             DataTable dataTable = new DataTable();
             sda.Fill(dataTable);
             foreach (DataRow dataRow in dataTable.Rows)
