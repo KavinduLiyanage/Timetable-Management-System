@@ -25,8 +25,6 @@ namespace TimetableManagementSystem.Sessions
         public String groups = "";
         public String subject = "";
 
-        
-
         private void Sessions_Load(object sender, EventArgs e)
         {
             GetSessions();
@@ -36,8 +34,7 @@ namespace TimetableManagementSystem.Sessions
             GetSubjects();
             GetLecturersToFilter();
             GetSubjectsToFilter();
-            GetGroupsToFilter();
-           
+            GetGroupsToFilter();        
         }
 
         private void GetSessions()

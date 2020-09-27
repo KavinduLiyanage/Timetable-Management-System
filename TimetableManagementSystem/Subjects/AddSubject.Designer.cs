@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
             this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
             this.btnSideNavTags = new System.Windows.Forms.PictureBox();
@@ -206,7 +206,7 @@
             this.tabControlSubjects.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlSubjects.Location = new System.Drawing.Point(131, 82);
             this.tabControlSubjects.Name = "tabControlSubjects";
-            this.tabControlSubjects.SelectedIndex = 2;
+            this.tabControlSubjects.SelectedIndex = 0;
             this.tabControlSubjects.Size = new System.Drawing.Size(788, 495);
             this.tabControlSubjects.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlSubjects.TabIndex = 47;
@@ -257,7 +257,8 @@
             "1",
             "2",
             "3",
-            "4"});
+            "4",
+            "Clear"});
             this.cmbSubFilterYear.Location = new System.Drawing.Point(161, 62);
             this.cmbSubFilterYear.Name = "cmbSubFilterYear";
             this.cmbSubFilterYear.PromptText = "Select Year";
@@ -316,14 +317,14 @@
             // dgvSubjects
             // 
             this.dgvSubjects.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubjects.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubjects.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Code,
@@ -334,14 +335,14 @@
             this.SubTuteHours,
             this.SubLabHours,
             this.SubEvaHours});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSubjects.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSubjects.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSubjects.Location = new System.Drawing.Point(36, 107);
             this.dgvSubjects.Name = "dgvSubjects";
             this.dgvSubjects.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -481,6 +482,7 @@
             this.cmbSubLecHours.FormattingEnabled = true;
             this.cmbSubLecHours.ItemHeight = 23;
             this.cmbSubLecHours.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -549,6 +551,7 @@
             this.cmbSubEvaHours.FormattingEnabled = true;
             this.cmbSubEvaHours.ItemHeight = 23;
             this.cmbSubEvaHours.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -568,6 +571,7 @@
             this.cmbSubLabHours.FormattingEnabled = true;
             this.cmbSubLabHours.ItemHeight = 23;
             this.cmbSubLabHours.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -587,6 +591,7 @@
             this.cmbSubTuteHours.FormattingEnabled = true;
             this.cmbSubTuteHours.ItemHeight = 23;
             this.cmbSubTuteHours.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -807,6 +812,7 @@
             this.cmbSubLecHoursEdit.FormattingEnabled = true;
             this.cmbSubLecHoursEdit.ItemHeight = 23;
             this.cmbSubLecHoursEdit.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -842,6 +848,7 @@
             this.cmbSubEvaHoursEdit.FormattingEnabled = true;
             this.cmbSubEvaHoursEdit.ItemHeight = 23;
             this.cmbSubEvaHoursEdit.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -861,6 +868,7 @@
             this.cmbSubLabHoursEdit.FormattingEnabled = true;
             this.cmbSubLabHoursEdit.ItemHeight = 23;
             this.cmbSubLabHoursEdit.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -880,6 +888,7 @@
             this.cmbSubTuteHoursEdit.FormattingEnabled = true;
             this.cmbSubTuteHoursEdit.ItemHeight = 23;
             this.cmbSubTuteHoursEdit.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
