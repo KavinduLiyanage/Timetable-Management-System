@@ -199,7 +199,7 @@
             this.tabControlLecturers.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlLecturers.Location = new System.Drawing.Point(148, 93);
             this.tabControlLecturers.Name = "tabControlLecturers";
-            this.tabControlLecturers.SelectedIndex = 2;
+            this.tabControlLecturers.SelectedIndex = 0;
             this.tabControlLecturers.Size = new System.Drawing.Size(782, 475);
             this.tabControlLecturers.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlLecturers.TabIndex = 26;
@@ -255,7 +255,8 @@
             "Senior Lecturer",
             "Lecturer",
             "Assistant Lecturer",
-            "Instructors"});
+            "Instructors",
+            "Clear Selected"});
             this.cmbLecFilterLevel.Location = new System.Drawing.Point(419, 50);
             this.cmbLecFilterLevel.Name = "cmbLecFilterLevel";
             this.cmbLecFilterLevel.PromptText = "Select Level";
@@ -285,7 +286,8 @@
             "Computing",
             "Engineering",
             "Business",
-            "Humanities and Science"});
+            "Humanities and Science",
+            "Clear Selected"});
             this.cmbLecFilterFaculty.Location = new System.Drawing.Point(159, 50);
             this.cmbLecFilterFaculty.Name = "cmbLecFilterFaculty";
             this.cmbLecFilterFaculty.PromptText = "Select Faculty";

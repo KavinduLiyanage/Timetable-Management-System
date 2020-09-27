@@ -218,9 +218,10 @@ namespace TimetableManagementSystem.Subjects
                 dgvSubjects.DataSource = dt;
                 con.Close();
             }
-
-            
-            
+            else if(txtSubSearch.Text == "")
+            {
+                GetSubjects();
+            }
         }
 
         private void cmbSubFilterYear_SelectedIndexChanged(object sender, EventArgs e)

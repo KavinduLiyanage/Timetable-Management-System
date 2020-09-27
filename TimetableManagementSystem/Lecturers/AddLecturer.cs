@@ -367,46 +367,79 @@ namespace TimetableManagementSystem.Lecturers
             con.Close();
             */
 
-            cmbLecFilterFaculty.SelectedIndex = -1;
-            cmbLecFilterLevel.SelectedIndex = -1;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Lecturers WHERE LecName LIKE '%" + txtLecSearch.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dgvLectures.DataSource = dt;
-            con.Close();
+            if (txtLecSearch.Text != "")
+            {
+                cmbLecFilterFaculty.SelectedIndex = -1;
+                cmbLecFilterLevel.SelectedIndex = -1;
+
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Lecturers WHERE LecName LIKE '%" + txtLecSearch.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dgvLectures.DataSource = dt;
+                con.Close();
+            }
+            else if (txtLecSearch.Text == "")
+            {
+                GetLecturers();
+            }
+
         }
 
         private void cmbLecFilterFaculty_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtLecSearch.Clear();
-            cmbLecFilterLevel.SelectedIndex = -1;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Lecturers where LecFaculty like '%" + cmbLecFilterFaculty.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvLectures.DataSource = dt;
-            con.Close();
+            if (cmbLecFilterFaculty.Text != "")
+            {
+                txtLecSearch.Clear();
+                cmbLecFilterLevel.SelectedIndex = -1;
+
+                if (cmbLecFilterFaculty.Text == "Clear Selected")
+                {
+                    cmbLecFilterFaculty.SelectedIndex = -1;
+                }
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Lecturers where LecFaculty like '%" + cmbLecFilterFaculty.Text + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dgvLectures.DataSource = dt;
+                con.Close();
+            }
+
+            
+            
         }
 
         private void cmbLecFilterLevel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtLecSearch.Clear();
-            cmbLecFilterFaculty.SelectedIndex = -1;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Lecturers where LecLevel like '%" + cmbLecFilterLevel.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvLectures.DataSource = dt;
-            con.Close();
+            if (cmbLecFilterLevel.Text != "")
+            {
+                txtLecSearch.Clear();
+                cmbLecFilterFaculty.SelectedIndex = -1;
+
+                if (cmbLecFilterLevel.Text == "Clear Selected")
+                {
+                    cmbLecFilterLevel.SelectedIndex = -1;
+                }
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Lecturers where LecLevel like '%" + cmbLecFilterLevel.Text + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dgvLectures.DataSource = dt;
+                con.Close();
+            }
+
+            
+            
         }
 
         //--------------------Header Buttons--------------------

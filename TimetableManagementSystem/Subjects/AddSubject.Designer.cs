@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
             this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
             this.btnSideNavTags = new System.Windows.Forms.PictureBox();
@@ -206,7 +206,7 @@
             this.tabControlSubjects.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlSubjects.Location = new System.Drawing.Point(131, 82);
             this.tabControlSubjects.Name = "tabControlSubjects";
-            this.tabControlSubjects.SelectedIndex = 0;
+            this.tabControlSubjects.SelectedIndex = 2;
             this.tabControlSubjects.Size = new System.Drawing.Size(788, 495);
             this.tabControlSubjects.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlSubjects.TabIndex = 47;
@@ -273,7 +273,7 @@
             this.metroLabel22.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel22.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel22.Location = new System.Drawing.Point(559, 65);
+            this.metroLabel22.Location = new System.Drawing.Point(529, 65);
             this.metroLabel22.Name = "metroLabel22";
             this.metroLabel22.Size = new System.Drawing.Size(60, 19);
             this.metroLabel22.TabIndex = 74;
@@ -295,7 +295,7 @@
             this.txtSubSearch.CustomButton.UseSelectable = true;
             this.txtSubSearch.CustomButton.Visible = false;
             this.txtSubSearch.Lines = new string[0];
-            this.txtSubSearch.Location = new System.Drawing.Point(619, 64);
+            this.txtSubSearch.Location = new System.Drawing.Point(589, 64);
             this.txtSubSearch.MaxLength = 32767;
             this.txtSubSearch.Name = "txtSubSearch";
             this.txtSubSearch.PasswordChar = '\0';
@@ -317,14 +317,14 @@
             // dgvSubjects
             // 
             this.dgvSubjects.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubjects.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubjects.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Code,
@@ -335,14 +335,14 @@
             this.SubTuteHours,
             this.SubLabHours,
             this.SubEvaHours});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSubjects.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSubjects.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSubjects.Location = new System.Drawing.Point(36, 107);
             this.dgvSubjects.Name = "dgvSubjects";
             this.dgvSubjects.RightToLeft = System.Windows.Forms.RightToLeft.No;
