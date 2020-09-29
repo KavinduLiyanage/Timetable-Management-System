@@ -28,6 +28,7 @@ namespace TimetableManagementSystem.Subjects
         private void AddSubject_Load(object sender, EventArgs e)
         {
             GetSubjects();
+            tabControlSubjects.SelectedTab = tabPageSubView;
         }
 
         private void GetSubjects()
@@ -331,6 +332,18 @@ namespace TimetableManagementSystem.Subjects
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
+        }
+
+        private void tabControlSubjects_SelectedIndexChanged(object sender, EventArgs e)
+        {         
+            if (tabControlSubjects.SelectedTab.Name == "tabPageSubEdit")
+            {
+                if (SubCodeValue == 0)
+                {
+                    MessageBox.Show("Please select a subject in subjects list ", "No subject selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tabControlSubjects.SelectedTab = tabPageSubView;
+                }
+            }
         }
     }
 }

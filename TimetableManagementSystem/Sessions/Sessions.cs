@@ -34,7 +34,8 @@ namespace TimetableManagementSystem.Sessions
             GetSubjects();
             GetLecturersToFilter();
             GetSubjectsToFilter();
-            GetGroupsToFilter();        
+            GetGroupsToFilter();
+            tabControlLSessions.SelectedTab = tabPageSessionView;
         }
 
         private void GetSessions()

@@ -215,6 +215,7 @@
             this.tabControlSubjects.UseCustomForeColor = true;
             this.tabControlSubjects.UseSelectable = true;
             this.tabControlSubjects.UseStyleColors = true;
+            this.tabControlSubjects.SelectedIndexChanged += new System.EventHandler(this.tabControlSubjects_SelectedIndexChanged);
             // 
             // tabPageSubView
             // 

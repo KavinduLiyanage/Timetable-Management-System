@@ -17,7 +17,6 @@ namespace TimetableManagementSystem.Lecturers
         public AddLecturer()
         {
             InitializeComponent();
-
         }
 
         SqlConnection con = Config.con;
@@ -28,6 +27,7 @@ namespace TimetableManagementSystem.Lecturers
         private void AddLecturer_Load(object sender, EventArgs e)
         {
             GetLecturers();
+            tabControlLecturers.SelectedTab = tabPageLecView;
         }
 
         private void GetLecturers()
@@ -248,7 +248,7 @@ namespace TimetableManagementSystem.Lecturers
             if (LecturerID > 0)
             {
 
-                if(MessageBox.Show("Are You Sure You Want to Delete the Lecturer?","Delete Lecturer",MessageBoxButtons.YesNo,MessageBoxIcon.Information)==DialogResult.Yes)
+                if(MessageBox.Show("Are You Sure You Want to Delete the Lecturer?","Delete Lecturer",MessageBoxButtons.OK,MessageBoxIcon.Information)==DialogResult.Yes)
                 {
                     SqlCommand cmd = new SqlCommand("DELETE FROM Lecturers WHERE LecturerID = @LecturerID", con);
                     cmd.CommandType = CommandType.Text;
@@ -383,7 +383,6 @@ namespace TimetableManagementSystem.Lecturers
             {
                 GetLecturers();
             }
-
         }
 
         private void cmbLecFilterFaculty_SelectedIndexChanged(object sender, EventArgs e)
@@ -408,10 +407,7 @@ namespace TimetableManagementSystem.Lecturers
                 da.Fill(dt);
                 dgvLectures.DataSource = dt;
                 con.Close();
-            }
-
-            
-            
+            }        
         }
 
         private void cmbLecFilterLevel_SelectedIndexChanged(object sender, EventArgs e)
@@ -436,10 +432,19 @@ namespace TimetableManagementSystem.Lecturers
                 da.Fill(dt);
                 dgvLectures.DataSource = dt;
                 con.Close();
-            }
+            }       
+        }
 
-            
-            
+        private void tabControlLecturers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControlLecturers.SelectedTab.Name == "tabPageLecEdit")
+            {
+                if (LecturerID == 0)
+                {
+                    MessageBox.Show("Please select a lecturer in lecturers list ", "No lecturer selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tabControlLecturers.SelectedTab = tabPageLecView;
+                }
+            }
         }
 
         //--------------------Header Buttons--------------------
@@ -523,6 +528,6 @@ namespace TimetableManagementSystem.Lecturers
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
-        }    
+        }
     }
 }

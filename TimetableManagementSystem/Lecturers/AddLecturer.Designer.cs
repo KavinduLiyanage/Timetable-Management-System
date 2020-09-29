@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSideNavStatistics = new System.Windows.Forms.PictureBox();
             this.btnSideNavLocations = new System.Windows.Forms.PictureBox();
             this.btnSideNavTags = new System.Windows.Forms.PictureBox();
@@ -199,7 +199,7 @@
             this.tabControlLecturers.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlLecturers.Location = new System.Drawing.Point(148, 93);
             this.tabControlLecturers.Name = "tabControlLecturers";
-            this.tabControlLecturers.SelectedIndex = 0;
+            this.tabControlLecturers.SelectedIndex = 2;
             this.tabControlLecturers.Size = new System.Drawing.Size(782, 475);
             this.tabControlLecturers.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlLecturers.TabIndex = 26;
@@ -208,6 +208,7 @@
             this.tabControlLecturers.UseCustomForeColor = true;
             this.tabControlLecturers.UseSelectable = true;
             this.tabControlLecturers.UseStyleColors = true;
+            this.tabControlLecturers.SelectedIndexChanged += new System.EventHandler(this.tabControlLecturers_SelectedIndexChanged);
             // 
             // tabPageLecView
             // 
@@ -346,14 +347,14 @@
             // dgvLectures
             // 
             this.dgvLectures.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLectures.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLectures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLectures.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
