@@ -365,6 +365,8 @@ namespace TimetableManagementSystem.Sessions
 
             nmudSessionDuration.Value = 0;
 
+            SID = 0;
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -652,6 +654,8 @@ namespace TimetableManagementSystem.Sessions
 
             nmudSessionDurationEdit.Value = 0;
 
+            SID = 0;
+
         }
 
         private void lblClearLecsEdit_Click(object sender, EventArgs e)
@@ -716,6 +720,49 @@ namespace TimetableManagementSystem.Sessions
                 MessageBox.Show("Please Select a session to Update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnSessionDelete_Click(object sender, EventArgs e)
+        {
+            if (SID > 0)
+            {
+                if (MessageBox.Show("Are You Sure You Want to Delete the Session?", "Delete Session", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    SqlCommand cmd = new SqlCommand("DELETE FROM Sessions WHERE SessionID = @SID", con);
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.Parameters.AddWithValue("@SID", this.SID);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    MessageBox.Show("Session is Deleted", "Successfully");
+
+                    GetSessions();
+
+                    ClearFieldsAfterUpdate();
+
+                    tabControlLSessions.SelectedTab = tabPageSessionView;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Select a session to Delete ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tabControlLSessions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControlLSessions.SelectedTab.Name == "tabPageSessionEdit")
+            {
+                if (SID == 0)
+                {
+                    MessageBox.Show("Please select a session in sessions list ", "No session selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tabControlLSessions.SelectedTab = tabPageSessionView;
+                }
+            }
+        }
+
 
         //--------------------Header Buttons--------------------
 
@@ -802,6 +849,6 @@ namespace TimetableManagementSystem.Sessions
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
-        }     
+        }
     }
 }

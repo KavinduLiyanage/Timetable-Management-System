@@ -250,6 +250,18 @@ namespace TimetableManagementSystem.Subjects
             }          
         }
 
+        private void tabControlSubjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControlSubjects.SelectedTab.Name == "tabPageSubEdit")
+            {
+                if (SubCodeValue == 0)
+                {
+                    MessageBox.Show("Please select a subject in subjects list ", "No subject selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tabControlSubjects.SelectedTab = tabPageSubView;
+                }
+            }
+        }
+
         //--------------------Header Buttons--------------------
         private void btnHeaderHome_Click(object sender, EventArgs e)
         {
@@ -332,18 +344,6 @@ namespace TimetableManagementSystem.Subjects
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
-        }
-
-        private void tabControlSubjects_SelectedIndexChanged(object sender, EventArgs e)
-        {         
-            if (tabControlSubjects.SelectedTab.Name == "tabPageSubEdit")
-            {
-                if (SubCodeValue == 0)
-                {
-                    MessageBox.Show("Please select a subject in subjects list ", "No subject selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    tabControlSubjects.SelectedTab = tabPageSubView;
-                }
-            }
         }
     }
 }

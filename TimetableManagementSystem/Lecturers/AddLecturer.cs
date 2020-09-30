@@ -248,7 +248,7 @@ namespace TimetableManagementSystem.Lecturers
             if (LecturerID > 0)
             {
 
-                if(MessageBox.Show("Are You Sure You Want to Delete the Lecturer?","Delete Lecturer",MessageBoxButtons.OK,MessageBoxIcon.Information)==DialogResult.Yes)
+                if(MessageBox.Show("Are You Sure You Want to Delete the Lecturer?","Delete Lecturer",MessageBoxButtons.YesNo,MessageBoxIcon.Information)==DialogResult.Yes)
                 {
                     SqlCommand cmd = new SqlCommand("DELETE FROM Lecturers WHERE LecturerID = @LecturerID", con);
                     cmd.CommandType = CommandType.Text;
