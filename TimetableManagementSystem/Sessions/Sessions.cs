@@ -24,6 +24,8 @@ namespace TimetableManagementSystem.Sessions
         public String tags = "";
         public String groups = "";
         public String subject = "";
+        public int SID;
+        public String tagEdit = "";
 
         private void Sessions_Load(object sender, EventArgs e)
         {
@@ -35,6 +37,7 @@ namespace TimetableManagementSystem.Sessions
             GetLecturersToFilter();
             GetSubjectsToFilter();
             GetGroupsToFilter();
+            
             tabControlLSessions.SelectedTab = tabPageSessionView;
         }
 
@@ -81,6 +84,11 @@ namespace TimetableManagementSystem.Sessions
                 cmbSessionLecturer.Items.Add(dr["LecName"].ToString());
             }
 
+            foreach (DataRow dr in dtlecturers.Rows)
+            {
+                cmbSessionLecturerEdit.Items.Add(dr["LecName"].ToString()+", ");
+            }
+
             con.Close();
         }
 
@@ -105,6 +113,11 @@ namespace TimetableManagementSystem.Sessions
             foreach (DataRow dr in dttags.Rows)
             {
                 cmbSessionTag.Items.Add(dr["TagName"].ToString());
+            }
+
+            foreach (DataRow dr in dttags.Rows)
+            {
+                cmbSessionTagEdit.Items.Add(dr["TagName"].ToString());
             }
 
             con.Close();
@@ -160,10 +173,14 @@ namespace TimetableManagementSystem.Sessions
                 {
                     cmbSessionGroup.Items.Add(dr["GenGrpNum"].ToString());
                 }
-
+                
+                foreach (DataRow dr in dtgroups.Rows)
+                {
+                    cmbSessionGroupEdit.Items.Add(dr["GenGrpNum"].ToString() + " ");
+                }
+                
                 con.Close();
-            }
-        
+            }       
         }
 
         public void GetSubjects()
@@ -187,6 +204,11 @@ namespace TimetableManagementSystem.Sessions
             foreach (DataRow dr in dtsubjects.Rows)
             {
                 cmbSessionSubject.Items.Add(dr["SubCode"].ToString());
+            }
+
+            foreach (DataRow dr in dtsubjects.Rows)
+            {
+                cmbSessionSubjectEdit.Items.Add(dr["SubCode"].ToString());
             }
 
             con.Close();
@@ -236,9 +258,7 @@ namespace TimetableManagementSystem.Sessions
                 con.Close();
 
                 txtSelectedSubject.Text = data;
-            }
-
-            
+            }          
         }
 
         private void txtSelectedTags_TextChanged(object sender, EventArgs e)
@@ -456,8 +476,7 @@ namespace TimetableManagementSystem.Sessions
                 da.Fill(dt);
                 dgvSessions.DataSource = dt;
                 con.Close();
-            }
-          
+            }         
         }
 
         private void cmbSesFilterSubject_SelectedIndexChanged(object sender, EventArgs e)
@@ -508,8 +527,56 @@ namespace TimetableManagementSystem.Sessions
                 da.Fill(dt);
                 dgvSessions.DataSource = dt;
                 con.Close();
-            }
+            }         
+        }
+
+        private void dgvSessions_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SID = Convert.ToInt32(dgvSessions.SelectedRows[0].Cells[0].Value);
+
+            txtSelectedLecturersEdit.Text = dgvSessions.SelectedRows[0].Cells[1].Value.ToString();
+            cmbSessionLecturerEdit.SelectedIndex = 1;
+            cmbSessionLecturerEdit.SelectedItem = dgvSessions.SelectedRows[0].Cells[1].Value;
             
+            if (cmbSessionLecturerEdit.SelectedItem.ToString().Equals(dgvSessions.SelectedRows[0].Cells[1].Value.ToString()))
+            { }
+            else
+            {
+                cmbSessionLecturerEdit.SelectedIndex = -1;
+            }
+
+            txtSelectedSubjectEdit.Text = dgvSessions.SelectedRows[0].Cells[2].Value.ToString();
+            cmbSessionSubjectEdit.SelectedItem = dgvSessions.SelectedRows[0].Cells[3].Value;
+
+            tagEdit = dgvSessions.SelectedRows[0].Cells[4].Value.ToString();
+
+            if (tagEdit.Equals("Practical "))
+            {
+                cmbSessionTagEdit.SelectedItem = "Practical";
+            }
+            else if (tagEdit.Equals("Lecture "))
+            {
+                cmbSessionTagEdit.SelectedItem = "Lecture";
+            }
+            else if (tagEdit.Equals("Tutorial "))
+            {
+                cmbSessionTagEdit.SelectedItem = "Tutorial";
+            }
+            else
+            {
+                cmbSessionTagEdit.SelectedIndex = -1;
+            }
+
+            txtSelectedTagsEdit.Text = dgvSessions.SelectedRows[0].Cells[4].Value.ToString();
+
+            txtSelectedGroupsEdit.Text = dgvSessions.SelectedRows[0].Cells[5].Value.ToString();
+            cmbSessionGroupEdit.SelectedItem = dgvSessions.SelectedRows[0].Cells[5].Value;
+
+            nmudSessionNoStudentsEdit.Value = Convert.ToInt32(dgvSessions.SelectedRows[0].Cells[6].Value);
+            nmudSessionDurationEdit.Value = Convert.ToInt32(dgvSessions.SelectedRows[0].Cells[7].Value);
+
+            tabControlLSessions.SelectedTab = tabPageSessionEdit;
+         
         }
 
         //--------------------Header Buttons--------------------
@@ -598,7 +665,5 @@ namespace TimetableManagementSystem.Sessions
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
         }
-
-        
     }
 }
