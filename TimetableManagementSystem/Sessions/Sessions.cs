@@ -689,36 +689,52 @@ namespace TimetableManagementSystem.Sessions
         {
             if (SID > 0)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Sessions SET Lecturer = @Lecturer, Subject = @Subject, SubjectCode = @SubjectCode, Tag = @Tag, GroupID = @GroupID, StudentCount = @StudentCount, Duration = @Duration WHERE SessionID = @SID", con);
+                if (IsValidUpdate())
+                {
+                    SqlCommand cmd = new SqlCommand("UPDATE Sessions SET Lecturer = @Lecturer, Subject = @Subject, SubjectCode = @SubjectCode, Tag = @Tag, GroupID = @GroupID, StudentCount = @StudentCount, Duration = @Duration WHERE SessionID = @SID", con);
 
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@Lecturer", lecturersEdit);
-                cmd.Parameters.AddWithValue("@Subject", txtSelectedSubjectEdit.Text);
-                cmd.Parameters.AddWithValue("@SubjectCode", cmbSessionSubjectEdit.Text);
-                cmd.Parameters.AddWithValue("@Tag", tagsEdit);
-                cmd.Parameters.AddWithValue("@GroupID", groupsEdit);
-                cmd.Parameters.AddWithValue("@StudentCount", nmudSessionNoStudentsEdit.Text);
-                cmd.Parameters.AddWithValue("@Duration", nmudSessionDurationEdit.Text);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Lecturer", lecturersEdit);
+                    cmd.Parameters.AddWithValue("@Subject", txtSelectedSubjectEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubjectCode", cmbSessionSubjectEdit.Text);
+                    cmd.Parameters.AddWithValue("@Tag", tagsEdit);
+                    cmd.Parameters.AddWithValue("@GroupID", groupsEdit);
+                    cmd.Parameters.AddWithValue("@StudentCount", nmudSessionNoStudentsEdit.Text);
+                    cmd.Parameters.AddWithValue("@Duration", nmudSessionDurationEdit.Text);
 
-                cmd.Parameters.AddWithValue("@SID", this.SID);
+                    cmd.Parameters.AddWithValue("@SID", this.SID);
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                MessageBox.Show("Session Details Updated", "Successfully");
+                    MessageBox.Show("Session Details Updated", "Successfully");
 
-                GetSessions();
+                    GetSessions();
 
-                ClearFieldsAfterUpdate();
+                    ClearFieldsAfterUpdate();
 
-                tabControlLSessions.SelectedTab = tabPageSessionView;
-
+                    tabControlLSessions.SelectedTab = tabPageSessionView;
+                }
+               
             }
             else
             {
                 MessageBox.Show("Please Select a session to Update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool IsValidUpdate()
+        {
+            if ((lecturersEdit == string.Empty) || (tagsEdit == string.Empty) || (groupsEdit == string.Empty) ||
+                (txtSelectedSubjectEdit.Text == string.Empty) || (cmbSessionSubjectEdit.Text == string.Empty) ||
+                (Int32.Parse(nmudSessionNoStudentsEdit.Text) == 0) || (Int32.Parse(nmudSessionDurationEdit.Text) == 0))
+            {
+                MessageBox.Show("Please fill the all fields", "Updating Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
 
         private void btnSessionDelete_Click(object sender, EventArgs e)

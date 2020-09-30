@@ -90,7 +90,9 @@ namespace TimetableManagementSystem.Subjects
 
         private bool IsValid()
         {
-            if (txtSubCode.Text == string.Empty) 
+            if ((txtSubCode.Text == string.Empty) || (txtSubName.Text == string.Empty)
+                || (cmbSubYear.Text == string.Empty) || (cmbSubSem.Text == string.Empty) || (cmbSubLecHours.Text == string.Empty)
+                || (cmbSubTuteHours.Text == string.Empty) || (cmbSubLabHours.Text == string.Empty) || (cmbSubEvaHours.Text == string.Empty))
             {
                 MessageBox.Show("Fill the all fields", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -124,35 +126,51 @@ namespace TimetableManagementSystem.Subjects
         {
             if (SubCodeValue > 0)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Subjects SET SubCode = @SubCodenew, SubName = @SubName, SubYear = @SubYear, SubSem = @SubSem, SubLecHours = @SubLecHours, SubTuteHours = @SubTuteHours, SubLabHours = @SubLabHours, SubEvaHours = @SubEvaHours WHERE SubCode = @SubCode", con);
-                cmd.CommandType = CommandType.Text;
+                if (IsValidUpdate())
+                {
+                    SqlCommand cmd = new SqlCommand("UPDATE Subjects SET SubCode = @SubCodenew, SubName = @SubName, SubYear = @SubYear, SubSem = @SubSem, SubLecHours = @SubLecHours, SubTuteHours = @SubTuteHours, SubLabHours = @SubLabHours, SubEvaHours = @SubEvaHours WHERE SubCode = @SubCode", con);
+                    cmd.CommandType = CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@SubCodenew", txtSubCodeEdit.Text);
-                cmd.Parameters.AddWithValue("@SubName", txtSubNameEdit.Text);
-                cmd.Parameters.AddWithValue("@SubYear", cmbSubYearEdit.Text);
-                cmd.Parameters.AddWithValue("@SubSem", cmbSubSemEdit.Text);
-                cmd.Parameters.AddWithValue("@SubLecHours", cmbSubLecHoursEdit.Text);
-                cmd.Parameters.AddWithValue("@SubTuteHours", cmbSubTuteHoursEdit.Text);
-                cmd.Parameters.AddWithValue("@SubLabHours", cmbSubLabHoursEdit.Text);
-                cmd.Parameters.AddWithValue("@SubEvaHours", cmbSubEvaHoursEdit.Text);
-                cmd.Parameters.AddWithValue("@SubCode", this.SubCode);
+                    cmd.Parameters.AddWithValue("@SubCodenew", txtSubCodeEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubName", txtSubNameEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubYear", cmbSubYearEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubSem", cmbSubSemEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubLecHours", cmbSubLecHoursEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubTuteHours", cmbSubTuteHoursEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubLabHours", cmbSubLabHoursEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubEvaHours", cmbSubEvaHoursEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubCode", this.SubCode);
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                MessageBox.Show("Subject Details Updated", "Successfully");
+                    MessageBox.Show("Subject Details Updated", "Successfully");
 
-                GetSubjects();
+                    GetSubjects();
 
-                ClearFieldsAfterUpdate();
+                    ClearFieldsAfterUpdate();
 
-                tabControlSubjects.SelectedTab = tabPageSubView;
+                    tabControlSubjects.SelectedTab = tabPageSubView;
+                }             
             }
             else
             {
                 MessageBox.Show("Please Select a Subject to Update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool IsValidUpdate()
+        {
+            if ((txtSubCodeEdit.Text == string.Empty) || (txtSubNameEdit.Text == string.Empty)
+                || (cmbSubYearEdit.Text == string.Empty) || (cmbSubSemEdit.Text == string.Empty) || (cmbSubLecHoursEdit.Text == string.Empty)
+                || (cmbSubTuteHoursEdit.Text == string.Empty) || (cmbSubLabHoursEdit.Text == string.Empty) || (cmbSubEvaHoursEdit.Text == string.Empty))
+            {
+                MessageBox.Show("Fill the all fields", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
 
         private void ClearFieldsAfterUpdate()
