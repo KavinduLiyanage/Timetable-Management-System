@@ -121,11 +121,11 @@ namespace TimetableManagementSystem.Sessions
 
                 cmd2.CommandType = CommandType.Text;
 
-                cmd2.CommandText = "SELECT GenSubGrpNum FROM GenSubGroupNumber";
+                cmd2.CommandText = "SELECT GenSubGrpNum FROM GenSubGroupNumber order by GenSubGrpNum";
 
                 cmd2.ExecuteNonQuery();
 
-                DataTable dtgroups = new DataTable();
+                DataTable dtgroups = new DataTable();        
 
                 SqlDataAdapter dagroups = new SqlDataAdapter(cmd2);
 
@@ -146,7 +146,7 @@ namespace TimetableManagementSystem.Sessions
 
                 cmd.CommandType = CommandType.Text;
 
-                cmd.CommandText = "SELECT GenGrpNum FROM GenGroupNumber";
+                cmd.CommandText = "SELECT GenGrpNum FROM GenGroupNumber order by GenGrpNum";
 
                 cmd.ExecuteNonQuery();
 
@@ -256,6 +256,31 @@ namespace TimetableManagementSystem.Sessions
             groups = txtSelectedGroups.Text;
         }
 
+        //----------Clear Lables----------
+        private void lblClearLecs_Click(object sender, EventArgs e)
+        {
+            cmbSessionLecturer.SelectedIndex = -1;
+            txtSelectedLecturers.Clear();           
+        }
+
+        private void lblClearTags_Click(object sender, EventArgs e)
+        {
+            cmbSessionTag.SelectedIndex = -1;
+            txtSelectedTags.Clear();
+        }
+
+        private void lblClearGroups_Click(object sender, EventArgs e)
+        {
+            cmbSessionGroup.SelectedIndex = -1;
+            txtSelectedGroups.Clear();
+        }
+
+        private void lblClearSubs_Click(object sender, EventArgs e)
+        {
+            cmbSessionSubject.SelectedIndex = -1;
+            txtSelectedSubject.Clear();
+        }
+
         private void btnSessionSave_Click(object sender, EventArgs e)
         {
             if (IsValid())
@@ -284,9 +309,11 @@ namespace TimetableManagementSystem.Sessions
 
         private bool IsValid()
         {
-            if (cmbSessionLecturer.Text == string.Empty)
+            if ((lecturers == string.Empty) || (tags == string.Empty) || (groups == string.Empty) || 
+                (txtSelectedSubject.Text == string.Empty) || (cmbSessionSubject.Text == string.Empty) ||
+                (Int32.Parse(nmudSessionNoStudents.Text) == 0) || (Int32.Parse(nmudSessionDuration.Text) == 0))
             {
-                MessageBox.Show("Fill the all fields", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill the all fields", "Adding Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
