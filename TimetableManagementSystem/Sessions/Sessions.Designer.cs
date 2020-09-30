@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -85,9 +85,6 @@
             this.cmbSessionGroup = new MetroFramework.Controls.MetroComboBox();
             this.cmbSessionLecturer = new MetroFramework.Controls.MetroComboBox();
             this.tabPageSessionEdit = new System.Windows.Forms.TabPage();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.btnSessionDelete = new MetroFramework.Controls.MetroButton();
-            this.btnSessionUpdate = new MetroFramework.Controls.MetroButton();
             this.lblClearSubsEdit = new MetroFramework.Controls.MetroLabel();
             this.lblClearTagsEdit = new MetroFramework.Controls.MetroLabel();
             this.lblClearGroupsEdit = new MetroFramework.Controls.MetroLabel();
@@ -108,6 +105,9 @@
             this.cmbSessionSubjectEdit = new MetroFramework.Controls.MetroComboBox();
             this.cmbSessionGroupEdit = new MetroFramework.Controls.MetroComboBox();
             this.cmbSessionLecturerEdit = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.btnSessionDelete = new MetroFramework.Controls.MetroButton();
+            this.btnSessionUpdate = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -407,14 +407,14 @@
             // 
             this.dgvSessions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSessions.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvSessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SessionID,
@@ -425,14 +425,14 @@
             this.GroupID,
             this.StudentCount,
             this.Duration});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSessions.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSessions.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvSessions.Location = new System.Drawing.Point(16, 102);
             this.dgvSessions.Name = "dgvSessions";
             this.dgvSessions.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -876,50 +876,6 @@
             this.tabPageSessionEdit.Text = "Edit/Delete Session";
             this.tabPageSessionEdit.UseVisualStyleBackColor = true;
             // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(306, 21);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(113, 25);
-            this.metroLabel7.TabIndex = 60;
-            this.metroLabel7.Text = "Edit Session";
-            this.metroLabel7.UseCustomBackColor = true;
-            // 
-            // btnSessionDelete
-            // 
-            this.btnSessionDelete.BackColor = System.Drawing.Color.DimGray;
-            this.btnSessionDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnSessionDelete.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSessionDelete.Location = new System.Drawing.Point(397, 358);
-            this.btnSessionDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSessionDelete.Name = "btnSessionDelete";
-            this.btnSessionDelete.Size = new System.Drawing.Size(150, 40);
-            this.btnSessionDelete.TabIndex = 59;
-            this.btnSessionDelete.Text = "Delete";
-            this.btnSessionDelete.UseCustomBackColor = true;
-            this.btnSessionDelete.UseCustomForeColor = true;
-            this.btnSessionDelete.UseSelectable = true;
-            // 
-            // btnSessionUpdate
-            // 
-            this.btnSessionUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSessionUpdate.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnSessionUpdate.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSessionUpdate.Location = new System.Drawing.Point(201, 358);
-            this.btnSessionUpdate.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSessionUpdate.Name = "btnSessionUpdate";
-            this.btnSessionUpdate.Size = new System.Drawing.Size(150, 40);
-            this.btnSessionUpdate.TabIndex = 46;
-            this.btnSessionUpdate.Text = "Update";
-            this.btnSessionUpdate.UseCustomBackColor = true;
-            this.btnSessionUpdate.UseCustomForeColor = true;
-            this.btnSessionUpdate.UseSelectable = true;
-            // 
             // lblClearSubsEdit
             // 
             this.lblClearSubsEdit.AutoSize = true;
@@ -930,6 +886,7 @@
             this.lblClearSubsEdit.Size = new System.Drawing.Size(32, 15);
             this.lblClearSubsEdit.TabIndex = 97;
             this.lblClearSubsEdit.Text = "Clear";
+            this.lblClearSubsEdit.Click += new System.EventHandler(this.lblClearSubsEdit_Click);
             // 
             // lblClearTagsEdit
             // 
@@ -941,6 +898,7 @@
             this.lblClearTagsEdit.Size = new System.Drawing.Size(32, 15);
             this.lblClearTagsEdit.TabIndex = 96;
             this.lblClearTagsEdit.Text = "Clear";
+            this.lblClearTagsEdit.Click += new System.EventHandler(this.lblClearTagsEdit_Click);
             // 
             // lblClearGroupsEdit
             // 
@@ -952,6 +910,7 @@
             this.lblClearGroupsEdit.Size = new System.Drawing.Size(32, 15);
             this.lblClearGroupsEdit.TabIndex = 95;
             this.lblClearGroupsEdit.Text = "Clear";
+            this.lblClearGroupsEdit.Click += new System.EventHandler(this.lblClearGroupsEdit_Click);
             // 
             // lblClearLecsEdit
             // 
@@ -963,6 +922,7 @@
             this.lblClearLecsEdit.Size = new System.Drawing.Size(32, 15);
             this.lblClearLecsEdit.TabIndex = 94;
             this.lblClearLecsEdit.Text = "Clear";
+            this.lblClearLecsEdit.Click += new System.EventHandler(this.lblClearLecsEdit_Click);
             // 
             // txtSelectedSubjectEdit
             // 
@@ -1039,6 +999,7 @@
             this.cmbSessionTagEdit.Size = new System.Drawing.Size(166, 29);
             this.cmbSessionTagEdit.TabIndex = 86;
             this.cmbSessionTagEdit.UseSelectable = true;
+            this.cmbSessionTagEdit.SelectedIndexChanged += new System.EventHandler(this.cmbSessionTagEdit_SelectedIndexChanged);
             // 
             // metroLabel13
             // 
@@ -1118,6 +1079,7 @@
             this.cmbSessionSubjectEdit.Size = new System.Drawing.Size(166, 29);
             this.cmbSessionSubjectEdit.TabIndex = 85;
             this.cmbSessionSubjectEdit.UseSelectable = true;
+            this.cmbSessionSubjectEdit.SelectedIndexChanged += new System.EventHandler(this.cmbSessionSubjectEdit_SelectedIndexChanged);
             // 
             // cmbSessionGroupEdit
             // 
@@ -1131,6 +1093,7 @@
             this.cmbSessionGroupEdit.Size = new System.Drawing.Size(166, 29);
             this.cmbSessionGroupEdit.TabIndex = 87;
             this.cmbSessionGroupEdit.UseSelectable = true;
+            this.cmbSessionGroupEdit.SelectedIndexChanged += new System.EventHandler(this.cmbSessionGroupEdit_SelectedIndexChanged);
             // 
             // cmbSessionLecturerEdit
             // 
@@ -1144,6 +1107,52 @@
             this.cmbSessionLecturerEdit.Size = new System.Drawing.Size(166, 29);
             this.cmbSessionLecturerEdit.TabIndex = 84;
             this.cmbSessionLecturerEdit.UseSelectable = true;
+            this.cmbSessionLecturerEdit.SelectedIndexChanged += new System.EventHandler(this.cmbSessionLecturerEdit_SelectedIndexChanged);
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel7.Location = new System.Drawing.Point(306, 21);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(113, 25);
+            this.metroLabel7.TabIndex = 60;
+            this.metroLabel7.Text = "Edit Session";
+            this.metroLabel7.UseCustomBackColor = true;
+            // 
+            // btnSessionDelete
+            // 
+            this.btnSessionDelete.BackColor = System.Drawing.Color.DimGray;
+            this.btnSessionDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnSessionDelete.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSessionDelete.Location = new System.Drawing.Point(397, 358);
+            this.btnSessionDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSessionDelete.Name = "btnSessionDelete";
+            this.btnSessionDelete.Size = new System.Drawing.Size(150, 40);
+            this.btnSessionDelete.TabIndex = 59;
+            this.btnSessionDelete.Text = "Delete";
+            this.btnSessionDelete.UseCustomBackColor = true;
+            this.btnSessionDelete.UseCustomForeColor = true;
+            this.btnSessionDelete.UseSelectable = true;
+            // 
+            // btnSessionUpdate
+            // 
+            this.btnSessionUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSessionUpdate.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnSessionUpdate.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSessionUpdate.Location = new System.Drawing.Point(201, 358);
+            this.btnSessionUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSessionUpdate.Name = "btnSessionUpdate";
+            this.btnSessionUpdate.Size = new System.Drawing.Size(150, 40);
+            this.btnSessionUpdate.TabIndex = 46;
+            this.btnSessionUpdate.Text = "Update";
+            this.btnSessionUpdate.UseCustomBackColor = true;
+            this.btnSessionUpdate.UseCustomForeColor = true;
+            this.btnSessionUpdate.UseSelectable = true;
+            this.btnSessionUpdate.Click += new System.EventHandler(this.btnSessionUpdate_Click);
             // 
             // Sessions
             // 
