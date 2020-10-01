@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -61,13 +61,9 @@
             this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.tabPageSessionAdd = new System.Windows.Forms.TabPage();
-            this.lblClearSubs = new MetroFramework.Controls.MetroLabel();
             this.lblClearTags = new MetroFramework.Controls.MetroLabel();
-            this.lblClearGroups = new MetroFramework.Controls.MetroLabel();
             this.lblClearLecs = new MetroFramework.Controls.MetroLabel();
             this.txtSelectedSubject = new System.Windows.Forms.TextBox();
-            this.txtSelectedGroups = new System.Windows.Forms.TextBox();
-            this.txtSelectedTags = new System.Windows.Forms.TextBox();
             this.txtSelectedLecturers = new System.Windows.Forms.TextBox();
             this.nmudSessionDuration = new System.Windows.Forms.NumericUpDown();
             this.nmudSessionNoStudents = new System.Windows.Forms.NumericUpDown();
@@ -85,13 +81,9 @@
             this.cmbSessionGroup = new MetroFramework.Controls.MetroComboBox();
             this.cmbSessionLecturer = new MetroFramework.Controls.MetroComboBox();
             this.tabPageSessionEdit = new System.Windows.Forms.TabPage();
-            this.lblClearSubsEdit = new MetroFramework.Controls.MetroLabel();
             this.lblClearTagsEdit = new MetroFramework.Controls.MetroLabel();
-            this.lblClearGroupsEdit = new MetroFramework.Controls.MetroLabel();
             this.lblClearLecsEdit = new MetroFramework.Controls.MetroLabel();
             this.txtSelectedSubjectEdit = new System.Windows.Forms.TextBox();
-            this.txtSelectedGroupsEdit = new System.Windows.Forms.TextBox();
-            this.txtSelectedTagsEdit = new System.Windows.Forms.TextBox();
             this.txtSelectedLecturersEdit = new System.Windows.Forms.TextBox();
             this.nmudSessionDurationEdit = new System.Windows.Forms.NumericUpDown();
             this.nmudSessionNoStudentsEdit = new System.Windows.Forms.NumericUpDown();
@@ -290,7 +282,7 @@
             this.tabControlLSessions.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlLSessions.Location = new System.Drawing.Point(131, 93);
             this.tabControlLSessions.Name = "tabControlLSessions";
-            this.tabControlLSessions.SelectedIndex = 1;
+            this.tabControlLSessions.SelectedIndex = 2;
             this.tabControlLSessions.Size = new System.Drawing.Size(793, 475);
             this.tabControlLSessions.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlLSessions.TabIndex = 65;
@@ -408,14 +400,14 @@
             // 
             this.dgvSessions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSessions.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle79.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle79.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle79.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle79.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle79.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle79.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle79;
             this.dgvSessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SessionID,
@@ -426,14 +418,14 @@
             this.GroupID,
             this.StudentCount,
             this.Duration});
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSessions.DefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle80.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle80.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle80.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle80.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle80.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle80.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSessions.DefaultCellStyle = dataGridViewCellStyle80;
             this.dgvSessions.Location = new System.Drawing.Point(16, 102);
             this.dgvSessions.Name = "dgvSessions";
             this.dgvSessions.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -531,12 +523,9 @@
             // 
             this.tabPageSessionAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPageSessionAdd.Controls.Add(this.txtSelectedLecturers);
-            this.tabPageSessionAdd.Controls.Add(this.lblClearSubs);
             this.tabPageSessionAdd.Controls.Add(this.lblClearTags);
-            this.tabPageSessionAdd.Controls.Add(this.lblClearGroups);
             this.tabPageSessionAdd.Controls.Add(this.lblClearLecs);
             this.tabPageSessionAdd.Controls.Add(this.txtSelectedSubject);
-            this.tabPageSessionAdd.Controls.Add(this.txtSelectedGroups);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionDuration);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionNoStudents);
             this.tabPageSessionAdd.Controls.Add(this.cmbSessionTag);
@@ -552,7 +541,6 @@
             this.tabPageSessionAdd.Controls.Add(this.cmbSessionSubject);
             this.tabPageSessionAdd.Controls.Add(this.cmbSessionGroup);
             this.tabPageSessionAdd.Controls.Add(this.cmbSessionLecturer);
-            this.tabPageSessionAdd.Controls.Add(this.txtSelectedTags);
             this.tabPageSessionAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSessionAdd.Location = new System.Drawing.Point(4, 37);
             this.tabPageSessionAdd.Name = "tabPageSessionAdd";
@@ -561,40 +549,16 @@
             this.tabPageSessionAdd.Text = "Add Session";
             this.tabPageSessionAdd.UseVisualStyleBackColor = true;
             // 
-            // lblClearSubs
-            // 
-            this.lblClearSubs.AutoSize = true;
-            this.lblClearSubs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblClearSubs.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblClearSubs.Location = new System.Drawing.Point(669, 222);
-            this.lblClearSubs.Name = "lblClearSubs";
-            this.lblClearSubs.Size = new System.Drawing.Size(32, 15);
-            this.lblClearSubs.TabIndex = 77;
-            this.lblClearSubs.Text = "Clear";
-            this.lblClearSubs.Visible = false;
-            // 
             // lblClearTags
             // 
             this.lblClearTags.AutoSize = true;
             this.lblClearTags.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblClearTags.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblClearTags.Location = new System.Drawing.Point(479, 73);
+            this.lblClearTags.Location = new System.Drawing.Point(509, 73);
             this.lblClearTags.Name = "lblClearTags";
             this.lblClearTags.Size = new System.Drawing.Size(144, 19);
             this.lblClearTags.TabIndex = 76;
             this.lblClearTags.Text = "Selected Lecturers List";
-            // 
-            // lblClearGroups
-            // 
-            this.lblClearGroups.AutoSize = true;
-            this.lblClearGroups.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblClearGroups.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblClearGroups.Location = new System.Drawing.Point(669, 177);
-            this.lblClearGroups.Name = "lblClearGroups";
-            this.lblClearGroups.Size = new System.Drawing.Size(32, 15);
-            this.lblClearGroups.TabIndex = 75;
-            this.lblClearGroups.Text = "Clear";
-            this.lblClearGroups.Visible = false;
             // 
             // lblClearLecs
             // 
@@ -603,7 +567,7 @@
             this.lblClearLecs.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblClearLecs.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lblClearLecs.ForeColor = System.Drawing.Color.Red;
-            this.lblClearLecs.Location = new System.Drawing.Point(581, 181);
+            this.lblClearLecs.Location = new System.Drawing.Point(611, 181);
             this.lblClearLecs.Name = "lblClearLecs";
             this.lblClearLecs.Size = new System.Drawing.Size(52, 15);
             this.lblClearLecs.TabIndex = 74;
@@ -614,38 +578,16 @@
             // txtSelectedSubject
             // 
             this.txtSelectedSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSelectedSubject.Location = new System.Drawing.Point(471, 208);
+            this.txtSelectedSubject.Location = new System.Drawing.Point(501, 208);
             this.txtSelectedSubject.Multiline = true;
             this.txtSelectedSubject.Name = "txtSelectedSubject";
             this.txtSelectedSubject.Size = new System.Drawing.Size(165, 32);
             this.txtSelectedSubject.TabIndex = 73;
             // 
-            // txtSelectedGroups
-            // 
-            this.txtSelectedGroups.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSelectedGroups.Location = new System.Drawing.Point(471, 163);
-            this.txtSelectedGroups.Multiline = true;
-            this.txtSelectedGroups.Name = "txtSelectedGroups";
-            this.txtSelectedGroups.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSelectedGroups.Size = new System.Drawing.Size(200, 29);
-            this.txtSelectedGroups.TabIndex = 72;
-            this.txtSelectedGroups.Visible = false;
-            // 
-            // txtSelectedTags
-            // 
-            this.txtSelectedTags.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSelectedTags.Location = new System.Drawing.Point(471, 118);
-            this.txtSelectedTags.Multiline = true;
-            this.txtSelectedTags.Name = "txtSelectedTags";
-            this.txtSelectedTags.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSelectedTags.Size = new System.Drawing.Size(200, 29);
-            this.txtSelectedTags.TabIndex = 71;
-            this.txtSelectedTags.Visible = false;
-            // 
             // txtSelectedLecturers
             // 
             this.txtSelectedLecturers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSelectedLecturers.Location = new System.Drawing.Point(471, 95);
+            this.txtSelectedLecturers.Location = new System.Drawing.Point(501, 95);
             this.txtSelectedLecturers.Multiline = true;
             this.txtSelectedLecturers.Name = "txtSelectedLecturers";
             this.txtSelectedLecturers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -655,7 +597,7 @@
             // 
             // nmudSessionDuration
             // 
-            this.nmudSessionDuration.Location = new System.Drawing.Point(281, 301);
+            this.nmudSessionDuration.Location = new System.Drawing.Point(301, 301);
             this.nmudSessionDuration.Margin = new System.Windows.Forms.Padding(2);
             this.nmudSessionDuration.Name = "nmudSessionDuration";
             this.nmudSessionDuration.Size = new System.Drawing.Size(112, 22);
@@ -664,7 +606,7 @@
             // 
             // nmudSessionNoStudents
             // 
-            this.nmudSessionNoStudents.Location = new System.Drawing.Point(281, 256);
+            this.nmudSessionNoStudents.Location = new System.Drawing.Point(301, 256);
             this.nmudSessionNoStudents.Margin = new System.Windows.Forms.Padding(2);
             this.nmudSessionNoStudents.Maximum = new decimal(new int[] {
             10000,
@@ -682,7 +624,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionTag.FormattingEnabled = true;
             this.cmbSessionTag.ItemHeight = 23;
-            this.cmbSessionTag.Location = new System.Drawing.Point(281, 118);
+            this.cmbSessionTag.Location = new System.Drawing.Point(301, 118);
             this.cmbSessionTag.Name = "cmbSessionTag";
             this.cmbSessionTag.PromptText = "Select Tag";
             this.cmbSessionTag.Size = new System.Drawing.Size(166, 29);
@@ -724,7 +666,7 @@
             // 
             this.metroLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(82, 72);
+            this.metroLabel1.Location = new System.Drawing.Point(102, 72);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(150, 30);
             this.metroLabel1.TabIndex = 32;
@@ -751,7 +693,7 @@
             // 
             this.metroLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(82, 162);
+            this.metroLabel2.Location = new System.Drawing.Point(102, 162);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(150, 30);
             this.metroLabel2.TabIndex = 33;
@@ -762,7 +704,7 @@
             // 
             this.metroLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(82, 117);
+            this.metroLabel4.Location = new System.Drawing.Point(102, 117);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(150, 30);
             this.metroLabel4.TabIndex = 34;
@@ -773,7 +715,7 @@
             // 
             this.metroLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(82, 207);
+            this.metroLabel3.Location = new System.Drawing.Point(102, 207);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(150, 30);
             this.metroLabel3.TabIndex = 35;
@@ -784,7 +726,7 @@
             // 
             this.metroLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.Location = new System.Drawing.Point(82, 252);
+            this.metroLabel6.Location = new System.Drawing.Point(102, 252);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(150, 30);
             this.metroLabel6.TabIndex = 36;
@@ -795,7 +737,7 @@
             // 
             this.metroLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(82, 297);
+            this.metroLabel5.Location = new System.Drawing.Point(102, 297);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(150, 30);
             this.metroLabel5.TabIndex = 37;
@@ -808,7 +750,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionSubject.FormattingEnabled = true;
             this.cmbSessionSubject.ItemHeight = 23;
-            this.cmbSessionSubject.Location = new System.Drawing.Point(281, 208);
+            this.cmbSessionSubject.Location = new System.Drawing.Point(301, 208);
             this.cmbSessionSubject.Name = "cmbSessionSubject";
             this.cmbSessionSubject.PromptText = "Select Subject";
             this.cmbSessionSubject.Size = new System.Drawing.Size(166, 29);
@@ -822,7 +764,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionGroup.FormattingEnabled = true;
             this.cmbSessionGroup.ItemHeight = 23;
-            this.cmbSessionGroup.Location = new System.Drawing.Point(281, 163);
+            this.cmbSessionGroup.Location = new System.Drawing.Point(301, 163);
             this.cmbSessionGroup.Name = "cmbSessionGroup";
             this.cmbSessionGroup.PromptText = "Select Group";
             this.cmbSessionGroup.Size = new System.Drawing.Size(166, 29);
@@ -835,7 +777,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionLecturer.FormattingEnabled = true;
             this.cmbSessionLecturer.ItemHeight = 23;
-            this.cmbSessionLecturer.Location = new System.Drawing.Point(281, 73);
+            this.cmbSessionLecturer.Location = new System.Drawing.Point(301, 73);
             this.cmbSessionLecturer.Name = "cmbSessionLecturer";
             this.cmbSessionLecturer.PromptText = "Select Lecturer";
             this.cmbSessionLecturer.Size = new System.Drawing.Size(166, 29);
@@ -846,13 +788,9 @@
             // tabPageSessionEdit
             // 
             this.tabPageSessionEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPageSessionEdit.Controls.Add(this.lblClearSubsEdit);
             this.tabPageSessionEdit.Controls.Add(this.lblClearTagsEdit);
-            this.tabPageSessionEdit.Controls.Add(this.lblClearGroupsEdit);
             this.tabPageSessionEdit.Controls.Add(this.lblClearLecsEdit);
             this.tabPageSessionEdit.Controls.Add(this.txtSelectedSubjectEdit);
-            this.tabPageSessionEdit.Controls.Add(this.txtSelectedGroupsEdit);
-            this.tabPageSessionEdit.Controls.Add(this.txtSelectedTagsEdit);
             this.tabPageSessionEdit.Controls.Add(this.txtSelectedLecturersEdit);
             this.tabPageSessionEdit.Controls.Add(this.nmudSessionDurationEdit);
             this.tabPageSessionEdit.Controls.Add(this.nmudSessionNoStudentsEdit);
@@ -877,97 +815,54 @@
             this.tabPageSessionEdit.Text = "Edit/Delete Session";
             this.tabPageSessionEdit.UseVisualStyleBackColor = true;
             // 
-            // lblClearSubsEdit
-            // 
-            this.lblClearSubsEdit.AutoSize = true;
-            this.lblClearSubsEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblClearSubsEdit.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblClearSubsEdit.Location = new System.Drawing.Point(669, 222);
-            this.lblClearSubsEdit.Name = "lblClearSubsEdit";
-            this.lblClearSubsEdit.Size = new System.Drawing.Size(32, 15);
-            this.lblClearSubsEdit.TabIndex = 97;
-            this.lblClearSubsEdit.Text = "Clear";
-            this.lblClearSubsEdit.Click += new System.EventHandler(this.lblClearSubsEdit_Click);
-            // 
             // lblClearTagsEdit
             // 
             this.lblClearTagsEdit.AutoSize = true;
             this.lblClearTagsEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblClearTagsEdit.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblClearTagsEdit.Location = new System.Drawing.Point(669, 132);
+            this.lblClearTagsEdit.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblClearTagsEdit.Location = new System.Drawing.Point(509, 73);
             this.lblClearTagsEdit.Name = "lblClearTagsEdit";
-            this.lblClearTagsEdit.Size = new System.Drawing.Size(32, 15);
+            this.lblClearTagsEdit.Size = new System.Drawing.Size(144, 19);
             this.lblClearTagsEdit.TabIndex = 96;
-            this.lblClearTagsEdit.Text = "Clear";
-            this.lblClearTagsEdit.Click += new System.EventHandler(this.lblClearTagsEdit_Click);
-            // 
-            // lblClearGroupsEdit
-            // 
-            this.lblClearGroupsEdit.AutoSize = true;
-            this.lblClearGroupsEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblClearGroupsEdit.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblClearGroupsEdit.Location = new System.Drawing.Point(669, 177);
-            this.lblClearGroupsEdit.Name = "lblClearGroupsEdit";
-            this.lblClearGroupsEdit.Size = new System.Drawing.Size(32, 15);
-            this.lblClearGroupsEdit.TabIndex = 95;
-            this.lblClearGroupsEdit.Text = "Clear";
-            this.lblClearGroupsEdit.Click += new System.EventHandler(this.lblClearGroupsEdit_Click);
+            this.lblClearTagsEdit.Text = "Selected Lecturers List";
             // 
             // lblClearLecsEdit
             // 
             this.lblClearLecsEdit.AutoSize = true;
             this.lblClearLecsEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblClearLecsEdit.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblClearLecsEdit.Location = new System.Drawing.Point(669, 87);
+            this.lblClearLecsEdit.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblClearLecsEdit.ForeColor = System.Drawing.Color.Red;
+            this.lblClearLecsEdit.Location = new System.Drawing.Point(611, 181);
             this.lblClearLecsEdit.Name = "lblClearLecsEdit";
-            this.lblClearLecsEdit.Size = new System.Drawing.Size(32, 15);
+            this.lblClearLecsEdit.Size = new System.Drawing.Size(52, 15);
             this.lblClearLecsEdit.TabIndex = 94;
-            this.lblClearLecsEdit.Text = "Clear";
+            this.lblClearLecsEdit.Text = "Clear list";
+            this.lblClearLecsEdit.UseCustomForeColor = true;
             this.lblClearLecsEdit.Click += new System.EventHandler(this.lblClearLecsEdit_Click);
             // 
             // txtSelectedSubjectEdit
             // 
             this.txtSelectedSubjectEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSelectedSubjectEdit.Location = new System.Drawing.Point(471, 208);
+            this.txtSelectedSubjectEdit.Location = new System.Drawing.Point(501, 208);
             this.txtSelectedSubjectEdit.Multiline = true;
             this.txtSelectedSubjectEdit.Name = "txtSelectedSubjectEdit";
-            this.txtSelectedSubjectEdit.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSelectedSubjectEdit.Size = new System.Drawing.Size(200, 29);
+            this.txtSelectedSubjectEdit.Size = new System.Drawing.Size(165, 32);
             this.txtSelectedSubjectEdit.TabIndex = 93;
-            // 
-            // txtSelectedGroupsEdit
-            // 
-            this.txtSelectedGroupsEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSelectedGroupsEdit.Location = new System.Drawing.Point(471, 163);
-            this.txtSelectedGroupsEdit.Multiline = true;
-            this.txtSelectedGroupsEdit.Name = "txtSelectedGroupsEdit";
-            this.txtSelectedGroupsEdit.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSelectedGroupsEdit.Size = new System.Drawing.Size(200, 29);
-            this.txtSelectedGroupsEdit.TabIndex = 92;
-            // 
-            // txtSelectedTagsEdit
-            // 
-            this.txtSelectedTagsEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSelectedTagsEdit.Location = new System.Drawing.Point(471, 118);
-            this.txtSelectedTagsEdit.Multiline = true;
-            this.txtSelectedTagsEdit.Name = "txtSelectedTagsEdit";
-            this.txtSelectedTagsEdit.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSelectedTagsEdit.Size = new System.Drawing.Size(200, 29);
-            this.txtSelectedTagsEdit.TabIndex = 91;
             // 
             // txtSelectedLecturersEdit
             // 
-            this.txtSelectedLecturersEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSelectedLecturersEdit.Location = new System.Drawing.Point(471, 73);
+            this.txtSelectedLecturersEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSelectedLecturersEdit.Location = new System.Drawing.Point(501, 95);
             this.txtSelectedLecturersEdit.Multiline = true;
             this.txtSelectedLecturersEdit.Name = "txtSelectedLecturersEdit";
             this.txtSelectedLecturersEdit.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSelectedLecturersEdit.Size = new System.Drawing.Size(200, 29);
+            this.txtSelectedLecturersEdit.Size = new System.Drawing.Size(180, 83);
             this.txtSelectedLecturersEdit.TabIndex = 90;
             // 
             // nmudSessionDurationEdit
             // 
-            this.nmudSessionDurationEdit.Location = new System.Drawing.Point(281, 301);
+            this.nmudSessionDurationEdit.Location = new System.Drawing.Point(301, 301);
             this.nmudSessionDurationEdit.Margin = new System.Windows.Forms.Padding(2);
             this.nmudSessionDurationEdit.Name = "nmudSessionDurationEdit";
             this.nmudSessionDurationEdit.Size = new System.Drawing.Size(112, 22);
@@ -976,7 +871,7 @@
             // 
             // nmudSessionNoStudentsEdit
             // 
-            this.nmudSessionNoStudentsEdit.Location = new System.Drawing.Point(281, 256);
+            this.nmudSessionNoStudentsEdit.Location = new System.Drawing.Point(301, 256);
             this.nmudSessionNoStudentsEdit.Margin = new System.Windows.Forms.Padding(2);
             this.nmudSessionNoStudentsEdit.Maximum = new decimal(new int[] {
             10000,
@@ -994,7 +889,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionTagEdit.FormattingEnabled = true;
             this.cmbSessionTagEdit.ItemHeight = 23;
-            this.cmbSessionTagEdit.Location = new System.Drawing.Point(281, 118);
+            this.cmbSessionTagEdit.Location = new System.Drawing.Point(301, 118);
             this.cmbSessionTagEdit.Name = "cmbSessionTagEdit";
             this.cmbSessionTagEdit.PromptText = "Select Tag";
             this.cmbSessionTagEdit.Size = new System.Drawing.Size(166, 29);
@@ -1006,7 +901,7 @@
             // 
             this.metroLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel13.Location = new System.Drawing.Point(82, 72);
+            this.metroLabel13.Location = new System.Drawing.Point(102, 72);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(150, 30);
             this.metroLabel13.TabIndex = 78;
@@ -1017,7 +912,7 @@
             // 
             this.metroLabel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel14.Location = new System.Drawing.Point(82, 162);
+            this.metroLabel14.Location = new System.Drawing.Point(102, 162);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(150, 30);
             this.metroLabel14.TabIndex = 79;
@@ -1028,7 +923,7 @@
             // 
             this.metroLabel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel19.Location = new System.Drawing.Point(82, 117);
+            this.metroLabel19.Location = new System.Drawing.Point(102, 117);
             this.metroLabel19.Name = "metroLabel19";
             this.metroLabel19.Size = new System.Drawing.Size(150, 30);
             this.metroLabel19.TabIndex = 80;
@@ -1039,7 +934,7 @@
             // 
             this.metroLabel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel20.Location = new System.Drawing.Point(82, 207);
+            this.metroLabel20.Location = new System.Drawing.Point(102, 207);
             this.metroLabel20.Name = "metroLabel20";
             this.metroLabel20.Size = new System.Drawing.Size(150, 30);
             this.metroLabel20.TabIndex = 81;
@@ -1050,7 +945,7 @@
             // 
             this.metroLabel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel21.Location = new System.Drawing.Point(82, 252);
+            this.metroLabel21.Location = new System.Drawing.Point(102, 252);
             this.metroLabel21.Name = "metroLabel21";
             this.metroLabel21.Size = new System.Drawing.Size(150, 30);
             this.metroLabel21.TabIndex = 82;
@@ -1061,7 +956,7 @@
             // 
             this.metroLabel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel22.Location = new System.Drawing.Point(82, 297);
+            this.metroLabel22.Location = new System.Drawing.Point(102, 297);
             this.metroLabel22.Name = "metroLabel22";
             this.metroLabel22.Size = new System.Drawing.Size(150, 30);
             this.metroLabel22.TabIndex = 83;
@@ -1074,7 +969,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionSubjectEdit.FormattingEnabled = true;
             this.cmbSessionSubjectEdit.ItemHeight = 23;
-            this.cmbSessionSubjectEdit.Location = new System.Drawing.Point(281, 208);
+            this.cmbSessionSubjectEdit.Location = new System.Drawing.Point(301, 208);
             this.cmbSessionSubjectEdit.Name = "cmbSessionSubjectEdit";
             this.cmbSessionSubjectEdit.PromptText = "Select Subject";
             this.cmbSessionSubjectEdit.Size = new System.Drawing.Size(166, 29);
@@ -1088,13 +983,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionGroupEdit.FormattingEnabled = true;
             this.cmbSessionGroupEdit.ItemHeight = 23;
-            this.cmbSessionGroupEdit.Location = new System.Drawing.Point(281, 163);
+            this.cmbSessionGroupEdit.Location = new System.Drawing.Point(301, 163);
             this.cmbSessionGroupEdit.Name = "cmbSessionGroupEdit";
             this.cmbSessionGroupEdit.PromptText = "Select Group";
             this.cmbSessionGroupEdit.Size = new System.Drawing.Size(166, 29);
             this.cmbSessionGroupEdit.TabIndex = 87;
             this.cmbSessionGroupEdit.UseSelectable = true;
-            this.cmbSessionGroupEdit.SelectedIndexChanged += new System.EventHandler(this.cmbSessionGroupEdit_SelectedIndexChanged);
             // 
             // cmbSessionLecturerEdit
             // 
@@ -1102,7 +996,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbSessionLecturerEdit.FormattingEnabled = true;
             this.cmbSessionLecturerEdit.ItemHeight = 23;
-            this.cmbSessionLecturerEdit.Location = new System.Drawing.Point(281, 73);
+            this.cmbSessionLecturerEdit.Location = new System.Drawing.Point(301, 73);
             this.cmbSessionLecturerEdit.Name = "cmbSessionLecturerEdit";
             this.cmbSessionLecturerEdit.PromptText = "Select Lecturer";
             this.cmbSessionLecturerEdit.Size = new System.Drawing.Size(166, 29);
@@ -1252,8 +1146,6 @@
         private System.Windows.Forms.NumericUpDown nmudSessionDuration;
         private System.Windows.Forms.TextBox txtSelectedLecturers;
         private System.Windows.Forms.TextBox txtSelectedSubject;
-        private System.Windows.Forms.TextBox txtSelectedGroups;
-        private System.Windows.Forms.TextBox txtSelectedTags;
         private MetroFramework.Controls.MetroLabel metroLabel16;
         private MetroFramework.Controls.MetroComboBox cmbSesFilterGroup;
         private System.Windows.Forms.DataGridViewTextBoxColumn SessionID;
@@ -1265,16 +1157,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
         private MetroFramework.Controls.MetroLabel lblClearLecs;
-        private MetroFramework.Controls.MetroLabel lblClearSubs;
         private MetroFramework.Controls.MetroLabel lblClearTags;
-        private MetroFramework.Controls.MetroLabel lblClearGroups;
-        private MetroFramework.Controls.MetroLabel lblClearSubsEdit;
         private MetroFramework.Controls.MetroLabel lblClearTagsEdit;
-        private MetroFramework.Controls.MetroLabel lblClearGroupsEdit;
         private MetroFramework.Controls.MetroLabel lblClearLecsEdit;
         private System.Windows.Forms.TextBox txtSelectedSubjectEdit;
-        private System.Windows.Forms.TextBox txtSelectedGroupsEdit;
-        private System.Windows.Forms.TextBox txtSelectedTagsEdit;
         private System.Windows.Forms.TextBox txtSelectedLecturersEdit;
         private System.Windows.Forms.NumericUpDown nmudSessionDurationEdit;
         private System.Windows.Forms.NumericUpDown nmudSessionNoStudentsEdit;

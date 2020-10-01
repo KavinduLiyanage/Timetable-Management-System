@@ -178,11 +178,6 @@ namespace TimetableManagementSystem.Sessions
                     cmbSessionGroup.Items.Add(dr["GenGrpNum"].ToString());
                 }
                 
-                foreach (DataRow dr in dtgroups.Rows)
-                {
-                    cmbSessionGroupEdit.Items.Add(dr["GenGrpNum"].ToString() + " ");
-                }
-                
                 con.Close();
             }       
         }
@@ -351,12 +346,12 @@ namespace TimetableManagementSystem.Sessions
             txtSelectedLecturers.Clear();
 
             cmbSessionTag.SelectedIndex = -1;
-            tags = "";
-            txtSelectedTags.Clear();
+            //tags = "";
+            //txtSelectedTags.Clear();
 
             cmbSessionGroup.SelectedIndex = -1;
-            groups = "";
-            txtSelectedGroups.Clear();
+            //groups = "";
+            //txtSelectedGroups.Clear();
 
             cmbSessionSubject.SelectedIndex = -1;
             txtSelectedSubject.Clear();
@@ -539,6 +534,11 @@ namespace TimetableManagementSystem.Sessions
         private void dgvSessions_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //ClearFieldsAfterUpdate();
+
+            cmbSessionLecturerEdit.SelectedIndex = -1;
+            lecturersEdit = "";
+            txtSelectedLecturersEdit.Clear();
+
             SID = Convert.ToInt32(dgvSessions.SelectedRows[0].Cells[0].Value);
 
             txtSelectedLecturersEdit.Text = dgvSessions.SelectedRows[0].Cells[1].Value.ToString();
@@ -559,29 +559,14 @@ namespace TimetableManagementSystem.Sessions
             txtSelectedSubjectEdit.Text = dgvSessions.SelectedRows[0].Cells[2].Value.ToString();
             cmbSessionSubjectEdit.SelectedItem = dgvSessions.SelectedRows[0].Cells[3].Value;
 
-            tagEdit = dgvSessions.SelectedRows[0].Cells[4].Value.ToString();
+            //tagEdit = dgvSessions.SelectedRows[0].Cells[4].Value.ToString();
 
-            if (tagEdit.Equals("Practical "))
-            {
-                cmbSessionTagEdit.SelectedItem = "Practical";
-            }
-            else if (tagEdit.Equals("Lecture "))
-            {
-                cmbSessionTagEdit.SelectedItem = "Lecture";
-            }
-            else if (tagEdit.Equals("Tutorial "))
-            {
-                cmbSessionTagEdit.SelectedItem = "Tutorial";
-            }
-            else
-            {
-                cmbSessionTagEdit.SelectedIndex = -1;
-            }
+            cmbSessionTagEdit.SelectedItem = dgvSessions.SelectedRows[0].Cells[4].Value;
+            
+            //txtSelectedTagsEdit.Text = dgvSessions.SelectedRows[0].Cells[4].Value.ToString();
+            //tagsEdit = dgvSessions.SelectedRows[0].Cells[4].Value.ToString();
 
-            txtSelectedTagsEdit.Text = dgvSessions.SelectedRows[0].Cells[4].Value.ToString();
-            tagsEdit = dgvSessions.SelectedRows[0].Cells[4].Value.ToString();
-
-            txtSelectedGroupsEdit.Text = dgvSessions.SelectedRows[0].Cells[5].Value.ToString();
+            //txtSelectedGroupsEdit.Text = dgvSessions.SelectedRows[0].Cells[5].Value.ToString();
             cmbSessionGroupEdit.SelectedItem = dgvSessions.SelectedRows[0].Cells[5].Value;
 
             nmudSessionNoStudentsEdit.Value = Convert.ToInt32(dgvSessions.SelectedRows[0].Cells[6].Value);
@@ -589,7 +574,6 @@ namespace TimetableManagementSystem.Sessions
 
             tabControlLSessions.SelectedTab = tabPageSessionEdit;
 
-            MessageBox.Show("lecturersEdit : " + lecturersEdit, "Successfully");
         }
 
         private void cmbSessionLecturerEdit_SelectedIndexChanged(object sender, EventArgs e)
@@ -601,16 +585,74 @@ namespace TimetableManagementSystem.Sessions
 
         private void cmbSessionTagEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tagsEdit = tagsEdit + cmbSessionTagEdit.Text + " ";
+            //tagsEdit = tagsEdit + cmbSessionTagEdit.Text + " ";
 
-            txtSelectedTagsEdit.Text = tagsEdit;
+            //txtSelectedTagsEdit.Text = tagsEdit;
+
+            GetGroupsToUpdate();
+            cmbSessionGroupEdit.SelectedIndex = -1;
         }
 
         private void cmbSessionGroupEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
-            groupsEdit = groupsEdit + cmbSessionGroupEdit.Text;
+            //groupsEdit = groupsEdit + cmbSessionGroupEdit.Text;
 
-            txtSelectedGroupsEdit.Text = groupsEdit;
+            //txtSelectedGroupsEdit.Text = groupsEdit;
+        }
+
+        public void GetGroupsToUpdate()
+        {
+
+            if (cmbSessionTagEdit.Text == "Practical")
+            {
+                con.Open();
+                cmbSessionGroupEdit.Items.Clear();
+                SqlCommand cmd2 = con.CreateCommand();
+
+                cmd2.CommandType = CommandType.Text;
+
+                cmd2.CommandText = "SELECT GenSubGrpNum FROM GenSubGroupNumber order by GenSubGrpNum";
+
+                cmd2.ExecuteNonQuery();
+
+                DataTable dtgroups = new DataTable();
+
+                SqlDataAdapter dagroups = new SqlDataAdapter(cmd2);
+
+                dagroups.Fill(dtgroups);
+
+                foreach (DataRow dr in dtgroups.Rows)
+                {
+                    cmbSessionGroupEdit.Items.Add(dr["GenSubGrpNum"].ToString());
+                }
+
+                con.Close();
+            }
+            else
+            {
+                con.Open();
+                cmbSessionGroupEdit.Items.Clear();
+                SqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "SELECT GenGrpNum FROM GenGroupNumber order by GenGrpNum";
+
+                cmd.ExecuteNonQuery();
+
+                DataTable dtgroups = new DataTable();
+
+                SqlDataAdapter dagroups = new SqlDataAdapter(cmd);
+
+                dagroups.Fill(dtgroups);
+
+                foreach (DataRow dr in dtgroups.Rows)
+                {
+                    cmbSessionGroupEdit.Items.Add(dr["GenGrpNum"].ToString());
+                }
+
+                con.Close();
+            }
         }
 
         private void cmbSessionSubjectEdit_SelectedIndexChanged(object sender, EventArgs e)
@@ -644,12 +686,12 @@ namespace TimetableManagementSystem.Sessions
             txtSelectedLecturersEdit.Clear();
 
             cmbSessionTagEdit.SelectedIndex = -1;
-            tagsEdit = "";
-            txtSelectedTagsEdit.Clear();
+            //tagsEdit = "";
+            //txtSelectedTagsEdit.Clear();
 
             cmbSessionGroupEdit.SelectedIndex = -1;
-            groupsEdit = "";
-            txtSelectedGroupsEdit.Clear();
+            //groupsEdit = "";
+            //txtSelectedGroupsEdit.Clear();
 
             cmbSessionSubjectEdit.SelectedIndex = -1;
             txtSelectedSubjectEdit.Clear();
@@ -671,22 +713,22 @@ namespace TimetableManagementSystem.Sessions
 
         private void lblClearTagsEdit_Click(object sender, EventArgs e)
         {
-            cmbSessionTagEdit.SelectedIndex = -1;
-            txtSelectedTagsEdit.Clear();
-            tagsEdit = "";
+            //cmbSessionTagEdit.SelectedIndex = -1;
+            //txtSelectedTagsEdit.Clear();
+            //tagsEdit = "";
         }
 
         private void lblClearGroupsEdit_Click(object sender, EventArgs e)
         {
-            cmbSessionGroupEdit.SelectedIndex = -1;
-            txtSelectedGroupsEdit.Clear();
-            groupsEdit = "";
+            //cmbSessionGroupEdit.SelectedIndex = -1;
+            //txtSelectedGroupsEdit.Clear();
+            //groupsEdit = "";
         }
 
         private void lblClearSubsEdit_Click(object sender, EventArgs e)
         {
-            cmbSessionSubjectEdit.SelectedIndex = -1;
-            txtSelectedSubjectEdit.Clear();
+            //cmbSessionSubjectEdit.SelectedIndex = -1;
+            //txtSelectedSubjectEdit.Clear();
         }
 
         private void btnSessionUpdate_Click(object sender, EventArgs e)
@@ -701,8 +743,8 @@ namespace TimetableManagementSystem.Sessions
                     cmd.Parameters.AddWithValue("@Lecturer", lecturersEdit);
                     cmd.Parameters.AddWithValue("@Subject", txtSelectedSubjectEdit.Text);
                     cmd.Parameters.AddWithValue("@SubjectCode", cmbSessionSubjectEdit.Text);
-                    cmd.Parameters.AddWithValue("@Tag", tagsEdit);
-                    cmd.Parameters.AddWithValue("@GroupID", groupsEdit);
+                    cmd.Parameters.AddWithValue("@Tag", cmbSessionTagEdit.Text);
+                    cmd.Parameters.AddWithValue("@GroupID", cmbSessionGroupEdit.Text);
                     cmd.Parameters.AddWithValue("@StudentCount", nmudSessionNoStudentsEdit.Text);
                     cmd.Parameters.AddWithValue("@Duration", nmudSessionDurationEdit.Text);
 
@@ -730,7 +772,7 @@ namespace TimetableManagementSystem.Sessions
 
         private bool IsValidUpdate()
         {
-            if ((lecturersEdit == string.Empty) || (tagsEdit == string.Empty) || (groupsEdit == string.Empty) ||
+            if ((lecturersEdit == string.Empty) || (cmbSessionTagEdit.Text == string.Empty) || (cmbSessionGroupEdit.Text == string.Empty) ||
                 (txtSelectedSubjectEdit.Text == string.Empty) || (cmbSessionSubjectEdit.Text == string.Empty) ||
                 (Int32.Parse(nmudSessionNoStudentsEdit.Text) == 0) || (Int32.Parse(nmudSessionDurationEdit.Text) == 0))
             {
@@ -781,11 +823,31 @@ namespace TimetableManagementSystem.Sessions
                     tabControlLSessions.SelectedTab = tabPageSessionView;
                 }
             }
-
+            /*
             if (tabControlLSessions.SelectedTab.Name == "tabPageSessionView")
             {
-                ClearFieldsAfterUpdate();
+                cmbSessionLecturerEdit.SelectedIndex = -1;
+                lecturersEdit = "";
+                txtSelectedLecturersEdit.Clear();
+
+                cmbSessionTagEdit.SelectedIndex = -1;
+                //tagsEdit = "";
+                //txtSelectedTagsEdit.Clear();
+
+                cmbSessionGroupEdit.SelectedIndex = -1;
+                //groupsEdit = "";
+                //txtSelectedGroupsEdit.Clear();
+
+                cmbSessionSubjectEdit.SelectedIndex = -1;
+                txtSelectedSubjectEdit.Clear();
+
+                nmudSessionNoStudentsEdit.Value = 0;
+
+                nmudSessionDurationEdit.Value = 0;
+
+                SID = 0;
             }
+            */
         }
 
 
@@ -875,5 +937,7 @@ namespace TimetableManagementSystem.Sessions
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
         }
+
+        
     }
 }
