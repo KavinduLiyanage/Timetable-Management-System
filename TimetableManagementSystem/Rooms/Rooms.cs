@@ -297,12 +297,13 @@ namespace TimetableManagementSystem.Rooms
         private void session_cmb_DropDown(object sender, EventArgs e)
         {
             session_cmb.Items.Clear();
-            SqlDataAdapter sda = new SqlDataAdapter("select SessionID from Sessions ", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select SessionID,Lecturer,Subject,Tag from Sessions ", con);
             DataTable dataTable = new DataTable();
             sda.Fill(dataTable);
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                session_cmb.Items.Add(dataRow["SessionID"].ToString());
+                //session_cmb.Items.Add(dataRow["SessionID"].ToString());
+                session_cmb.Items.Add(dataRow["SessionID"].ToString() + " - " + dataRow["Lecturer"].ToString() + " - " + dataRow["Subject"].ToString() + " - " + dataRow["Tag"].ToString());
             }
         }
 
