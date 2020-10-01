@@ -28,6 +28,7 @@ namespace TimetableManagementSystem.Subjects
         private void AddSubject_Load(object sender, EventArgs e)
         {
             GetSubjects();
+            tabControlSubjects.SelectedTab = tabPageSubView;
         }
 
         private void GetSubjects()
@@ -89,7 +90,9 @@ namespace TimetableManagementSystem.Subjects
 
         private bool IsValid()
         {
-            if (txtSubCode.Text == string.Empty) 
+            if ((txtSubCode.Text == string.Empty) || (txtSubName.Text == string.Empty)
+                || (cmbSubYear.Text == string.Empty) || (cmbSubSem.Text == string.Empty) || (cmbSubLecHours.Text == string.Empty)
+                || (cmbSubTuteHours.Text == string.Empty) || (cmbSubLabHours.Text == string.Empty) || (cmbSubEvaHours.Text == string.Empty))
             {
                 MessageBox.Show("Fill the all fields", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -123,35 +126,51 @@ namespace TimetableManagementSystem.Subjects
         {
             if (SubCodeValue > 0)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Subjects SET SubCode = @SubCodenew, SubName = @SubName, SubYear = @SubYear, SubSem = @SubSem, SubLecHours = @SubLecHours, SubTuteHours = @SubTuteHours, SubLabHours = @SubLabHours, SubEvaHours = @SubEvaHours WHERE SubCode = @SubCode", con);
-                cmd.CommandType = CommandType.Text;
+                if (IsValidUpdate())
+                {
+                    SqlCommand cmd = new SqlCommand("UPDATE Subjects SET SubCode = @SubCodenew, SubName = @SubName, SubYear = @SubYear, SubSem = @SubSem, SubLecHours = @SubLecHours, SubTuteHours = @SubTuteHours, SubLabHours = @SubLabHours, SubEvaHours = @SubEvaHours WHERE SubCode = @SubCode", con);
+                    cmd.CommandType = CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@SubCodenew", txtSubCodeEdit.Text);
-                cmd.Parameters.AddWithValue("@SubName", txtSubNameEdit.Text);
-                cmd.Parameters.AddWithValue("@SubYear", cmbSubYearEdit.Text);
-                cmd.Parameters.AddWithValue("@SubSem", cmbSubSemEdit.Text);
-                cmd.Parameters.AddWithValue("@SubLecHours", cmbSubLecHoursEdit.Text);
-                cmd.Parameters.AddWithValue("@SubTuteHours", cmbSubTuteHoursEdit.Text);
-                cmd.Parameters.AddWithValue("@SubLabHours", cmbSubLabHoursEdit.Text);
-                cmd.Parameters.AddWithValue("@SubEvaHours", cmbSubEvaHoursEdit.Text);
-                cmd.Parameters.AddWithValue("@SubCode", this.SubCode);
+                    cmd.Parameters.AddWithValue("@SubCodenew", txtSubCodeEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubName", txtSubNameEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubYear", cmbSubYearEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubSem", cmbSubSemEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubLecHours", cmbSubLecHoursEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubTuteHours", cmbSubTuteHoursEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubLabHours", cmbSubLabHoursEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubEvaHours", cmbSubEvaHoursEdit.Text);
+                    cmd.Parameters.AddWithValue("@SubCode", this.SubCode);
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                MessageBox.Show("Subject Details Updated", "Successfully");
+                    MessageBox.Show("Subject Details Updated", "Successfully");
 
-                GetSubjects();
+                    GetSubjects();
 
-                ClearFieldsAfterUpdate();
+                    ClearFieldsAfterUpdate();
 
-                tabControlSubjects.SelectedTab = tabPageSubView;
+                    tabControlSubjects.SelectedTab = tabPageSubView;
+                }             
             }
             else
             {
                 MessageBox.Show("Please Select a Subject to Update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool IsValidUpdate()
+        {
+            if ((txtSubCodeEdit.Text == string.Empty) || (txtSubNameEdit.Text == string.Empty)
+                || (cmbSubYearEdit.Text == string.Empty) || (cmbSubSemEdit.Text == string.Empty) || (cmbSubLecHoursEdit.Text == string.Empty)
+                || (cmbSubTuteHoursEdit.Text == string.Empty) || (cmbSubLabHoursEdit.Text == string.Empty) || (cmbSubEvaHoursEdit.Text == string.Empty))
+            {
+                MessageBox.Show("Fill the all fields", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
 
         private void ClearFieldsAfterUpdate()
@@ -202,32 +221,63 @@ namespace TimetableManagementSystem.Subjects
 
         private void txtSubSearch_TextChanged(object sender, EventArgs e)
         {
-            cmbSubFilterYear.SelectedIndex = -1;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Subjects where SubName like '%" + txtSubSearch.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvSubjects.DataSource = dt;
-            con.Close();
+
+            if (txtSubSearch.Text != "")
+            {
+                cmbSubFilterYear.SelectedIndex = -1;
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Subjects where SubName like '%" + txtSubSearch.Text + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dgvSubjects.DataSource = dt;
+                con.Close();
+            }
+            else if(txtSubSearch.Text == "")
+            {
+                GetSubjects();
+            }
         }
 
         private void cmbSubFilterYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtSubSearch.Clear();
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Subjects where SubYear like '%" + cmbSubFilterYear.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvSubjects.DataSource = dt;
-            con.Close();
+
+            if (cmbSubFilterYear.Text != "")
+            {
+                txtSubSearch.Clear();
+
+                if (cmbSubFilterYear.Text == "Clear")
+                {
+                    cmbSubFilterYear.SelectedIndex = -1;
+                }
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Subjects where SubYear like '%" + cmbSubFilterYear.Text + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dgvSubjects.DataSource = dt;
+                con.Close();
+            }          
+        }
+
+        private void tabControlSubjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControlSubjects.SelectedTab.Name == "tabPageSubEdit")
+            {
+                if (SubCodeValue == 0)
+                {
+                    MessageBox.Show("Please select a subject in subjects list ", "No subject selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tabControlSubjects.SelectedTab = tabPageSubView;
+                }
+            }
         }
 
         //--------------------Header Buttons--------------------

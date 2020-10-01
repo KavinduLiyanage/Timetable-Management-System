@@ -17,7 +17,6 @@ namespace TimetableManagementSystem.Lecturers
         public AddLecturer()
         {
             InitializeComponent();
-
         }
 
         SqlConnection con = Config.con;
@@ -28,6 +27,7 @@ namespace TimetableManagementSystem.Lecturers
         private void AddLecturer_Load(object sender, EventArgs e)
         {
             GetLecturers();
+            tabControlLecturers.SelectedTab = tabPageLecView;
         }
 
         private void GetLecturers()
@@ -141,8 +141,9 @@ namespace TimetableManagementSystem.Lecturers
 
         private bool IsValid()
         {
-            if ((txtLecName.Text == string.Empty) && (cmbLecFac.Text == string.Empty)
-                && (cmbLecCenter.Text == string.Empty) && (cmbLecBuilding.Text == string.Empty) && (cmbLecLevel.Text == string.Empty))
+            if ((txtLecName.Text == string.Empty) || (cmbLecFac.Text == string.Empty)
+                || (cmbLecDepartment.Text == string.Empty) || (cmbLecCenter.Text == string.Empty) || (cmbLecBuilding.Text == string.Empty)
+                || (cmbLecLevel.Text == string.Empty))
             {
                 MessageBox.Show("Fill the all fields", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -173,63 +174,79 @@ namespace TimetableManagementSystem.Lecturers
         {
             if (LecturerID > 0)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Lecturers SET LecName = @LecName, LecFaculty = @LecFaculty, LecDepartment = @LecDepartment, LecCenter = @LecCenter, LecBuilding = @LecBuilding, LecLevel = @LecLevel, LecRank = @LecRank WHERE LecturerID = @LecturerID", con);
-                cmd.CommandType = CommandType.Text;
-
-                cmd.Parameters.AddWithValue("@LecName", txtLecNameEdit.Text);
-                cmd.Parameters.AddWithValue("@lecfaculty", cmbLecFacEdit.Text);
-                cmd.Parameters.AddWithValue("@lecdepartment", cmbLecDepartmentEdit.Text);
-                cmd.Parameters.AddWithValue("@leccenter", cmbLecCenterEdit.Text);
-                cmd.Parameters.AddWithValue("@lecbuilding", cmbLecBuildingEdit.Text);
-                cmd.Parameters.AddWithValue("@leclevel", cmbLecLevelEdit.Text);
-
-                if (cmbLecLevelEdit.Text.Equals("Professor"))
+                if (IsValidUpdate())
                 {
-                    LecturerRank = 1;
-                }
-                else if (cmbLecLevelEdit.Text.Equals("Assistant Professor"))
-                {
-                    LecturerRank = 2;
-                }
-                else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer(HG)"))
-                {
-                    LecturerRank = 3;
-                }
-                else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer"))
-                {
-                    LecturerRank = 4;
-                }
-                else if (cmbLecLevelEdit.Text.Equals("Lecturer"))
-                {
-                    LecturerRank = 5;
-                }
-                else if (cmbLecLevelEdit.Text.Equals("Assistant Lecturer"))
-                {
-                    LecturerRank = 6;
-                }
-                else
-                {
-                    LecturerRank = 7;
-                }
-                cmd.Parameters.AddWithValue("@lecrank", LecturerRank+"."+ this.LecturerID);
-                cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
+                    SqlCommand cmd = new SqlCommand("UPDATE Lecturers SET LecName = @LecName, LecFaculty = @LecFaculty, LecDepartment = @LecDepartment, LecCenter = @LecCenter, LecBuilding = @LecBuilding, LecLevel = @LecLevel, LecRank = @LecRank WHERE LecturerID = @LecturerID", con);
+                    cmd.CommandType = CommandType.Text;
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    cmd.Parameters.AddWithValue("@LecName", txtLecNameEdit.Text);
+                    cmd.Parameters.AddWithValue("@lecfaculty", cmbLecFacEdit.Text);
+                    cmd.Parameters.AddWithValue("@lecdepartment", cmbLecDepartmentEdit.Text);
+                    cmd.Parameters.AddWithValue("@leccenter", cmbLecCenterEdit.Text);
+                    cmd.Parameters.AddWithValue("@lecbuilding", cmbLecBuildingEdit.Text);
+                    cmd.Parameters.AddWithValue("@leclevel", cmbLecLevelEdit.Text);
 
-                MessageBox.Show("Lecturer Details Updated", "Successfully");
+                    if (cmbLecLevelEdit.Text.Equals("Professor"))
+                    {
+                        LecturerRank = 1;
+                    }
+                    else if (cmbLecLevelEdit.Text.Equals("Assistant Professor"))
+                    {
+                        LecturerRank = 2;
+                    }
+                    else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer(HG)"))
+                    {
+                        LecturerRank = 3;
+                    }
+                    else if (cmbLecLevelEdit.Text.Equals("Senior Lecturer"))
+                    {
+                        LecturerRank = 4;
+                    }
+                    else if (cmbLecLevelEdit.Text.Equals("Lecturer"))
+                    {
+                        LecturerRank = 5;
+                    }
+                    else if (cmbLecLevelEdit.Text.Equals("Assistant Lecturer"))
+                    {
+                        LecturerRank = 6;
+                    }
+                    else
+                    {
+                        LecturerRank = 7;
+                    }
+                    cmd.Parameters.AddWithValue("@lecrank", LecturerRank + "." + this.LecturerID);
+                    cmd.Parameters.AddWithValue("@LecturerID", this.LecturerID);
 
-                GetLecturers();
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                ClearFieldsAfterUpdate();
+                    MessageBox.Show("Lecturer Details Updated", "Successfully");
 
-                tabControlLecturers.SelectedTab = tabPageLecView;
+                    GetLecturers();
+
+                    ClearFieldsAfterUpdate();
+
+                    tabControlLecturers.SelectedTab = tabPageLecView;
+                }       
             }
             else
             {
                 MessageBox.Show("Please Select a lecturer to Update ", "Select?", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool IsValidUpdate()
+        {
+            if ((txtLecNameEdit.Text == string.Empty) || (cmbLecFacEdit.Text == string.Empty)
+                || (cmbLecDepartmentEdit.Text == string.Empty) || (cmbLecCenterEdit.Text == string.Empty) || (cmbLecBuildingEdit.Text == string.Empty)
+                || (cmbLecLevelEdit.Text == string.Empty))
+            {
+                MessageBox.Show("Fill the all fields", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
 
         private void ClearFieldsAfterUpdate()
@@ -367,46 +384,84 @@ namespace TimetableManagementSystem.Lecturers
             con.Close();
             */
 
-            cmbLecFilterFaculty.SelectedIndex = -1;
-            cmbLecFilterLevel.SelectedIndex = -1;
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Lecturers WHERE LecName LIKE '%" + txtLecSearch.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dgvLectures.DataSource = dt;
-            con.Close();
+            if (txtLecSearch.Text != "")
+            {
+                cmbLecFilterFaculty.SelectedIndex = -1;
+                cmbLecFilterLevel.SelectedIndex = -1;
+
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Lecturers WHERE LecName LIKE '%" + txtLecSearch.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dgvLectures.DataSource = dt;
+                con.Close();
+            }
+            else if (txtLecSearch.Text == "")
+            {
+                GetLecturers();
+            }
         }
 
         private void cmbLecFilterFaculty_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtLecSearch.Clear();
-            cmbLecFilterLevel.SelectedIndex = -1;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Lecturers where LecFaculty like '%" + cmbLecFilterFaculty.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvLectures.DataSource = dt;
-            con.Close();
+            if (cmbLecFilterFaculty.Text != "")
+            {
+                txtLecSearch.Clear();
+                cmbLecFilterLevel.SelectedIndex = -1;
+
+                if (cmbLecFilterFaculty.Text == "Clear Selected")
+                {
+                    cmbLecFilterFaculty.SelectedIndex = -1;
+                }
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Lecturers where LecFaculty like '%" + cmbLecFilterFaculty.Text + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dgvLectures.DataSource = dt;
+                con.Close();
+            }        
         }
 
         private void cmbLecFilterLevel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtLecSearch.Clear();
-            cmbLecFilterFaculty.SelectedIndex = -1;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Lecturers where LecLevel like '%" + cmbLecFilterLevel.Text + "%' ";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dgvLectures.DataSource = dt;
-            con.Close();
+            if (cmbLecFilterLevel.Text != "")
+            {
+                txtLecSearch.Clear();
+                cmbLecFilterFaculty.SelectedIndex = -1;
+
+                if (cmbLecFilterLevel.Text == "Clear Selected")
+                {
+                    cmbLecFilterLevel.SelectedIndex = -1;
+                }
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Lecturers where LecLevel like '%" + cmbLecFilterLevel.Text + "%' ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dgvLectures.DataSource = dt;
+                con.Close();
+            }       
+        }
+
+        private void tabControlLecturers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControlLecturers.SelectedTab.Name == "tabPageLecEdit")
+            {
+                if (LecturerID == 0)
+                {
+                    MessageBox.Show("Please select a lecturer in lecturers list ", "No lecturer selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tabControlLecturers.SelectedTab = tabPageLecView;
+                }
+            }
         }
 
         //--------------------Header Buttons--------------------
@@ -490,6 +545,6 @@ namespace TimetableManagementSystem.Lecturers
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
-        }    
+        }
     }
 }
