@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -290,7 +290,7 @@
             this.tabControlLSessions.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.tabControlLSessions.Location = new System.Drawing.Point(131, 93);
             this.tabControlLSessions.Name = "tabControlLSessions";
-            this.tabControlLSessions.SelectedIndex = 2;
+            this.tabControlLSessions.SelectedIndex = 1;
             this.tabControlLSessions.Size = new System.Drawing.Size(793, 475);
             this.tabControlLSessions.Style = MetroFramework.MetroColorStyle.Blue;
             this.tabControlLSessions.TabIndex = 65;
@@ -408,14 +408,14 @@
             // 
             this.dgvSessions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSessions.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle53;
             this.dgvSessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SessionID,
@@ -426,14 +426,14 @@
             this.GroupID,
             this.StudentCount,
             this.Duration});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSessions.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSessions.DefaultCellStyle = dataGridViewCellStyle54;
             this.dgvSessions.Location = new System.Drawing.Point(16, 102);
             this.dgvSessions.Name = "dgvSessions";
             this.dgvSessions.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -530,14 +530,13 @@
             // tabPageSessionAdd
             // 
             this.tabPageSessionAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageSessionAdd.Controls.Add(this.txtSelectedLecturers);
             this.tabPageSessionAdd.Controls.Add(this.lblClearSubs);
             this.tabPageSessionAdd.Controls.Add(this.lblClearTags);
             this.tabPageSessionAdd.Controls.Add(this.lblClearGroups);
             this.tabPageSessionAdd.Controls.Add(this.lblClearLecs);
             this.tabPageSessionAdd.Controls.Add(this.txtSelectedSubject);
             this.tabPageSessionAdd.Controls.Add(this.txtSelectedGroups);
-            this.tabPageSessionAdd.Controls.Add(this.txtSelectedTags);
-            this.tabPageSessionAdd.Controls.Add(this.txtSelectedLecturers);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionDuration);
             this.tabPageSessionAdd.Controls.Add(this.nmudSessionNoStudents);
             this.tabPageSessionAdd.Controls.Add(this.cmbSessionTag);
@@ -553,6 +552,7 @@
             this.tabPageSessionAdd.Controls.Add(this.cmbSessionSubject);
             this.tabPageSessionAdd.Controls.Add(this.cmbSessionGroup);
             this.tabPageSessionAdd.Controls.Add(this.cmbSessionLecturer);
+            this.tabPageSessionAdd.Controls.Add(this.txtSelectedTags);
             this.tabPageSessionAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSessionAdd.Location = new System.Drawing.Point(4, 37);
             this.tabPageSessionAdd.Name = "tabPageSessionAdd";
@@ -571,19 +571,18 @@
             this.lblClearSubs.Size = new System.Drawing.Size(32, 15);
             this.lblClearSubs.TabIndex = 77;
             this.lblClearSubs.Text = "Clear";
-            this.lblClearSubs.Click += new System.EventHandler(this.lblClearSubs_Click);
+            this.lblClearSubs.Visible = false;
             // 
             // lblClearTags
             // 
             this.lblClearTags.AutoSize = true;
             this.lblClearTags.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblClearTags.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblClearTags.Location = new System.Drawing.Point(669, 132);
+            this.lblClearTags.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblClearTags.Location = new System.Drawing.Point(479, 73);
             this.lblClearTags.Name = "lblClearTags";
-            this.lblClearTags.Size = new System.Drawing.Size(32, 15);
+            this.lblClearTags.Size = new System.Drawing.Size(144, 19);
             this.lblClearTags.TabIndex = 76;
-            this.lblClearTags.Text = "Clear";
-            this.lblClearTags.Click += new System.EventHandler(this.lblClearTags_Click);
+            this.lblClearTags.Text = "Selected Lecturers List";
             // 
             // lblClearGroups
             // 
@@ -595,18 +594,21 @@
             this.lblClearGroups.Size = new System.Drawing.Size(32, 15);
             this.lblClearGroups.TabIndex = 75;
             this.lblClearGroups.Text = "Clear";
-            this.lblClearGroups.Click += new System.EventHandler(this.lblClearGroups_Click);
+            this.lblClearGroups.Visible = false;
             // 
             // lblClearLecs
             // 
             this.lblClearLecs.AutoSize = true;
             this.lblClearLecs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblClearLecs.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblClearLecs.Location = new System.Drawing.Point(669, 87);
+            this.lblClearLecs.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblClearLecs.ForeColor = System.Drawing.Color.Red;
+            this.lblClearLecs.Location = new System.Drawing.Point(581, 181);
             this.lblClearLecs.Name = "lblClearLecs";
-            this.lblClearLecs.Size = new System.Drawing.Size(32, 15);
+            this.lblClearLecs.Size = new System.Drawing.Size(52, 15);
             this.lblClearLecs.TabIndex = 74;
-            this.lblClearLecs.Text = "Clear";
+            this.lblClearLecs.Text = "Clear list";
+            this.lblClearLecs.UseCustomForeColor = true;
             this.lblClearLecs.Click += new System.EventHandler(this.lblClearLecs_Click);
             // 
             // txtSelectedSubject
@@ -615,8 +617,7 @@
             this.txtSelectedSubject.Location = new System.Drawing.Point(471, 208);
             this.txtSelectedSubject.Multiline = true;
             this.txtSelectedSubject.Name = "txtSelectedSubject";
-            this.txtSelectedSubject.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSelectedSubject.Size = new System.Drawing.Size(200, 29);
+            this.txtSelectedSubject.Size = new System.Drawing.Size(165, 32);
             this.txtSelectedSubject.TabIndex = 73;
             // 
             // txtSelectedGroups
@@ -628,7 +629,7 @@
             this.txtSelectedGroups.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSelectedGroups.Size = new System.Drawing.Size(200, 29);
             this.txtSelectedGroups.TabIndex = 72;
-            this.txtSelectedGroups.TextChanged += new System.EventHandler(this.txtSelectedGroups_TextChanged);
+            this.txtSelectedGroups.Visible = false;
             // 
             // txtSelectedTags
             // 
@@ -639,16 +640,16 @@
             this.txtSelectedTags.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSelectedTags.Size = new System.Drawing.Size(200, 29);
             this.txtSelectedTags.TabIndex = 71;
-            this.txtSelectedTags.TextChanged += new System.EventHandler(this.txtSelectedTags_TextChanged);
+            this.txtSelectedTags.Visible = false;
             // 
             // txtSelectedLecturers
             // 
-            this.txtSelectedLecturers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSelectedLecturers.Location = new System.Drawing.Point(471, 73);
+            this.txtSelectedLecturers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSelectedLecturers.Location = new System.Drawing.Point(471, 95);
             this.txtSelectedLecturers.Multiline = true;
             this.txtSelectedLecturers.Name = "txtSelectedLecturers";
             this.txtSelectedLecturers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSelectedLecturers.Size = new System.Drawing.Size(200, 29);
+            this.txtSelectedLecturers.Size = new System.Drawing.Size(180, 83);
             this.txtSelectedLecturers.TabIndex = 70;
             this.txtSelectedLecturers.TextChanged += new System.EventHandler(this.txtSelectedLecturers_TextChanged);
             // 
@@ -827,7 +828,6 @@
             this.cmbSessionGroup.Size = new System.Drawing.Size(166, 29);
             this.cmbSessionGroup.TabIndex = 46;
             this.cmbSessionGroup.UseSelectable = true;
-            this.cmbSessionGroup.SelectedIndexChanged += new System.EventHandler(this.cmbSessionGroup_SelectedIndexChanged);
             // 
             // cmbSessionLecturer
             // 
