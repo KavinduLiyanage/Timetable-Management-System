@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHeaderAdvanced = new System.Windows.Forms.Button();
             this.btnHeaderRooms = new System.Windows.Forms.Button();
             this.btnHeaderSessions = new System.Windows.Forms.Button();
@@ -88,6 +88,9 @@
             this.notOverlapSesLbl02 = new MetroFramework.Controls.MetroLabel();
             this.notOverlapSesCmbBox01 = new MetroFramework.Controls.MetroComboBox();
             this.notOverlapSesLbl01 = new MetroFramework.Controls.MetroLabel();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavLocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideNavTags)).BeginInit();
@@ -266,13 +269,14 @@
             this.advancedOp.Controls.Add(this.shouldNotOverlap);
             this.advancedOp.Location = new System.Drawing.Point(131, 95);
             this.advancedOp.Name = "advancedOp";
-            this.advancedOp.SelectedIndex = 1;
+            this.advancedOp.SelectedIndex = 3;
             this.advancedOp.Size = new System.Drawing.Size(811, 486);
             this.advancedOp.TabIndex = 59;
             this.advancedOp.UseSelectable = true;
             // 
             // notAvailableTime
             // 
+            this.notAvailableTime.Controls.Add(this.metroComboBox1);
             this.notAvailableTime.Controls.Add(this.yrSemClrBtn);
             this.notAvailableTime.Controls.Add(this.notAvaData);
             this.notAvailableTime.Controls.Add(this.notAvaSearchDrpDown);
@@ -318,14 +322,14 @@
             this.notAvaData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.notAvaData.BackgroundColor = System.Drawing.Color.White;
             this.notAvaData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.notAvaData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.notAvaData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.notAvaData.ColumnHeadersHeight = 29;
             this.notAvaData.Location = new System.Drawing.Point(365, 164);
             this.notAvaData.MultiSelect = false;
@@ -410,7 +414,7 @@
             this.noAvaBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.noAvaBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.noAvaBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.noAvaBtn.Location = new System.Drawing.Point(37, 285);
+            this.noAvaBtn.Location = new System.Drawing.Point(37, 293);
             this.noAvaBtn.Margin = new System.Windows.Forms.Padding(2);
             this.noAvaBtn.Name = "noAvaBtn";
             this.noAvaBtn.Size = new System.Drawing.Size(216, 40);
@@ -427,9 +431,29 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.timeCmbBox.FormattingEnabled = true;
             this.timeCmbBox.ItemHeight = 23;
-            this.timeCmbBox.Location = new System.Drawing.Point(48, 233);
+            this.timeCmbBox.Items.AddRange(new object[] {
+            "8.30 am",
+            "9.00 am",
+            "9.30 am",
+            "10.00 am ",
+            "10.30 am",
+            "11.00 am ",
+            "11.30 am ",
+            "12.00 noon",
+            "12.30 noon",
+            "1.00 pm",
+            "1.30 pm",
+            "2.00 pm",
+            "2.30 pm",
+            "3.00 pm",
+            "3.30 pm",
+            "4.00 pm",
+            "4.30 pm",
+            "5.00 pm",
+            "5.30 pm"});
+            this.timeCmbBox.Location = new System.Drawing.Point(48, 204);
             this.timeCmbBox.Name = "timeCmbBox";
-            this.timeCmbBox.PromptText = "Select Time";
+            this.timeCmbBox.PromptText = "Select Start Time";
             this.timeCmbBox.Size = new System.Drawing.Size(194, 29);
             this.timeCmbBox.TabIndex = 45;
             this.timeCmbBox.UseSelectable = true;
@@ -441,7 +465,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.itmCmbBox.FormattingEnabled = true;
             this.itmCmbBox.ItemHeight = 23;
-            this.itmCmbBox.Location = new System.Drawing.Point(48, 183);
+            this.itmCmbBox.Location = new System.Drawing.Point(48, 154);
             this.itmCmbBox.Name = "itmCmbBox";
             this.itmCmbBox.PromptText = "Select Item";
             this.itmCmbBox.Size = new System.Drawing.Size(194, 29);
@@ -460,7 +484,7 @@
             "Sessions",
             "Groups",
             "Sub-Groups"});
-            this.typeCmbo.Location = new System.Drawing.Point(48, 137);
+            this.typeCmbo.Location = new System.Drawing.Point(48, 108);
             this.typeCmbo.Name = "typeCmbo";
             this.typeCmbo.PromptText = "Select Type";
             this.typeCmbo.Size = new System.Drawing.Size(194, 29);
@@ -514,14 +538,14 @@
             this.consecData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.consecData.BackgroundColor = System.Drawing.Color.White;
             this.consecData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.consecData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.consecData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.consecData.ColumnHeadersHeight = 29;
             this.consecData.Location = new System.Drawing.Point(365, 164);
             this.consecData.MultiSelect = false;
@@ -644,6 +668,7 @@
             // 
             // parallelSessions
             // 
+            this.parallelSessions.Controls.Add(this.metroComboBox2);
             this.parallelSessions.Controls.Add(this.metroButton2);
             this.parallelSessions.Controls.Add(this.metroLabel5);
             this.parallelSessions.Controls.Add(this.parSesDurationCmb);
@@ -738,19 +763,29 @@
             this.parSesTimeSlotCmb.FormattingEnabled = true;
             this.parSesTimeSlotCmb.ItemHeight = 23;
             this.parSesTimeSlotCmb.Items.AddRange(new object[] {
-            "8.30 am -9.30 am",
-            "9.30 am -10.30 am ",
-            "9.30 am -10.30 am ",
-            "10.30 am -11.30 am ",
-            "11.30 am -12.30 noon",
-            "1.30 pm- 2.30 pm",
-            "2.30 pm -3.30 pm",
-            "3.30 pm -4.30 pm",
-            "4.30 pm -5.30 pm"});
+            "8.30 am",
+            "9.00 am",
+            "9.30 am",
+            "10.00 am ",
+            "10.30 am",
+            "11.00 am ",
+            "11.30 am ",
+            "12.00 noon",
+            "12.30 noon",
+            "1.00 pm",
+            "1.30 pm",
+            "2.00 pm",
+            "2.30 pm",
+            "3.00 pm",
+            "3.30 pm",
+            "4.00 pm",
+            "4.30 pm",
+            "5.00 pm",
+            "5.30 pm"});
             this.parSesTimeSlotCmb.Location = new System.Drawing.Point(420, 277);
             this.parSesTimeSlotCmb.MaxDropDownItems = 100;
             this.parSesTimeSlotCmb.Name = "parSesTimeSlotCmb";
-            this.parSesTimeSlotCmb.PromptText = "Select Time Slot";
+            this.parSesTimeSlotCmb.PromptText = "Select Start Time";
             this.parSesTimeSlotCmb.Size = new System.Drawing.Size(165, 29);
             this.parSesTimeSlotCmb.TabIndex = 62;
             this.parSesTimeSlotCmb.UseSelectable = true;
@@ -853,6 +888,7 @@
             // 
             // shouldNotOverlap
             // 
+            this.shouldNotOverlap.Controls.Add(this.metroComboBox3);
             this.shouldNotOverlap.Controls.Add(this.metroButton3);
             this.shouldNotOverlap.Controls.Add(this.metroLabel6);
             this.shouldNotOverlap.Controls.Add(this.notOverlapSesDurationCmbBox);
@@ -945,19 +981,29 @@
             this.notOverlapSesTimeSlotCmbBox.FormattingEnabled = true;
             this.notOverlapSesTimeSlotCmbBox.ItemHeight = 23;
             this.notOverlapSesTimeSlotCmbBox.Items.AddRange(new object[] {
-            "8.30 am -9.30 am",
-            "9.30 am -10.30 am ",
-            "9.30 am -10.30 am ",
-            "10.30 am -11.30 am ",
-            "11.30 am -12.30 noon",
-            "1.30 pm- 2.30 pm",
-            "2.30 pm -3.30 pm",
-            "3.30 pm -4.30 pm",
-            "4.30 pm -5.30 pm"});
+            "8.30 am",
+            "9.00 am",
+            "9.30 am",
+            "10.00 am ",
+            "10.30 am",
+            "11.00 am ",
+            "11.30 am ",
+            "12.00 noon",
+            "12.30 noon",
+            "1.00 pm",
+            "1.30 pm",
+            "2.00 pm",
+            "2.30 pm",
+            "3.00 pm",
+            "3.30 pm",
+            "4.00 pm",
+            "4.30 pm",
+            "5.00 pm",
+            "5.30 pm"});
             this.notOverlapSesTimeSlotCmbBox.Location = new System.Drawing.Point(420, 277);
             this.notOverlapSesTimeSlotCmbBox.MaxDropDownItems = 100;
             this.notOverlapSesTimeSlotCmbBox.Name = "notOverlapSesTimeSlotCmbBox";
-            this.notOverlapSesTimeSlotCmbBox.PromptText = "Select Time Slot";
+            this.notOverlapSesTimeSlotCmbBox.PromptText = "Select Start Time";
             this.notOverlapSesTimeSlotCmbBox.Size = new System.Drawing.Size(165, 29);
             this.notOverlapSesTimeSlotCmbBox.TabIndex = 67;
             this.notOverlapSesTimeSlotCmbBox.UseSelectable = true;
@@ -1056,6 +1102,107 @@
             this.notOverlapSesLbl01.TabIndex = 60;
             this.notOverlapSesLbl01.Text = "Session 01";
             this.notOverlapSesLbl01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "8.30 am",
+            "9.00 am",
+            "9.30 am",
+            "10.00 am ",
+            "10.30 am",
+            "11.00 am ",
+            "11.30 am ",
+            "12.00 noon",
+            "12.30 noon",
+            "1.00 pm",
+            "1.30 pm",
+            "2.00 pm",
+            "2.30 pm",
+            "3.00 pm",
+            "3.30 pm",
+            "4.00 pm",
+            "4.30 pm",
+            "5.00 pm",
+            "5.30 pm"});
+            this.metroComboBox1.Location = new System.Drawing.Point(48, 252);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.PromptText = "Select End Time";
+            this.metroComboBox1.Size = new System.Drawing.Size(194, 29);
+            this.metroComboBox1.TabIndex = 63;
+            this.metroComboBox1.UseSelectable = true;
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "8.30 am",
+            "9.00 am",
+            "9.30 am",
+            "10.00 am ",
+            "10.30 am",
+            "11.00 am ",
+            "11.30 am ",
+            "12.00 noon",
+            "12.30 noon",
+            "1.00 pm",
+            "1.30 pm",
+            "2.00 pm",
+            "2.30 pm",
+            "3.00 pm",
+            "3.30 pm",
+            "4.00 pm",
+            "4.30 pm",
+            "5.00 pm",
+            "5.30 pm"});
+            this.metroComboBox2.Location = new System.Drawing.Point(605, 277);
+            this.metroComboBox2.MaxDropDownItems = 100;
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.PromptText = "Select End Time";
+            this.metroComboBox2.Size = new System.Drawing.Size(165, 29);
+            this.metroComboBox2.TabIndex = 67;
+            this.metroComboBox2.UseSelectable = true;
+            // 
+            // metroComboBox3
+            // 
+            this.metroComboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroComboBox3.FormattingEnabled = true;
+            this.metroComboBox3.ItemHeight = 23;
+            this.metroComboBox3.Items.AddRange(new object[] {
+            "8.30 am",
+            "9.00 am",
+            "9.30 am",
+            "10.00 am ",
+            "10.30 am",
+            "11.00 am ",
+            "11.30 am ",
+            "12.00 noon",
+            "12.30 noon",
+            "1.00 pm",
+            "1.30 pm",
+            "2.00 pm",
+            "2.30 pm",
+            "3.00 pm",
+            "3.30 pm",
+            "4.00 pm",
+            "4.30 pm",
+            "5.00 pm",
+            "5.30 pm"});
+            this.metroComboBox3.Location = new System.Drawing.Point(605, 277);
+            this.metroComboBox3.MaxDropDownItems = 100;
+            this.metroComboBox3.Name = "metroComboBox3";
+            this.metroComboBox3.PromptText = "Select End Time";
+            this.metroComboBox3.Size = new System.Drawing.Size(165, 29);
+            this.metroComboBox3.TabIndex = 72;
+            this.metroComboBox3.UseSelectable = true;
             // 
             // Advanced
             // 
@@ -1166,5 +1313,8 @@
         private MetroFramework.Controls.MetroTextBox consecSearchBox;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        public MetroFramework.Controls.MetroComboBox metroComboBox2;
+        public MetroFramework.Controls.MetroComboBox metroComboBox3;
     }
 }

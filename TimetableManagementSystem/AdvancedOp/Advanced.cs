@@ -181,6 +181,7 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void Advanced_Load(object sender, EventArgs e)
         {
+
             /*
             timeCmbBox.Items.Clear();
             SqlDataAdapter sda = new SqlDataAdapter("select * from WorkingTimeSlot", con);
@@ -192,10 +193,12 @@ namespace TimetableManagementSystem.AdvancedOp
             }
             */
 
-            
+
+            //Input time
+            /*
             this.itmCmbBox.DataSource = null;
             timeCmbBox.Items.Clear();
-            string query = "select * from WorkingTimeSlot";
+            string query = "select * from WorkingTime";
             SqlDataAdapter da = new SqlDataAdapter(query, con);
             con.Open();
             DataSet ds = new DataSet();
@@ -205,6 +208,7 @@ namespace TimetableManagementSystem.AdvancedOp
             timeCmbBox.DataSource = ds.Tables["TimeSlot"];
             con.Close();
             timeCmbBox.SelectedIndex = -1;
+            */
 
 
 
