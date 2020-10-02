@@ -50,7 +50,7 @@ namespace TimetableManagementSystem.Rooms
             //}
             //con.Close();
             tagroom_cmb.Items.Clear();
-            SqlDataAdapter sda = new SqlDataAdapter("select * from Rooms", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from rooms", con);
             DataTable dataTable = new DataTable();
             sda.Fill(dataTable);
             foreach (DataRow dataRow in dataTable.Rows)
@@ -298,12 +298,13 @@ namespace TimetableManagementSystem.Rooms
         private void session_cmb_DropDown(object sender, EventArgs e)
         {
             session_cmb.Items.Clear();
-            SqlDataAdapter sda = new SqlDataAdapter("select SessionID from Sessions ", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select SessionID,Lecturer,Subject,Tag from Sessions ", con);
             DataTable dataTable = new DataTable();
             sda.Fill(dataTable);
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                session_cmb.Items.Add(dataRow["SessionID"].ToString());
+                //session_cmb.Items.Add(dataRow["SessionID"].ToString());
+                session_cmb.Items.Add(dataRow["SessionID"].ToString() + " - " + dataRow["Lecturer"].ToString() + " - " + dataRow["Subject"].ToString() + " - " + dataRow["Tag"].ToString());
             }
         }
 
@@ -451,35 +452,36 @@ namespace TimetableManagementSystem.Rooms
         //selecting a time slot
         private void timeslot_cmb_DropDown(object sender, EventArgs e)
         {
-            timeslot_cmb.Items.Clear();
-            SqlDataAdapter sda = new SqlDataAdapter("select TimeSlot from WorkingTimeSlot", con);
-            DataTable dataTable = new DataTable();
-            sda.Fill(dataTable);
-            foreach (DataRow dataRow in dataTable.Rows)
-            {
-                timeslot_cmb.Items.Add(dataRow["TimeSlot"].ToString());
-            }
+        //    starttime_cmb.Items.Clear();
+        //    SqlDataAdapter sda = new SqlDataAdapter("select TimeSlot from WorkingTimeSlot", con);
+        //    DataTable dataTable = new DataTable();
+        //    sda.Fill(dataTable);
+        //    foreach (DataRow dataRow in dataTable.Rows)
+        //    {
+        //        starttime_cmb.Items.Add(dataRow["TimeSlot"].ToString());
+        //    }
         }
 
         private void non_reserv_room_time_btn_Click(object sender, EventArgs e)
         {
-            if ((non_res_room_cmb.Text != string.Empty) && (day_cmb.Text != string.Empty) && (timeslot_cmb.Text != string.Empty))
+            if ((non_res_room_cmb.Text != string.Empty) && (day_cmb.Text != string.Empty) && (starttime_cmb.Text != string.Empty))
             {
                 //check duplicate before save
-                SqlDataAdapter da = new SqlDataAdapter("Select Room, Day,Time from NonReservableTime_Rooms where Room = '" + non_res_room_cmb.Text + "' " +
-                    "and  Day = '" + day_cmb.Text + "' and Time = '" + timeslot_cmb.Text + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("Select Room, Day,StartTime,EndTime from NonReservableTime_Rooms where Room = '" + non_res_room_cmb.Text + "' " +
+                    "and  Day = '" + day_cmb.Text + "' and StartTime = '" + starttime_cmb.Text + "' and EndTime = '"+endtime_cmb.Text+"'", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if (dt.Rows.Count >= 1)
                 {
                     MessageBox.Show("Time is already allocated as non reservable!");
+                    clearDayTimeFields();
                 }
                 else
                 {
                     con.Open();
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO [dbo].[NonReservableTime_Rooms] ([Room],[Day],[Time]) VALUES ('" + non_res_room_cmb.Text + "','" + day_cmb.Text + "','" + timeslot_cmb.Text + "'  )";
+                    cmd.CommandText = "INSERT INTO [dbo].[NonReservableTime_Rooms] ([Room],[Day],[StartTime],[EndTime]) VALUES ('" + non_res_room_cmb.Text + "','" + day_cmb.Text + "','" + starttime_cmb.Text + "','" + endtime_cmb.Text + "'   )";
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Time is allocated as non reservable for the selected room !");
                     con.Close();
@@ -496,7 +498,8 @@ namespace TimetableManagementSystem.Rooms
         public void clearDayTimeFields()
         {
             day_cmb.SelectedIndex = -1;
-            timeslot_cmb.SelectedIndex = -1;
+            starttime_cmb.SelectedIndex = -1;
+            endtime_cmb.SelectedIndex = -1;
         }
 
         private void clrnonreserve_btn_Click(object sender, EventArgs e)

@@ -215,6 +215,7 @@
             this.tabControlSubjects.UseCustomForeColor = true;
             this.tabControlSubjects.UseSelectable = true;
             this.tabControlSubjects.UseStyleColors = true;
+            this.tabControlSubjects.SelectedIndexChanged += new System.EventHandler(this.tabControlSubjects_SelectedIndexChanged);
             // 
             // tabPageSubView
             // 
@@ -257,7 +258,8 @@
             "1",
             "2",
             "3",
-            "4"});
+            "4",
+            "Clear"});
             this.cmbSubFilterYear.Location = new System.Drawing.Point(161, 62);
             this.cmbSubFilterYear.Name = "cmbSubFilterYear";
             this.cmbSubFilterYear.PromptText = "Select Year";
@@ -272,7 +274,7 @@
             this.metroLabel22.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel22.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel22.Location = new System.Drawing.Point(559, 65);
+            this.metroLabel22.Location = new System.Drawing.Point(529, 65);
             this.metroLabel22.Name = "metroLabel22";
             this.metroLabel22.Size = new System.Drawing.Size(60, 19);
             this.metroLabel22.TabIndex = 74;
@@ -294,7 +296,7 @@
             this.txtSubSearch.CustomButton.UseSelectable = true;
             this.txtSubSearch.CustomButton.Visible = false;
             this.txtSubSearch.Lines = new string[0];
-            this.txtSubSearch.Location = new System.Drawing.Point(619, 64);
+            this.txtSubSearch.Location = new System.Drawing.Point(589, 64);
             this.txtSubSearch.MaxLength = 32767;
             this.txtSubSearch.Name = "txtSubSearch";
             this.txtSubSearch.PasswordChar = '\0';
@@ -481,6 +483,7 @@
             this.cmbSubLecHours.FormattingEnabled = true;
             this.cmbSubLecHours.ItemHeight = 23;
             this.cmbSubLecHours.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -549,6 +552,7 @@
             this.cmbSubEvaHours.FormattingEnabled = true;
             this.cmbSubEvaHours.ItemHeight = 23;
             this.cmbSubEvaHours.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -568,6 +572,7 @@
             this.cmbSubLabHours.FormattingEnabled = true;
             this.cmbSubLabHours.ItemHeight = 23;
             this.cmbSubLabHours.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -587,6 +592,7 @@
             this.cmbSubTuteHours.FormattingEnabled = true;
             this.cmbSubTuteHours.ItemHeight = 23;
             this.cmbSubTuteHours.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -807,6 +813,7 @@
             this.cmbSubLecHoursEdit.FormattingEnabled = true;
             this.cmbSubLecHoursEdit.ItemHeight = 23;
             this.cmbSubLecHoursEdit.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -842,6 +849,7 @@
             this.cmbSubEvaHoursEdit.FormattingEnabled = true;
             this.cmbSubEvaHoursEdit.ItemHeight = 23;
             this.cmbSubEvaHoursEdit.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -861,6 +869,7 @@
             this.cmbSubLabHoursEdit.FormattingEnabled = true;
             this.cmbSubLabHoursEdit.ItemHeight = 23;
             this.cmbSubLabHoursEdit.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -880,6 +889,7 @@
             this.cmbSubTuteHoursEdit.FormattingEnabled = true;
             this.cmbSubTuteHoursEdit.ItemHeight = 23;
             this.cmbSubTuteHoursEdit.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",

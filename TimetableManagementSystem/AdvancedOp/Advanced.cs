@@ -120,7 +120,7 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void noAvaBtn_Click(object sender, EventArgs e)
         {
-            if ((typeCmbo.Text != string.Empty) && (itmCmbBox.Text != string.Empty) && (timeCmbBox.Text != string.Empty))
+            if ((typeCmbo.Text != string.Empty) && (itmCmbBox.Text != string.Empty) && (timeCmbBoxStart.Text != string.Empty))
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
@@ -136,7 +136,7 @@ namespace TimetableManagementSystem.AdvancedOp
                         ID = drv.Row["LecturerID"].ToString();
                     }
 
-                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "',null,null," + ID + ",null)";
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[StartTime],[EndTime],[Day],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBoxStart.Text + "','" + timeCmbBoxEnd.Text + "','" + notAvaTimeDateCmb.Text + "',null,null," + ID + ",null)";
                 }
                 else if (typeCmbo.Text == "Sessions")
                 {
@@ -148,7 +148,7 @@ namespace TimetableManagementSystem.AdvancedOp
                         ID = drv.Row["SessionID"].ToString();
                     }
 
-                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "',null,null,null," + ID + ")";
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[StartTime],[EndTime],[Day],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBoxStart.Text + "','" + timeCmbBoxEnd.Text + "','" + notAvaTimeDateCmb.Text + "',null,null,null," + ID + ")";
                 }
                 else if (typeCmbo.Text == "Groups")
                 {
@@ -160,7 +160,7 @@ namespace TimetableManagementSystem.AdvancedOp
                         ID = drv.Row["id"].ToString();
                     }
 
-                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "'," + ID + ",null,null,null)";
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[StartTime],[EndTime],[Day],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBoxStart.Text + "','" + timeCmbBoxEnd.Text + "','" + notAvaTimeDateCmb.Text + "'," + ID + ",null,null,null)";
                 }
                 else if (typeCmbo.Text == "Sub-Groups")
                 {
@@ -172,7 +172,7 @@ namespace TimetableManagementSystem.AdvancedOp
                         ID = drv.Row["id"].ToString();
                     }
 
-                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[TimeSlot],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBox.Text + "',null," + ID + ",null,null)";
+                    cmd.CommandText = "INSERT INTO [dbo].[NotAvailableTime] ([SelectedType],[Item],[StartTime],[EndTime],[GenGroupNumberRef],[SubGroupNumberRef],[LecturerRef],[SessionRef]) VALUES ('" + typeCmbo.Text + "','" + itmCmbBox.Text + "','" + timeCmbBoxStart.Text + "','" + timeCmbBoxEnd.Text + "',null," + ID + ",null,null)";
                 }
 
                 cmd.ExecuteNonQuery();
@@ -184,7 +184,7 @@ namespace TimetableManagementSystem.AdvancedOp
                 MessageBox.Show("All fields must be filled", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            String query1 = "select id,SelectedType,Item,TimeSlot from NotAvailableTime";
+            String query1 = "select id,SelectedType,Item,Day,StartTime,EndTime from NotAvailableTime";
 
             SqlCommand cmd2 = new SqlCommand(query1, con);
             DataTable dt = new DataTable();
@@ -199,6 +199,7 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void Advanced_Load(object sender, EventArgs e)
         {
+
             /*
             timeCmbBox.Items.Clear();
             SqlDataAdapter sda = new SqlDataAdapter("select * from WorkingTimeSlot", con);
@@ -210,10 +211,12 @@ namespace TimetableManagementSystem.AdvancedOp
             }
             */
 
-            
+
+            //Input time
+            /*
             this.itmCmbBox.DataSource = null;
             timeCmbBox.Items.Clear();
-            string query = "select * from WorkingTimeSlot";
+            string query = "select * from WorkingTime";
             SqlDataAdapter da = new SqlDataAdapter(query, con);
             con.Open();
             DataSet ds = new DataSet();
@@ -223,6 +226,7 @@ namespace TimetableManagementSystem.AdvancedOp
             timeCmbBox.DataSource = ds.Tables["TimeSlot"];
             con.Close();
             timeCmbBox.SelectedIndex = -1;
+            */
 
 
 
@@ -322,7 +326,7 @@ namespace TimetableManagementSystem.AdvancedOp
             notOverlapSesCmbBox02.SelectedIndex = -1;
 
 
-            String query1 = "select id,SelectedType,Item,TimeSlot from NotAvailableTime";
+            String query1 = "select id,SelectedType,Item,Day,StartTime,EndTime from NotAvailableTime";
             String query5 = "select id,Session01,Session02 from ConsecutiveSession";
 
             SqlCommand cmd = new SqlCommand(query1, con);
@@ -547,7 +551,7 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void addParBtn_Click(object sender, EventArgs e)
         {
-            if ((parSesCmbBox01.Text != string.Empty) && (parSesCmbBox02.Text != string.Empty) && (parSesDurationCmb.Text != string.Empty) && (parSesDayCmb.Text != string.Empty) && (parSesTimeSlotCmb.Text != string.Empty))
+            if ((parSesCmbBox01.Text != string.Empty) && (parSesCmbBox02.Text != string.Empty) && (parSesDurationCmb.Text != string.Empty) && (parSesDayCmb.Text != string.Empty) && (parSesTimeSlotCmbStart.Text != string.Empty))
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
@@ -569,7 +573,7 @@ namespace TimetableManagementSystem.AdvancedOp
                     ID2 = drv.Row["SessionID"].ToString();
                 }
 
-                cmd.CommandText = "INSERT INTO [dbo].[ParallelSession] ([Session01] ,[Session02] ,[Duration] ,[Day] ,[Time] ,[Session01Ref] ,[Session02Ref]) VALUES ('" + parSesCmbBox01.Text + "' ,'" + parSesCmbBox02.Text + "' , " + parSesDurationCmb.Text + " ,'" + parSesDayCmb.Text + "' ,'" + parSesTimeSlotCmb.Text + "' ," + ID + " ," + ID2 + ")";
+                cmd.CommandText = "INSERT INTO [dbo].[ParallelSession] ([Session01] ,[Session02] ,[Duration] ,[Day] ,[StartTime] ,[EndTime],[Session01Ref] ,[Session02Ref]) VALUES ('" + parSesCmbBox01.Text + "' ,'" + parSesCmbBox02.Text + "' , " + parSesDurationCmb.Text + " ,'" + parSesDayCmb.Text + "' ,'" + parSesTimeSlotCmbStart.Text + "','" + parSesTimeSlotCmbEnd.Text + "' ," + ID + " ," + ID2 + ")";
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Parallel Session Added");
@@ -584,7 +588,7 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void addNotOverlapSesBtn_Click(object sender, EventArgs e)
         {
-            if ((notOverlapSesCmbBox01.Text != string.Empty) && (notOverlapSesCmbBox02.Text != string.Empty) && (notOverlapSesDurationCmbBox.Text != string.Empty) && (notOverlapSesDayCmbBox.Text != string.Empty) && (notOverlapSesTimeSlotCmbBox.Text != string.Empty))
+            if ((notOverlapSesCmbBox01.Text != string.Empty) && (notOverlapSesCmbBox02.Text != string.Empty) && (notOverlapSesDurationCmbBox.Text != string.Empty) && (notOverlapSesDayCmbBox.Text != string.Empty) && (notOverlapSesTimeSlotCmbBoxStart.Text != string.Empty))
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
@@ -606,7 +610,7 @@ namespace TimetableManagementSystem.AdvancedOp
                     ID2 = drv.Row["SessionID"].ToString();
                 }
 
-                cmd.CommandText = "INSERT INTO [dbo].[NotOverlapSession] ([Session01],[Session02],[Duration],[Day],[Time],[Session01Ref],[Session02Ref]) VALUES ('" + notOverlapSesCmbBox01.Text + "' ,'" + notOverlapSesCmbBox02.Text + "' , " + notOverlapSesDurationCmbBox.Text + " ,'" + notOverlapSesDayCmbBox.Text + "' ,'" + notOverlapSesTimeSlotCmbBox.Text + "' ," + ID + " ," + ID2 + ")";
+                cmd.CommandText = "INSERT INTO [dbo].[NotOverlapSession] ([Session01],[Session02],[Duration],[Day],[StartTime],[EndTime],[Session01Ref],[Session02Ref]) VALUES ('" + notOverlapSesCmbBox01.Text + "' ,'" + notOverlapSesCmbBox02.Text + "' , " + notOverlapSesDurationCmbBox.Text + " ,'" + notOverlapSesDayCmbBox.Text + "' ,'" + notOverlapSesTimeSlotCmbBoxStart.Text + "','" + notOverlapSesTimeSlotCmbBoxEnd.Text + "' ," + ID + " ," + ID2 + ")";
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Should Not Overlap Session Added");
@@ -628,7 +632,7 @@ namespace TimetableManagementSystem.AdvancedOp
         {
             typeCmbo.SelectedIndex = -1;
             itmCmbBox.SelectedIndex = -1;
-            timeCmbBox.SelectedIndex = -1;
+            timeCmbBoxStart.SelectedIndex = -1;
         }
 
         private void notAvaSearchBox_TextChanged(object sender, EventArgs e)
@@ -697,7 +701,7 @@ namespace TimetableManagementSystem.AdvancedOp
             parSesCmbBox02.SelectedIndex = -1;
             parSesDayCmb.SelectedIndex = -1;
             parSesDurationCmb.SelectedIndex = -1;
-            parSesTimeSlotCmb.SelectedIndex = -1;
+            parSesTimeSlotCmbStart.SelectedIndex = -1;
         }
 
         private void metroButton3_Click(object sender, EventArgs e)
@@ -706,7 +710,7 @@ namespace TimetableManagementSystem.AdvancedOp
             notOverlapSesCmbBox02.SelectedIndex = -1;
             notOverlapSesDayCmbBox.SelectedIndex = -1;
             notOverlapSesDurationCmbBox.SelectedIndex = -1;
-            notOverlapSesTimeSlotCmbBox.SelectedIndex = -1;
+            notOverlapSesTimeSlotCmbBoxStart.SelectedIndex = -1;
         }
 
         private void consecSearchBox_TextChanged(object sender, EventArgs e)
