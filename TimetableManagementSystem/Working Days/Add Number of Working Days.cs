@@ -29,6 +29,7 @@ namespace TimetableManagementSystem.Working_Days
         string[] daysArray;
         string lecturerName, selectedSession;
         string groupID = "";
+        string curentRoom = "";
         int lecturerID;
 
         public Add_Number_of_Working_Days(int type)
@@ -935,7 +936,44 @@ namespace TimetableManagementSystem.Working_Days
 
         private void btnGTlecadd_Click_1(object sender, EventArgs e)
         {
+            SqlCommand AddtoLecTime = new SqlCommand("INSERT INTO Lecturer_Time VALUES(@LecID, @SessionID, @StartTime, @EndTime, @Dates)", con);
+            AddtoLecTime.CommandType = CommandType.Text;
+            AddtoLecTime.Parameters.AddWithValue("@LecID", lecturerID);
+            AddtoLecTime.Parameters.AddWithValue("@SessionID", selectedSession);
+            AddtoLecTime.Parameters.AddWithValue("@StartTime", timeTime[0]);
+            AddtoLecTime.Parameters.AddWithValue("@EndTime", timeTime[1]);
+            AddtoLecTime.Parameters.AddWithValue("@Dates", daysArray[0]);
 
+            Console.WriteLine("Is this zer0? " + lecturerID);
+            con.Open();
+            AddtoLecTime.ExecuteNonQuery();
+            con.Close();
+
+            SqlCommand AddtoClassTime = new SqlCommand("INSERT INTO Classroom_Time VALUES(@ClassID, @SessionID, @StartTime, @EndTime, @Dates)", con);
+            AddtoClassTime.CommandType = CommandType.Text;
+            AddtoClassTime.Parameters.AddWithValue("@ClassID", curentRoom);
+            AddtoClassTime.Parameters.AddWithValue("@SessionID", selectedSession);
+            AddtoClassTime.Parameters.AddWithValue("@StartTime", timeTime[0]);
+            AddtoClassTime.Parameters.AddWithValue("@EndTime", timeTime[1]);
+            AddtoClassTime.Parameters.AddWithValue("@Dates", daysArray[0]);
+
+            con.Open();
+            AddtoClassTime.ExecuteNonQuery();
+            con.Close();
+
+            SqlCommand AddtoGroupTime = new SqlCommand("INSERT INTO Group_Time VALUES(@GroupID, @SessionID, @StartTime, @EndTime, @Dates)", con);
+            AddtoGroupTime.CommandType = CommandType.Text;
+            AddtoGroupTime.Parameters.AddWithValue("@GroupID", groupID);
+            AddtoGroupTime.Parameters.AddWithValue("@SessionID", selectedSession);
+            AddtoGroupTime.Parameters.AddWithValue("@StartTime", timeTime[0]);
+            AddtoGroupTime.Parameters.AddWithValue("@EndTime", timeTime[1]);
+            AddtoGroupTime.Parameters.AddWithValue("@Dates", daysArray[0]);
+
+            con.Open();
+            AddtoGroupTime.ExecuteNonQuery();
+            con.Close();
+
+            System.Windows.Forms.MessageBox.Show("Data added sucessfully");
         }
 
         private void cmdsessionfaculty_SelectedIndexChanged(object sender, EventArgs e)
@@ -1155,19 +1193,18 @@ namespace TimetableManagementSystem.Working_Days
 
         private void cmdsessionlecturer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine("Am i Here?");
 
             lecturerName = cmdsessionlecturer.SelectedItem.ToString();
+
             con.Close();
             con.Open();
-            String LecIDQuery = "SELECT LecturerID FROM Lecturers WHERE LecName = '" + lecturerName + ", '";
+            String LecIDQuery = "SELECT LecturerID FROM Lecturers WHERE LecName = '" + lecturerName + "'";
             SqlCommand LecIDCommand = new SqlCommand(LecIDQuery, con);
             using (SqlDataReader reader = LecIDCommand.ExecuteReader())
             {
                 while (reader.Read())
                 {
                     lecturerID = reader.GetInt32(0);
-                    Console.WriteLine("I am " + lecturerID);
                 }
             }
             con.Close();
@@ -1499,43 +1536,8 @@ namespace TimetableManagementSystem.Working_Days
 
         private void cmdGTclassroom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string curentRoom = cmdGTclassroom.SelectedItem.ToString();
-            SqlCommand AddtoLecTime = new SqlCommand("INSERT INTO Lecturer_Time VALUES(@LecID, @SessionID, @StartTime, @EndTime, @Dates)", con);
-            AddtoLecTime.CommandType = CommandType.Text;
-            AddtoLecTime.Parameters.AddWithValue("@LecID", lecturerID);
-            AddtoLecTime.Parameters.AddWithValue("@SessionID", selectedSession);
-            AddtoLecTime.Parameters.AddWithValue("@StartTime", timeTime[0]);
-            AddtoLecTime.Parameters.AddWithValue("@EndTime", timeTime[1]);
-            AddtoLecTime.Parameters.AddWithValue("@Dates", daysArray[0]);
-
-            Console.WriteLine("Is this zer0? " + lecturerID);
-            con.Open();
-            AddtoLecTime.ExecuteNonQuery();
-            con.Close();
-
-            SqlCommand AddtoClassTime = new SqlCommand("INSERT INTO Classroom_Time VALUES(@ClassID, @SessionID, @StartTime, @EndTime, @Dates)", con);
-            AddtoClassTime.CommandType = CommandType.Text;
-            AddtoClassTime.Parameters.AddWithValue("@ClassID", curentRoom);
-            AddtoClassTime.Parameters.AddWithValue("@SessionID", selectedSession);
-            AddtoClassTime.Parameters.AddWithValue("@StartTime", timeTime[0]);
-            AddtoClassTime.Parameters.AddWithValue("@EndTime", timeTime[1]);
-            AddtoClassTime.Parameters.AddWithValue("@Dates", daysArray[0]);
-
-            con.Open();
-            AddtoClassTime.ExecuteNonQuery();
-            con.Close();
-
-            SqlCommand AddtoGroupTime = new SqlCommand("INSERT INTO Group_Time VALUES(@GroupID, @SessionID, @StartTime, @EndTime, @Dates)", con);
-            AddtoGroupTime.CommandType = CommandType.Text;
-            AddtoGroupTime.Parameters.AddWithValue("@GroupID", groupID);
-            AddtoGroupTime.Parameters.AddWithValue("@SessionID", selectedSession);
-            AddtoGroupTime.Parameters.AddWithValue("@StartTime", timeTime[0]);
-            AddtoGroupTime.Parameters.AddWithValue("@EndTime", timeTime[1]);
-            AddtoClassTime.Parameters.AddWithValue("@Dates", daysArray[0]);
-
-            con.Open();
-            AddtoGroupTime.ExecuteNonQuery();
-            con.Close();
+            curentRoom = cmdGTclassroom.SelectedItem.ToString();
+            
         }
 
         private void button7_Click_1(object sender, EventArgs e)
