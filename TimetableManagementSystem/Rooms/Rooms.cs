@@ -607,8 +607,8 @@ namespace TimetableManagementSystem.Rooms
                     if (!form.getClose())
                     {
                         Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days(TimetableType);
-                        workingDays.ShowDialog();
                         this.Hide();
+                        workingDays.ShowDialog();
                     }
                 }
             }
