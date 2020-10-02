@@ -134,13 +134,13 @@ namespace TimetableManagementSystem.Statistics
 
             DataSet ds = new DataSet();
             con.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter("select ProgrammeRef, count(GenGrpNum) as grpcount from GenGroupNumber group by ProgrammeRef", con);
-            adapt.Fill(ds, "grpcount");
-            progrpcount_chart.DataSource = ds.Tables["grpcount"];
+            SqlDataAdapter adapt = new SqlDataAdapter("select p.Programme as Programme, count(g.GenGrpNum) as Grpcount  from Programme p, GenGroupNumber g where p.id = g.programmeRef group by p.Programme", con);
+            adapt.Fill(ds, "Grpcount");
+            progrpcount_chart.DataSource = ds.Tables["Grpcount"];
 
 
-            progrpcount_chart.Series["Programme"].XValueMember = "ProgrammeRef";
-            progrpcount_chart.Series["Programme"].YValueMembers = "grpcount";
+            progrpcount_chart.Series["Programme"].XValueMember = "Programme";
+            progrpcount_chart.Series["Programme"].YValueMembers = "Grpcount";
             progrpcount_chart.Series["Programme"].ChartType = SeriesChartType.Bar;
 
 
