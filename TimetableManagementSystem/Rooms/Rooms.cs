@@ -473,6 +473,7 @@ namespace TimetableManagementSystem.Rooms
                 if (dt.Rows.Count >= 1)
                 {
                     MessageBox.Show("Time is already allocated as non reservable!");
+                    clearDayTimeFields();
                 }
                 else
                 {
