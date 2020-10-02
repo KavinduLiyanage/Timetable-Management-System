@@ -181,17 +181,23 @@ namespace TimetableManagementSystem.Tags
 
         private void btnHeaderSessions_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
         }
 
         private void btnHeaderRooms_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Rooms.Rooms rooms = new Rooms.Rooms();
+            rooms.ShowDialog();
         }
 
         private void btnHeaderAdvanced_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AdvancedOp.Advanced advc = new AdvancedOp.Advanced();
+            advc.ShowDialog();
         }
 
         private void btnHeaderGenerate_Click(object sender, EventArgs e)
