@@ -63,12 +63,16 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void btnHeaderRooms_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Rooms.Rooms rooms = new Rooms.Rooms();
+            rooms.ShowDialog();
         }
 
         private void btnHeaderSessions_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
         }
 
         private void btnHeaderGenerate_Click(object sender, EventArgs e)
