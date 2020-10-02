@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using TimetableManagementSystem.Tags;
 
 namespace TimetableManagementSystem.AdvancedOp
 {
@@ -31,9 +32,26 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void btnSideNavWorking_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
-            workingDays.ShowDialog();
+            int TimetableType = -1;
+            try
+            {
+                using (Form1 form = new Form1())
+                {
+                    form.ShowDialog();
+                    TimetableType = form.getText();
+                    if (!form.getClose())
+                    {
+                        Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days(TimetableType);
+                        workingDays.ShowDialog();
+                        this.Hide();
+                    }
+                }
+            }
+
+            catch (Exception)
+            {
+
+            }
         }
 
         private void btnHeaderAdvanced_Click(object sender, EventArgs e)

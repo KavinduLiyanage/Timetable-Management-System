@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimetableManagementSystem.Lecturers;
 using TimetableManagementSystem.Subjects;
+using TimetableManagementSystem.Tags;
 
 namespace TimetableManagementSystem
 {
@@ -18,7 +19,7 @@ namespace TimetableManagementSystem
         {
             InitializeComponent();
         }
-
+        public int TimetableType;
         private void Homepage_Load(object sender, EventArgs e)
         {
 
@@ -33,9 +34,25 @@ namespace TimetableManagementSystem
 
         private void wdhBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
-            workingDays.ShowDialog();
+            try
+            {
+                using (Form1 form = new Form1())
+                {
+                    form.ShowDialog();
+                    TimetableType = form.getText();
+                    if (!form.getClose())
+                    {
+                        Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days(TimetableType);
+                        workingDays.ShowDialog();
+                        this.Hide();
+                    }
+                }
+            }
+
+            catch (Exception)
+            {
+
+            }
         }
 
         private void lecBtn_Click(object sender, EventArgs e)
@@ -177,9 +194,25 @@ namespace TimetableManagementSystem
 
         private void btnSideNavWorking_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
-            workingDays.ShowDialog();
+            try
+            {
+                using (Form1 form = new Form1())
+                {
+                    form.ShowDialog();
+                    TimetableType = form.getText();
+                    if (!form.getClose())
+                    {
+                        Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days(TimetableType);
+                        workingDays.ShowDialog();
+                        this.Hide();
+                    }
+                }
+            }
+
+            catch (Exception)
+            {
+
+            }
         }
 
         private void btnSideNavTags_Click(object sender, EventArgs e)

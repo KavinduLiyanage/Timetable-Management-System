@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimetableManagementSystem.Lecturers;
+using TimetableManagementSystem.Tags;
 
 namespace TimetableManagementSystem.Subjects
 {
@@ -267,9 +268,26 @@ namespace TimetableManagementSystem.Subjects
         //--------------------Side Nav Buttons--------------------
         private void btnSideNavWorking_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days();
-            workingDays.ShowDialog();
+            int TimetableType = -1;
+            try
+            {
+                using (Form1 form = new Form1())
+                {
+                    form.ShowDialog();
+                    TimetableType = form.getText();
+                    if (!form.getClose())
+                    {
+                        Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days(TimetableType);
+                        workingDays.ShowDialog();
+                        this.Hide();
+                    }
+                }
+            }
+
+            catch (Exception)
+            {
+
+            }
         }
 
         private void btnSideNavLecturers_Click(object sender, EventArgs e)
