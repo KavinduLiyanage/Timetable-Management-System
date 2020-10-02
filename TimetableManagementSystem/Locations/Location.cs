@@ -378,6 +378,25 @@ namespace TimetableManagementSystem.Locations
             sessions.ShowDialog();
         }
 
+        private void btnHeaderRooms_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Rooms.Rooms rooms = new Rooms.Rooms();
+            rooms.ShowDialog();
+        }
+
+        private void btnHeaderAdvanced_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdvancedOp.Advanced advc = new AdvancedOp.Advanced();
+            advc.ShowDialog();
+        }
+
+        private void btnHeaderGenerate_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //-------------events not in use---------------
         public void metroButton1_Click(object sender, EventArgs e)
         {
@@ -400,8 +419,6 @@ namespace TimetableManagementSystem.Locations
 
 
         }
-
-        
     }
 }
 

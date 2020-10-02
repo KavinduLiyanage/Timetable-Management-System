@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.LecStat_tabpage = new System.Windows.Forms.TabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
@@ -220,10 +220,10 @@
             // 
             // deptLec_chart
             // 
-            chartArea5.Name = "ChartArea1";
-            this.deptLec_chart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.deptLec_chart.Legends.Add(legend5);
+            chartArea9.Name = "ChartArea1";
+            this.deptLec_chart.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.deptLec_chart.Legends.Add(legend9);
             this.deptLec_chart.Location = new System.Drawing.Point(391, 120);
             this.deptLec_chart.Name = "deptLec_chart";
             this.deptLec_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
@@ -234,10 +234,10 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.deptLec_chart.Series.Add(series5);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.deptLec_chart.Series.Add(series9);
             this.deptLec_chart.Size = new System.Drawing.Size(337, 261);
             this.deptLec_chart.TabIndex = 41;
             this.deptLec_chart.Text = "chart1";
@@ -271,10 +271,10 @@
             // 
             // faclec_chart
             // 
-            chartArea6.Name = "ChartArea1";
-            this.faclec_chart.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.faclec_chart.Legends.Add(legend6);
+            chartArea10.Name = "ChartArea1";
+            this.faclec_chart.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.faclec_chart.Legends.Add(legend10);
             this.faclec_chart.Location = new System.Drawing.Point(32, 120);
             this.faclec_chart.Name = "faclec_chart";
             this.faclec_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -285,10 +285,10 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Faculty";
-            this.faclec_chart.Series.Add(series6);
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Faculty";
+            this.faclec_chart.Series.Add(series10);
             this.faclec_chart.Size = new System.Drawing.Size(337, 261);
             this.faclec_chart.TabIndex = 2;
             this.faclec_chart.Text = "chart1";
@@ -381,10 +381,10 @@
             // 
             // progrpcount_chart
             // 
-            chartArea7.Name = "ChartArea1";
-            this.progrpcount_chart.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.progrpcount_chart.Legends.Add(legend7);
+            chartArea11.Name = "ChartArea1";
+            this.progrpcount_chart.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.progrpcount_chart.Legends.Add(legend11);
             this.progrpcount_chart.Location = new System.Drawing.Point(190, 119);
             this.progrpcount_chart.Name = "progrpcount_chart";
             this.progrpcount_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
@@ -395,10 +395,10 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Programme";
-            this.progrpcount_chart.Series.Add(series7);
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Programme";
+            this.progrpcount_chart.Series.Add(series11);
             this.progrpcount_chart.Size = new System.Drawing.Size(337, 261);
             this.progrpcount_chart.TabIndex = 2;
             this.progrpcount_chart.Text = "chart1";
@@ -491,10 +491,10 @@
             // 
             // subyear_chart
             // 
-            chartArea8.Name = "ChartArea1";
-            this.subyear_chart.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.subyear_chart.Legends.Add(legend8);
+            chartArea12.Name = "ChartArea1";
+            this.subyear_chart.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.subyear_chart.Legends.Add(legend12);
             this.subyear_chart.Location = new System.Drawing.Point(187, 119);
             this.subyear_chart.Name = "subyear_chart";
             this.subyear_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
@@ -505,11 +505,11 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            series8.ChartArea = "ChartArea1";
-            series8.IsValueShownAsLabel = true;
-            series8.Legend = "Legend1";
-            series8.Name = "Academic Year";
-            this.subyear_chart.Series.Add(series8);
+            series12.ChartArea = "ChartArea1";
+            series12.IsValueShownAsLabel = true;
+            series12.Legend = "Legend1";
+            series12.Name = "Academic Year";
+            this.subyear_chart.Series.Add(series12);
             this.subyear_chart.Size = new System.Drawing.Size(337, 261);
             this.subyear_chart.TabIndex = 2;
             this.subyear_chart.Text = "chart1";
@@ -668,6 +668,7 @@
             this.btnHeaderRooms.TabIndex = 45;
             this.btnHeaderRooms.Text = "Rooms";
             this.btnHeaderRooms.UseVisualStyleBackColor = false;
+            this.btnHeaderRooms.Click += new System.EventHandler(this.btnHeaderRooms_Click);
             // 
             // btnHeaderAdvanced
             // 
@@ -681,6 +682,7 @@
             this.btnHeaderAdvanced.TabIndex = 46;
             this.btnHeaderAdvanced.Text = "Advanced";
             this.btnHeaderAdvanced.UseVisualStyleBackColor = false;
+            this.btnHeaderAdvanced.Click += new System.EventHandler(this.btnHeaderAdvanced_Click);
             // 
             // btnHeaderGenerate
             // 
@@ -694,6 +696,7 @@
             this.btnHeaderGenerate.TabIndex = 47;
             this.btnHeaderGenerate.Text = "Generate";
             this.btnHeaderGenerate.UseVisualStyleBackColor = false;
+            this.btnHeaderGenerate.Click += new System.EventHandler(this.btnHeaderGenerate_Click);
             // 
             // Statistics
             // 
