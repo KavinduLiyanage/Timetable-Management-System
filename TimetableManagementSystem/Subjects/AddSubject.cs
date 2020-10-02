@@ -33,7 +33,7 @@ namespace TimetableManagementSystem.Subjects
 
         private void GetSubjects()
         {
-            SqlCommand cmd = new SqlCommand("Select * from Subjects", con);
+            SqlCommand cmd = new SqlCommand("Select * from Subjects order by SubYear", con);
             DataTable dt = new DataTable();
 
             con.Open();
