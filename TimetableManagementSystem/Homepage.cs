@@ -29,7 +29,9 @@ namespace TimetableManagementSystem
 
         private void btnGetStarted_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
+            addLecturer.ShowDialog();
         }
 
         private void wdhBtn_Click(object sender, EventArgs e)
