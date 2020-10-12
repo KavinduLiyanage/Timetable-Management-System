@@ -202,9 +202,7 @@ namespace TimetableManagementSystem.Tags
 
         private void btnHeaderGenerate_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GenerateTimetable.GenerateTimetable generatetimetable = new GenerateTimetable.GenerateTimetable();
-            generatetimetable.ShowDialog();
+
         }
 
         private void tagNameData_CellClick(object sender, DataGridViewCellEventArgs e)

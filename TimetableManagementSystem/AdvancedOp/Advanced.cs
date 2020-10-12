@@ -77,9 +77,7 @@ namespace TimetableManagementSystem.AdvancedOp
 
         private void btnHeaderGenerate_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GenerateTimetable.GenerateTimetable generatetimetable = new GenerateTimetable.GenerateTimetable();
-            generatetimetable.ShowDialog();
+
         }
 
         private void btnSideNavLecturers_Click(object sender, EventArgs e)

@@ -122,9 +122,7 @@ namespace TimetableManagementSystem
 
         private void genTimetBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GenerateTimetable.GenerateTimetable generatetimetable = new GenerateTimetable.GenerateTimetable();
-            generatetimetable.ShowDialog();
+
         }
 
 
@@ -161,9 +159,7 @@ namespace TimetableManagementSystem
 
         private void btnHeaderGenerate_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GenerateTimetable.GenerateTimetable generatetimetable = new GenerateTimetable.GenerateTimetable();
-            generatetimetable.ShowDialog();
+
         }
 
 
