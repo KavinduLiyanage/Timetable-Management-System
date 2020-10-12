@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using TimetableManagementSystem.Tags;
 
 namespace TimetableManagementSystem.GenerateTimetable
 {
@@ -169,6 +170,103 @@ namespace TimetableManagementSystem.GenerateTimetable
         private void metroComboBox10_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        //--------------------Header Buttons--------------------
+        private void btnHeaderHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Homepage homepage = new Homepage();
+            homepage.ShowDialog();
+        }
+
+        private void btnHeaderSessions_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Sessions.Sessions sessions = new Sessions.Sessions();
+            sessions.ShowDialog();
+        }
+
+        private void btnHeaderRooms_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Rooms.Rooms rooms = new Rooms.Rooms();
+            rooms.ShowDialog();
+        }
+
+        private void btnHeaderAdvanced_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdvancedOp.Advanced advc = new AdvancedOp.Advanced();
+            advc.ShowDialog();
+        }
+
+
+        //--------------------Side Nav Buttons--------------------
+        private void btnSideNavWorking_Click(object sender, EventArgs e)
+        {
+            int TimetableType = -1;
+            try
+            {
+                using (Form1 form = new Form1())
+                {
+                    form.ShowDialog();
+                    TimetableType = form.getText();
+                    if (!form.getClose())
+                    {
+                        Working_Days.Add_Number_of_Working_Days workingDays = new Working_Days.Add_Number_of_Working_Days(TimetableType);
+                        this.Hide();
+                        workingDays.ShowDialog();
+                    }
+                }
+            }
+
+            catch (Exception)
+            {
+
+            }
+        }
+        private void btnSideNavLecturers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Lecturers.AddLecturer addLecturer = new Lecturers.AddLecturer();
+            addLecturer.ShowDialog();
+        }
+
+        private void btnSideNavSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Subjects.AddSubject addSubject = new Subjects.AddSubject();
+            addSubject.ShowDialog();
+        }
+
+        private void btnSideNavStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Students.Students stu = new Students.Students();
+            stu.ShowDialog();
+        }
+
+        private void btnSideNavTags_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tags.Tags tag = new Tags.Tags();
+            tag.ShowDialog();
+        }
+
+        private void btnSideNavLocations_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Locations.Location loc = new Locations.Location();
+            loc.ShowDialog();
+        }
+
+        private void btnSideNavStatistics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics.Statistics stat = new Statistics.Statistics();
+            stat.ShowDialog();
         }
     }
 }
