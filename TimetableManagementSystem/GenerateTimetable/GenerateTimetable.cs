@@ -16,7 +16,10 @@ namespace TimetableManagementSystem.GenerateTimetable
     public partial class GenerateTimetable : MetroFramework.Forms.MetroForm
     {
 
-        SqlConnection con = Config.con;
+        public SqlConnection con = Config.con;
+        public int hr = 8;
+        public int min = 30;
+        public int sec = 0;
         //public int TimetableID;
 
         public GenerateTimetable()
@@ -327,11 +330,135 @@ namespace TimetableManagementSystem.GenerateTimetable
         private void button2_Click(object sender, EventArgs e)
         {
 
+            hr = 8;
+            min = 30;
+            sec = 0;
+
+        String query1 = "select Subject,GroupID,SubjectCode,Tag,Duration,'1' from sessions where Lecturer LIKE '%" + genLecCmb.Text + "%'";
+
+            SqlCommand cmd = new SqlCommand(query1, con);
+            con.Open();
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+            con.Close();
+
+            dvgGTstudentgroup.ColumnCount = 8;
+            dvgGTstudentgroup.Columns[0].Name = "";
+            dvgGTstudentgroup.Columns[1].Name = "Monday";
+            dvgGTstudentgroup.Columns[2].Name = "Tuesday";
+            dvgGTstudentgroup.Columns[3].Name = "Wednesday";
+            dvgGTstudentgroup.Columns[4].Name = "Thursday";
+            dvgGTstudentgroup.Columns[5].Name = "Friday";
+            dvgGTstudentgroup.Columns[6].Name = "Saturday";
+            dvgGTstudentgroup.Columns[7].Name = "Sunday";
+
+            System.IO.StringWriter sw;
+            string output;
+            int xCount = 1;
+            int yCount = 0;
+            string[,] Tablero = new string[5, 8];
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    Tablero[k, l] = " --- ";
+                }
+            }
+
+            // Loop through each row in the table.
+            foreach (DataRow row in dt.Rows)
+            {
+                sw = new System.IO.StringWriter();
+
+                // Loop through each column.
+                foreach (DataColumn col in dt.Columns)
+                {
+                    // Output the value of each column's data.
+                    sw.Write(row[col].ToString() + "\n");
+                }
+
+                output = sw.ToString();
+
+                // Trim off the trailing ", ", so the output looks correct.
+                if (output.Length > 2)
+                    output = output.Substring(0, output.Length - 2);
+
+
+                if (yCount == 5)
+                {
+                    yCount = 0;
+                    xCount++;
+                }
+                try
+                {
+
+                    Tablero[yCount, xCount] = output;
+                    yCount++;
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+
+            do
+            {
+                foreach (DataGridViewRow row in dvgGTstudentgroup.Rows)
+                {
+                    try
+                    {
+                        dvgGTstudentgroup.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (dvgGTstudentgroup.Rows.Count > 1);
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                var arlist1 = new ArrayList();
+
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    arlist1.Add(Tablero[k, l]);
+                }
+
+                string srrr = (string)arlist1[1];
+                string srrr2 = srrr.Substring(srrr.Length - 2);
+
+                string[] row = new string[] {
+                    hr + "." + min,
+                    (string) arlist1[1],
+                    (string) arlist1[2],
+                    (string) arlist1[3],
+                    (string) arlist1[4],
+                    (string) arlist1[5],
+                    (string) arlist1[6],
+                    (string) arlist1[7]
+                };
+
+                try
+                {
+                    timeCalc(int.Parse(srrr2.Trim()), 0, 0);
+                }
+                catch (Exception ex) {
+                
+                }
+
+                dvgGTstudentgroup.Rows.Add(row);
+            }
         }
 
         private void btnGTCRgenerate_Click(object sender, EventArgs e)
         {
-            String query1 = "select Lecturer,Subject,SubjectCode,Tag,GroupID from sessions where GroupID LIKE '%" + genGrpCmb.Text + "%'";
+            hr = 8;
+            min = 30;
+            sec = 0;
+
+            String query1 = "select Lecturer,Subject,SubjectCode,Tag,Duration,'1' from sessions where GroupID LIKE '%" + genGrpCmb.Text + "%'";
 
             SqlCommand cmd = new SqlCommand(query1, con);
             con.Open();
@@ -366,8 +493,6 @@ namespace TimetableManagementSystem.GenerateTimetable
                 }
             }
 
-            Console.WriteLine(dt.Rows.Count);
-
             // Loop through each row in the table.
             foreach (DataRow row in dt.Rows)
             {
@@ -387,23 +512,11 @@ namespace TimetableManagementSystem.GenerateTimetable
                     output = output.Substring(0, output.Length - 2);
 
 
-                Console.WriteLine("------------------------------------");
-                Console.WriteLine("DR row Count : " + dt.Rows.Count);
-                Console.WriteLine("yCount : " + yCount);
-                Console.WriteLine("xCount : " + xCount);
-                Console.WriteLine();
-
                 if (yCount == 5)
                 {
                     yCount = 0;
                     xCount++;
                 }
-
-                Console.WriteLine("DR row Count : " + dt.Rows.Count);
-                Console.WriteLine("yCount : " + yCount);
-                Console.WriteLine("xCount : " + xCount);
-                Console.WriteLine();
-
                 try
                 {
 
@@ -413,13 +526,6 @@ namespace TimetableManagementSystem.GenerateTimetable
                 catch (Exception ex)
                 {
                 }
-
-                Console.WriteLine("DR row Count : " + dt.Rows.Count);
-                Console.WriteLine("yCount : " + yCount);
-                Console.WriteLine("xCount : " + xCount);
-                Console.WriteLine();
-
-                Console.WriteLine("------------------------------------");
             }
 
             do
@@ -444,9 +550,11 @@ namespace TimetableManagementSystem.GenerateTimetable
                     arlist1.Add(Tablero[k, l]);
                 }
 
-                Console.WriteLine(arlist1.Count);
+                string srrr = (string)arlist1[1];
+                string srrr2 = srrr.Substring(srrr.Length - 2);
+
                 string[] row = new string[] {
-                    (string) arlist1[0],
+                    hr + "." + min,
                     (string) arlist1[1],
                     (string) arlist1[2],
                     (string) arlist1[3],
@@ -456,6 +564,13 @@ namespace TimetableManagementSystem.GenerateTimetable
                     (string) arlist1[7]
                 };
 
+                try
+                {
+                    timeCalc(int.Parse(srrr2.Trim()), 0, 0);
+                }
+                catch (Exception ex) {
+                }
+
                 dgvWT.Rows.Add(row);
             }
         }
@@ -463,6 +578,27 @@ namespace TimetableManagementSystem.GenerateTimetable
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timeCalc(int hr1, int min1, int sec1) {
+
+            sec += sec1;
+
+            if (sec > 60)
+            {
+                min++;
+                sec -= 60;
+            }
+
+            min += min1;
+
+            if (min > 60)
+            {
+                hr++;
+                min -= 60;
+            }
+
+            hr += hr1;
         }
     }
 }
