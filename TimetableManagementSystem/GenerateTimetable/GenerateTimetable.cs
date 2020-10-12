@@ -99,6 +99,7 @@ namespace TimetableManagementSystem.GenerateTimetable
             con.Close();
             genRoomCmb.SelectedIndex = -1;
 
+            daege.SelectedTab = metroTabPage3;
 
             //generateTimetable();
         }
@@ -599,6 +600,13 @@ namespace TimetableManagementSystem.GenerateTimetable
             }
 
             hr += hr1;
+        }
+
+        private void btnHeaderGenerate_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GenerateTimetable generatetimetable = new GenerateTimetable();
+            generatetimetable.ShowDialog();
         }
     }
 }
