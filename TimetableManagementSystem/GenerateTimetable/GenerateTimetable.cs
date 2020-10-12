@@ -165,5 +165,10 @@ namespace TimetableManagementSystem.GenerateTimetable
         {
 
         }
+
+        private void metroComboBox10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
