@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using TimetableManagementSystem.Tags;
+using System.Collections;
 
 namespace TimetableManagementSystem.GenerateTimetable
 {
@@ -42,6 +43,60 @@ namespace TimetableManagementSystem.GenerateTimetable
 
         private void GenerateTimetable_Load(object sender, EventArgs e)
         {
+
+            this.genGrpCmb.DataSource = null;
+            genGrpCmb.Items.Clear();
+
+            string query2 = "select id, GenGrpNum FROM GenGroupNumber";
+            SqlDataAdapter da2 = new SqlDataAdapter(query2, con);
+            con.Open();
+            DataSet ds2 = new DataSet();
+            da2.Fill(ds2, "GenGroupNumber");
+
+            genGrpCmb.DisplayMember = "GenGrpNum";
+            genGrpCmb.ValueMember = "id";
+            genGrpCmb.DataSource = ds2.Tables["GenGroupNumber"];
+
+            con.Close();
+            genGrpCmb.SelectedIndex = -1;
+
+
+
+            this.genLecCmb.DataSource = null;
+            genLecCmb.Items.Clear();
+
+            string query3 = "select LecturerID, LecName FROM Lecturers";
+            SqlDataAdapter da3 = new SqlDataAdapter(query3, con);
+            con.Open();
+            DataSet ds3 = new DataSet();
+            da3.Fill(ds3, "Lecturers");
+
+            genLecCmb.DisplayMember = "LecName";
+            genLecCmb.ValueMember = "LecturerID";
+            genLecCmb.DataSource = ds3.Tables["Lecturers"];
+
+            con.Close();
+            genLecCmb.SelectedIndex = -1;
+
+
+
+            this.genRoomCmb.DataSource = null;
+            genRoomCmb.Items.Clear();
+
+            string query4 = "select room_num FROM Rooms";
+            SqlDataAdapter da4 = new SqlDataAdapter(query4, con);
+            con.Open();
+            DataSet ds4 = new DataSet();
+            da4.Fill(ds4, "Rooms");
+
+            genRoomCmb.DisplayMember = "room_num";
+            genRoomCmb.ValueMember = "room_num";
+            genRoomCmb.DataSource = ds4.Tables["Rooms"];
+
+            con.Close();
+            genRoomCmb.SelectedIndex = -1;
+
+
             //generateTimetable();
         }
 
@@ -267,6 +322,147 @@ namespace TimetableManagementSystem.GenerateTimetable
             this.Hide();
             Statistics.Statistics stat = new Statistics.Statistics();
             stat.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGTCRgenerate_Click(object sender, EventArgs e)
+        {
+            String query1 = "select Lecturer,Subject,SubjectCode,Tag,GroupID from sessions where GroupID = '" + genGrpCmb.Text + "'";
+
+            SqlCommand cmd = new SqlCommand(query1, con);
+            con.Open();
+            DataTable dt = new DataTable();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+
+            con.Close();
+
+            dgvWT.ColumnCount = 8;
+            dgvWT.Columns[0].Name = "";
+            dgvWT.Columns[1].Name = "Monday";
+            dgvWT.Columns[2].Name = "Tuesday";
+            dgvWT.Columns[3].Name = "Wednesday";
+            dgvWT.Columns[4].Name = "Thursday";
+            dgvWT.Columns[5].Name = "Friday";
+            dgvWT.Columns[6].Name = "Saturday";
+            dgvWT.Columns[7].Name = "Sunday";
+
+            System.IO.StringWriter sw;
+            string output;
+            int xCount = 1;
+            int yCount = 0;
+            string[,] Tablero = new string[dt.Rows.Count, 8];
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    Tablero[k, l] = " --- ";
+                }
+            }
+
+            Console.WriteLine(dt.Rows.Count);
+
+            // Loop through each row in the table.
+            foreach (DataRow row in dt.Rows)
+            {
+                sw = new System.IO.StringWriter();
+
+                // Loop through each column.
+                foreach (DataColumn col in dt.Columns)
+                {
+                    // Output the value of each column's data.
+                    sw.Write(row[col].ToString() + "\n");
+                }
+
+                output = sw.ToString();
+
+                // Trim off the trailing ", ", so the output looks correct.
+                if (output.Length > 2)
+                    output = output.Substring(0, output.Length - 2);
+
+
+                Console.WriteLine("------------------------------------");
+                Console.WriteLine("DR row Count : " + dt.Rows.Count);
+                Console.WriteLine("yCount : " + yCount);
+                Console.WriteLine("xCount : " + xCount);
+                Console.WriteLine();
+
+                if (yCount == dt.Rows.Count)
+                {
+                    yCount = 0;
+                    xCount++;
+                }
+
+                Console.WriteLine("DR row Count : " + dt.Rows.Count);
+                Console.WriteLine("yCount : " + yCount);
+                Console.WriteLine("xCount : " + xCount);
+                Console.WriteLine();
+
+                try
+                {
+
+                    Tablero[yCount, xCount] = output;
+                    yCount++;
+                }
+                catch (Exception ex)
+                {
+                }
+
+                Console.WriteLine("DR row Count : " + dt.Rows.Count);
+                Console.WriteLine("yCount : " + yCount);
+                Console.WriteLine("xCount : " + xCount);
+                Console.WriteLine();
+
+                Console.WriteLine("------------------------------------");
+            }
+
+            do
+            {
+                foreach (DataGridViewRow row in dgvWT.Rows)
+                {
+                    try
+                    {
+                        dgvWT.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (dgvWT.Rows.Count > 1);
+
+
+            for (int k = 0; k < Tablero.GetLength(0); k++)
+            {
+                var arlist1 = new ArrayList();
+
+                for (int l = 0; l < Tablero.GetLength(1); l++)
+                {
+                    arlist1.Add(Tablero[k, l]);
+                }
+
+                Console.WriteLine(arlist1.Count);
+                string[] row = new string[] {
+                    (string) arlist1[0],
+                    (string) arlist1[1],
+                    (string) arlist1[2],
+                    (string) arlist1[3],
+                    (string) arlist1[4],
+                    (string) arlist1[5],
+                    (string) arlist1[6],
+                    (string) arlist1[7]
+                };
+
+                dgvWT.Rows.Add(row);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
