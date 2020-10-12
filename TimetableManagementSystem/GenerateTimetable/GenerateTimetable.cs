@@ -331,7 +331,7 @@ namespace TimetableManagementSystem.GenerateTimetable
 
         private void btnGTCRgenerate_Click(object sender, EventArgs e)
         {
-            String query1 = "select Lecturer,Subject,SubjectCode,Tag,GroupID from sessions where GroupID = '" + genGrpCmb.Text + "'";
+            String query1 = "select Lecturer,Subject,SubjectCode,Tag,GroupID from sessions where GroupID LIKE '%" + genGrpCmb.Text + "%'";
 
             SqlCommand cmd = new SqlCommand(query1, con);
             con.Open();
@@ -355,7 +355,7 @@ namespace TimetableManagementSystem.GenerateTimetable
             string output;
             int xCount = 1;
             int yCount = 0;
-            string[,] Tablero = new string[dt.Rows.Count, 8];
+            string[,] Tablero = new string[5, 8];
 
 
             for (int k = 0; k < Tablero.GetLength(0); k++)
@@ -393,7 +393,7 @@ namespace TimetableManagementSystem.GenerateTimetable
                 Console.WriteLine("xCount : " + xCount);
                 Console.WriteLine();
 
-                if (yCount == dt.Rows.Count)
+                if (yCount == 5)
                 {
                     yCount = 0;
                     xCount++;
