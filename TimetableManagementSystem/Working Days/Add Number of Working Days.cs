@@ -1550,7 +1550,9 @@ namespace TimetableManagementSystem.Working_Days
 
         private void btnHeaderGenerate_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            GenerateTimetable.GenerateTimetable generatetimetable = new GenerateTimetable.GenerateTimetable();
+            generatetimetable.ShowDialog();
         }
 
         private void cmdGTclassroom_SelectedIndexChanged(object sender, EventArgs e)

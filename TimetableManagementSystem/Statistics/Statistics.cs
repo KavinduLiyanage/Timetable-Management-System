@@ -297,7 +297,9 @@ namespace TimetableManagementSystem.Statistics
 
         private void btnHeaderGenerate_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            GenerateTimetable.GenerateTimetable generatetimetable = new GenerateTimetable.GenerateTimetable();
+            generatetimetable.ShowDialog();
         }
     }
 }
